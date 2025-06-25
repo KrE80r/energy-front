@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive SA Energy Plan Advisor (2025-26)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Header Section -->
+        <header class="text-center py-5 bg-light">
+            <div class="container">
+                <h1 class="display-4 fw-bold text-dark mb-3">Interactive Energy Plan Advisor</h1>
+                <p class="lead text-muted">Select your household profile to see a tailored cost analysis of SA energy plans for 1 July 2025.</p>
+            </div>
+        </header>
+
+        <!-- Persona Selection Section -->
+        <section class="persona-selection py-5">
+            <div class="container">
+                <h2 class="text-center fw-semibold mb-4">Select Your Household Persona (Based on 21.1 kWh/day usage)</h2>
+                <div class="row g-3 justify-content-center">
+                    <div class="col-lg-3 col-md-6">
+                        <button class="btn btn-persona w-100 h-100 p-4" data-persona="commuter-no-solar">
+                            <div class="persona-content">
+                                <h5 class="fw-semibold mb-2">Commuter (No Solar)</h5>
+                                <small class="text-muted">Away during day, evening usage</small>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <button class="btn btn-persona w-100 h-100 p-4" data-persona="wfh-no-solar">
+                            <div class="persona-content">
+                                <h5 class="fw-semibold mb-2">Work From Home (No Solar)</h5>
+                                <small class="text-muted">High daytime usage</small>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <button class="btn btn-persona w-100 h-100 p-4" data-persona="commuter-solar">
+                            <div class="persona-content">
+                                <h5 class="fw-semibold mb-2">Commuter (With Solar)</h5>
+                                <small class="text-muted">Solar export during day</small>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <button class="btn btn-persona w-100 h-100 p-4" data-persona="wfh-solar">
+                            <div class="persona-content">
+                                <h5 class="fw-semibold mb-2">Work From Home (With Solar)</h5>
+                                <small class="text-muted">High self-consumption</small>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Loading Indicator -->
+        <div id="loading" class="text-center py-5" style="display: none;">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="mt-3 text-muted">Calculating best plans for your household...</p>
+        </div>
+
+        <!-- Results Section -->
+        <section id="results-section" class="py-5" style="display: none;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 id="results-title" class="fw-semibold mb-4">For a Commuter Family (No Solar)</h2>
+                        
+                        <!-- Personalization Toggle -->
+                        <div class="alert alert-info d-flex justify-content-between align-items-center" role="alert">
+                            <div>
+                                <i class="bi bi-info-circle me-2"></i>
+                                <strong>These estimates use typical usage patterns.</strong> Want more accurate results?
+                            </div>
+                            <button class="btn btn-sm btn-outline-primary" id="customize-btn">
+                                Customize Usage
+                            </button>
+                        </div>
+
+                        <!-- Plan Comparison Cards -->
+                        <div id="plan-cards" class="row g-4">
+                            <!-- Plan cards will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customization Modal -->
+        <div class="modal fade" id="customizeModal" tabindex="-1" aria-labelledby="customizeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="customizeModalLabel">Customize Your Usage Pattern</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="customization-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="quarterly-consumption" class="form-label">Quarterly Consumption (kWh)</label>
+                                    <input type="number" class="form-control" id="quarterly-consumption" value="1900">
+                                    <div class="form-text">Check your last quarterly electricity bill</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="peak-percent" class="form-label">Peak Usage (%)</label>
+                                    <input type="range" class="form-range" id="peak-percent" min="0" max="100" value="15">
+                                    <div class="d-flex justify-content-between">
+                                        <small>0%</small>
+                                        <small id="peak-value">15%</small>
+                                        <small>100%</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="shoulder-percent" class="form-label">Shoulder Usage (%)</label>
+                                    <input type="range" class="form-range" id="shoulder-percent" min="0" max="100" value="25">
+                                    <div class="d-flex justify-content-between">
+                                        <small>0%</small>
+                                        <small id="shoulder-value">25%</small>
+                                        <small>100%</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="offpeak-percent" class="form-label">Off-Peak Usage (%)</label>
+                                    <input type="range" class="form-range" id="offpeak-percent" min="0" max="100" value="60">
+                                    <div class="d-flex justify-content-between">
+                                        <small>0%</small>
+                                        <small id="offpeak-value">60%</small>
+                                        <small>100%</small>
+                                    </div>
+                                </div>
+                                
+                                <!-- Solar Options -->
+                                <div id="solar-options" style="display: none;">
+                                    <hr>
+                                    <h6>Solar Panel Information</h6>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="solar-generation" class="form-label">Quarterly Solar Generation (kWh)</label>
+                                            <input type="number" class="form-control" id="solar-generation" value="1500">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="self-consumption" class="form-label">Self-Consumption (%)</label>
+                                            <input type="range" class="form-range" id="self-consumption" min="0" max="100" value="30">
+                                            <div class="d-flex justify-content-between">
+                                                <small>0%</small>
+                                                <small id="self-consumption-value">30%</small>
+                                                <small>100%</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-3">
+                                <div class="alert alert-warning" id="percentage-warning" style="display: none;">
+                                    <i class="bi bi-exclamation-triangle me-2"></i>
+                                    Peak + Shoulder + Off-Peak must equal 100%
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Use Persona Defaults</button>
+                        <button type="button" class="btn btn-primary" id="apply-custom-btn">Apply Custom Settings</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/personas.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
