@@ -153,6 +153,26 @@ function validateInputs(usagePattern) {
 }
 
 /**
+ * Disqualify plans with suspicious zero or null shoulder/off-peak rates
+ * These are usually fake plans with hidden catches
+ * @param {Object} planData - Plan data to validate
+ * @returns {boolean} True if plan should be disqualified
+ */
+function shouldDisqualifyPlan(planData) {
+    // Check for zero or null shoulder rates
+    if (planData.shoulder_cost === 0 || planData.shoulder_cost === null) {
+        return true;
+    }
+    
+    // Check for zero or null off-peak rates
+    if (planData.off_peak_cost === 0 || planData.off_peak_cost === null) {
+        return true;
+    }
+    
+    return false;
+}
+
+/**
  * Calculate costs for multiple plans and rank them by total cost
  * @param {Array} plansData - Array of plan data objects
  * @param {Object} usagePattern - User's usage pattern
@@ -162,6 +182,12 @@ function calculateAndRankPlans(plansData, usagePattern) {
     const calculations = [];
 
     for (const plan of plansData) {
+        // Disqualify plans with suspicious zero/null rates
+        if (shouldDisqualifyPlan(plan)) {
+            console.log(`Disqualified plan: ${plan.plan_name} (${plan.retailer_name}) - zero/null shoulder or off-peak rates`);
+            continue;
+        }
+        
         const calculation = calculatePlanCost(plan, usagePattern);
         if (calculation) {
             calculations.push(calculation);
@@ -258,6 +284,7 @@ if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
         calculatePlanCost,
         calculateAndRankPlans,
+        shouldDisqualifyPlan,
         generateStrategicRecommendation,
         getPlanComparison,
         validateInputs
