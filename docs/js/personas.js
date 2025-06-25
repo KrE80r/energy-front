@@ -11,8 +11,7 @@ const PERSONAS = {
         peakPercent: 15,      // 15% peak (4-9pm weekdays)
         shoulderPercent: 25,  // 25% shoulder (7-10am, 9pm-10pm weekdays + weekends)
         offPeakPercent: 60,   // 60% off-peak (10pm-7am + weekends)
-        solarGeneration: 0,   // No solar panels
-        selfConsumptionPercent: 0,
+        solarExport: 0,
         rationale: 'Low peak usage as away at work during expensive evening hours. Higher off-peak usage for overnight appliances and morning routines.'
     },
     
@@ -23,8 +22,7 @@ const PERSONAS = {
         peakPercent: 45,      // 45% peak - high usage during expensive peak hours
         shoulderPercent: 35,  // 35% shoulder
         offPeakPercent: 20,   // 20% off-peak
-        solarGeneration: 0,
-        selfConsumptionPercent: 0,
+        solarExport: 0,
         rationale: 'High peak usage due to working from home during expensive 4-9pm period. Air conditioning, computers, and appliances running during peak times.'
     },
     
@@ -35,9 +33,8 @@ const PERSONAS = {
         peakPercent: 10,      // 10% peak - even lower due to some solar offset
         shoulderPercent: 20,  // 20% shoulder
         offPeakPercent: 70,   // 70% off-peak
-        solarGeneration: 1500, // 1500 kWh per quarter (typical 5kW system in SA)
-        selfConsumptionPercent: 25, // 25% self-consumption (low as away during day)
-        rationale: 'Low daytime consumption means most solar is exported. Peak usage further reduced by battery storage or solar carryover effects.'
+        solarExport: 1125, // Quarterly solar export amount
+        rationale: 'Low daytime consumption means most solar (75%) is exported. Peak usage further reduced by battery storage or solar carryover effects.'
     },
     
     'wfh-solar': {
@@ -47,9 +44,8 @@ const PERSONAS = {
         peakPercent: 30,      // 30% peak - reduced from 45% due to solar offset
         shoulderPercent: 40,  // 40% shoulder
         offPeakPercent: 30,   // 30% off-peak
-        solarGeneration: 1500,
-        selfConsumptionPercent: 60, // 60% self-consumption (high as home during day)
-        rationale: 'High self-consumption as home during solar generation hours. Peak usage reduced significantly by solar offset during 4-9pm period.'
+        solarExport: 600, // Quarterly solar export amount
+        rationale: 'High self-consumption (60%) as home during solar generation hours. Peak usage reduced significantly by solar offset during 4-9pm period.'
     }
 };
 
@@ -108,7 +104,7 @@ function getPersonaDisplayInfo(personaKey) {
  */
 function personaHasSolar(personaKey) {
     const persona = getPersonaConfig(personaKey);
-    return persona.solarGeneration > 0;
+    return persona.solarExport > 0;
 }
 
 // Export for use in other modules

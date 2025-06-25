@@ -19,8 +19,7 @@ function calculatePlanCost(planData, usagePattern) {
             peakPercent,
             shoulderPercent,
             offPeakPercent,
-            solarGeneration = 0,
-            selfConsumptionPercent = 0
+            solarExport = 0
         } = usagePattern;
 
         // Validate inputs
@@ -31,9 +30,10 @@ function calculatePlanCost(planData, usagePattern) {
         // Step 1: Calculate Fixed Supply Charge
         const supplyCharge = calculateSupplyCharge(planData.daily_supply_charge);
 
-        // Step 2: Determine Net Grid Consumption
-        const solarSelfConsumed = solarGeneration * (selfConsumptionPercent / 100);
-        const netGridConsumption = quarterlyConsumption - solarSelfConsumed;
+        // Step 2: Calculate Net Grid Consumption
+        // For solar households, the quarterly consumption already represents net grid consumption
+        // since solar self-consumption is already factored into the bill
+        const netGridConsumption = quarterlyConsumption;
 
         // Step 3: Calculate Usage Charge (TOU rates applied to net consumption)
         const usageCharge = calculateUsageCharge(
@@ -45,7 +45,7 @@ function calculatePlanCost(planData, usagePattern) {
         );
 
         // Step 4: Calculate Solar Export Credit
-        const solarExported = Math.max(0, solarGeneration - solarSelfConsumed);
+        const solarExported = solarExport;
         const solarCredit = calculateSolarCredit(planData.solar_feed_in_rate_r || 0, solarExported);
 
         // Step 5: Calculate Final Bill Amount
@@ -58,7 +58,6 @@ function calculatePlanCost(planData, usagePattern) {
                 usageCharge: usageCharge,
                 solarCredit: solarCredit,
                 netGridConsumption: netGridConsumption,
-                solarSelfConsumed: solarSelfConsumed,
                 solarExported: solarExported
             },
             monthlyCost: Math.max(0, finalBill) / 3,
@@ -138,14 +137,13 @@ function validateInputs(usagePattern) {
         peakPercent,
         shoulderPercent,
         offPeakPercent,
-        solarGeneration = 0,
-        selfConsumptionPercent = 0
+        solarExport = 0
     } = usagePattern;
 
     // Check required fields
     if (quarterlyConsumption <= 0) return false;
     if (peakPercent < 0 || shoulderPercent < 0 || offPeakPercent < 0) return false;
-    if (solarGeneration < 0 || selfConsumptionPercent < 0 || selfConsumptionPercent > 100) return false;
+    if (solarExport < 0) return false;
 
     // Check percentages add up to 100% (allow small floating point errors)
     const totalPercent = peakPercent + shoulderPercent + offPeakPercent;

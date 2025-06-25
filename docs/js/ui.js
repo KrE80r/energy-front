@@ -186,9 +186,7 @@ function initializeCustomizationForm(personaKey) {
     const solarOptions = document.getElementById('solar-options');
     if (personaHasSolar(personaKey)) {
         solarOptions.style.display = 'block';
-        document.getElementById('solar-generation').value = persona.solarGeneration;
-        document.getElementById('self-consumption').value = persona.selfConsumptionPercent;
-        document.getElementById('self-consumption-value').textContent = persona.selfConsumptionPercent + '%';
+        document.getElementById('solar-export').value = persona.solarExport;
     } else {
         solarOptions.style.display = 'none';
     }
@@ -211,12 +209,13 @@ function setupFormEventListeners() {
         });
     });
     
-    // Self-consumption slider (doesn't need auto-adjustment)
-    const selfConsumptionInput = document.getElementById('self-consumption');
-    const selfConsumptionDisplay = document.getElementById('self-consumption-value');
-    if (selfConsumptionInput && selfConsumptionDisplay) {
-        selfConsumptionInput.addEventListener('input', function() {
-            selfConsumptionDisplay.textContent = this.value + '%';
+    // Solar export input validation
+    const solarExportInput = document.getElementById('solar-export');
+    if (solarExportInput) {
+        solarExportInput.addEventListener('input', function() {
+            const value = parseInt(this.value);
+            if (value < 0) this.value = 0;
+            if (value > 5000) this.value = 5000; // Reasonable maximum
         });
     }
     
@@ -227,12 +226,6 @@ function setupFormEventListeners() {
         if (value > 10000) this.value = 10000;
     });
     
-    // Solar generation input validation
-    document.getElementById('solar-generation').addEventListener('input', function() {
-        const value = parseInt(this.value);
-        if (value < 0) this.value = 0;
-        if (value > 5000) this.value = 5000;
-    });
 }
 
 /**
@@ -331,8 +324,7 @@ function getFormUsagePattern() {
         peakPercent: parseInt(document.getElementById('peak-percent').value),
         shoulderPercent: parseInt(document.getElementById('shoulder-percent').value),
         offPeakPercent: parseInt(document.getElementById('offpeak-percent').value),
-        solarGeneration: parseInt(document.getElementById('solar-generation').value) || 0,
-        selfConsumptionPercent: parseInt(document.getElementById('self-consumption').value) || 0
+        solarExport: parseInt(document.getElementById('solar-export').value) || 0
     };
 }
 
