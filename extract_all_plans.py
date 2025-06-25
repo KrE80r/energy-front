@@ -8,6 +8,8 @@ Saves complete dataset to JSON for frontend consumption
 import json
 import logging
 import requests
+import time
+import random
 from typing import Dict, List, Any, Optional
 
 # Configure logging
@@ -22,6 +24,15 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
     "Accept": "application/json, text/plain, */*"
 }
+
+# Proxy configuration
+PROXIES = [
+    {"http": "http://192.168.1.50:8080", "https": "http://192.168.1.50:8080"},
+    {"http": "http://192.168.1.50:8082", "https": "http://192.168.1.50:8082"}
+]
+
+# Global proxy counter for rotation
+proxy_counter = 0
 
 FEE_DESCRIPTIONS = {
     "ConnF": "Move In New Connection Fee",
@@ -69,6 +80,35 @@ def get_all_plans(postcode: str) -> List[Dict[str, Any]]:
     except json.JSONDecodeError as e:
         logger.error(f"JSON decode error: {e}")
         return []
+
+
+def get_next_proxy() -> Dict[str, str]:
+    """Get the next proxy in rotation."""
+    global proxy_counter
+    proxy = PROXIES[proxy_counter % len(PROXIES)]
+    proxy_counter += 1
+    return proxy
+
+def get_detailed_plan_data(plan_id: str, postcode: str) -> Optional[Dict[str, Any]]:
+    """Fetch detailed plan data including time blocks from individual plan API with proxy rotation."""
+    detailed_url = f"https://api.energymadeeasy.gov.au/consumerplan/plan/{plan_id}?postcode={postcode}"
+    
+    # Get next proxy in rotation
+    proxy = get_next_proxy()
+    proxy_host = proxy["http"].replace("http://", "")
+    
+    try:
+        logger.info(f"Fetching {plan_id} via proxy {proxy_host}")
+        response = requests.get(detailed_url, headers=HEADERS, proxies=proxy, timeout=30)
+        response.raise_for_status()
+        logger.debug(f"✅ Successfully fetched {plan_id} via proxy {proxy_host}")
+        return response.json()
+    except requests.RequestException as e:
+        logger.error(f"❌ Failed to fetch detailed data for plan {plan_id} via proxy {proxy_host}: {e}")
+        return None
+    except json.JSONDecodeError as e:
+        logger.error(f"❌ JSON decode error for plan {plan_id}: {e}")
+        return None
 
 
 def extract_fees_and_solar(plan: Dict[str, Any]) -> tuple[Dict[str, Any], Optional[float]]:
@@ -131,43 +171,85 @@ def extract_fees_and_solar(plan: Dict[str, Any]) -> tuple[Dict[str, Any], Option
     return fees, solar_feed_in_rate_r
 
 
-def extract_tariff_periods(plan: Dict[str, Any]) -> Dict[str, Optional[float]]:
-    """Extract tariff periods and daily supply charge."""
-    tariff_periods = []
+def extract_detailed_tariff_periods(detailed_plan_data: Dict[str, Any]) -> Dict[str, Any]:
+    """Extract detailed tariff periods with time blocks and daily supply charge from detailed API."""
+    tariff_blocks = []
     daily_supply_charge = None
 
     try:
-        contracts = plan.get("planData", {}).get("contract", [])
+        # Extract from detailed plan data structure
+        plan_data = detailed_plan_data.get("data", {}).get("planData", {})
+        contracts = plan_data.get("contract", [])
+        
         for contract in contracts:
             for period in contract.get("tariffPeriod", []):
-                for block in period.get("touBlock", []):
-                    for rate in block.get("blockRate", []):
-                        try:
-                            adjusted_rate = rate["unitPrice"] * GST_TAX
-                            tariff_periods.append(adjusted_rate)
-                        except (KeyError, TypeError) as e:
-                            logger.debug(f"Error calculating adjusted rate: {e}")
-                            continue
                 try:
                     daily_supply_charge = period.get("dailySupplyCharge", 0) * GST_TAX
                 except (KeyError, TypeError) as e:
                     logger.debug(f"Error calculating daily supply charge: {e}")
+                
+                for block in period.get("touBlock", []):
+                    block_data = {
+                        "name": block.get("name", "Unknown"),
+                        "description": block.get("description", ""),
+                        "time_of_use_period": block.get("timeOfUsePeriod", ""),
+                        "time_periods": [],
+                        "rates": []
+                    }
+                    
+                    # Extract time periods
+                    for time_period in block.get("timeOfUse", []):
+                        time_data = {
+                            "days": time_period.get("days", ""),
+                            "start_time": time_period.get("startTime", ""),
+                            "end_time": time_period.get("endTime", "")
+                        }
+                        block_data["time_periods"].append(time_data)
+                    
+                    # Extract rates
+                    for rate in block.get("blockRate", []):
+                        try:
+                            rate_data = {
+                                "unit_price": rate["unitPrice"],
+                                "unit_price_gst": rate["unitPrice"] * GST_TAX,
+                                "measure_unit": rate.get("measureUnit", "KWH"),
+                                "rate_type": rate.get("rateType"),
+                                "start_usage": rate.get("startUsage", 0),
+                                "end_usage": rate.get("endUsage")
+                            }
+                            block_data["rates"].append(rate_data)
+                        except (KeyError, TypeError) as e:
+                            logger.debug(f"Error processing rate: {e}")
+                    
+                    if block_data["rates"]:  # Only add blocks with valid rates
+                        tariff_blocks.append(block_data)
+                        
     except (KeyError, TypeError) as e:
-        logger.error(f"Error extracting tariff periods for plan {plan.get('planId', 'unknown')}: {e}")
+        logger.error(f"Error extracting detailed tariff periods: {e}")
 
-    # Sort tariff periods from highest to lowest
-    peak = shoulder = off_peak = None
-    if tariff_periods:
-        tariff_periods.sort(reverse=True)
-        peak = tariff_periods[0] if len(tariff_periods) > 0 else None
-        shoulder = tariff_periods[1] if len(tariff_periods) > 1 else None
-        off_peak = tariff_periods[2] if len(tariff_periods) > 2 else None
+    # Create simplified peak/shoulder/off-peak mapping for backward compatibility
+    simple_rates = {}
+    if tariff_blocks:
+        # Sort blocks by highest rate to determine peak/shoulder/off-peak
+        rate_mapping = []
+        for block in tariff_blocks:
+            if block["rates"]:
+                avg_rate = sum(r["unit_price_gst"] for r in block["rates"]) / len(block["rates"])
+                rate_mapping.append((avg_rate, block["name"], block))
+        
+        rate_mapping.sort(reverse=True)  # Highest rates first
+        
+        if len(rate_mapping) >= 1:
+            simple_rates["peak_cost"] = rate_mapping[0][0]
+        if len(rate_mapping) >= 2:
+            simple_rates["shoulder_cost"] = rate_mapping[1][0]
+        if len(rate_mapping) >= 3:
+            simple_rates["off_peak_cost"] = rate_mapping[2][0]
 
     return {
-        "peak_cost": peak,
-        "shoulder_cost": shoulder,
-        "off_peak_cost": off_peak,
-        "daily_supply_charge": daily_supply_charge
+        **simple_rates,
+        "daily_supply_charge": daily_supply_charge,
+        "detailed_time_blocks": tariff_blocks
     }
 
 
@@ -223,18 +305,35 @@ def determine_plan_type(plan: Dict[str, Any]) -> str:
         return "UNKNOWN"
 
 
-def extract_single_plan(plan: Dict[str, Any]) -> Dict[str, Any]:
-    """Extract all relevant data from a single plan."""
+def extract_single_plan(plan: Dict[str, Any], postcode: str) -> Dict[str, Any]:
+    """Extract all relevant data from a single plan, including detailed time blocks."""
     try:
         plan_data = plan.get("planData", {})
+        plan_id = plan.get("planId")
+        
+        # Get basic data from main API response
         costs = get_no_discount_cost(plan, 'large')
         fees, solar_feed_in_rate_r = extract_fees_and_solar(plan)
-        tariff_data = extract_tariff_periods(plan)
         payment_options = extract_payment_options(plan)
         plan_type = determine_plan_type(plan)
+        
+        # Add small delay to avoid overwhelming the API
+        time.sleep(random.uniform(0.5, 1.5))
+        
+        # Fetch detailed data for time blocks
+        detailed_data = get_detailed_plan_data(plan_id, postcode)
+        
+        if detailed_data:
+            # Use detailed data for tariff information
+            tariff_data = extract_detailed_tariff_periods(detailed_data)
+        else:
+            # Fallback to basic tariff data if detailed fetch fails
+            logger.warning(f"Failed to fetch detailed data for {plan_id}, using basic tariff data")
+            # Create a fallback function for basic tariff extraction
+            tariff_data = extract_basic_tariff_periods(plan)
 
         return {
-            "plan_id": plan.get("planId"),
+            "plan_id": plan_id,
             "plan_name": plan_data.get("planName"),
             "retailer_name": plan_data.get("retailerName"),
             "plan_type": plan_type,
@@ -242,10 +341,11 @@ def extract_single_plan(plan: Dict[str, Any]) -> Dict[str, Any]:
             "monthly_cost": costs["monthly"],
             "quarterly_cost": costs["quarterly"],
             "annual_cost": costs["yearly"],
-            "peak_cost": tariff_data["peak_cost"],
-            "shoulder_cost": tariff_data["shoulder_cost"],
-            "off_peak_cost": tariff_data["off_peak_cost"],
-            "daily_supply_charge": tariff_data["daily_supply_charge"],
+            "peak_cost": tariff_data.get("peak_cost"),
+            "shoulder_cost": tariff_data.get("shoulder_cost"),
+            "off_peak_cost": tariff_data.get("off_peak_cost"),
+            "daily_supply_charge": tariff_data.get("daily_supply_charge"),
+            "detailed_time_blocks": tariff_data.get("detailed_time_blocks", []),
             "fees": fees,
             "solar_feed_in_rate_r": solar_feed_in_rate_r,
             "payment_options": payment_options,
@@ -269,6 +369,47 @@ def extract_single_plan(plan: Dict[str, Any]) -> Dict[str, Any]:
         return None
 
 
+def extract_basic_tariff_periods(plan: Dict[str, Any]) -> Dict[str, Any]:
+    """Fallback function to extract basic tariff data from main API response."""
+    tariff_periods = []
+    daily_supply_charge = None
+
+    try:
+        contracts = plan.get("planData", {}).get("contract", [])
+        for contract in contracts:
+            for period in contract.get("tariffPeriod", []):
+                for block in period.get("touBlock", []):
+                    for rate in block.get("blockRate", []):
+                        try:
+                            adjusted_rate = rate["unitPrice"] * GST_TAX
+                            tariff_periods.append(adjusted_rate)
+                        except (KeyError, TypeError) as e:
+                            logger.debug(f"Error calculating adjusted rate: {e}")
+                            continue
+                try:
+                    daily_supply_charge = period.get("dailySupplyCharge", 0) * GST_TAX
+                except (KeyError, TypeError) as e:
+                    logger.debug(f"Error calculating daily supply charge: {e}")
+    except (KeyError, TypeError) as e:
+        logger.error(f"Error extracting basic tariff periods: {e}")
+
+    # Sort tariff periods from highest to lowest
+    peak = shoulder = off_peak = None
+    if tariff_periods:
+        tariff_periods.sort(reverse=True)
+        peak = tariff_periods[0] if len(tariff_periods) > 0 else None
+        shoulder = tariff_periods[1] if len(tariff_periods) > 1 else None
+        off_peak = tariff_periods[2] if len(tariff_periods) > 2 else None
+
+    return {
+        "peak_cost": peak,
+        "shoulder_cost": shoulder,
+        "off_peak_cost": off_peak,
+        "daily_supply_charge": daily_supply_charge,
+        "detailed_time_blocks": []
+    }
+
+
 def extract_all_plans_data(postcode: str) -> Dict[str, List[Dict[str, Any]]]:
     """Extract ALL TOU plans with minimal filtering - exclude only SR, SRCL, TOUCL."""
     all_plans = get_all_plans(postcode)
@@ -285,7 +426,7 @@ def extract_all_plans_data(postcode: str) -> Dict[str, List[Dict[str, Any]]]:
             filtered_out += 1
             continue
             
-        extracted_plan = extract_single_plan(plan)
+        extracted_plan = extract_single_plan(plan, postcode)
         if extracted_plan:
             extracted_plans.append(extracted_plan)
         else:
