@@ -10,6 +10,8 @@ docs/
 ├── all_energy_plans.json   # Energy plan data (142 TOU plans)
 ├── CNAME                   # Custom domain configuration
 ├── .nojekyll              # Disable Jekyll processing
+├── README.md              # Deployment overview & features
+├── PERSONA_DEFAULTS.md    # Detailed usage patterns documentation
 ├── css/
 │   └── style.css          # Complete styling and layout
 └── js/

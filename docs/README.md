@@ -47,8 +47,10 @@ Your `CNAME` file is pre-configured for `energy.nazmy.io`:
 ### Persona-Based Quick Estimates
 - **Commuter (No Solar)**: 15% peak, 25% shoulder, 60% off-peak
 - **Work From Home (No Solar)**: 45% peak, 35% shoulder, 20% off-peak  
-- **Commuter (With Solar)**: 10% peak, 20% shoulder, 70% off-peak + 5kW solar
-- **Work From Home (With Solar)**: 30% peak, 40% shoulder, 30% off-peak + 5kW solar
+- **Commuter (With Solar)**: 10% peak, 20% shoulder, 70% off-peak + 1500kWh solar (25% self-consumption)
+- **Work From Home (With Solar)**: 30% peak, 40% shoulder, 30% off-peak + 1500kWh solar (60% self-consumption)
+
+📊 **[View detailed persona usage patterns](PERSONA_DEFAULTS.md)**
 
 ### Custom Usage Input
 - Quarterly consumption slider
