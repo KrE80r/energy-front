@@ -198,17 +198,27 @@ function initializeCustomizationForm(personaKey) {
  * Setup form event listeners for real-time updates
  */
 function setupFormEventListeners() {
-    // Range input updates
-    const rangeInputs = ['peak-percent', 'shoulder-percent', 'offpeak-percent', 'self-consumption'];
-    rangeInputs.forEach(inputId => {
+    // Range input updates with auto-adjustment for percentage sliders
+    const percentageInputs = ['peak-percent', 'shoulder-percent', 'offpeak-percent'];
+    percentageInputs.forEach(inputId => {
         const input = document.getElementById(inputId);
         const valueDisplay = document.getElementById(inputId.replace('-percent', '-value'));
         
         input.addEventListener('input', function() {
             valueDisplay.textContent = this.value + '%';
+            adjustOtherPercentages(inputId);
             validatePercentages();
         });
     });
+    
+    // Self-consumption slider (doesn't need auto-adjustment)
+    const selfConsumptionInput = document.getElementById('self-consumption');
+    const selfConsumptionDisplay = document.getElementById('self-consumption-value');
+    if (selfConsumptionInput && selfConsumptionDisplay) {
+        selfConsumptionInput.addEventListener('input', function() {
+            selfConsumptionDisplay.textContent = this.value + '%';
+        });
+    }
     
     // Consumption input validation
     document.getElementById('quarterly-consumption').addEventListener('input', function() {
@@ -223,6 +233,71 @@ function setupFormEventListeners() {
         if (value < 0) this.value = 0;
         if (value > 5000) this.value = 5000;
     });
+}
+
+/**
+ * Automatically adjust other percentage sliders to maintain 100% total
+ * @param {string} changedInputId - The ID of the slider that was changed
+ */
+function adjustOtherPercentages(changedInputId) {
+    const peakInput = document.getElementById('peak-percent');
+    const shoulderInput = document.getElementById('shoulder-percent');
+    const offpeakInput = document.getElementById('offpeak-percent');
+    
+    const peakValue = parseInt(peakInput.value);
+    const shoulderValue = parseInt(shoulderInput.value);
+    const offpeakValue = parseInt(offpeakInput.value);
+    
+    const changedValue = parseInt(document.getElementById(changedInputId).value);
+    
+    // Calculate remaining percentage to distribute
+    const remaining = 100 - changedValue;
+    
+    // Identify which two sliders to adjust
+    let otherInputs = [];
+    let otherValues = [];
+    
+    if (changedInputId === 'peak-percent') {
+        otherInputs = [shoulderInput, offpeakInput];
+        otherValues = [shoulderValue, offpeakValue];
+    } else if (changedInputId === 'shoulder-percent') {
+        otherInputs = [peakInput, offpeakInput];
+        otherValues = [peakValue, offpeakValue];
+    } else { // offpeak-percent
+        otherInputs = [peakInput, shoulderInput];
+        otherValues = [peakValue, shoulderValue];
+    }
+    
+    // Get current sum of the two other sliders
+    const otherSum = otherValues[0] + otherValues[1];
+    
+    if (otherSum > 0) {
+        // Proportionally distribute the remaining percentage
+        const ratio1 = otherValues[0] / otherSum;
+        const ratio2 = otherValues[1] / otherSum;
+        
+        const newValue1 = Math.round(remaining * ratio1);
+        const newValue2 = remaining - newValue1; // Ensure exact 100% total
+        
+        // Update the sliders and their display values
+        otherInputs[0].value = Math.max(0, Math.min(100, newValue1));
+        otherInputs[1].value = Math.max(0, Math.min(100, newValue2));
+        
+        // Update display values
+        document.getElementById(otherInputs[0].id.replace('-percent', '-value')).textContent = otherInputs[0].value + '%';
+        document.getElementById(otherInputs[1].id.replace('-percent', '-value')).textContent = otherInputs[1].value + '%';
+    } else {
+        // If both other sliders are at 0, distribute remaining equally
+        const equalShare = Math.floor(remaining / 2);
+        const remainder = remaining - (equalShare * 2);
+        
+        otherInputs[0].value = equalShare + remainder;
+        otherInputs[1].value = equalShare;
+        
+        // Update display values
+        document.getElementById(otherInputs[0].id.replace('-percent', '-value')).textContent = otherInputs[0].value + '%';
+        document.getElementById(otherInputs[1].id.replace('-percent', '-value')).textContent = otherInputs[1].value + '%';
+    }
 }
 
 /**
