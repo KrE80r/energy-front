@@ -50,14 +50,14 @@ function createPlanCardNew(calculation, personaKey, index) {
             <div class="plan-info-section">
                 <div class="retailer-info">
                     <div class="retailer-name">${planData.retailer_name}</div>
-                    <div class="plan-name">${planData.plan_name}</div>
+                    <div class="plan-name" title="${planData.plan_name}">${planData.plan_name}</div>
                 </div>
             </div>
             
             <div class="timeline-section">
                 <div class="timeline-label">24H TOU TIMELINE</div>
                 <div class="timeline-bar-new" data-plan-index="${index}">
-                    <div class="timeline-tooltip">Peak: 4-9pm | Shoulder: 6am-4pm, 9-10pm | Off-Peak: 10pm-6am</div>
+                    <div class="timeline-tooltip">Hover over timeline to see time periods</div>
                 </div>
                 <div class="timeline-markers-new">
                     <span>12am</span>
@@ -98,12 +98,31 @@ function createPlanCardNew(calculation, personaKey, index) {
         </div>
     `;
     
-    // Add timeline interaction
+    // Add timeline interaction and plan name truncation detection
     setTimeout(() => {
         setupTimelineInteractionNew(card, index);
+        setupPlanNameTooltip(card);
     }, 0);
     
     return card;
+}
+
+/**
+ * Setup plan name tooltip when text is truncated
+ * @param {HTMLElement} card - The plan card element
+ */
+function setupPlanNameTooltip(card) {
+    const planNameElement = card.querySelector('.plan-name');
+    if (!planNameElement) return;
+    
+    // Check if text is truncated
+    if (planNameElement.scrollWidth > planNameElement.clientWidth) {
+        planNameElement.style.cursor = 'help';
+        planNameElement.title = planNameElement.textContent;
+    } else {
+        planNameElement.style.cursor = 'default';
+        planNameElement.removeAttribute('title');
+    }
 }
 
 /**
@@ -127,7 +146,7 @@ function setupTimelineInteractionNew(card, index) {
     });
     
     timelineBar.addEventListener('mouseleave', function() {
-        tooltip.textContent = 'Peak: 4-9pm | Shoulder: 6am-4pm, 9-10pm | Off-Peak: 10pm-6am';
+        tooltip.textContent = 'Hover over timeline to see time periods';
     });
 }
 
@@ -150,22 +169,29 @@ function getTimeFromPercentage(percentage) {
     const period = hourFormatted >= 12 ? 'PM' : 'AM';
     const hour12 = hourFormatted === 0 ? 12 : hourFormatted > 12 ? hourFormatted - 12 : hourFormatted;
     
-    let rateType = '';
+    let rateInfo = '';
+    let fullPeriod = '';
     if (percentage < 29.2) {
-        rateType = 'Off-Peak';
+        rateInfo = 'Off-Peak';
+        fullPeriod = 'Off-Peak Period: 12am-7am';
     } else if (percentage < 37.5) {
-        rateType = 'Shoulder'; 
+        rateInfo = 'Shoulder';
+        fullPeriod = 'Shoulder Period: 7am-9am';
     } else if (percentage < 66.7) {
-        rateType = 'Off-Peak';
+        rateInfo = 'Off-Peak';
+        fullPeriod = 'Off-Peak Period: 9am-4pm';
     } else if (percentage < 87.5) {
-        rateType = 'Peak';
+        rateInfo = 'Peak';
+        fullPeriod = 'Peak Period: 4pm-9pm';
     } else if (percentage < 91.7) {
-        rateType = 'Shoulder';
+        rateInfo = 'Shoulder';
+        fullPeriod = 'Shoulder Period: 9pm-10pm';
     } else {
-        rateType = 'Off-Peak';
+        rateInfo = 'Off-Peak';
+        fullPeriod = 'Off-Peak Period: 10pm-12am';
     }
     
-    return `${hour12}:00 ${period} - ${rateType} Rate`;
+    return `${hour12}:00 ${period} | ${fullPeriod}`;
 }
 
 /**
