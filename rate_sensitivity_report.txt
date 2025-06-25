@@ -1,0 +1,157 @@
+================================================================================
+RATE SENSITIVITY ANALYSIS REPORT
+================================================================================
+
+PERSONA: Commuter (No Solar)
+==================================================
+
+RATE COMPONENT ANALYSIS:
+------------------------------
+Using cheapest plan: Local Member ($522.25 quarterly)
+
+Cost Component Breakdown:
+  Supply Charge Impact: 17.4% ($91.00)
+  Peak Usage Impact: 63.3% ($330.75)
+  Shoulder Usage Impact: 6.9% ($36.00)
+  Off-Peak Usage Impact: 12.4% ($64.50)
+
+OPTIMIZATION PRIORITIES:
+  1. Peak Rate: 63.3% of total cost
+  2. Off-Peak Rate: 12.4% of total cost
+  3. Shoulder Rate: 6.9% of total cost
+
+BEST RATES AVAILABLE:
+-------------------------
+Peak Rate Leader: Local Member (31.50 c/kWh)
+  Would cost: $522.25 quarterly
+Shoulder Rate Leader: Local Member (24.00 c/kWh)
+  Would cost: $522.25 quarterly
+Off Peak Rate Leader: iO Sustainable Home Plan (12.00 c/kWh)
+  Would cost: $784.65 quarterly
+Supply Charge Leader: Online Member (85.00 c/day)
+  Would cost: $602.35 quarterly
+Feed In Tariff Leader: SA-ENGIE EV Flex Charge elec (10.00 c/kWh)
+  Would cost: $798.10 quarterly
+
+THEORETICAL OPTIMIZATION POTENTIAL:
+  Current best plan: $522.25 quarterly
+  Theoretical perfect plan: $480.10 quarterly
+  Unrealized potential: $42.15 quarterly ($168.60 annually)
+
+==================================================
+
+PERSONA: Work From Home (No Solar)
+==================================================
+
+RATE COMPONENT ANALYSIS:
+------------------------------
+Using cheapest plan: Local Member ($597.25 quarterly)
+
+Cost Component Breakdown:
+  Supply Charge Impact: 15.2% ($91.00)
+  Peak Usage Impact: 57.0% ($340.20)
+  Shoulder Usage Impact: 18.1% ($108.00)
+  Off-Peak Usage Impact: 9.7% ($58.05)
+
+OPTIMIZATION PRIORITIES:
+  1. Peak Rate: 57.0% of total cost
+  2. Shoulder Rate: 18.1% of total cost
+  3. Off-Peak Rate: 9.7% of total cost
+
+BEST RATES AVAILABLE:
+-------------------------
+Peak Rate Leader: Local Member (31.50 c/kWh)
+  Would cost: $597.25 quarterly
+Shoulder Rate Leader: Local Member (24.00 c/kWh)
+  Would cost: $597.25 quarterly
+Off Peak Rate Leader: iO Sustainable Home Plan (12.00 c/kWh)
+  Would cost: $880.95 quarterly
+Supply Charge Leader: Online Member (85.00 c/day)
+  Would cost: $689.80 quarterly
+Feed In Tariff Leader: SA-ENGIE EV Flex Charge elec (10.00 c/kWh)
+  Would cost: $914.39 quarterly
+
+THEORETICAL OPTIMIZATION POTENTIAL:
+  Current best plan: $597.25 quarterly
+  Theoretical perfect plan: $557.95 quarterly
+  Unrealized potential: $39.30 quarterly ($157.20 annually)
+
+==================================================
+
+PERSONA: Commuter + Solar
+==================================================
+
+RATE COMPONENT ANALYSIS:
+------------------------------
+Using cheapest plan: Local Member ($448.75 quarterly)
+
+Cost Component Breakdown:
+  Supply Charge Impact: 20.3% ($91.00)
+  Peak Usage Impact: 63.9% ($286.65)
+  Shoulder Usage Impact: 7.0% ($31.20)
+  Off-Peak Usage Impact: 12.5% ($55.90)
+  Solar Credit Impact: -3.6% (-$16.00)
+
+OPTIMIZATION PRIORITIES:
+  1. Peak Rate: 63.9% of total cost
+  2. Off-Peak Rate: 12.5% of total cost
+  3. Shoulder Rate: 7.0% of total cost
+
+BEST RATES AVAILABLE:
+-------------------------
+Peak Rate Leader: Local Member (31.50 c/kWh)
+  Would cost: $448.75 quarterly
+Shoulder Rate Leader: Local Member (24.00 c/kWh)
+  Would cost: $448.75 quarterly
+Off Peak Rate Leader: iO Sustainable Home Plan (12.00 c/kWh)
+  Would cost: $700.05 quarterly
+Supply Charge Leader: Online Member (85.00 c/day)
+  Would cost: $516.35 quarterly
+Feed In Tariff Leader: SA-ENGIE EV Flex Charge elec (10.00 c/kWh)
+  Would cost: $626.43 quarterly
+
+THEORETICAL OPTIMIZATION POTENTIAL:
+  Current best plan: $448.75 quarterly
+  Theoretical perfect plan: $346.40 quarterly
+  Unrealized potential: $102.35 quarterly ($409.40 annually)
+
+==================================================
+
+PERSONA: Work From Home + Solar
+==================================================
+
+RATE COMPONENT ANALYSIS:
+------------------------------
+Using cheapest plan: Local Member ($514.25 quarterly)
+
+Cost Component Breakdown:
+  Supply Charge Impact: 17.7% ($91.00)
+  Peak Usage Impact: 56.4% ($289.80)
+  Shoulder Usage Impact: 17.9% ($92.00)
+  Off-Peak Usage Impact: 9.6% ($49.45)
+  Solar Credit Impact: -1.6% (-$8.00)
+
+OPTIMIZATION PRIORITIES:
+  1. Peak Rate: 56.4% of total cost
+  2. Shoulder Rate: 17.9% of total cost
+  3. Off-Peak Rate: 9.6% of total cost
+
+BEST RATES AVAILABLE:
+-------------------------
+Peak Rate Leader: Local Member (31.50 c/kWh)
+  Would cost: $514.25 quarterly
+Shoulder Rate Leader: Local Member (24.00 c/kWh)
+  Would cost: $514.25 quarterly
+Off Peak Rate Leader: iO Sustainable Home Plan (12.00 c/kWh)
+  Would cost: $772.68 quarterly
+Supply Charge Leader: Online Member (85.00 c/day)
+  Would cost: $591.07 quarterly
+Feed In Tariff Leader: SA-ENGIE EV Flex Charge elec (10.00 c/kWh)
+  Would cost: $755.30 quarterly
+
+THEORETICAL OPTIMIZATION POTENTIAL:
+  Current best plan: $514.25 quarterly
+  Theoretical perfect plan: $446.75 quarterly
+  Unrealized potential: $67.50 quarterly ($270.00 annually)
+
+==================================================

@@ -1,14 +1,23 @@
 /**
- * Energy Plan Cost Calculator
- * Implements the unified electricity bill calculation formula from PRD
+ * Energy Plan Cost Calculator - BILL-ACCURATE VERSION
+ * Implements electricity bill calculation based on real user bill data
+ * 
+ * KEY INSIGHTS FROM BILL ANALYSIS:
+ * 1. quarterlyConsumption = NET GRID CONSUMPTION (what user bought from grid, shown on bill)
+ * 2. solarExport = solar export amount (shown as credit on bill)
+ * 3. TOU rates apply directly to quarterlyConsumption (already net after solar self-consumption)
+ * 4. Smart meters handle solar self-consumption behind the scenes
+ * 5. Users cannot measure total household consumption - only net consumption from bills
+ * 
+ * This matches exactly how electricity bills work in practice
  */
 
 /**
- * Calculate electricity costs using the unified formula
+ * Calculate electricity costs using the bill-accurate formula
  * Works for both solar and non-solar households
  * 
  * @param {Object} planData - Energy plan data from JSON
- * @param {Object} usagePattern - User's usage pattern
+ * @param {Object} usagePattern - User's usage pattern from their electricity bill
  * @returns {Object} Detailed cost breakdown
  */
 function calculatePlanCost(planData, usagePattern) {
@@ -30,12 +39,12 @@ function calculatePlanCost(planData, usagePattern) {
         // Step 1: Calculate Fixed Supply Charge
         const supplyCharge = calculateSupplyCharge(planData.daily_supply_charge);
 
-        // Step 2: Calculate Net Grid Consumption
-        // For solar households, the quarterly consumption already represents net grid consumption
-        // since solar self-consumption is already factored into the bill
+        // Step 2: Net Grid Consumption
+        // quarterlyConsumption from bills is already NET GRID CONSUMPTION
+        // (Smart meters deduct solar self-consumption automatically)
         const netGridConsumption = quarterlyConsumption;
 
-        // Step 3: Calculate Usage Charge (TOU rates applied to net consumption)
+        // Step 3: Calculate Usage Charge (TOU rates applied to net grid consumption)
         const usageCharge = calculateUsageCharge(
             planData,
             netGridConsumption,
@@ -127,7 +136,7 @@ function calculateSolarCredit(feedInRate, solarExported) {
 }
 
 /**
- * Validate input parameters
+ * Validate input parameters based on real electricity bill data
  * @param {Object} usagePattern - Usage pattern to validate
  * @returns {boolean} True if inputs are valid
  */
@@ -148,25 +157,46 @@ function validateInputs(usagePattern) {
     // Check percentages add up to 100% (allow small floating point errors)
     const totalPercent = peakPercent + shoulderPercent + offPeakPercent;
     if (Math.abs(totalPercent - 100) > 0.1) return false;
+    
+    // Prevent invalid combinations where all percentages are 0
+    if (peakPercent === 0 && shoulderPercent === 0 && offPeakPercent === 0) return false;
+    
+    // Prevent scenarios where solar export exceeds consumption (impossible)
+    if (solarExport > quarterlyConsumption * 2) {
+        console.warn('Solar export seems unusually high compared to consumption - please verify inputs');
+        // Allow but warn - user might have very efficient household
+    }
 
     return true;
 }
 
 /**
  * Disqualify plans with suspicious zero or null shoulder/off-peak rates
- * These are usually fake plans with hidden catches
+ * Updated to allow legitimate 2-rate TOU plans
  * @param {Object} planData - Plan data to validate
  * @returns {boolean} True if plan should be disqualified
  */
 function shouldDisqualifyPlan(planData) {
-    // Check for zero or null shoulder rates
-    if (planData.shoulder_cost === 0 || planData.shoulder_cost === null) {
+    // Must have valid peak and off-peak rates
+    const peakRate = planData.peak_cost;
+    const offPeakRate = planData.off_peak_cost;
+    
+    if (!peakRate || !offPeakRate || peakRate <= 0 || offPeakRate <= 0) {
         return true;
     }
     
-    // Check for zero or null off-peak rates
-    if (planData.off_peak_cost === 0 || planData.off_peak_cost === null) {
-        return true;
+    // Shoulder rate can be null/zero for legitimate 2-rate TOU plans
+    // Only disqualify if shoulder rate exists but is suspiciously zero
+    const shoulderRate = planData.shoulder_cost;
+    if (shoulderRate !== null && shoulderRate !== undefined && shoulderRate <= 0) {
+        // Check if this plan has detailed time blocks showing shoulder period exists
+        const detailedBlocks = planData.detailed_time_blocks || [];
+        const hasShoulderBlock = detailedBlocks.some(block => 
+            block.time_of_use_period === 'S' || block.name?.toLowerCase().includes('shoulder')
+        );
+        if (hasShoulderBlock) {
+            return true; // Has shoulder period but zero rate - suspicious
+        }
     }
     
     return false;

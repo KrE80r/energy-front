@@ -1,0 +1,399 @@
+================================================================================
+ENERGY PLAN PERSONA ANALYSIS REPORT
+================================================================================
+
+PERSONA: Commuter (No Solar)
+Description: Works away from home 9am-5pm, high peak usage
+Usage Pattern: 1500 kWh quarterly
+TOU Split: 70% peak, 10% shoulder, 20% off-peak
+
+TOP 5 CHEAPEST PLANS:
+--------------------------------------------------
+1. Local Member (Energy Locals)
+   Quarterly Cost: $522.25
+   Monthly Cost: $174.08
+   Annual Cost: $2089.00
+
+   Rate Structure:
+   - Peak Rate: 31.50 c/kWh
+   - Shoulder Rate: 24.00 c/kWh
+   - Off-Peak Rate: 21.50 c/kWh
+   - Daily Supply: 100.00 c/day
+   - Feed-in Tariff: 2.00 c/kWh
+
+   Cost Breakdown:
+   - Supply Charge: $91.00
+   - Usage Charge: $431.25
+
+2. Online Member (Energy Locals)
+   Quarterly Cost: $522.25
+   Monthly Cost: $174.08
+   Annual Cost: $2089.00
+
+   Rate Structure:
+   - Peak Rate: 31.50 c/kWh
+   - Shoulder Rate: 24.00 c/kWh
+   - Off-Peak Rate: 21.50 c/kWh
+   - Daily Supply: 100.00 c/day
+   - Feed-in Tariff: 2.00 c/kWh
+
+   Cost Breakdown:
+   - Supply Charge: $91.00
+   - Usage Charge: $431.25
+
+3. Local Rewards (Energy Locals)
+   Quarterly Cost: $522.25
+   Monthly Cost: $174.08
+   Annual Cost: $2089.00
+
+   Rate Structure:
+   - Peak Rate: 31.50 c/kWh
+   - Shoulder Rate: 24.00 c/kWh
+   - Off-Peak Rate: 21.50 c/kWh
+   - Daily Supply: 100.00 c/day
+   - Feed-in Tariff: 2.00 c/kWh
+
+   Cost Breakdown:
+   - Supply Charge: $91.00
+   - Usage Charge: $431.25
+
+4. Home Classic (Energy Locals)
+   Quarterly Cost: $546.82
+   Monthly Cost: $182.27
+   Annual Cost: $2187.28
+
+   Rate Structure:
+   - Peak Rate: 31.50 c/kWh
+   - Shoulder Rate: 24.00 c/kWh
+   - Off-Peak Rate: 21.50 c/kWh
+   - Daily Supply: 127.00 c/day
+   - Feed-in Tariff: 1.00 c/kWh
+
+   Cost Breakdown:
+   - Supply Charge: $115.57
+   - Usage Charge: $431.25
+
+5. RAA Member Smart (RAA Energy)
+   Quarterly Cost: $557.74
+   Monthly Cost: $185.91
+   Annual Cost: $2230.97
+
+   Rate Structure:
+   - Peak Rate: 33.43 c/kWh
+   - Shoulder Rate: 26.03 c/kWh
+   - Off-Peak Rate: 23.55 c/kWh
+   - Daily Supply: 106.63 c/day
+   - Feed-in Tariff: 2.00 c/kWh
+
+   Cost Breakdown:
+   - Supply Charge: $97.03
+   - Usage Charge: $460.71
+
+SAVINGS POTENTIAL: Up to $678.29 quarterly ($2713.16 annually)
+
+==================================================
+
+PERSONA: Work From Home (No Solar)
+Description: Home all day, balanced usage across periods
+Usage Pattern: 1800 kWh quarterly
+TOU Split: 60% peak, 25% shoulder, 15% off-peak
+
+TOP 5 CHEAPEST PLANS:
+--------------------------------------------------
+1. Local Member (Energy Locals)
+   Quarterly Cost: $597.25
+   Monthly Cost: $199.08
+   Annual Cost: $2389.00
+
+   Rate Structure:
+   - Peak Rate: 31.50 c/kWh
+   - Shoulder Rate: 24.00 c/kWh
+   - Off-Peak Rate: 21.50 c/kWh
+   - Daily Supply: 100.00 c/day
+   - Feed-in Tariff: 2.00 c/kWh
+
+   Cost Breakdown:
+   - Supply Charge: $91.00
+   - Usage Charge: $506.25
+
+2. Online Member (Energy Locals)
+   Quarterly Cost: $597.25
+   Monthly Cost: $199.08
+   Annual Cost: $2389.00
+
+   Rate Structure:
+   - Peak Rate: 31.50 c/kWh
+   - Shoulder Rate: 24.00 c/kWh
+   - Off-Peak Rate: 21.50 c/kWh
+   - Daily Supply: 100.00 c/day
+   - Feed-in Tariff: 2.00 c/kWh
+
+   Cost Breakdown:
+   - Supply Charge: $91.00
+   - Usage Charge: $506.25
+
+3. Local Rewards (Energy Locals)
+   Quarterly Cost: $597.25
+   Monthly Cost: $199.08
+   Annual Cost: $2389.00
+
+   Rate Structure:
+   - Peak Rate: 31.50 c/kWh
+   - Shoulder Rate: 24.00 c/kWh
+   - Off-Peak Rate: 21.50 c/kWh
+   - Daily Supply: 100.00 c/day
+   - Feed-in Tariff: 2.00 c/kWh
+
+   Cost Breakdown:
+   - Supply Charge: $91.00
+   - Usage Charge: $506.25
+
+4. Home Classic (Energy Locals)
+   Quarterly Cost: $621.82
+   Monthly Cost: $207.27
+   Annual Cost: $2487.28
+
+   Rate Structure:
+   - Peak Rate: 31.50 c/kWh
+   - Shoulder Rate: 24.00 c/kWh
+   - Off-Peak Rate: 21.50 c/kWh
+   - Daily Supply: 127.00 c/day
+   - Feed-in Tariff: 1.00 c/kWh
+
+   Cost Breakdown:
+   - Supply Charge: $115.57
+   - Usage Charge: $506.25
+
+5. RAA Member Smart (RAA Energy)
+   Quarterly Cost: $638.80
+   Monthly Cost: $212.93
+   Annual Cost: $2555.19
+
+   Rate Structure:
+   - Peak Rate: 33.43 c/kWh
+   - Shoulder Rate: 26.03 c/kWh
+   - Off-Peak Rate: 23.55 c/kWh
+   - Daily Supply: 106.63 c/day
+   - Feed-in Tariff: 2.00 c/kWh
+
+   Cost Breakdown:
+   - Supply Charge: $97.03
+   - Usage Charge: $541.76
+
+SAVINGS POTENTIAL: Up to $714.76 quarterly ($2859.05 annually)
+
+==================================================
+
+PERSONA: Commuter + Solar
+Description: Away during solar hours, maximizes export
+Usage Pattern: 1500 kWh quarterly
+TOU Split: 70% peak, 10% shoulder, 20% off-peak
+Solar: 800 kWh export, 20% self-consumption
+
+TOP 5 CHEAPEST PLANS:
+--------------------------------------------------
+1. Local Member (Energy Locals)
+   Quarterly Cost: $448.75
+   Monthly Cost: $149.58
+   Annual Cost: $1795.00
+
+   Rate Structure:
+   - Peak Rate: 31.50 c/kWh
+   - Shoulder Rate: 24.00 c/kWh
+   - Off-Peak Rate: 21.50 c/kWh
+   - Daily Supply: 100.00 c/day
+   - Feed-in Tariff: 2.00 c/kWh
+
+   Cost Breakdown:
+   - Supply Charge: $91.00
+   - Usage Charge: $373.75
+   - Solar Credit: -$16.00
+   - Net Grid Consumption: 1300.0 kWh
+   - Solar Self-Consumed: 200.0 kWh
+
+2. Online Member (Energy Locals)
+   Quarterly Cost: $448.75
+   Monthly Cost: $149.58
+   Annual Cost: $1795.00
+
+   Rate Structure:
+   - Peak Rate: 31.50 c/kWh
+   - Shoulder Rate: 24.00 c/kWh
+   - Off-Peak Rate: 21.50 c/kWh
+   - Daily Supply: 100.00 c/day
+   - Feed-in Tariff: 2.00 c/kWh
+
+   Cost Breakdown:
+   - Supply Charge: $91.00
+   - Usage Charge: $373.75
+   - Solar Credit: -$16.00
+   - Net Grid Consumption: 1300.0 kWh
+   - Solar Self-Consumed: 200.0 kWh
+
+3. Local Rewards (Energy Locals)
+   Quarterly Cost: $448.75
+   Monthly Cost: $149.58
+   Annual Cost: $1795.00
+
+   Rate Structure:
+   - Peak Rate: 31.50 c/kWh
+   - Shoulder Rate: 24.00 c/kWh
+   - Off-Peak Rate: 21.50 c/kWh
+   - Daily Supply: 100.00 c/day
+   - Feed-in Tariff: 2.00 c/kWh
+
+   Cost Breakdown:
+   - Supply Charge: $91.00
+   - Usage Charge: $373.75
+   - Solar Credit: -$16.00
+   - Net Grid Consumption: 1300.0 kWh
+   - Solar Self-Consumed: 200.0 kWh
+
+4. RAA Member Smart (RAA Energy)
+   Quarterly Cost: $480.32
+   Monthly Cost: $160.11
+   Annual Cost: $1921.26
+
+   Rate Structure:
+   - Peak Rate: 33.43 c/kWh
+   - Shoulder Rate: 26.03 c/kWh
+   - Off-Peak Rate: 23.55 c/kWh
+   - Daily Supply: 106.63 c/day
+   - Feed-in Tariff: 2.00 c/kWh
+
+   Cost Breakdown:
+   - Supply Charge: $97.03
+   - Usage Charge: $399.28
+   - Solar Credit: -$16.00
+   - Net Grid Consumption: 1300.0 kWh
+   - Solar Self-Consumed: 200.0 kWh
+
+5. Home Classic (Energy Locals)
+   Quarterly Cost: $481.32
+   Monthly Cost: $160.44
+   Annual Cost: $1925.28
+
+   Rate Structure:
+   - Peak Rate: 31.50 c/kWh
+   - Shoulder Rate: 24.00 c/kWh
+   - Off-Peak Rate: 21.50 c/kWh
+   - Daily Supply: 127.00 c/day
+   - Feed-in Tariff: 1.00 c/kWh
+
+   Cost Breakdown:
+   - Supply Charge: $115.57
+   - Usage Charge: $373.75
+   - Solar Credit: -$8.00
+   - Net Grid Consumption: 1300.0 kWh
+   - Solar Self-Consumed: 200.0 kWh
+
+SAVINGS POTENTIAL: Up to $603.74 quarterly ($2414.95 annually)
+
+==================================================
+
+PERSONA: Work From Home + Solar
+Description: Home during solar hours, higher self-consumption
+Usage Pattern: 1800 kWh quarterly
+TOU Split: 60% peak, 25% shoulder, 15% off-peak
+Solar: 400 kWh export, 40% self-consumption
+
+TOP 5 CHEAPEST PLANS:
+--------------------------------------------------
+1. Local Member (Energy Locals)
+   Quarterly Cost: $514.25
+   Monthly Cost: $171.42
+   Annual Cost: $2057.00
+
+   Rate Structure:
+   - Peak Rate: 31.50 c/kWh
+   - Shoulder Rate: 24.00 c/kWh
+   - Off-Peak Rate: 21.50 c/kWh
+   - Daily Supply: 100.00 c/day
+   - Feed-in Tariff: 2.00 c/kWh
+
+   Cost Breakdown:
+   - Supply Charge: $91.00
+   - Usage Charge: $431.25
+   - Solar Credit: -$8.00
+   - Net Grid Consumption: 1533.3 kWh
+   - Solar Self-Consumed: 266.7 kWh
+
+2. Online Member (Energy Locals)
+   Quarterly Cost: $514.25
+   Monthly Cost: $171.42
+   Annual Cost: $2057.00
+
+   Rate Structure:
+   - Peak Rate: 31.50 c/kWh
+   - Shoulder Rate: 24.00 c/kWh
+   - Off-Peak Rate: 21.50 c/kWh
+   - Daily Supply: 100.00 c/day
+   - Feed-in Tariff: 2.00 c/kWh
+
+   Cost Breakdown:
+   - Supply Charge: $91.00
+   - Usage Charge: $431.25
+   - Solar Credit: -$8.00
+   - Net Grid Consumption: 1533.3 kWh
+   - Solar Self-Consumed: 266.7 kWh
+
+3. Local Rewards (Energy Locals)
+   Quarterly Cost: $514.25
+   Monthly Cost: $171.42
+   Annual Cost: $2057.00
+
+   Rate Structure:
+   - Peak Rate: 31.50 c/kWh
+   - Shoulder Rate: 24.00 c/kWh
+   - Off-Peak Rate: 21.50 c/kWh
+   - Daily Supply: 100.00 c/day
+   - Feed-in Tariff: 2.00 c/kWh
+
+   Cost Breakdown:
+   - Supply Charge: $91.00
+   - Usage Charge: $431.25
+   - Solar Credit: -$8.00
+   - Net Grid Consumption: 1533.3 kWh
+   - Solar Self-Consumed: 266.7 kWh
+
+4. Home Classic (Energy Locals)
+   Quarterly Cost: $542.82
+   Monthly Cost: $180.94
+   Annual Cost: $2171.28
+
+   Rate Structure:
+   - Peak Rate: 31.50 c/kWh
+   - Shoulder Rate: 24.00 c/kWh
+   - Off-Peak Rate: 21.50 c/kWh
+   - Daily Supply: 127.00 c/day
+   - Feed-in Tariff: 1.00 c/kWh
+
+   Cost Breakdown:
+   - Supply Charge: $115.57
+   - Usage Charge: $431.25
+   - Solar Credit: -$4.00
+   - Net Grid Consumption: 1533.3 kWh
+   - Solar Self-Consumed: 266.7 kWh
+
+5. RAA Member Smart (RAA Energy)
+   Quarterly Cost: $550.54
+   Monthly Cost: $183.51
+   Annual Cost: $2202.14
+
+   Rate Structure:
+   - Peak Rate: 33.43 c/kWh
+   - Shoulder Rate: 26.03 c/kWh
+   - Off-Peak Rate: 23.55 c/kWh
+   - Daily Supply: 106.63 c/day
+   - Feed-in Tariff: 2.00 c/kWh
+
+   Cost Breakdown:
+   - Supply Charge: $97.03
+   - Usage Charge: $461.50
+   - Solar Credit: -$8.00
+   - Net Grid Consumption: 1533.3 kWh
+   - Solar Self-Consumed: 266.7 kWh
+
+SAVINGS POTENTIAL: Up to $621.64 quarterly ($2486.54 annually)
+
+==================================================
