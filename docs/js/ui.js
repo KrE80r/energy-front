@@ -10,17 +10,18 @@
  */
 function displayPlanCards(rankedCalculations, personaKey) {
     const planCardsContainer = document.getElementById('plan-cards');
-    const maxCards = 5; // Show top 5 plans
+    const maxPlans = 10; // Show top 10 plans
     
-    // Clear existing cards
+    // Clear existing content
     planCardsContainer.innerHTML = '';
     
-    // Take top plans (limit to maxCards)
-    const topPlans = rankedCalculations.slice(0, maxCards);
+    // Take top plans (limit to maxPlans)
+    const topPlans = rankedCalculations.slice(0, maxPlans);
     
+    // Create plan list
     topPlans.forEach((calculation, index) => {
-        const card = createPlanCard(calculation, personaKey, index);
-        planCardsContainer.appendChild(card);
+        const planCard = createPlanCardNew(calculation, personaKey, index);
+        planCardsContainer.appendChild(planCard);
     });
     
     // Add fade-in animation
@@ -36,90 +37,135 @@ function displayPlanCards(rankedCalculations, personaKey) {
  * @param {number} index - Card index for ranking display
  * @returns {HTMLElement} Plan card element
  */
-function createPlanCard(calculation, personaKey, index) {
+function createPlanCardNew(calculation, personaKey, index) {
     const { planData, totalCost, monthlyCost, breakdown } = calculation;
-    
-    const card = document.createElement('div');
-    card.className = 'col-12 col-lg-6 col-xl-4';
-    
     const strategicRecommendation = generateStrategicRecommendation(calculation, personaKey);
     
+    const card = document.createElement('div');
+    card.className = 'plan-card-row';
+    if (index === 0) card.classList.add('verified-winner');
+    
     card.innerHTML = `
-        <div class="plan-card">
-            <div class="plan-card-header">
-                <div class="retailer-name">${planData.retailer_name}</div>
-                <div class="plan-name">${planData.plan_name}</div>
-                
-                <!-- Timeline Visualization -->
-                <div class="timeline-container">
-                    <div class="timeline-label">24H TOU Timeline</div>
-                    <div class="timeline-bar" id="timeline-${index}"></div>
-                    <div class="timeline-markers">
-                        <span>12am</span>
-                        <span>6am</span>
-                        <span>12pm</span>
-                        <span>6pm</span>
-                        <span>12am</span>
+        <div class="plan-row-content">
+            <div class="plan-info-section">
+                <div class="retailer-info">
+                    <div class="retailer-name">${planData.retailer_name}</div>
+                    <div class="plan-name">${planData.plan_name}</div>
+                </div>
+            </div>
+            
+            <div class="timeline-section">
+                <div class="timeline-label">24H TOU TIMELINE</div>
+                <div class="timeline-bar-new" data-plan-index="${index}">
+                    <div class="timeline-tooltip">Peak: 4-9pm | Shoulder: 6am-4pm, 9-10pm | Off-Peak: 10pm-6am</div>
+                </div>
+                <div class="timeline-markers-new">
+                    <span>12am</span>
+                    <span>6am</span>
+                    <span>12pm</span>
+                    <span>6pm</span>
+                    <span>12am</span>
+                </div>
+            </div>
+            
+            <div class="rates-section">
+                <div class="rates-label">KEY RATES (C/KWH)</div>
+                <div class="rates-list">
+                    <div class="rate-group">
+                        <span class="rate-type peak-rate">P: ${planData.peak_cost ? planData.peak_cost.toFixed(2) : 'N/A'}</span>
+                        <span class="rate-type shoulder-rate">S: ${planData.shoulder_cost ? planData.shoulder_cost.toFixed(2) : 'N/A'}</span>
+                        <span class="rate-type offpeak-rate">O: ${planData.off_peak_cost ? planData.off_peak_cost.toFixed(2) : 'N/A'}</span>
                     </div>
-                    <div class="timeline-legend">
-                        <div class="timeline-legend-item">
-                            <div class="timeline-legend-color legend-offpeak"></div>
-                            <span>Off-Peak: 12am-6am</span>
-                        </div>
-                        <div class="timeline-legend-item">
-                            <div class="timeline-legend-color legend-peak"></div>
-                            <span>Peak: 4-9pm</span>
-                        </div>
-                        <div class="timeline-legend-item">
-                            <div class="timeline-legend-color legend-shoulder"></div>
-                            <span>Shoulder: Other</span>
-                        </div>
+                    <div class="rate-group">
+                        <span class="rate-type supply-rate">Supply: ${planData.daily_supply_charge ? planData.daily_supply_charge.toFixed(2) + '¢/day' : 'N/A'}</span>
+                        ${planData.solar_feed_in_rate_r ? `<span class="rate-type fit-rate">FiT: ${planData.solar_feed_in_rate_r.toFixed(1)}</span>` : ''}
                     </div>
                 </div>
             </div>
             
-            <div class="plan-card-body">
-                <!-- Cost Display -->
-                <div class="cost-primary">$${totalCost.toFixed(2)}</div>
-                <div class="cost-secondary">~$${monthlyCost.toFixed(2)}/month</div>
-                <div class="cost-secondary">~$${breakdown.supplyCharge.toFixed(2)}/quarter</div>
-                
-                <!-- Rate Information -->
-                <div class="rate-info">
-                    <div class="rate-item rate-peak">
-                        <div class="rate-label">P</div>
-                        <div class="rate-value">${planData.peak_cost ? planData.peak_cost.toFixed(2) : 'N/A'}</div>
-                    </div>
-                    <div class="rate-item rate-shoulder">
-                        <div class="rate-label">S</div>
-                        <div class="rate-value">${planData.shoulder_cost ? planData.shoulder_cost.toFixed(2) : 'N/A'}</div>
-                    </div>
-                    <div class="rate-item rate-offpeak">
-                        <div class="rate-label">O</div>
-                        <div class="rate-value">${planData.off_peak_cost ? planData.off_peak_cost.toFixed(2) : 'N/A'}</div>
-                    </div>
-                    <div class="rate-item rate-supply">
-                        <div class="rate-label">Supply</div>
-                        <div class="rate-value">${planData.daily_supply_charge ? planData.daily_supply_charge.toFixed(2) + '¢/day' : 'N/A'}</div>
-                    </div>
-                    ${planData.solar_feed_in_rate_r ? `
-                    <div class="rate-item rate-fit">
-                        <div class="rate-label">FiT</div>
-                        <div class="rate-value">${planData.solar_feed_in_rate_r.toFixed(1)}</div>
-                    </div>
-                    ` : ''}
+            <div class="cost-section">
+                <div class="cost-amount">$${totalCost.toFixed(2)}</div>
+                <div class="cost-details">
+                    <div>~$${monthlyCost.toFixed(2)}/month</div>
+                    <div>~$${(totalCost / 3 * 12).toFixed(2)}/quarter</div>
                 </div>
-                
-                <!-- Strategic Verdict -->
-                <div class="strategic-verdict">
-                    <div class="verdict-label">Strategic Verdict</div>
-                    <div class="verdict-text">${strategicRecommendation}</div>
-                </div>
+            </div>
+            
+            <div class="verdict-section">
+                <div class="verdict-label">STRATEGIC VERDICT</div>
+                <div class="verdict-content">${index === 0 ? 'VERIFIED WINNER: ' : ''}${strategicRecommendation}</div>
             </div>
         </div>
     `;
     
+    // Add timeline interaction
+    setTimeout(() => {
+        setupTimelineInteractionNew(card, index);
+    }, 0);
+    
     return card;
+}
+
+/**
+ * Setup timeline hover interactions
+ * @param {HTMLElement} card - The plan card element
+ * @param {number} index - Card index
+ */
+function setupTimelineInteractionNew(card, index) {
+    const timelineBar = card.querySelector('.timeline-bar-new');
+    const tooltip = card.querySelector('.timeline-tooltip');
+    
+    if (!timelineBar || !tooltip) return;
+    
+    timelineBar.addEventListener('mousemove', function(e) {
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const percentage = (x / rect.width) * 100;
+        
+        let timeInfo = getTimeFromPercentage(percentage);
+        tooltip.textContent = timeInfo;
+    });
+    
+    timelineBar.addEventListener('mouseleave', function() {
+        tooltip.textContent = 'Peak: 4-9pm | Shoulder: 6am-4pm, 9-10pm | Off-Peak: 10pm-6am';
+    });
+}
+
+/**
+ * Convert timeline percentage to time information
+ * @param {number} percentage - Position percentage on timeline
+ * @returns {string} Time information
+ */
+function getTimeFromPercentage(percentage) {
+    // Timeline segments based on the CSS gradient
+    // 0-29.2%: Off-Peak (12am-7am)
+    // 29.2-37.5%: Shoulder (7am-9am) 
+    // 37.5-66.7%: Off-Peak (9am-4pm)
+    // 66.7-87.5%: Peak (4pm-9pm)
+    // 87.5-91.7%: Shoulder (9pm-10pm)
+    // 91.7-100%: Off-Peak (10pm-12am)
+    
+    const hour = (percentage / 100) * 24;
+    const hourFormatted = Math.floor(hour);
+    const period = hourFormatted >= 12 ? 'PM' : 'AM';
+    const hour12 = hourFormatted === 0 ? 12 : hourFormatted > 12 ? hourFormatted - 12 : hourFormatted;
+    
+    let rateType = '';
+    if (percentage < 29.2) {
+        rateType = 'Off-Peak';
+    } else if (percentage < 37.5) {
+        rateType = 'Shoulder'; 
+    } else if (percentage < 66.7) {
+        rateType = 'Off-Peak';
+    } else if (percentage < 87.5) {
+        rateType = 'Peak';
+    } else if (percentage < 91.7) {
+        rateType = 'Shoulder';
+    } else {
+        rateType = 'Off-Peak';
+    }
+    
+    return `${hour12}:00 ${period} - ${rateType} Rate`;
 }
 
 /**
