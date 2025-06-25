@@ -87,7 +87,8 @@ function createPlanCardNew(calculation, personaKey, index) {
                 <div class="cost-amount">$${totalCost.toFixed(2)}</div>
                 <div class="cost-details">
                     <div>~$${monthlyCost.toFixed(2)}/month</div>
-                    <div>~$${(totalCost / 3 * 12).toFixed(2)}/quarter</div>
+                    <div>~$${totalCost.toFixed(2)}/quarter</div>
+                    <div>~$${(totalCost * 4).toFixed(2)}/annual</div>
                 </div>
             </div>
             
