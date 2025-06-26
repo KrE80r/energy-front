@@ -284,6 +284,8 @@ function initializeCustomizationForm(personaKey) {
         document.getElementById('solar-export').value = persona.solarExport;
     } else {
         solarOptions.style.display = 'none';
+        // CRITICAL FIX: Set solar export to 0 for non-solar personas
+        document.getElementById('solar-export').value = 0;
     }
 }
 
