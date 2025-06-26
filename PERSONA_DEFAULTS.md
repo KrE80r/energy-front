@@ -9,78 +9,77 @@ All personas are based on **21.1 kWh/day average usage** (1900 kWh quarterly con
 ### 🏠 **Commuter (No Solar)**
 **Profile**: Away during day, evening usage pattern
 ```
-Peak Usage:     15%  (4-9pm weekdays)
-Shoulder Usage: 25%  (7-10am, 9-10pm weekdays + 7am-10pm weekends)
-Off-Peak Usage: 60%  (10pm-7am + public holidays)
+Peak Usage:     40%  (6-10am morning routine + 3pm-1am evening usage)
+Shoulder Usage: 10%  (10am-3pm when away at work)
+Off-Peak Usage: 50%  (1-6am overnight appliances, hot water systems)
 
 Solar Generation:        0 kWh/quarter
 Self-Consumption:        0%
 ```
 
-**Rationale**: Low peak usage as household members are away at work during expensive evening peak hours (4-9pm). Higher off-peak usage for overnight appliances, morning routines, and weekend activities.
+**Rationale**: Away during cheapest shoulder period (10am-3pm), but unavoidable usage during expensive 18-hour peak periods for morning routines and evening activities. Maximize overnight off-peak usage with timers and smart appliances.
 
 ---
 
 ### 🏠 **Work From Home (No Solar)**
 **Profile**: High daytime usage pattern
 ```
-Peak Usage:     45%  (4-9pm weekdays)
-Shoulder Usage: 35%  (7-10am, 9-10pm weekdays + 7am-10pm weekends)
-Off-Peak Usage: 20%  (10pm-7am + public holidays)
+Peak Usage:     70%  (6-10am + 3pm-1am - home during 18-hour peak period)
+Shoulder Usage: 20%  (10am-3pm working hours)
+Off-Peak Usage: 10%  (1-6am limited overnight usage)
 
 Solar Generation:        0 kWh/quarter
 Self-Consumption:        0%
 ```
 
-**Rationale**: High peak usage due to working from home during expensive 4-9pm peak period. Air conditioning, computers, lighting, and appliances running during peak times. Lower off-peak usage as most consumption happens during active daytime hours.
+**Rationale**: Worst-case scenario for this TOU structure - home during 75% of peak pricing hours daily. Air conditioning, computers, lighting, and appliances running during expensive peak times. This tariff structure is punitive for WFH households without solar.
 
 ---
 
 ### 🌞 **Commuter (With Solar)**
 **Profile**: Solar export during day, minimal self-consumption
 ```
-Peak Usage:     10%  (4-9pm weekdays)
-Shoulder Usage: 20%  (7-10am, 9-10pm weekdays + 7am-10pm weekends)
-Off-Peak Usage: 70%  (10pm-7am + public holidays)
+Peak Usage:     25%  (6-10am + 3pm-1am reduced by solar offset)
+Shoulder Usage:  5%  (10am-3pm away during peak solar generation)
+Off-Peak Usage: 70%  (1-6am maximize cheapest period usage)
 
 Solar Generation:        1500 kWh/quarter (typical 5kW system in SA)
 Self-Consumption:        25%
 ```
 
-**Rationale**: Very low daytime consumption means most solar is exported to grid. Peak usage further reduced by battery storage or solar carryover effects. Higher off-peak usage for charging electric vehicles, pool pumps, and overnight appliances when solar isn't generating.
+**Rationale**: Ideal scenario - away during shoulder period when solar generates most, maximizing export revenue. Solar credits offset some peak usage costs. Smart load shifting to off-peak period (1-6am) for major appliances, EV charging, and pool pumps.
 
 ---
 
 ### 🌞 **Work From Home (With Solar)**
 **Profile**: High self-consumption during solar generation hours
 ```
-Peak Usage:     30%  (4-9pm weekdays)
-Shoulder Usage: 40%  (7-10am, 9-10pm weekdays + 7am-10pm weekends)
-Off-Peak Usage: 30%  (10pm-7am + public holidays)
+Peak Usage:     30%  (6-10am + 3pm-1am significantly reduced by solar)
+Shoulder Usage: 25%  (10am-3pm high self-consumption during solar peak)
+Off-Peak Usage: 45%  (1-6am smart load shifting)
 
 Solar Generation:        1500 kWh/quarter (typical 5kW system in SA)
 Self-Consumption:        60%
 ```
 
-**Rationale**: High self-consumption as household is occupied during solar generation hours. Peak usage significantly reduced from 45% to 30% due to solar offset during 4-9pm period. More balanced usage across all periods due to solar optimization.
+**Rationale**: Best positioned for this TOU structure - home during shoulder period (10am-3pm) for maximum self-consumption when solar generates most. Solar significantly reduces grid consumption during peak periods. Smart household can shift remaining loads to off-peak hours (1-6am).
 
 ## ⚡ Time of Use (TOU) Period Definitions
 
 Based on typical South Australian TOU tariff structures:
 
 ### Peak Hours
-- **Weekdays**: 4:00 PM - 9:00 PM
-- **Weekends**: No peak pricing
-- **Public Holidays**: No peak pricing
+- **Daily**: 6:00 AM - 10:00 AM & 3:00 PM - 1:00 AM (next day)
+- **Duration**: 18 hours per day (75% of day)
 
-### Shoulder Hours
-- **Weekdays**: 7:00 AM - 10:00 AM, 9:00 PM - 10:00 PM
-- **Weekends**: 7:00 AM - 10:00 PM
-- **Public Holidays**: 7:00 AM - 10:00 PM
+### Shoulder Hours  
+- **Daily**: 10:00 AM - 3:00 PM
+- **Duration**: 5 hours per day (21% of day)
+- **Note**: "Solar sponge" period aligning with peak solar generation
 
 ### Off-Peak Hours
-- **Daily**: 10:00 PM - 7:00 AM
-- **Public Holidays**: All day off-peak rates apply
+- **Daily**: 1:00 AM - 6:00 AM
+- **Duration**: 5 hours per day (21% of day)
 
 ## 🔢 Solar System Assumptions
 
@@ -123,9 +122,9 @@ The application ensures:
 
 ### Commuter (No Solar) - 1900 kWh Quarterly
 ```
-Peak Consumption:     1900 × 15% = 285 kWh
-Shoulder Consumption: 1900 × 25% = 475 kWh
-Off-Peak Consumption: 1900 × 60% = 1140 kWh
+Peak Consumption:     1900 × 40% = 760 kWh
+Shoulder Consumption: 1900 × 10% = 190 kWh
+Off-Peak Consumption: 1900 × 50% = 950 kWh
 Solar Self-Consumed:  0 kWh
 Net Grid Consumption: 1900 kWh
 Solar Exported:       0 kWh
@@ -134,8 +133,8 @@ Solar Exported:       0 kWh
 ### Work From Home (With Solar) - 1900 kWh Quarterly
 ```
 Peak Consumption:     1900 × 30% = 570 kWh
-Shoulder Consumption: 1900 × 40% = 760 kWh
-Off-Peak Consumption: 1900 × 30% = 570 kWh
+Shoulder Consumption: 1900 × 25% = 475 kWh
+Off-Peak Consumption: 1900 × 45% = 855 kWh
 Solar Generation:     1500 kWh
 Solar Self-Consumed:  1500 × 60% = 900 kWh
 Net Grid Consumption: 1900 - 900 = 1000 kWh
