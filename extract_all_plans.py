@@ -44,7 +44,8 @@ FEE_DESCRIPTIONS = {
     "DiscoFNP": "Disconnection Fee (Non-Payment)",
     "RecoF": "Reconnection Fee",
     "OF": "Other Fee",
-    "CCF": "Credit Card Payment Fee"
+    "CCF": "Credit Card Payment Fee",
+    "MBSF": "Membership Fee"
 }
 
 PAYMENT_OPTIONS_DESCRIPTIONS = {
@@ -123,7 +124,8 @@ def extract_fees_and_solar(plan: Dict[str, Any]) -> tuple[Dict[str, Any], Option
         "disconnection_fee_non_payment": None,
         "reconnection_fee": None,
         "other_fees": [],
-        "credit_card_payment_fees": []
+        "credit_card_payment_fees": [],
+        "membership_fee": None
     }
     solar_feed_in_rate_r = None
 
@@ -151,6 +153,8 @@ def extract_fees_and_solar(plan: Dict[str, Any]) -> tuple[Dict[str, Any], Option
                     fees["other_fees"].append(fee)
                 elif fee_type == "CCF":
                     fees["credit_card_payment_fees"].append(fee)
+                elif fee_type == "MBSF":
+                    fees["membership_fee"] = fee
 
             # Extract solar feed-in rate
             for solar_fit in contract.get("solarFit", []):
@@ -333,6 +337,16 @@ def extract_single_plan(plan: Dict[str, Any], postcode: str) -> Dict[str, Any]:
             # Create a fallback function for basic tariff extraction
             tariff_data = extract_basic_tariff_periods(plan)
 
+        # Calculate membership fee amounts for different periods
+        membership_fee_annual = 0
+        membership_fee_quarterly = 0
+        membership_fee_monthly = 0
+        
+        if fees.get("membership_fee") and fees["membership_fee"].get("feeTerm") == "A":
+            membership_fee_annual = fees["membership_fee"].get("amount", 0)
+            membership_fee_quarterly = membership_fee_annual / 4
+            membership_fee_monthly = membership_fee_annual / 12
+
         return {
             # Structured data for backward compatibility
             "plan_id": plan_id,
@@ -349,6 +363,9 @@ def extract_single_plan(plan: Dict[str, Any], postcode: str) -> Dict[str, Any]:
             "daily_supply_charge": tariff_data.get("daily_supply_charge"),
             "detailed_time_blocks": tariff_data.get("detailed_time_blocks", []),
             "fees": fees,
+            "membership_fee_annual": membership_fee_annual,
+            "membership_fee_quarterly": membership_fee_quarterly,
+            "membership_fee_monthly": membership_fee_monthly,
             "solar_feed_in_rate_r": solar_feed_in_rate_r,
             "payment_options": payment_options,
             

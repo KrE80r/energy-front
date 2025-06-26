@@ -39,6 +39,9 @@ function calculatePlanCost(planData, usagePattern) {
         // Step 1: Calculate Fixed Supply Charge
         const supplyCharge = calculateSupplyCharge(planData.daily_supply_charge);
 
+        // Step 1.5: Calculate Membership Fee for quarter
+        const membershipFee = calculateMembershipFee(planData);
+
         // Step 2: Net Grid Consumption
         // quarterlyConsumption from bills is already NET GRID CONSUMPTION
         // (Smart meters deduct solar self-consumption automatically)
@@ -58,13 +61,14 @@ function calculatePlanCost(planData, usagePattern) {
         const solarCredit = calculateSolarCredit(planData.solar_feed_in_rate_r || 0, solarExported);
 
         // Step 5: Calculate Final Bill Amount
-        const finalBill = supplyCharge + usageCharge - solarCredit;
+        const finalBill = supplyCharge + usageCharge + membershipFee - solarCredit;
 
         return {
             totalCost: Math.max(0, finalBill), // Ensure non-negative
             breakdown: {
                 supplyCharge: supplyCharge,
                 usageCharge: usageCharge,
+                membershipFee: membershipFee,
                 solarCredit: solarCredit,
                 netGridConsumption: netGridConsumption,
                 solarExported: solarExported
@@ -86,6 +90,28 @@ function calculatePlanCost(planData, usagePattern) {
  */
 function calculateSupplyCharge(dailySupplyRate) {
     return (dailySupplyRate * 91) / 100; // Convert cents to dollars
+}
+
+/**
+ * Calculate membership fee for quarter
+ * @param {Object} planData - Plan data with membership fee information
+ * @returns {number} Quarterly membership fee in dollars
+ */
+function calculateMembershipFee(planData) {
+    // Check for membership fee in plan data
+    if (planData.membership_fee_quarterly) {
+        return planData.membership_fee_quarterly;
+    }
+    
+    // Fallback: check raw fee data for MBSF fees
+    if (planData.fees && planData.fees.membership_fee) {
+        const membershipFee = planData.fees.membership_fee;
+        if (membershipFee.feeTerm === 'A' && membershipFee.amount) {
+            return membershipFee.amount / 4; // Convert annual to quarterly
+        }
+    }
+    
+    return 0; // No membership fee
 }
 
 /**
@@ -356,6 +382,7 @@ if (typeof module !== 'undefined' && module.exports) {
         hasDemandCharge,
         generateStrategicRecommendation,
         getPlanComparison,
-        validateInputs
+        validateInputs,
+        calculateMembershipFee
     };
 }
