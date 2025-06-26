@@ -22,6 +22,17 @@ async function initializeApp() {
         // Load energy plans data
         await loadEnergyPlans();
         
+        // Validate data integrity (prevent rate mapping errors)
+        if (typeof validateAllPlans === 'function') {
+            const validation = validateAllPlans(appState.energyPlans);
+            if (!validation.isValid) {
+                console.error('🚨 Data validation failed! Rate mapping errors detected.');
+                console.error('Some calculations may be incorrect. Please check data integrity.');
+            } else {
+                console.log('✅ Data validation passed - all rate mappings correct');
+            }
+        }
+        
         // Setup event listeners
         setupEventListeners();
         
