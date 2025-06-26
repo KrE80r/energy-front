@@ -102,6 +102,8 @@ function createPlanCardNew(calculation, personaKey, index) {
                     </div>
                     <div class="rate-group">
                         <span class="rate-type supply-rate">Supply: ${planData.daily_supply_charge ? planData.daily_supply_charge.toFixed(2) + '¢/day' : 'N/A'}</span>
+                        ${planData.membership_fee_annual && planData.membership_fee_annual > 0 ? 
+                            `<span class="rate-type membership-rate">Member: ${(planData.membership_fee_annual * 100 / 365).toFixed(2)}¢/day</span>` : ''}
                         ${planData.solar_feed_in_rate_r ? `<span class="rate-type fit-rate">FiT: ${planData.solar_feed_in_rate_r.toFixed(1)}</span>` : ''}
                     </div>
                 </div>
