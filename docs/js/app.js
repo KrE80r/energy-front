@@ -6,9 +6,7 @@
 // Global application state
 let appState = {
     energyPlans: null,
-    currentPersona: null,
-    isCustomized: false,
-    customUsagePattern: null
+    currentPersona: null
 };
 
 /**
@@ -92,8 +90,8 @@ function setupEventListeners() {
     modalCloseButtons.forEach(button => {
         button.addEventListener('click', function() {
             if (appState.currentPersona) {
-                appState.isCustomized = false;
-                appState.customUsagePattern = null;
+                // Reset form to persona defaults
+                initializeCustomizationForm(appState.currentPersona);
                 updateCalculationsDisplay();
             }
         });
@@ -110,8 +108,9 @@ async function handlePersonaSelection(personaKey) {
         
         // Update application state
         appState.currentPersona = personaKey;
-        appState.isCustomized = false;
-        appState.customUsagePattern = null;
+        
+        // Update form with persona values
+        initializeCustomizationForm(personaKey);
         
         // Update UI
         updatePersonaButtons(personaKey);
@@ -148,10 +147,6 @@ async function handleCustomSettingsApply() {
         
         console.log('Applying custom usage pattern:', customPattern);
         
-        // Update application state
-        appState.isCustomized = true;
-        appState.customUsagePattern = customPattern;
-        
         // Close modal
         const modal = bootstrap.Modal.getInstance(document.getElementById('customizeModal'));
         modal.hide();
@@ -180,15 +175,12 @@ async function updateCalculationsDisplay() {
             throw new Error('Missing required data for calculations');
         }
         
-        // Determine usage pattern to use
-        let usagePattern;
-        if (appState.isCustomized && appState.customUsagePattern) {
-            usagePattern = appState.customUsagePattern;
-        } else {
-            usagePattern = getPersonaConfig(appState.currentPersona);
-        }
+        // Always use current form values for calculations
+        // Form is initialized with persona defaults, but user can override
+        let usagePattern = getFormUsagePattern();
         
-        console.log('Calculating costs with usage pattern:', usagePattern);
+        console.log('🔧 FIXED CALCULATION - Using form values:', usagePattern);
+        console.log('🔧 Expected for 369kWh 50/30/20: AGL~$282, Origin~$255');
         
         // Calculate costs for all plans
         const rankedCalculations = calculateAndRankPlans(appState.energyPlans, usagePattern);
