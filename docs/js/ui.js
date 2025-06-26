@@ -3,31 +3,62 @@
  * Handles all UI interactions and visual updates
  */
 
+// Pagination state
+let currentPage = 1;
+const plansPerPage = 10;
+let allPlanCalculations = [];
+
 /**
- * Create and display plan comparison cards
+ * Create and display plan comparison cards with pagination
  * @param {Array} rankedCalculations - Sorted calculations with cost data
  * @param {string} personaKey - Current persona selection
  */
 function displayPlanCards(rankedCalculations, personaKey) {
     const planCardsContainer = document.getElementById('plan-cards');
-    const maxPlans = 10; // Show top 10 plans
+    
+    // Store all calculations for pagination
+    allPlanCalculations = rankedCalculations;
+    currentPage = 1;
     
     // Clear existing content
     planCardsContainer.innerHTML = '';
     
-    // Take top plans (limit to maxPlans)
-    const topPlans = rankedCalculations.slice(0, maxPlans);
+    // Display current page
+    displayCurrentPage(personaKey);
     
-    // Create plan list
-    topPlans.forEach((calculation, index) => {
-        const planCard = createPlanCardNew(calculation, personaKey, index);
-        planCardsContainer.appendChild(planCard);
-    });
+    // Update pagination controls
+    updatePaginationControls();
     
     // Add fade-in animation
     setTimeout(() => {
         planCardsContainer.classList.add('fade-in');
     }, 100);
+}
+
+/**
+ * Display plans for current page
+ * @param {string} personaKey - Current persona selection
+ */
+function displayCurrentPage(personaKey) {
+    const planCardsContainer = document.getElementById('plan-cards');
+    
+    // Calculate start and end indices
+    const startIndex = (currentPage - 1) * plansPerPage;
+    const endIndex = startIndex + plansPerPage;
+    
+    // Get plans for current page
+    const currentPagePlans = allPlanCalculations.slice(startIndex, endIndex);
+    
+    // Clear existing plan cards (but keep pagination)
+    const existingCards = planCardsContainer.querySelectorAll('.plan-card-row');
+    existingCards.forEach(card => card.remove());
+    
+    // Create plan cards for current page
+    currentPagePlans.forEach((calculation, index) => {
+        const globalIndex = startIndex + index; // Global ranking index
+        const planCard = createPlanCardNew(calculation, personaKey, globalIndex);
+        planCardsContainer.appendChild(planCard);
+    });
 }
 
 /**
@@ -451,6 +482,122 @@ function createTimelineVisualization() {
 }
 
 /**
+ * Update pagination controls
+ */
+function updatePaginationControls() {
+    const totalPlans = allPlanCalculations.length;
+    const totalPages = Math.ceil(totalPlans / plansPerPage);
+    
+    // Create pagination container if it doesn't exist
+    let paginationContainer = document.getElementById('pagination-container');
+    if (!paginationContainer) {
+        paginationContainer = document.createElement('div');
+        paginationContainer.id = 'pagination-container';
+        paginationContainer.className = 'pagination-container mt-4';
+        document.getElementById('plan-cards').appendChild(paginationContainer);
+    }
+    
+    // Don't show pagination if only one page
+    if (totalPages <= 1) {
+        paginationContainer.style.display = 'none';
+        return;
+    }
+    
+    paginationContainer.style.display = 'block';
+    
+    // Create pagination info and controls
+    paginationContainer.innerHTML = `
+        <div class="pagination-info">
+            <span>Showing ${((currentPage - 1) * plansPerPage) + 1}-${Math.min(currentPage * plansPerPage, totalPlans)} of ${totalPlans} plans</span>
+        </div>
+        <div class="pagination-controls">
+            <button class="btn btn-outline-primary btn-sm" onclick="changePage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>
+                <i class="fas fa-chevron-left"></i> Previous
+            </button>
+            <div class="pagination-pages">
+                ${generatePageNumbers(currentPage, totalPages)}
+            </div>
+            <button class="btn btn-outline-primary btn-sm" onclick="changePage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>
+                Next <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    `;
+}
+
+/**
+ * Generate page number buttons
+ * @param {number} current - Current page number
+ * @param {number} total - Total number of pages
+ * @returns {string} HTML for page number buttons
+ */
+function generatePageNumbers(current, total) {
+    let pages = [];
+    const maxVisiblePages = 5;
+    
+    if (total <= maxVisiblePages) {
+        // Show all pages if total is small
+        for (let i = 1; i <= total; i++) {
+            pages.push(i);
+        }
+    } else {
+        // Show smart pagination
+        if (current <= 3) {
+            // Show first 5 pages
+            for (let i = 1; i <= 5; i++) {
+                pages.push(i);
+            }
+            if (total > 5) pages.push('...');
+            pages.push(total);
+        } else if (current >= total - 2) {
+            // Show last 5 pages
+            pages.push(1);
+            if (total > 5) pages.push('...');
+            for (let i = total - 4; i <= total; i++) {
+                pages.push(i);
+            }
+        } else {
+            // Show pages around current
+            pages.push(1);
+            pages.push('...');
+            for (let i = current - 1; i <= current + 1; i++) {
+                pages.push(i);
+            }
+            pages.push('...');
+            pages.push(total);
+        }
+    }
+    
+    return pages.map(page => {
+        if (page === '...') {
+            return '<span class="pagination-ellipsis">...</span>';
+        }
+        return `<button class="btn ${page === current ? 'btn-primary' : 'btn-outline-primary'} btn-sm" onclick="changePage(${page})">${page}</button>`;
+    }).join('');
+}
+
+/**
+ * Change to a specific page
+ * @param {number} page - Page number to navigate to
+ */
+function changePage(page) {
+    const totalPages = Math.ceil(allPlanCalculations.length / plansPerPage);
+    
+    if (page < 1 || page > totalPages) return;
+    
+    currentPage = page;
+    
+    // Get current persona from app state
+    const personaKey = appState.currentPersona;
+    
+    // Update display
+    displayCurrentPage(personaKey);
+    updatePaginationControls();
+    
+    // Scroll to top of results
+    document.getElementById('results-section').scrollIntoView({ behavior: 'smooth' });
+}
+
+/**
  * Initialize all UI components
  */
 function initializeUI() {
@@ -487,6 +634,9 @@ if (typeof module !== 'undefined' && module.exports) {
 // Make functions globally available for browser use
 if (typeof window !== 'undefined') {
     window.displayPlanCards = displayPlanCards;
+    window.displayCurrentPage = displayCurrentPage;
+    window.updatePaginationControls = updatePaginationControls;
+    window.changePage = changePage;
     window.updateResultsTitle = updateResultsTitle;
     window.showLoading = showLoading;
     window.hideLoading = hideLoading;
