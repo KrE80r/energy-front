@@ -189,75 +189,18 @@ header h1 {
     margin-bottom: 4px;
 }
 
-/* Dynamic timeline bar - uses plan-specific time periods with solid segments */
-.timeline-bar-new {
-    height: 16px;
-    border-radius: 8px;
-    /* Default gradient - will be replaced by solid segments via JavaScript */
-    background: linear-gradient(90deg, 
-        var(--success-green) 0% 29.2%, 
-        var(--warning-orange) 29.2% 37.5%, 
-        var(--success-green) 37.5% 66.7%, 
-        var(--danger-red) 66.7% 87.5%, 
-        var(--warning-orange) 87.5% 91.7%, 
-        var(--success-green) 91.7% 100%);
-    margin-bottom: 4px;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-}
-
-/* Timeline segments when using solid blocks */
-.timeline-bar-new > div {
-    height: 100%;
-    transition: opacity 0.2s ease;
-}
-
-.timeline-bar-new > div:hover {
-    opacity: 0.8;
-}
+/* Removed timeline bar styles - no longer needed with text display */
 
 .timeline-bar-new:hover {
     height: 18px;
     transition: height 0.2s ease;
 }
 
-/* Solid timeline segments - clean boundaries between periods */
-.timeline-bar-new > div {
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-}
+/* Removed timeline segments styles - no longer needed with text display */
 
-.timeline-bar-new > div:last-child {
-    border-right: none;
-}
+/* Removed timeline container - no longer needed with text display */
 
-/* Legacy flexible timeline segments (kept for compatibility) */
-.timeline-segments {
-    display: flex;
-    height: 16px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    position: relative;
-    margin-bottom: 4px;
-}
-
-/* Timeline container for flexible timelines */
-.timeline-container {
-    position: relative;
-    width: 100%;
-}
-
-.timeline-markers-new {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.65rem;
-    color: var(--gray-400);
-    margin-top: 2px;
-}
+/* Removed timeline markers - no longer needed with text display */
 
 /* Rates Section */
 .rates-section {
@@ -382,25 +325,7 @@ header h1 {
 }
 
 /* Timeline for Table */
-/* Table timeline - can also use flexible segments in future */
-.timeline-bar-table {
-    height: 12px;
-    border-radius: 6px;
-    background: linear-gradient(90deg, 
-        var(--success-green) 0% 29.2%, 
-        var(--warning-orange) 29.2% 37.5%, 
-        var(--success-green) 37.5% 66.7%, 
-        var(--danger-red) 66.7% 87.5%, 
-        var(--warning-orange) 87.5% 91.7%, 
-        var(--success-green) 91.7% 100%);
-    margin-bottom: 4px;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    position: relative;
-}
-
-.timeline-bar-table:hover {
-    height: 14px;
+/* Removed table timeline - no longer needed with text display
     transition: height 0.2s ease;
 }
 
