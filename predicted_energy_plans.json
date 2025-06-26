@@ -3950,14 +3950,14 @@
         "monthly_cost": 310,
         "quarterly_cost": 1100,
         "annual_cost": 3690,
-        "peak_cost": 55.48700000000001,
-        "shoulder_cost": 32.199000000000005,
-        "off_peak_cost": 27.919,
-        "daily_supply_charge": 107.922,
+        "peak_cost": 55.48,
+        "shoulder_cost": 27.36,
+        "off_peak_cost": 32.76,
+        "daily_supply_charge": 107.92,
         "detailed_time_blocks": [
           {
             "name": "Peak",
-            "description": "6am - 10am and 3pm - 1am Monday to Sunday",
+            "description": "6am - 10am and 4pm - midnight Monday to Sunday",
             "time_of_use_period": "P",
             "time_periods": [
               {
@@ -3967,14 +3967,14 @@
               },
               {
                 "days": "Business Days|Saturday|Sunday",
-                "start_time": "1500",
-                "end_time": "0059"
+                "start_time": "1600",
+                "end_time": "2359"
               }
             ],
             "rates": [
               {
-                "unit_price": 45.67,
-                "unit_price_gst": 50.23700000000001,
+                "unit_price": 50.436,
+                "unit_price_gst": 55.48,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -3984,19 +3984,19 @@
           },
           {
             "name": "Off peak",
-            "description": "1am - 6am Monday to Sunday",
+            "description": "midnight - 6am Monday to Sunday",
             "time_of_use_period": "OP",
             "time_periods": [
               {
                 "days": "Business Days|Saturday|Sunday",
-                "start_time": "0100",
+                "start_time": "0000",
                 "end_time": "0559"
               }
             ],
             "rates": [
               {
-                "unit_price": 26.69,
-                "unit_price_gst": 29.359000000000005,
+                "unit_price": 29.782,
+                "unit_price_gst": 32.76,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -4006,19 +4006,19 @@
           },
           {
             "name": "Shoulder",
-            "description": "10am - 3pm Monday to Sunday",
+            "description": "10am - 4pm Monday to Sunday",
             "time_of_use_period": "S",
             "time_periods": [
               {
                 "days": "Business Days|Saturday|Sunday",
                 "start_time": "1000",
-                "end_time": "1459"
+                "end_time": "1559"
               }
             ],
             "rates": [
               {
-                "unit_price": 22.29,
-                "unit_price_gst": 24.519000000000002,
+                "unit_price": 24.873,
+                "unit_price_gst": 27.36,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -4433,7 +4433,7 @@
                         "touBlock": [
                           {
                             "name": "Peak",
-                            "description": "6am - 10am and 3pm - 1am Monday to Sunday",
+                            "description": "6am - 10am and 4pm - midnight Monday to Sunday",
                             "blockRate": [
                               {
                                 "unitPrice": 45.67,
