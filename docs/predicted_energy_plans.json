@@ -1,0 +1,1473 @@
+{
+  "metadata": {
+    "postcode": "5097",
+    "total_plans": 12,
+    "filtered_out": 446,
+    "extraction_date": "2025-06-25",
+    "tou_count": 12,
+    "sr_count": 0,
+    "other_count": 0,
+    "filters_applied": "Excluded tariff types: SR, SRCL, TOUCL + Only plans with rate predictions"
+  },
+  "plans": {
+    "TOU": [
+      {
+        "plan_id": "COV810992MRE1",
+        "plan_name": "Freedom Residential Flexible",
+        "retailer_name": "CovaU",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 340,
+        "quarterly_cost": 1200,
+        "annual_cost": 4030,
+        "peak_cost": 55.132000000000005,
+        "shoulder_cost": 32.593,
+        "off_peak_cost": 27.082000000000004,
+        "daily_supply_charge": 110.915,
+        "detailed_time_blocks": [
+          {
+            "name": "Peak",
+            "description": "06:00 - 10:00; 15:00 - 01:00",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
+                "start_time": "600",
+                "end_time": "959"
+              },
+              {
+                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
+                "start_time": "1500",
+                "end_time": "59"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 50.12,
+                "unit_price_gst": 55.132000000000005,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Off Peak",
+            "description": "01:00 - 06:00",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
+                "start_time": "100",
+                "end_time": "559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 29.63,
+                "unit_price_gst": 32.593,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Shoulder",
+            "description": "10:00 - 15:00",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
+                "start_time": "1000",
+                "end_time": "1459"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 24.62,
+                "unit_price_gst": 27.082000000000004,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": 20.306,
+          "paper_bill_fee": null,
+          "payment_processing_fees": [],
+          "late_payment_fee": null,
+          "disconnection_fee_move_out": null,
+          "disconnection_fee_non_payment": null,
+          "reconnection_fee": 60.94,
+          "other_fees": [],
+          "credit_card_payment_fees": [
+            {
+              "feeType": "CCF",
+              "percent": 0.73,
+              "feeTerm": "P"
+            },
+            {
+              "feeType": "CCF",
+              "percent": 0.8,
+              "feeTerm": "P"
+            }
+          ]
+        },
+        "solar_feed_in_rate_r": null,
+        "payment_options": [
+          "Direct Debit",
+          "Credit Card",
+          "BPay",
+          "Centrepay"
+        ],
+        "raw_plan_data": {
+          "eligibility_restrictions": false,
+          "has_discounts": true,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      },
+      {
+        "plan_id": "DIA786881MRE2",
+        "plan_name": "Everyday Renewable Saver",
+        "retailer_name": "Diamond Energy",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 330,
+        "quarterly_cost": 1170,
+        "annual_cost": 3940,
+        "peak_cost": 51.68900000000001,
+        "shoulder_cost": 40.425000000000004,
+        "off_peak_cost": 29.425,
+        "daily_supply_charge": 103.95,
+        "detailed_time_blocks": [
+          {
+            "name": "Peak",
+            "description": "6am-10am & 3pm to 12am",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "600",
+                "end_time": "959"
+              },
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "1500",
+                "end_time": "2359"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 46.99,
+                "unit_price_gst": 51.68900000000001,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Off-peak",
+            "description": "12am-6am",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "0",
+                "end_time": "559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 36.75,
+                "unit_price_gst": 40.425000000000004,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Shoulder",
+            "description": "10am-3pm (solar sponge)",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "1000",
+                "end_time": "1459"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 26.75,
+                "unit_price_gst": 29.425,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": 60.94,
+          "paper_bill_fee": null,
+          "payment_processing_fees": [],
+          "late_payment_fee": 15,
+          "disconnection_fee_move_out": null,
+          "disconnection_fee_non_payment": null,
+          "reconnection_fee": null,
+          "other_fees": [],
+          "credit_card_payment_fees": [
+            {
+              "feeType": "CCF",
+              "percent": 0.6,
+              "feeTerm": "P"
+            }
+          ]
+        },
+        "solar_feed_in_rate_r": 5.2,
+        "payment_options": [
+          "Direct Debit",
+          "Credit Card",
+          "BPay",
+          "PayPal"
+        ],
+        "raw_plan_data": {
+          "eligibility_restrictions": false,
+          "has_discounts": true,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      },
+      {
+        "plan_id": "DIA786900MRE2",
+        "plan_name": "Everyday Renewable Saver",
+        "retailer_name": "Diamond Energy",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 330,
+        "quarterly_cost": 1180,
+        "annual_cost": 3940,
+        "peak_cost": 57.6785,
+        "shoulder_cost": 35.794000000000004,
+        "off_peak_cost": null,
+        "daily_supply_charge": 166.243,
+        "detailed_time_blocks": [
+          {
+            "name": "Peak",
+            "description": "7am-9pm",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "Business Days",
+                "start_time": "700",
+                "end_time": "2059"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 48.74,
+                "unit_price_gst": 53.614000000000004,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              },
+              {
+                "unit_price": 50.26,
+                "unit_price_gst": 55.286,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              },
+              {
+                "unit_price": 54.58,
+                "unit_price_gst": 60.038000000000004,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              },
+              {
+                "unit_price": 56.16,
+                "unit_price_gst": 61.776,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Off-peak",
+            "description": "9pm-7am",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "Business Days",
+                "start_time": "2100",
+                "end_time": "659"
+              },
+              {
+                "days": "Saturday|Sunday",
+                "start_time": "0",
+                "end_time": "2359"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 32.54,
+                "unit_price_gst": 35.794000000000004,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": 60.94,
+          "paper_bill_fee": null,
+          "payment_processing_fees": [],
+          "late_payment_fee": 15,
+          "disconnection_fee_move_out": null,
+          "disconnection_fee_non_payment": null,
+          "reconnection_fee": null,
+          "other_fees": [],
+          "credit_card_payment_fees": [
+            {
+              "feeType": "CCF",
+              "percent": 0.6,
+              "feeTerm": "P"
+            }
+          ]
+        },
+        "solar_feed_in_rate_r": 5.2,
+        "payment_options": [
+          "Direct Debit",
+          "Credit Card",
+          "BPay",
+          "PayPal"
+        ],
+        "raw_plan_data": {
+          "eligibility_restrictions": false,
+          "has_discounts": true,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      },
+      {
+        "plan_id": "ENE379838MRE19",
+        "plan_name": "Flexi Plan",
+        "retailer_name": "EnergyAustralia",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 340,
+        "quarterly_cost": 1230,
+        "annual_cost": 4110,
+        "peak_cost": 56.980000000000004,
+        "shoulder_cost": 33.61000000000001,
+        "off_peak_cost": 21.4078,
+        "daily_supply_charge": 135.18,
+        "detailed_time_blocks": [
+          {
+            "name": "Peak",
+            "description": "Between 12am and 1am, 6am to 10am and 3pm to 12am",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "0000",
+                "end_time": "0059"
+              },
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "0600",
+                "end_time": "0959"
+              },
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "1500",
+                "end_time": "2359"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 51.8,
+                "unit_price_gst": 56.980000000000004,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Off-peak",
+            "description": "Between 1am and 6am",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "0100",
+                "end_time": "0559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 28,
+                "unit_price_gst": 30.800000000000004,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Shoulder",
+            "description": "Between 10am and 3pm",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "1000",
+                "end_time": "1459"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 16.398,
+                "unit_price_gst": 18.0378,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": 60.94,
+          "paper_bill_fee": 1.69,
+          "payment_processing_fees": [],
+          "late_payment_fee": 12,
+          "disconnection_fee_move_out": null,
+          "disconnection_fee_non_payment": null,
+          "reconnection_fee": 60.94,
+          "other_fees": [],
+          "credit_card_payment_fees": [
+            {
+              "feeType": "CCF",
+              "percent": 0.36,
+              "feeTerm": "P"
+            },
+            {
+              "feeType": "CCF",
+              "percent": 1.5,
+              "feeTerm": "P"
+            }
+          ]
+        },
+        "solar_feed_in_rate_r": 4.5,
+        "payment_options": [
+          "PayPal",
+          "Direct Debit",
+          "BPay",
+          "Credit Card",
+          "Centrepay"
+        ],
+        "raw_plan_data": {
+          "eligibility_restrictions": false,
+          "has_discounts": true,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      },
+      {
+        "plan_id": "LCL833095MRE2",
+        "plan_name": "Online Member",
+        "retailer_name": "Energy Locals",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 270,
+        "quarterly_cost": 960,
+        "annual_cost": 3230,
+        "peak_cost": 39.50001,
+        "shoulder_cost": 27.500000000000004,
+        "off_peak_cost": 23.00001,
+        "daily_supply_charge": 98.22997000000001,
+        "detailed_time_blocks": [
+          {
+            "name": "Peak",
+            "description": "06:00 - 10:00; 15:00 - 01:00",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
+                "start_time": "600",
+                "end_time": "959"
+              },
+              {
+                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
+                "start_time": "1500",
+                "end_time": "59"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 35.9091,
+                "unit_price_gst": 39.50001,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Off Peak",
+            "description": "01:00 - 06:00",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
+                "start_time": "100",
+                "end_time": "559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 25,
+                "unit_price_gst": 27.500000000000004,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Shoulder (Solar Sponge)",
+            "description": "10:00 - 15:00",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
+                "start_time": "1000",
+                "end_time": "1459"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 20.9091,
+                "unit_price_gst": 23.00001,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": 60.94,
+          "paper_bill_fee": 2,
+          "payment_processing_fees": [],
+          "late_payment_fee": 16,
+          "disconnection_fee_move_out": 60.94,
+          "disconnection_fee_non_payment": null,
+          "reconnection_fee": null,
+          "other_fees": [],
+          "credit_card_payment_fees": [
+            {
+              "feeType": "CCF",
+              "percent": 0.81,
+              "feeTerm": "P"
+            }
+          ]
+        },
+        "solar_feed_in_rate_r": 2,
+        "payment_options": [
+          "Direct Debit",
+          "Credit Card",
+          "BPay",
+          "Centrepay"
+        ],
+        "raw_plan_data": {
+          "eligibility_restrictions": false,
+          "has_discounts": false,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      },
+      {
+        "plan_id": "LCL833130MRE2",
+        "plan_name": "Online Member",
+        "retailer_name": "Energy Locals",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 230,
+        "quarterly_cost": 830,
+        "annual_cost": 2790,
+        "peak_cost": 31.500040000000002,
+        "shoulder_cost": 24.000020000000003,
+        "off_peak_cost": 21.50005,
+        "daily_supply_charge": 113.23001000000001,
+        "detailed_time_blocks": [
+          {
+            "name": "Peak",
+            "description": "06:00 - 10:00; 15:00 - 01:00",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
+                "start_time": "600",
+                "end_time": "959"
+              },
+              {
+                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
+                "start_time": "1500",
+                "end_time": "59"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 28.6364,
+                "unit_price_gst": 31.500040000000002,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Off Peak",
+            "description": "01:00 - 06:00",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
+                "start_time": "100",
+                "end_time": "559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 21.8182,
+                "unit_price_gst": 24.000020000000003,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Shoulder (Solar Sponge)",
+            "description": "10:00 - 15:00",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
+                "start_time": "1000",
+                "end_time": "1459"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 19.5455,
+                "unit_price_gst": 21.50005,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": 60.94,
+          "paper_bill_fee": 2,
+          "payment_processing_fees": [],
+          "late_payment_fee": 16,
+          "disconnection_fee_move_out": 60.94,
+          "disconnection_fee_non_payment": null,
+          "reconnection_fee": null,
+          "other_fees": [],
+          "credit_card_payment_fees": [
+            {
+              "feeType": "CCF",
+              "percent": 0.81,
+              "feeTerm": "P"
+            }
+          ]
+        },
+        "solar_feed_in_rate_r": 2,
+        "payment_options": [
+          "Direct Debit",
+          "Credit Card",
+          "BPay",
+          "Centrepay"
+        ],
+        "raw_plan_data": {
+          "eligibility_restrictions": false,
+          "has_discounts": false,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      },
+      {
+        "plan_id": "NTR823841MRE2",
+        "plan_name": "Nectr 100% Clean Time of Use",
+        "retailer_name": "Nectr",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 330,
+        "quarterly_cost": 1160,
+        "annual_cost": 3900,
+        "peak_cost": 48.730000000000004,
+        "shoulder_cost": 34.1,
+        "off_peak_cost": 30.800000000000004,
+        "daily_supply_charge": 154.21,
+        "detailed_time_blocks": [
+          {
+            "name": "Peak",
+            "description": "3pm-1am&6am-10am, Weekdays & Weekends & Public Holidays",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "1500",
+                "end_time": "0059"
+              },
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "0600",
+                "end_time": "0959"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 44.3,
+                "unit_price_gst": 48.730000000000004,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Off-peak",
+            "description": "1am-6am, Weekdays & Weekends & Public Holidays",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "0100",
+                "end_time": "0559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 31,
+                "unit_price_gst": 34.1,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Shoulder",
+            "description": "10am-3pm, Weekdays & Weekends & Public Holidays",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "1000",
+                "end_time": "1459"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 28,
+                "unit_price_gst": 30.800000000000004,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": 60.94,
+          "paper_bill_fee": null,
+          "payment_processing_fees": [
+            {
+              "feeType": "PPF",
+              "percent": 1.3,
+              "feeTerm": "P"
+            }
+          ],
+          "late_payment_fee": null,
+          "disconnection_fee_move_out": null,
+          "disconnection_fee_non_payment": null,
+          "reconnection_fee": 60.94,
+          "other_fees": [
+            {
+              "amount": 20.31,
+              "feeType": "OF",
+              "feeTerm": "F"
+            }
+          ],
+          "credit_card_payment_fees": []
+        },
+        "solar_feed_in_rate_r": null,
+        "payment_options": [
+          "Direct Debit",
+          "Credit Card"
+        ],
+        "raw_plan_data": {
+          "eligibility_restrictions": false,
+          "has_discounts": false,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      },
+      {
+        "plan_id": "ORI542360MRE11",
+        "plan_name": "Origin Go Variable",
+        "retailer_name": "Origin Energy",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 310,
+        "quarterly_cost": 1100,
+        "annual_cost": 3690,
+        "peak_cost": 55.48700000000001,
+        "shoulder_cost": 32.199000000000005,
+        "off_peak_cost": 27.919,
+        "daily_supply_charge": 107.922,
+        "detailed_time_blocks": [
+          {
+            "name": "Peak",
+            "description": "6am - 10am and 3pm - 1am Monday to Sunday",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "0600",
+                "end_time": "0959"
+              },
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "1500",
+                "end_time": "0059"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 45.67,
+                "unit_price_gst": 50.23700000000001,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Off peak",
+            "description": "1am - 6am Monday to Sunday",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "0100",
+                "end_time": "0559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 26.69,
+                "unit_price_gst": 29.359000000000005,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Shoulder",
+            "description": "10am - 3pm Monday to Sunday",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "1000",
+                "end_time": "1459"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 22.29,
+                "unit_price_gst": 24.519000000000002,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": 60.94,
+          "paper_bill_fee": 1.75,
+          "payment_processing_fees": [
+            {
+              "amount": 2.7,
+              "feeType": "PPF",
+              "percent": 0,
+              "feeTerm": "F"
+            }
+          ],
+          "late_payment_fee": 12,
+          "disconnection_fee_move_out": null,
+          "disconnection_fee_non_payment": null,
+          "reconnection_fee": null,
+          "other_fees": [
+            {
+              "amount": 15.96,
+              "feeType": "OF",
+              "percent": 0,
+              "feeTerm": "F"
+            }
+          ],
+          "credit_card_payment_fees": [
+            {
+              "feeType": "CCF",
+              "percent": 0.28,
+              "feeTerm": "P"
+            }
+          ]
+        },
+        "solar_feed_in_rate_r": 2.0,
+        "payment_options": [
+          "BPay",
+          "Credit Card",
+          "Direct Debit",
+          "PayPal",
+          "Centrepay"
+        ],
+        "raw_plan_data": {
+          "eligibility_restrictions": true,
+          "has_discounts": false,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      },
+      {
+        "plan_id": "PSH905951MRE1",
+        "plan_name": "Power House",
+        "retailer_name": "Powershop",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 300,
+        "quarterly_cost": 1090,
+        "annual_cost": 3640,
+        "peak_cost": 58.70425,
+        "shoulder_cost": 35.348060000000004,
+        "off_peak_cost": 33.59158,
+        "daily_supply_charge": 139.49551000000002,
+        "detailed_time_blocks": [
+          {
+            "name": "Peak",
+            "description": "5pm - 9pm all days",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "1700",
+                "end_time": "2059"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 53.3675,
+                "unit_price_gst": 58.70425,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Off Peak",
+            "description": "All other times",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "2100",
+                "end_time": "2359"
+              },
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "0000",
+                "end_time": "0959"
+              },
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "1500",
+                "end_time": "1659"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 30.5378,
+                "unit_price_gst": 33.59158,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Shoulder",
+            "description": "10am - 3pm all days",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "1000",
+                "end_time": "1459"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 32.1346,
+                "unit_price_gst": 35.348060000000004,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": 60.94,
+          "paper_bill_fee": null,
+          "payment_processing_fees": [],
+          "late_payment_fee": null,
+          "disconnection_fee_move_out": null,
+          "disconnection_fee_non_payment": null,
+          "reconnection_fee": null,
+          "other_fees": [],
+          "credit_card_payment_fees": []
+        },
+        "solar_feed_in_rate_r": 1.4,
+        "payment_options": [
+          "Direct Debit",
+          "Credit Card",
+          "BPay",
+          "Centrepay"
+        ],
+        "raw_plan_data": {
+          "eligibility_restrictions": false,
+          "has_discounts": false,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      },
+      {
+        "plan_id": "PSH905956MRE1",
+        "plan_name": "Power House",
+        "retailer_name": "Powershop",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 300,
+        "quarterly_cost": 1090,
+        "annual_cost": 3660,
+        "peak_cost": 49.11412000000001,
+        "shoulder_cost": 25.018510000000003,
+        "off_peak_cost": 17.37142,
+        "daily_supply_charge": 147.22301000000002,
+        "detailed_time_blocks": [
+          {
+            "name": "Peak",
+            "description": "6am - 10am and 3pm - 1am all days",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "0600",
+                "end_time": "0959"
+              },
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "1500",
+                "end_time": "2359"
+              },
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "0000",
+                "end_time": "0059"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 44.6492,
+                "unit_price_gst": 49.11412000000001,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Shoulder",
+            "description": "10am to 3pm on all days",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "1000",
+                "end_time": "1459"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 22.7441,
+                "unit_price_gst": 25.018510000000003,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Off Peak",
+            "description": "All other times",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "0100",
+                "end_time": "0559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 15.7922,
+                "unit_price_gst": 17.37142,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": 60.94,
+          "paper_bill_fee": null,
+          "payment_processing_fees": [],
+          "late_payment_fee": null,
+          "disconnection_fee_move_out": null,
+          "disconnection_fee_non_payment": null,
+          "reconnection_fee": null,
+          "other_fees": [],
+          "credit_card_payment_fees": []
+        },
+        "solar_feed_in_rate_r": 1.4,
+        "payment_options": [
+          "Direct Debit",
+          "Credit Card",
+          "BPay",
+          "Centrepay"
+        ],
+        "raw_plan_data": {
+          "eligibility_restrictions": false,
+          "has_discounts": false,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      },
+      {
+        "plan_id": "RED552141MRE11",
+        "plan_name": "Living Energy Saver",
+        "retailer_name": "Red Energy",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 320,
+        "quarterly_cost": 1140,
+        "annual_cost": 3830,
+        "peak_cost": 52.470000000000006,
+        "shoulder_cost": 32.122,
+        "off_peak_cost": 26.478,
+        "daily_supply_charge": 117.91,
+        "detailed_time_blocks": [
+          {
+            "name": "Peak",
+            "description": "All other times.",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "0600",
+                "end_time": "0959"
+              },
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "1500",
+                "end_time": "0059"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 47.7,
+                "unit_price_gst": 52.470000000000006,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Off-Peak",
+            "description": "1am-6am Mon-Sun ACST",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "0100",
+                "end_time": "0559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 26.62,
+                "unit_price_gst": 29.282000000000004,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Shoulder",
+            "description": "10am-3pm Mon-Sun ACST",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "Business Days|Saturday|Sunday",
+                "start_time": "1000",
+                "end_time": "1459"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 20.98,
+                "unit_price_gst": 23.078000000000003,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": 60.94,
+          "paper_bill_fee": null,
+          "payment_processing_fees": [],
+          "late_payment_fee": null,
+          "disconnection_fee_move_out": null,
+          "disconnection_fee_non_payment": null,
+          "reconnection_fee": null,
+          "other_fees": [],
+          "credit_card_payment_fees": []
+        },
+        "solar_feed_in_rate_r": 2,
+        "payment_options": [
+          "Direct Debit",
+          "Credit Card",
+          "BPay",
+          "PayPal",
+          "Centrepay"
+        ],
+        "raw_plan_data": {
+          "eligibility_restrictions": false,
+          "has_discounts": false,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      },
+      {
+        "plan_id": "TAN887227MRE1",
+        "plan_name": "Home Select",
+        "retailer_name": "Tango Energy",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 330,
+        "quarterly_cost": 1180,
+        "annual_cost": 3970,
+        "peak_cost": 51.315000000000005,
+        "shoulder_cost": 39.050000000000004,
+        "off_peak_cost": 29.37,
+        "daily_supply_charge": 120.11000000000001,
+        "detailed_time_blocks": [
+          {
+            "name": "Peak",
+            "description": "06:00 - 10:00; 15:00 - 01:00",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
+                "start_time": "0600",
+                "end_time": "0959"
+              },
+              {
+                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
+                "start_time": "1500",
+                "end_time": "0059"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 46.65,
+                "unit_price_gst": 51.315000000000005,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Off Peak",
+            "description": "10:00 - 15:00",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
+                "start_time": "1000",
+                "end_time": "1459"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 26.7,
+                "unit_price_gst": 29.37,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Shoulder",
+            "description": "01:00 - 06:00",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
+                "start_time": "0100",
+                "end_time": "0559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 35.5,
+                "unit_price_gst": 39.050000000000004,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": 60.94,
+          "paper_bill_fee": 3.3,
+          "payment_processing_fees": [
+            {
+              "feeType": "PPF",
+              "percent": 0.6,
+              "feeTerm": "P"
+            }
+          ],
+          "late_payment_fee": null,
+          "disconnection_fee_move_out": null,
+          "disconnection_fee_non_payment": null,
+          "reconnection_fee": 60.94,
+          "other_fees": [
+            {
+              "feeType": "OF",
+              "percent": 0.75,
+              "feeTerm": "P"
+            },
+            {
+              "amount": 7.5,
+              "feeType": "OF",
+              "feeTerm": "F"
+            }
+          ],
+          "credit_card_payment_fees": []
+        },
+        "solar_feed_in_rate_r": 0,
+        "payment_options": [
+          "Direct Debit",
+          "Credit Card",
+          "BPay",
+          "PayPal"
+        ],
+        "raw_plan_data": {
+          "eligibility_restrictions": false,
+          "has_discounts": false,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      }
+    ]
+  }
+}

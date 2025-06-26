@@ -40,7 +40,7 @@ async function initializeApp() {
  */
 async function loadEnergyPlans() {
     try {
-        const response = await fetch('all_energy_plans.json');
+        const response = await fetch('predicted_energy_plans.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
