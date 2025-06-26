@@ -12,7 +12,9 @@
     "api_sources": [
       "https://api.energymadeeasy.gov.au/consumerplan/plans (main plans list)",
       "https://api.energymadeeasy.gov.au/consumerplan/plan/{planId} (individual plan details)"
-    ]
+    ],
+    "membership_fees_updated": true,
+    "membership_fee_plans_count": 2
   },
   "plans": {
     "TOU": [
@@ -581,7 +583,10 @@
           "distributor": null,
           "state": null,
           "postcode": null
-        }
+        },
+        "membership_fee_monthly": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_annual": 0
       },
       {
         "plan_id": "DIA786881MRE2",
@@ -1123,7 +1128,10 @@
           "distributor": null,
           "state": null,
           "postcode": null
-        }
+        },
+        "membership_fee_monthly": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_annual": 0
       },
       {
         "plan_id": "DIA786900MRE2",
@@ -1671,7 +1679,10 @@
           "distributor": null,
           "state": null,
           "postcode": null
-        }
+        },
+        "membership_fee_monthly": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_annual": 0
       },
       {
         "plan_id": "ENE379838MRE19",
@@ -2313,7 +2324,10 @@
           "distributor": null,
           "state": null,
           "postcode": null
-        }
+        },
+        "membership_fee_monthly": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_annual": 0
       },
       {
         "plan_id": "LCL833095MRE2",
@@ -2321,9 +2335,9 @@
         "retailer_name": "Energy Locals",
         "plan_type": "TOU",
         "tariff_type": "TOU",
-        "monthly_cost": 270,
-        "quarterly_cost": 960,
-        "annual_cost": 3230,
+        "monthly_cost": 286.49,
+        "quarterly_cost": 1009.47,
+        "annual_cost": 3427.88,
         "peak_cost": 39.50001,
         "shoulder_cost": 27.500000000000004,
         "off_peak_cost": 23.00001,
@@ -2869,7 +2883,10 @@
           "distributor": null,
           "state": null,
           "postcode": null
-        }
+        },
+        "membership_fee_monthly": 16.49,
+        "membership_fee_quarterly": 49.47,
+        "membership_fee_annual": 197.88
       },
       {
         "plan_id": "LCL833130MRE2",
@@ -2877,9 +2894,9 @@
         "retailer_name": "Energy Locals",
         "plan_type": "TOU",
         "tariff_type": "TOU",
-        "monthly_cost": 230,
-        "quarterly_cost": 830,
-        "annual_cost": 2790,
+        "monthly_cost": 246.49,
+        "quarterly_cost": 879.47,
+        "annual_cost": 2987.88,
         "peak_cost": 31.500040000000002,
         "shoulder_cost": 24.000020000000003,
         "off_peak_cost": 21.50005,
@@ -3437,7 +3454,10 @@
           "distributor": null,
           "state": null,
           "postcode": null
-        }
+        },
+        "membership_fee_monthly": 16.49,
+        "membership_fee_quarterly": 49.47,
+        "membership_fee_annual": 197.88
       },
       {
         "plan_id": "NTR823841MRE2",
@@ -3916,7 +3936,10 @@
           "distributor": null,
           "state": null,
           "postcode": null
-        }
+        },
+        "membership_fee_monthly": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_annual": 0
       },
       {
         "plan_id": "ORI542360MRE11",
@@ -4592,7 +4615,10 @@
           "distributor": null,
           "state": null,
           "postcode": null
-        }
+        },
+        "membership_fee_monthly": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_annual": 0
       },
       {
         "plan_id": "PSH905951MRE1",
@@ -5090,7 +5116,10 @@
           "distributor": null,
           "state": null,
           "postcode": null
-        }
+        },
+        "membership_fee_monthly": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_annual": 0
       },
       {
         "plan_id": "PSH905956MRE1",
@@ -5588,7 +5617,10 @@
           "distributor": null,
           "state": null,
           "postcode": null
-        }
+        },
+        "membership_fee_monthly": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_annual": 0
       },
       {
         "plan_id": "RED552141MRE11",
@@ -6092,7 +6124,10 @@
           "distributor": null,
           "state": null,
           "postcode": null
-        }
+        },
+        "membership_fee_monthly": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_annual": 0
       },
       {
         "plan_id": "TAN887227MRE1",
@@ -6639,7 +6674,10 @@
           "distributor": null,
           "state": null,
           "postcode": null
-        }
+        },
+        "membership_fee_monthly": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_annual": 0
       },
       {
         "plan_id": "GLO927164MRE1",
@@ -6653,7 +6691,7 @@
         "peak_cost": 51.15,
         "shoulder_cost": 33.88,
         "off_peak_cost": 38.88,
-        "daily_supply_charge": 139.70,
+        "daily_supply_charge": 139.7,
         "detailed_time_blocks": [
           {
             "name": "Off Peak",
@@ -6690,7 +6728,7 @@
             ],
             "rates": [
               {
-                "unit_price": 30.80,
+                "unit_price": 30.8,
                 "unit_price_gst": 33.88,
                 "measure_unit": "KWH",
                 "rate_type": null,
@@ -6712,7 +6750,7 @@
             ],
             "rates": [
               {
-                "unit_price": 46.50,
+                "unit_price": 46.5,
                 "unit_price_gst": 51.15,
                 "measure_unit": "KWH",
                 "rate_type": null,
@@ -6734,7 +6772,7 @@
             ],
             "rates": [
               {
-                "unit_price": 46.50,
+                "unit_price": 46.5,
                 "unit_price_gst": 51.15,
                 "measure_unit": "KWH",
                 "rate_type": null,
@@ -6755,7 +6793,7 @@
           "other_fees": [],
           "credit_card_payment_fees": []
         },
-        "solar_feed_in_rate_r": 1.50,
+        "solar_feed_in_rate_r": 1.5,
         "payment_options": [
           "Direct Debit",
           "Credit Card",
@@ -6768,7 +6806,10 @@
           "distributor": null,
           "state": "SA",
           "postcode": "5097"
-        }
+        },
+        "membership_fee_monthly": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_annual": 0
       },
       {
         "plan_id": "ALI724977MRE7",
@@ -6841,7 +6882,7 @@
             ],
             "rates": [
               {
-                "unit_price": 51.20,
+                "unit_price": 51.2,
                 "unit_price_gst": 56.32,
                 "measure_unit": "KWH",
                 "rate_type": null,
@@ -6863,7 +6904,7 @@
             ],
             "rates": [
               {
-                "unit_price": 51.20,
+                "unit_price": 51.2,
                 "unit_price_gst": 56.32,
                 "measure_unit": "KWH",
                 "rate_type": null,
@@ -6884,7 +6925,7 @@
           "other_fees": [],
           "credit_card_payment_fees": []
         },
-        "solar_feed_in_rate_r": 3.00,
+        "solar_feed_in_rate_r": 3.0,
         "payment_options": [
           "Direct Debit",
           "Credit Card",
@@ -6897,7 +6938,10 @@
           "distributor": null,
           "state": "SA",
           "postcode": "5097"
-        }
+        },
+        "membership_fee_monthly": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_annual": 0
       },
       {
         "plan_id": "AGL_MARKET_TOU_2025",
@@ -7013,7 +7057,7 @@
           "other_fees": [],
           "credit_card_payment_fees": []
         },
-        "solar_feed_in_rate_r": 9.00,
+        "solar_feed_in_rate_r": 9.0,
         "payment_options": [
           "Direct Debit",
           "Credit Card",
@@ -7026,7 +7070,10 @@
           "distributor": null,
           "state": "SA",
           "postcode": "5097"
-        }
+        },
+        "membership_fee_monthly": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_annual": 0
       }
     ]
   }
