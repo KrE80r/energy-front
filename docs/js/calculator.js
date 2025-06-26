@@ -171,12 +171,17 @@ function validateInputs(usagePattern) {
 }
 
 /**
- * Disqualify plans with suspicious zero or null shoulder/off-peak rates
- * Updated to allow legitimate 2-rate TOU plans
+ * Disqualify plans with suspicious zero or null shoulder/off-peak rates and demand charges
+ * Updated to allow legitimate 2-rate TOU plans but exclude demand charge plans
  * @param {Object} planData - Plan data to validate
  * @returns {boolean} True if plan should be disqualified
  */
 function shouldDisqualifyPlan(planData) {
+    // Check for demand charges - exclude plans with demand charges
+    if (hasDemandCharge(planData)) {
+        return true;
+    }
+    
     // Must have valid peak and off-peak rates
     const peakRate = planData.peak_cost;
     const offPeakRate = planData.off_peak_cost;
@@ -203,6 +208,37 @@ function shouldDisqualifyPlan(planData) {
 }
 
 /**
+ * Check if a plan has demand charges
+ * @param {Object} planData - Plan data to check
+ * @returns {boolean} True if plan has demand charges
+ */
+function hasDemandCharge(planData) {
+    try {
+        // Check in raw plan data for demand charge information
+        const rawPlanData = planData.raw_plan_data_complete?.main_api_response?.planData;
+        if (!rawPlanData || !rawPlanData.contract) {
+            return false;
+        }
+        
+        // Check each contract for demand charges
+        for (const contract of rawPlanData.contract) {
+            if (contract.tariffPeriod) {
+                for (const tariffPeriod of contract.tariffPeriod) {
+                    if (tariffPeriod.demandCharge && tariffPeriod.demandCharge.length > 0) {
+                        return true;
+                    }
+                }
+            }
+        }
+        
+        return false;
+    } catch (error) {
+        console.warn('Error checking for demand charges:', error);
+        return false; // If we can't check, don't exclude the plan
+    }
+}
+
+/**
  * Calculate costs for multiple plans and rank them by total cost
  * @param {Array} plansData - Array of plan data objects
  * @param {Object} usagePattern - User's usage pattern
@@ -212,9 +248,11 @@ function calculateAndRankPlans(plansData, usagePattern) {
     const calculations = [];
 
     for (const plan of plansData) {
-        // Disqualify plans with suspicious zero/null rates
+        // Disqualify plans with suspicious zero/null rates or demand charges
         if (shouldDisqualifyPlan(plan)) {
-            console.log(`Disqualified plan: ${plan.plan_name} (${plan.retailer_name}) - zero/null shoulder or off-peak rates`);
+            const hasDemand = hasDemandCharge(plan);
+            const reason = hasDemand ? 'has demand charges' : 'zero/null shoulder or off-peak rates';
+            console.log(`Disqualified plan: ${plan.plan_name} (${plan.retailer_name}) - ${reason}`);
             continue;
         }
         
@@ -315,6 +353,7 @@ if (typeof module !== 'undefined' && module.exports) {
         calculatePlanCost,
         calculateAndRankPlans,
         shouldDisqualifyPlan,
+        hasDemandCharge,
         generateStrategicRecommendation,
         getPlanComparison,
         validateInputs
