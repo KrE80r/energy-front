@@ -6,7 +6,15 @@
     <title>Interactive SA Energy Plan Advisor (2025-26)</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" id="main-css" href="css/style.css">
+    <script>
+        // Load CSS with cache-busting
+        (function() {
+            const link = document.getElementById('main-css');
+            const cacheBustedUrl = `css/style.css?v=${Date.now()}`;
+            link.href = cacheBustedUrl;
+        })();
+    </script>
 </head>
 <body>
     <div class="container-fluid">
@@ -177,9 +185,20 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/personas.js"></script>
-    <script src="js/calculator.js"></script>
-    <script src="js/ui.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/cache-buster.js"></script>
+    <script>
+        // Load cache-busters and then dynamically load other scripts
+        window.cacheBuster.load().then(() => {
+            return Promise.all([
+                window.cacheBuster.loadScript('js/personas.js'),
+                window.cacheBuster.loadScript('js/calculator.js'),
+                window.cacheBuster.loadScript('js/ui.js')
+            ]);
+        }).then(() => {
+            return window.cacheBuster.loadScript('js/app.js');
+        }).catch(error => {
+            console.error('Error loading scripts:', error);
+        });
+    </script>
 </body>
 </html>

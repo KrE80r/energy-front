@@ -40,12 +40,8 @@ async function initializeApp() {
  */
 async function loadEnergyPlans() {
     try {
-        const response = await fetch('predicted_energy_plans.json');
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        
-        const data = await response.json();
+        // Use cache-buster for JSON loading
+        const data = await window.cacheBuster.fetchJSON('predicted_energy_plans.json');
         appState.energyPlans = data.plans.TOU; // Focus on TOU plans
         
         console.log(`Loaded ${appState.energyPlans.length} TOU energy plans`);
