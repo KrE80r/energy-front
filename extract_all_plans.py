@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
 Energy Plan Data Extraction Script
-Extracts ALL energy plans from SA government API with NO filtering
-Saves complete dataset to JSON for frontend consumption
+Extracts ALL energy plans from SA government API with complete raw data preservation
+Saves both structured data and entire raw API responses to JSON
+Captures data from both main plans API and individual plan detail APIs
 """
 
 import json
@@ -306,7 +307,7 @@ def determine_plan_type(plan: Dict[str, Any]) -> str:
 
 
 def extract_single_plan(plan: Dict[str, Any], postcode: str) -> Dict[str, Any]:
-    """Extract all relevant data from a single plan, including detailed time blocks."""
+    """Extract all relevant data from a single plan, including detailed time blocks and complete raw data."""
     try:
         plan_data = plan.get("planData", {})
         plan_id = plan.get("planId")
@@ -333,6 +334,7 @@ def extract_single_plan(plan: Dict[str, Any], postcode: str) -> Dict[str, Any]:
             tariff_data = extract_basic_tariff_periods(plan)
 
         return {
+            # Structured data for backward compatibility
             "plan_id": plan_id,
             "plan_name": plan_data.get("planName"),
             "retailer_name": plan_data.get("retailerName"),
@@ -349,7 +351,14 @@ def extract_single_plan(plan: Dict[str, Any], postcode: str) -> Dict[str, Any]:
             "fees": fees,
             "solar_feed_in_rate_r": solar_feed_in_rate_r,
             "payment_options": payment_options,
-            # Include raw plan data for advanced filtering
+            
+            # COMPLETE RAW DATA - entire API responses preserved
+            "raw_plan_data_complete": {
+                "main_api_response": plan,  # Complete plan data from main API
+                "detailed_api_response": detailed_data  # Complete detailed plan data from individual plan API
+            },
+            
+            # Legacy filtered raw data for backward compatibility
             "raw_plan_data": {
                 "eligibility_restrictions": any(
                     'eligibilityRestriction' in contract 
@@ -448,11 +457,16 @@ def extract_all_plans_data(postcode: str) -> Dict[str, List[Dict[str, Any]]]:
             "postcode": postcode,
             "total_plans": len(extracted_plans),
             "filtered_out": filtered_out,
-            "extraction_date": "2025-06-25",
+            "extraction_date": "2025-06-26",
             "tou_count": len(grouped_plans['TOU']),
             "sr_count": len(grouped_plans['SR']),
             "other_count": len(grouped_plans['OTHER']),
-            "filters_applied": "Excluded tariff types: SR, SRCL, TOUCL"
+            "filters_applied": "Excluded tariff types: SR, SRCL, TOUCL",
+            "data_completeness": "Complete raw API responses preserved in raw_plan_data_complete field",
+            "api_sources": [
+                "https://api.energymadeeasy.gov.au/consumerplan/plans (main plans list)",
+                "https://api.energymadeeasy.gov.au/consumerplan/plan/{planId} (individual plan details)"
+            ]
         },
         "plans": grouped_plans
     }
