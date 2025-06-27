@@ -4,7 +4,7 @@ This document details the default usage patterns for each household persona in t
 
 ## 📊 Usage Pattern Assumptions
 
-All personas are based on **21.1 kWh/day average usage** (1900 kWh quarterly consumption) as referenced in the application title.
+All personas are based on **15 kWh/day average usage** (1365 kWh quarterly consumption) as referenced in the application title.
 
 ### 🏠 **Commuter (No Solar)**
 **Profile**: Away during day, evening usage pattern
@@ -120,24 +120,24 @@ The application ensures:
 
 ## 📊 Example Calculations
 
-### Commuter (No Solar) - 1900 kWh Quarterly
+### Commuter (No Solar) - 1365 kWh Quarterly
 ```
-Peak Consumption:     1900 × 40% = 760 kWh
-Shoulder Consumption: 1900 × 10% = 190 kWh
-Off-Peak Consumption: 1900 × 50% = 950 kWh
+Peak Consumption:     1365 × 40% = 546 kWh
+Shoulder Consumption: 1365 × 10% = 137 kWh
+Off-Peak Consumption: 1365 × 50% = 683 kWh
 Solar Self-Consumed:  0 kWh
-Net Grid Consumption: 1900 kWh
+Net Grid Consumption: 1365 kWh
 Solar Exported:       0 kWh
 ```
 
-### Work From Home (With Solar) - 1900 kWh Quarterly
+### Work From Home (With Solar) - 1365 kWh Quarterly
 ```
-Peak Consumption:     1900 × 30% = 570 kWh
-Shoulder Consumption: 1900 × 25% = 475 kWh
-Off-Peak Consumption: 1900 × 45% = 855 kWh
+Peak Consumption:     1365 × 30% = 410 kWh
+Shoulder Consumption: 1365 × 25% = 341 kWh
+Off-Peak Consumption: 1365 × 45% = 614 kWh
 Solar Generation:     1500 kWh
 Solar Self-Consumed:  1500 × 60% = 900 kWh
-Net Grid Consumption: 1900 - 900 = 1000 kWh
+Net Grid Consumption: 1365 - 900 = 465 kWh
 Solar Exported:       1500 - 900 = 600 kWh
 ```
 

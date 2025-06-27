@@ -7,7 +7,7 @@ const PERSONAS = {
     'commuter-no-solar': {
         name: 'Commuter (No Solar)',
         description: 'Away during day, evening usage',
-        quarterlyConsumption: 1900, // kWh per quarter (21.1 kWh/day average)
+        quarterlyConsumption: 1365, // kWh per quarter (15 kWh/day average)
         peakPercent: 40,      // 40% peak (6-10am + 3pm-1am)
         shoulderPercent: 10,  // 10% shoulder (10am-3pm when away)
         offPeakPercent: 50,   // 50% off-peak (1-6am)
@@ -18,7 +18,7 @@ const PERSONAS = {
     'wfh-no-solar': {
         name: 'Work From Home (No Solar)',
         description: 'High daytime usage',
-        quarterlyConsumption: 1900,
+        quarterlyConsumption: 1365,
         peakPercent: 70,      // 70% peak - home during 18-hour peak period
         shoulderPercent: 20,  // 20% shoulder - some working hours usage
         offPeakPercent: 10,   // 10% off-peak - limited overnight usage
@@ -29,7 +29,7 @@ const PERSONAS = {
     'commuter-solar': {
         name: 'Commuter (With Solar)',
         description: 'Solar export during day',
-        quarterlyConsumption: 1900,
+        quarterlyConsumption: 1365,
         peakPercent: 25,      // 25% peak - reduced by solar offset
         shoulderPercent: 5,   // 5% shoulder - away during peak solar generation
         offPeakPercent: 70,   // 70% off-peak - maximize cheapest period
@@ -40,7 +40,7 @@ const PERSONAS = {
     'wfh-solar': {
         name: 'Work From Home (With Solar)',
         description: 'High self-consumption',
-        quarterlyConsumption: 1900,
+        quarterlyConsumption: 1365,
         peakPercent: 30,      // 30% peak - significantly reduced by solar
         shoulderPercent: 25,  // 25% shoulder - high self-consumption during solar peak
         offPeakPercent: 45,   // 45% off-peak - smart load shifting
