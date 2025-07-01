@@ -65,9 +65,25 @@ async function loadEnergyPlans() {
         const originalCount = touPlans.length;
         
         touPlans = touPlans.filter(plan => {
-            const planData = plan.raw_plan_data_complete?.individual_plan_api_response;
-            const startDate = planData?.startDate;
-            const effectiveDate = planData?.effectiveDate;
+            // Check effectiveDate from main API response
+            const effectiveDate = plan.raw_plan_data_complete?.main_api_response?.effectiveDate;
+            
+            // Check startDate from tariff structure (look through contract array)
+            let startDate = null;
+            const contract = plan.raw_plan_data_complete?.individual_plan_api_response?.planData?.contract;
+            if (contract && Array.isArray(contract)) {
+                for (const contractItem of contract) {
+                    if (contractItem.tariff && Array.isArray(contractItem.tariff)) {
+                        for (const tariff of contractItem.tariff) {
+                            if (tariff.startDate) {
+                                startDate = tariff.startDate;
+                                break;
+                            }
+                        }
+                        if (startDate) break;
+                    }
+                }
+            }
             
             // If plan has either startDate or effectiveDate >= 2025-07-01, include it
             const hasValidStartDate = startDate && startDate >= targetDate;
