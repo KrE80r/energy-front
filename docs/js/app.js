@@ -65,11 +65,27 @@ async function loadEnergyPlans() {
         const originalCount = touPlans.length;
         
         touPlans = touPlans.filter(plan => {
-            // Get effectiveDate from the correct path: plan.raw_plan_data_complete.main_api_response.effectiveDate
-            const effectiveDate = plan.raw_plan_data_complete?.main_api_response?.effectiveDate;
+            // Debug: Check multiple possible paths for effectiveDate
+            const mainApiResponse = plan.raw_plan_data_complete?.main_api_response;
+            const individualApiResponse = plan.raw_plan_data_complete?.individual_plan_api_response;
+            
+            // Try different paths where effectiveDate might exist
+            let effectiveDate = mainApiResponse?.effectiveDate || 
+                               individualApiResponse?.effectiveDate ||
+                               mainApiResponse?.planData?.effectiveDate ||
+                               individualApiResponse?.planData?.effectiveDate;
             
             if (!effectiveDate) {
+                // Log first few to debug structure
                 console.log(`Plan ${plan.plan_id} missing effectiveDate, excluding`);
+                if (plan.plan_id === "1ST941112MRE1") {
+                    console.log("Debug plan structure:", {
+                        hasMainApi: !!mainApiResponse,
+                        hasIndividualApi: !!individualApiResponse,
+                        mainApiKeys: mainApiResponse ? Object.keys(mainApiResponse) : [],
+                        individualApiKeys: individualApiResponse ? Object.keys(individualApiResponse) : []
+                    });
+                }
                 return false;
             }
             
@@ -82,7 +98,7 @@ async function loadEnergyPlans() {
             }
         });
         
-        console.log(`Filtered ${originalCount - touPlans.length} plans with effectiveDate before ${targetDate}`);
+        console.log(`🔍 FILTER RESULTS: Started with ${originalCount} plans, kept ${touPlans.length} plans, filtered out ${originalCount - touPlans.length} plans with effectiveDate before ${targetDate}`);
         
         appState.energyPlans = touPlans;
         
