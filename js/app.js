@@ -60,48 +60,29 @@ async function loadEnergyPlans() {
         const data = await response.json();
         let touPlans = data.plans.TOU; // Focus on TOU plans
         
-        // Filter to only show plans with startDate or effectiveDate on or after 2025-07-01
-        // Use permissive filtering - include by default, only exclude if we find old dates
+        // Filter to ONLY show plans with effectiveDate >= 2025-07-01
         const targetDate = '2025-07-01';
         const originalCount = touPlans.length;
         
         touPlans = touPlans.filter(plan => {
-            // Check effectiveDate from main API response
+            // Get effectiveDate from the correct path: plan.raw_plan_data_complete.main_api_response.effectiveDate
             const effectiveDate = plan.raw_plan_data_complete?.main_api_response?.effectiveDate;
             
-            // Check startDate from tariff structure (look through contract array)
-            let startDate = null;
-            const contract = plan.raw_plan_data_complete?.individual_plan_api_response?.planData?.contract;
-            if (contract && Array.isArray(contract)) {
-                for (const contractItem of contract) {
-                    if (contractItem.tariff && Array.isArray(contractItem.tariff)) {
-                        for (const tariff of contractItem.tariff) {
-                            if (tariff.startDate) {
-                                startDate = tariff.startDate;
-                                break;
-                            }
-                        }
-                        if (startDate) break;
-                    }
-                }
-            }
-            
-            // PERMISSIVE APPROACH: Include plan unless we can definitively say it's too old
-            // Only exclude if we find a date that's before our target
-            const hasOldStartDate = startDate && startDate < targetDate;
-            const hasOldEffectiveDate = effectiveDate && effectiveDate < targetDate;
-            
-            // Exclude only if BOTH dates exist AND both are old
-            if ((startDate && hasOldStartDate) && (effectiveDate && hasOldEffectiveDate)) {
-                console.log(`Excluding plan ${plan.plan_id} - both dates before ${targetDate}: start=${startDate}, effective=${effectiveDate}`);
+            if (!effectiveDate) {
+                console.log(`Plan ${plan.plan_id} missing effectiveDate, excluding`);
                 return false;
             }
             
-            // Include all other plans (missing dates, mixed dates, or recent dates)
-            return true;
+            // Only include plans with effectiveDate >= 2025-07-01
+            if (effectiveDate >= targetDate) {
+                return true;
+            } else {
+                console.log(`Plan ${plan.plan_id} has old effectiveDate ${effectiveDate}, excluding`);
+                return false;
+            }
         });
         
-        console.log(`Filtered ${originalCount - touPlans.length} plans with startDate/effectiveDate before ${targetDate}`);
+        console.log(`Filtered ${originalCount - touPlans.length} plans with effectiveDate before ${targetDate}`);
         
         appState.energyPlans = touPlans;
         
