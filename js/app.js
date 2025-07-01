@@ -60,18 +60,18 @@ async function loadEnergyPlans() {
         const data = await response.json();
         let touPlans = data.plans.TOU; // Focus on TOU plans
         
-        // Filter out plans with effectiveDate before 2025-07-01
+        // Filter out plans with startDate before 2025-07-01
         const targetDate = '2025-07-01';
         touPlans = touPlans.filter(plan => {
-            const effectiveDate = plan.raw_plan_data_complete?.individual_plan_api_response?.effectiveDate;
-            if (!effectiveDate) {
-                console.warn(`Plan ${plan.plan_id} missing effectiveDate, including by default`);
-                return true; // Include plans without effectiveDate
+            const startDate = plan.raw_plan_data_complete?.individual_plan_api_response?.startDate;
+            if (!startDate) {
+                console.warn(`Plan ${plan.plan_id} missing startDate, including by default`);
+                return true; // Include plans without startDate
             }
-            return effectiveDate >= targetDate;
+            return startDate >= targetDate;
         });
         
-        console.log(`Filtered ${data.plans.TOU.length - touPlans.length} plans with effectiveDate before ${targetDate}`);
+        console.log(`Filtered ${data.plans.TOU.length - touPlans.length} plans with startDate before ${targetDate}`);
         
         appState.energyPlans = touPlans;
         
