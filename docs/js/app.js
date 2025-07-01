@@ -60,38 +60,29 @@ async function loadEnergyPlans() {
         const data = await response.json();
         let touPlans = data.plans.TOU; // Focus on TOU plans
         
-        // TEMPORARY: Debug data structure first, then implement filtering
+        // Filter to ONLY show plans with effectiveDate >= 2025-07-01
         const targetDate = '2025-07-01';
         const originalCount = touPlans.length;
         
-        // Deep inspect the first plan to understand the actual data structure
-        if (touPlans.length > 0) {
-            const firstPlan = touPlans[0];
-            console.log("🔍 DEBUGGING FIRST PLAN STRUCTURE:");
-            console.log("Plan ID:", firstPlan.plan_id);
-            console.log("Top-level keys:", Object.keys(firstPlan));
+        touPlans = touPlans.filter(plan => {
+            // Get effectiveDate from the correct path: plan.raw_plan_data_complete.detailed_api_response.data.planData.effectiveDate
+            const effectiveDate = plan.raw_plan_data_complete?.detailed_api_response?.data?.planData?.effectiveDate;
             
-            if (firstPlan.raw_plan_data_complete) {
-                console.log("raw_plan_data_complete keys:", Object.keys(firstPlan.raw_plan_data_complete));
-                
-                if (firstPlan.raw_plan_data_complete.main_api_response) {
-                    console.log("main_api_response keys:", Object.keys(firstPlan.raw_plan_data_complete.main_api_response));
-                    console.log("main_api_response sample:", firstPlan.raw_plan_data_complete.main_api_response);
-                }
-                
-                if (firstPlan.raw_plan_data_complete.detailed_api_response) {
-                    console.log("detailed_api_response keys:", Object.keys(firstPlan.raw_plan_data_complete.detailed_api_response));
-                    console.log("detailed_api_response sample:", firstPlan.raw_plan_data_complete.detailed_api_response);
-                }
-                
-                if (firstPlan.raw_plan_data_complete.individual_plan_api_response) {
-                    console.log("individual_plan_api_response keys:", Object.keys(firstPlan.raw_plan_data_complete.individual_plan_api_response));
-                }
+            if (!effectiveDate) {
+                console.log(`Plan ${plan.plan_id} missing effectiveDate, excluding`);
+                return false;
             }
-        }
+            
+            // Only include plans with effectiveDate >= 2025-07-01
+            if (effectiveDate >= targetDate) {
+                return true;
+            } else {
+                console.log(`Plan ${plan.plan_id} has old effectiveDate ${effectiveDate}, excluding`);
+                return false;
+            }
+        });
         
-        // FOR NOW: Don't filter, just load all plans so the app works
-        console.log(`🔍 TEMPORARY: Loading all ${originalCount} plans without filtering (will implement filtering after understanding structure)`);
+        console.log(`🔍 FILTER RESULTS: Started with ${originalCount} plans, kept ${touPlans.length} plans, filtered out ${originalCount - touPlans.length} plans with effectiveDate before ${targetDate}`);
         
         appState.energyPlans = touPlans;
         
