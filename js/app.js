@@ -190,9 +190,21 @@ async function handleCustomSettingsApply() {
         
         // Validate custom pattern
         if (!validateInputs(customPattern)) {
-            showError('Invalid usage pattern. Please check your inputs.');
+            const total = customPattern.peakPercent + customPattern.shoulderPercent + customPattern.offPeakPercent;
+            const warning = document.getElementById('percentage-warning');
+            
+            if (Math.abs(total - 100) > 0.1) {
+                warning.innerHTML = `<i class="bi bi-exclamation-triangle me-2"></i>Usage percentages must total 100%. Current total: ${total.toFixed(1)}%`;
+                warning.style.display = 'block';
+            } else {
+                warning.innerHTML = '<i class="bi bi-exclamation-triangle me-2"></i>Invalid usage pattern. Please check your inputs.';
+                warning.style.display = 'block';
+            }
             return;
         }
+        
+        // Hide warning if validation passes
+        document.getElementById('percentage-warning').style.display = 'none';
         
         console.log('Applying custom usage pattern:', customPattern);
         
