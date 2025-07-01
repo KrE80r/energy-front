@@ -60,18 +60,33 @@ async function loadEnergyPlans() {
         const data = await response.json();
         let touPlans = data.plans.TOU; // Focus on TOU plans
         
-        // Filter out plans with startDate before 2025-07-01
+        // Filter to only show plans with startDate or effectiveDate on or after 2025-07-01
         const targetDate = '2025-07-01';
+        const originalCount = touPlans.length;
+        
         touPlans = touPlans.filter(plan => {
-            const startDate = plan.raw_plan_data_complete?.individual_plan_api_response?.startDate;
-            if (!startDate) {
-                console.warn(`Plan ${plan.plan_id} missing startDate, including by default`);
-                return true; // Include plans without startDate
+            const planData = plan.raw_plan_data_complete?.individual_plan_api_response;
+            const startDate = planData?.startDate;
+            const effectiveDate = planData?.effectiveDate;
+            
+            // If plan has either startDate or effectiveDate >= 2025-07-01, include it
+            const hasValidStartDate = startDate && startDate >= targetDate;
+            const hasValidEffectiveDate = effectiveDate && effectiveDate >= targetDate;
+            
+            if (hasValidStartDate || hasValidEffectiveDate) {
+                return true;
             }
-            return startDate >= targetDate;
+            
+            // If plan has no dates, exclude it for now (can be adjusted later)
+            if (!startDate && !effectiveDate) {
+                console.warn(`Plan ${plan.plan_id} missing both startDate and effectiveDate, excluding`);
+                return false;
+            }
+            
+            return false;
         });
         
-        console.log(`Filtered ${data.plans.TOU.length - touPlans.length} plans with startDate before ${targetDate}`);
+        console.log(`Filtered ${originalCount - touPlans.length} plans with startDate/effectiveDate before ${targetDate}`);
         
         appState.energyPlans = touPlans;
         
