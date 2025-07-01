@@ -79,6 +79,11 @@ async function loadEnergyPlans() {
                     console.log("main_api_response sample:", firstPlan.raw_plan_data_complete.main_api_response);
                 }
                 
+                if (firstPlan.raw_plan_data_complete.detailed_api_response) {
+                    console.log("detailed_api_response keys:", Object.keys(firstPlan.raw_plan_data_complete.detailed_api_response));
+                    console.log("detailed_api_response sample:", firstPlan.raw_plan_data_complete.detailed_api_response);
+                }
+                
                 if (firstPlan.raw_plan_data_complete.individual_plan_api_response) {
                     console.log("individual_plan_api_response keys:", Object.keys(firstPlan.raw_plan_data_complete.individual_plan_api_response));
                 }
