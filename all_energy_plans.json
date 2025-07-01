@@ -1099,17 +1099,17 @@
         }
       },
       {
-        "plan_id": "AGL100553SRE28",
+        "plan_id": "AGL100553SRE29",
         "plan_name": "Residential Standing Offer - No Exit Fee",
         "retailer_name": "AGL",
         "plan_type": "TOU",
         "tariff_type": "TOU",
-        "monthly_cost": 340,
-        "quarterly_cost": 1200,
-        "annual_cost": 4030,
-        "peak_cost": 52.151,
-        "shoulder_cost": 36.333000000000006,
-        "off_peak_cost": 31.35,
+        "monthly_cost": 350,
+        "quarterly_cost": 1260,
+        "annual_cost": 4220,
+        "peak_cost": 56.60600000000001,
+        "shoulder_cost": 36.79500000000001,
+        "off_peak_cost": 26.015,
         "daily_supply_charge": 116.171,
         "detailed_time_blocks": [
           {
@@ -1135,8 +1135,8 @@
             ],
             "rates": [
               {
-                "unit_price": 47.41,
-                "unit_price_gst": 52.151,
+                "unit_price": 51.46,
+                "unit_price_gst": 56.60600000000001,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -1157,8 +1157,8 @@
             ],
             "rates": [
               {
-                "unit_price": 33.03,
-                "unit_price_gst": 36.333000000000006,
+                "unit_price": 33.45,
+                "unit_price_gst": 36.79500000000001,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -1179,8 +1179,8 @@
             ],
             "rates": [
               {
-                "unit_price": 28.5,
-                "unit_price_gst": 31.35,
+                "unit_price": 23.65,
+                "unit_price_gst": 26.015,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -1237,7 +1237,7 @@
         "membership_fee_annual": 0,
         "membership_fee_quarterly": 0,
         "membership_fee_monthly": 0,
-        "solar_feed_in_rate_r": 4,
+        "solar_feed_in_rate_r": 2,
         "payment_options": [
           "PayPal",
           "Direct Debit",
@@ -1246,7 +1246,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "AGL100553SRE28",
+            "planId": "AGL100553SRE29",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -1258,12 +1258,12 @@
                       "scheme": "OTHER",
                       "singleTariffRates": [
                         {
-                          "unitPrice": 4,
-                          "measureUnit": "KWH",
-                          "rebate": true
+                          "unitPrice": 2,
+                          "rebate": true,
+                          "measureUnit": "KWH"
                         }
                       ],
-                      "rate": 4,
+                      "rate": 2,
                       "displayName": "AGL Retailer Feed-in Tariff (exc GST if any)",
                       "type": "R",
                       "singleTariffPeriod": "P1Y"
@@ -1274,8 +1274,8 @@
                       "singleTariffRates": [
                         {
                           "unitPrice": 49,
-                          "measureUnit": "KWH",
-                          "rebate": true
+                          "rebate": true,
+                          "measureUnit": "KWH"
                         }
                       ],
                       "rate": 49,
@@ -1356,7 +1356,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 47.41,
+                              "unitPrice": 51.46,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -1364,7 +1364,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 33.03,
+                              "unitPrice": 33.45,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -1372,7 +1372,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 28.5,
+                              "unitPrice": 23.65,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -1410,63 +1410,63 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "AGL",
-              "planId": "AGL100553SRE28",
+              "planId": "AGL100553SRE29",
               "retailerCode": "AGL"
             },
-            "planType": "E#R#AGL100553SRE28",
+            "planType": "E#R#AGL100553SRE29",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
                   "small": {
                     "quarterly": {
-                      "noDiscounts": 540,
-                      "allDiscounts": 540,
-                      "guaranteedDiscount": 540
+                      "noDiscounts": 560,
+                      "allDiscounts": 560,
+                      "guaranteedDiscount": 560
                     },
                     "monthly": {
-                      "noDiscounts": 150,
-                      "allDiscounts": 150,
-                      "guaranteedDiscount": 150
+                      "noDiscounts": 160,
+                      "allDiscounts": 160,
+                      "guaranteedDiscount": 160
                     },
                     "yearly": {
-                      "noDiscounts": 1790,
-                      "allDiscounts": 1790,
-                      "guaranteedDiscount": 1790
+                      "noDiscounts": 1860,
+                      "allDiscounts": 1860,
+                      "guaranteedDiscount": 1860
                     }
                   },
                   "large": {
                     "quarterly": {
-                      "noDiscounts": 1200,
-                      "allDiscounts": 1200,
-                      "guaranteedDiscount": 1200
+                      "noDiscounts": 1260,
+                      "allDiscounts": 1260,
+                      "guaranteedDiscount": 1260
                     },
                     "monthly": {
-                      "noDiscounts": 340,
-                      "allDiscounts": 340,
-                      "guaranteedDiscount": 340
+                      "noDiscounts": 350,
+                      "allDiscounts": 350,
+                      "guaranteedDiscount": 350
                     },
                     "yearly": {
-                      "noDiscounts": 4030,
-                      "allDiscounts": 4030,
-                      "guaranteedDiscount": 4030
+                      "noDiscounts": 4220,
+                      "allDiscounts": 4220,
+                      "guaranteedDiscount": 4220
                     }
                   },
                   "medium": {
                     "quarterly": {
-                      "noDiscounts": 870,
-                      "allDiscounts": 870,
-                      "guaranteedDiscount": 870
+                      "noDiscounts": 910,
+                      "allDiscounts": 910,
+                      "guaranteedDiscount": 910
                     },
                     "monthly": {
-                      "noDiscounts": 240,
-                      "allDiscounts": 240,
-                      "guaranteedDiscount": 240
+                      "noDiscounts": 250,
+                      "allDiscounts": 250,
+                      "guaranteedDiscount": 250
                     },
                     "yearly": {
-                      "noDiscounts": 2900,
-                      "allDiscounts": 2900,
-                      "guaranteedDiscount": 2900
+                      "noDiscounts": 3030,
+                      "allDiscounts": 3030,
+                      "guaranteedDiscount": 3030
                     }
                   }
                 }
@@ -1487,12 +1487,12 @@
                         "scheme": "OTHER",
                         "singleTariffRates": [
                           {
-                            "unitPrice": 4,
-                            "measureUnit": "KWH",
-                            "rebate": true
+                            "unitPrice": 2,
+                            "rebate": true,
+                            "measureUnit": "KWH"
                           }
                         ],
-                        "rate": 4,
+                        "rate": 2,
                         "displayName": "AGL Retailer Feed-in Tariff (exc GST if any)",
                         "description": "AGL Retailer Feed-in Tariff (exc GST if any)",
                         "type": "R",
@@ -1504,8 +1504,8 @@
                         "singleTariffRates": [
                           {
                             "unitPrice": 49,
-                            "measureUnit": "KWH",
-                            "rebate": true
+                            "rebate": true,
+                            "measureUnit": "KWH"
                           }
                         ],
                         "rate": 49,
@@ -1602,7 +1602,7 @@
                             "description": "6am -10am and 3pm -1am every day",
                             "blockRate": [
                               {
-                                "unitPrice": 47.41,
+                                "unitPrice": 51.46,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -1630,7 +1630,7 @@
                             "description": "1am-6am Every day",
                             "blockRate": [
                               {
-                                "unitPrice": 33.03,
+                                "unitPrice": 33.45,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -1648,7 +1648,7 @@
                             "description": "10am -3pm every day",
                             "blockRate": [
                               {
-                                "unitPrice": 28.5,
+                                "unitPrice": 23.65,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -1730,7 +1730,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 949413,
+                "batchId": 968782,
                 "retailerId": "9645",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -1742,12 +1742,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "AGL",
-                "planId": "AGL100553SRE28",
+                "planId": "AGL100553SRE29",
                 "retailerCode": "AGL",
                 "state": "SA",
-                "effectiveDate": "2025-07-01"
+                "effectiveDate": "2025-07-02"
               },
-              "planId": "AGL100553SRE28",
+              "planId": "AGL100553SRE29",
               "postcodes": {
                 "5097": 1
               }
