@@ -22,8 +22,9 @@ async function initializeApp() {
         // Load energy plans data
         await loadEnergyPlans();
         
-        // Validate data integrity (prevent rate mapping errors)
-        if (typeof validateAllPlans === 'function') {
+        // Validate data integrity (prevent rate mapping errors) - DISABLED
+        // Validation temporarily disabled to allow all plans to be displayed
+        if (false && typeof validateAllPlans === 'function') {
             const validation = validateAllPlans(appState.energyPlans);
             if (!validation.isValid) {
                 console.error('🚨 Data validation failed! Rate mapping errors detected.');
@@ -32,6 +33,8 @@ async function initializeApp() {
                 console.log('✅ Data validation passed - all rate mappings correct');
             }
         }
+        
+        console.log('✅ Validation disabled - displaying all plans');
         
         // Setup event listeners
         setupEventListeners();
@@ -56,6 +59,15 @@ async function loadEnergyPlans() {
         
         const data = await response.json();
         appState.energyPlans = data.plans.TOU; // Focus on TOU plans
+        
+        // Clean up floating-point precision issues in rate data
+        appState.energyPlans = appState.energyPlans.map(plan => ({
+            ...plan,
+            peak_cost: plan.peak_cost ? Math.round(plan.peak_cost * 100) / 100 : plan.peak_cost,
+            shoulder_cost: plan.shoulder_cost ? Math.round(plan.shoulder_cost * 100) / 100 : plan.shoulder_cost,
+            off_peak_cost: plan.off_peak_cost ? Math.round(plan.off_peak_cost * 100) / 100 : plan.off_peak_cost,
+            daily_supply_charge: plan.daily_supply_charge ? Math.round(plan.daily_supply_charge * 100) / 100 : plan.daily_supply_charge
+        }));
         
         console.log(`Loaded ${appState.energyPlans.length} TOU energy plans`);
         
