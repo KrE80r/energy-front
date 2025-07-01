@@ -61,6 +61,7 @@ async function loadEnergyPlans() {
         let touPlans = data.plans.TOU; // Focus on TOU plans
         
         // Filter to only show plans with startDate or effectiveDate on or after 2025-07-01
+        // Use permissive filtering - include by default, only exclude if we find old dates
         const targetDate = '2025-07-01';
         const originalCount = touPlans.length;
         
@@ -85,21 +86,19 @@ async function loadEnergyPlans() {
                 }
             }
             
-            // If plan has either startDate or effectiveDate >= 2025-07-01, include it
-            const hasValidStartDate = startDate && startDate >= targetDate;
-            const hasValidEffectiveDate = effectiveDate && effectiveDate >= targetDate;
+            // PERMISSIVE APPROACH: Include plan unless we can definitively say it's too old
+            // Only exclude if we find a date that's before our target
+            const hasOldStartDate = startDate && startDate < targetDate;
+            const hasOldEffectiveDate = effectiveDate && effectiveDate < targetDate;
             
-            if (hasValidStartDate || hasValidEffectiveDate) {
-                return true;
-            }
-            
-            // If plan has no dates, exclude it for now (can be adjusted later)
-            if (!startDate && !effectiveDate) {
-                console.warn(`Plan ${plan.plan_id} missing both startDate and effectiveDate, excluding`);
+            // Exclude only if BOTH dates exist AND both are old
+            if ((startDate && hasOldStartDate) && (effectiveDate && hasOldEffectiveDate)) {
+                console.log(`Excluding plan ${plan.plan_id} - both dates before ${targetDate}: start=${startDate}, effective=${effectiveDate}`);
                 return false;
             }
             
-            return false;
+            // Include all other plans (missing dates, mixed dates, or recent dates)
+            return true;
         });
         
         console.log(`Filtered ${originalCount - touPlans.length} plans with startDate/effectiveDate before ${targetDate}`);
