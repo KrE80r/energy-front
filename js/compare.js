@@ -340,12 +340,7 @@ function generateComparisonCards(comparisonResults) {
                         <span class="fw-semibold">${planData.daily_supply_charge?.toFixed(1) || 'N/A'}¢/day</span>
                     </div>
                     
-                    ${planData.solar_feed_in_rate_r ? `
-                    <div class="mb-3">
-                        <small class="text-muted">Solar FiT: </small>
-                        <span class="fw-semibold">${planData.solar_feed_in_rate_r?.toFixed(1)}¢/kWh</span>
-                    </div>
-                    ` : ''}
+                    ${generateSolarFitDisplay(planData)}
                     
                     <div class="small">
                         <div class="d-flex justify-content-between">
@@ -436,6 +431,46 @@ function showLoading() {
  */
 function hideLoading() {
     document.getElementById('loading-comp').style.display = 'none';
+}
+
+/**
+ * Generate solar feed-in tariff display (shows tiered rates if available)
+ */
+function generateSolarFitDisplay(planData) {
+    // Get the tiered solar FiT data
+    const solarFitData = extractSolarFitRates(planData);
+    
+    if (!solarFitData || solarFitData.length === 0) {
+        return '';
+    }
+    
+    // If only one tier, show simple display
+    if (solarFitData.length === 1) {
+        const rate = solarFitData[0].rate;
+        return `
+        <div class="mb-3">
+            <small class="text-muted">Solar FiT: </small>
+            <span class="fw-semibold">${rate?.toFixed(1)}¢/kWh</span>
+        </div>
+        `;
+    }
+    
+    // Multiple tiers - show tiered structure
+    let tiersHtml = solarFitData.map(tier => {
+        const rate = tier.rate?.toFixed(1);
+        if (tier.volume) {
+            return `${rate}¢ (first ${tier.volume}kWh/day)`;
+        } else {
+            return `${rate}¢ (excess)`;
+        }
+    }).join('<br><small class="text-muted">then </small>');
+    
+    return `
+    <div class="mb-3">
+        <small class="text-muted">Solar FiT: </small>
+        <div class="small fw-semibold">${tiersHtml}</div>
+    </div>
+    `;
 }
 
 /**
