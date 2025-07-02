@@ -22,9 +22,31 @@ async function initializeComparison() {
         const data = await response.json();
         
         // Extract plans array from the data structure
-        allPlansData = data.plans?.TOU || [];
+        let touPlans = data.plans?.TOU || [];
         
-        console.log('Loaded plans:', allPlansData.length);
+        // Filter to ONLY show plans with effectiveDate >= 2025-07-01 (same as main page)
+        const targetDate = '2025-07-01';
+        const originalCount = touPlans.length;
+        
+        allPlansData = touPlans.filter(plan => {
+            // Get effectiveDate from the correct path: plan.raw_plan_data_complete.detailed_api_response.data.planData.effectiveDate
+            const effectiveDate = plan.raw_plan_data_complete?.detailed_api_response?.data?.planData?.effectiveDate;
+            
+            if (!effectiveDate) {
+                console.log(`Plan ${plan.plan_id} missing effectiveDate, excluding`);
+                return false;
+            }
+            
+            // Only include plans with effectiveDate >= 2025-07-01
+            if (effectiveDate >= targetDate) {
+                return true;
+            } else {
+                console.log(`Plan ${plan.plan_id} has old effectiveDate ${effectiveDate}, excluding`);
+                return false;
+            }
+        });
+        
+        console.log(`Loaded plans: ${allPlansData.length} (filtered from ${originalCount} total)`);
         
         // Extract unique companies
         extractCompanies();
