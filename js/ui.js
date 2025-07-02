@@ -104,7 +104,7 @@ function createPlanCardNew(calculation, personaKey, index) {
                         <span class="rate-type supply-rate">Supply: ${planData.daily_supply_charge ? planData.daily_supply_charge.toFixed(2) + '¢/day' : 'N/A'}</span>
                         ${planData.membership_fee_annual && planData.membership_fee_annual > 0 ? 
                             `<span class="rate-type membership-rate">Member: ${(planData.membership_fee_annual * 100 / 365).toFixed(2)}¢/day</span>` : ''}
-                        ${planData.solar_feed_in_rate_r ? `<span class="rate-type fit-rate">FiT: ${planData.solar_feed_in_rate_r.toFixed(1)}</span>` : ''}
+                        ${getSolarFitDisplayText(planData)}
                     </div>
                 </div>
             </div>
@@ -132,6 +132,56 @@ function createPlanCardNew(calculation, personaKey, index) {
     }, 0);
     
     return card;
+}
+
+/**
+ * Get solar feed-in tariff display text for UI
+ * @param {Object} planData - Plan data
+ * @returns {string} HTML string for solar FiT display
+ */
+function getSolarFitDisplayText(planData) {
+    // Use calculator function if available, otherwise fallback to simple display
+    const solarFitRates = (typeof extractSolarFitRates === 'function') 
+        ? extractSolarFitRates(planData) 
+        : getSolarFitRatesFromPlan(planData);
+    
+    if (!solarFitRates || solarFitRates.length === 0) {
+        return '';
+    }
+    
+    // Single rate display
+    if (solarFitRates.length === 1) {
+        return `<span class="rate-type fit-rate">FiT: ${solarFitRates[0].rate.toFixed(1)}c</span>`;
+    }
+    
+    // Tiered rate display - show range
+    const rates = solarFitRates.map(tier => tier.rate).sort((a, b) => a - b);
+    const minRate = rates[0];
+    const maxRate = rates[rates.length - 1];
+    
+    if (minRate === maxRate) {
+        return `<span class="rate-type fit-rate">FiT: ${minRate.toFixed(1)}c</span>`;
+    }
+    
+    return `<span class="rate-type fit-rate" title="Tiered solar feed-in tariff">FiT: ${minRate.toFixed(1)}-${maxRate.toFixed(1)}c</span>`;
+}
+
+/**
+ * Fallback function to get solar FiT rates from plan data (UI version)
+ * @param {Object} planData - Plan data
+ * @returns {Array} Array of solar FiT rate objects
+ */
+function getSolarFitRatesFromPlan(planData) {
+    // Simple fallback - use existing solar_feed_in_rate_r if available
+    if (planData.solar_feed_in_rate_r) {
+        return [{
+            rate: planData.solar_feed_in_rate_r,
+            volume: null,
+            type: 'R'
+        }];
+    }
+    
+    return [];
 }
 
 /**

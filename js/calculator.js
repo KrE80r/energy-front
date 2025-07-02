@@ -56,9 +56,9 @@ function calculatePlanCost(planData, usagePattern) {
             offPeakPercent
         );
 
-        // Step 4: Calculate Solar Export Credit
+        // Step 4: Calculate Solar Export Credit (with tiered support)
         const solarExported = solarExport;
-        const solarCredit = calculateSolarCredit(planData.solar_feed_in_rate_r || 0, solarExported);
+        const solarCredit = calculateTieredSolarCredit(planData, solarExported);
 
         // Step 5: Calculate Final Bill Amount
         const finalBill = supplyCharge + usageCharge + membershipFee - solarCredit;
@@ -149,7 +149,157 @@ function calculateUsageCharge(planData, netGridConsumption, peakPercent, shoulde
 }
 
 /**
- * Calculate solar export credit
+ * Calculate tiered solar export credit
+ * @param {Object} planData - Plan data with solar FiT information
+ * @param {number} solarExported - Amount of solar exported per quarter (kWh)
+ * @returns {number} Solar credit in dollars
+ */
+function calculateTieredSolarCredit(planData, solarExported) {
+    if (solarExported <= 0) {
+        return 0;
+    }
+
+    // Get solar fit data from plan
+    const solarFitData = extractSolarFitRates(planData);
+    
+    if (!solarFitData || solarFitData.length === 0) {
+        return 0;
+    }
+
+    // Calculate daily average export for tiered rates
+    const dailyAverageExport = solarExported / 91; // 91 days per quarter
+    
+    // Calculate daily solar credit using tiers
+    const dailySolarCredit = calculateDailySolarCredit(dailyAverageExport, solarFitData);
+    
+    // Return quarterly credit
+    return dailySolarCredit * 91;
+}
+
+/**
+ * Extract and clean solar feed-in tariff rates from plan data
+ * @param {Object} planData - Plan data
+ * @returns {Array} Array of solar FiT rate objects
+ */
+function extractSolarFitRates(planData) {
+    // Try multiple data sources for solar FiT
+    let solarFitRates = [];
+    
+    // First try: Check if solar fit data exists in contract (correct API location)
+    if (planData.raw_plan_data_complete?.main_api_response?.planData?.contract?.[0]?.solarFit) {
+        const fitData = planData.raw_plan_data_complete.main_api_response.planData.contract[0].solarFit;
+        solarFitRates = processSolarFitData(fitData);
+    }
+    
+    // Second try: Check alternative location (solarFeedInTariff)
+    if (solarFitRates.length === 0 && planData.raw_plan_data_complete?.main_api_response?.planData?.solarFeedInTariff) {
+        const fitData = planData.raw_plan_data_complete.main_api_response.planData.solarFeedInTariff;
+        solarFitRates = processSolarFitData(fitData);
+    }
+    
+    // Fallback: Use simple rate if available
+    if (solarFitRates.length === 0 && planData.solar_feed_in_rate_r) {
+        solarFitRates = [{
+            rate: planData.solar_feed_in_rate_r,
+            volume: null, // Unlimited
+            type: 'R',
+            scheme: 'OTHER'
+        }];
+    }
+    
+    return solarFitRates;
+}
+
+/**
+ * Process solar FiT data from API response
+ * @param {Array} fitData - Raw solar FiT data from API
+ * @returns {Array} Processed solar FiT rates
+ */
+function processSolarFitData(fitData) {
+    if (!Array.isArray(fitData)) {
+        return [];
+    }
+    
+    const processedRates = [];
+    
+    for (const fit of fitData) {
+        // Skip government schemes (Solar Bonus Scheme)
+        if (fit.type === 'G') {
+            continue;
+        }
+        
+        // Extract rate information
+        if (fit.singleTariffRates && Array.isArray(fit.singleTariffRates)) {
+            for (const rateData of fit.singleTariffRates) {
+                if (rateData.unitPrice) {
+                    processedRates.push({
+                        rate: rateData.unitPrice,
+                        volume: rateData.volume || null,
+                        type: fit.type || 'R',
+                        scheme: fit.scheme || 'OTHER',
+                        displayName: fit.displayName || '',
+                        description: rateData.description || ''
+                    });
+                }
+            }
+        }
+        
+        // Fallback: use direct rate if available
+        if (fit.rate && processedRates.length === 0) {
+            processedRates.push({
+                rate: fit.rate,
+                volume: null,
+                type: fit.type || 'R',
+                scheme: fit.scheme || 'OTHER',
+                displayName: fit.displayName || ''
+            });
+        }
+    }
+    
+    // Sort by volume (tiers in order)
+    return processedRates.sort((a, b) => {
+        const aVol = a.volume || Infinity;
+        const bVol = b.volume || Infinity;
+        return aVol - bVol;
+    });
+}
+
+/**
+ * Calculate daily solar credit using tiered rates
+ * @param {number} dailyExportKwh - Daily average export in kWh
+ * @param {Array} solarFitTiers - Array of solar FiT tier objects
+ * @returns {number} Daily solar credit in dollars
+ */
+function calculateDailySolarCredit(dailyExportKwh, solarFitTiers) {
+    if (dailyExportKwh <= 0 || !solarFitTiers || solarFitTiers.length === 0) {
+        return 0;
+    }
+    
+    let totalCredit = 0;
+    let remainingExport = dailyExportKwh;
+    
+    for (const tier of solarFitTiers) {
+        if (remainingExport <= 0) {
+            break;
+        }
+        
+        // Determine tier volume limit
+        const tierLimit = tier.volume || remainingExport; // volume=null means unlimited
+        const tierExport = Math.min(remainingExport, tierLimit);
+        
+        // Calculate credit for this tier
+        const tierCredit = (tierExport * tier.rate) / 100; // Convert cents to dollars
+        totalCredit += tierCredit;
+        
+        // Reduce remaining export
+        remainingExport -= tierExport;
+    }
+    
+    return totalCredit;
+}
+
+/**
+ * Calculate solar export credit (legacy function for backward compatibility)
  * @param {number} feedInRate - Feed-in tariff rate in cents/kWh
  * @param {number} solarExported - Amount of solar exported (kWh)
  * @returns {number} Solar credit in dollars
