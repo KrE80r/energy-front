@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Comparison Tool - SA Energy Advisor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Header Section -->
+        <header class="text-center py-5 bg-light">
+            <div class="container">
+                <h1 class="display-4 fw-bold text-dark mb-3">Plan Comparison Tool</h1>
+                <p class="lead text-muted">Compare up to 3 energy companies with your custom usage pattern</p>
+                <nav class="mt-3">
+                    <a href="index.html" class="btn btn-outline-primary me-2">← Back to Persona Tool</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Custom Usage Input Section -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-primary text-white">
+                                <h4 class="mb-0">Enter Your Usage Pattern</h4>
+                            </div>
+                            <div class="card-body">
+                                <form id="comparison-form">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="quarterly-consumption-comp" class="form-label">Quarterly Consumption (kWh) *</label>
+                                            <input type="number" class="form-control" id="quarterly-consumption-comp" 
+                                                   placeholder="e.g., 1365" required>
+                                            <div class="form-text">From your electricity bill</div>
+                                        </div>
+                                        
+                                        <div class="col-md-4">
+                                            <label for="peak-percent-comp" class="form-label">Peak Usage (%)</label>
+                                            <input type="range" class="form-range" id="peak-percent-comp" 
+                                                   min="0" max="100" value="30">
+                                            <div class="d-flex justify-content-between">
+                                                <small>0%</small>
+                                                <small id="peak-value-comp">30%</small>
+                                                <small>100%</small>
+                                            </div>
+                                            <div class="form-text">Higher if home during day</div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="shoulder-percent-comp" class="form-label">Shoulder Usage (%)</label>
+                                            <input type="range" class="form-range" id="shoulder-percent-comp" 
+                                                   min="0" max="100" value="30">
+                                            <div class="d-flex justify-content-between">
+                                                <small>0%</small>
+                                                <small id="shoulder-value-comp">30%</small>
+                                                <small>100%</small>
+                                            </div>
+                                            <div class="form-text">Moderate daytime use</div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="offpeak-percent-comp" class="form-label">Off-Peak Usage (%)</label>
+                                            <input type="range" class="form-range" id="offpeak-percent-comp" 
+                                                   min="0" max="100" value="40">
+                                            <div class="d-flex justify-content-between">
+                                                <small>0%</small>
+                                                <small id="offpeak-value-comp">40%</small>
+                                                <small>100%</small>
+                                            </div>
+                                            <div class="form-text">Higher if away during day</div>
+                                        </div>
+                                        
+                                        <!-- Solar Section -->
+                                        <div class="col-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="has-solar-comp">
+                                                <label class="form-check-label" for="has-solar-comp">
+                                                    I have solar panels
+                                                </label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div id="solar-options-comp" class="col-12" style="display: none;">
+                                            <div class="row g-3">
+                                                <div class="col-md-6">
+                                                    <label for="solar-export-comp" class="form-label">Quarterly Solar Export (kWh)</label>
+                                                    <input type="number" class="form-control" id="solar-export-comp" 
+                                                           placeholder="e.g., 1050">
+                                                    <div class="form-text">Amount exported to grid (from bill)</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Company Selection -->
+                                        <div class="col-12">
+                                            <hr>
+                                            <h5>Select Companies to Compare (1-3)</h5>
+                                        </div>
+                                        
+                                        <div class="col-md-4">
+                                            <select class="form-select" id="company-1" required>
+                                                <option value="">Select Company 1 *</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <select class="form-select" id="company-2">
+                                                <option value="">Select Company 2 (optional)</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <select class="form-select" id="company-3">
+                                                <option value="">Select Company 3 (optional)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mt-3">
+                                        <div class="alert alert-warning" id="percentage-warning-comp" style="display: none;">
+                                            <i class="bi bi-exclamation-triangle me-2"></i>
+                                            Peak + Shoulder + Off-Peak must equal 100%
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="text-center mt-4">
+                                        <button type="submit" class="btn btn-primary btn-lg">
+                                            Compare Plans
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Loading Indicator -->
+        <div id="loading-comp" class="text-center py-5" style="display: none;">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="mt-3 text-muted">Calculating best plans for selected companies...</p>
+        </div>
+
+        <!-- Results Section -->
+        <section id="results-section-comp" class="py-5" style="display: none;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 id="results-title-comp" class="fw-semibold mb-4">Plan Comparison Results</h2>
+                        
+                        <!-- Comparison Cards -->
+                        <div id="comparison-cards">
+                            <!-- Comparison results will be inserted here -->
+                        </div>
+                        
+                        <!-- Summary Section -->
+                        <div id="comparison-summary" class="mt-4">
+                            <!-- Summary will be inserted here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/calculator.js?v=tiered-solar-fit-v2"></script>
+    <script src="js/data-validation.js?v=tiered-solar-fit-v2"></script>
+    <script src="js/compare.js?v=1"></script>
+</body>
+</html>
