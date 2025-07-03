@@ -24,8 +24,8 @@ async function initializeComparison() {
         // Extract plans array from the data structure
         let touPlans = data.plans?.TOU || [];
         
-        // Filter to ONLY show plans with effectiveDate >= 2025-07-01 (same as main page)
-        const targetDate = '2025-07-01';
+        // Filter to ONLY show plans with effectiveDate >= 2025-06-17 (same as main page)
+        const targetDate = '2025-06-17';
         const originalCount = touPlans.length;
         
         allPlansData = touPlans.filter(plan => {
@@ -37,7 +37,7 @@ async function initializeComparison() {
                 return false;
             }
             
-            // Only include plans with effectiveDate >= 2025-07-01
+            // Only include plans with effectiveDate >= 2025-06-17
             if (effectiveDate >= targetDate) {
                 return true;
             } else {
