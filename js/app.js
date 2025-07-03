@@ -82,7 +82,28 @@ async function loadEnergyPlans() {
             }
         });
         
-        console.log(`🔍 FILTER RESULTS: Started with ${originalCount} plans, kept ${touPlans.length} plans, filtered out ${originalCount - touPlans.length} plans with effectiveDate before ${targetDate}`);
+        // Filter out plans with SC (Seniors Card) and OC (Other Customer Requirements) restrictions
+        const restrictedPlanIds = [
+            // SC (Seniors Card) Restrictions
+            "AGL360486MRE33", "AGL898888MRE3",
+            
+            // OC (Other Customer Requirements) Restrictions
+            "AGL100677MRE45", "AGL360621MRE32", "AGL686236MRE19", "AGL726430MRE17",
+            "AGL726436MRE22", "AGL733560MRE17", "AGL827771MRE6", "AGL840896MRE6",
+            "AGL898820MRE3", "AGL898840MRE3", "AGL907767MRE2", "AGL907790MRE2",
+            "ALI849388MRE3", "ALI875577MRE3", "ENE676768MRE8", "ENE676773MRE8",
+            "ENG938049SRE1", "ENG938141MRE1", "ENG938152MRE1", "ENG938161MRE1",
+            "ENG938177MRE1", "ENG938181MRE1", "ENG939788MRE1", "ENG939829MRE1",
+            "LUM203108MRE20", "ORI539830MRE15", "ORI665045MRE13", "ORI727571MRE7",
+            "ORI848686MRE5", "ORI848791MRE3", "OVO723748MRE13", "OVO723789MRE13",
+            "RED552636MRE13", "RED927290MRE1"
+        ];
+        
+        const beforeRestrictedFilter = touPlans.length;
+        touPlans = touPlans.filter(plan => !restrictedPlanIds.includes(plan.plan_id));
+        const restrictedPlansFiltered = beforeRestrictedFilter - touPlans.length;
+        
+        console.log(`🔍 FILTER RESULTS: Started with ${originalCount} plans, kept ${touPlans.length} plans, filtered out ${originalCount - touPlans.length} plans (${originalCount - beforeRestrictedFilter} for old effectiveDate, ${restrictedPlansFiltered} for eligibility restrictions)`);
         
         appState.energyPlans = touPlans;
         
