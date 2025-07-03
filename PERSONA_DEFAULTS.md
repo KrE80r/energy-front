@@ -45,6 +45,7 @@ Off-Peak Usage: 70%  (1-6am maximize cheapest period usage)
 
 Solar Generation:        1500 kWh/quarter (typical 5kW system in SA)
 Self-Consumption:        25%
+Solar Export:            1125 kWh/quarter
 ```
 
 **Rationale**: Ideal scenario - away during shoulder period when solar generates most, maximizing export revenue. Solar credits offset some peak usage costs. Smart load shifting to off-peak period (1-6am) for major appliances, EV charging, and pool pumps.
@@ -60,6 +61,7 @@ Off-Peak Usage: 45%  (1-6am smart load shifting)
 
 Solar Generation:        1500 kWh/quarter (typical 5kW system in SA)
 Self-Consumption:        60%
+Solar Export:            600 kWh/quarter
 ```
 
 **Rationale**: Best positioned for this TOU structure - home during shoulder period (10am-3pm) for maximum self-consumption when solar generates most. Solar significantly reduces grid consumption during peak periods. Smart household can shift remaining loads to off-peak hours (1-6am).
@@ -89,9 +91,8 @@ Based on typical South Australian TOU tariff structures:
 - **Peak Generation**: 10:00 AM - 2:00 PM
 
 ### Self-Consumption Patterns
-- **Commuter Households**: 25% (away during peak solar hours)
-- **Work From Home**: 60% (present during peak solar hours)
-- **Export to Grid**: Remaining generation after self-consumption
+- **Commuter Households**: 25% (away during peak solar hours) → Export: 1125 kWh/quarter
+- **Work From Home**: 60% (present during peak solar hours) → Export: 600 kWh/quarter
 
 ## 📈 Usage Pattern Validation
 
@@ -138,7 +139,7 @@ Off-Peak Consumption: 1365 × 45% = 614 kWh
 Solar Generation:     1500 kWh
 Solar Self-Consumed:  1500 × 60% = 900 kWh
 Net Grid Consumption: 1365 - 900 = 465 kWh
-Solar Exported:       1500 - 900 = 600 kWh
+Solar Exported:       600 kWh
 ```
 
 These patterns provide realistic starting points while allowing full customization for precise calculations based on actual household data.
