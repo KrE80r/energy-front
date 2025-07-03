@@ -60,8 +60,8 @@ async function loadEnergyPlans() {
         const data = await response.json();
         let touPlans = data.plans.TOU; // Focus on TOU plans
         
-        // Filter to ONLY show plans with effectiveDate >= 2025-07-01
-        const targetDate = '2025-07-01';
+        // Filter to ONLY show plans with effectiveDate >= 2025-06-17
+        const targetDate = '2025-06-17';
         const originalCount = touPlans.length;
         
         touPlans = touPlans.filter(plan => {
@@ -73,7 +73,7 @@ async function loadEnergyPlans() {
                 return false;
             }
             
-            // Only include plans with effectiveDate >= 2025-07-01
+            // Only include plans with effectiveDate >= 2025-06-17
             if (effectiveDate >= targetDate) {
                 return true;
             } else {
