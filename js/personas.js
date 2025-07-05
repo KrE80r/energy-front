@@ -8,44 +8,44 @@ const PERSONAS = {
         name: 'Commuter (No Solar)',
         description: 'Away during day, evening usage',
         quarterlyConsumption: 1365, // kWh per quarter (15 kWh/day average)
-        peakPercent: 40,      // 40% peak (6-10am + 3pm-1am)
-        shoulderPercent: 10,  // 10% shoulder (10am-3pm when away)
-        offPeakPercent: 50,   // 50% off-peak (1-6am)
+        peakPercent: 75,      // 75% peak - standard commuter pattern
+        shoulderPercent: 8,   // 8% shoulder - minimal (weekend/holiday usage only)
+        offPeakPercent: 17,   // 17% off-peak - hot water system timed for off-peak
         solarExport: 0,
-        rationale: 'Away during cheapest shoulder period, but unavoidable usage during expensive 18-hour peak periods for morning routines and evening activities.'
+        rationale: 'Some basic energy awareness, hot water on timer. Away during cheapest shoulder period but unavoidable peak usage for morning routines and evening activities.'
     },
     
     'wfh-no-solar': {
         name: 'Work From Home (No Solar)',
         description: 'High daytime usage',
         quarterlyConsumption: 1365,
-        peakPercent: 70,      // 70% peak - home during 18-hour peak period
-        shoulderPercent: 20,  // 20% shoulder - some working hours usage
-        offPeakPercent: 10,   // 10% off-peak - limited overnight usage
+        peakPercent: 70,      // 70% peak - standard WFH pattern
+        shoulderPercent: 20,  // 20% shoulder - working during 10am-3pm
+        offPeakPercent: 10,   // 10% off-peak - some overnight optimization
         solarExport: 0,
-        rationale: 'Worst-case scenario - home during 75% of peak pricing hours daily. This TOU structure is punitive for WFH households without solar.'
+        rationale: 'Regular work setup, moderate AC use, standard appliances. Home during peak but not optimized usage pattern.'
     },
     
     'commuter-solar': {
         name: 'Commuter (With Solar)',
         description: 'Solar export during day',
         quarterlyConsumption: 1365,
-        peakPercent: 25,      // 25% peak - reduced by solar offset
-        shoulderPercent: 5,   // 5% shoulder - away during peak solar generation
-        offPeakPercent: 70,   // 70% off-peak - maximize cheapest period
-        solarExport: 1125, // Quarterly solar export amount
-        rationale: 'Ideal scenario - away during shoulder period when solar generates most, maximizing export revenue. Smart load shifting to off-peak.'
+        peakPercent: 70,      // 70% peak - balanced solar commuter
+        shoulderPercent: 8,   // 8% shoulder - weekend usage during solar hours
+        offPeakPercent: 22,   // 22% off-peak - good overnight load shifting
+        solarExport: 1200, // Quarterly solar export amount (80% export rate)
+        rationale: 'Moderate usage with some weekend solar utilization. Good balance between export revenue and load shifting.'
     },
     
     'wfh-solar': {
         name: 'Work From Home (With Solar)',
         description: 'High self-consumption',
         quarterlyConsumption: 1365,
-        peakPercent: 30,      // 30% peak - significantly reduced by solar
-        shoulderPercent: 25,  // 25% shoulder - high self-consumption during solar peak
-        offPeakPercent: 45,   // 45% off-peak - smart load shifting
-        solarExport: 600, // Quarterly solar export amount
-        rationale: 'Best positioned for this TOU structure - home during shoulder period for maximum self-consumption. Smart load shifting to off-peak hours.'
+        peakPercent: 65,      // 65% peak - standard WFH solar
+        shoulderPercent: 25,  // 25% shoulder - good usage during solar generation
+        offPeakPercent: 10,   // 10% off-peak - limited overnight optimization
+        solarExport: 825, // Quarterly solar export amount (55% export rate)
+        rationale: 'Regular work setup with good solar utilization during work hours. Reduced peak usage through solar self-consumption.'
     }
 };
 
