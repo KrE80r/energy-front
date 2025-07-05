@@ -9,15 +9,15 @@ All personas are based on **15 kWh/day average usage** (1365 kWh quarterly consu
 ### 🏠 **Commuter (No Solar)**
 **Profile**: Away during day, evening usage pattern
 ```
-Peak Usage:     40%  (6-10am morning routine + 3pm-1am evening usage)
-Shoulder Usage: 10%  (10am-3pm when away at work)
-Off-Peak Usage: 50%  (1-6am overnight appliances, hot water systems)
+Peak Usage:     75%  (6-10am morning routine + 3pm-1am evening usage)
+Shoulder Usage:  8%  (10am-3pm when away at work - weekend usage only)
+Off-Peak Usage: 17%  (1-6am hot water system timed for off-peak)
 
 Solar Generation:        0 kWh/quarter
 Self-Consumption:        0%
 ```
 
-**Rationale**: Away during cheapest shoulder period (10am-3pm), but unavoidable usage during expensive 18-hour peak periods for morning routines and evening activities. Maximize overnight off-peak usage with timers and smart appliances.
+**Rationale**: Some basic energy awareness, hot water on timer. Away during cheapest shoulder period but unavoidable peak usage for morning routines and evening activities. Realistic off-peak usage limited to automated loads.
 
 ---
 
@@ -37,34 +37,34 @@ Self-Consumption:        0%
 ---
 
 ### 🌞 **Commuter (With Solar)**
-**Profile**: Solar export during day, minimal self-consumption
+**Profile**: Solar export during day, moderate self-consumption
 ```
-Peak Usage:     25%  (6-10am + 3pm-1am reduced by solar offset)
-Shoulder Usage:  5%  (10am-3pm away during peak solar generation)
-Off-Peak Usage: 70%  (1-6am maximize cheapest period usage)
+Peak Usage:     70%  (6-10am + 3pm-1am moderate solar usage pattern)
+Shoulder Usage:  8%  (10am-3pm away during peak solar generation)
+Off-Peak Usage: 22%  (1-6am balanced load shifting)
 
 Solar Generation:        1500 kWh/quarter (typical 5kW system in SA)
-Self-Consumption:        25%
-Solar Export:            1125 kWh/quarter
+Self-Consumption:        20%
+Solar Export:            1200 kWh/quarter
 ```
 
-**Rationale**: Ideal scenario - away during shoulder period when solar generates most, maximizing export revenue. Solar credits offset some peak usage costs. Smart load shifting to off-peak period (1-6am) for major appliances, EV charging, and pool pumps.
+**Rationale**: Moderate usage with some weekend solar utilization. Good balance between export revenue and load shifting to off-peak period.
 
 ---
 
 ### 🌞 **Work From Home (With Solar)**
 **Profile**: High self-consumption during solar generation hours
 ```
-Peak Usage:     30%  (6-10am + 3pm-1am significantly reduced by solar)
-Shoulder Usage: 25%  (10am-3pm high self-consumption during solar peak)
-Off-Peak Usage: 45%  (1-6am smart load shifting)
+Peak Usage:     65%  (6-10am + 3pm-1am reduced by solar self-consumption)
+Shoulder Usage: 25%  (10am-3pm good usage during solar generation)
+Off-Peak Usage: 10%  (1-6am limited overnight optimization)
 
 Solar Generation:        1500 kWh/quarter (typical 5kW system in SA)
-Self-Consumption:        60%
-Solar Export:            600 kWh/quarter
+Self-Consumption:        45%
+Solar Export:            825 kWh/quarter
 ```
 
-**Rationale**: Best positioned for this TOU structure - home during shoulder period (10am-3pm) for maximum self-consumption when solar generates most. Solar significantly reduces grid consumption during peak periods. Smart household can shift remaining loads to off-peak hours (1-6am).
+**Rationale**: Regular work setup with good solar utilization during work hours. Solar reduces peak usage costs through self-consumption during shoulder period.
 
 ## ⚡ Time of Use (TOU) Period Definitions
 
@@ -91,8 +91,8 @@ Based on typical South Australian TOU tariff structures:
 - **Peak Generation**: 10:00 AM - 2:00 PM
 
 ### Self-Consumption Patterns
-- **Commuter Households**: 25% (away during peak solar hours) → Export: 1125 kWh/quarter
-- **Work From Home**: 60% (present during peak solar hours) → Export: 600 kWh/quarter
+- **Commuter Households**: 20% (away during peak solar hours) → Export: 1200 kWh/quarter
+- **Work From Home**: 45% (present during peak solar hours) → Export: 825 kWh/quarter
 
 ## 📈 Usage Pattern Validation
 
@@ -123,9 +123,9 @@ The application ensures:
 
 ### Commuter (No Solar) - 1365 kWh Quarterly
 ```
-Peak Consumption:     1365 × 40% = 546 kWh
-Shoulder Consumption: 1365 × 10% = 137 kWh
-Off-Peak Consumption: 1365 × 50% = 683 kWh
+Peak Consumption:     1365 × 75% = 1024 kWh
+Shoulder Consumption: 1365 × 8% = 109 kWh
+Off-Peak Consumption: 1365 × 17% = 232 kWh
 Solar Self-Consumed:  0 kWh
 Net Grid Consumption: 1365 kWh
 Solar Exported:       0 kWh
@@ -133,13 +133,13 @@ Solar Exported:       0 kWh
 
 ### Work From Home (With Solar) - 1365 kWh Quarterly
 ```
-Peak Consumption:     1365 × 30% = 410 kWh
+Peak Consumption:     1365 × 65% = 887 kWh
 Shoulder Consumption: 1365 × 25% = 341 kWh
-Off-Peak Consumption: 1365 × 45% = 614 kWh
+Off-Peak Consumption: 1365 × 10% = 137 kWh
 Solar Generation:     1500 kWh
-Solar Self-Consumed:  1500 × 60% = 900 kWh
-Net Grid Consumption: 1365 - 900 = 465 kWh
-Solar Exported:       600 kWh
+Solar Self-Consumed:  1500 × 45% = 675 kWh
+Net Grid Consumption: 1365 - 675 = 690 kWh
+Solar Exported:       825 kWh
 ```
 
 These patterns provide realistic starting points while allowing full customization for precise calculations based on actual household data.
