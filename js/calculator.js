@@ -228,7 +228,7 @@ function processSolarFitData(fitData) {
             continue;
         }
         
-        // Extract rate information
+        // Extract rate information from singleTariffRates
         if (fit.singleTariffRates && Array.isArray(fit.singleTariffRates)) {
             for (const rateData of fit.singleTariffRates) {
                 if (rateData.unitPrice) {
@@ -239,6 +239,31 @@ function processSolarFitData(fitData) {
                         scheme: fit.scheme || 'OTHER',
                         displayName: fit.displayName || '',
                         description: rateData.description || ''
+                    });
+                }
+            }
+        }
+        
+        // Extract rate information from timeVaryingTariffs (Energy Locals structure)
+        if (fit.timeVaryingTariffs && Array.isArray(fit.timeVaryingTariffs)) {
+            for (const timeRate of fit.timeVaryingTariffs) {
+                if (timeRate.rate !== undefined) {
+                    // Determine time period based on type and time variations
+                    let timeInfo = '';
+                    if (timeRate.timeVariations && timeRate.timeVariations.length > 0) {
+                        const variation = timeRate.timeVariations[0];
+                        timeInfo = `${variation.startTime || ''}-${variation.endTime || ''}`;
+                    }
+                    
+                    processedRates.push({
+                        rate: timeRate.rate,
+                        volume: null,
+                        type: fit.type || 'R',
+                        scheme: fit.scheme || 'OTHER',
+                        displayName: timeRate.displayName || fit.displayName || '',
+                        description: `${timeRate.type || ''} ${timeInfo}`.trim(),
+                        timeType: timeRate.type, // PEAK, OFF_PEAK, SHOULDER
+                        timeVariations: timeRate.timeVariations
                     });
                 }
             }
@@ -265,7 +290,7 @@ function processSolarFitData(fitData) {
 }
 
 /**
- * Calculate daily solar credit using tiered rates
+ * Calculate daily solar credit using tiered rates with time-based weighting
  * @param {number} dailyExportKwh - Daily average export in kWh
  * @param {Array} solarFitTiers - Array of solar FiT tier objects
  * @returns {number} Daily solar credit in dollars
@@ -275,6 +300,14 @@ function calculateDailySolarCredit(dailyExportKwh, solarFitTiers) {
         return 0;
     }
     
+    // Check if this is a time-varying tariff (has timeType or timeVariations)
+    const hasTimeVaryingRates = solarFitTiers.some(tier => tier.timeType || tier.timeVariations);
+    
+    if (hasTimeVaryingRates) {
+        return calculateTimeBasedDailySolarCredit(dailyExportKwh, solarFitTiers);
+    }
+    
+    // Standard volume-based calculation for simple tariffs
     let totalCredit = 0;
     let remainingExport = dailyExportKwh;
     
@@ -293,6 +326,38 @@ function calculateDailySolarCredit(dailyExportKwh, solarFitTiers) {
         
         // Reduce remaining export
         remainingExport -= tierExport;
+    }
+    
+    return totalCredit;
+}
+
+/**
+ * Calculate daily solar credit for time-varying tariffs
+ * Distributes solar export based on realistic solar generation patterns
+ * @param {number} dailyExportKwh - Daily average export in kWh
+ * @param {Array} solarFitTiers - Array of time-varying solar FiT rate objects
+ * @returns {number} Daily solar credit in dollars
+ */
+function calculateTimeBasedDailySolarCredit(dailyExportKwh, solarFitTiers) {
+    // Realistic solar export distribution based on typical solar generation patterns
+    // Most solar export happens during midday "Solar Sponge" hours (10:00-16:00)
+    const solarExportDistribution = {
+        'PEAK': 0.15,      // 15% - Late afternoon when peak rates apply (4pm-9pm)
+        'SHOULDER': 0.83,  // 83% - Midday solar generation (10am-4pm) - "Solar Sponge"
+        'OFF_PEAK': 0.02   // 2% - Early morning/evening (9pm-10am) - minimal solar
+    };
+    
+    let totalCredit = 0;
+    
+    for (const tier of solarFitTiers) {
+        const timeType = tier.timeType || 'SHOULDER'; // Default to shoulder if not specified
+        const exportShare = solarExportDistribution[timeType] || 0;
+        const exportForPeriod = dailyExportKwh * exportShare;
+        
+        if (exportForPeriod > 0) {
+            const periodCredit = (exportForPeriod * tier.rate) / 100; // Convert cents to dollars
+            totalCredit += periodCredit;
+        }
     }
     
     return totalCredit;
