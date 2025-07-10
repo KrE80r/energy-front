@@ -498,22 +498,57 @@ function generateSolarFitDisplay(planData) {
         `;
     }
     
-    // Multiple tiers - show tiered structure
-    let tiersHtml = solarFitData.map(tier => {
-        const rate = tier.rate?.toFixed(1);
-        if (tier.volume) {
-            return `${rate}¢ (first ${tier.volume}kWh/day)`;
-        } else {
-            return `${rate}¢ (excess)`;
-        }
-    }).join('<br><small class="text-muted">then </small>');
+    // Check if this is time-varying (Energy Locals) or volume-based tiers
+    const hasTimeVaryingRates = solarFitData.some(tier => tier.timeType);
     
-    return `
-    <div class="mb-3">
-        <small class="text-muted">Solar FiT: </small>
-        <div class="small fw-semibold">${tiersHtml}</div>
-    </div>
-    `;
+    if (hasTimeVaryingRates) {
+        // Time-varying rates (Energy Locals) - show time periods
+        let timeRatesHtml = solarFitData.map(tier => {
+            const rate = tier.rate?.toFixed(1);
+            const timeType = tier.timeType;
+            let period = '';
+            
+            switch(timeType) {
+                case 'PEAK':
+                    period = 'Peak (4pm-9pm)';
+                    break;
+                case 'SHOULDER':
+                    period = 'Solar Sponge (10am-4pm)';
+                    break;
+                case 'OFF_PEAK':
+                    period = 'Off-Peak (9pm-10am)';
+                    break;
+                default:
+                    period = timeType || 'Standard';
+            }
+            
+            return `${rate}¢ (${period})`;
+        }).join('<br>');
+        
+        return `
+        <div class="mb-3">
+            <small class="text-muted">Solar FiT (Time-varying): </small>
+            <div class="small fw-semibold">${timeRatesHtml}</div>
+        </div>
+        `;
+    } else {
+        // Volume-based tiers - show tiered structure
+        let tiersHtml = solarFitData.map(tier => {
+            const rate = tier.rate?.toFixed(1);
+            if (tier.volume) {
+                return `${rate}¢ (first ${tier.volume}kWh/day)`;
+            } else {
+                return `${rate}¢ (excess)`;
+            }
+        }).join('<br><small class="text-muted">then </small>');
+        
+        return `
+        <div class="mb-3">
+            <small class="text-muted">Solar FiT: </small>
+            <div class="small fw-semibold">${tiersHtml}</div>
+        </div>
+        `;
+    }
 }
 
 /**
