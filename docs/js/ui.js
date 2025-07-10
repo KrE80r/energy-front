@@ -154,16 +154,27 @@ function getSolarFitDisplayText(planData) {
         return `<span class="rate-type fit-rate">FiT: ${solarFitRates[0].rate.toFixed(1)}c</span>`;
     }
     
-    // Tiered rate display - show range
-    const rates = solarFitRates.map(tier => tier.rate).sort((a, b) => a - b);
-    const minRate = rates[0];
-    const maxRate = rates[rates.length - 1];
+    // Check if this is time-varying (Energy Locals) or volume-based tiers
+    const hasTimeVaryingRates = solarFitRates.some(tier => tier.timeType);
     
-    if (minRate === maxRate) {
-        return `<span class="rate-type fit-rate">FiT: ${minRate.toFixed(1)}c</span>`;
+    if (hasTimeVaryingRates) {
+        // Time-varying rates - show range with time indicator
+        const rates = solarFitRates.map(tier => tier.rate).sort((a, b) => a - b);
+        const minRate = rates[0];
+        const maxRate = rates[rates.length - 1];
+        return `<span class="rate-type fit-rate" title="Time-varying feed-in tariff: ${minRate.toFixed(1)}c (Solar Sponge) to ${maxRate.toFixed(1)}c (Peak)">FiT: ${minRate.toFixed(1)}-${maxRate.toFixed(1)}c</span>`;
+    } else {
+        // Volume-based tiers - show range
+        const rates = solarFitRates.map(tier => tier.rate).sort((a, b) => a - b);
+        const minRate = rates[0];
+        const maxRate = rates[rates.length - 1];
+        
+        if (minRate === maxRate) {
+            return `<span class="rate-type fit-rate">FiT: ${minRate.toFixed(1)}c</span>`;
+        }
+        
+        return `<span class="rate-type fit-rate" title="Tiered solar feed-in tariff">FiT: ${minRate.toFixed(1)}-${maxRate.toFixed(1)}c</span>`;
     }
-    
-    return `<span class="rate-type fit-rate" title="Tiered solar feed-in tariff">FiT: ${minRate.toFixed(1)}-${maxRate.toFixed(1)}c</span>`;
 }
 
 /**
