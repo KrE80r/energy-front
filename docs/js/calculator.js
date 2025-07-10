@@ -373,11 +373,11 @@ function calculateDailySolarCredit(dailyExportKwh, solarFitTiers) {
  */
 function calculateTimeBasedDailySolarCredit(dailyExportKwh, solarFitTiers) {
     // Realistic solar export distribution based on typical solar generation patterns
-    // Most solar export happens during midday "Solar Sponge" hours (10:00-16:00)
+    // All solar export happens during midday "Solar Sponge" hours (10:00-16:00)
     const solarExportDistribution = {
-        'PEAK': 0.15,      // 15% - Late afternoon when peak rates apply (4pm-9pm)
-        'SHOULDER': 0.83,  // 83% - Midday solar generation (10am-4pm) - "Solar Sponge"
-        'OFF_PEAK': 0.02   // 2% - Early morning/evening (9pm-10am) - minimal solar
+        'PEAK': 0.00,      // 0% - No solar export during evening peak (4pm-9pm)
+        'SHOULDER': 1.00,  // 100% - All solar export during midday generation (10am-4pm) - "Solar Sponge"
+        'OFF_PEAK': 0.00   // 0% - No solar export during night (9pm-10am)
     };
     
     let totalCredit = 0;
