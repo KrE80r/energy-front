@@ -197,38 +197,37 @@ function extractSolarFitRates(planData) {
         solarFitRates = processSolarFitData(fitData);
     }
     
-    // Special case: Energy Locals plans with incomplete API data
-    if (solarFitRates.length === 0 || (solarFitRates.length === 1 && solarFitRates[0].rate === 0)) {
-        const retailerName = planData.retailer_name?.toLowerCase() || '';
-        if (retailerName.includes('energy locals')) {
-            console.log('Applying Energy Locals time-varying FiT rates (API data incomplete)');
-            solarFitRates = [
-                {
-                    rate: 15.0,
-                    timeType: 'PEAK',
-                    type: 'R',
-                    scheme: 'TIME_BASED',
-                    displayName: 'Peak Feed-in Tariff',
-                    description: 'Peak (4pm-9pm)'
-                },
-                {
-                    rate: 5.0,
-                    timeType: 'OFF_PEAK',
-                    type: 'R',
-                    scheme: 'TIME_BASED',
-                    displayName: 'Off-Peak Feed-in Tariff',
-                    description: 'Off-Peak (9pm-10am)'
-                },
-                {
-                    rate: 2.0,
-                    timeType: 'SHOULDER',
-                    type: 'R',
-                    scheme: 'TIME_BASED',
-                    displayName: 'Solar Sponge Feed-in Tariff',
-                    description: 'Solar Sponge (10am-4pm)'
-                }
-            ];
-        }
+    // Special case: Energy Locals plans always have time-varying rates
+    // If we only found a single rate, replace it with the correct time-varying structure
+    const retailerName = planData.retailer_name?.toLowerCase() || '';
+    if (retailerName.includes('energy locals') && solarFitRates.length <= 1) {
+        console.log('Applying Energy Locals time-varying FiT rates (API has single rate instead of time-varying)');
+        solarFitRates = [
+            {
+                rate: 15.0,
+                timeType: 'PEAK',
+                type: 'R',
+                scheme: 'TIME_BASED',
+                displayName: 'Peak Feed-in Tariff',
+                description: 'Peak (4pm-9pm)'
+            },
+            {
+                rate: 5.0,
+                timeType: 'OFF_PEAK',
+                type: 'R',
+                scheme: 'TIME_BASED',
+                displayName: 'Off-Peak Feed-in Tariff',
+                description: 'Off-Peak (9pm-10am)'
+            },
+            {
+                rate: 2.0,
+                timeType: 'SHOULDER',
+                type: 'R',
+                scheme: 'TIME_BASED',
+                displayName: 'Solar Sponge Feed-in Tariff',
+                description: 'Solar Sponge (10am-4pm)'
+            }
+        ];
     }
     
     // Fallback: Use simple rate if available
