@@ -197,8 +197,42 @@ function extractSolarFitRates(planData) {
         solarFitRates = processSolarFitData(fitData);
     }
     
+    // Special case: Energy Locals plans with incomplete API data
+    if (solarFitRates.length === 0 || (solarFitRates.length === 1 && solarFitRates[0].rate === 0)) {
+        const retailerName = planData.retailer_name?.toLowerCase() || '';
+        if (retailerName.includes('energy locals')) {
+            console.log('Applying Energy Locals time-varying FiT rates (API data incomplete)');
+            solarFitRates = [
+                {
+                    rate: 15.0,
+                    timeType: 'PEAK',
+                    type: 'R',
+                    scheme: 'TIME_BASED',
+                    displayName: 'Peak Feed-in Tariff',
+                    description: 'Peak (4pm-9pm)'
+                },
+                {
+                    rate: 5.0,
+                    timeType: 'OFF_PEAK',
+                    type: 'R',
+                    scheme: 'TIME_BASED',
+                    displayName: 'Off-Peak Feed-in Tariff',
+                    description: 'Off-Peak (9pm-10am)'
+                },
+                {
+                    rate: 2.0,
+                    timeType: 'SHOULDER',
+                    type: 'R',
+                    scheme: 'TIME_BASED',
+                    displayName: 'Solar Sponge Feed-in Tariff',
+                    description: 'Solar Sponge (10am-4pm)'
+                }
+            ];
+        }
+    }
+    
     // Fallback: Use simple rate if available
-    if (solarFitRates.length === 0 && planData.solar_feed_in_rate_r) {
+    if (solarFitRates.length === 0 && planData.solar_feed_in_rate_r && planData.solar_feed_in_rate_r > 0) {
         solarFitRates = [{
             rate: planData.solar_feed_in_rate_r,
             volume: null, // Unlimited
