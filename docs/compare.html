@@ -102,8 +102,8 @@
                                         </div>
                                         
                                         <div class="col-md-4">
-                                            <select class="form-select" id="company-1" required>
-                                                <option value="">Select Company 1 *</option>
+                                            <select class="form-select" id="company-1">
+                                                <option value="">Select Company 1 (optional)</option>
                                             </select>
                                         </div>
                                         <div class="col-md-4">
@@ -116,12 +116,84 @@
                                                 <option value="">Select Company 3 (optional)</option>
                                             </select>
                                         </div>
+                                        
+                                        <!-- Custom Plan Section -->
+                                        <div class="col-12">
+                                            <hr>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" id="add-custom-plan">
+                                                <label class="form-check-label" for="add-custom-plan">
+                                                    <h5 class="mb-0">Add Custom Plan</h5>
+                                                    <small class="text-muted">Enter rates for a plan not listed above</small>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div id="custom-plan-options" class="col-12" style="display: none;">
+                                            <div class="card mt-3">
+                                                <div class="card-header bg-secondary text-white">
+                                                    <h6 class="mb-0">Custom Plan Details</h6>
+                                                </div>
+                                                <div class="card-body">
+                                                    <div class="row g-3">
+                                                        <div class="col-md-6">
+                                                            <label for="custom-retailer-name" class="form-label">Retailer Name *</label>
+                                                            <input type="text" class="form-control" id="custom-retailer-name" 
+                                                                   placeholder="e.g., My Energy Company">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="custom-plan-name" class="form-label">Plan Name *</label>
+                                                            <input type="text" class="form-control" id="custom-plan-name" 
+                                                                   placeholder="e.g., Time of Use Plan">
+                                                        </div>
+                                                        
+                                                        <div class="col-md-3">
+                                                            <label for="custom-peak-rate" class="form-label">Peak Rate (c/kWh) *</label>
+                                                            <input type="number" class="form-control" id="custom-peak-rate" 
+                                                                   placeholder="45.5" step="0.1" min="0">
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <label for="custom-shoulder-rate" class="form-label">Shoulder Rate (c/kWh) *</label>
+                                                            <input type="number" class="form-control" id="custom-shoulder-rate" 
+                                                                   placeholder="35.2" step="0.1" min="0">
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <label for="custom-offpeak-rate" class="form-label">Off-Peak Rate (c/kWh) *</label>
+                                                            <input type="number" class="form-control" id="custom-offpeak-rate" 
+                                                                   placeholder="25.8" step="0.1" min="0">
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <label for="custom-supply-charge" class="form-label">Daily Supply (c/day) *</label>
+                                                            <input type="number" class="form-control" id="custom-supply-charge" 
+                                                                   placeholder="120.0" step="0.1" min="0">
+                                                        </div>
+                                                        
+                                                        <div class="col-md-6">
+                                                            <label for="custom-solar-fit" class="form-label">Solar Feed-in Tariff (c/kWh)</label>
+                                                            <input type="number" class="form-control" id="custom-solar-fit" 
+                                                                   placeholder="8.0" step="0.1" min="0">
+                                                            <div class="form-text">Optional - leave blank if no solar or unknown</div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label for="custom-membership-fee" class="form-label">Annual Membership Fee ($)</label>
+                                                            <input type="number" class="form-control" id="custom-membership-fee" 
+                                                                   placeholder="0" step="1" min="0">
+                                                            <div class="form-text">Optional - enter 0 if no membership fee</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     
                                     <div class="mt-3">
                                         <div class="alert alert-warning" id="percentage-warning-comp" style="display: none;">
                                             <i class="bi bi-exclamation-triangle me-2"></i>
                                             Peak + Shoulder + Off-Peak must equal 100%
+                                        </div>
+                                        <div class="alert alert-warning" id="selection-warning-comp" style="display: none;">
+                                            <i class="bi bi-exclamation-triangle me-2"></i>
+                                            Please select at least one company OR add a custom plan
                                         </div>
                                     </div>
                                     
