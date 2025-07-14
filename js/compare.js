@@ -142,6 +142,12 @@ function setupEventListeners() {
         solarOptions.style.display = this.checked ? 'block' : 'none';
     });
     
+    // Custom plan checkbox
+    document.getElementById('add-custom-plan').addEventListener('change', function() {
+        const customPlanOptions = document.getElementById('custom-plan-options');
+        customPlanOptions.style.display = this.checked ? 'block' : 'none';
+    });
+    
     // Percentage validation
     const percentageInputs = ['peak-percent-comp', 'shoulder-percent-comp', 'offpeak-percent-comp'];
     percentageInputs.forEach(id => {
@@ -190,6 +196,46 @@ function validatePercentages() {
 }
 
 /**
+ * Validate custom plan inputs
+ */
+function validateCustomPlan() {
+    const requiredFields = [
+        { id: 'custom-retailer-name', name: 'Retailer Name' },
+        { id: 'custom-plan-name', name: 'Plan Name' },
+        { id: 'custom-peak-rate', name: 'Peak Rate' },
+        { id: 'custom-shoulder-rate', name: 'Shoulder Rate' },
+        { id: 'custom-offpeak-rate', name: 'Off-Peak Rate' },
+        { id: 'custom-supply-charge', name: 'Daily Supply Charge' }
+    ];
+    
+    for (const field of requiredFields) {
+        const value = document.getElementById(field.id).value.trim();
+        if (!value || (field.id !== 'custom-retailer-name' && field.id !== 'custom-plan-name' && parseFloat(value) < 0)) {
+            showError(`Please enter a valid ${field.name} for the custom plan.`);
+            return false;
+        }
+    }
+    
+    // Validate that rates are reasonable (sanity check)
+    const peakRate = parseFloat(document.getElementById('custom-peak-rate').value);
+    const shoulderRate = parseFloat(document.getElementById('custom-shoulder-rate').value);
+    const offpeakRate = parseFloat(document.getElementById('custom-offpeak-rate').value);
+    const supplyCharge = parseFloat(document.getElementById('custom-supply-charge').value);
+    
+    if (peakRate > 200 || shoulderRate > 200 || offpeakRate > 200) {
+        showError('Electricity rates seem unusually high (over 200c/kWh). Please check your inputs.');
+        return false;
+    }
+    
+    if (supplyCharge > 500) {
+        showError('Daily supply charge seems unusually high (over 500c/day). Please check your input.');
+        return false;
+    }
+    
+    return true;
+}
+
+/**
  * Handle form submission
  */
 async function handleFormSubmit(event) {
@@ -230,10 +276,24 @@ async function handleFormSubmit(event) {
 function validateForm() {
     // Check required fields
     const consumption = document.getElementById('quarterly-consumption-comp').value;
-    const company1 = document.getElementById('company-1').value;
+    const selectedCompanies = getSelectedCompanies();
+    const hasCustomPlan = document.getElementById('add-custom-plan').checked;
     
-    if (!consumption || !company1) {
-        showError('Please fill in all required fields.');
+    if (!consumption) {
+        showError('Please enter your quarterly consumption.');
+        return false;
+    }
+    
+    // Either companies OR custom plan must be selected
+    if (selectedCompanies.length === 0 && !hasCustomPlan) {
+        document.getElementById('selection-warning-comp').style.display = 'block';
+        return false;
+    } else {
+        document.getElementById('selection-warning-comp').style.display = 'none';
+    }
+    
+    // Validate custom plan if enabled
+    if (hasCustomPlan && !validateCustomPlan()) {
         return false;
     }
     
@@ -278,11 +338,60 @@ function getSelectedCompanies() {
 }
 
 /**
+ * Create custom plan data structure
+ */
+function createCustomPlan() {
+    const retailerName = document.getElementById('custom-retailer-name').value.trim();
+    const planName = document.getElementById('custom-plan-name').value.trim();
+    const peakRate = parseFloat(document.getElementById('custom-peak-rate').value);
+    const shoulderRate = parseFloat(document.getElementById('custom-shoulder-rate').value);
+    const offpeakRate = parseFloat(document.getElementById('custom-offpeak-rate').value);
+    const supplyCharge = parseFloat(document.getElementById('custom-supply-charge').value);
+    const solarFit = parseFloat(document.getElementById('custom-solar-fit').value) || 0;
+    const membershipFee = parseFloat(document.getElementById('custom-membership-fee').value) || 0;
+    
+    // Create a plan object that matches the existing JSON structure
+    return {
+        plan_id: 'CUSTOM_PLAN_001',
+        plan_name: planName,
+        retailer_name: retailerName,
+        plan_type: 'TOU',
+        tariff_type: 'TOU',
+        peak_cost: peakRate,
+        shoulder_cost: shoulderRate,
+        off_peak_cost: offpeakRate,
+        daily_supply_charge: supplyCharge,
+        solar_feed_in_rate_r: solarFit > 0 ? solarFit : null,
+        membership_fee_annual: membershipFee / 100, // Convert to the format used in calculations
+        detailed_time_blocks: [
+            {
+                name: 'Peak',
+                description: 'Standard peak periods (typically 4pm-9pm)',
+                time_of_use_period: 'P'
+            },
+            {
+                name: 'Shoulder',  
+                description: 'Standard shoulder periods (typically morning/evening)',
+                time_of_use_period: 'S'
+            },
+            {
+                name: 'Off-Peak',
+                description: 'Standard off-peak periods (typically overnight)',
+                time_of_use_period: 'O'
+            }
+        ],
+        // Mark as custom plan for special handling
+        is_custom_plan: true
+    };
+}
+
+/**
  * Calculate best plans for each selected company
  */
 async function calculateCompanyComparisons(selectedCompanies, usagePattern) {
     const results = [];
     
+    // Process selected companies
     for (const company of selectedCompanies) {
         const companyPlans = companiesData[company] || [];
         
@@ -299,6 +408,23 @@ async function calculateCompanyComparisons(selectedCompanies, usagePattern) {
                 bestPlan: rankedPlans[0],
                 allPlans: rankedPlans.slice(0, 5), // Top 5 plans
                 totalPlans: rankedPlans.length
+            });
+        }
+    }
+    
+    // Add custom plan if enabled
+    const hasCustomPlan = document.getElementById('add-custom-plan').checked;
+    if (hasCustomPlan) {
+        const customPlan = createCustomPlan();
+        const customPlanCosts = calculateAndRankPlans([customPlan], usagePattern);
+        
+        if (customPlanCosts.length > 0) {
+            results.push({
+                company: customPlan.retailer_name + ' (Custom)',
+                bestPlan: customPlanCosts[0],
+                allPlans: customPlanCosts,
+                totalPlans: 1,
+                isCustom: true
             });
         }
     }
@@ -339,19 +465,21 @@ function generateComparisonCards(comparisonResults) {
     let html = '<div class="row g-4">';
     
     comparisonResults.forEach((result, index) => {
-        const { company, bestPlan, totalPlans } = result;
+        const { company, bestPlan, totalPlans, isCustom } = result;
         const { planData, totalCost, breakdown, monthlyCost } = bestPlan;
         
         const rankBadge = index === 0 ? '<span class="badge bg-success position-absolute top-0 start-50 translate-middle">Best Value</span>' : '';
-        const cardClass = index === 0 ? 'border-success' : '';
+        const customBadge = isCustom ? '<span class="badge bg-info position-absolute top-0 end-0 m-2">Custom Plan</span>' : '';
+        const cardClass = index === 0 ? 'border-success' : (isCustom ? 'border-info' : '');
         
         html += `
         <div class="col-lg-4 col-md-6">
             <div class="card h-100 ${cardClass}" style="position: relative;">
                 ${rankBadge}
-                <div class="card-header bg-light">
+                ${customBadge}
+                <div class="card-header ${isCustom ? 'bg-info text-white' : 'bg-light'}">
                     <h5 class="card-title mb-1">${company}</h5>
-                    <small class="text-muted">${totalPlans} plan${totalPlans !== 1 ? 's' : ''} available</small>
+                    <small class="${isCustom ? 'text-white-50' : 'text-muted'}">${totalPlans} plan${totalPlans !== 1 ? 's' : ''} available</small>
                 </div>
                 <div class="card-body">
                     <div class="text-center mb-3">
@@ -421,8 +549,41 @@ function generateComparisonCards(comparisonResults) {
  * Generate comparison summary
  */
 function generateComparisonSummary(comparisonResults, usagePattern) {
-    if (comparisonResults.length < 2) {
+    if (comparisonResults.length === 0) {
         return '';
+    }
+    
+    // Handle single plan scenario (e.g., custom plan only)
+    if (comparisonResults.length === 1) {
+        const plan = comparisonResults[0];
+        return `
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                <h5 class="mb-0">Plan Summary</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Your Custom Usage Pattern:</h6>
+                        <ul class="list-unstyled mb-0">
+                            <li><strong>Consumption:</strong> ${usagePattern.quarterlyConsumption} kWh/quarter</li>
+                            <li><strong>Peak:</strong> ${usagePattern.peakPercent}% | <strong>Shoulder:</strong> ${usagePattern.shoulderPercent}% | <strong>Off-Peak:</strong> ${usagePattern.offPeakPercent}%</li>
+                            ${usagePattern.solarExport > 0 ? `<li><strong>Solar Export:</strong> ${usagePattern.solarExport} kWh/quarter</li>` : ''}
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Plan Details:</h6>
+                        <p class="mb-0">
+                            <strong>${plan.company}</strong><br>
+                            Plan: <strong>${plan.bestPlan.planData.plan_name}</strong><br>
+                            Estimated cost: <strong>$${plan.bestPlan.totalCost.toFixed(0)} per quarter</strong>
+                        </p>
+                        ${plan.isCustom ? '<div class="mt-2"><span class="badge bg-info">Custom Plan</span></div>' : ''}
+                    </div>
+                </div>
+            </div>
+        </div>
+        `;
     }
     
     const cheapest = comparisonResults[0];

@@ -80579,8 +80579,8 @@
         }
       },
       {
-        "plan_id": "SUM926364SRE2",
-        "plan_name": "Sumo Standing Offer",
+        "plan_id": "SUM926364SRE3",
+        "plan_name": "Sumo Standing Offer TOU",
         "retailer_name": "Sumo",
         "plan_type": "TOU",
         "tariff_type": "TOU",
@@ -80705,7 +80705,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "SUM926364SRE2",
+            "planId": "SUM926364SRE3",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -80803,15 +80803,15 @@
                   ]
                 }
               ],
-              "planName": "Sumo Standing Offer",
+              "planName": "Sumo Standing Offer TOU",
               "retailerId": "544846",
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Sumo",
-              "planId": "SUM926364SRE2",
+              "planId": "SUM926364SRE3",
               "retailerCode": "SUM"
             },
-            "planType": "E#R#SUM926364SRE2",
+            "planType": "E#R#SUM926364SRE3",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -81028,7 +81028,7 @@
                     "isFixed": false
                   }
                 ],
-                "planName": "Sumo Standing Offer",
+                "planName": "Sumo Standing Offer TOU",
                 "planStatus": "PUBLISHED",
                 "supplyArea": [
                   {
@@ -81036,19 +81036,19 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 975739,
+                "batchId": 976225,
                 "retailerId": "544846",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Sumo",
-                "planId": "SUM926364SRE2",
+                "planId": "SUM926364SRE3",
                 "retailerCode": "SUM",
                 "state": "SA",
-                "effectiveDate": "2025-07-09"
+                "effectiveDate": "2025-07-10"
               },
-              "planId": "SUM926364SRE2",
+              "planId": "SUM926364SRE3",
               "postcodes": {
                 "5097": 1
               }
