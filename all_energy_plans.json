@@ -1,10 +1,10 @@
 {
   "metadata": {
     "postcode": "5097",
-    "total_plans": 141,
-    "filtered_out": 415,
+    "total_plans": 137,
+    "filtered_out": 404,
     "extraction_date": "2025-06-26",
-    "tou_count": 141,
+    "tou_count": 137,
     "sr_count": 0,
     "other_count": 0,
     "filters_applied": "Excluded tariff types: SR, SRCL, TOUCL",
@@ -13535,6 +13535,1457 @@
         }
       },
       {
+        "plan_id": "AGL978229MRE7",
+        "plan_name": "Three for Free - New to AGL (No Exit Fee)",
+        "retailer_name": "AGL",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 330,
+        "quarterly_cost": 1180,
+        "annual_cost": 3960,
+        "peak_cost": 54.186,
+        "shoulder_cost": 35.211,
+        "off_peak_cost": 24.904000000000003,
+        "daily_supply_charge": 127.688,
+        "detailed_time_blocks": [
+          {
+            "name": "Residential Time of Use peak",
+            "description": "6am -10am and 3pm -1am every day",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "0600",
+                "end_time": "0959"
+              },
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "1500",
+                "end_time": "2359"
+              },
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "0000",
+                "end_time": "0059"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 49.26,
+                "unit_price_gst": 54.186,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Residential Time of Use Off peak",
+            "description": "1am-6am Every day",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "0100",
+                "end_time": "0559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 32.01,
+                "unit_price_gst": 35.211,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Three for Free usage",
+            "description": "10am-1pm every day",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "1000",
+                "end_time": "1259"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 0,
+                "unit_price_gst": 0.0,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Residential Time of Use Shoulder",
+            "description": "1pm-3pm every day",
+            "time_of_use_period": "S1",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "1300",
+                "end_time": "1459"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 22.64,
+                "unit_price_gst": 24.904000000000003,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": 63.71,
+          "paper_bill_fee": 1.75,
+          "payment_processing_fees": [
+            {
+              "feeType": "PPF",
+              "percent": 0.15,
+              "feeTerm": "P"
+            },
+            {
+              "feeType": "PPF",
+              "percent": 0.54,
+              "feeTerm": "P"
+            },
+            {
+              "feeType": "PPF",
+              "percent": 0.32,
+              "feeTerm": "P"
+            }
+          ],
+          "late_payment_fee": 12,
+          "disconnection_fee_move_out": 63.71,
+          "disconnection_fee_non_payment": 63.71,
+          "reconnection_fee": 63.71,
+          "other_fees": [
+            {
+              "amount": 3.3,
+              "feeType": "OF",
+              "feeTerm": "F"
+            }
+          ],
+          "credit_card_payment_fees": [
+            {
+              "feeType": "CCF",
+              "percent": 0.65,
+              "feeTerm": "P"
+            },
+            {
+              "feeType": "CCF",
+              "percent": 0.75,
+              "feeTerm": "P"
+            }
+          ],
+          "membership_fee": null
+        },
+        "membership_fee_annual": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_monthly": 0,
+        "solar_feed_in_rate_r": 2,
+        "payment_options": [
+          "PayPal",
+          "Direct Debit",
+          "Credit Card",
+          "BPay"
+        ],
+        "raw_plan_data_complete": {
+          "main_api_response": {
+            "planId": "AGL978229MRE7",
+            "planData": {
+              "tariffType": "TOU",
+              "contract": [
+                {
+                  "pricingModel": "TOU",
+                  "benefitPeriod": "Ongoing",
+                  "solarFit": [
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "OTHER",
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 2,
+                          "rebate": true,
+                          "measureUnit": "KWH"
+                        }
+                      ],
+                      "rate": 2,
+                      "displayName": "AGL Retailer Feed-in Tariff (exc GST if any)",
+                      "type": "R",
+                      "singleTariffPeriod": "P1Y"
+                    },
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "PREMIUM",
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 44,
+                          "rebate": true,
+                          "measureUnit": "KWH"
+                        }
+                      ],
+                      "rate": 44,
+                      "displayName": "Solar bonus scheme - Premium FiT",
+                      "type": "G",
+                      "singleTariffPeriod": "P1Y"
+                    }
+                  ],
+                  "fee": [
+                    {
+                      "amount": 63.71,
+                      "feeType": "ConnF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 63.71,
+                      "feeType": "DiscoFMO",
+                      "percent": 0,
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 63.71,
+                      "feeType": "DiscoFNP",
+                      "percent": 0,
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 63.71,
+                      "feeType": "RecoF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 12,
+                      "feeType": "LPF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "feeType": "PPF",
+                      "percent": 0.15,
+                      "feeTerm": "P"
+                    },
+                    {
+                      "feeType": "PPF",
+                      "percent": 0.54,
+                      "feeTerm": "P"
+                    },
+                    {
+                      "feeType": "CCF",
+                      "percent": 0.65,
+                      "feeTerm": "P"
+                    },
+                    {
+                      "amount": 1.75,
+                      "feeType": "PBF",
+                      "percent": 0,
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 3.3,
+                      "feeType": "OF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "feeType": "PPF",
+                      "percent": 0.32,
+                      "feeTerm": "P"
+                    },
+                    {
+                      "feeType": "CCF",
+                      "percent": 0.75,
+                      "feeTerm": "P"
+                    }
+                  ],
+                  "termType": "N",
+                  "tariffPeriod": [
+                    {
+                      "touBlock": [
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 49.26,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 32.01,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 0,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 22.64,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        }
+                      ],
+                      "blockPeriod": "P1Y",
+                      "dailySupplyCharge": 116.08
+                    }
+                  ],
+                  "greenCharge": [
+                    {
+                      "chargeType": "W"
+                    },
+                    {
+                      "chargeType": "A"
+                    }
+                  ],
+                  "incentive": [
+                    {
+                      "name": "$75 online sign up credit"
+                    },
+                    {
+                      "name": "Three for Free Usage"
+                    }
+                  ],
+                  "fuelType": "E",
+                  "meterType": [
+                    "Type 4",
+                    "Type 4a"
+                  ],
+                  "paymentOption": [
+                    "P",
+                    "DD",
+                    "CC",
+                    "BP"
+                  ]
+                }
+              ],
+              "planName": "Three for Free - New to AGL (No Exit Fee)",
+              "retailerId": "9645",
+              "customerType": "R",
+              "fuelType": "E",
+              "retailerName": "AGL",
+              "planId": "AGL978229MRE7",
+              "retailerCode": "AGL"
+            },
+            "planType": "E#R#AGL978229MRE7",
+            "postcode": 5097,
+            "pcr": {
+              "costs": {
+                "electricity": {
+                  "small": {
+                    "quarterly": {
+                      "noDiscounts": 540,
+                      "allDiscounts": 540,
+                      "guaranteedDiscount": 540
+                    },
+                    "monthly": {
+                      "noDiscounts": 150,
+                      "allDiscounts": 150,
+                      "guaranteedDiscount": 150
+                    },
+                    "yearly": {
+                      "noDiscounts": 1790,
+                      "allDiscounts": 1790,
+                      "guaranteedDiscount": 1790
+                    }
+                  },
+                  "large": {
+                    "quarterly": {
+                      "noDiscounts": 1180,
+                      "allDiscounts": 1180,
+                      "guaranteedDiscount": 1180
+                    },
+                    "monthly": {
+                      "noDiscounts": 330,
+                      "allDiscounts": 330,
+                      "guaranteedDiscount": 330
+                    },
+                    "yearly": {
+                      "noDiscounts": 3960,
+                      "allDiscounts": 3960,
+                      "guaranteedDiscount": 3960
+                    }
+                  },
+                  "medium": {
+                    "quarterly": {
+                      "noDiscounts": 860,
+                      "allDiscounts": 860,
+                      "guaranteedDiscount": 860
+                    },
+                    "monthly": {
+                      "noDiscounts": 240,
+                      "allDiscounts": 240,
+                      "guaranteedDiscount": 240
+                    },
+                    "yearly": {
+                      "noDiscounts": 2870,
+                      "allDiscounts": 2870,
+                      "guaranteedDiscount": 2870
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "detailed_api_response": {
+            "data": {
+              "planData": {
+                "planType": "M",
+                "tariffType": "TOU",
+                "contract": [
+                  {
+                    "pricingModel": "TOU",
+                    "benefitPeriod": "Ongoing",
+                    "coolingOffDays": 10,
+                    "solarFit": [
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "OTHER",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 2,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 2,
+                        "displayName": "AGL Retailer Feed-in Tariff (exc GST if any)",
+                        "description": "AGL Retailer Feed-in Tariff (exc GST if any)",
+                        "type": "R",
+                        "singleTariffPeriod": "P1Y"
+                      },
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "PREMIUM",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 44,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 44,
+                        "displayName": "Solar bonus scheme - Premium FiT",
+                        "description": "Solar bonus scheme - Premium FiT",
+                        "type": "G",
+                        "singleTariffPeriod": "P1Y"
+                      }
+                    ],
+                    "additionalFeeInformation": "Additional fees and charges may apply. Please see the AGL fee schedules at agl.com.au/fees",
+                    "fee": [
+                      {
+                        "description": "May be charged when manually reconnecting or reading your meter when you move into a property or change retailer. Incl GST. Fees may vary.",
+                        "amount": 63.71,
+                        "feeType": "ConnF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "May be charged when manually disconnecting or reading your meter when you move out of a property or change retailer. Incl GST. Fees may vary.",
+                        "amount": 63.71,
+                        "feeType": "DiscoFMO",
+                        "percent": 0,
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "Fee may be charged when manually disconnecting your meter in other circumstances, such as non-payment. Includes GST. Fees may vary.",
+                        "amount": 63.71,
+                        "feeType": "DiscoFNP",
+                        "percent": 0,
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "May be charged when manually reconnecting in other circumstances, such as after disconnection for non-payment. Includes GST. Fees may vary",
+                        "amount": 63.71,
+                        "feeType": "RecoF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "A late payment fee may be charged when full payment has not been received by the bill due date. This amount is not subject to GST",
+                        "amount": 12,
+                        "feeType": "LPF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "The amount is GST inclusive and applies to payments made by Visa debit cards.",
+                        "feeType": "PPF",
+                        "percent": 0.15,
+                        "feeTerm": "P"
+                      },
+                      {
+                        "description": "The amount is GST inclusive and applies to card payments made at Australia Post outlets.",
+                        "feeType": "PPF",
+                        "percent": 0.54,
+                        "feeTerm": "P"
+                      },
+                      {
+                        "description": "The amount is GST inclusive and applies to payments made by Visa credit cards.",
+                        "feeType": "CCF",
+                        "percent": 0.65,
+                        "feeTerm": "P"
+                      },
+                      {
+                        "description": "A paper bill fee may apply for each bill sent by post. Includes GST.",
+                        "amount": 1.75,
+                        "feeType": "PBF",
+                        "percent": 0,
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "An over the counter payment fee may apply for payments made in-person at a Post Office. Includes GST.",
+                        "amount": 3.3,
+                        "feeType": "OF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "The amount is GST inclusive and applies to payments made by Mastercard debit cards.",
+                        "feeType": "PPF",
+                        "percent": 0.32,
+                        "feeTerm": "P"
+                      },
+                      {
+                        "description": "The amount is GST inclusive and applies to payments made by Mastercard credit cards.",
+                        "feeType": "CCF",
+                        "percent": 0.75,
+                        "feeTerm": "P"
+                      }
+                    ],
+                    "termType": "N",
+                    "tariffPeriod": [
+                      {
+                        "touBlock": [
+                          {
+                            "name": "Residential Time of Use peak",
+                            "description": "6am -10am and 3pm -1am every day",
+                            "blockRate": [
+                              {
+                                "unitPrice": 49.26,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "P",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "0600",
+                                "endTime": "0959"
+                              },
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "1500",
+                                "endTime": "2359"
+                              },
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "0000",
+                                "endTime": "0059"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Residential Time of Use Off peak",
+                            "description": "1am-6am Every day",
+                            "blockRate": [
+                              {
+                                "unitPrice": 32.01,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "OP",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "0100",
+                                "endTime": "0559"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Three for Free usage",
+                            "description": "10am-1pm every day",
+                            "blockRate": [
+                              {
+                                "unitPrice": 0,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "S",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "1000",
+                                "endTime": "1259"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Residential Time of Use Shoulder",
+                            "description": "1pm-3pm every day",
+                            "blockRate": [
+                              {
+                                "unitPrice": 22.64,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "S1",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "1300",
+                                "endTime": "1459"
+                              }
+                            ]
+                          }
+                        ],
+                        "endDate": "2020-06-30",
+                        "blockPeriod": "P1Y",
+                        "dailySupplyCharge": 116.08,
+                        "startDate": "2020-07-01"
+                      }
+                    ],
+                    "variation": "This plan also includes variable rates, retail fees and charges, which can change at any time with notice to you. If we vary your rates, we will give you at least 5 business days prior notice of the variation. Other charges may be varied with notice to you.",
+                    "onExpiry": "Your market contract is ongoing. From time to time, AGL reviews its offers and this offer will be reviewed with consideration to AGL's generally available market offers",
+                    "greenCharge": [
+                      {
+                        "name": "Green Power Charge",
+                        "chargeType": "W",
+                        "description": "For $1 per week inc. GST we ensure energy equal to 20% of your usage will be fed into the grid from Accredited GreenPower generators.",
+                        "option": [
+                          {
+                            "pctGreenPower": 20,
+                            "chargeAmount": 1
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Green Power Charge",
+                        "chargeType": "A",
+                        "description": "For 4.4c /kWh inc. GST we ensure energy equal to 100% of your usage will be fed into the grid from Accredited GreenPower generators.",
+                        "option": [
+                          {
+                            "pctGreenPower": 100,
+                            "chargeAmount": 0.044
+                          }
+                        ]
+                      }
+                    ],
+                    "incentive": [
+                      {
+                        "name": "$75 online sign up credit",
+                        "description": "For new & moving AGL customers who sign up via AGL website and stay with AGL at the same address for 90 days from start of the plan. Credit will appear on next bill after 90 days. Non-transferable. Accounts may be excluded from receiving more than one credit per fuel in 12 months"
+                      },
+                      {
+                        "name": "Three for Free Usage",
+                        "description": "Free electricity usage applies from 10am to 1pm every day. Daily supply charges still apply. This rate can change with notice to you."
+                      }
+                    ],
+                    "fuelType": "E",
+                    "terms": "This offer applies to customers with a smart meter and an applicable network tariff. For full eligibility criteria, or for further information about the terms and conditions applicable to this energy offer, please contact AGL on 131 245 or visit agl.com.au.",
+                    "timeDefinition": "LOCAL",
+                    "billFrequency": [
+                      {
+                        "number": 3,
+                        "period": "M"
+                      },
+                      {
+                        "number": 1,
+                        "period": "M"
+                      }
+                    ],
+                    "meterType": [
+                      "Type 4",
+                      "Type 4a"
+                    ],
+                    "paymentOption": [
+                      "P",
+                      "DD",
+                      "CC",
+                      "BP"
+                    ],
+                    "isFixed": false
+                  }
+                ],
+                "planName": "Three for Free - New to AGL (No Exit Fee)",
+                "planStatus": "PUBLISHED",
+                "supplyArea": [
+                  {
+                    "name": "SA Power Networks",
+                    "id": "42"
+                  }
+                ],
+                "batchId": 979923,
+                "retailerId": "9645",
+                "distributor": "SA Power Networks",
+                "genAvailable": true,
+                "tags": [
+                  ";#Time of use;#",
+                  "AGLMKTRE0025177",
+                  "TOUS_INT"
+                ],
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "AGL",
+                "planId": "AGL978229MRE7",
+                "retailerCode": "AGL",
+                "state": "SA",
+                "effectiveDate": "2025-07-23"
+              },
+              "planId": "AGL978229MRE7",
+              "postcodes": {
+                "5097": 1
+              }
+            }
+          }
+        },
+        "raw_plan_data": {
+          "eligibility_restrictions": false,
+          "has_discounts": false,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      },
+      {
+        "plan_id": "AGL979831MRE2",
+        "plan_name": "Three for Free (No Exit Fee)",
+        "retailer_name": "AGL",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 330,
+        "quarterly_cost": 1180,
+        "annual_cost": 3960,
+        "peak_cost": 54.186,
+        "shoulder_cost": 35.211,
+        "off_peak_cost": 24.904000000000003,
+        "daily_supply_charge": 127.688,
+        "detailed_time_blocks": [
+          {
+            "name": "Residential Time of Use peak",
+            "description": "6am -10am and 3pm -1am every day",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "0600",
+                "end_time": "0959"
+              },
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "1500",
+                "end_time": "2359"
+              },
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "0000",
+                "end_time": "0059"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 49.26,
+                "unit_price_gst": 54.186,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Residential Time of Use Off peak",
+            "description": "1am-6am Every day",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "0100",
+                "end_time": "0559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 32.01,
+                "unit_price_gst": 35.211,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Three for Free usage",
+            "description": "10am-1pm every day",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "1000",
+                "end_time": "1259"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 0,
+                "unit_price_gst": 0.0,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Residential Time of Use Shoulder",
+            "description": "1pm-3pm every day",
+            "time_of_use_period": "S1",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "1300",
+                "end_time": "1459"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 22.64,
+                "unit_price_gst": 24.904000000000003,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": 63.71,
+          "paper_bill_fee": 1.75,
+          "payment_processing_fees": [
+            {
+              "feeType": "PPF",
+              "percent": 0.15,
+              "feeTerm": "P"
+            },
+            {
+              "feeType": "PPF",
+              "percent": 0.54,
+              "feeTerm": "P"
+            },
+            {
+              "feeType": "PPF",
+              "percent": 0.32,
+              "feeTerm": "P"
+            }
+          ],
+          "late_payment_fee": 12,
+          "disconnection_fee_move_out": 63.71,
+          "disconnection_fee_non_payment": 63.71,
+          "reconnection_fee": 63.71,
+          "other_fees": [
+            {
+              "amount": 3.3,
+              "feeType": "OF",
+              "feeTerm": "F"
+            }
+          ],
+          "credit_card_payment_fees": [
+            {
+              "feeType": "CCF",
+              "percent": 0.65,
+              "feeTerm": "P"
+            },
+            {
+              "feeType": "CCF",
+              "percent": 0.75,
+              "feeTerm": "P"
+            }
+          ],
+          "membership_fee": null
+        },
+        "membership_fee_annual": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_monthly": 0,
+        "solar_feed_in_rate_r": 2,
+        "payment_options": [
+          "PayPal",
+          "Direct Debit",
+          "Credit Card",
+          "BPay"
+        ],
+        "raw_plan_data_complete": {
+          "main_api_response": {
+            "planId": "AGL979831MRE2",
+            "planData": {
+              "tariffType": "TOU",
+              "contract": [
+                {
+                  "pricingModel": "TOU",
+                  "benefitPeriod": "Ongoing",
+                  "solarFit": [
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "OTHER",
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 2,
+                          "rebate": true,
+                          "measureUnit": "KWH"
+                        }
+                      ],
+                      "rate": 2,
+                      "displayName": "AGL Retailer Feed-in Tariff (exc GST if any)",
+                      "type": "R",
+                      "singleTariffPeriod": "P1Y"
+                    },
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "PREMIUM",
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 44,
+                          "rebate": true,
+                          "measureUnit": "KWH"
+                        }
+                      ],
+                      "rate": 44,
+                      "displayName": "Solar bonus scheme - Premium FiT",
+                      "type": "G",
+                      "singleTariffPeriod": "P1Y"
+                    }
+                  ],
+                  "fee": [
+                    {
+                      "amount": 63.71,
+                      "feeType": "ConnF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 63.71,
+                      "feeType": "DiscoFMO",
+                      "percent": 0,
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 63.71,
+                      "feeType": "DiscoFNP",
+                      "percent": 0,
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 63.71,
+                      "feeType": "RecoF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 12,
+                      "feeType": "LPF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "feeType": "PPF",
+                      "percent": 0.15,
+                      "feeTerm": "P"
+                    },
+                    {
+                      "feeType": "PPF",
+                      "percent": 0.54,
+                      "feeTerm": "P"
+                    },
+                    {
+                      "feeType": "CCF",
+                      "percent": 0.65,
+                      "feeTerm": "P"
+                    },
+                    {
+                      "amount": 1.75,
+                      "feeType": "PBF",
+                      "percent": 0,
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 3.3,
+                      "feeType": "OF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "feeType": "PPF",
+                      "percent": 0.32,
+                      "feeTerm": "P"
+                    },
+                    {
+                      "feeType": "CCF",
+                      "percent": 0.75,
+                      "feeTerm": "P"
+                    }
+                  ],
+                  "termType": "N",
+                  "tariffPeriod": [
+                    {
+                      "touBlock": [
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 49.26,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 32.01,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 0,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 22.64,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        }
+                      ],
+                      "blockPeriod": "P1Y",
+                      "dailySupplyCharge": 116.08
+                    }
+                  ],
+                  "greenCharge": [
+                    {
+                      "chargeType": "W"
+                    },
+                    {
+                      "chargeType": "A"
+                    }
+                  ],
+                  "incentive": [
+                    {
+                      "name": "Three for Free Usage"
+                    }
+                  ],
+                  "fuelType": "E",
+                  "meterType": [
+                    "Type 4",
+                    "Type 4a"
+                  ],
+                  "paymentOption": [
+                    "P",
+                    "DD",
+                    "CC",
+                    "BP"
+                  ]
+                }
+              ],
+              "planName": "Three for Free (No Exit Fee)",
+              "retailerId": "9645",
+              "customerType": "R",
+              "fuelType": "E",
+              "retailerName": "AGL",
+              "planId": "AGL979831MRE2",
+              "retailerCode": "AGL"
+            },
+            "planType": "E#R#AGL979831MRE2",
+            "postcode": 5097,
+            "pcr": {
+              "costs": {
+                "electricity": {
+                  "small": {
+                    "quarterly": {
+                      "noDiscounts": 540,
+                      "allDiscounts": 540,
+                      "guaranteedDiscount": 540
+                    },
+                    "monthly": {
+                      "noDiscounts": 150,
+                      "allDiscounts": 150,
+                      "guaranteedDiscount": 150
+                    },
+                    "yearly": {
+                      "noDiscounts": 1790,
+                      "allDiscounts": 1790,
+                      "guaranteedDiscount": 1790
+                    }
+                  },
+                  "large": {
+                    "quarterly": {
+                      "noDiscounts": 1180,
+                      "allDiscounts": 1180,
+                      "guaranteedDiscount": 1180
+                    },
+                    "monthly": {
+                      "noDiscounts": 330,
+                      "allDiscounts": 330,
+                      "guaranteedDiscount": 330
+                    },
+                    "yearly": {
+                      "noDiscounts": 3960,
+                      "allDiscounts": 3960,
+                      "guaranteedDiscount": 3960
+                    }
+                  },
+                  "medium": {
+                    "quarterly": {
+                      "noDiscounts": 860,
+                      "allDiscounts": 860,
+                      "guaranteedDiscount": 860
+                    },
+                    "monthly": {
+                      "noDiscounts": 240,
+                      "allDiscounts": 240,
+                      "guaranteedDiscount": 240
+                    },
+                    "yearly": {
+                      "noDiscounts": 2870,
+                      "allDiscounts": 2870,
+                      "guaranteedDiscount": 2870
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "detailed_api_response": {
+            "data": {
+              "planData": {
+                "planType": "M",
+                "tariffType": "TOU",
+                "contract": [
+                  {
+                    "pricingModel": "TOU",
+                    "benefitPeriod": "Ongoing",
+                    "coolingOffDays": 10,
+                    "solarFit": [
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "OTHER",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 2,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 2,
+                        "displayName": "AGL Retailer Feed-in Tariff (exc GST if any)",
+                        "description": "AGL Retailer Feed-in Tariff (exc GST if any)",
+                        "type": "R",
+                        "singleTariffPeriod": "P1Y"
+                      },
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "PREMIUM",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 44,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 44,
+                        "displayName": "Solar bonus scheme - Premium FiT",
+                        "description": "Solar bonus scheme - Premium FiT",
+                        "type": "G",
+                        "singleTariffPeriod": "P1Y"
+                      }
+                    ],
+                    "additionalFeeInformation": "Additional fees and charges may apply. Please see the AGL fee schedules at agl.com.au/fees",
+                    "fee": [
+                      {
+                        "description": "May be charged when manually reconnecting or reading your meter when you move into a property or change retailer. Incl GST. Fees may vary.",
+                        "amount": 63.71,
+                        "feeType": "ConnF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "May be charged when manually disconnecting or reading your meter when you move out of a property or change retailer. Incl GST. Fees may vary.",
+                        "amount": 63.71,
+                        "feeType": "DiscoFMO",
+                        "percent": 0,
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "Fee may be charged when manually disconnecting your meter in other circumstances, such as non-payment. Includes GST. Fees may vary.",
+                        "amount": 63.71,
+                        "feeType": "DiscoFNP",
+                        "percent": 0,
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "May be charged when manually reconnecting in other circumstances, such as after disconnection for non-payment. Includes GST. Fees may vary",
+                        "amount": 63.71,
+                        "feeType": "RecoF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "A late payment fee may be charged when full payment has not been received by the bill due date. This amount is not subject to GST",
+                        "amount": 12,
+                        "feeType": "LPF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "The amount is GST inclusive and applies to payments made by Visa debit cards.",
+                        "feeType": "PPF",
+                        "percent": 0.15,
+                        "feeTerm": "P"
+                      },
+                      {
+                        "description": "The amount is GST inclusive and applies to card payments made at Australia Post outlets.",
+                        "feeType": "PPF",
+                        "percent": 0.54,
+                        "feeTerm": "P"
+                      },
+                      {
+                        "description": "The amount is GST inclusive and applies to payments made by Visa credit cards.",
+                        "feeType": "CCF",
+                        "percent": 0.65,
+                        "feeTerm": "P"
+                      },
+                      {
+                        "description": "A paper bill fee may apply for each bill sent by post. Includes GST.",
+                        "amount": 1.75,
+                        "feeType": "PBF",
+                        "percent": 0,
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "An over the counter payment fee may apply for payments made in-person at a Post Office. Includes GST.",
+                        "amount": 3.3,
+                        "feeType": "OF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "The amount is GST inclusive and applies to payments made by Mastercard debit cards.",
+                        "feeType": "PPF",
+                        "percent": 0.32,
+                        "feeTerm": "P"
+                      },
+                      {
+                        "description": "The amount is GST inclusive and applies to payments made by Mastercard credit cards.",
+                        "feeType": "CCF",
+                        "percent": 0.75,
+                        "feeTerm": "P"
+                      }
+                    ],
+                    "termType": "N",
+                    "tariffPeriod": [
+                      {
+                        "touBlock": [
+                          {
+                            "name": "Residential Time of Use peak",
+                            "description": "6am -10am and 3pm -1am every day",
+                            "blockRate": [
+                              {
+                                "unitPrice": 49.26,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "P",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "0600",
+                                "endTime": "0959"
+                              },
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "1500",
+                                "endTime": "2359"
+                              },
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "0000",
+                                "endTime": "0059"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Residential Time of Use Off peak",
+                            "description": "1am-6am Every day",
+                            "blockRate": [
+                              {
+                                "unitPrice": 32.01,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "OP",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "0100",
+                                "endTime": "0559"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Three for Free usage",
+                            "description": "10am-1pm every day",
+                            "blockRate": [
+                              {
+                                "unitPrice": 0,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "S",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "1000",
+                                "endTime": "1259"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Residential Time of Use Shoulder",
+                            "description": "1pm-3pm every day",
+                            "blockRate": [
+                              {
+                                "unitPrice": 22.64,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "S1",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "1300",
+                                "endTime": "1459"
+                              }
+                            ]
+                          }
+                        ],
+                        "endDate": "2020-06-30",
+                        "blockPeriod": "P1Y",
+                        "dailySupplyCharge": 116.08,
+                        "startDate": "2020-07-01"
+                      }
+                    ],
+                    "variation": "This plan also includes variable rates, retail fees and charges, which can change at any time with notice to you. If we vary your rates, we will give you at least 5 business days prior notice of the variation. Other charges may be varied with notice to you.",
+                    "onExpiry": "Your market contract is ongoing. From time to time, AGL reviews its offers and this offer will be reviewed with consideration to AGL's generally available market offers",
+                    "greenCharge": [
+                      {
+                        "name": "Green Power Charge",
+                        "chargeType": "W",
+                        "description": "For $1 per week inc. GST we ensure energy equal to 20% of your usage will be fed into the grid from Accredited GreenPower generators.",
+                        "option": [
+                          {
+                            "pctGreenPower": 20,
+                            "chargeAmount": 1
+                          }
+                        ]
+                      },
+                      {
+                        "name": "Green Power Charge",
+                        "chargeType": "A",
+                        "description": "For 4.4c /kWh inc. GST we ensure energy equal to 100% of your usage will be fed into the grid from Accredited GreenPower generators.",
+                        "option": [
+                          {
+                            "pctGreenPower": 100,
+                            "chargeAmount": 0.044
+                          }
+                        ]
+                      }
+                    ],
+                    "incentive": [
+                      {
+                        "name": "Three for Free Usage",
+                        "description": "Free electricity usage applies from 10am to 1pm every day. Daily supply charges still apply. This rate can change with notice to you."
+                      }
+                    ],
+                    "fuelType": "E",
+                    "terms": "This offer applies to customers with a smart meter and an applicable network tariff. For full eligibility criteria, or for further information about the terms and conditions applicable to this energy offer, please contact AGL on 131 245 or visit agl.com.au.",
+                    "timeDefinition": "LOCAL",
+                    "billFrequency": [
+                      {
+                        "number": 3,
+                        "period": "M"
+                      },
+                      {
+                        "number": 1,
+                        "period": "M"
+                      }
+                    ],
+                    "meterType": [
+                      "Type 4",
+                      "Type 4a"
+                    ],
+                    "paymentOption": [
+                      "P",
+                      "DD",
+                      "CC",
+                      "BP"
+                    ],
+                    "isFixed": false
+                  }
+                ],
+                "planName": "Three for Free (No Exit Fee)",
+                "planStatus": "PUBLISHED",
+                "supplyArea": [
+                  {
+                    "name": "SA Power Networks",
+                    "id": "42"
+                  }
+                ],
+                "batchId": 979923,
+                "retailerId": "9645",
+                "distributor": "SA Power Networks",
+                "genAvailable": true,
+                "tags": [
+                  ";#Time of use;#",
+                  "AGLMKTRE0025119",
+                  "TOUS_INT"
+                ],
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "AGL",
+                "planId": "AGL979831MRE2",
+                "retailerCode": "AGL",
+                "state": "SA",
+                "effectiveDate": "2025-07-23"
+              },
+              "planId": "AGL979831MRE2",
+              "postcodes": {
+                "5097": 1
+              }
+            }
+          }
+        },
+        "raw_plan_data": {
+          "eligibility_restrictions": false,
+          "has_discounts": false,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      },
+      {
         "plan_id": "ALI153095SRE11",
         "plan_name": "Standing Offer - Time of Use (Interval)",
         "retailer_name": "Alinta Energy",
@@ -14630,571 +16081,6 @@
         },
         "raw_plan_data": {
           "eligibility_restrictions": false,
-          "has_discounts": false,
-          "distributor": null,
-          "state": null,
-          "postcode": null
-        }
-      },
-      {
-        "plan_id": "ALI849388MRE3",
-        "plan_name": "HomeDeal Select - Time of Use (Interval)",
-        "retailer_name": "Alinta Energy",
-        "plan_type": "TOU",
-        "tariff_type": "TOU",
-        "monthly_cost": 330,
-        "quarterly_cost": 1200,
-        "annual_cost": 4010,
-        "peak_cost": 54.065000000000005,
-        "shoulder_cost": 30.129,
-        "off_peak_cost": 24.783000000000005,
-        "daily_supply_charge": 124.21200000000002,
-        "detailed_time_blocks": [
-          {
-            "name": "Peak",
-            "description": "All other times",
-            "time_of_use_period": "P",
-            "time_periods": [
-              {
-                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                "start_time": "0600",
-                "end_time": "0959"
-              },
-              {
-                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
-                "start_time": "1500",
-                "end_time": "0059"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 49.15,
-                "unit_price_gst": 54.065000000000005,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          },
-          {
-            "name": "Off-peak",
-            "description": "1am-6am",
-            "time_of_use_period": "OP",
-            "time_periods": [
-              {
-                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                "start_time": "0100",
-                "end_time": "0559"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 27.39,
-                "unit_price_gst": 30.129,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          },
-          {
-            "name": "Shoulder consumption",
-            "description": "10am-3pm",
-            "time_of_use_period": "S",
-            "time_periods": [
-              {
-                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                "start_time": "1000",
-                "end_time": "1459"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 22.53,
-                "unit_price_gst": 24.783000000000005,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          }
-        ],
-        "fees": {
-          "move_in_new_connection_fee": null,
-          "paper_bill_fee": null,
-          "payment_processing_fees": [],
-          "late_payment_fee": null,
-          "disconnection_fee_move_out": 21.23,
-          "disconnection_fee_non_payment": null,
-          "reconnection_fee": 142.63,
-          "other_fees": [],
-          "credit_card_payment_fees": [],
-          "membership_fee": null
-        },
-        "membership_fee_annual": 0,
-        "membership_fee_quarterly": 0,
-        "membership_fee_monthly": 0,
-        "solar_feed_in_rate_r": 3,
-        "payment_options": [
-          "Direct Debit",
-          "Credit Card",
-          "PayPal",
-          "BPay",
-          "Centrepay"
-        ],
-        "raw_plan_data_complete": {
-          "main_api_response": {
-            "planId": "ALI849388MRE3",
-            "planData": {
-              "tariffType": "TOU",
-              "contract": [
-                {
-                  "pricingModel": "TOU",
-                  "solarFit": [
-                    {
-                      "tariffUType": "singleTariff",
-                      "scheme": "OTHER",
-                      "singleTariffRates": [
-                        {
-                          "unitPrice": 44,
-                          "rebate": true,
-                          "measureUnit": "KWH"
-                        }
-                      ],
-                      "rate": 44,
-                      "displayName": "Single Rate Solar FiT",
-                      "type": "G",
-                      "singleTariffPeriod": "P1Y"
-                    },
-                    {
-                      "tariffUType": "singleTariff",
-                      "scheme": "OTHER",
-                      "singleTariffRates": [
-                        {
-                          "unitPrice": 44,
-                          "rebate": true,
-                          "measureUnit": "KWH"
-                        }
-                      ],
-                      "rate": 44,
-                      "displayName": "Single Rate Solar FiT",
-                      "type": "G",
-                      "singleTariffPeriod": "P1Y"
-                    },
-                    {
-                      "tariffUType": "singleTariff",
-                      "scheme": "OTHER",
-                      "singleTariffRates": [
-                        {
-                          "unitPrice": 44,
-                          "rebate": true,
-                          "measureUnit": "KWH"
-                        }
-                      ],
-                      "rate": 44,
-                      "displayName": "Single Rate Solar FiT",
-                      "type": "G",
-                      "singleTariffPeriod": "P1Y"
-                    },
-                    {
-                      "tariffUType": "singleTariff",
-                      "scheme": "OTHER",
-                      "singleTariffRates": [
-                        {
-                          "unitPrice": 3,
-                          "rebate": true,
-                          "measureUnit": "KWH"
-                        }
-                      ],
-                      "rate": 3,
-                      "displayName": "Single Rate Solar FiT",
-                      "type": "R",
-                      "singleTariffPeriod": "P1Y"
-                    }
-                  ],
-                  "fee": [
-                    {
-                      "amount": 63.71,
-                      "feeType": "DiscoF",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "amount": 63.71,
-                      "feeType": "RecoF",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "amount": 142.63,
-                      "feeType": "RecoF",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "amount": 21.23,
-                      "feeType": "DiscoFMO",
-                      "feeTerm": "F"
-                    }
-                  ],
-                  "termType": "N",
-                  "tariffPeriod": [
-                    {
-                      "touBlock": [
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 49.15,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        },
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 27.39,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        },
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 22.53,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        }
-                      ],
-                      "blockPeriod": "P1D",
-                      "dailySupplyCharge": 112.92
-                    }
-                  ],
-                  "fuelType": "E",
-                  "meterType": [
-                    "Type 4",
-                    "Type 5"
-                  ],
-                  "paymentOption": [
-                    "DD",
-                    "CC",
-                    "P",
-                    "BP",
-                    "CP"
-                  ],
-                  "eligibilityRestriction": [
-                    {
-                      "type": "OC",
-                      "description": "This Energy Plan is only available to customers who receive an online sign-up invitation link from Alinta Energy or participating commercial partners.",
-                      "information": "Sign up by invitation only"
-                    }
-                  ]
-                }
-              ],
-              "planName": "HomeDeal Select - Time of Use (Interval)",
-              "retailerId": "9624",
-              "customerType": "R",
-              "fuelType": "E",
-              "retailerName": "Alinta Energy",
-              "planId": "ALI849388MRE3",
-              "retailerCode": "ALI"
-            },
-            "planType": "E#R#ALI849388MRE3",
-            "postcode": 5097,
-            "pcr": {
-              "costs": {
-                "electricity": {
-                  "small": {
-                    "quarterly": {
-                      "noDiscounts": 540,
-                      "allDiscounts": 540,
-                      "guaranteedDiscount": 540
-                    },
-                    "monthly": {
-                      "noDiscounts": 150,
-                      "allDiscounts": 150,
-                      "guaranteedDiscount": 150
-                    },
-                    "yearly": {
-                      "noDiscounts": 1800,
-                      "allDiscounts": 1800,
-                      "guaranteedDiscount": 1800
-                    }
-                  },
-                  "large": {
-                    "quarterly": {
-                      "noDiscounts": 1200,
-                      "allDiscounts": 1200,
-                      "guaranteedDiscount": 1200
-                    },
-                    "monthly": {
-                      "noDiscounts": 330,
-                      "allDiscounts": 330,
-                      "guaranteedDiscount": 330
-                    },
-                    "yearly": {
-                      "noDiscounts": 4010,
-                      "allDiscounts": 4010,
-                      "guaranteedDiscount": 4010
-                    }
-                  },
-                  "medium": {
-                    "quarterly": {
-                      "noDiscounts": 870,
-                      "allDiscounts": 870,
-                      "guaranteedDiscount": 870
-                    },
-                    "monthly": {
-                      "noDiscounts": 240,
-                      "allDiscounts": 240,
-                      "guaranteedDiscount": 240
-                    },
-                    "yearly": {
-                      "noDiscounts": 2900,
-                      "allDiscounts": 2900,
-                      "guaranteedDiscount": 2900
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "detailed_api_response": {
-            "data": {
-              "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
-                "contract": [
-                  {
-                    "pricingModel": "TOU",
-                    "coolingOffDays": 10,
-                    "solarFit": [
-                      {
-                        "tariffUType": "singleTariff",
-                        "scheme": "OTHER",
-                        "singleTariffRates": [
-                          {
-                            "unitPrice": 44,
-                            "rebate": true,
-                            "measureUnit": "KWH"
-                          }
-                        ],
-                        "rate": 44,
-                        "displayName": "Single Rate Solar FiT",
-                        "description": "Customer Group 1 (ex GST)",
-                        "type": "G",
-                        "singleTariffPeriod": "P1Y"
-                      },
-                      {
-                        "tariffUType": "singleTariff",
-                        "scheme": "OTHER",
-                        "singleTariffRates": [
-                          {
-                            "unitPrice": 44,
-                            "rebate": true,
-                            "measureUnit": "KWH"
-                          }
-                        ],
-                        "rate": 44,
-                        "displayName": "Single Rate Solar FiT",
-                        "description": "Customer Group 2 (ex GST)",
-                        "type": "G",
-                        "singleTariffPeriod": "P1Y"
-                      },
-                      {
-                        "tariffUType": "singleTariff",
-                        "scheme": "OTHER",
-                        "singleTariffRates": [
-                          {
-                            "unitPrice": 44,
-                            "rebate": true,
-                            "measureUnit": "KWH"
-                          }
-                        ],
-                        "rate": 44,
-                        "displayName": "Single Rate Solar FiT",
-                        "description": "Customer Group 3 (ex GST)",
-                        "type": "G",
-                        "singleTariffPeriod": "P1Y"
-                      },
-                      {
-                        "tariffUType": "singleTariff",
-                        "scheme": "OTHER",
-                        "singleTariffRates": [
-                          {
-                            "unitPrice": 3,
-                            "rebate": true,
-                            "measureUnit": "KWH"
-                          }
-                        ],
-                        "rate": 3,
-                        "displayName": "Single Rate Solar FiT",
-                        "description": "Retailer FiT (ex GST)",
-                        "type": "R",
-                        "singleTariffPeriod": "P1Y"
-                      }
-                    ],
-                    "additionalFeeInformation": "We reserve the right to and will notify you if we change or impose additional fees or charges in relation to your energy supply. Fees and charges for work undertaken by your Distributor or Metering Provider are outlined at www.alintaenergy.com.au/feesandcharges",
-                    "fee": [
-                      {
-                        "description": "Disconnection fee. Fee may vary, please see additional fee information.",
-                        "amount": 63.71,
-                        "feeType": "DiscoF",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "Reconnection (Power Off - Re-Energisation Required). Fee may vary, please see additional fee information.",
-                        "amount": 63.71,
-                        "feeType": "RecoF",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "After Business Hours Reconnection. Fee may vary, please see additional fee information.",
-                        "amount": 142.63,
-                        "feeType": "RecoF",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "Move-out (Final Read). Fee may vary, please see additional fee information.",
-                        "amount": 21.23,
-                        "feeType": "DiscoFMO",
-                        "feeTerm": "F"
-                      }
-                    ],
-                    "termType": "N",
-                    "tariffPeriod": [
-                      {
-                        "name": "Usage Charges",
-                        "touBlock": [
-                          {
-                            "name": "Peak",
-                            "description": "All other times",
-                            "blockRate": [
-                              {
-                                "unitPrice": 49.15,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "P",
-                            "timeOfUse": [
-                              {
-                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                                "startTime": "0600",
-                                "endTime": "0959"
-                              },
-                              {
-                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
-                                "startTime": "1500",
-                                "endTime": "0059"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Off-peak",
-                            "description": "1am-6am",
-                            "blockRate": [
-                              {
-                                "unitPrice": 27.39,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "OP",
-                            "timeOfUse": [
-                              {
-                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                                "startTime": "0100",
-                                "endTime": "0559"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Shoulder consumption",
-                            "description": "10am-3pm",
-                            "blockRate": [
-                              {
-                                "unitPrice": 22.53,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "S",
-                            "timeOfUse": [
-                              {
-                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                                "startTime": "1000",
-                                "endTime": "1459"
-                              }
-                            ]
-                          }
-                        ],
-                        "endDate": "2020-06-30",
-                        "blockPeriod": "P1D",
-                        "dailySupplyCharge": 112.92,
-                        "startDate": "2020-07-01"
-                      }
-                    ],
-                    "variation": "Alinta Energy's market tariff and feed in tariffs (where applicable) may be varied in accordance with applicable laws. If we change the applicable tariff, we will give you notice of any variations in accordance with applicable laws.",
-                    "fuelType": "E",
-                    "terms": "This offer is only available to customers with an applicable network tariff. Eligibility criteria apply, for terms and conditions see alintaenergy.com.au/termsandconditions or call 13 37 02.",
-                    "timeDefinition": "LOCAL",
-                    "billFrequency": [
-                      {
-                        "number": 1,
-                        "period": "M"
-                      }
-                    ],
-                    "meterType": [
-                      "Type 4",
-                      "Type 5"
-                    ],
-                    "paymentOption": [
-                      "DD",
-                      "CC",
-                      "P",
-                      "BP",
-                      "CP"
-                    ],
-                    "eligibilityRestriction": [
-                      {
-                        "type": "OC",
-                        "description": "This Energy Plan is only available to customers who receive an online sign-up invitation link from Alinta Energy or participating commercial partners.",
-                        "information": "Sign up by invitation only"
-                      }
-                    ],
-                    "isFixed": false
-                  }
-                ],
-                "planName": "HomeDeal Select - Time of Use (Interval)",
-                "planStatus": "PUBLISHED",
-                "supplyArea": [
-                  {
-                    "name": "SA Power Networks",
-                    "id": "42"
-                  }
-                ],
-                "batchId": 936865,
-                "retailerId": "9624",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
-                "tags": [
-                  "L59"
-                ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "Alinta Energy",
-                "planId": "ALI849388MRE3",
-                "retailerCode": "ALI",
-                "state": "SA",
-                "effectiveDate": "2025-07-01"
-              },
-              "planId": "ALI849388MRE3",
-              "postcodes": {
-                "5097": 1
-              }
-            }
-          }
-        },
-        "raw_plan_data": {
-          "eligibility_restrictions": true,
           "has_discounts": false,
           "distributor": null,
           "state": null,
@@ -33991,2334 +34877,6 @@
         }
       },
       {
-        "plan_id": "IOE795483MRE3",
-        "plan_name": "iO Sustainable Home Plan",
-        "retailer_name": "iO Energy Retail Services",
-        "plan_type": "TOU",
-        "tariff_type": "TOU",
-        "monthly_cost": 320,
-        "quarterly_cost": 1150,
-        "annual_cost": 3870,
-        "peak_cost": 74.99999980000001,
-        "shoulder_cost": 50.9999996,
-        "off_peak_cost": 33.0,
-        "daily_supply_charge": 165.0,
-        "detailed_time_blocks": [
-          {
-            "name": "Peak",
-            "description": "Peak time (5:00pm  to 9:00pm All days)",
-            "time_of_use_period": "P",
-            "time_periods": [
-              {
-                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                "start_time": "1700",
-                "end_time": "2059"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 68.181818,
-                "unit_price_gst": 74.99999980000001,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          },
-          {
-            "name": "Off Peak",
-            "description": "Off-peak time (10:00am - 4:00pm All days)",
-            "time_of_use_period": "OP",
-            "time_periods": [
-              {
-                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                "start_time": "1000",
-                "end_time": "1559"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 7.272727,
-                "unit_price_gst": 7.9999997,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          },
-          {
-            "name": "Shoulder 1",
-            "description": "Shoulder 1 time (6:00am - 9:00am All days)",
-            "time_of_use_period": "S1",
-            "time_periods": [
-              {
-                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                "start_time": "600",
-                "end_time": "859"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 46.363636,
-                "unit_price_gst": 50.9999996,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          },
-          {
-            "name": "Shoulder 2",
-            "description": "Shoulder 2 time (9:00pm - 6:00am, 9:00am - 10:00am, 4:00pm - 5:00pm All days)",
-            "time_of_use_period": "S2",
-            "time_periods": [
-              {
-                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                "start_time": "2100",
-                "end_time": "2359"
-              },
-              {
-                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                "start_time": "0",
-                "end_time": "559"
-              },
-              {
-                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                "start_time": "900",
-                "end_time": "959"
-              },
-              {
-                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                "start_time": "1600",
-                "end_time": "1659"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 30,
-                "unit_price_gst": 33.0,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          }
-        ],
-        "fees": {
-          "move_in_new_connection_fee": 60.94,
-          "paper_bill_fee": null,
-          "payment_processing_fees": [],
-          "late_payment_fee": 16,
-          "disconnection_fee_move_out": 60.94,
-          "disconnection_fee_non_payment": null,
-          "reconnection_fee": null,
-          "other_fees": [],
-          "credit_card_payment_fees": [
-            {
-              "feeType": "CCF",
-              "percent": 0.81,
-              "feeTerm": "P"
-            }
-          ],
-          "membership_fee": null
-        },
-        "membership_fee_annual": 0,
-        "membership_fee_quarterly": 0,
-        "membership_fee_monthly": 0,
-        "solar_feed_in_rate_r": 0,
-        "payment_options": [
-          "Direct Debit",
-          "Credit Card",
-          "BPay",
-          "Centrepay"
-        ],
-        "raw_plan_data_complete": {
-          "main_api_response": {
-            "planId": "IOE795483MRE3",
-            "planData": {
-              "tariffType": "TOU",
-              "contract": [
-                {
-                  "pricingModel": "TOU",
-                  "solarFit": [
-                    {
-                      "tariffUType": "timeVaryingTariffs",
-                      "scheme": "OTHER",
-                      "endDate": "2024-12-31",
-                      "rate": 33,
-                      "displayName": "TOU Rate Solar FiT",
-                      "timeVaryingTariffs": [
-                        {
-                          "type": "PEAK",
-                          "timeVariations": [
-                            {
-                              "days": "SUN|MON|TUE|WED|THU|FRI|SAT|PUBLIC_HOLIDAYS",
-                              "startTime": "1800",
-                              "endTime": "2059"
-                            }
-                          ],
-                          "rates": [
-                            {
-                              "unitPrice": 33,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        }
-                      ],
-                      "type": "R",
-                      "startDate": "2024-01-01"
-                    },
-                    {
-                      "tariffUType": "timeVaryingTariffs",
-                      "scheme": "OTHER",
-                      "endDate": "2024-12-31",
-                      "rate": 0,
-                      "displayName": "TOU Rate Solar FiT",
-                      "timeVaryingTariffs": [
-                        {
-                          "type": "OFF_PEAK",
-                          "timeVariations": [
-                            {
-                              "days": "SUN|MON|TUE|WED|THU|FRI|SAT|PUBLIC_HOLIDAYS",
-                              "startTime": "1000",
-                              "endTime": "1759"
-                            }
-                          ],
-                          "rates": [
-                            {
-                              "unitPrice": 0,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        }
-                      ],
-                      "type": "R",
-                      "startDate": "2024-01-01"
-                    },
-                    {
-                      "tariffUType": "timeVaryingTariffs",
-                      "scheme": "OTHER",
-                      "endDate": "2024-12-31",
-                      "rate": 0,
-                      "displayName": "TOU Rate Solar FiT",
-                      "timeVaryingTariffs": [
-                        {
-                          "type": "SHOULDER",
-                          "timeVariations": [
-                            {
-                              "days": "SUN|MON|TUE|WED|THU|FRI|SAT|PUBLIC_HOLIDAYS",
-                              "startTime": "2100",
-                              "endTime": "0959"
-                            }
-                          ],
-                          "rates": [
-                            {
-                              "unitPrice": 0,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        }
-                      ],
-                      "type": "R",
-                      "startDate": "2024-01-01"
-                    }
-                  ],
-                  "fee": [
-                    {
-                      "amount": 60.94,
-                      "feeType": "ConnF",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "amount": 10,
-                      "feeType": "DDF",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "amount": 16,
-                      "feeType": "LPF",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "amount": 60.94,
-                      "feeType": "DiscoFMO",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "feeType": "CCF",
-                      "percent": 0.81,
-                      "feeTerm": "P"
-                    }
-                  ],
-                  "termType": "N",
-                  "tariffPeriod": [
-                    {
-                      "touBlock": [
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 68.181818,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        },
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 7.272727,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        },
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 46.363636,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        },
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 30,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        }
-                      ],
-                      "dailySupplyCharge": 150
-                    }
-                  ],
-                  "fuelType": "E",
-                  "meterType": [
-                    "Type 4",
-                    "Type 4a"
-                  ],
-                  "paymentOption": [
-                    "DD",
-                    "CC",
-                    "BP",
-                    "CP"
-                  ]
-                }
-              ],
-              "planName": "iO Sustainable Home Plan",
-              "retailerId": "25000",
-              "customerType": "R",
-              "fuelType": "E",
-              "retailerName": "iO Energy Retail Services",
-              "planId": "IOE795483MRE3",
-              "retailerCode": "IOE"
-            },
-            "planType": "E#R#IOE795483MRE3",
-            "postcode": 5097,
-            "pcr": {
-              "costs": {
-                "electricity": {
-                  "small": {
-                    "quarterly": {
-                      "noDiscounts": 550,
-                      "allDiscounts": 550,
-                      "guaranteedDiscount": 550
-                    },
-                    "monthly": {
-                      "noDiscounts": 150,
-                      "allDiscounts": 150,
-                      "guaranteedDiscount": 150
-                    },
-                    "yearly": {
-                      "noDiscounts": 1840,
-                      "allDiscounts": 1840,
-                      "guaranteedDiscount": 1840
-                    }
-                  },
-                  "large": {
-                    "quarterly": {
-                      "noDiscounts": 1150,
-                      "allDiscounts": 1150,
-                      "guaranteedDiscount": 1150
-                    },
-                    "monthly": {
-                      "noDiscounts": 320,
-                      "allDiscounts": 320,
-                      "guaranteedDiscount": 320
-                    },
-                    "yearly": {
-                      "noDiscounts": 3870,
-                      "allDiscounts": 3870,
-                      "guaranteedDiscount": 3870
-                    }
-                  },
-                  "medium": {
-                    "quarterly": {
-                      "noDiscounts": 850,
-                      "allDiscounts": 850,
-                      "guaranteedDiscount": 850
-                    },
-                    "monthly": {
-                      "noDiscounts": 240,
-                      "allDiscounts": 240,
-                      "guaranteedDiscount": 240
-                    },
-                    "yearly": {
-                      "noDiscounts": 2840,
-                      "allDiscounts": 2840,
-                      "guaranteedDiscount": 2840
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "detailed_api_response": {
-            "data": {
-              "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
-                "contract": [
-                  {
-                    "pricingModel": "TOU",
-                    "coolingOffDays": 10,
-                    "solarFit": [
-                      {
-                        "tariffUType": "timeVaryingTariffs",
-                        "scheme": "OTHER",
-                        "endDate": "2024-12-31",
-                        "rate": 33,
-                        "displayName": "TOU Rate Solar FiT",
-                        "description": "Peak time (6:00pm - 8:59pm)",
-                        "timeVaryingTariffs": [
-                          {
-                            "type": "PEAK",
-                            "timeVariations": [
-                              {
-                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT|PUBLIC_HOLIDAYS",
-                                "startTime": "1800",
-                                "endTime": "2059"
-                              }
-                            ],
-                            "rates": [
-                              {
-                                "unitPrice": 33,
-                                "measureUnit": "KWH"
-                              }
-                            ]
-                          }
-                        ],
-                        "type": "R",
-                        "startDate": "2024-01-01"
-                      },
-                      {
-                        "tariffUType": "timeVaryingTariffs",
-                        "scheme": "OTHER",
-                        "endDate": "2024-12-31",
-                        "rate": 0,
-                        "displayName": "TOU Rate Solar FiT",
-                        "description": "Off-peak time (10:00am - 5:59pm)",
-                        "timeVaryingTariffs": [
-                          {
-                            "type": "OFF_PEAK",
-                            "timeVariations": [
-                              {
-                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT|PUBLIC_HOLIDAYS",
-                                "startTime": "1000",
-                                "endTime": "1759"
-                              }
-                            ],
-                            "rates": [
-                              {
-                                "unitPrice": 0,
-                                "measureUnit": "KWH"
-                              }
-                            ]
-                          }
-                        ],
-                        "type": "R",
-                        "startDate": "2024-01-01"
-                      },
-                      {
-                        "tariffUType": "timeVaryingTariffs",
-                        "scheme": "OTHER",
-                        "endDate": "2024-12-31",
-                        "rate": 0,
-                        "displayName": "TOU Rate Solar FiT",
-                        "description": "Shoulder time (9:00pm - 9:59am)",
-                        "timeVaryingTariffs": [
-                          {
-                            "type": "SHOULDER",
-                            "timeVariations": [
-                              {
-                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT|PUBLIC_HOLIDAYS",
-                                "startTime": "2100",
-                                "endTime": "0959"
-                              }
-                            ],
-                            "rates": [
-                              {
-                                "unitPrice": 0,
-                                "measureUnit": "KWH"
-                              }
-                            ]
-                          }
-                        ],
-                        "type": "R",
-                        "startDate": "2024-01-01"
-                      }
-                    ],
-                    "additionalFeeInformation": "For more information on these fees and other fees, please visit energylocals.com.au/fees.",
-                    "fee": [
-                      {
-                        "description": "May be charged when you move into a property or change retailer. Actual fee may vary.",
-                        "amount": 60.94,
-                        "feeType": "ConnF",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "Charged when a direct debit payment has dishonoured or reversed. This charge is not subject to GST.",
-                        "amount": 10,
-                        "feeType": "DDF",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "Fee applies for each bill that's paid after the due date. This charge is not subject to GST.",
-                        "amount": 16,
-                        "feeType": "LPF",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "May be charged when you move out and require a final meter read. Actual fee may vary.",
-                        "amount": 60.94,
-                        "feeType": "DiscoFMO",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "We accept Visa and Mastercard payments via energylocals.com.au/pay-by-card. Debit card transactions are subject to a 0.46% fee, and credit card payments incur a 0.81% fee. Credit and debit card processing fees are waived for Direct Debit payments.",
-                        "feeType": "CCF",
-                        "percent": 0.81,
-                        "feeTerm": "P"
-                      }
-                    ],
-                    "termType": "N",
-                    "tariffPeriod": [
-                      {
-                        "touBlock": [
-                          {
-                            "name": "Peak",
-                            "description": "Peak time (5:00pm  to 9:00pm All days)",
-                            "blockRate": [
-                              {
-                                "unitPrice": 68.181818,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "P",
-                            "timeOfUse": [
-                              {
-                                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                                "startTime": "1700",
-                                "endTime": "2059"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Off Peak",
-                            "description": "Off-peak time (10:00am - 4:00pm All days)",
-                            "blockRate": [
-                              {
-                                "unitPrice": 7.272727,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "OP",
-                            "timeOfUse": [
-                              {
-                                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                                "startTime": "1000",
-                                "endTime": "1559"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Shoulder 1",
-                            "description": "Shoulder 1 time (6:00am - 9:00am All days)",
-                            "blockRate": [
-                              {
-                                "unitPrice": 46.363636,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "S1",
-                            "timeOfUse": [
-                              {
-                                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                                "startTime": "600",
-                                "endTime": "859"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Shoulder 2",
-                            "description": "Shoulder 2 time (9:00pm - 6:00am, 9:00am - 10:00am, 4:00pm - 5:00pm All days)",
-                            "blockRate": [
-                              {
-                                "unitPrice": 30,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "S2",
-                            "timeOfUse": [
-                              {
-                                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                                "startTime": "2100",
-                                "endTime": "2359"
-                              },
-                              {
-                                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                                "startTime": "0",
-                                "endTime": "559"
-                              },
-                              {
-                                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                                "startTime": "900",
-                                "endTime": "959"
-                              },
-                              {
-                                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                                "startTime": "1600",
-                                "endTime": "1659"
-                              }
-                            ]
-                          }
-                        ],
-                        "endDate": "2024-12-31",
-                        "dailySupplyCharge": 150,
-                        "startDate": "2024-01-01"
-                      }
-                    ],
-                    "variation": "Our energy prices may vary due to changes in the market and economic conditions. By entering into this Contract, you agree that we may vary your rates. You will be notified of any price change in writing at least 5 business days before effective date.",
-                    "onExpiry": "No lock in contracts or exit fees.",
-                    "fuelType": "E",
-                    "terms": "Prices may vary in accordance with terms and conditions. For full terms and conditions, visit https://www.ioenergy.com.au/ or call 1300 313 463",
-                    "timeDefinition": "LOCAL",
-                    "billFrequency": [
-                      {
-                        "number": 3,
-                        "period": "M"
-                      },
-                      {
-                        "number": 1,
-                        "period": "M"
-                      }
-                    ],
-                    "meterType": [
-                      "Type 4",
-                      "Type 4a"
-                    ],
-                    "paymentOption": [
-                      "DD",
-                      "CC",
-                      "BP",
-                      "CP"
-                    ],
-                    "isFixed": false
-                  }
-                ],
-                "planName": "iO Sustainable Home Plan",
-                "planStatus": "PUBLISHED",
-                "supplyArea": [
-                  {
-                    "name": "SA Power Networks",
-                    "id": "42"
-                  }
-                ],
-                "batchId": 813578,
-                "retailerId": "25000",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
-                "tags": [
-                  "iO Energy Retail Services",
-                  "IO_RES_SH",
-                  "IO_SH_4R_O"
-                ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "iO Energy Retail Services",
-                "planId": "IOE795483MRE3",
-                "retailerCode": "IOE",
-                "state": "SA",
-                "effectiveDate": "2024-08-04"
-              },
-              "planId": "IOE795483MRE3",
-              "postcodes": {
-                "5097": 1
-              }
-            }
-          }
-        },
-        "raw_plan_data": {
-          "eligibility_restrictions": false,
-          "has_discounts": false,
-          "distributor": null,
-          "state": null,
-          "postcode": null
-        }
-      },
-      {
-        "plan_id": "IOE795484MRE3",
-        "plan_name": "iO Sustainable Home Plan",
-        "retailer_name": "iO Energy Retail Services",
-        "plan_type": "TOU",
-        "tariff_type": "TOU",
-        "monthly_cost": 330,
-        "quarterly_cost": 1180,
-        "annual_cost": 3950,
-        "peak_cost": 52.999999800000005,
-        "shoulder_cost": 27.9999995,
-        "off_peak_cost": 12.000000100000001,
-        "daily_supply_charge": 165.0,
-        "detailed_time_blocks": [
-          {
-            "name": "Peak",
-            "description": "Peak time (6:00am - 10:00am, 3:00pm - 1:00am All days)",
-            "time_of_use_period": "P",
-            "time_periods": [
-              {
-                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                "start_time": "600",
-                "end_time": "959"
-              },
-              {
-                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                "start_time": "1500",
-                "end_time": "2359"
-              },
-              {
-                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                "start_time": "0",
-                "end_time": "59"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 48.181818,
-                "unit_price_gst": 52.999999800000005,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          },
-          {
-            "name": "Off Peak",
-            "description": "Off-peak time (1:00am - 6:00am All days)",
-            "time_of_use_period": "OP",
-            "time_periods": [
-              {
-                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                "start_time": "100",
-                "end_time": "559"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 25.454545,
-                "unit_price_gst": 27.9999995,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          },
-          {
-            "name": "Shoulder",
-            "description": "Shoulder time (10:00am - 3:00pm All days)",
-            "time_of_use_period": "S",
-            "time_periods": [
-              {
-                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                "start_time": "1000",
-                "end_time": "1459"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 10.909091,
-                "unit_price_gst": 12.000000100000001,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          }
-        ],
-        "fees": {
-          "move_in_new_connection_fee": 60.94,
-          "paper_bill_fee": null,
-          "payment_processing_fees": [],
-          "late_payment_fee": 16,
-          "disconnection_fee_move_out": 60.94,
-          "disconnection_fee_non_payment": null,
-          "reconnection_fee": null,
-          "other_fees": [],
-          "credit_card_payment_fees": [
-            {
-              "feeType": "CCF",
-              "percent": 0.81,
-              "feeTerm": "P"
-            }
-          ],
-          "membership_fee": null
-        },
-        "membership_fee_annual": 0,
-        "membership_fee_quarterly": 0,
-        "membership_fee_monthly": 0,
-        "solar_feed_in_rate_r": 0,
-        "payment_options": [
-          "Direct Debit",
-          "Credit Card",
-          "BPay",
-          "Centrepay"
-        ],
-        "raw_plan_data_complete": {
-          "main_api_response": {
-            "planId": "IOE795484MRE3",
-            "planData": {
-              "tariffType": "TOU",
-              "contract": [
-                {
-                  "pricingModel": "TOU",
-                  "solarFit": [
-                    {
-                      "tariffUType": "timeVaryingTariffs",
-                      "scheme": "OTHER",
-                      "endDate": "2024-12-31",
-                      "rate": 33,
-                      "displayName": "TOU Rate Solar FiT",
-                      "timeVaryingTariffs": [
-                        {
-                          "type": "PEAK",
-                          "timeVariations": [
-                            {
-                              "days": "SUN|MON|TUE|WED|THU|FRI|SAT|PUBLIC_HOLIDAYS",
-                              "startTime": "1800",
-                              "endTime": "2059"
-                            }
-                          ],
-                          "rates": [
-                            {
-                              "unitPrice": 33,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        }
-                      ],
-                      "type": "R",
-                      "startDate": "2024-01-01"
-                    },
-                    {
-                      "tariffUType": "timeVaryingTariffs",
-                      "scheme": "OTHER",
-                      "endDate": "2024-12-31",
-                      "rate": 0,
-                      "displayName": "TOU Rate Solar FiT",
-                      "timeVaryingTariffs": [
-                        {
-                          "type": "OFF_PEAK",
-                          "timeVariations": [
-                            {
-                              "days": "SUN|MON|TUE|WED|THU|FRI|SAT|PUBLIC_HOLIDAYS",
-                              "startTime": "1000",
-                              "endTime": "1759"
-                            }
-                          ],
-                          "rates": [
-                            {
-                              "unitPrice": 0,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        }
-                      ],
-                      "type": "R",
-                      "startDate": "2024-01-01"
-                    },
-                    {
-                      "tariffUType": "timeVaryingTariffs",
-                      "scheme": "OTHER",
-                      "endDate": "2024-12-31",
-                      "rate": 0,
-                      "displayName": "TOU Rate Solar FiT",
-                      "timeVaryingTariffs": [
-                        {
-                          "type": "SHOULDER",
-                          "timeVariations": [
-                            {
-                              "days": "SUN|MON|TUE|WED|THU|FRI|SAT|PUBLIC_HOLIDAYS",
-                              "startTime": "2100",
-                              "endTime": "0959"
-                            }
-                          ],
-                          "rates": [
-                            {
-                              "unitPrice": 0,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        }
-                      ],
-                      "type": "R",
-                      "startDate": "2024-01-01"
-                    }
-                  ],
-                  "fee": [
-                    {
-                      "amount": 60.94,
-                      "feeType": "ConnF",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "amount": 10,
-                      "feeType": "DDF",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "amount": 16,
-                      "feeType": "LPF",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "amount": 60.94,
-                      "feeType": "DiscoFMO",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "feeType": "CCF",
-                      "percent": 0.81,
-                      "feeTerm": "P"
-                    }
-                  ],
-                  "termType": "N",
-                  "tariffPeriod": [
-                    {
-                      "touBlock": [
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 48.181818,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        },
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 25.454545,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        },
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 10.909091,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        }
-                      ],
-                      "dailySupplyCharge": 150
-                    }
-                  ],
-                  "fuelType": "E",
-                  "meterType": [
-                    "Type 4",
-                    "Type 4a"
-                  ],
-                  "paymentOption": [
-                    "DD",
-                    "CC",
-                    "BP",
-                    "CP"
-                  ]
-                }
-              ],
-              "planName": "iO Sustainable Home Plan",
-              "retailerId": "25000",
-              "customerType": "R",
-              "fuelType": "E",
-              "retailerName": "iO Energy Retail Services",
-              "planId": "IOE795484MRE3",
-              "retailerCode": "IOE"
-            },
-            "planType": "E#R#IOE795484MRE3",
-            "postcode": 5097,
-            "pcr": {
-              "costs": {
-                "electricity": {
-                  "small": {
-                    "quarterly": {
-                      "noDiscounts": 560,
-                      "allDiscounts": 560,
-                      "guaranteedDiscount": 560
-                    },
-                    "monthly": {
-                      "noDiscounts": 160,
-                      "allDiscounts": 160,
-                      "guaranteedDiscount": 160
-                    },
-                    "yearly": {
-                      "noDiscounts": 1870,
-                      "allDiscounts": 1870,
-                      "guaranteedDiscount": 1870
-                    }
-                  },
-                  "large": {
-                    "quarterly": {
-                      "noDiscounts": 1180,
-                      "allDiscounts": 1180,
-                      "guaranteedDiscount": 1180
-                    },
-                    "monthly": {
-                      "noDiscounts": 330,
-                      "allDiscounts": 330,
-                      "guaranteedDiscount": 330
-                    },
-                    "yearly": {
-                      "noDiscounts": 3950,
-                      "allDiscounts": 3950,
-                      "guaranteedDiscount": 3950
-                    }
-                  },
-                  "medium": {
-                    "quarterly": {
-                      "noDiscounts": 870,
-                      "allDiscounts": 870,
-                      "guaranteedDiscount": 870
-                    },
-                    "monthly": {
-                      "noDiscounts": 240,
-                      "allDiscounts": 240,
-                      "guaranteedDiscount": 240
-                    },
-                    "yearly": {
-                      "noDiscounts": 2900,
-                      "allDiscounts": 2900,
-                      "guaranteedDiscount": 2900
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "detailed_api_response": {
-            "data": {
-              "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
-                "contract": [
-                  {
-                    "pricingModel": "TOU",
-                    "coolingOffDays": 10,
-                    "solarFit": [
-                      {
-                        "tariffUType": "timeVaryingTariffs",
-                        "scheme": "OTHER",
-                        "endDate": "2024-12-31",
-                        "rate": 33,
-                        "displayName": "TOU Rate Solar FiT",
-                        "description": "Peak time (6:00pm - 8:59pm)",
-                        "timeVaryingTariffs": [
-                          {
-                            "type": "PEAK",
-                            "timeVariations": [
-                              {
-                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT|PUBLIC_HOLIDAYS",
-                                "startTime": "1800",
-                                "endTime": "2059"
-                              }
-                            ],
-                            "rates": [
-                              {
-                                "unitPrice": 33,
-                                "measureUnit": "KWH"
-                              }
-                            ]
-                          }
-                        ],
-                        "type": "R",
-                        "startDate": "2024-01-01"
-                      },
-                      {
-                        "tariffUType": "timeVaryingTariffs",
-                        "scheme": "OTHER",
-                        "endDate": "2024-12-31",
-                        "rate": 0,
-                        "displayName": "TOU Rate Solar FiT",
-                        "description": "Off-peak time (10:00am - 5:59pm)",
-                        "timeVaryingTariffs": [
-                          {
-                            "type": "OFF_PEAK",
-                            "timeVariations": [
-                              {
-                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT|PUBLIC_HOLIDAYS",
-                                "startTime": "1000",
-                                "endTime": "1759"
-                              }
-                            ],
-                            "rates": [
-                              {
-                                "unitPrice": 0,
-                                "measureUnit": "KWH"
-                              }
-                            ]
-                          }
-                        ],
-                        "type": "R",
-                        "startDate": "2024-01-01"
-                      },
-                      {
-                        "tariffUType": "timeVaryingTariffs",
-                        "scheme": "OTHER",
-                        "endDate": "2024-12-31",
-                        "rate": 0,
-                        "displayName": "TOU Rate Solar FiT",
-                        "description": "Shoulder time (9:00pm - 9:59am)",
-                        "timeVaryingTariffs": [
-                          {
-                            "type": "SHOULDER",
-                            "timeVariations": [
-                              {
-                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT|PUBLIC_HOLIDAYS",
-                                "startTime": "2100",
-                                "endTime": "0959"
-                              }
-                            ],
-                            "rates": [
-                              {
-                                "unitPrice": 0,
-                                "measureUnit": "KWH"
-                              }
-                            ]
-                          }
-                        ],
-                        "type": "R",
-                        "startDate": "2024-01-01"
-                      }
-                    ],
-                    "additionalFeeInformation": "For more information on these fees and other fees, please visit energylocals.com.au/fees.",
-                    "fee": [
-                      {
-                        "description": "May be charged when you move into a property or change retailer. Actual fee may vary.",
-                        "amount": 60.94,
-                        "feeType": "ConnF",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "Charged when a direct debit payment has dishonoured or reversed. This charge is not subject to GST.",
-                        "amount": 10,
-                        "feeType": "DDF",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "Fee applies for each bill that's paid after the due date. This charge is not subject to GST.",
-                        "amount": 16,
-                        "feeType": "LPF",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "May be charged when you move out and require a final meter read. Actual fee may vary.",
-                        "amount": 60.94,
-                        "feeType": "DiscoFMO",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "We accept Visa and Mastercard payments via energylocals.com.au/pay-by-card. Debit card transactions are subject to a 0.46% fee, and credit card payments incur a 0.81% fee. Credit and debit card processing fees are waived for Direct Debit payments.",
-                        "feeType": "CCF",
-                        "percent": 0.81,
-                        "feeTerm": "P"
-                      }
-                    ],
-                    "termType": "N",
-                    "tariffPeriod": [
-                      {
-                        "touBlock": [
-                          {
-                            "name": "Peak",
-                            "description": "Peak time (6:00am - 10:00am, 3:00pm - 1:00am All days)",
-                            "blockRate": [
-                              {
-                                "unitPrice": 48.181818,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "P",
-                            "timeOfUse": [
-                              {
-                                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                                "startTime": "600",
-                                "endTime": "959"
-                              },
-                              {
-                                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                                "startTime": "1500",
-                                "endTime": "2359"
-                              },
-                              {
-                                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                                "startTime": "0",
-                                "endTime": "59"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Off Peak",
-                            "description": "Off-peak time (1:00am - 6:00am All days)",
-                            "blockRate": [
-                              {
-                                "unitPrice": 25.454545,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "OP",
-                            "timeOfUse": [
-                              {
-                                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                                "startTime": "100",
-                                "endTime": "559"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Shoulder",
-                            "description": "Shoulder time (10:00am - 3:00pm All days)",
-                            "blockRate": [
-                              {
-                                "unitPrice": 10.909091,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "S",
-                            "timeOfUse": [
-                              {
-                                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                                "startTime": "1000",
-                                "endTime": "1459"
-                              }
-                            ]
-                          }
-                        ],
-                        "endDate": "2024-12-31",
-                        "dailySupplyCharge": 150,
-                        "startDate": "2024-01-01"
-                      }
-                    ],
-                    "variation": "Our energy prices may vary due to changes in the market and economic conditions. By entering into this Contract, you agree that we may vary your rates. You will be notified of any price change in writing at least 5 business days before effective date.",
-                    "onExpiry": "No lock in contracts or exit fees.",
-                    "fuelType": "E",
-                    "terms": "Prices may vary in accordance with terms and conditions. For full terms and conditions, visit https://www.ioenergy.com.au/ or call 1300 313 463",
-                    "timeDefinition": "LOCAL",
-                    "billFrequency": [
-                      {
-                        "number": 3,
-                        "period": "M"
-                      },
-                      {
-                        "number": 1,
-                        "period": "M"
-                      }
-                    ],
-                    "meterType": [
-                      "Type 4",
-                      "Type 4a"
-                    ],
-                    "paymentOption": [
-                      "DD",
-                      "CC",
-                      "BP",
-                      "CP"
-                    ],
-                    "isFixed": false
-                  }
-                ],
-                "planName": "iO Sustainable Home Plan",
-                "planStatus": "PUBLISHED",
-                "supplyArea": [
-                  {
-                    "name": "SA Power Networks",
-                    "id": "42"
-                  }
-                ],
-                "batchId": 813578,
-                "retailerId": "25000",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
-                "tags": [
-                  "iO Energy Retail Services",
-                  "IO_RES_SH",
-                  "IO_SH_3R_O"
-                ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "iO Energy Retail Services",
-                "planId": "IOE795484MRE3",
-                "retailerCode": "IOE",
-                "state": "SA",
-                "effectiveDate": "2024-08-04"
-              },
-              "planId": "IOE795484MRE3",
-              "postcodes": {
-                "5097": 1
-              }
-            }
-          }
-        },
-        "raw_plan_data": {
-          "eligibility_restrictions": false,
-          "has_discounts": false,
-          "distributor": null,
-          "state": null,
-          "postcode": null
-        }
-      },
-      {
-        "plan_id": "IOE813569MRE1",
-        "plan_name": "iO Sustainable Home Plan",
-        "retailer_name": "iO Energy Retail Services",
-        "plan_type": "TOU",
-        "tariff_type": "TOU",
-        "monthly_cost": 290,
-        "quarterly_cost": 1040,
-        "annual_cost": 3500,
-        "peak_cost": 41.800000000000004,
-        "shoulder_cost": 29.480000000000004,
-        "off_peak_cost": 25.3,
-        "daily_supply_charge": 165.0,
-        "detailed_time_blocks": [
-          {
-            "name": "Peak",
-            "description": "Peak time (6:00am - 10:00am, 3:00pm - 1:00am All days)",
-            "time_of_use_period": "P",
-            "time_periods": [
-              {
-                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                "start_time": "600",
-                "end_time": "959"
-              },
-              {
-                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                "start_time": "1500",
-                "end_time": "2359"
-              },
-              {
-                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                "start_time": "0",
-                "end_time": "59"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 38,
-                "unit_price_gst": 41.800000000000004,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          },
-          {
-            "name": "Off Peak",
-            "description": "Off-peak time (1:00am - 6:00am All days)",
-            "time_of_use_period": "OP",
-            "time_periods": [
-              {
-                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                "start_time": "100",
-                "end_time": "559"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 26.8,
-                "unit_price_gst": 29.480000000000004,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          },
-          {
-            "name": "Shoulder",
-            "description": "Shoulder time (10:00am - 3:00pm All days)",
-            "time_of_use_period": "S",
-            "time_periods": [
-              {
-                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                "start_time": "1000",
-                "end_time": "1459"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 23,
-                "unit_price_gst": 25.3,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          }
-        ],
-        "fees": {
-          "move_in_new_connection_fee": 60.94,
-          "paper_bill_fee": null,
-          "payment_processing_fees": [],
-          "late_payment_fee": 16,
-          "disconnection_fee_move_out": 60.94,
-          "disconnection_fee_non_payment": null,
-          "reconnection_fee": null,
-          "other_fees": [],
-          "credit_card_payment_fees": [
-            {
-              "feeType": "CCF",
-              "percent": 0.81,
-              "feeTerm": "P"
-            }
-          ],
-          "membership_fee": null
-        },
-        "membership_fee_annual": 0,
-        "membership_fee_quarterly": 0,
-        "membership_fee_monthly": 0,
-        "solar_feed_in_rate_r": 2,
-        "payment_options": [
-          "Direct Debit",
-          "Credit Card",
-          "BPay",
-          "Centrepay"
-        ],
-        "raw_plan_data_complete": {
-          "main_api_response": {
-            "planId": "IOE813569MRE1",
-            "planData": {
-              "tariffType": "TOU",
-              "contract": [
-                {
-                  "pricingModel": "TOU",
-                  "solarFit": [
-                    {
-                      "tariffUType": "singleTariff",
-                      "scheme": "OTHER",
-                      "endDate": "2024-12-31",
-                      "singleTariffRates": [
-                        {
-                          "unitPrice": 2,
-                          "measureUnit": "KWH"
-                        }
-                      ],
-                      "rate": 2,
-                      "displayName": "Retailer Feed-in Tariff (inc. GST, if any)",
-                      "type": "R",
-                      "startDate": "2024-01-01"
-                    }
-                  ],
-                  "fee": [
-                    {
-                      "amount": 60.94,
-                      "feeType": "ConnF",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "amount": 10,
-                      "feeType": "DDF",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "amount": 16,
-                      "feeType": "LPF",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "amount": 60.94,
-                      "feeType": "DiscoFMO",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "feeType": "CCF",
-                      "percent": 0.81,
-                      "feeTerm": "P"
-                    }
-                  ],
-                  "termType": "N",
-                  "tariffPeriod": [
-                    {
-                      "touBlock": [
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 38,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        },
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 26.8,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        },
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 23,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        }
-                      ],
-                      "dailySupplyCharge": 150
-                    }
-                  ],
-                  "fuelType": "E",
-                  "meterType": [
-                    "Type 4",
-                    "Type 4a"
-                  ],
-                  "paymentOption": [
-                    "DD",
-                    "CC",
-                    "BP",
-                    "CP"
-                  ]
-                }
-              ],
-              "planName": "iO Sustainable Home Plan",
-              "retailerId": "25000",
-              "customerType": "R",
-              "fuelType": "E",
-              "retailerName": "iO Energy Retail Services",
-              "planId": "IOE813569MRE1",
-              "retailerCode": "IOE"
-            },
-            "planType": "E#R#IOE813569MRE1",
-            "postcode": 5097,
-            "pcr": {
-              "costs": {
-                "electricity": {
-                  "small": {
-                    "quarterly": {
-                      "noDiscounts": 510,
-                      "allDiscounts": 510,
-                      "guaranteedDiscount": 510
-                    },
-                    "monthly": {
-                      "noDiscounts": 140,
-                      "allDiscounts": 140,
-                      "guaranteedDiscount": 140
-                    },
-                    "yearly": {
-                      "noDiscounts": 1700,
-                      "allDiscounts": 1700,
-                      "guaranteedDiscount": 1700
-                    }
-                  },
-                  "large": {
-                    "quarterly": {
-                      "noDiscounts": 1040,
-                      "allDiscounts": 1040,
-                      "guaranteedDiscount": 1040
-                    },
-                    "monthly": {
-                      "noDiscounts": 290,
-                      "allDiscounts": 290,
-                      "guaranteedDiscount": 290
-                    },
-                    "yearly": {
-                      "noDiscounts": 3500,
-                      "allDiscounts": 3500,
-                      "guaranteedDiscount": 3500
-                    }
-                  },
-                  "medium": {
-                    "quarterly": {
-                      "noDiscounts": 770,
-                      "allDiscounts": 770,
-                      "guaranteedDiscount": 770
-                    },
-                    "monthly": {
-                      "noDiscounts": 220,
-                      "allDiscounts": 220,
-                      "guaranteedDiscount": 220
-                    },
-                    "yearly": {
-                      "noDiscounts": 2590,
-                      "allDiscounts": 2590,
-                      "guaranteedDiscount": 2590
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "detailed_api_response": {
-            "data": {
-              "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
-                "contract": [
-                  {
-                    "pricingModel": "TOU",
-                    "coolingOffDays": 10,
-                    "solarFit": [
-                      {
-                        "tariffUType": "singleTariff",
-                        "scheme": "OTHER",
-                        "endDate": "2024-12-31",
-                        "singleTariffRates": [
-                          {
-                            "unitPrice": 2,
-                            "measureUnit": "KWH"
-                          }
-                        ],
-                        "rate": 2,
-                        "displayName": "Retailer Feed-in Tariff (inc. GST, if any)",
-                        "description": "Retailer Feed-in Tariff (inc. GST, if any)",
-                        "type": "R",
-                        "startDate": "2024-01-01"
-                      }
-                    ],
-                    "additionalFeeInformation": "For more information on these fees and other fees, please visit energylocals.com.au/fees.",
-                    "fee": [
-                      {
-                        "description": "May be charged when you move into a property or change retailer. Actual fee may vary.",
-                        "amount": 60.94,
-                        "feeType": "ConnF",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "Charged when a direct debit payment has dishonoured or reversed. This charge is not subject to GST.",
-                        "amount": 10,
-                        "feeType": "DDF",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "Fee applies for each bill that's paid after the due date. This charge is not subject to GST.",
-                        "amount": 16,
-                        "feeType": "LPF",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "May be charged when you move out and require a final meter read. Actual fee may vary.",
-                        "amount": 60.94,
-                        "feeType": "DiscoFMO",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "We accept Visa and Mastercard payments via energylocals.com.au/pay-by-card. Debit card transactions are subject to a 0.46% fee, and credit card payments incur a 0.81% fee. Credit and debit card processing fees are waived for Direct Debit payments.",
-                        "feeType": "CCF",
-                        "percent": 0.81,
-                        "feeTerm": "P"
-                      }
-                    ],
-                    "termType": "N",
-                    "tariffPeriod": [
-                      {
-                        "touBlock": [
-                          {
-                            "name": "Peak",
-                            "description": "Peak time (6:00am - 10:00am, 3:00pm - 1:00am All days)",
-                            "blockRate": [
-                              {
-                                "unitPrice": 38,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "P",
-                            "timeOfUse": [
-                              {
-                                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                                "startTime": "600",
-                                "endTime": "959"
-                              },
-                              {
-                                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                                "startTime": "1500",
-                                "endTime": "2359"
-                              },
-                              {
-                                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                                "startTime": "0",
-                                "endTime": "59"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Off Peak",
-                            "description": "Off-peak time (1:00am - 6:00am All days)",
-                            "blockRate": [
-                              {
-                                "unitPrice": 26.8,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "OP",
-                            "timeOfUse": [
-                              {
-                                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                                "startTime": "100",
-                                "endTime": "559"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Shoulder",
-                            "description": "Shoulder time (10:00am - 3:00pm All days)",
-                            "blockRate": [
-                              {
-                                "unitPrice": 23,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "S",
-                            "timeOfUse": [
-                              {
-                                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                                "startTime": "1000",
-                                "endTime": "1459"
-                              }
-                            ]
-                          }
-                        ],
-                        "endDate": "2024-12-31",
-                        "dailySupplyCharge": 150,
-                        "startDate": "2024-01-01"
-                      }
-                    ],
-                    "variation": "Our energy prices may vary due to changes in the market and economic conditions. By entering into this Contract, you agree that we may vary your rates. You will be notified of any price change in writing at least 5 business days before effective date.",
-                    "onExpiry": "No lock in contracts or exit fees.",
-                    "fuelType": "E",
-                    "terms": "Prices may vary in accordance with terms and conditions. For full terms and conditions, visit https://www.ioenergy.com.au/ or call 1300 313 463",
-                    "timeDefinition": "LOCAL",
-                    "billFrequency": [
-                      {
-                        "number": 3,
-                        "period": "M"
-                      },
-                      {
-                        "number": 1,
-                        "period": "M"
-                      }
-                    ],
-                    "meterType": [
-                      "Type 4",
-                      "Type 4a"
-                    ],
-                    "paymentOption": [
-                      "DD",
-                      "CC",
-                      "BP",
-                      "CP"
-                    ],
-                    "isFixed": false
-                  }
-                ],
-                "planName": "iO Sustainable Home Plan",
-                "planStatus": "PUBLISHED",
-                "supplyArea": [
-                  {
-                    "name": "SA Power Networks",
-                    "id": "42"
-                  }
-                ],
-                "batchId": 813567,
-                "retailerId": "25000",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
-                "tags": [
-                  "iO Energy Retail Services",
-                  "IO_RES_SH",
-                  "IO_SH_3R_E"
-                ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "iO Energy Retail Services",
-                "planId": "IOE813569MRE1",
-                "retailerCode": "IOE",
-                "state": "SA",
-                "effectiveDate": "2024-08-04"
-              },
-              "planId": "IOE813569MRE1",
-              "postcodes": {
-                "5097": 1
-              }
-            }
-          }
-        },
-        "raw_plan_data": {
-          "eligibility_restrictions": false,
-          "has_discounts": false,
-          "distributor": null,
-          "state": null,
-          "postcode": null
-        }
-      },
-      {
-        "plan_id": "IOE813576MRE1",
-        "plan_name": "iO Sustainable Home Plan",
-        "retailer_name": "iO Energy Retail Services",
-        "plan_type": "TOU",
-        "tariff_type": "TOU",
-        "monthly_cost": 320,
-        "quarterly_cost": 1150,
-        "annual_cost": 3870,
-        "peak_cost": 74.99999980000001,
-        "shoulder_cost": 50.9999996,
-        "off_peak_cost": 33.0,
-        "daily_supply_charge": 165.0,
-        "detailed_time_blocks": [
-          {
-            "name": "Peak",
-            "description": "Peak time (5:00pm  to 9:00pm All days)",
-            "time_of_use_period": "P",
-            "time_periods": [
-              {
-                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                "start_time": "1700",
-                "end_time": "2059"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 68.181818,
-                "unit_price_gst": 74.99999980000001,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          },
-          {
-            "name": "Off Peak",
-            "description": "Off-peak time (10:00am - 4:00pm All days)",
-            "time_of_use_period": "OP",
-            "time_periods": [
-              {
-                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                "start_time": "1000",
-                "end_time": "1559"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 7.272727,
-                "unit_price_gst": 7.9999997,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          },
-          {
-            "name": "Shoulder 1",
-            "description": "Shoulder 1 time (6:00am - 9:00am All days)",
-            "time_of_use_period": "S1",
-            "time_periods": [
-              {
-                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                "start_time": "600",
-                "end_time": "859"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 46.363636,
-                "unit_price_gst": 50.9999996,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          },
-          {
-            "name": "Shoulder 2",
-            "description": "Shoulder 2 time (9:00pm - 6:00am, 9:00am - 10:00am, 4:00pm - 5:00pm All days)",
-            "time_of_use_period": "S2",
-            "time_periods": [
-              {
-                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                "start_time": "2100",
-                "end_time": "2359"
-              },
-              {
-                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                "start_time": "0",
-                "end_time": "559"
-              },
-              {
-                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                "start_time": "900",
-                "end_time": "959"
-              },
-              {
-                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                "start_time": "1600",
-                "end_time": "1659"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 30,
-                "unit_price_gst": 33.0,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          }
-        ],
-        "fees": {
-          "move_in_new_connection_fee": 60.94,
-          "paper_bill_fee": null,
-          "payment_processing_fees": [],
-          "late_payment_fee": 16,
-          "disconnection_fee_move_out": 60.94,
-          "disconnection_fee_non_payment": null,
-          "reconnection_fee": null,
-          "other_fees": [],
-          "credit_card_payment_fees": [
-            {
-              "feeType": "CCF",
-              "percent": 0.81,
-              "feeTerm": "P"
-            }
-          ],
-          "membership_fee": null
-        },
-        "membership_fee_annual": 0,
-        "membership_fee_quarterly": 0,
-        "membership_fee_monthly": 0,
-        "solar_feed_in_rate_r": 2,
-        "payment_options": [
-          "Direct Debit",
-          "Credit Card",
-          "BPay",
-          "Centrepay"
-        ],
-        "raw_plan_data_complete": {
-          "main_api_response": {
-            "planId": "IOE813576MRE1",
-            "planData": {
-              "tariffType": "TOU",
-              "contract": [
-                {
-                  "pricingModel": "TOU",
-                  "solarFit": [
-                    {
-                      "tariffUType": "singleTariff",
-                      "scheme": "OTHER",
-                      "endDate": "2024-12-31",
-                      "singleTariffRates": [
-                        {
-                          "unitPrice": 2,
-                          "measureUnit": "KWH"
-                        }
-                      ],
-                      "rate": 2,
-                      "displayName": "Retailer Feed-in Tariff (inc. GST, if any)",
-                      "type": "R",
-                      "startDate": "2024-01-01"
-                    }
-                  ],
-                  "fee": [
-                    {
-                      "amount": 60.94,
-                      "feeType": "ConnF",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "amount": 10,
-                      "feeType": "DDF",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "amount": 16,
-                      "feeType": "LPF",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "amount": 60.94,
-                      "feeType": "DiscoFMO",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "feeType": "CCF",
-                      "percent": 0.81,
-                      "feeTerm": "P"
-                    }
-                  ],
-                  "termType": "N",
-                  "tariffPeriod": [
-                    {
-                      "touBlock": [
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 68.181818,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        },
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 7.272727,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        },
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 46.363636,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        },
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 30,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        }
-                      ],
-                      "dailySupplyCharge": 150
-                    }
-                  ],
-                  "fuelType": "E",
-                  "meterType": [
-                    "Type 4",
-                    "Type 4a"
-                  ],
-                  "paymentOption": [
-                    "DD",
-                    "CC",
-                    "BP",
-                    "CP"
-                  ]
-                }
-              ],
-              "planName": "iO Sustainable Home Plan",
-              "retailerId": "25000",
-              "customerType": "R",
-              "fuelType": "E",
-              "retailerName": "iO Energy Retail Services",
-              "planId": "IOE813576MRE1",
-              "retailerCode": "IOE"
-            },
-            "planType": "E#R#IOE813576MRE1",
-            "postcode": 5097,
-            "pcr": {
-              "costs": {
-                "electricity": {
-                  "small": {
-                    "quarterly": {
-                      "noDiscounts": 550,
-                      "allDiscounts": 550,
-                      "guaranteedDiscount": 550
-                    },
-                    "monthly": {
-                      "noDiscounts": 150,
-                      "allDiscounts": 150,
-                      "guaranteedDiscount": 150
-                    },
-                    "yearly": {
-                      "noDiscounts": 1840,
-                      "allDiscounts": 1840,
-                      "guaranteedDiscount": 1840
-                    }
-                  },
-                  "large": {
-                    "quarterly": {
-                      "noDiscounts": 1150,
-                      "allDiscounts": 1150,
-                      "guaranteedDiscount": 1150
-                    },
-                    "monthly": {
-                      "noDiscounts": 320,
-                      "allDiscounts": 320,
-                      "guaranteedDiscount": 320
-                    },
-                    "yearly": {
-                      "noDiscounts": 3870,
-                      "allDiscounts": 3870,
-                      "guaranteedDiscount": 3870
-                    }
-                  },
-                  "medium": {
-                    "quarterly": {
-                      "noDiscounts": 850,
-                      "allDiscounts": 850,
-                      "guaranteedDiscount": 850
-                    },
-                    "monthly": {
-                      "noDiscounts": 240,
-                      "allDiscounts": 240,
-                      "guaranteedDiscount": 240
-                    },
-                    "yearly": {
-                      "noDiscounts": 2840,
-                      "allDiscounts": 2840,
-                      "guaranteedDiscount": 2840
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "detailed_api_response": {
-            "data": {
-              "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
-                "contract": [
-                  {
-                    "pricingModel": "TOU",
-                    "coolingOffDays": 10,
-                    "solarFit": [
-                      {
-                        "tariffUType": "singleTariff",
-                        "scheme": "OTHER",
-                        "endDate": "2024-12-31",
-                        "singleTariffRates": [
-                          {
-                            "unitPrice": 2,
-                            "measureUnit": "KWH"
-                          }
-                        ],
-                        "rate": 2,
-                        "displayName": "Retailer Feed-in Tariff (inc. GST, if any)",
-                        "description": "Retailer Feed-in Tariff (inc. GST, if any)",
-                        "type": "R",
-                        "startDate": "2024-01-01"
-                      }
-                    ],
-                    "additionalFeeInformation": "For more information on these fees and other fees, please visit energylocals.com.au/fees.",
-                    "fee": [
-                      {
-                        "description": "May be charged when you move into a property or change retailer. Actual fee may vary.",
-                        "amount": 60.94,
-                        "feeType": "ConnF",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "Charged when a direct debit payment has dishonoured or reversed. This charge is not subject to GST.",
-                        "amount": 10,
-                        "feeType": "DDF",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "Fee applies for each bill that's paid after the due date. This charge is not subject to GST.",
-                        "amount": 16,
-                        "feeType": "LPF",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "May be charged when you move out and require a final meter read. Actual fee may vary.",
-                        "amount": 60.94,
-                        "feeType": "DiscoFMO",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "We accept Visa and Mastercard payments via energylocals.com.au/pay-by-card. Debit card transactions are subject to a 0.46% fee, and credit card payments incur a 0.81% fee. Credit and debit card processing fees are waived for Direct Debit payments.",
-                        "feeType": "CCF",
-                        "percent": 0.81,
-                        "feeTerm": "P"
-                      }
-                    ],
-                    "termType": "N",
-                    "tariffPeriod": [
-                      {
-                        "touBlock": [
-                          {
-                            "name": "Peak",
-                            "description": "Peak time (5:00pm  to 9:00pm All days)",
-                            "blockRate": [
-                              {
-                                "unitPrice": 68.181818,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "P",
-                            "timeOfUse": [
-                              {
-                                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                                "startTime": "1700",
-                                "endTime": "2059"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Off Peak",
-                            "description": "Off-peak time (10:00am - 4:00pm All days)",
-                            "blockRate": [
-                              {
-                                "unitPrice": 7.272727,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "OP",
-                            "timeOfUse": [
-                              {
-                                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                                "startTime": "1000",
-                                "endTime": "1559"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Shoulder 1",
-                            "description": "Shoulder 1 time (6:00am - 9:00am All days)",
-                            "blockRate": [
-                              {
-                                "unitPrice": 46.363636,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "S1",
-                            "timeOfUse": [
-                              {
-                                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                                "startTime": "600",
-                                "endTime": "859"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Shoulder 2",
-                            "description": "Shoulder 2 time (9:00pm - 6:00am, 9:00am - 10:00am, 4:00pm - 5:00pm All days)",
-                            "blockRate": [
-                              {
-                                "unitPrice": 30,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "S2",
-                            "timeOfUse": [
-                              {
-                                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                                "startTime": "2100",
-                                "endTime": "2359"
-                              },
-                              {
-                                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                                "startTime": "0",
-                                "endTime": "559"
-                              },
-                              {
-                                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                                "startTime": "900",
-                                "endTime": "959"
-                              },
-                              {
-                                "days": "BUSINESS DAYS|SATURDAY|SUNDAY",
-                                "startTime": "1600",
-                                "endTime": "1659"
-                              }
-                            ]
-                          }
-                        ],
-                        "endDate": "2024-12-31",
-                        "dailySupplyCharge": 150,
-                        "startDate": "2024-01-01"
-                      }
-                    ],
-                    "variation": "Our energy prices may vary due to changes in the market and economic conditions. By entering into this Contract, you agree that we may vary your rates. You will be notified of any price change in writing at least 5 business days before effective date.",
-                    "onExpiry": "No lock in contracts or exit fees.",
-                    "fuelType": "E",
-                    "terms": "Prices may vary in accordance with terms and conditions. For full terms and conditions, visit https://www.ioenergy.com.au/ or call 1300 313 463",
-                    "timeDefinition": "LOCAL",
-                    "billFrequency": [
-                      {
-                        "number": 3,
-                        "period": "M"
-                      },
-                      {
-                        "number": 1,
-                        "period": "M"
-                      }
-                    ],
-                    "meterType": [
-                      "Type 4",
-                      "Type 4a"
-                    ],
-                    "paymentOption": [
-                      "DD",
-                      "CC",
-                      "BP",
-                      "CP"
-                    ],
-                    "isFixed": false
-                  }
-                ],
-                "planName": "iO Sustainable Home Plan",
-                "planStatus": "PUBLISHED",
-                "supplyArea": [
-                  {
-                    "name": "SA Power Networks",
-                    "id": "42"
-                  }
-                ],
-                "batchId": 813567,
-                "retailerId": "25000",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
-                "tags": [
-                  "iO Energy Retail Services",
-                  "IO_RES_SH",
-                  "IO_SH_4R_E"
-                ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "iO Energy Retail Services",
-                "planId": "IOE813576MRE1",
-                "retailerCode": "IOE",
-                "state": "SA",
-                "effectiveDate": "2024-08-04"
-              },
-              "planId": "IOE813576MRE1",
-              "postcodes": {
-                "5097": 1
-              }
-            }
-          }
-        },
-        "raw_plan_data": {
-          "eligibility_restrictions": false,
-          "has_discounts": false,
-          "distributor": null,
-          "state": null,
-          "postcode": null
-        }
-      },
-      {
         "plan_id": "KOG919197MRE1",
         "plan_name": "Kogan Energy Basic",
         "retailer_name": "Kogan Energy",
@@ -47415,7 +45973,6 @@
           "main_api_response": {
             "planId": "LUM203103MRE19",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -47526,19 +46083,20 @@
                   ]
                 }
               ],
-              "planName": "Lumo Basic",
-              "retailerId": "9643",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "Lumo Energy (SA)",
-              "planId": "LUM203103MRE19",
-              "retailerCode": "LUM",
               "meteringCost": [
                 {
                   "name": "Metering Cost",
                   "min": "U"
                 }
-              ]
+              ],
+              "planId": "LUM203103MRE19",
+              "planName": "Lumo Basic",
+              "retailerCode": "LUM",
+              "retailerId": "9643",
+              "retailerName": "Lumo Energy (SA)",
+              "tariffType": "TOU"
             },
             "planType": "E#R#LUM203103MRE19",
             "postcode": 5097,
@@ -47603,9 +46161,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
-                "planRef": "RTOU",
+                "batchId": 941469,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -47783,32 +46339,35 @@
                     "isFixed": false
                   }
                 ],
-                "planName": "Lumo Basic",
-                "planStatus": "PUBLISHED",
-                "supplyArea": [
-                  {
-                    "name": "SA Power Networks",
-                    "id": "42"
-                  }
-                ],
-                "batchId": 941469,
-                "retailerId": "9643",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "Lumo Energy (SA)",
-                "planId": "LUM203103MRE19",
-                "retailerCode": "LUM",
-                "state": "SA",
+                "distributor": "SA Power Networks",
                 "effectiveDate": "2025-07-01",
+                "expiryDate": "2025-07-29",
+                "fuelType": "E",
+                "genAvailable": true,
                 "meteringCost": [
                   {
                     "name": "Metering Cost",
                     "description": "Charges may vary, please contact us on 1300 11 58 66 for specific metering charges.",
                     "min": "U"
                   }
-                ]
+                ],
+                "planId": "LUM203103MRE19",
+                "planName": "Lumo Basic",
+                "planRef": "RTOU",
+                "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "LUM",
+                "retailerId": "9643",
+                "retailerName": "Lumo Energy (SA)",
+                "state": "SA",
+                "supplyArea": [
+                  {
+                    "name": "SA Power Networks",
+                    "id": "42"
+                  }
+                ],
+                "tariffType": "TOU"
               },
               "planId": "LUM203103MRE19",
               "postcodes": {
@@ -47819,550 +46378,6 @@
         },
         "raw_plan_data": {
           "eligibility_restrictions": false,
-          "has_discounts": false,
-          "distributor": null,
-          "state": null,
-          "postcode": null
-        }
-      },
-      {
-        "plan_id": "LUM203108MRE20",
-        "plan_name": "Lumo Plus",
-        "retailer_name": "Lumo Energy (SA)",
-        "plan_type": "TOU",
-        "tariff_type": "TOU",
-        "monthly_cost": 320,
-        "quarterly_cost": 1160,
-        "annual_cost": 3890,
-        "peak_cost": 53.13,
-        "shoulder_cost": 29.282000000000004,
-        "off_peak_cost": 23.078000000000003,
-        "daily_supply_charge": 112.2,
-        "detailed_time_blocks": [
-          {
-            "name": "Peak",
-            "description": "All other times.",
-            "time_of_use_period": "P",
-            "time_periods": [
-              {
-                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                "start_time": "0600",
-                "end_time": "0959"
-              },
-              {
-                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                "start_time": "1500",
-                "end_time": "0059"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 48.3,
-                "unit_price_gst": 53.13,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          },
-          {
-            "name": "Off-Peak",
-            "description": "1am-6am Mon-Sun ACST",
-            "time_of_use_period": "OP",
-            "time_periods": [
-              {
-                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                "start_time": "0100",
-                "end_time": "0559"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 26.62,
-                "unit_price_gst": 29.282000000000004,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          },
-          {
-            "name": "Shoulder",
-            "description": "10am-3pm Mon-Sun ACST",
-            "time_of_use_period": "S",
-            "time_periods": [
-              {
-                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                "start_time": "1000",
-                "end_time": "1459"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 20.98,
-                "unit_price_gst": 23.078000000000003,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          }
-        ],
-        "fees": {
-          "move_in_new_connection_fee": 63.71,
-          "paper_bill_fee": null,
-          "payment_processing_fees": [],
-          "late_payment_fee": null,
-          "disconnection_fee_move_out": null,
-          "disconnection_fee_non_payment": null,
-          "reconnection_fee": null,
-          "other_fees": [],
-          "credit_card_payment_fees": [],
-          "membership_fee": null
-        },
-        "membership_fee_annual": 0,
-        "membership_fee_quarterly": 0,
-        "membership_fee_monthly": 0,
-        "solar_feed_in_rate_r": 2,
-        "payment_options": [
-          "Direct Debit",
-          "Credit Card",
-          "BPay",
-          "PayPal",
-          "Centrepay"
-        ],
-        "raw_plan_data_complete": {
-          "main_api_response": {
-            "planId": "LUM203108MRE20",
-            "planData": {
-              "tariffType": "TOU",
-              "contract": [
-                {
-                  "pricingModel": "TOU",
-                  "solarFit": [
-                    {
-                      "tariffUType": "singleTariff",
-                      "scheme": "OTHER",
-                      "endDate": "9999-12-31",
-                      "singleTariffRates": [
-                        {
-                          "unitPrice": 2,
-                          "measureUnit": "KWH",
-                          "rebate": true
-                        }
-                      ],
-                      "rate": 2,
-                      "displayName": "Solar feed-in tariffs (FIT)",
-                      "type": "R",
-                      "singleTariffPeriod": "P1Y",
-                      "startDate": "2024-07-01"
-                    },
-                    {
-                      "tariffUType": "singleTariff",
-                      "scheme": "OTHER",
-                      "endDate": "9999-12-31",
-                      "singleTariffRates": [
-                        {
-                          "unitPrice": 44,
-                          "measureUnit": "KWH",
-                          "rebate": true
-                        }
-                      ],
-                      "rate": 44,
-                      "displayName": "Government contribution",
-                      "type": "G",
-                      "singleTariffPeriod": "P1Y",
-                      "startDate": "2024-07-01"
-                    }
-                  ],
-                  "fee": [
-                    {
-                      "amount": 63.71,
-                      "feeType": "ConnF",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "amount": 63.71,
-                      "feeType": "DiscoF",
-                      "feeTerm": "F"
-                    }
-                  ],
-                  "termType": "N",
-                  "tariffPeriod": [
-                    {
-                      "touBlock": [
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 48.3,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        },
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 26.62,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        },
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 20.98,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        }
-                      ],
-                      "blockPeriod": "P1D",
-                      "dailySupplyCharge": 102
-                    }
-                  ],
-                  "greenCharge": [
-                    {
-                      "chargeType": "A"
-                    }
-                  ],
-                  "incentive": [
-                    {
-                      "name": "Lumo Rewards"
-                    },
-                    {
-                      "name": "Lumo Rewards Credits"
-                    }
-                  ],
-                  "fuelType": "E",
-                  "meterType": [
-                    "Type 4",
-                    "Type 4a",
-                    "Type 5",
-                    "Type 6"
-                  ],
-                  "paymentOption": [
-                    "DD",
-                    "CC",
-                    "BP",
-                    "P",
-                    "CP"
-                  ],
-                  "eligibilityRestriction": [
-                    {
-                      "type": "OC",
-                      "description": "You must sign up to receive eBilling and eCommunications",
-                      "information": "eBilling and eCommunications"
-                    }
-                  ]
-                }
-              ],
-              "planName": "Lumo Plus",
-              "retailerId": "9643",
-              "customerType": "R",
-              "fuelType": "E",
-              "retailerName": "Lumo Energy (SA)",
-              "planId": "LUM203108MRE20",
-              "retailerCode": "LUM",
-              "meteringCost": [
-                {
-                  "name": "Metering Cost",
-                  "min": "U"
-                }
-              ]
-            },
-            "planType": "E#R#LUM203108MRE20",
-            "postcode": 5097,
-            "pcr": {
-              "costs": {
-                "electricity": {
-                  "small": {
-                    "quarterly": {
-                      "noDiscounts": 520,
-                      "allDiscounts": 520,
-                      "guaranteedDiscount": 520
-                    },
-                    "monthly": {
-                      "noDiscounts": 140,
-                      "allDiscounts": 140,
-                      "guaranteedDiscount": 140
-                    },
-                    "yearly": {
-                      "noDiscounts": 1730,
-                      "allDiscounts": 1730,
-                      "guaranteedDiscount": 1730
-                    }
-                  },
-                  "large": {
-                    "quarterly": {
-                      "noDiscounts": 1160,
-                      "allDiscounts": 1160,
-                      "guaranteedDiscount": 1160
-                    },
-                    "monthly": {
-                      "noDiscounts": 320,
-                      "allDiscounts": 320,
-                      "guaranteedDiscount": 320
-                    },
-                    "yearly": {
-                      "noDiscounts": 3890,
-                      "allDiscounts": 3890,
-                      "guaranteedDiscount": 3890
-                    }
-                  },
-                  "medium": {
-                    "quarterly": {
-                      "noDiscounts": 840,
-                      "allDiscounts": 840,
-                      "guaranteedDiscount": 840
-                    },
-                    "monthly": {
-                      "noDiscounts": 230,
-                      "allDiscounts": 230,
-                      "guaranteedDiscount": 230
-                    },
-                    "yearly": {
-                      "noDiscounts": 2800,
-                      "allDiscounts": 2800,
-                      "guaranteedDiscount": 2800
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "detailed_api_response": {
-            "data": {
-              "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
-                "planRef": "RTOU",
-                "contract": [
-                  {
-                    "pricingModel": "TOU",
-                    "coolingOffDays": 10,
-                    "solarFit": [
-                      {
-                        "tariffUType": "singleTariff",
-                        "scheme": "OTHER",
-                        "endDate": "9999-12-31",
-                        "singleTariffRates": [
-                          {
-                            "unitPrice": 2,
-                            "measureUnit": "KWH",
-                            "rebate": true
-                          }
-                        ],
-                        "rate": 2,
-                        "displayName": "Solar feed-in tariffs (FIT)",
-                        "description": "Retailer contribution (GST inc. if any)",
-                        "type": "R",
-                        "singleTariffPeriod": "P1Y",
-                        "startDate": "2024-07-01"
-                      },
-                      {
-                        "tariffUType": "singleTariff",
-                        "scheme": "OTHER",
-                        "endDate": "9999-12-31",
-                        "singleTariffRates": [
-                          {
-                            "unitPrice": 44,
-                            "measureUnit": "KWH",
-                            "rebate": true
-                          }
-                        ],
-                        "rate": 44,
-                        "displayName": "Government contribution",
-                        "description": "Government contribution (GST inc. if any)",
-                        "type": "G",
-                        "singleTariffPeriod": "P1Y",
-                        "startDate": "2024-07-01"
-                      }
-                    ],
-                    "additionalFeeInformation": "For the full schedule of fees applicable to this offer, please visit http://www.lumoenergy.com.au/help-centre/fee-schedule-sa or call us on 1300 11 58 66.",
-                    "fee": [
-                      {
-                        "description": "Connection fee (GST incl) generally applies for any move-in request",
-                        "amount": 63.71,
-                        "feeType": "ConnF",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "Disconnection fee (GST incl) generally applies for any move-out request",
-                        "amount": 63.71,
-                        "feeType": "DiscoF",
-                        "feeTerm": "F"
-                      }
-                    ],
-                    "termType": "N",
-                    "tariffPeriod": [
-                      {
-                        "touBlock": [
-                          {
-                            "name": "Peak",
-                            "description": "All other times.",
-                            "blockRate": [
-                              {
-                                "unitPrice": 48.3,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "P",
-                            "timeOfUse": [
-                              {
-                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                                "startTime": "0600",
-                                "endTime": "0959"
-                              },
-                              {
-                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                                "startTime": "1500",
-                                "endTime": "0059"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Off-Peak",
-                            "description": "1am-6am Mon-Sun ACST",
-                            "blockRate": [
-                              {
-                                "unitPrice": 26.62,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "OP",
-                            "timeOfUse": [
-                              {
-                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                                "startTime": "0100",
-                                "endTime": "0559"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Shoulder",
-                            "description": "10am-3pm Mon-Sun ACST",
-                            "blockRate": [
-                              {
-                                "unitPrice": 20.98,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "S",
-                            "timeOfUse": [
-                              {
-                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                                "startTime": "1000",
-                                "endTime": "1459"
-                              }
-                            ]
-                          }
-                        ],
-                        "endDate": "2020-06-30",
-                        "blockPeriod": "P1D",
-                        "dailySupplyCharge": 102,
-                        "startDate": "2020-07-01"
-                      }
-                    ],
-                    "variation": "We may vary your rates in line with our Customer Charter and in accordance with the Relevant Laws. We will give you written notice of at least 5 business day prior to the variation.",
-                    "onExpiry": "Your contract is ongoing until it is ended by you or us.",
-                    "greenCharge": [
-                      {
-                        "name": "GreenPower",
-                        "chargeType": "A",
-                        "description": "For an extra 3.3 cents per kWh Lumo will purchase 10% of your consumption from GreenPower accredited sources.",
-                        "option": [
-                          {
-                            "pctGreenPower": 10,
-                            "chargeAmount": 0.033
-                          }
-                        ]
-                      }
-                    ],
-                    "incentive": [
-                      {
-                        "name": "Lumo Rewards",
-                        "description": "Exclusive access to Lumo Rewards - offering everyday savings on some of the biggest brands across Australia."
-                      },
-                      {
-                        "name": "Lumo Rewards Credits",
-                        "description": "$25 (inc GST) bonus Lumo Rewards Credit is applied once Lumo becomes responsible for the supply of your electricity and $50 (inc GST) Lumo Rewards Credit for three consecutive monthly electricity bills or a quarterly electricity bill when you pay the full amount on each bill by the due date, provided you have registered for the Lumo Rewards program via MyAccount at myaccount.lumoenergy.com.au. For full T&C see https://www.lumoenergy.com.au/terms-and-conditions/"
-                      }
-                    ],
-                    "fuelType": "E",
-                    "terms": "This offer is available to residential customers currently within the SA Power Networks distribution zone with applicable network tariff. Please visit www.lumoenergy.com.au/terms for full T&Cs applicable to this offer. Solar Feed-In T&Cs can be found at www.lumoenergy.com.au/metering-and-solar/solar-feed-in-tariffs. All times are ACST, unless you have an interval meter, in which case daylight savings time will apply.",
-                    "timeDefinition": "LOCAL",
-                    "billFrequency": [
-                      {
-                        "number": 3,
-                        "period": "M"
-                      },
-                      {
-                        "number": 1,
-                        "period": "M"
-                      }
-                    ],
-                    "meterType": [
-                      "Type 4",
-                      "Type 4a",
-                      "Type 5",
-                      "Type 6"
-                    ],
-                    "paymentOption": [
-                      "DD",
-                      "CC",
-                      "BP",
-                      "P",
-                      "CP"
-                    ],
-                    "eligibilityRestriction": [
-                      {
-                        "type": "OC",
-                        "description": "You must sign up to receive eBilling and eCommunications",
-                        "information": "eBilling and eCommunications"
-                      }
-                    ],
-                    "isFixed": false
-                  }
-                ],
-                "planName": "Lumo Plus",
-                "planStatus": "PUBLISHED",
-                "supplyArea": [
-                  {
-                    "name": "SA Power Networks",
-                    "id": "42"
-                  }
-                ],
-                "batchId": 941469,
-                "retailerId": "9643",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "Lumo Energy (SA)",
-                "planId": "LUM203108MRE20",
-                "retailerCode": "LUM",
-                "state": "SA",
-                "effectiveDate": "2025-07-01",
-                "meteringCost": [
-                  {
-                    "name": "Metering Cost",
-                    "description": "Charges may vary, please contact us on 1300 11 58 66 for specific metering charges.",
-                    "min": "U"
-                  }
-                ]
-              },
-              "planId": "LUM203108MRE20",
-              "postcodes": {
-                "5097": 1
-              }
-            }
-          }
-        },
-        "raw_plan_data": {
-          "eligibility_restrictions": true,
           "has_discounts": false,
           "distributor": null,
           "state": null,
