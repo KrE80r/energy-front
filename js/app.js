@@ -65,14 +65,16 @@ async function loadEnergyPlans() {
         const originalCount = touPlans.length;
         
         touPlans = touPlans.filter(plan => {
-            // Get effectiveDate from the correct path: plan.raw_plan_data_complete.detailed_api_response.data.planData.effectiveDate
-            const effectiveDate = plan.raw_plan_data_complete?.detailed_api_response?.data?.planData?.effectiveDate;
-            
+            // Try multiple possible paths for effectiveDate to accommodate different data structures
+            const effectiveDate = plan.raw_plan_data_complete?.detailed_api_response?.data?.planData?.effectiveDate ||
+                                 plan.raw_plan_data_complete?.detailed_api_response?.planData?.effectiveDate ||
+                                 plan.raw_plan_data_complete?.detailed_api_response?.effectiveDate;
+
             if (!effectiveDate) {
                 console.log(`Plan ${plan.plan_id} missing effectiveDate, excluding`);
                 return false;
             }
-            
+
             // Only include plans with effectiveDate >= 2025-06-17
             if (effectiveDate >= targetDate) {
                 return true;
