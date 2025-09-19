@@ -463,13 +463,15 @@ function displayComparisonResults(comparisonResults, usagePattern) {
  */
 function generateComparisonCards(comparisonResults) {
     let html = '<div class="row g-4">';
-    
+
     comparisonResults.forEach((result, index) => {
         const { company, bestPlan, totalPlans, isCustom } = result;
-        const { planData, totalCost, breakdown, monthlyCost } = bestPlan;
+        const { planData, totalCost, baseCost, breakdown, monthlyCost, discountInfo } = bestPlan;
         
         const rankBadge = index === 0 ? '<span class="badge bg-success position-absolute top-0 start-50 translate-middle">Best Value</span>' : '';
         const customBadge = isCustom ? '<span class="badge bg-info position-absolute top-0 end-0 m-2">Custom Plan</span>' : '';
+        const discountBadge = discountInfo && discountInfo.applied ?
+            `<span class="badge bg-warning position-absolute" style="top: 10px; left: 10px;">✓ ${discountInfo.percent.toFixed(0)}% OFF</span>` : '';
         const cardClass = index === 0 ? 'border-success' : (isCustom ? 'border-info' : '');
         
         html += `
@@ -477,15 +479,19 @@ function generateComparisonCards(comparisonResults) {
             <div class="card h-100 ${cardClass}" style="position: relative;">
                 ${rankBadge}
                 ${customBadge}
+                ${discountBadge}
                 <div class="card-header ${isCustom ? 'bg-info text-white' : 'bg-light'}">
                     <h5 class="card-title mb-1">${company}</h5>
                     <small class="${isCustom ? 'text-white-50' : 'text-muted'}">${totalPlans} plan${totalPlans !== 1 ? 's' : ''} available</small>
                 </div>
                 <div class="card-body">
                     <div class="text-center mb-3">
-                        <h3 class="text-primary">$${totalCost.toFixed(0)}</h3>
-                        <small class="text-muted">per quarter</small>
-                        <br>
+                        ${discountInfo && discountInfo.applied ?
+                            `<h3 class="text-success">$${totalCost.toFixed(0)}</h3>
+                             <div class="text-decoration-line-through text-muted small">Was $${baseCost.toFixed(0)}</div>
+                             <small class="text-success">Save $${discountInfo.savings.toFixed(0)}/quarter</small>` :
+                            `<h3 class="text-primary">$${totalCost.toFixed(0)}</h3>`}
+                        <div><small class="text-muted">per quarter</small></div>
                         <small class="text-muted">($${monthlyCost.toFixed(0)}/month)</small>
                     </div>
                     

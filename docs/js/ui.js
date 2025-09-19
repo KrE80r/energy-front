@@ -69,7 +69,7 @@ function displayCurrentPage(personaKey) {
  * @returns {HTMLElement} Plan card element
  */
 function createPlanCardNew(calculation, personaKey, index) {
-    const { planData, totalCost, monthlyCost, breakdown } = calculation;
+    const { planData, totalCost, baseCost, monthlyCost, breakdown, discountInfo } = calculation;
     const strategicRecommendation = generateStrategicRecommendation(calculation, personaKey);
     
     const card = document.createElement('div');
@@ -82,6 +82,11 @@ function createPlanCardNew(calculation, personaKey, index) {
                 <div class="retailer-info">
                     <div class="retailer-name">${planData.retailer_name}</div>
                     <div class="plan-name" title="${planData.plan_name}">${planData.plan_name}</div>
+                    ${discountInfo && discountInfo.applied ?
+                        `<div class="discount-badge">
+                            <span class="discount-percent">✓ ${discountInfo.percent.toFixed(0)}% OFF</span>
+                            <span class="discount-savings">Save $${discountInfo.savings.toFixed(0)}/quarter</span>
+                        </div>` : ''}
                 </div>
             </div>
             
@@ -110,7 +115,10 @@ function createPlanCardNew(calculation, personaKey, index) {
             </div>
             
             <div class="cost-section">
-                <div class="cost-amount">$${totalCost.toFixed(2)}</div>
+                ${discountInfo && discountInfo.applied ?
+                    `<div class="cost-amount discounted">$${totalCost.toFixed(2)}</div>
+                     <div class="original-cost">Was $${baseCost.toFixed(2)}</div>` :
+                    `<div class="cost-amount">$${totalCost.toFixed(2)}</div>`}
                 <div class="cost-details">
                     <div>~$${monthlyCost.toFixed(2)}/month</div>
                     <div>~$${totalCost.toFixed(2)}/quarter</div>
