@@ -61,10 +61,21 @@ function calculatePlanCost(planData, usagePattern) {
         const solarCredit = calculateTieredSolarCredit(planData, solarExported);
 
         // Step 5: Calculate Final Bill Amount
-        const finalBill = supplyCharge + usageCharge + membershipFee - solarCredit;
+        const baseBill = supplyCharge + usageCharge + membershipFee - solarCredit;
+
+        // Step 6: Apply Guaranteed Discounts
+        const discountResult = applyGuaranteedDiscount(planData, baseBill);
+        const finalBill = discountResult.finalCost;
 
         return {
             totalCost: Math.max(0, finalBill), // Ensure non-negative
+            baseCost: Math.max(0, baseBill), // Cost before discount
+            discountInfo: {
+                applied: discountResult.discountApplied,
+                percent: discountResult.discountPercent,
+                savings: discountResult.savingsAmount,
+                details: discountResult.discountDetails
+            },
             breakdown: {
                 supplyCharge: supplyCharge,
                 usageCharge: usageCharge,
