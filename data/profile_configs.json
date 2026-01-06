@@ -1,0 +1,55 @@
+{
+  "profiles": {
+    "commuter_solar": {
+      "name": "Commuter with Solar",
+      "description": "Away during peak solar hours, good overnight load shifting",
+      "quarterly_consumption_kwh": 1365,
+      "solar_export_kwh": 1200,
+      "solar_self_consumption_percent": 20,
+      "tou_split": {
+        "peak_percent": 70,
+        "shoulder_percent": 8,
+        "off_peak_percent": 22
+      },
+      "rationale": "Away at work during midday (10am-3pm shoulder period), exports 80% of solar generation. Good load shifting to off-peak hours (1am-6am) for hot water and appliances."
+    },
+    "commuter_no_solar": {
+      "name": "Commuter without Solar",
+      "description": "Standard commuter with hot water on timer",
+      "quarterly_consumption_kwh": 1365,
+      "solar_export_kwh": 0,
+      "solar_self_consumption_percent": 0,
+      "tou_split": {
+        "peak_percent": 75,
+        "shoulder_percent": 8,
+        "off_peak_percent": 17
+      },
+      "rationale": "Away during cheapest shoulder period (10am-3pm), unavoidable peak usage morning and evening. Hot water timer utilizes off-peak overnight."
+    }
+  },
+  "tou_periods": {
+    "description": "South Australia standard TOU periods",
+    "peak": {
+      "hours": "6:00 AM - 10:00 AM & 3:00 PM - 1:00 AM (next day)",
+      "daily_hours": 18,
+      "percent_of_day": 75
+    },
+    "shoulder": {
+      "hours": "10:00 AM - 3:00 PM",
+      "daily_hours": 5,
+      "percent_of_day": 21
+    },
+    "off_peak": {
+      "hours": "1:00 AM - 6:00 AM",
+      "daily_hours": 5,
+      "percent_of_day": 21
+    },
+    "applies_to": "Every day (weekdays + weekends)"
+  },
+  "calculation_settings": {
+    "quarter_days": 91,
+    "gst_rate": 0.1,
+    "guaranteed_discounts_only": true,
+    "exclude_conditional_discounts": true
+  }
+}

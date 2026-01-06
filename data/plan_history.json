@@ -1,0 +1,134 @@
+{
+  "2025-11": {
+    "commuter_solar": {
+      "agl_cheapest": {
+        "plan_id": "AGL360486MRE36",
+        "plan_name": "Residential Seniors Saver (No Exit Fee)",
+        "retailer_name": "AGL",
+        "total_cost": 661.03,
+        "base_cost": 661.03,
+        "discount_info": {
+          "applied": false,
+          "percent": 0.0,
+          "savings": 0.0
+        },
+        "breakdown": {
+          "supply_charge": 93.02,
+          "usage_charge": 580.01,
+          "membership_fee": 0.0,
+          "solar_credit": 12.0,
+          "net_grid_consumption": 1365,
+          "solar_exported": 1200
+        },
+        "saved_at": "2025-11-02T15:13:39.191788"
+      },
+      "origin_energy_cheapest": {
+        "plan_id": "ORI848791MRE5",
+        "plan_name": "Origin Affinity Variable ePlus - One Big Switch",
+        "retailer_name": "Origin Energy",
+        "total_cost": 690.12,
+        "base_cost": 690.12,
+        "discount_info": {
+          "applied": false,
+          "percent": 0.0,
+          "savings": 0.0
+        },
+        "breakdown": {
+          "supply_charge": 93.99,
+          "usage_charge": 620.13,
+          "membership_fee": 0.0,
+          "solar_credit": 24.0,
+          "net_grid_consumption": 1365,
+          "solar_exported": 1200
+        },
+        "saved_at": "2025-11-02T15:13:39.192098"
+      }
+    },
+    "commuter_no_solar": {
+      "agl_cheapest": {
+        "plan_id": "AGL360486MRE36",
+        "plan_name": "Residential Seniors Saver (No Exit Fee)",
+        "retailer_name": "AGL",
+        "total_cost": 691.4,
+        "base_cost": 691.4,
+        "discount_info": {
+          "applied": false,
+          "percent": 0.0,
+          "savings": 0.0
+        },
+        "breakdown": {
+          "supply_charge": 93.02,
+          "usage_charge": 598.38,
+          "membership_fee": 0.0,
+          "solar_credit": 0.0,
+          "net_grid_consumption": 1365,
+          "solar_exported": 0
+        },
+        "saved_at": "2025-11-02T15:13:39.194744"
+      },
+      "origin_energy_cheapest": {
+        "plan_id": "ORI848791MRE5",
+        "plan_name": "Origin Affinity Variable ePlus - One Big Switch",
+        "retailer_name": "Origin Energy",
+        "total_cost": 732.48,
+        "base_cost": 732.48,
+        "discount_info": {
+          "applied": false,
+          "percent": 0.0,
+          "savings": 0.0
+        },
+        "breakdown": {
+          "supply_charge": 93.99,
+          "usage_charge": 638.49,
+          "membership_fee": 0.0,
+          "solar_credit": 0.0,
+          "net_grid_consumption": 1365,
+          "solar_exported": 0
+        },
+        "saved_at": "2025-11-02T15:13:39.194980"
+      }
+    }
+  },
+  "2025-10": {
+    "commuter_solar": {
+      "agl_cheapest": {
+        "plan_id": "AGL999999OLD",
+        "plan_name": "Old Expensive Plan",
+        "retailer_name": "AGL",
+        "total_cost": 720.0,
+        "base_cost": 720.0,
+        "discount_info": {
+          "applied": false,
+          "percent": 0.0,
+          "savings": 0.0
+        },
+        "breakdown": {
+          "supply_charge": 100,
+          "usage_charge": 650,
+          "membership_fee": 0,
+          "solar_credit": 30.0
+        },
+        "saved_at": "2025-10-01T18:00:00"
+      },
+      "origin_energy_cheapest": {
+        "plan_id": "ORI999999OLD",
+        "plan_name": "Old Origin Plan",
+        "retailer_name": "Origin Energy",
+        "total_cost": 750.0,
+        "base_cost": 750.0,
+        "discount_info": {
+          "applied": false,
+          "percent": 0.0,
+          "savings": 0.0
+        },
+        "breakdown": {
+          "supply_charge": 100,
+          "usage_charge": 675,
+          "membership_fee": 0,
+          "solar_credit": 25.0
+        },
+        "saved_at": "2025-10-01T18:00:00"
+      }
+    }
+  }
+}
