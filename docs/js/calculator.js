@@ -493,6 +493,138 @@ function shouldDisqualifyPlan(planData) {
 }
 
 /**
+ * Check if a plan has "battery-only" solar FiT
+ * These plans only pay for exports during evening hours (after solar generation)
+ * meaning they're only useful for users with batteries who can time-shift their export
+ * @param {Object} planData - Plan data to check
+ * @returns {Object} { isBatteryOnly: boolean, reason: string, fitDetails: object }
+ */
+function hasBatteryOnlySolarFit(planData) {
+    try {
+        const contract = planData.raw_plan_data_complete?.main_api_response?.planData?.contract?.[0];
+        if (!contract || !contract.solarFit) {
+            return { isBatteryOnly: false, reason: 'No solar FiT data', fitDetails: null };
+        }
+
+        // Typical solar generation hours (9am-5pm / 0900-1700)
+        const SOLAR_GENERATION_START = 900;  // 9:00 AM
+        const SOLAR_GENERATION_END = 1700;   // 5:00 PM
+
+        let hasTimeVaryingFit = false;
+        let hasDaytimeFitRate = false;
+        let peakFitWindow = null;
+        let peakFitRate = 0;
+
+        for (const fit of contract.solarFit) {
+            // Skip government schemes
+            if (fit.type === 'G') continue;
+
+            if (fit.tariffUType === 'timeVaryingTariffs' && fit.timeVaryingTariffs) {
+                hasTimeVaryingFit = true;
+
+                for (const timeRate of fit.timeVaryingTariffs) {
+                    const rate = timeRate.rates?.[0]?.unitPrice || timeRate.rate || 0;
+
+                    if (rate > 0 && timeRate.timeVariations) {
+                        for (const variation of timeRate.timeVariations) {
+                            const startTime = parseInt(variation.startTime, 10);
+                            const endTime = parseInt(variation.endTime, 10);
+
+                            // Skip if time data is malformed - don't exclude on bad data
+                            if (isNaN(startTime) || isNaN(endTime)) {
+                                console.warn(`Skipping malformed time data in FiT: ${variation.startTime}-${variation.endTime}`);
+                                hasDaytimeFitRate = true; // Assume daytime rate exists (conservative)
+                                continue;
+                            }
+
+                            // Check if this payment window overlaps with solar generation hours
+                            // A window overlaps if it starts before solar end AND ends after solar start
+                            const overlapsWithSolar = timeRangesOverlap(
+                                startTime, endTime,
+                                SOLAR_GENERATION_START, SOLAR_GENERATION_END
+                            );
+
+                            if (overlapsWithSolar) {
+                                hasDaytimeFitRate = true;
+                            }
+
+                            // Track peak FiT details for reporting
+                            if (rate > peakFitRate) {
+                                peakFitRate = rate;
+                                peakFitWindow = {
+                                    start: variation.startTime,
+                                    end: variation.endTime,
+                                    rate: rate,
+                                    type: timeRate.type || timeRate.displayName
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // If plan has time-varying FiT but no payment during solar hours, it's battery-only
+        if (hasTimeVaryingFit && !hasDaytimeFitRate) {
+            return {
+                isBatteryOnly: true,
+                reason: `FiT only pays ${peakFitRate}c/kWh between ${formatTime(peakFitWindow?.start)}-${formatTime(peakFitWindow?.end)} (after solar generation hours). Users without batteries get $0 for their solar export.`,
+                fitDetails: peakFitWindow
+            };
+        }
+
+        return { isBatteryOnly: false, reason: null, fitDetails: null };
+
+    } catch (error) {
+        console.warn('Error checking for battery-only solar FiT:', error);
+        return { isBatteryOnly: false, reason: 'Check failed', fitDetails: null };
+    }
+}
+
+/**
+ * Check if two time ranges overlap
+ * Handles overnight ranges (e.g., 1730-0700)
+ * @param {number} start1 - Start time 1 (HHMM format as number)
+ * @param {number} end1 - End time 1 (HHMM format as number)
+ * @param {number} start2 - Start time 2 (HHMM format as number)
+ * @param {number} end2 - End time 2 (HHMM format as number)
+ * @returns {boolean} True if ranges overlap
+ */
+function timeRangesOverlap(start1, end1, start2, end2) {
+    // Normalize times to handle overnight ranges
+    // If end < start, it's an overnight range
+
+    // For solar generation (start2, end2), it's always a daytime range (0900-1700)
+    // For FiT windows, check if they overlap with daytime
+
+    // Simple case: FiT window is a standard daytime window
+    if (end1 > start1) {
+        // Standard window (e.g., 0900-1700)
+        return start1 < end2 && end1 > start2;
+    } else {
+        // Overnight window (e.g., 1730-0729)
+        // This overlaps with daytime if:
+        // - start1 is before end of solar day (1700), OR
+        // - end1 is after start of solar day (0900)
+        return start1 < end2 || end1 > start2;
+    }
+}
+
+/**
+ * Format time from HHMM to readable format
+ * @param {string} timeStr - Time string in HHMM format
+ * @returns {string} Formatted time (e.g., "5:30PM")
+ */
+function formatTime(timeStr) {
+    if (!timeStr) return 'unknown';
+    const hours = parseInt(timeStr.substring(0, 2), 10);
+    const mins = timeStr.substring(2);
+    const period = hours >= 12 ? 'PM' : 'AM';
+    const displayHour = hours > 12 ? hours - 12 : (hours === 0 ? 12 : hours);
+    return mins === '00' ? `${displayHour}${period}` : `${displayHour}:${mins}${period}`;
+}
+
+/**
  * Check if a plan has demand charges
  * @param {Object} planData - Plan data to check
  * @returns {boolean} True if plan has demand charges
@@ -531,6 +663,7 @@ function hasDemandCharge(planData) {
  */
 function calculateAndRankPlans(plansData, usagePattern) {
     const calculations = [];
+    const hasSolar = (usagePattern.solarExport || 0) > 0;
 
     for (const plan of plansData) {
         // Disqualify plans with suspicious zero/null rates or demand charges
@@ -540,7 +673,16 @@ function calculateAndRankPlans(plansData, usagePattern) {
             console.log(`Disqualified plan: ${plan.plan_name} (${plan.retailer_name}) - ${reason}`);
             continue;
         }
-        
+
+        // For solar users, check for battery-only FiT plans and exclude them
+        if (hasSolar) {
+            const batteryCheck = hasBatteryOnlySolarFit(plan);
+            if (batteryCheck.isBatteryOnly) {
+                console.log(`Excluded battery-only FiT plan for solar user: ${plan.plan_name} (${plan.retailer_name}) - ${batteryCheck.reason}`);
+                continue;
+            }
+        }
+
         const calculation = calculatePlanCost(plan, usagePattern);
         if (calculation) {
             calculations.push(calculation);
@@ -639,6 +781,7 @@ if (typeof module !== 'undefined' && module.exports) {
         calculateAndRankPlans,
         shouldDisqualifyPlan,
         hasDemandCharge,
+        hasBatteryOnlySolarFit,
         generateStrategicRecommendation,
         getPlanComparison,
         validateInputs,
