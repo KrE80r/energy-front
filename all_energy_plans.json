@@ -6010,7 +6010,7 @@
         }
       },
       {
-        "plan_id": "AGL726436MRE27",
+        "plan_id": "AGL726436MRE28",
         "plan_name": "Residential Smart Saver - Velocity New To AGL",
         "retailer_name": "AGL",
         "plan_type": "TOU",
@@ -6157,7 +6157,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "AGL726436MRE27",
+            "planId": "AGL726436MRE28",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -6315,7 +6315,7 @@
                       "name": "$100 online sign up credit"
                     },
                     {
-                      "name": "Sign-Up Velocity Points:10,000"
+                      "name": "Sign-Up Velocity Points:20,000"
                     }
                   ],
                   "fuelType": "E",
@@ -6350,10 +6350,10 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "AGL",
-              "planId": "AGL726436MRE27",
+              "planId": "AGL726436MRE28",
               "retailerCode": "AGL"
             },
-            "planType": "E#R#AGL726436MRE27",
+            "planType": "E#R#AGL726436MRE28",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -6652,7 +6652,7 @@
                         "description": "For new & moving AGL customers who stay with AGL at the same address for 90 days from start of the plan. Credit will appear on next bill after 90 days. Non-transferable. Accounts may be excluded from receiving more than one credit per fuel in 12 months"
                       },
                       {
-                        "name": "Sign-Up Velocity Points:10,000",
+                        "name": "Sign-Up Velocity Points:20,000",
                         "description": "Eligibility criteria and Terms & Conditions  apply. Points in T&Cs. Limit per customer: One Offer per fuel and a maximum of two supply addresses."
                       }
                     ],
@@ -6704,7 +6704,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1029849,
+                "batchId": 1033011,
                 "retailerId": "9620",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -6716,12 +6716,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "AGL",
-                "planId": "AGL726436MRE27",
+                "planId": "AGL726436MRE28",
                 "retailerCode": "AGL",
                 "state": "SA",
-                "effectiveDate": "2026-01-01"
+                "effectiveDate": "2026-02-01"
               },
-              "planId": "AGL726436MRE27",
+              "planId": "AGL726436MRE28",
               "postcodes": {
                 "5097": 1
               }
@@ -61146,18 +61146,18 @@
         }
       },
       {
-        "plan_id": "ORI1027263MRE1",
-        "plan_name": "Origin Affinity Variable ePlus - OBS (New/Moving Cust)",
+        "plan_id": "ORI1032823MRE1",
+        "plan_name": "Origin Go Variable - New and Moving Customers only",
         "retailer_name": "Origin Energy",
         "plan_type": "TOU",
         "tariff_type": "TOU",
         "monthly_cost": 310,
-        "quarterly_cost": 930,
-        "annual_cost": 3740,
-        "peak_cost": 53.086000000000006,
-        "shoulder_cost": 31.361000000000004,
-        "off_peak_cost": 26.191,
-        "daily_supply_charge": 103.29000000000002,
+        "quarterly_cost": 940,
+        "annual_cost": 3780,
+        "peak_cost": 53.69100000000001,
+        "shoulder_cost": 31.713,
+        "off_peak_cost": 26.488,
+        "daily_supply_charge": 104.44500000000001,
         "detailed_time_blocks": [
           {
             "name": "Peak",
@@ -61177,8 +61177,8 @@
             ],
             "rates": [
               {
-                "unit_price": 48.26,
-                "unit_price_gst": 53.086000000000006,
+                "unit_price": 48.81,
+                "unit_price_gst": 53.69100000000001,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -61199,8 +61199,8 @@
             ],
             "rates": [
               {
-                "unit_price": 28.51,
-                "unit_price_gst": 31.361000000000004,
+                "unit_price": 28.83,
+                "unit_price_gst": 31.713,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -61221,8 +61221,8 @@
             ],
             "rates": [
               {
-                "unit_price": 23.81,
-                "unit_price_gst": 26.191,
+                "unit_price": 24.08,
+                "unit_price_gst": 26.488,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -61276,7 +61276,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "ORI1027263MRE1",
+            "planId": "ORI1032823MRE1",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -61387,7 +61387,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 48.26,
+                              "unitPrice": 48.81,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -61395,7 +61395,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 28.51,
+                              "unitPrice": 28.83,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -61403,14 +61403,14 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 23.81,
+                              "unitPrice": 24.08,
                               "measureUnit": "KWH"
                             }
                           ]
                         }
                       ],
                       "blockPeriod": "P1Y",
-                      "dailySupplyCharge": 93.9
+                      "dailySupplyCharge": 94.95
                     }
                   ],
                   "greenCharge": [
@@ -61445,14 +61445,6 @@
                   ],
                   "eligibilityRestriction": [
                     {
-                      "type": "PS"
-                    },
-                    {
-                      "type": "OC",
-                      "description": "Only available to customers who opt to receive e-billing/correspondence via email on sign up (but can cancel these at any time and still receive the offer)",
-                      "information": "Efulfillment"
-                    },
-                    {
                       "type": "OC",
                       "description": "Offer only available to new residential electricity customers, and existing customers moving to a new property",
                       "information": "New and Moving Customers Only"
@@ -61465,26 +61457,24 @@
                   ]
                 }
               ],
-              "planName": "Origin Affinity Variable ePlus - OBS (New/Moving Cust)",
+              "planName": "Origin Go Variable - New and Moving Customers only",
               "retailerId": "9639",
-              "thirdPartyId": "707798",
               "customerType": "R",
-              "thirdPartyName": "One Big Switch",
               "fuelType": "E",
               "retailerName": "Origin Energy",
-              "planId": "ORI1027263MRE1",
+              "planId": "ORI1032823MRE1",
               "retailerCode": "ORI"
             },
-            "planType": "E#R#ORI1027263MRE1",
+            "planType": "E#R#ORI1032823MRE1",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
                   "small": {
                     "quarterly": {
-                      "noDiscounts": 390,
-                      "allDiscounts": 390,
-                      "guaranteedDiscount": 390
+                      "noDiscounts": 400,
+                      "allDiscounts": 400,
+                      "guaranteedDiscount": 400
                     },
                     "monthly": {
                       "noDiscounts": 140,
@@ -61492,16 +61482,16 @@
                       "guaranteedDiscount": 140
                     },
                     "yearly": {
-                      "noDiscounts": 1650,
-                      "allDiscounts": 1650,
-                      "guaranteedDiscount": 1650
+                      "noDiscounts": 1670,
+                      "allDiscounts": 1670,
+                      "guaranteedDiscount": 1670
                     }
                   },
                   "large": {
                     "quarterly": {
-                      "noDiscounts": 930,
-                      "allDiscounts": 930,
-                      "guaranteedDiscount": 930
+                      "noDiscounts": 940,
+                      "allDiscounts": 940,
+                      "guaranteedDiscount": 940
                     },
                     "monthly": {
                       "noDiscounts": 310,
@@ -61509,26 +61499,26 @@
                       "guaranteedDiscount": 310
                     },
                     "yearly": {
-                      "noDiscounts": 3740,
-                      "allDiscounts": 3740,
-                      "guaranteedDiscount": 3740
+                      "noDiscounts": 3780,
+                      "allDiscounts": 3780,
+                      "guaranteedDiscount": 3780
                     }
                   },
                   "medium": {
                     "quarterly": {
-                      "noDiscounts": 660,
-                      "allDiscounts": 660,
-                      "guaranteedDiscount": 660
+                      "noDiscounts": 670,
+                      "allDiscounts": 670,
+                      "guaranteedDiscount": 670
                     },
                     "monthly": {
-                      "noDiscounts": 220,
-                      "allDiscounts": 220,
-                      "guaranteedDiscount": 220
+                      "noDiscounts": 230,
+                      "allDiscounts": 230,
+                      "guaranteedDiscount": 230
                     },
                     "yearly": {
-                      "noDiscounts": 2680,
-                      "allDiscounts": 2680,
-                      "guaranteedDiscount": 2680
+                      "noDiscounts": 2720,
+                      "allDiscounts": 2720,
+                      "guaranteedDiscount": 2720
                     }
                   }
                 }
@@ -61665,7 +61655,7 @@
                             "description": "6am - 10am and 4pm - Midnight All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 48.26,
+                                "unitPrice": 48.81,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -61688,7 +61678,7 @@
                             "description": "All other times Midnight - 6am All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 28.51,
+                                "unitPrice": 28.83,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -61706,7 +61696,7 @@
                             "description": "10 am - 4pm All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 23.81,
+                                "unitPrice": 24.08,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -61722,7 +61712,7 @@
                         ],
                         "endDate": "2021-06-30",
                         "blockPeriod": "P1Y",
-                        "dailySupplyCharge": 93.9,
+                        "dailySupplyCharge": 94.95,
                         "startDate": "2020-07-01"
                       }
                     ],
@@ -61766,7 +61756,7 @@
                     "incentive": [
                       {
                         "name": "Account Credit",
-                        "description": "One credit per electricity account. If this Origin Affinity Variable ePlus electricity plan is still active with the customer on 31 May 2026, $100 (Incl. GST) credit will be applied to the customer's electricity account after that date. If the customer ends this Origin Affinity Variable ePlus electricity plan before that date, the customer will not receive any credit. Credit is not redeemable for cash."
+                        "description": "One credit per electricity account. If this Origin Go Variable electricity plan is still active with the customer on 31 May 2026, $200 (Incl. GST) credit will be applied to the customer's electricity account after that date. If the customer ends this Origin Go Variable electricity plan before that date, the customer will not receive any credit. Credit is not redeemable for cash."
                       }
                     ],
                     "fuelType": "E",
@@ -61797,14 +61787,6 @@
                     ],
                     "eligibilityRestriction": [
                       {
-                        "type": "PS"
-                      },
-                      {
-                        "type": "OC",
-                        "description": "Only available to customers who opt to receive e-billing/correspondence via email on sign up (but can cancel these at any time and still receive the offer)",
-                        "information": "Efulfillment"
-                      },
-                      {
                         "type": "OC",
                         "description": "Offer only available to new residential electricity customers, and existing customers moving to a new property",
                         "information": "New and Moving Customers Only"
@@ -61818,7 +61800,7 @@
                     "isFixed": false
                   }
                 ],
-                "planName": "Origin Affinity Variable ePlus - OBS (New/Moving Cust)",
+                "planName": "Origin Go Variable - New and Moving Customers only",
                 "planStatus": "PUBLISHED",
                 "supplyArea": [
                   {
@@ -61826,27 +61808,25 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1027341,
+                "batchId": 1034127,
                 "retailerId": "9639",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "11+$100",
-                  "E_AFFIPLUS_11PC_VAR_SAPN_REV_251201",
+                  "10+$200",
+                  "E_GOVARIABLE_10PC_VAR_SAPN_CP_260204",
                   "Time of Use",
                   "RTOU_JULY2025"
                 ],
-                "thirdPartyId": "707798",
                 "customerType": "R",
-                "thirdPartyName": "One Big Switch",
                 "fuelType": "E",
                 "retailerName": "Origin Energy",
-                "planId": "ORI1027263MRE1",
+                "planId": "ORI1032823MRE1",
                 "retailerCode": "ORI",
                 "state": "SA",
-                "effectiveDate": "2025-12-18"
+                "effectiveDate": "2026-02-04"
               },
-              "planId": "ORI1027263MRE1",
+              "planId": "ORI1032823MRE1",
               "postcodes": {
                 "5097": 1
               }
@@ -70612,7 +70592,7 @@
         }
       },
       {
-        "plan_id": "ORI848791MRE6",
+        "plan_id": "ORI848791MRE8",
         "plan_name": "Origin Affinity Variable ePlus - One Big Switch",
         "retailer_name": "Origin Energy",
         "plan_type": "TOU",
@@ -70742,7 +70722,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "ORI848791MRE6",
+            "planId": "ORI848791MRE8",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -70923,10 +70903,10 @@
               "thirdPartyName": "One Big Switch",
               "fuelType": "E",
               "retailerName": "Origin Energy",
-              "planId": "ORI848791MRE6",
+              "planId": "ORI848791MRE8",
               "retailerCode": "ORI"
             },
-            "planType": "E#R#ORI848791MRE6",
+            "planType": "E#R#ORI848791MRE8",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -71261,7 +71241,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1023723,
+                "batchId": 1034861,
                 "retailerId": "9639",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -71276,12 +71256,12 @@
                 "thirdPartyName": "One Big Switch",
                 "fuelType": "E",
                 "retailerName": "Origin Energy",
-                "planId": "ORI848791MRE6",
+                "planId": "ORI848791MRE8",
                 "retailerCode": "ORI",
                 "state": "SA",
-                "effectiveDate": "2025-12-02"
+                "effectiveDate": "2026-02-13"
               },
-              "planId": "ORI848791MRE6",
+              "planId": "ORI848791MRE8",
               "postcodes": {
                 "5097": 1
               }
@@ -87158,7 +87138,7 @@
         }
       },
       {
-        "plan_id": "SUM926364SRE3",
+        "plan_id": "SUM1034969SRE1",
         "plan_name": "Sumo Standing Offer TOU",
         "retailer_name": "Sumo",
         "plan_type": "TOU",
@@ -87168,7 +87148,7 @@
         "annual_cost": 3930,
         "peak_cost": 50.49,
         "shoulder_cost": 37.025999999999996,
-        "off_peak_cost": 35.904,
+        "off_peak_cost": 35.86000000000001,
         "daily_supply_charge": 127.90800000000002,
         "detailed_time_blocks": [
           {
@@ -87233,8 +87213,8 @@
             ],
             "rates": [
               {
-                "unit_price": 32.64,
-                "unit_price_gst": 35.904,
+                "unit_price": 32.6,
+                "unit_price_gst": 35.86000000000001,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -87284,7 +87264,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "SUM926364SRE3",
+            "planId": "SUM1034969SRE1",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -87308,6 +87288,9 @@
                       "singleTariffPeriod": "P1Y",
                       "startDate": "2025-07-01"
                     }
+                  ],
+                  "networkTariffCode": [
+                    "RTOU"
                   ],
                   "fee": [
                     {
@@ -87337,6 +87320,7 @@
                     }
                   ],
                   "termType": "N",
+                  "networkTariffType": "PT",
                   "tariffPeriod": [
                     {
                       "touBlock": [
@@ -87359,7 +87343,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 32.64,
+                              "unitPrice": 32.6,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -87387,10 +87371,10 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Sumo",
-              "planId": "SUM926364SRE3",
+              "planId": "SUM1034969SRE1",
               "retailerCode": "SUM"
             },
-            "planType": "E#R#SUM926364SRE3",
+            "planType": "E#R#SUM1034969SRE1",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -87480,6 +87464,9 @@
                       }
                     ],
                     "additionalFeeInformation": "We pass through any fee from your distributor, including fees for disconnection or reconnection, or special meter read (move-out). Distributor fees at https://www.sumo.com.au/help-and-support/rates-and-other-charges/other-fees-and-charges. Fee applied to your next bill.",
+                    "networkTariffCode": [
+                      "RTOU"
+                    ],
                     "fee": [
                       {
                         "description": "Dishonoured Payment Fee",
@@ -87513,6 +87500,7 @@
                       }
                     ],
                     "termType": "N",
+                    "networkTariffType": "PT",
                     "tariffPeriod": [
                       {
                         "name": "Full Year",
@@ -87563,7 +87551,7 @@
                             "description": "Shoulder",
                             "blockRate": [
                               {
-                                "unitPrice": 32.64,
+                                "unitPrice": 32.6,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -87615,19 +87603,19 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 976225,
+                "batchId": 1034965,
                 "retailerId": "544846",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Sumo",
-                "planId": "SUM926364SRE3",
+                "planId": "SUM1034969SRE1",
                 "retailerCode": "SUM",
                 "state": "SA",
-                "effectiveDate": "2025-07-10"
+                "effectiveDate": "2026-02-13"
               },
-              "planId": "SUM926364SRE3",
+              "planId": "SUM1034969SRE1",
               "postcodes": {
                 "5097": 1
               }

@@ -88,17 +88,27 @@ async function loadEnergyPlans() {
         const restrictedPlanIds = [
             // SC (Seniors Card) Restrictions
             "AGL360486MRE33", "AGL898888MRE3",
-            
+
             // OC (Other Customer Requirements) Restrictions
             "AGL100677MRE45", "AGL360621MRE32", "AGL686236MRE19", "AGL726430MRE17",
             "AGL726436MRE22", "AGL733560MRE17", "AGL827771MRE6", "AGL840896MRE6",
             "AGL898820MRE3", "AGL898840MRE3", "AGL907767MRE2", "AGL907790MRE2",
             "ALI849388MRE3", "ALI875577MRE3", "ENE676768MRE8", "ENE676773MRE8",
-            "ENG938049SRE1", "ENG938141MRE1", "ENG938152MRE1", "ENG938161MRE1",
-            "ENG938177MRE1", "ENG938181MRE1", "ENG939788MRE1", "ENG939829MRE1",
             "LUM203108MRE20", "ORI539830MRE15", "ORI665045MRE13", "ORI727571MRE7",
             "ORI848686MRE5", "ORI848791MRE3", "OVO723748MRE13", "OVO723789MRE13",
-            "RED552636MRE13", "RED927290MRE1"
+            "RED552636MRE13", "RED927290MRE1",
+
+            // ENGIE special requirement plans (SOHO, EV, VPP, Movers, NRMA Perks)
+            "ENG1002194MRE1",  // SA EV Flex Charge - requires electric vehicle
+            "ENG1009526MRE1",  // SA _ ENGIE Home Business Flyer - SOHO only
+            "ENG1011746MRE1",  // SA - ENGIE SOHO Everyday - SOHO only
+            "ENG938049SRE2",   // SA ENGIE Home Business Standing - SOHO only
+            "ENG938071MRE2",   // SA - ENGIE VPP Advantage - requires battery/inverter
+            "ENG938152MRE1",   // SA _ENGIE Movers - must be moving house
+            "ENG938161MRE3",   // SA _ENGIE Perks - requires NRMA membership
+            "ENG938177MRE1",   // SA _ENGIE SOHO Movers - SOHO + moving
+            "ENG939788MRE1",   // SA _ENGIE Home Business GreenPower - SOHO only
+            "ENG939829MRE1"    // SA _ ENGIE Home Business GreenPower - SOHO only
         ];
         
         const beforeRestrictedFilter = touPlans.length;
