@@ -84,35 +84,44 @@ async function loadEnergyPlans() {
             }
         });
         
-        // Filter out plans with SC (Seniors Card) and OC (Other Customer Requirements) restrictions
-        const restrictedPlanIds = [
-            // SC (Seniors Card) Restrictions
-            "AGL360486MRE33", "AGL898888MRE3",
+        // Filter out plans with eligibility restrictions that don't apply to general residential users
+        // Uses restriction TYPE codes from the API data (resilient to plan ID version changes)
+        //
+        // Restriction types:
+        //   CB = Connected Battery required (VPP plans)
+        //   SC = Seniors Card required
+        //   OC = Other Condition (memberships, partnerships, SOHO, EV, movers, etc.)
+        //   FF = Frequent Flyer/Loyalty program required
+        //   SN = Sign-up/New connection only
+        //
+        // Types we KEEP (user may qualify):
+        //   SM = Smart Meter required (free upgrade available)
+        //   SP = Solar Panel specific (user may have solar)
+        //   PS = Pricing Structure specific
+        //   SO = Sign-up channel (online only - anyone can do)
 
-            // OC (Other Customer Requirements) Restrictions
-            "AGL100677MRE45", "AGL360621MRE32", "AGL686236MRE19", "AGL726430MRE17",
-            "AGL726436MRE22", "AGL733560MRE17", "AGL827771MRE6", "AGL840896MRE6",
-            "AGL898820MRE3", "AGL898840MRE3", "AGL907767MRE2", "AGL907790MRE2",
-            "ALI849388MRE3", "ALI875577MRE3", "ENE676768MRE8", "ENE676773MRE8",
-            "LUM203108MRE20", "ORI539830MRE15", "ORI665045MRE13", "ORI727571MRE7",
-            "ORI848686MRE5", "ORI848791MRE3", "OVO723748MRE13", "OVO723789MRE13",
-            "RED552636MRE13", "RED927290MRE1",
+        const FILTER_OUT_RESTRICTION_TYPES = ['CB', 'SC', 'OC', 'FF', 'SN'];
 
-            // ENGIE special requirement plans (SOHO, EV, VPP, Movers, NRMA Perks)
-            "ENG1002194MRE1",  // SA EV Flex Charge - requires electric vehicle
-            "ENG1009526MRE1",  // SA _ ENGIE Home Business Flyer - SOHO only
-            "ENG1011746MRE1",  // SA - ENGIE SOHO Everyday - SOHO only
-            "ENG938049SRE2",   // SA ENGIE Home Business Standing - SOHO only
-            "ENG938071MRE2",   // SA - ENGIE VPP Advantage - requires battery/inverter
-            "ENG938152MRE1",   // SA _ENGIE Movers - must be moving house
-            "ENG938161MRE3",   // SA _ENGIE Perks - requires NRMA membership
-            "ENG938177MRE1",   // SA _ENGIE SOHO Movers - SOHO + moving
-            "ENG939788MRE1",   // SA _ENGIE Home Business GreenPower - SOHO only
-            "ENG939829MRE1"    // SA _ ENGIE Home Business GreenPower - SOHO only
-        ];
-        
         const beforeRestrictedFilter = touPlans.length;
-        touPlans = touPlans.filter(plan => !restrictedPlanIds.includes(plan.plan_id));
+        touPlans = touPlans.filter(plan => {
+            // Get eligibility restrictions from plan data
+            const restrictions = plan.raw_plan_data_complete
+                ?.detailed_api_response
+                ?.data
+                ?.planData
+                ?.contract?.[0]
+                ?.eligibilityRestriction || [];
+
+            // Check if any restriction type should be filtered out
+            const restrictionTypes = restrictions.map(r => r.type);
+            const shouldFilter = restrictionTypes.some(type => FILTER_OUT_RESTRICTION_TYPES.includes(type));
+
+            if (shouldFilter) {
+                console.log(`Filtering ${plan.plan_id} (${plan.plan_name}) - restrictions: ${restrictionTypes.join(', ')}`);
+            }
+
+            return !shouldFilter;
+        });
         const restrictedPlansFiltered = beforeRestrictedFilter - touPlans.length;
         
         console.log(`🔍 FILTER RESULTS: Started with ${originalCount} plans, kept ${touPlans.length} plans, filtered out ${originalCount - touPlans.length} plans (${originalCount - beforeRestrictedFilter} for old effectiveDate, ${restrictedPlansFiltered} for eligibility restrictions)`);
