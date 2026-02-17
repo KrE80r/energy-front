@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Plan Hopping Strategy - July 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #08090c;
+            --bg-card: #0f1014;
+            --bg-elevated: #16171d;
+            --border: #252530;
+            --border-light: #35354a;
+            --text-primary: #f4f4f8;
+            --text-secondary: #9494a8;
+            --text-muted: #5a5a70;
+            --accent-emerald: #10b981;
+            --accent-emerald-soft: rgba(16, 185, 129, 0.15);
+            --accent-amber: #f59e0b;
+            --accent-amber-soft: rgba(245, 158, 11, 0.12);
+            --accent-violet: #8b5cf6;
+            --accent-rose: #f43f5e;
+            --accent-rose-soft: rgba(244, 63, 94, 0.12);
+            --accent-sky: #0ea5e9;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .noise {
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .eyebrow {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent-emerald);
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            font-weight: 800;
+            letter-spacing: -1.5px;
+            margin-bottom: 12px;
+        }
+
+        h1 .highlight {
+            background: linear-gradient(135deg, var(--accent-amber) 0%, var(--accent-rose) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        /* User Profile Badge */
+        .profile-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            padding: 12px 24px;
+            margin-top: 24px;
+            font-size: 13px;
+        }
+
+        .profile-badge .item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .profile-badge .label {
+            color: var(--text-muted);
+        }
+
+        .profile-badge .value {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+            color: var(--accent-sky);
+        }
+
+        /* The Big Question */
+        .question-block {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 48px;
+            text-align: center;
+        }
+
+        .question-block h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: var(--text-secondary);
+        }
+
+        .versus {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .versus-option {
+            text-align: center;
+        }
+
+        .versus-label {
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .versus-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        .versus-option.baseline .versus-value {
+            color: var(--text-primary);
+        }
+
+        .versus-option.hopping .versus-value {
+            color: var(--accent-emerald);
+        }
+
+        .versus-or {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text-muted);
+        }
+
+        .verdict {
+            margin-top: 28px;
+            padding-top: 28px;
+            border-top: 1px solid var(--border);
+        }
+
+        .verdict-text {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        .verdict-text strong {
+            color: var(--accent-emerald);
+        }
+
+        .verdict-savings {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 12px;
+            background: var(--accent-emerald-soft);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: var(--accent-emerald);
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 100px;
+            font-size: 15px;
+        }
+
+        /* Credit Offers Table */
+        .credit-section {
+            margin-bottom: 56px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .section-header h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .section-header .tag {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--accent-amber);
+            background: var(--accent-amber-soft);
+            padding: 5px 12px;
+            border-radius: 100px;
+        }
+
+        .section-header .tag.danger {
+            color: var(--accent-rose);
+            background: var(--accent-rose-soft);
+        }
+
+        .credit-table {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .credit-row {
+            display: grid;
+            grid-template-columns: 1.5fr 0.8fr 0.8fr 0.8fr 0.8fr 1fr;
+            gap: 16px;
+            padding: 18px 28px;
+            border-bottom: 1px solid var(--border);
+            align-items: center;
+        }
+
+        .credit-row:last-child {
+            border-bottom: none;
+        }
+
+        .credit-row.header {
+            background: var(--bg-elevated);
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            padding: 14px 28px;
+        }
+
+        .credit-row.winner {
+            background: linear-gradient(90deg, var(--accent-emerald-soft) 0%, transparent 100%);
+        }
+
+        .credit-row.trap {
+            background: linear-gradient(90deg, var(--accent-rose-soft) 0%, transparent 100%);
+            opacity: 0.7;
+        }
+
+        .credit-plan {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .credit-plan .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+
+        .credit-plan .name {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .credit-plan .retailer {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .credit-val {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .credit-val.amount {
+            color: var(--accent-amber);
+            font-weight: 600;
+        }
+
+        .credit-val.stay {
+            color: var(--text-secondary);
+        }
+
+        .credit-val.premium {
+            color: var(--accent-rose);
+        }
+
+        .credit-val.premium.low {
+            color: var(--accent-sky);
+        }
+
+        .credit-val.profit {
+            font-weight: 700;
+        }
+
+        .credit-val.profit.positive {
+            color: var(--accent-emerald);
+        }
+
+        .credit-val.profit.negative {
+            color: var(--accent-rose);
+        }
+
+        .verdict-badge {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            padding: 4px 10px;
+            border-radius: 100px;
+            text-align: center;
+        }
+
+        .verdict-badge.go {
+            background: var(--accent-emerald);
+            color: var(--bg-deep);
+        }
+
+        .verdict-badge.trap {
+            background: var(--accent-rose);
+            color: white;
+        }
+
+        .verdict-badge.ok {
+            background: var(--accent-amber);
+            color: var(--bg-deep);
+        }
+
+        /* Timeline */
+        .timeline-section {
+            margin-bottom: 56px;
+        }
+
+        .timeline-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 32px;
+        }
+
+        .timeline-track {
+            display: flex;
+            gap: 3px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .timeline-seg {
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 4px;
+            font-weight: 600;
+            font-size: 13px;
+            color: white;
+            position: relative;
+        }
+
+        .timeline-seg .credit {
+            font-size: 11px;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        .timeline-seg .stay {
+            font-size: 10px;
+            font-weight: 400;
+            opacity: 0.75;
+        }
+
+        .timeline-seg.s1 { flex: 3.5; background: linear-gradient(135deg, #ec4899, #f43f5e); }
+        .timeline-seg.s2 { flex: 3; background: linear-gradient(135deg, #6366f1, #8b5cf6); }
+        .timeline-seg.s3 { flex: 1; background: linear-gradient(135deg, #f59e0b, #f97316); }
+        .timeline-seg.s4 { flex: 4.5; background: linear-gradient(135deg, #10b981, #14b8a6); }
+
+        .timeline-months {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 3px;
+        }
+
+        .timeline-month {
+            text-align: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            color: var(--text-muted);
+            padding: 8px 0;
+        }
+
+        .timeline-legend {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            padding: 12px 16px;
+            background: var(--bg-elevated);
+            border-radius: 10px;
+        }
+
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 4px;
+            flex-shrink: 0;
+        }
+
+        .legend-dot.s1 { background: linear-gradient(135deg, #ec4899, #f43f5e); }
+        .legend-dot.s2 { background: linear-gradient(135deg, #6366f1, #8b5cf6); }
+        .legend-dot.s3 { background: linear-gradient(135deg, #f59e0b, #f97316); }
+        .legend-dot.s4 { background: linear-gradient(135deg, #10b981, #14b8a6); }
+
+        .legend-item strong { color: var(--text-primary); font-weight: 600; }
+        .legend-item .monthly { color: var(--text-muted); font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+
+        .legend-credit {
+            font-size: 10px;
+            font-weight: 600;
+            color: var(--accent-amber);
+            background: var(--accent-amber-soft);
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin-left: auto;
+        }
+
+        .legend-stay {
+            font-size: 10px;
+            font-weight: 500;
+            color: var(--text-muted);
+            background: var(--bg-card);
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        /* Math Breakdown */
+        .math-section h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .math-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .math-row {
+            display: grid;
+            grid-template-columns: 1.5fr auto auto auto auto;
+            gap: 16px;
+            padding: 18px 28px;
+            border-bottom: 1px solid var(--border);
+            align-items: center;
+        }
+
+        .math-row:last-child {
+            border-bottom: none;
+        }
+
+        .math-row.header {
+            background: var(--bg-elevated);
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            padding: 14px 28px;
+        }
+
+        .math-row.total {
+            background: var(--bg-elevated);
+            font-weight: 600;
+        }
+
+        .math-plan {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .math-plan .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 3px;
+        }
+
+        .math-plan .name {
+            font-weight: 500;
+        }
+
+        .math-val {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            text-align: right;
+        }
+
+        .math-val.muted { color: var(--text-muted); }
+        .math-val.secondary { color: var(--text-secondary); }
+        .math-val.primary { color: var(--text-primary); }
+
+        .math-row.credits {
+            background: var(--accent-emerald-soft);
+        }
+
+        .math-row.credits .math-val {
+            color: var(--accent-emerald);
+        }
+
+        .math-row.total .math-val.final {
+            font-size: 1.2rem;
+            color: var(--accent-emerald);
+        }
+
+        /* Key Insight */
+        .insight-box {
+            background: linear-gradient(135deg, var(--accent-amber-soft) 0%, transparent 50%);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 16px;
+            padding: 24px 28px;
+            margin-top: 32px;
+        }
+
+        .insight-box h3 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--accent-amber);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .insight-box p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .insight-box code {
+            font-family: 'JetBrains Mono', monospace;
+            background: var(--bg-elevated);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 13px;
+            color: var(--accent-sky);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding-top: 40px;
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            color: var(--accent-sky);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .credit-row {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .credit-row.header {
+                display: none;
+            }
+
+            .timeline-legend {
+                grid-template-columns: 1fr;
+            }
+
+            .math-row {
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+            }
+
+            .math-row.header {
+                display: none;
+            }
+
+            .versus {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .profile-badge {
+                flex-direction: column;
+                gap: 8px;
+                border-radius: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="noise"></div>
+
+    <div class="container">
+        <header>
+            <div class="eyebrow">SA Energy Optimization · July 2026 Season</div>
+            <h1>Plan Hopping <span class="highlight">Credit Strategy</span></h1>
+            <p class="tagline">How long to stay on each plan to capture welcome credits profitably</p>
+
+            <div class="profile-badge">
+                <div class="item">
+                    <span class="label">Usage:</span>
+                    <span class="value">1,365 kWh/qtr</span>
+                </div>
+                <div class="item">
+                    <span class="label">Pattern:</span>
+                    <span class="value">50/30/20</span>
+                </div>
+                <div class="item">
+                    <span class="label">Solar:</span>
+                    <span class="value">None</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="question-block">
+            <h2>Annual Cost: Stay vs Hop</h2>
+            <div class="versus">
+                <div class="versus-option baseline">
+                    <div class="versus-label">GloBird BOOST All Year</div>
+                    <div class="versus-value">$2,220</div>
+                </div>
+                <div class="versus-or">VS</div>
+                <div class="versus-option hopping">
+                    <div class="versus-label">3-Switch + Credits</div>
+                    <div class="versus-value">$2,017</div>
+                </div>
+            </div>
+            <div class="verdict">
+                <p class="verdict-text"><strong>Strategic hopping wins</strong> — collect $300 in credits, pay only ~$97 in premiums</p>
+                <div class="verdict-savings">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    Save $203/year with verified numbers
+                </div>
+            </div>
+        </div>
+
+        <div class="credit-section">
+            <div class="section-header">
+                <h2>Credit Offers Analysis</h2>
+                <span class="tag">Verified from JSON</span>
+            </div>
+            <div class="credit-table">
+                <div class="credit-row header">
+                    <div>Plan</div>
+                    <div>Credit</div>
+                    <div>Stay Required</div>
+                    <div>Premium/mo</div>
+                    <div>Net Profit</div>
+                    <div>Verdict</div>
+                </div>
+                <div class="credit-row winner">
+                    <div class="credit-plan">
+                        <div class="dot" style="background: linear-gradient(135deg, #ec4899, #f43f5e);"></div>
+                        <div>
+                            <div class="name">Origin Go Variable</div>
+                            <div class="retailer">Origin Energy</div>
+                        </div>
+                    </div>
+                    <div class="credit-val amount">$200</div>
+                    <div class="credit-val stay">~3.5 months</div>
+                    <div class="credit-val premium">+$36</div>
+                    <div class="credit-val profit positive">+$74</div>
+                    <div><span class="verdict-badge go">BEST</span></div>
+                </div>
+                <div class="credit-row winner">
+                    <div class="credit-plan">
+                        <div class="dot" style="background: linear-gradient(135deg, #f59e0b, #f97316);"></div>
+                        <div>
+                            <div class="name">HomeDeal Advantage</div>
+                            <div class="retailer">Alinta Energy</div>
+                        </div>
+                    </div>
+                    <div class="credit-val amount">$100</div>
+                    <div class="credit-val stay">1st bill (~1 mo)</div>
+                    <div class="credit-val premium">+$35</div>
+                    <div class="credit-val profit positive">+$65</div>
+                    <div><span class="verdict-badge go">GO</span></div>
+                </div>
+                <div class="credit-row winner">
+                    <div class="credit-plan">
+                        <div class="dot" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);"></div>
+                        <div>
+                            <div class="name">Smart Saver - New To AGL</div>
+                            <div class="retailer">AGL</div>
+                        </div>
+                    </div>
+                    <div class="credit-val amount">$100</div>
+                    <div class="credit-val stay">90 days (3 mo)</div>
+                    <div class="credit-val premium low">+$12</div>
+                    <div class="credit-val profit positive">+$64</div>
+                    <div><span class="verdict-badge go">GO</span></div>
+                </div>
+                <div class="credit-row">
+                    <div class="credit-plan">
+                        <div class="dot" style="background: var(--text-muted);"></div>
+                        <div>
+                            <div class="name">Warm Welcome</div>
+                            <div class="retailer">Momentum Energy</div>
+                        </div>
+                    </div>
+                    <div class="credit-val amount">$50</div>
+                    <div class="credit-val stay">1st bill</div>
+                    <div class="credit-val premium">+$28</div>
+                    <div class="credit-val profit positive">+$22</div>
+                    <div><span class="verdict-badge ok">OK</span></div>
+                </div>
+                <div class="credit-row trap">
+                    <div class="credit-plan">
+                        <div class="dot" style="background: var(--accent-rose);"></div>
+                        <div>
+                            <div class="name">Switch Saver</div>
+                            <div class="retailer">Powershop</div>
+                        </div>
+                    </div>
+                    <div class="credit-val amount">$100</div>
+                    <div class="credit-val stay">1st bill</div>
+                    <div class="credit-val premium">+$82</div>
+                    <div class="credit-val profit negative">−$47*</div>
+                    <div><span class="verdict-badge trap">TRAP</span></div>
+                </div>
+            </div>
+
+            <div class="insight-box">
+                <h3>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    The Stay Requirement Math
+                </h3>
+                <p>
+                    Net Profit = <code>Credit − (Premium × Stay Months)</code><br><br>
+                    Powershop's $100 credit looks good but their rates are <strong>$82/month higher</strong> than GloBird.
+                    Even staying just 1 month costs you $82, making net profit negative if you factor switching costs.
+                    <br><br>
+                    *AGL has the <strong>lowest premium (+$12/mo)</strong> so even with 3-month stay, you still profit $64.
+                </p>
+            </div>
+        </div>
+
+        <div class="timeline-section">
+            <div class="section-header">
+                <h2>Optimal 12-Month Schedule</h2>
+                <span class="tag">Starting July 2026</span>
+            </div>
+            <div class="timeline-card">
+                <div class="timeline-track">
+                    <div class="timeline-seg s1">
+                        Origin
+                        <span class="credit">+$200</span>
+                        <span class="stay">3.5 mo stay</span>
+                    </div>
+                    <div class="timeline-seg s2">
+                        AGL
+                        <span class="credit">+$100</span>
+                        <span class="stay">90 day stay</span>
+                    </div>
+                    <div class="timeline-seg s3">
+                        Alinta
+                        <span class="credit">+$100</span>
+                    </div>
+                    <div class="timeline-seg s4">
+                        GloBird BOOST
+                        <span class="stay">cheapest rate</span>
+                    </div>
+                </div>
+                <div class="timeline-months">
+                    <div class="timeline-month">Jul</div>
+                    <div class="timeline-month">Aug</div>
+                    <div class="timeline-month">Sep</div>
+                    <div class="timeline-month">Oct</div>
+                    <div class="timeline-month">Nov</div>
+                    <div class="timeline-month">Dec</div>
+                    <div class="timeline-month">Jan</div>
+                    <div class="timeline-month">Feb</div>
+                    <div class="timeline-month">Mar</div>
+                    <div class="timeline-month">Apr</div>
+                    <div class="timeline-month">May</div>
+                    <div class="timeline-month">Jun</div>
+                </div>
+                <div class="timeline-legend">
+                    <div class="legend-item">
+                        <div class="legend-dot s1"></div>
+                        <strong>Origin Go Variable</strong>
+                        <span class="monthly">$221/mo</span>
+                        <span class="legend-stay">3.5 mo</span>
+                        <span class="legend-credit">+$200</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot s2"></div>
+                        <strong>AGL Smart Saver</strong>
+                        <span class="monthly">$197/mo</span>
+                        <span class="legend-stay">90 days</span>
+                        <span class="legend-credit">+$100</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot s3"></div>
+                        <strong>Alinta HomeDeal</strong>
+                        <span class="monthly">$220/mo</span>
+                        <span class="legend-stay">1st bill</span>
+                        <span class="legend-credit">+$100</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-dot s4"></div>
+                        <strong>GloBird BOOST</strong>
+                        <span class="monthly">$185/mo</span>
+                        <span class="legend-stay">—</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="math-section">
+            <h2>The Complete Math</h2>
+            <div class="math-card">
+                <div class="math-row header">
+                    <div>Plan</div>
+                    <div>Stay</div>
+                    <div>Monthly</div>
+                    <div>Subtotal</div>
+                    <div>Credit</div>
+                </div>
+                <div class="math-row">
+                    <div class="math-plan">
+                        <div class="dot" style="background: linear-gradient(135deg, #ec4899, #f43f5e);"></div>
+                        <span class="name">Origin Go Variable</span>
+                    </div>
+                    <div class="math-val muted">3.5 mo</div>
+                    <div class="math-val secondary">$221</div>
+                    <div class="math-val primary">$774</div>
+                    <div class="math-val" style="color: var(--accent-amber);">+$200</div>
+                </div>
+                <div class="math-row">
+                    <div class="math-plan">
+                        <div class="dot" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);"></div>
+                        <span class="name">AGL Smart Saver</span>
+                    </div>
+                    <div class="math-val muted">3 mo</div>
+                    <div class="math-val secondary">$197</div>
+                    <div class="math-val primary">$591</div>
+                    <div class="math-val" style="color: var(--accent-amber);">+$100</div>
+                </div>
+                <div class="math-row">
+                    <div class="math-plan">
+                        <div class="dot" style="background: linear-gradient(135deg, #f59e0b, #f97316);"></div>
+                        <span class="name">Alinta HomeDeal</span>
+                    </div>
+                    <div class="math-val muted">1 mo</div>
+                    <div class="math-val secondary">$220</div>
+                    <div class="math-val primary">$220</div>
+                    <div class="math-val" style="color: var(--accent-amber);">+$100</div>
+                </div>
+                <div class="math-row">
+                    <div class="math-plan">
+                        <div class="dot" style="background: linear-gradient(135deg, #10b981, #14b8a6);"></div>
+                        <span class="name">GloBird BOOST</span>
+                    </div>
+                    <div class="math-val muted">4.5 mo</div>
+                    <div class="math-val secondary">$185</div>
+                    <div class="math-val primary">$833</div>
+                    <div class="math-val muted">—</div>
+                </div>
+                <div class="math-row">
+                    <div class="math-plan">
+                        <span class="name" style="color: var(--text-muted);">Gross Total (12 months)</span>
+                    </div>
+                    <div class="math-val muted"></div>
+                    <div class="math-val muted"></div>
+                    <div class="math-val primary">$2,418</div>
+                    <div class="math-val muted"></div>
+                </div>
+                <div class="math-row credits">
+                    <div class="math-plan">
+                        <span class="name">Total Credits Collected</span>
+                    </div>
+                    <div class="math-val"></div>
+                    <div class="math-val"></div>
+                    <div class="math-val"></div>
+                    <div class="math-val">−$400</div>
+                </div>
+                <div class="math-row total">
+                    <div class="math-plan">
+                        <span class="name">Net Annual Cost</span>
+                    </div>
+                    <div class="math-val"></div>
+                    <div class="math-val"></div>
+                    <div class="math-val final">$2,017</div>
+                    <div class="math-val"></div>
+                </div>
+            </div>
+
+            <div class="insight-box" style="margin-top: 24px; background: linear-gradient(135deg, var(--accent-emerald-soft) 0%, transparent 50%); border-color: rgba(16, 185, 129, 0.3);">
+                <h3 style="color: var(--accent-emerald);">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    12-Month Cooldown = Repeatable Yearly
+                </h3>
+                <p>
+                    All retailers have <code>12-month cooldowns</code> at the same address. This means you can repeat this
+                    strategy every year. Over 5 years: <strong>~$1,000+ in savings</strong> from strategic plan hopping.
+                </p>
+            </div>
+        </div>
+
+        <footer>
+            <p>Usage: 1,365 kWh/quarter · 50% peak, 30% shoulder, 20% off-peak · No solar</p>
+            <p style="margin-top: 8px;">Rates verified from <a href="https://energy.nazmy.io">energy.nazmy.io</a> JSON data</p>
+        </footer>
+    </div>
+</body>
+</html>

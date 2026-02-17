@@ -1,10 +1,10 @@
 {
   "metadata": {
     "postcode": "5097",
-    "total_plans": 152,
-    "filtered_out": 441,
+    "total_plans": 154,
+    "filtered_out": 447,
     "extraction_date": "2025-06-26",
-    "tou_count": 152,
+    "tou_count": 154,
     "sr_count": 0,
     "other_count": 0,
     "filters_applied": "Excluded tariff types: SR, SRCL, TOUCL",
@@ -35320,7 +35320,791 @@
         }
       },
       {
-        "plan_id": "FP11023987MRE1",
+        "plan_id": "FEA1035142SRE1",
+        "plan_name": "Freedom Standing Offer",
+        "retailer_name": "Flipped Energy",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 340,
+        "quarterly_cost": 1000,
+        "annual_cost": 4030,
+        "peak_cost": 66.528,
+        "shoulder_cost": 42.73500000000001,
+        "off_peak_cost": 14.069,
+        "daily_supply_charge": 200.28800000000004,
+        "detailed_time_blocks": [
+          {
+            "name": "NIGHT",
+            "description": "Peak Time",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "SAT|SUN|MON|TUE|WED|THU|FRI",
+                "start_time": "1700",
+                "end_time": "2059"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 60.48,
+                "unit_price_gst": 66.528,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "DAY",
+            "description": "Off-Peak time",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "SAT|SUN|MON|TUE|WED|THU|FRI",
+                "start_time": "0900",
+                "end_time": "1659"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 12.79,
+                "unit_price_gst": 14.069,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "NIGHT",
+            "description": "Shoulder",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "SAT|SUN|MON|TUE|WED|THU|FRI",
+                "start_time": "2100",
+                "end_time": "0859"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 38.85,
+                "unit_price_gst": 42.73500000000001,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": null,
+          "paper_bill_fee": null,
+          "payment_processing_fees": [],
+          "late_payment_fee": null,
+          "disconnection_fee_move_out": null,
+          "disconnection_fee_non_payment": null,
+          "reconnection_fee": null,
+          "other_fees": [],
+          "credit_card_payment_fees": [],
+          "membership_fee": null
+        },
+        "membership_fee_annual": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_monthly": 0,
+        "solar_feed_in_rate_r": 2,
+        "payment_options": [
+          "Direct Debit",
+          "Credit Card",
+          "BPay"
+        ],
+        "raw_plan_data_complete": {
+          "main_api_response": {
+            "planId": "FEA1035142SRE1",
+            "planData": {
+              "tariffType": "TOU",
+              "contract": [
+                {
+                  "pricingModel": "TOU",
+                  "solarFit": [
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "OTHER",
+                      "endDate": "2030-02-14",
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 2,
+                          "measureUnit": "KWH",
+                          "rebate": true
+                        }
+                      ],
+                      "rate": 2,
+                      "displayName": "Solar Feed In Tariff",
+                      "type": "R",
+                      "singleTariffPeriod": "P1Y",
+                      "startDate": "2026-02-15"
+                    }
+                  ],
+                  "termType": "N",
+                  "networkTariffType": "IS",
+                  "tariffPeriod": [
+                    {
+                      "touBlock": [
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 60.48,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 12.79,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 38.85,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        }
+                      ],
+                      "blockPeriod": "P1Y",
+                      "dailySupplyCharge": 182.08
+                    }
+                  ],
+                  "fuelType": "E",
+                  "meterType": [
+                    "Type 4"
+                  ],
+                  "paymentOption": [
+                    "DD",
+                    "CC",
+                    "BP"
+                  ]
+                }
+              ],
+              "planName": "Freedom Standing Offer",
+              "retailerId": "25002",
+              "customerType": "R",
+              "fuelType": "E",
+              "retailerName": "Flipped Energy",
+              "planId": "FEA1035142SRE1",
+              "retailerCode": "FEA"
+            },
+            "planType": "E#R#FEA1035142SRE1",
+            "postcode": 5097,
+            "pcr": {
+              "costs": {
+                "electricity": {
+                  "small": {
+                    "quarterly": {
+                      "noDiscounts": 470,
+                      "allDiscounts": 470,
+                      "guaranteedDiscount": 470
+                    },
+                    "monthly": {
+                      "noDiscounts": 170,
+                      "allDiscounts": 170,
+                      "guaranteedDiscount": 170
+                    },
+                    "yearly": {
+                      "noDiscounts": 1980,
+                      "allDiscounts": 1980,
+                      "guaranteedDiscount": 1980
+                    }
+                  },
+                  "large": {
+                    "quarterly": {
+                      "noDiscounts": 1000,
+                      "allDiscounts": 1000,
+                      "guaranteedDiscount": 1000
+                    },
+                    "monthly": {
+                      "noDiscounts": 340,
+                      "allDiscounts": 340,
+                      "guaranteedDiscount": 340
+                    },
+                    "yearly": {
+                      "noDiscounts": 4030,
+                      "allDiscounts": 4030,
+                      "guaranteedDiscount": 4030
+                    }
+                  },
+                  "medium": {
+                    "quarterly": {
+                      "noDiscounts": 740,
+                      "allDiscounts": 740,
+                      "guaranteedDiscount": 740
+                    },
+                    "monthly": {
+                      "noDiscounts": 250,
+                      "allDiscounts": 250,
+                      "guaranteedDiscount": 250
+                    },
+                    "yearly": {
+                      "noDiscounts": 3000,
+                      "allDiscounts": 3000,
+                      "guaranteedDiscount": 3000
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "detailed_api_response": {
+            "data": {
+              "planData": {
+                "planType": "S",
+                "tariffType": "TOU",
+                "contract": [
+                  {
+                    "pricingModel": "TOU",
+                    "coolingOffDays": 10,
+                    "solarFit": [
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "OTHER",
+                        "endDate": "2030-02-14",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 2,
+                            "measureUnit": "KWH",
+                            "rebate": true
+                          }
+                        ],
+                        "rate": 2,
+                        "displayName": "Solar Feed In Tariff",
+                        "description": "Solar Feed In Tariff",
+                        "type": "R",
+                        "singleTariffPeriod": "P1Y",
+                        "startDate": "2026-02-15"
+                      }
+                    ],
+                    "additionalFeeInformation": "For information on additional fees, please visit www.flipped.energy or call 1300 110 100",
+                    "termType": "N",
+                    "networkTariffType": "IS",
+                    "tariffPeriod": [
+                      {
+                        "touBlock": [
+                          {
+                            "name": "NIGHT",
+                            "description": "Peak Time",
+                            "blockRate": [
+                              {
+                                "unitPrice": 60.48,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "P",
+                            "timeOfUse": [
+                              {
+                                "days": "SAT|SUN|MON|TUE|WED|THU|FRI",
+                                "startTime": "1700",
+                                "endTime": "2059"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "DAY",
+                            "description": "Off-Peak time",
+                            "blockRate": [
+                              {
+                                "unitPrice": 12.79,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "OP",
+                            "timeOfUse": [
+                              {
+                                "days": "SAT|SUN|MON|TUE|WED|THU|FRI",
+                                "startTime": "0900",
+                                "endTime": "1659"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "NIGHT",
+                            "description": "Shoulder",
+                            "blockRate": [
+                              {
+                                "unitPrice": 38.85,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "S",
+                            "timeOfUse": [
+                              {
+                                "days": "SAT|SUN|MON|TUE|WED|THU|FRI",
+                                "startTime": "2100",
+                                "endTime": "0859"
+                              }
+                            ]
+                          }
+                        ],
+                        "endDate": "2030-02-14",
+                        "blockPeriod": "P1Y",
+                        "startDate": "2026-02-15",
+                        "dailySupplyCharge": 182.08
+                      }
+                    ],
+                    "variation": "If we are going to vary your Rates, we will provide you with written notice of the variation as soon as practicable  or no later than your next bill or in accordance with any applicable laws and codes.",
+                    "fuelType": "E",
+                    "terms": "For futher details on the terms and conditions of the offer, please visit www.flipped.energy or call 1300 110 100",
+                    "timeDefinition": "LOCAL",
+                    "meterType": [
+                      "Type 4"
+                    ],
+                    "billFrequency": [
+                      {
+                        "number": 1,
+                        "period": "M"
+                      }
+                    ],
+                    "paymentOption": [
+                      "DD",
+                      "CC",
+                      "BP"
+                    ],
+                    "isFixed": false
+                  }
+                ],
+                "planName": "Freedom Standing Offer",
+                "planStatus": "PUBLISHED",
+                "supplyArea": [
+                  {
+                    "name": "SA Power Networks",
+                    "id": "42"
+                  }
+                ],
+                "batchId": 1035139,
+                "retailerId": "25002",
+                "genAvailable": true,
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "Flipped Energy",
+                "planId": "FEA1035142SRE1",
+                "retailerCode": "FEA",
+                "effectiveDate": "2026-02-16"
+              },
+              "planId": "FEA1035142SRE1",
+              "postcodes": {
+                "5097": 1
+              }
+            }
+          }
+        },
+        "raw_plan_data": {
+          "eligibility_restrictions": false,
+          "has_discounts": false,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      },
+      {
+        "plan_id": "FEA1035150MRE1",
+        "plan_name": "Freedom Switched On!",
+        "retailer_name": "Flipped Energy",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 290,
+        "quarterly_cost": 870,
+        "annual_cost": 3500,
+        "peak_cost": 63.382000000000005,
+        "shoulder_cost": 39.589000000000006,
+        "off_peak_cost": 10.923,
+        "daily_supply_charge": 121.00000000000001,
+        "detailed_time_blocks": [
+          {
+            "name": "NIGHT",
+            "description": "Peak Time",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "SAT|SUN|MON|TUE|WED|THU|FRI",
+                "start_time": "1700",
+                "end_time": "2059"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 57.62,
+                "unit_price_gst": 63.382000000000005,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "DAY",
+            "description": "Off-Peak time",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "SAT|SUN|MON|TUE|WED|THU|FRI",
+                "start_time": "0900",
+                "end_time": "1659"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 9.93,
+                "unit_price_gst": 10.923,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "NIGHT",
+            "description": "Shoulder",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "SAT|SUN|MON|TUE|WED|THU|FRI",
+                "start_time": "2100",
+                "end_time": "0859"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 35.99,
+                "unit_price_gst": 39.589000000000006,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": null,
+          "paper_bill_fee": null,
+          "payment_processing_fees": [],
+          "late_payment_fee": null,
+          "disconnection_fee_move_out": null,
+          "disconnection_fee_non_payment": null,
+          "reconnection_fee": null,
+          "other_fees": [],
+          "credit_card_payment_fees": [],
+          "membership_fee": null
+        },
+        "membership_fee_annual": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_monthly": 0,
+        "solar_feed_in_rate_r": 2,
+        "payment_options": [
+          "Direct Debit",
+          "Credit Card",
+          "BPay"
+        ],
+        "raw_plan_data_complete": {
+          "main_api_response": {
+            "planId": "FEA1035150MRE1",
+            "planData": {
+              "tariffType": "TOU",
+              "contract": [
+                {
+                  "pricingModel": "TOU",
+                  "solarFit": [
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "OTHER",
+                      "endDate": "2030-02-14",
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 2,
+                          "measureUnit": "KWH",
+                          "rebate": true
+                        }
+                      ],
+                      "rate": 2,
+                      "displayName": "Solar Feed In Tariff",
+                      "type": "R",
+                      "singleTariffPeriod": "P1Y",
+                      "startDate": "2026-02-15"
+                    }
+                  ],
+                  "termType": "N",
+                  "networkTariffType": "IS",
+                  "tariffPeriod": [
+                    {
+                      "touBlock": [
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 57.62,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 9.93,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 35.99,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        }
+                      ],
+                      "blockPeriod": "P1Y",
+                      "dailySupplyCharge": 110
+                    }
+                  ],
+                  "fuelType": "E",
+                  "meterType": [
+                    "Type 4"
+                  ],
+                  "paymentOption": [
+                    "DD",
+                    "CC",
+                    "BP"
+                  ]
+                }
+              ],
+              "planName": "Freedom Switched On!",
+              "retailerId": "25002",
+              "customerType": "R",
+              "fuelType": "E",
+              "retailerName": "Flipped Energy",
+              "planId": "FEA1035150MRE1",
+              "retailerCode": "FEA"
+            },
+            "planType": "E#R#FEA1035150MRE1",
+            "postcode": 5097,
+            "pcr": {
+              "costs": {
+                "electricity": {
+                  "small": {
+                    "quarterly": {
+                      "noDiscounts": 380,
+                      "allDiscounts": 380,
+                      "guaranteedDiscount": 380
+                    },
+                    "monthly": {
+                      "noDiscounts": 130,
+                      "allDiscounts": 130,
+                      "guaranteedDiscount": 130
+                    },
+                    "yearly": {
+                      "noDiscounts": 1600,
+                      "allDiscounts": 1600,
+                      "guaranteedDiscount": 1600
+                    }
+                  },
+                  "large": {
+                    "quarterly": {
+                      "noDiscounts": 870,
+                      "allDiscounts": 870,
+                      "guaranteedDiscount": 870
+                    },
+                    "monthly": {
+                      "noDiscounts": 290,
+                      "allDiscounts": 290,
+                      "guaranteedDiscount": 290
+                    },
+                    "yearly": {
+                      "noDiscounts": 3500,
+                      "allDiscounts": 3500,
+                      "guaranteedDiscount": 3500
+                    }
+                  },
+                  "medium": {
+                    "quarterly": {
+                      "noDiscounts": 630,
+                      "allDiscounts": 630,
+                      "guaranteedDiscount": 630
+                    },
+                    "monthly": {
+                      "noDiscounts": 210,
+                      "allDiscounts": 210,
+                      "guaranteedDiscount": 210
+                    },
+                    "yearly": {
+                      "noDiscounts": 2540,
+                      "allDiscounts": 2540,
+                      "guaranteedDiscount": 2540
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "detailed_api_response": {
+            "data": {
+              "planData": {
+                "planType": "M",
+                "tariffType": "TOU",
+                "contract": [
+                  {
+                    "pricingModel": "TOU",
+                    "coolingOffDays": 10,
+                    "solarFit": [
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "OTHER",
+                        "endDate": "2030-02-14",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 2,
+                            "measureUnit": "KWH",
+                            "rebate": true
+                          }
+                        ],
+                        "rate": 2,
+                        "displayName": "Solar Feed In Tariff",
+                        "description": "Solar Feed In Tariff",
+                        "type": "R",
+                        "singleTariffPeriod": "P1Y",
+                        "startDate": "2026-02-15"
+                      }
+                    ],
+                    "additionalFeeInformation": "For information on additional fees, please visit www.flipped.energy or call 1300 110 100",
+                    "termType": "N",
+                    "networkTariffType": "IS",
+                    "tariffPeriod": [
+                      {
+                        "touBlock": [
+                          {
+                            "name": "NIGHT",
+                            "description": "Peak Time",
+                            "blockRate": [
+                              {
+                                "unitPrice": 57.62,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "P",
+                            "timeOfUse": [
+                              {
+                                "days": "SAT|SUN|MON|TUE|WED|THU|FRI",
+                                "startTime": "1700",
+                                "endTime": "2059"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "DAY",
+                            "description": "Off-Peak time",
+                            "blockRate": [
+                              {
+                                "unitPrice": 9.93,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "OP",
+                            "timeOfUse": [
+                              {
+                                "days": "SAT|SUN|MON|TUE|WED|THU|FRI",
+                                "startTime": "0900",
+                                "endTime": "1659"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "NIGHT",
+                            "description": "Shoulder",
+                            "blockRate": [
+                              {
+                                "unitPrice": 35.99,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "S",
+                            "timeOfUse": [
+                              {
+                                "days": "SAT|SUN|MON|TUE|WED|THU|FRI",
+                                "startTime": "2100",
+                                "endTime": "0859"
+                              }
+                            ]
+                          }
+                        ],
+                        "endDate": "2030-02-14",
+                        "blockPeriod": "P1Y",
+                        "startDate": "2026-02-15",
+                        "dailySupplyCharge": 110
+                      }
+                    ],
+                    "variation": "If we are going to vary your Rates, we will provide you with written notice of the variation as soon as practicable  or no later than your next bill or in accordance with any applicable laws and codes.",
+                    "fuelType": "E",
+                    "terms": "For futher details on the terms and conditions of the offer, please visit www.flipped.energy or call 1300 110 100",
+                    "timeDefinition": "LOCAL",
+                    "meterType": [
+                      "Type 4"
+                    ],
+                    "billFrequency": [
+                      {
+                        "number": 1,
+                        "period": "M"
+                      }
+                    ],
+                    "paymentOption": [
+                      "DD",
+                      "CC",
+                      "BP"
+                    ],
+                    "isFixed": false
+                  }
+                ],
+                "planName": "Freedom Switched On!",
+                "planStatus": "PUBLISHED",
+                "supplyArea": [
+                  {
+                    "name": "SA Power Networks",
+                    "id": "42"
+                  }
+                ],
+                "batchId": 1035139,
+                "retailerId": "25002",
+                "genAvailable": true,
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "Flipped Energy",
+                "planId": "FEA1035150MRE1",
+                "retailerCode": "FEA",
+                "effectiveDate": "2026-02-16"
+              },
+              "planId": "FEA1035150MRE1",
+              "postcodes": {
+                "5097": 1
+              }
+            }
+          }
+        },
+        "raw_plan_data": {
+          "eligibility_restrictions": false,
+          "has_discounts": false,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      },
+      {
+        "plan_id": "FP11034989MRE1",
         "plan_name": "Flow Home FY26: Variable Prices (estimate)",
         "retailer_name": "Flow Power",
         "plan_type": "TOU",
@@ -35432,7 +36216,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "FP11023987MRE1",
+            "planId": "FP11034989MRE1",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -35515,15 +36299,6 @@
                     }
                   ],
                   "termType": "N",
-                  "discount": [
-                    {
-                      "name": "$150 (Incl. GST) Discount",
-                      "discountAmount": 150,
-                      "type": "C",
-                      "category": "O",
-                      "method": "F"
-                    }
-                  ],
                   "networkTariffType": "IS",
                   "tariffPeriod": [
                     {
@@ -35576,7 +36351,7 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Flow Power",
-              "planId": "FP11023987MRE1",
+              "planId": "FP11034989MRE1",
               "retailerCode": "FP1",
               "meteringCost": [
                 {
@@ -35585,7 +36360,7 @@
                 }
               ]
             },
-            "planType": "E#R#FP11023987MRE1",
+            "planType": "E#R#FP11034989MRE1",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -35593,51 +36368,51 @@
                   "small": {
                     "quarterly": {
                       "noDiscounts": 410,
-                      "allDiscounts": 370,
+                      "allDiscounts": 410,
                       "guaranteedDiscount": 410
                     },
                     "monthly": {
                       "noDiscounts": 140,
-                      "allDiscounts": 130,
+                      "allDiscounts": 140,
                       "guaranteedDiscount": 140
                     },
                     "yearly": {
                       "noDiscounts": 1720,
-                      "allDiscounts": 1570,
+                      "allDiscounts": 1720,
                       "guaranteedDiscount": 1720
                     }
                   },
                   "large": {
                     "quarterly": {
                       "noDiscounts": 900,
-                      "allDiscounts": 860,
+                      "allDiscounts": 900,
                       "guaranteedDiscount": 900
                     },
                     "monthly": {
                       "noDiscounts": 300,
-                      "allDiscounts": 290,
+                      "allDiscounts": 300,
                       "guaranteedDiscount": 300
                     },
                     "yearly": {
                       "noDiscounts": 3610,
-                      "allDiscounts": 3460,
+                      "allDiscounts": 3610,
                       "guaranteedDiscount": 3610
                     }
                   },
                   "medium": {
                     "quarterly": {
                       "noDiscounts": 660,
-                      "allDiscounts": 620,
+                      "allDiscounts": 660,
                       "guaranteedDiscount": 660
                     },
                     "monthly": {
                       "noDiscounts": 220,
-                      "allDiscounts": 210,
+                      "allDiscounts": 220,
                       "guaranteedDiscount": 220
                     },
                     "yearly": {
                       "noDiscounts": 2660,
-                      "allDiscounts": 2510,
+                      "allDiscounts": 2660,
                       "guaranteedDiscount": 2660
                     }
                   }
@@ -35737,16 +36512,6 @@
                       }
                     ],
                     "termType": "N",
-                    "discount": [
-                      {
-                        "name": "$150 (Incl. GST) Discount",
-                        "description": "Applies to new customers only, to receive the full $150 credit (incl. GST) you must stay with Flow Power for 3 months with a $50 credit being applied across the first three electricity bills.",
-                        "discountAmount": 150,
-                        "type": "C",
-                        "category": "O",
-                        "method": "F"
-                      }
-                    ],
                     "networkTariffType": "IS",
                     "tariffPeriod": [
                       {
@@ -35862,7 +36627,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1023984,
+                "batchId": 1034986,
                 "retailerId": "24216",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -35872,19 +36637,19 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Flow Power",
-                "planId": "FP11023987MRE1",
+                "planId": "FP11034989MRE1",
                 "retailerCode": "FP1",
                 "state": "SA",
-                "effectiveDate": "2025-12-03",
+                "effectiveDate": "2026-02-16",
                 "meteringCost": [
                   {
                     "name": "Metering Cost",
-                    "description": "Charges  may  vary,  for more information, please visit the retailer's website https://flowpower.com.au/residential",
+                    "description": "Charges  may  vary, for more information, please visit the retailer's website https://flowpower.com.au/residential",
                     "min": "U"
                   }
                 ]
               },
-              "planId": "FP11023987MRE1",
+              "planId": "FP11034989MRE1",
               "postcodes": {
                 "5097": 1
               }
@@ -35893,7 +36658,7 @@
         },
         "raw_plan_data": {
           "eligibility_restrictions": false,
-          "has_discounts": true,
+          "has_discounts": false,
           "distributor": null,
           "state": null,
           "postcode": null
@@ -36923,18 +37688,18 @@
         }
       },
       {
-        "plan_id": "GLO1030553MRE1",
+        "plan_id": "GLO1035089MRE1",
         "plan_name": "BOOST Residential (Flexible Rate)-SAPN",
         "retailer_name": "Globird Energy",
         "plan_type": "TOU",
         "tariff_type": "TOU",
-        "monthly_cost": 270,
-        "quarterly_cost": 790,
-        "annual_cost": 3190,
-        "peak_cost": 40.260000000000005,
-        "shoulder_cost": 24.200000000000003,
-        "off_peak_cost": 24.200000000000003,
-        "daily_supply_charge": 126.50000000000001,
+        "monthly_cost": 310,
+        "quarterly_cost": 930,
+        "annual_cost": 3730,
+        "peak_cost": 45.650000000000006,
+        "shoulder_cost": 31.35,
+        "off_peak_cost": 31.35,
+        "daily_supply_charge": 150.70000000000002,
         "detailed_time_blocks": [
           {
             "name": "Peak Usage",
@@ -36959,8 +37724,8 @@
             ],
             "rates": [
               {
-                "unit_price": 36.6,
-                "unit_price_gst": 40.260000000000005,
+                "unit_price": 41.5,
+                "unit_price_gst": 45.650000000000006,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -36981,8 +37746,8 @@
             ],
             "rates": [
               {
-                "unit_price": 22,
-                "unit_price_gst": 24.200000000000003,
+                "unit_price": 28.5,
+                "unit_price_gst": 31.35,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -37003,8 +37768,8 @@
             ],
             "rates": [
               {
-                "unit_price": 22,
-                "unit_price_gst": 24.200000000000003,
+                "unit_price": 28.5,
+                "unit_price_gst": 31.35,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -37037,482 +37802,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "GLO1030553MRE1",
-            "planData": {
-              "tariffType": "TOU",
-              "contract": [
-                {
-                  "pricingModel": "TOU",
-                  "solarFit": [
-                    {
-                      "tariffUType": "singleTariff",
-                      "scheme": "OTHER",
-                      "singleTariffRates": [
-                        {
-                          "unitPrice": 1.5,
-                          "measureUnit": "KWH",
-                          "rebate": true
-                        }
-                      ],
-                      "rate": 1.5,
-                      "displayName": "Single Rate Solar FiT",
-                      "type": "R",
-                      "singleTariffPeriod": "P1Y"
-                    },
-                    {
-                      "tariffUType": "singleTariff",
-                      "scheme": "PREMIUM",
-                      "singleTariffRates": [
-                        {
-                          "unitPrice": 44,
-                          "measureUnit": "KWH",
-                          "rebate": true
-                        }
-                      ],
-                      "rate": 44,
-                      "displayName": "Single Rate Solar FiT",
-                      "type": "G",
-                      "singleTariffPeriod": "P1Y"
-                    }
-                  ],
-                  "fee": [
-                    {
-                      "amount": 70,
-                      "feeType": "DiscoF",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "amount": 70,
-                      "feeType": "ConnF",
-                      "feeTerm": "F"
-                    }
-                  ],
-                  "termType": "N",
-                  "networkTariffType": "IS",
-                  "tariffPeriod": [
-                    {
-                      "touBlock": [
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 36.6,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        },
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 22,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        },
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 22,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        }
-                      ],
-                      "blockPeriod": "P1D",
-                      "dailySupplyCharge": 115
-                    }
-                  ],
-                  "fuelType": "E",
-                  "meterType": [
-                    "Type 4",
-                    "Type 5"
-                  ],
-                  "paymentOption": [
-                    "P",
-                    "DD",
-                    "CC",
-                    "BP"
-                  ]
-                }
-              ],
-              "planName": "BOOST Residential (Flexible Rate)-SAPN",
-              "retailerId": "898484",
-              "customerType": "R",
-              "fuelType": "E",
-              "retailerName": "Globird Energy",
-              "planId": "GLO1030553MRE1",
-              "retailerCode": "GLO"
-            },
-            "planType": "E#R#GLO1030553MRE1",
-            "postcode": 5097,
-            "pcr": {
-              "costs": {
-                "electricity": {
-                  "small": {
-                    "quarterly": {
-                      "noDiscounts": 360,
-                      "allDiscounts": 360,
-                      "guaranteedDiscount": 360
-                    },
-                    "monthly": {
-                      "noDiscounts": 120,
-                      "allDiscounts": 120,
-                      "guaranteedDiscount": 120
-                    },
-                    "yearly": {
-                      "noDiscounts": 1490,
-                      "allDiscounts": 1490,
-                      "guaranteedDiscount": 1490
-                    }
-                  },
-                  "large": {
-                    "quarterly": {
-                      "noDiscounts": 790,
-                      "allDiscounts": 790,
-                      "guaranteedDiscount": 790
-                    },
-                    "monthly": {
-                      "noDiscounts": 270,
-                      "allDiscounts": 270,
-                      "guaranteedDiscount": 270
-                    },
-                    "yearly": {
-                      "noDiscounts": 3190,
-                      "allDiscounts": 3190,
-                      "guaranteedDiscount": 3190
-                    }
-                  },
-                  "medium": {
-                    "quarterly": {
-                      "noDiscounts": 580,
-                      "allDiscounts": 580,
-                      "guaranteedDiscount": 580
-                    },
-                    "monthly": {
-                      "noDiscounts": 190,
-                      "allDiscounts": 190,
-                      "guaranteedDiscount": 190
-                    },
-                    "yearly": {
-                      "noDiscounts": 2340,
-                      "allDiscounts": 2340,
-                      "guaranteedDiscount": 2340
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "detailed_api_response": {
-            "data": {
-              "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
-                "contract": [
-                  {
-                    "pricingModel": "TOU",
-                    "coolingOffDays": 10,
-                    "solarFit": [
-                      {
-                        "tariffUType": "singleTariff",
-                        "scheme": "OTHER",
-                        "singleTariffRates": [
-                          {
-                            "unitPrice": 1.5,
-                            "measureUnit": "KWH",
-                            "rebate": true
-                          }
-                        ],
-                        "rate": 1.5,
-                        "displayName": "Single Rate Solar FiT",
-                        "description": "GloBird Retailer Feed-in-Tariff (incl. GST if any)",
-                        "type": "R",
-                        "singleTariffPeriod": "P1Y"
-                      },
-                      {
-                        "tariffUType": "singleTariff",
-                        "scheme": "PREMIUM",
-                        "singleTariffRates": [
-                          {
-                            "unitPrice": 44,
-                            "measureUnit": "KWH",
-                            "rebate": true
-                          }
-                        ],
-                        "rate": 44,
-                        "displayName": "Single Rate Solar FiT",
-                        "description": "GloBird currently pay 44.00 cents per kWh solar premium feed-in.",
-                        "type": "G",
-                        "singleTariffPeriod": "P1Y"
-                      }
-                    ],
-                    "additionalFeeInformation": "Additional fees and charges may apply, please see: https://www.globirdenergy.com.au/legal/fees/",
-                    "fee": [
-                      {
-                        "description": "Min disconnection fee incl. GST. Fees can vary for meter type, location or other factors. All fees here www.globirdenergy.com.au/fees",
-                        "amount": 70,
-                        "feeType": "DiscoF",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "Min connection fee incl GST. Fees can vary for meter type, location or other factors. All fees here www.globirdenergy.com.au/fees",
-                        "amount": 70,
-                        "feeType": "ConnF",
-                        "feeTerm": "F"
-                      }
-                    ],
-                    "termType": "N",
-                    "networkTariffType": "IS",
-                    "tariffPeriod": [
-                      {
-                        "touBlock": [
-                          {
-                            "name": "Peak Usage",
-                            "description": "Peak Usage",
-                            "blockRate": [
-                              {
-                                "unitPrice": 36.6,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "P",
-                            "timeOfUse": [
-                              {
-                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                                "startTime": "1500",
-                                "endTime": "2359"
-                              },
-                              {
-                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                                "startTime": "0000",
-                                "endTime": "0059"
-                              },
-                              {
-                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                                "startTime": "0600",
-                                "endTime": "0959"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Off Peak Usage",
-                            "description": "Off Peak Usage",
-                            "blockRate": [
-                              {
-                                "unitPrice": 22,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "OP",
-                            "timeOfUse": [
-                              {
-                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                                "startTime": "0100",
-                                "endTime": "0559"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Shoulder Usage",
-                            "description": "Shoulder Usage",
-                            "blockRate": [
-                              {
-                                "unitPrice": 22,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "S",
-                            "timeOfUse": [
-                              {
-                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                                "startTime": "1000",
-                                "endTime": "1459"
-                              }
-                            ]
-                          }
-                        ],
-                        "endDate": "2026-06-30",
-                        "blockPeriod": "P1D",
-                        "dailySupplyCharge": 115,
-                        "startDate": "2025-07-01"
-                      }
-                    ],
-                    "variation": "We may update your solar feed-in, or your rates from time to time. We'll always notify you in writing prior to any change.",
-                    "fuelType": "E",
-                    "terms": "This offer is for SA residential customers with an applicable network tariff. Please visit www.globirdenergy.com.au for full terms and conditions or call us on 133456.",
-                    "timeDefinition": "LOCAL",
-                    "billFrequency": [
-                      {
-                        "number": 1,
-                        "period": "M"
-                      }
-                    ],
-                    "meterType": [
-                      "Type 4",
-                      "Type 5"
-                    ],
-                    "paymentOption": [
-                      "P",
-                      "DD",
-                      "CC",
-                      "BP"
-                    ],
-                    "isFixed": false
-                  }
-                ],
-                "planName": "BOOST Residential (Flexible Rate)-SAPN",
-                "planStatus": "PUBLISHED",
-                "supplyArea": [
-                  {
-                    "name": "SA Power Networks",
-                    "id": "42"
-                  }
-                ],
-                "batchId": 1030470,
-                "retailerId": "898484",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
-                "tags": [
-                  "098_1238_208_0_NN"
-                ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "Globird Energy",
-                "planId": "GLO1030553MRE1",
-                "retailerCode": "GLO",
-                "state": "SA",
-                "effectiveDate": "2025-12-23"
-              },
-              "planId": "GLO1030553MRE1",
-              "postcodes": {
-                "5097": 1
-              }
-            }
-          }
-        },
-        "raw_plan_data": {
-          "eligibility_restrictions": false,
-          "has_discounts": false,
-          "distributor": null,
-          "state": null,
-          "postcode": null
-        }
-      },
-      {
-        "plan_id": "GLO1030557MRE1",
-        "plan_name": "GLOSAVE Residential (Flexible Rate)-SAPN",
-        "retailer_name": "Globird Energy",
-        "plan_type": "TOU",
-        "tariff_type": "TOU",
-        "monthly_cost": 270,
-        "quarterly_cost": 820,
-        "annual_cost": 3290,
-        "peak_cost": 42.24,
-        "shoulder_cost": 24.310000000000002,
-        "off_peak_cost": 24.310000000000002,
-        "daily_supply_charge": 124.30000000000001,
-        "detailed_time_blocks": [
-          {
-            "name": "Peak Usage",
-            "description": "Peak Usage",
-            "time_of_use_period": "P",
-            "time_periods": [
-              {
-                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                "start_time": "1500",
-                "end_time": "2359"
-              },
-              {
-                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                "start_time": "0000",
-                "end_time": "0059"
-              },
-              {
-                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                "start_time": "0600",
-                "end_time": "0959"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 38.4,
-                "unit_price_gst": 42.24,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          },
-          {
-            "name": "Off Peak Usage",
-            "description": "Off Peak Usage",
-            "time_of_use_period": "OP",
-            "time_periods": [
-              {
-                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                "start_time": "0100",
-                "end_time": "0559"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 22.1,
-                "unit_price_gst": 24.310000000000002,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          },
-          {
-            "name": "Shoulder Usage",
-            "description": "Shoulder Usage",
-            "time_of_use_period": "S",
-            "time_periods": [
-              {
-                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                "start_time": "1000",
-                "end_time": "1459"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 22.1,
-                "unit_price_gst": 24.310000000000002,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          }
-        ],
-        "fees": {
-          "move_in_new_connection_fee": 70,
-          "paper_bill_fee": null,
-          "payment_processing_fees": [],
-          "late_payment_fee": null,
-          "disconnection_fee_move_out": null,
-          "disconnection_fee_non_payment": null,
-          "reconnection_fee": null,
-          "other_fees": [],
-          "credit_card_payment_fees": [],
-          "membership_fee": null
-        },
-        "membership_fee_annual": 0,
-        "membership_fee_quarterly": 0,
-        "membership_fee_monthly": 0,
-        "solar_feed_in_rate_r": 1.5,
-        "payment_options": [
-          "PayPal",
-          "Direct Debit",
-          "Credit Card",
-          "BPay"
-        ],
-        "raw_plan_data_complete": {
-          "main_api_response": {
-            "planId": "GLO1030557MRE1",
+            "planId": "GLO1035089MRE1",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -37565,18 +37855,11 @@
                   "termType": "N",
                   "discount": [
                     {
-                      "name": "Direct Debit Discount",
-                      "discountPercent": 1,
+                      "name": "$300 Online Signup Bonus",
+                      "discountAmount": 300,
                       "type": "C",
-                      "category": "D",
-                      "method": "B"
-                    },
-                    {
-                      "name": "Pay-on-time Discount",
-                      "discountPercent": 2,
-                      "type": "C",
-                      "category": "P",
-                      "method": "B"
+                      "category": "O",
+                      "method": "F"
                     }
                   ],
                   "networkTariffType": "IS",
@@ -37586,7 +37869,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 38.4,
+                              "unitPrice": 41.5,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -37594,7 +37877,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 22.1,
+                              "unitPrice": 28.5,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -37602,14 +37885,14 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 22.1,
+                              "unitPrice": 28.5,
                               "measureUnit": "KWH"
                             }
                           ]
                         }
                       ],
                       "blockPeriod": "P1D",
-                      "dailySupplyCharge": 113
+                      "dailySupplyCharge": 137
                     }
                   ],
                   "fuelType": "E",
@@ -37625,68 +37908,68 @@
                   ]
                 }
               ],
-              "planName": "GLOSAVE Residential (Flexible Rate)-SAPN",
+              "planName": "BOOST Residential (Flexible Rate)-SAPN",
               "retailerId": "898484",
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Globird Energy",
-              "planId": "GLO1030557MRE1",
+              "planId": "GLO1035089MRE1",
               "retailerCode": "GLO"
             },
-            "planType": "E#R#GLO1030557MRE1",
+            "planType": "E#R#GLO1035089MRE1",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
                   "small": {
                     "quarterly": {
-                      "noDiscounts": 370,
+                      "noDiscounts": 420,
                       "allDiscounts": 350,
-                      "guaranteedDiscount": 370
+                      "guaranteedDiscount": 420
                     },
                     "monthly": {
-                      "noDiscounts": 130,
+                      "noDiscounts": 150,
                       "allDiscounts": 120,
-                      "guaranteedDiscount": 130
+                      "guaranteedDiscount": 150
                     },
                     "yearly": {
-                      "noDiscounts": 1530,
-                      "allDiscounts": 1480,
-                      "guaranteedDiscount": 1530
+                      "noDiscounts": 1760,
+                      "allDiscounts": 1460,
+                      "guaranteedDiscount": 1760
                     }
                   },
                   "large": {
                     "quarterly": {
-                      "noDiscounts": 820,
-                      "allDiscounts": 790,
-                      "guaranteedDiscount": 820
+                      "noDiscounts": 930,
+                      "allDiscounts": 850,
+                      "guaranteedDiscount": 930
                     },
                     "monthly": {
-                      "noDiscounts": 270,
-                      "allDiscounts": 270,
-                      "guaranteedDiscount": 270
+                      "noDiscounts": 310,
+                      "allDiscounts": 290,
+                      "guaranteedDiscount": 310
                     },
                     "yearly": {
-                      "noDiscounts": 3290,
-                      "allDiscounts": 3190,
-                      "guaranteedDiscount": 3290
+                      "noDiscounts": 3730,
+                      "allDiscounts": 3430,
+                      "guaranteedDiscount": 3730
                     }
                   },
                   "medium": {
                     "quarterly": {
-                      "noDiscounts": 590,
-                      "allDiscounts": 580,
-                      "guaranteedDiscount": 590
+                      "noDiscounts": 680,
+                      "allDiscounts": 600,
+                      "guaranteedDiscount": 680
                     },
                     "monthly": {
-                      "noDiscounts": 200,
-                      "allDiscounts": 190,
-                      "guaranteedDiscount": 200
+                      "noDiscounts": 230,
+                      "allDiscounts": 200,
+                      "guaranteedDiscount": 230
                     },
                     "yearly": {
-                      "noDiscounts": 2400,
-                      "allDiscounts": 2330,
-                      "guaranteedDiscount": 2400
+                      "noDiscounts": 2740,
+                      "allDiscounts": 2440,
+                      "guaranteedDiscount": 2740
                     }
                   }
                 }
@@ -37754,20 +38037,12 @@
                     "termType": "N",
                     "discount": [
                       {
-                        "name": "Direct Debit Discount",
-                        "description": "You will receive 1% discount off Usage & Supply charges when you pay your bill on-time by direct debit",
-                        "discountPercent": 1,
+                        "name": "$300 Online Signup Bonus",
+                        "description": "New customers sign up online to get a single $300 account credit applied on the 7th month after joining.",
+                        "discountAmount": 300,
                         "type": "C",
-                        "category": "D",
-                        "method": "B"
-                      },
-                      {
-                        "name": "Pay-on-time Discount",
-                        "description": "You will receive 2% discount off Usage & Supply charges when you pay your bill on-time",
-                        "discountPercent": 2,
-                        "type": "C",
-                        "category": "P",
-                        "method": "B"
+                        "category": "O",
+                        "method": "F"
                       }
                     ],
                     "networkTariffType": "IS",
@@ -37779,7 +38054,7 @@
                             "description": "Peak Usage",
                             "blockRate": [
                               {
-                                "unitPrice": 38.4,
+                                "unitPrice": 41.5,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -37807,7 +38082,7 @@
                             "description": "Off Peak Usage",
                             "blockRate": [
                               {
-                                "unitPrice": 22.1,
+                                "unitPrice": 28.5,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -37825,7 +38100,7 @@
                             "description": "Shoulder Usage",
                             "blockRate": [
                               {
-                                "unitPrice": 22.1,
+                                "unitPrice": 28.5,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -37839,15 +38114,15 @@
                             ]
                           }
                         ],
-                        "endDate": "2026-06-30",
+                        "endDate": "2027-06-30",
                         "blockPeriod": "P1D",
-                        "dailySupplyCharge": 113,
-                        "startDate": "2025-07-01"
+                        "dailySupplyCharge": 137,
+                        "startDate": "2026-07-01"
                       }
                     ],
                     "variation": "We may update your solar feed-in, or your rates from time to time. We'll always notify you in writing prior to any change.",
                     "fuelType": "E",
-                    "terms": "This offer is for SA residential customers with an applicable network tariff. Please visit www.globirdenergy.com.au for full terms and conditions or call us on 133456.",
+                    "terms": "This offer is for SA  new residential customers with an applicable network tariff. Please visit www.globirdenergy.com.au for full terms and conditions or call us on 133456.",
                     "timeDefinition": "LOCAL",
                     "billFrequency": [
                       {
@@ -37868,7 +38143,7 @@
                     "isFixed": false
                   }
                 ],
-                "planName": "GLOSAVE Residential (Flexible Rate)-SAPN",
+                "planName": "BOOST Residential (Flexible Rate)-SAPN",
                 "planStatus": "PUBLISHED",
                 "supplyArea": [
                   {
@@ -37876,22 +38151,22 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1030470,
+                "batchId": 1035006,
                 "retailerId": "898484",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "097_1271_208_3_NN"
+                  "136_1238_208_0_NN"
                 ],
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Globird Energy",
-                "planId": "GLO1030557MRE1",
+                "planId": "GLO1035089MRE1",
                 "retailerCode": "GLO",
                 "state": "SA",
-                "effectiveDate": "2025-12-23"
+                "effectiveDate": "2026-02-15"
               },
-              "planId": "GLO1030557MRE1",
+              "planId": "GLO1035089MRE1",
               "postcodes": {
                 "5097": 1
               }
@@ -37907,18 +38182,18 @@
         }
       },
       {
-        "plan_id": "GLO1030559MRE1",
-        "plan_name": "GLOSAVE Residential (Flexible RESELE)-SAPN",
+        "plan_id": "GLO1035093MRE1",
+        "plan_name": "GLOSAVE Residential (Flexible Rate)-SAPN",
         "retailer_name": "Globird Energy",
         "plan_type": "TOU",
         "tariff_type": "TOU",
-        "monthly_cost": 290,
-        "quarterly_cost": 870,
-        "annual_cost": 3510,
-        "peak_cost": 70.4,
-        "shoulder_cost": 28.6,
-        "off_peak_cost": 22.0,
-        "daily_supply_charge": 139.70000000000002,
+        "monthly_cost": 320,
+        "quarterly_cost": 970,
+        "annual_cost": 3890,
+        "peak_cost": 48.400000000000006,
+        "shoulder_cost": 32.67,
+        "off_peak_cost": 32.67,
+        "daily_supply_charge": 144.10000000000002,
         "detailed_time_blocks": [
           {
             "name": "Peak Usage",
@@ -37927,14 +38202,24 @@
             "time_periods": [
               {
                 "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                "start_time": "1700",
-                "end_time": "2059"
+                "start_time": "1500",
+                "end_time": "2359"
+              },
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "0000",
+                "end_time": "0059"
+              },
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "0600",
+                "end_time": "0959"
               }
             ],
             "rates": [
               {
-                "unit_price": 64,
-                "unit_price_gst": 70.4,
+                "unit_price": 44,
+                "unit_price_gst": 48.400000000000006,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -37949,14 +38234,14 @@
             "time_periods": [
               {
                 "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                "start_time": "1000",
-                "end_time": "1559"
+                "start_time": "0100",
+                "end_time": "0559"
               }
             ],
             "rates": [
               {
-                "unit_price": 20,
-                "unit_price_gst": 22.0,
+                "unit_price": 29.7,
+                "unit_price_gst": 32.67,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -37971,24 +38256,14 @@
             "time_periods": [
               {
                 "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                "start_time": "1600",
-                "end_time": "1659"
-              },
-              {
-                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                "start_time": "2100",
-                "end_time": "2359"
-              },
-              {
-                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                "start_time": "0000",
-                "end_time": "0959"
+                "start_time": "1000",
+                "end_time": "1459"
               }
             ],
             "rates": [
               {
-                "unit_price": 26,
-                "unit_price_gst": 28.6,
+                "unit_price": 29.7,
+                "unit_price_gst": 32.67,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -38021,7 +38296,531 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "GLO1030559MRE1",
+            "planId": "GLO1035093MRE1",
+            "planData": {
+              "tariffType": "TOU",
+              "contract": [
+                {
+                  "pricingModel": "TOU",
+                  "solarFit": [
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "OTHER",
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 1.5,
+                          "measureUnit": "KWH",
+                          "rebate": true
+                        }
+                      ],
+                      "rate": 1.5,
+                      "displayName": "Single Rate Solar FiT",
+                      "type": "R",
+                      "singleTariffPeriod": "P1Y"
+                    },
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "PREMIUM",
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 44,
+                          "measureUnit": "KWH",
+                          "rebate": true
+                        }
+                      ],
+                      "rate": 44,
+                      "displayName": "Single Rate Solar FiT",
+                      "type": "G",
+                      "singleTariffPeriod": "P1Y"
+                    }
+                  ],
+                  "fee": [
+                    {
+                      "amount": 70,
+                      "feeType": "DiscoF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 70,
+                      "feeType": "ConnF",
+                      "feeTerm": "F"
+                    }
+                  ],
+                  "termType": "N",
+                  "discount": [
+                    {
+                      "name": "$300 Online Signup Bonus",
+                      "discountAmount": 300,
+                      "type": "C",
+                      "category": "O",
+                      "method": "F"
+                    },
+                    {
+                      "name": "Pay-on-time Discount",
+                      "discountPercent": 2,
+                      "type": "C",
+                      "category": "P",
+                      "method": "B"
+                    },
+                    {
+                      "name": "Direct Debit Discount",
+                      "discountPercent": 1,
+                      "type": "C",
+                      "category": "D",
+                      "method": "B"
+                    }
+                  ],
+                  "networkTariffType": "IS",
+                  "tariffPeriod": [
+                    {
+                      "touBlock": [
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 44,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 29.7,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 29.7,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        }
+                      ],
+                      "blockPeriod": "P1D",
+                      "dailySupplyCharge": 131
+                    }
+                  ],
+                  "fuelType": "E",
+                  "meterType": [
+                    "Type 4",
+                    "Type 5"
+                  ],
+                  "paymentOption": [
+                    "P",
+                    "DD",
+                    "CC",
+                    "BP"
+                  ]
+                }
+              ],
+              "planName": "GLOSAVE Residential (Flexible Rate)-SAPN",
+              "retailerId": "898484",
+              "customerType": "R",
+              "fuelType": "E",
+              "retailerName": "Globird Energy",
+              "planId": "GLO1035093MRE1",
+              "retailerCode": "GLO"
+            },
+            "planType": "E#R#GLO1035093MRE1",
+            "postcode": 5097,
+            "pcr": {
+              "costs": {
+                "electricity": {
+                  "small": {
+                    "quarterly": {
+                      "noDiscounts": 430,
+                      "allDiscounts": 350,
+                      "guaranteedDiscount": 430
+                    },
+                    "monthly": {
+                      "noDiscounts": 150,
+                      "allDiscounts": 120,
+                      "guaranteedDiscount": 150
+                    },
+                    "yearly": {
+                      "noDiscounts": 1800,
+                      "allDiscounts": 1440,
+                      "guaranteedDiscount": 1800
+                    }
+                  },
+                  "large": {
+                    "quarterly": {
+                      "noDiscounts": 970,
+                      "allDiscounts": 860,
+                      "guaranteedDiscount": 970
+                    },
+                    "monthly": {
+                      "noDiscounts": 320,
+                      "allDiscounts": 290,
+                      "guaranteedDiscount": 320
+                    },
+                    "yearly": {
+                      "noDiscounts": 3890,
+                      "allDiscounts": 3470,
+                      "guaranteedDiscount": 3890
+                    }
+                  },
+                  "medium": {
+                    "quarterly": {
+                      "noDiscounts": 700,
+                      "allDiscounts": 610,
+                      "guaranteedDiscount": 700
+                    },
+                    "monthly": {
+                      "noDiscounts": 240,
+                      "allDiscounts": 200,
+                      "guaranteedDiscount": 240
+                    },
+                    "yearly": {
+                      "noDiscounts": 2840,
+                      "allDiscounts": 2450,
+                      "guaranteedDiscount": 2840
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "detailed_api_response": {
+            "data": {
+              "planData": {
+                "planType": "M",
+                "tariffType": "TOU",
+                "contract": [
+                  {
+                    "pricingModel": "TOU",
+                    "coolingOffDays": 10,
+                    "solarFit": [
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "OTHER",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 1.5,
+                            "measureUnit": "KWH",
+                            "rebate": true
+                          }
+                        ],
+                        "rate": 1.5,
+                        "displayName": "Single Rate Solar FiT",
+                        "description": "GloBird Retailer Feed-in-Tariff (incl. GST if any)",
+                        "type": "R",
+                        "singleTariffPeriod": "P1Y"
+                      },
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "PREMIUM",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 44,
+                            "measureUnit": "KWH",
+                            "rebate": true
+                          }
+                        ],
+                        "rate": 44,
+                        "displayName": "Single Rate Solar FiT",
+                        "description": "GloBird currently pay 44.00 cents per kWh solar premium feed-in.",
+                        "type": "G",
+                        "singleTariffPeriod": "P1Y"
+                      }
+                    ],
+                    "additionalFeeInformation": "Additional fees and charges may apply, please see: https://www.globirdenergy.com.au/legal/fees/",
+                    "fee": [
+                      {
+                        "description": "Min disconnection fee incl. GST. Fees can vary for meter type, location or other factors. All fees here www.globirdenergy.com.au/fees",
+                        "amount": 70,
+                        "feeType": "DiscoF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "Min connection fee incl GST. Fees can vary for meter type, location or other factors. All fees here www.globirdenergy.com.au/fees",
+                        "amount": 70,
+                        "feeType": "ConnF",
+                        "feeTerm": "F"
+                      }
+                    ],
+                    "termType": "N",
+                    "discount": [
+                      {
+                        "name": "$300 Online Signup Bonus",
+                        "description": "New customers sign up online to get a single $300 account credit applied on the 7th month after joining.",
+                        "discountAmount": 300,
+                        "type": "C",
+                        "category": "O",
+                        "method": "F"
+                      },
+                      {
+                        "name": "Pay-on-time Discount",
+                        "description": "You will receive 2% discount off Usage & Supply charges when you pay your bill on-time",
+                        "discountPercent": 2,
+                        "type": "C",
+                        "category": "P",
+                        "method": "B"
+                      },
+                      {
+                        "name": "Direct Debit Discount",
+                        "description": "You will receive 1% discount off Usage & Supply charges when you pay your bill on-time by direct debit",
+                        "discountPercent": 1,
+                        "type": "C",
+                        "category": "D",
+                        "method": "B"
+                      }
+                    ],
+                    "networkTariffType": "IS",
+                    "tariffPeriod": [
+                      {
+                        "touBlock": [
+                          {
+                            "name": "Peak Usage",
+                            "description": "Peak Usage",
+                            "blockRate": [
+                              {
+                                "unitPrice": 44,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "P",
+                            "timeOfUse": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "1500",
+                                "endTime": "2359"
+                              },
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "0000",
+                                "endTime": "0059"
+                              },
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "0600",
+                                "endTime": "0959"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Off Peak Usage",
+                            "description": "Off Peak Usage",
+                            "blockRate": [
+                              {
+                                "unitPrice": 29.7,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "OP",
+                            "timeOfUse": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "0100",
+                                "endTime": "0559"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Shoulder Usage",
+                            "description": "Shoulder Usage",
+                            "blockRate": [
+                              {
+                                "unitPrice": 29.7,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "S",
+                            "timeOfUse": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "1000",
+                                "endTime": "1459"
+                              }
+                            ]
+                          }
+                        ],
+                        "endDate": "2027-06-30",
+                        "blockPeriod": "P1D",
+                        "dailySupplyCharge": 131,
+                        "startDate": "2026-07-01"
+                      }
+                    ],
+                    "variation": "We may update your solar feed-in, or your rates from time to time. We'll always notify you in writing prior to any change.",
+                    "fuelType": "E",
+                    "terms": "This offer is for SA  new residential customers with an applicable network tariff. Please visit www.globirdenergy.com.au for full terms and conditions or call us on 133456.",
+                    "timeDefinition": "LOCAL",
+                    "billFrequency": [
+                      {
+                        "number": 1,
+                        "period": "M"
+                      }
+                    ],
+                    "meterType": [
+                      "Type 4",
+                      "Type 5"
+                    ],
+                    "paymentOption": [
+                      "P",
+                      "DD",
+                      "CC",
+                      "BP"
+                    ],
+                    "isFixed": false
+                  }
+                ],
+                "planName": "GLOSAVE Residential (Flexible Rate)-SAPN",
+                "planStatus": "PUBLISHED",
+                "supplyArea": [
+                  {
+                    "name": "SA Power Networks",
+                    "id": "42"
+                  }
+                ],
+                "batchId": 1035006,
+                "retailerId": "898484",
+                "distributor": "SA Power Networks",
+                "genAvailable": true,
+                "tags": [
+                  "135_1271_208_3_NN"
+                ],
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "Globird Energy",
+                "planId": "GLO1035093MRE1",
+                "retailerCode": "GLO",
+                "state": "SA",
+                "effectiveDate": "2026-02-15"
+              },
+              "planId": "GLO1035093MRE1",
+              "postcodes": {
+                "5097": 1
+              }
+            }
+          }
+        },
+        "raw_plan_data": {
+          "eligibility_restrictions": false,
+          "has_discounts": true,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      },
+      {
+        "plan_id": "GLO1035095MRE1",
+        "plan_name": "GLOSAVE Residential (Flexible RESELE)-SAPN",
+        "retailer_name": "Globird Energy",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 350,
+        "quarterly_cost": 1060,
+        "annual_cost": 4240,
+        "peak_cost": 88.0,
+        "shoulder_cost": 36.300000000000004,
+        "off_peak_cost": 20.35,
+        "daily_supply_charge": 150.70000000000002,
+        "detailed_time_blocks": [
+          {
+            "name": "Peak Usage",
+            "description": "Peak Usage",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "1700",
+                "end_time": "2059"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 80,
+                "unit_price_gst": 88.0,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Off Peak Usage",
+            "description": "Off Peak Usage",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "1000",
+                "end_time": "1559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 18.5,
+                "unit_price_gst": 20.35,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Shoulder Usage",
+            "description": "Shoulder Usage",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "1600",
+                "end_time": "1659"
+              },
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "2100",
+                "end_time": "2359"
+              },
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "0000",
+                "end_time": "0959"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 33,
+                "unit_price_gst": 36.300000000000004,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": 70,
+          "paper_bill_fee": null,
+          "payment_processing_fees": [],
+          "late_payment_fee": null,
+          "disconnection_fee_move_out": null,
+          "disconnection_fee_non_payment": null,
+          "reconnection_fee": null,
+          "other_fees": [],
+          "credit_card_payment_fees": [],
+          "membership_fee": null
+        },
+        "membership_fee_annual": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_monthly": 0,
+        "solar_feed_in_rate_r": 1.5,
+        "payment_options": [
+          "PayPal",
+          "Direct Debit",
+          "Credit Card",
+          "BPay"
+        ],
+        "raw_plan_data_complete": {
+          "main_api_response": {
+            "planId": "GLO1035095MRE1",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -38077,17 +38876,24 @@
                   "termType": "N",
                   "discount": [
                     {
-                      "name": "Direct Debit Discount",
-                      "discountPercent": 1,
+                      "name": "$300 Online Signup Bonus",
+                      "discountAmount": 300,
                       "type": "C",
-                      "category": "D",
-                      "method": "B"
+                      "category": "O",
+                      "method": "F"
                     },
                     {
                       "name": "Pay-on-time Discount",
                       "discountPercent": 2,
                       "type": "C",
                       "category": "P",
+                      "method": "B"
+                    },
+                    {
+                      "name": "Direct Debit Discount",
+                      "discountPercent": 1,
+                      "type": "C",
+                      "category": "D",
                       "method": "B"
                     }
                   ],
@@ -38098,7 +38904,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 64,
+                              "unitPrice": 80,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -38106,7 +38912,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 20,
+                              "unitPrice": 18.5,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -38114,14 +38920,14 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 26,
+                              "unitPrice": 33,
                               "measureUnit": "KWH"
                             }
                           ]
                         }
                       ],
                       "blockPeriod": "P1D",
-                      "dailySupplyCharge": 127
+                      "dailySupplyCharge": 137
                     }
                   ],
                   "fuelType": "E",
@@ -38142,63 +38948,63 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Globird Energy",
-              "planId": "GLO1030559MRE1",
+              "planId": "GLO1035095MRE1",
               "retailerCode": "GLO"
             },
-            "planType": "E#R#GLO1030559MRE1",
+            "planType": "E#R#GLO1035095MRE1",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
                   "small": {
                     "quarterly": {
-                      "noDiscounts": 390,
+                      "noDiscounts": 470,
                       "allDiscounts": 380,
-                      "guaranteedDiscount": 390
+                      "guaranteedDiscount": 470
                     },
                     "monthly": {
-                      "noDiscounts": 140,
+                      "noDiscounts": 160,
                       "allDiscounts": 130,
-                      "guaranteedDiscount": 140
+                      "guaranteedDiscount": 160
                     },
                     "yearly": {
-                      "noDiscounts": 1650,
-                      "allDiscounts": 1600,
-                      "guaranteedDiscount": 1650
+                      "noDiscounts": 1950,
+                      "allDiscounts": 1590,
+                      "guaranteedDiscount": 1950
                     }
                   },
                   "large": {
                     "quarterly": {
-                      "noDiscounts": 870,
-                      "allDiscounts": 850,
-                      "guaranteedDiscount": 870
+                      "noDiscounts": 1060,
+                      "allDiscounts": 950,
+                      "guaranteedDiscount": 1060
                     },
                     "monthly": {
-                      "noDiscounts": 290,
-                      "allDiscounts": 280,
-                      "guaranteedDiscount": 290
+                      "noDiscounts": 350,
+                      "allDiscounts": 320,
+                      "guaranteedDiscount": 350
                     },
                     "yearly": {
-                      "noDiscounts": 3510,
-                      "allDiscounts": 3410,
-                      "guaranteedDiscount": 3510
+                      "noDiscounts": 4240,
+                      "allDiscounts": 3820,
+                      "guaranteedDiscount": 4240
                     }
                   },
                   "medium": {
                     "quarterly": {
-                      "noDiscounts": 640,
-                      "allDiscounts": 620,
-                      "guaranteedDiscount": 640
+                      "noDiscounts": 760,
+                      "allDiscounts": 670,
+                      "guaranteedDiscount": 760
                     },
                     "monthly": {
-                      "noDiscounts": 210,
-                      "allDiscounts": 210,
-                      "guaranteedDiscount": 210
+                      "noDiscounts": 260,
+                      "allDiscounts": 220,
+                      "guaranteedDiscount": 260
                     },
                     "yearly": {
-                      "noDiscounts": 2570,
-                      "allDiscounts": 2500,
-                      "guaranteedDiscount": 2570
+                      "noDiscounts": 3090,
+                      "allDiscounts": 2700,
+                      "guaranteedDiscount": 3090
                     }
                   }
                 }
@@ -38269,12 +39075,12 @@
                     "termType": "N",
                     "discount": [
                       {
-                        "name": "Direct Debit Discount",
-                        "description": "You will receive 1% discount off Usage & Supply charges when you pay your bill on-time by direct debit",
-                        "discountPercent": 1,
+                        "name": "$300 Online Signup Bonus",
+                        "description": "New customers sign up online to get a single $300 account credit applied on the 7th month after joining.",
+                        "discountAmount": 300,
                         "type": "C",
-                        "category": "D",
-                        "method": "B"
+                        "category": "O",
+                        "method": "F"
                       },
                       {
                         "name": "Pay-on-time Discount",
@@ -38282,6 +39088,14 @@
                         "discountPercent": 2,
                         "type": "C",
                         "category": "P",
+                        "method": "B"
+                      },
+                      {
+                        "name": "Direct Debit Discount",
+                        "description": "You will receive 1% discount off Usage & Supply charges when you pay your bill on-time by direct debit",
+                        "discountPercent": 1,
+                        "type": "C",
+                        "category": "D",
                         "method": "B"
                       }
                     ],
@@ -38294,7 +39108,7 @@
                             "description": "Peak Usage",
                             "blockRate": [
                               {
-                                "unitPrice": 64,
+                                "unitPrice": 80,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -38312,7 +39126,7 @@
                             "description": "Off Peak Usage",
                             "blockRate": [
                               {
-                                "unitPrice": 20,
+                                "unitPrice": 18.5,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -38330,7 +39144,7 @@
                             "description": "Shoulder Usage",
                             "blockRate": [
                               {
-                                "unitPrice": 26,
+                                "unitPrice": 33,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -38354,15 +39168,15 @@
                             ]
                           }
                         ],
-                        "endDate": "2026-06-30",
+                        "endDate": "2027-06-30",
                         "blockPeriod": "P1D",
-                        "dailySupplyCharge": 127,
-                        "startDate": "2025-07-01"
+                        "dailySupplyCharge": 137,
+                        "startDate": "2026-07-01"
                       }
                     ],
                     "variation": "We may update your solar feed-in, or your rates from time to time. We'll always notify you in writing prior to any change.",
                     "fuelType": "E",
-                    "terms": "This offer is for SA residential customers with an applicable network tariff. Please visit www.globirdenergy.com.au for full terms and conditions or call us on 133456.",
+                    "terms": "This offer is for SA  new residential customers with an applicable network tariff. Please visit www.globirdenergy.com.au for full terms and conditions or call us on 133456.",
                     "timeDefinition": "LOCAL",
                     "billFrequency": [
                       {
@@ -38391,22 +39205,22 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1030470,
+                "batchId": 1035006,
                 "retailerId": "898484",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "097_1271_241_3_NN"
+                  "135_1271_241_3_NN"
                 ],
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Globird Energy",
-                "planId": "GLO1030559MRE1",
+                "planId": "GLO1035095MRE1",
                 "retailerCode": "GLO",
                 "state": "SA",
-                "effectiveDate": "2025-12-23"
+                "effectiveDate": "2026-02-15"
               },
-              "planId": "GLO1030559MRE1",
+              "planId": "GLO1035095MRE1",
               "postcodes": {
                 "5097": 1
               }
@@ -38422,18 +39236,18 @@
         }
       },
       {
-        "plan_id": "GLO1030563MRE1",
+        "plan_id": "GLO1035099MRE1",
         "plan_name": "ULTRASAVE Residential (Flexible Rate)-SAPN",
         "retailer_name": "Globird Energy",
         "plan_type": "TOU",
         "tariff_type": "TOU",
-        "monthly_cost": 280,
-        "quarterly_cost": 840,
-        "annual_cost": 3390,
-        "peak_cost": 43.34,
-        "shoulder_cost": 25.410000000000004,
-        "off_peak_cost": 25.410000000000004,
-        "daily_supply_charge": 127.60000000000001,
+        "monthly_cost": 330,
+        "quarterly_cost": 990,
+        "annual_cost": 3990,
+        "peak_cost": 49.50000000000001,
+        "shoulder_cost": 33.77,
+        "off_peak_cost": 33.77,
+        "daily_supply_charge": 147.4,
         "detailed_time_blocks": [
           {
             "name": "Peak Usage",
@@ -38458,8 +39272,8 @@
             ],
             "rates": [
               {
-                "unit_price": 39.4,
-                "unit_price_gst": 43.34,
+                "unit_price": 45,
+                "unit_price_gst": 49.50000000000001,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -38480,8 +39294,8 @@
             ],
             "rates": [
               {
-                "unit_price": 23.1,
-                "unit_price_gst": 25.410000000000004,
+                "unit_price": 30.7,
+                "unit_price_gst": 33.77,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -38502,8 +39316,8 @@
             ],
             "rates": [
               {
-                "unit_price": 23.1,
-                "unit_price_gst": 25.410000000000004,
+                "unit_price": 30.7,
+                "unit_price_gst": 33.77,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -38536,7 +39350,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "GLO1030563MRE1",
+            "planId": "GLO1035099MRE1",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -38589,17 +39403,24 @@
                   "termType": "N",
                   "discount": [
                     {
-                      "name": "Direct Debit Discount",
-                      "discountPercent": 1,
+                      "name": "$300 Online Signup Bonus",
+                      "discountAmount": 300,
                       "type": "C",
-                      "category": "D",
-                      "method": "B"
+                      "category": "O",
+                      "method": "F"
                     },
                     {
                       "name": "Pay-on-time Discount",
                       "discountPercent": 2,
                       "type": "C",
                       "category": "P",
+                      "method": "B"
+                    },
+                    {
+                      "name": "Direct Debit Discount",
+                      "discountPercent": 1,
+                      "type": "C",
+                      "category": "D",
                       "method": "B"
                     }
                   ],
@@ -38610,7 +39431,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 39.4,
+                              "unitPrice": 45,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -38618,7 +39439,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 23.1,
+                              "unitPrice": 30.7,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -38626,14 +39447,14 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 23.1,
+                              "unitPrice": 30.7,
                               "measureUnit": "KWH"
                             }
                           ]
                         }
                       ],
                       "blockPeriod": "P1D",
-                      "dailySupplyCharge": 116
+                      "dailySupplyCharge": 134
                     }
                   ],
                   "fuelType": "E",
@@ -38654,63 +39475,63 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Globird Energy",
-              "planId": "GLO1030563MRE1",
+              "planId": "GLO1035099MRE1",
               "retailerCode": "GLO"
             },
-            "planType": "E#R#GLO1030563MRE1",
+            "planType": "E#R#GLO1035099MRE1",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
                   "small": {
                     "quarterly": {
-                      "noDiscounts": 380,
+                      "noDiscounts": 440,
                       "allDiscounts": 360,
-                      "guaranteedDiscount": 380
+                      "guaranteedDiscount": 440
                     },
                     "monthly": {
-                      "noDiscounts": 130,
-                      "allDiscounts": 130,
-                      "guaranteedDiscount": 130
+                      "noDiscounts": 150,
+                      "allDiscounts": 120,
+                      "guaranteedDiscount": 150
                     },
                     "yearly": {
-                      "noDiscounts": 1570,
-                      "allDiscounts": 1520,
-                      "guaranteedDiscount": 1570
+                      "noDiscounts": 1840,
+                      "allDiscounts": 1490,
+                      "guaranteedDiscount": 1840
                     }
                   },
                   "large": {
                     "quarterly": {
-                      "noDiscounts": 840,
-                      "allDiscounts": 820,
-                      "guaranteedDiscount": 840
+                      "noDiscounts": 990,
+                      "allDiscounts": 890,
+                      "guaranteedDiscount": 990
                     },
                     "monthly": {
-                      "noDiscounts": 280,
-                      "allDiscounts": 270,
-                      "guaranteedDiscount": 280
+                      "noDiscounts": 330,
+                      "allDiscounts": 300,
+                      "guaranteedDiscount": 330
                     },
                     "yearly": {
-                      "noDiscounts": 3390,
-                      "allDiscounts": 3290,
-                      "guaranteedDiscount": 3390
+                      "noDiscounts": 3990,
+                      "allDiscounts": 3570,
+                      "guaranteedDiscount": 3990
                     }
                   },
                   "medium": {
                     "quarterly": {
-                      "noDiscounts": 610,
-                      "allDiscounts": 590,
-                      "guaranteedDiscount": 610
+                      "noDiscounts": 720,
+                      "allDiscounts": 620,
+                      "guaranteedDiscount": 720
                     },
                     "monthly": {
-                      "noDiscounts": 210,
-                      "allDiscounts": 200,
-                      "guaranteedDiscount": 210
+                      "noDiscounts": 240,
+                      "allDiscounts": 210,
+                      "guaranteedDiscount": 240
                     },
                     "yearly": {
-                      "noDiscounts": 2470,
-                      "allDiscounts": 2400,
-                      "guaranteedDiscount": 2470
+                      "noDiscounts": 2910,
+                      "allDiscounts": 2520,
+                      "guaranteedDiscount": 2910
                     }
                   }
                 }
@@ -38778,12 +39599,12 @@
                     "termType": "N",
                     "discount": [
                       {
-                        "name": "Direct Debit Discount",
-                        "description": "You will receive 1% discount off Usage & Supply charges when you pay your bill on-time by direct debit",
-                        "discountPercent": 1,
+                        "name": "$300 Online Signup Bonus",
+                        "description": "New customers sign up online to get a single $300 account credit applied on the 7th month after joining.",
+                        "discountAmount": 300,
                         "type": "C",
-                        "category": "D",
-                        "method": "B"
+                        "category": "O",
+                        "method": "F"
                       },
                       {
                         "name": "Pay-on-time Discount",
@@ -38791,6 +39612,14 @@
                         "discountPercent": 2,
                         "type": "C",
                         "category": "P",
+                        "method": "B"
+                      },
+                      {
+                        "name": "Direct Debit Discount",
+                        "description": "You will receive 1% discount off Usage & Supply charges when you pay your bill on-time by direct debit",
+                        "discountPercent": 1,
+                        "type": "C",
+                        "category": "D",
                         "method": "B"
                       }
                     ],
@@ -38803,7 +39632,7 @@
                             "description": "Peak Usage",
                             "blockRate": [
                               {
-                                "unitPrice": 39.4,
+                                "unitPrice": 45,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -38831,7 +39660,7 @@
                             "description": "Off Peak Usage",
                             "blockRate": [
                               {
-                                "unitPrice": 23.1,
+                                "unitPrice": 30.7,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -38849,7 +39678,7 @@
                             "description": "Shoulder Usage",
                             "blockRate": [
                               {
-                                "unitPrice": 23.1,
+                                "unitPrice": 30.7,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -38863,15 +39692,15 @@
                             ]
                           }
                         ],
-                        "endDate": "2026-06-30",
+                        "endDate": "2027-06-30",
                         "blockPeriod": "P1D",
-                        "dailySupplyCharge": 116,
-                        "startDate": "2025-07-01"
+                        "dailySupplyCharge": 134,
+                        "startDate": "2026-07-01"
                       }
                     ],
                     "variation": "We may update your solar feed-in, or your rates from time to time. We'll always notify you in writing prior to any change.",
                     "fuelType": "E",
-                    "terms": "This offer is for SA residential customers without an eligible smart meter and with an applicable network tariff. Please visit www.globirdenergy.com.au for full terms and conditions or call us on 133456.",
+                    "terms": "This offer is for SA  new residential customers without an eligible smart meter and with an applicable network tariff. Please visit www.globirdenergy.com.au for full terms and conditions or call us on 133456.",
                     "timeDefinition": "LOCAL",
                     "billFrequency": [
                       {
@@ -38900,22 +39729,22 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1030470,
+                "batchId": 1035006,
                 "retailerId": "898484",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "099_1276_208_3_NN"
+                  "137_1276_208_3_NN"
                 ],
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Globird Energy",
-                "planId": "GLO1030563MRE1",
+                "planId": "GLO1035099MRE1",
                 "retailerCode": "GLO",
                 "state": "SA",
-                "effectiveDate": "2025-12-23"
+                "effectiveDate": "2026-02-15"
               },
-              "planId": "GLO1030563MRE1",
+              "planId": "GLO1035099MRE1",
               "postcodes": {
                 "5097": 1
               }
@@ -38931,18 +39760,18 @@
         }
       },
       {
-        "plan_id": "GLO1030587MRE1",
+        "plan_id": "GLO1035135MRE1",
         "plan_name": "FOUR4FREE Residential (Flexible Rate)-SAPN",
         "retailer_name": "Globird Energy",
         "plan_type": "TOU",
         "tariff_type": "TOU",
-        "monthly_cost": 300,
-        "quarterly_cost": 910,
-        "annual_cost": 3640,
-        "peak_cost": 56.1,
-        "shoulder_cost": 34.1,
+        "monthly_cost": 360,
+        "quarterly_cost": 1080,
+        "annual_cost": 4350,
+        "peak_cost": 66.55000000000001,
+        "shoulder_cost": 43.45,
         "off_peak_cost": 0.0,
-        "daily_supply_charge": 148.5,
+        "daily_supply_charge": 154.0,
         "detailed_time_blocks": [
           {
             "name": "Peak Usage",
@@ -38957,8 +39786,8 @@
             ],
             "rates": [
               {
-                "unit_price": 51,
-                "unit_price_gst": 56.1,
+                "unit_price": 60.5,
+                "unit_price_gst": 66.55000000000001,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -39011,8 +39840,8 @@
             ],
             "rates": [
               {
-                "unit_price": 31,
-                "unit_price_gst": 34.1,
+                "unit_price": 39.5,
+                "unit_price_gst": 43.45,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -39045,7 +39874,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "GLO1030587MRE1",
+            "planId": "GLO1035135MRE1",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -39124,17 +39953,24 @@
                   "termType": "N",
                   "discount": [
                     {
-                      "name": "Direct Debit Discount",
-                      "discountPercent": 1,
+                      "name": "$300 Online Signup Bonus",
+                      "discountAmount": 300,
                       "type": "C",
-                      "category": "D",
-                      "method": "B"
+                      "category": "O",
+                      "method": "F"
                     },
                     {
                       "name": "Pay-on-time Discount",
                       "discountPercent": 2,
                       "type": "C",
                       "category": "P",
+                      "method": "B"
+                    },
+                    {
+                      "name": "Direct Debit Discount",
+                      "discountPercent": 1,
+                      "type": "C",
+                      "category": "D",
                       "method": "B"
                     }
                   ],
@@ -39145,7 +39981,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 51,
+                              "unitPrice": 60.5,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -39161,14 +39997,14 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 31,
+                              "unitPrice": 39.5,
                               "measureUnit": "KWH"
                             }
                           ]
                         }
                       ],
                       "blockPeriod": "P1D",
-                      "dailySupplyCharge": 135
+                      "dailySupplyCharge": 140
                     }
                   ],
                   "incentive": [
@@ -39193,63 +40029,63 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Globird Energy",
-              "planId": "GLO1030587MRE1",
+              "planId": "GLO1035135MRE1",
               "retailerCode": "GLO"
             },
-            "planType": "E#R#GLO1030587MRE1",
+            "planType": "E#R#GLO1035135MRE1",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
                   "small": {
                     "quarterly": {
-                      "noDiscounts": 410,
-                      "allDiscounts": 400,
-                      "guaranteedDiscount": 410
+                      "noDiscounts": 480,
+                      "allDiscounts": 390,
+                      "guaranteedDiscount": 480
                     },
                     "monthly": {
-                      "noDiscounts": 140,
+                      "noDiscounts": 170,
                       "allDiscounts": 140,
-                      "guaranteedDiscount": 140
+                      "guaranteedDiscount": 170
                     },
                     "yearly": {
-                      "noDiscounts": 1710,
-                      "allDiscounts": 1660,
-                      "guaranteedDiscount": 1710
+                      "noDiscounts": 1990,
+                      "allDiscounts": 1630,
+                      "guaranteedDiscount": 1990
                     }
                   },
                   "large": {
                     "quarterly": {
-                      "noDiscounts": 910,
-                      "allDiscounts": 880,
-                      "guaranteedDiscount": 910
+                      "noDiscounts": 1080,
+                      "allDiscounts": 970,
+                      "guaranteedDiscount": 1080
                     },
                     "monthly": {
-                      "noDiscounts": 300,
-                      "allDiscounts": 290,
-                      "guaranteedDiscount": 300
+                      "noDiscounts": 360,
+                      "allDiscounts": 330,
+                      "guaranteedDiscount": 360
                     },
                     "yearly": {
-                      "noDiscounts": 3640,
-                      "allDiscounts": 3530,
-                      "guaranteedDiscount": 3640
+                      "noDiscounts": 4350,
+                      "allDiscounts": 3920,
+                      "guaranteedDiscount": 4350
                     }
                   },
                   "medium": {
                     "quarterly": {
-                      "noDiscounts": 660,
-                      "allDiscounts": 640,
-                      "guaranteedDiscount": 660
+                      "noDiscounts": 780,
+                      "allDiscounts": 680,
+                      "guaranteedDiscount": 780
                     },
                     "monthly": {
-                      "noDiscounts": 220,
-                      "allDiscounts": 220,
-                      "guaranteedDiscount": 220
+                      "noDiscounts": 260,
+                      "allDiscounts": 230,
+                      "guaranteedDiscount": 260
                     },
                     "yearly": {
-                      "noDiscounts": 2670,
-                      "allDiscounts": 2590,
-                      "guaranteedDiscount": 2670
+                      "noDiscounts": 3160,
+                      "allDiscounts": 2770,
+                      "guaranteedDiscount": 3160
                     }
                   }
                 }
@@ -39343,12 +40179,12 @@
                     "termType": "N",
                     "discount": [
                       {
-                        "name": "Direct Debit Discount",
-                        "description": "You will receive 1% discount off Usage & Supply charges when you pay your bill on-time by direct debit",
-                        "discountPercent": 1,
+                        "name": "$300 Online Signup Bonus",
+                        "description": "New customers sign up online to get a single $300 account credit applied on the 7th month after joining.",
+                        "discountAmount": 300,
                         "type": "C",
-                        "category": "D",
-                        "method": "B"
+                        "category": "O",
+                        "method": "F"
                       },
                       {
                         "name": "Pay-on-time Discount",
@@ -39356,6 +40192,14 @@
                         "discountPercent": 2,
                         "type": "C",
                         "category": "P",
+                        "method": "B"
+                      },
+                      {
+                        "name": "Direct Debit Discount",
+                        "description": "You will receive 1% discount off Usage & Supply charges when you pay your bill on-time by direct debit",
+                        "discountPercent": 1,
+                        "type": "C",
+                        "category": "D",
                         "method": "B"
                       }
                     ],
@@ -39368,7 +40212,7 @@
                             "description": "Peak Usage",
                             "blockRate": [
                               {
-                                "unitPrice": 51,
+                                "unitPrice": 60.5,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -39404,7 +40248,7 @@
                             "description": "Shoulder Usage",
                             "blockRate": [
                               {
-                                "unitPrice": 31,
+                                "unitPrice": 39.5,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -39428,10 +40272,10 @@
                             ]
                           }
                         ],
-                        "endDate": "2026-06-30",
+                        "endDate": "2027-06-30",
                         "blockPeriod": "P1D",
-                        "dailySupplyCharge": 135,
-                        "startDate": "2025-07-01"
+                        "dailySupplyCharge": 140,
+                        "startDate": "2026-07-01"
                       }
                     ],
                     "variation": "We may update your solar feed-in, or your rates from time to time. We'll always notify you in writing prior to any change.",
@@ -39470,22 +40314,22 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1030579,
+                "batchId": 1035127,
                 "retailerId": "898484",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "101_1349_753_3_NN"
+                  "138_1349_753_3_NN"
                 ],
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Globird Energy",
-                "planId": "GLO1030587MRE1",
+                "planId": "GLO1035135MRE1",
                 "retailerCode": "GLO",
                 "state": "SA",
-                "effectiveDate": "2025-12-23"
+                "effectiveDate": "2026-02-16"
               },
-              "planId": "GLO1030587MRE1",
+              "planId": "GLO1035135MRE1",
               "postcodes": {
                 "5097": 1
               }
