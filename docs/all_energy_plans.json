@@ -38835,7 +38835,7 @@
         }
       },
       {
-        "plan_id": "GLO1035089MRE1",
+        "plan_id": "GLO1035089MRE2",
         "plan_name": "BOOST Residential (Flexible Rate)-SAPN",
         "retailer_name": "Globird Energy",
         "plan_type": "TOU",
@@ -38949,7 +38949,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "GLO1035089MRE1",
+            "planId": "GLO1035089MRE2",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -38962,8 +38962,8 @@
                       "singleTariffRates": [
                         {
                           "unitPrice": 1.5,
-                          "measureUnit": "KWH",
-                          "rebate": true
+                          "rebate": true,
+                          "measureUnit": "KWH"
                         }
                       ],
                       "rate": 1.5,
@@ -38977,8 +38977,8 @@
                       "singleTariffRates": [
                         {
                           "unitPrice": 44,
-                          "measureUnit": "KWH",
-                          "rebate": true
+                          "rebate": true,
+                          "measureUnit": "KWH"
                         }
                       ],
                       "rate": 44,
@@ -39060,10 +39060,10 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Globird Energy",
-              "planId": "GLO1035089MRE1",
+              "planId": "GLO1035089MRE2",
               "retailerCode": "GLO"
             },
-            "planType": "E#R#GLO1035089MRE1",
+            "planType": "E#R#GLO1035089MRE2",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -39139,8 +39139,8 @@
                         "singleTariffRates": [
                           {
                             "unitPrice": 1.5,
-                            "measureUnit": "KWH",
-                            "rebate": true
+                            "rebate": true,
+                            "measureUnit": "KWH"
                           }
                         ],
                         "rate": 1.5,
@@ -39155,8 +39155,8 @@
                         "singleTariffRates": [
                           {
                             "unitPrice": 44,
-                            "measureUnit": "KWH",
-                            "rebate": true
+                            "rebate": true,
+                            "measureUnit": "KWH"
                           }
                         ],
                         "rate": 44,
@@ -39185,7 +39185,7 @@
                     "discount": [
                       {
                         "name": "$300 Online Signup Bonus",
-                        "description": "New customers sign up online to get a single $300 account credit applied on the 7th month after joining.",
+                        "description": "New customers via self-serve* online sign up to get a single $300 account credit applied on the 7th month. Other terms and conditions applied ,visit: https://www.globirdenergy.com.au/legal/signup-bonus-terms-conditions/ (* Self-serve means you sign up via this page without assistance from our team during or within 1 week prior to signing up via this page.)",
                         "discountAmount": 300,
                         "type": "C",
                         "category": "O",
@@ -39298,7 +39298,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1035006,
+                "batchId": 1040718,
                 "retailerId": "898484",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -39308,12 +39308,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Globird Energy",
-                "planId": "GLO1035089MRE1",
+                "planId": "GLO1035089MRE2",
                 "retailerCode": "GLO",
                 "state": "SA",
-                "effectiveDate": "2026-02-15"
+                "effectiveDate": "2026-03-06"
               },
-              "planId": "GLO1035089MRE1",
+              "planId": "GLO1035089MRE2",
               "postcodes": {
                 "5097": 1
               }
@@ -39329,7 +39329,7 @@
         }
       },
       {
-        "plan_id": "GLO1035093MRE1",
+        "plan_id": "GLO1035093MRE2",
         "plan_name": "GLOSAVE Residential (Flexible Rate)-SAPN",
         "retailer_name": "Globird Energy",
         "plan_type": "TOU",
@@ -39443,7 +39443,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "GLO1035093MRE1",
+            "planId": "GLO1035093MRE2",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -39456,8 +39456,8 @@
                       "singleTariffRates": [
                         {
                           "unitPrice": 1.5,
-                          "measureUnit": "KWH",
-                          "rebate": true
+                          "rebate": true,
+                          "measureUnit": "KWH"
                         }
                       ],
                       "rate": 1.5,
@@ -39471,8 +39471,8 @@
                       "singleTariffRates": [
                         {
                           "unitPrice": 44,
-                          "measureUnit": "KWH",
-                          "rebate": true
+                          "rebate": true,
+                          "measureUnit": "KWH"
                         }
                       ],
                       "rate": 44,
@@ -39568,10 +39568,10 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Globird Energy",
-              "planId": "GLO1035093MRE1",
+              "planId": "GLO1035093MRE2",
               "retailerCode": "GLO"
             },
-            "planType": "E#R#GLO1035093MRE1",
+            "planType": "E#R#GLO1035093MRE2",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -39647,8 +39647,8 @@
                         "singleTariffRates": [
                           {
                             "unitPrice": 1.5,
-                            "measureUnit": "KWH",
-                            "rebate": true
+                            "rebate": true,
+                            "measureUnit": "KWH"
                           }
                         ],
                         "rate": 1.5,
@@ -39663,8 +39663,8 @@
                         "singleTariffRates": [
                           {
                             "unitPrice": 44,
-                            "measureUnit": "KWH",
-                            "rebate": true
+                            "rebate": true,
+                            "measureUnit": "KWH"
                           }
                         ],
                         "rate": 44,
@@ -39693,7 +39693,7 @@
                     "discount": [
                       {
                         "name": "$300 Online Signup Bonus",
-                        "description": "New customers sign up online to get a single $300 account credit applied on the 7th month after joining.",
+                        "description": "New customers via self-serve* online sign up to get a single $300 account credit applied on the 7th month. Other terms and conditions applied ,visit: https://www.globirdenergy.com.au/legal/signup-bonus-terms-conditions/ (* Self-serve means you sign up via this page without assistance from our team during or within 1 week prior to signing up via this page.)",
                         "discountAmount": 300,
                         "type": "C",
                         "category": "O",
@@ -39822,7 +39822,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1035006,
+                "batchId": 1040718,
                 "retailerId": "898484",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -39832,12 +39832,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Globird Energy",
-                "planId": "GLO1035093MRE1",
+                "planId": "GLO1035093MRE2",
                 "retailerCode": "GLO",
                 "state": "SA",
-                "effectiveDate": "2026-02-15"
+                "effectiveDate": "2026-03-06"
               },
-              "planId": "GLO1035093MRE1",
+              "planId": "GLO1035093MRE2",
               "postcodes": {
                 "5097": 1
               }
@@ -39853,7 +39853,7 @@
         }
       },
       {
-        "plan_id": "GLO1035095MRE1",
+        "plan_id": "GLO1035095MRE2",
         "plan_name": "GLOSAVE Residential (Flexible RESELE)-SAPN",
         "retailer_name": "Globird Energy",
         "plan_type": "TOU",
@@ -39967,7 +39967,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "GLO1035095MRE1",
+            "planId": "GLO1035095MRE2",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -39980,8 +39980,8 @@
                       "singleTariffRates": [
                         {
                           "unitPrice": 1.5,
-                          "measureUnit": "KWH",
-                          "rebate": true
+                          "rebate": true,
+                          "measureUnit": "KWH"
                         }
                       ],
                       "rate": 1.5,
@@ -39995,8 +39995,8 @@
                       "singleTariffRates": [
                         {
                           "unitPrice": 44,
-                          "measureUnit": "KWH",
-                          "rebate": true
+                          "rebate": true,
+                          "measureUnit": "KWH"
                         }
                       ],
                       "rate": 44,
@@ -40095,10 +40095,10 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Globird Energy",
-              "planId": "GLO1035095MRE1",
+              "planId": "GLO1035095MRE2",
               "retailerCode": "GLO"
             },
-            "planType": "E#R#GLO1035095MRE1",
+            "planType": "E#R#GLO1035095MRE2",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -40174,8 +40174,8 @@
                         "singleTariffRates": [
                           {
                             "unitPrice": 1.5,
-                            "measureUnit": "KWH",
-                            "rebate": true
+                            "rebate": true,
+                            "measureUnit": "KWH"
                           }
                         ],
                         "rate": 1.5,
@@ -40190,8 +40190,8 @@
                         "singleTariffRates": [
                           {
                             "unitPrice": 44,
-                            "measureUnit": "KWH",
-                            "rebate": true
+                            "rebate": true,
+                            "measureUnit": "KWH"
                           }
                         ],
                         "rate": 44,
@@ -40223,7 +40223,7 @@
                     "discount": [
                       {
                         "name": "$300 Online Signup Bonus",
-                        "description": "New customers sign up online to get a single $300 account credit applied on the 7th month after joining.",
+                        "description": "New customers via self-serve* online sign up to get a single $300 account credit applied on the 7th month. Other terms and conditions applied ,visit: https://www.globirdenergy.com.au/legal/signup-bonus-terms-conditions/ (* Self-serve means you sign up via this page without assistance from our team during or within 1 week prior to signing up via this page.)",
                         "discountAmount": 300,
                         "type": "C",
                         "category": "O",
@@ -40352,7 +40352,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1035006,
+                "batchId": 1040718,
                 "retailerId": "898484",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -40362,12 +40362,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Globird Energy",
-                "planId": "GLO1035095MRE1",
+                "planId": "GLO1035095MRE2",
                 "retailerCode": "GLO",
                 "state": "SA",
-                "effectiveDate": "2026-02-15"
+                "effectiveDate": "2026-03-06"
               },
-              "planId": "GLO1035095MRE1",
+              "planId": "GLO1035095MRE2",
               "postcodes": {
                 "5097": 1
               }
@@ -40383,7 +40383,7 @@
         }
       },
       {
-        "plan_id": "GLO1035099MRE1",
+        "plan_id": "GLO1035099MRE2",
         "plan_name": "ULTRASAVE Residential (Flexible Rate)-SAPN",
         "retailer_name": "Globird Energy",
         "plan_type": "TOU",
@@ -40497,7 +40497,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "GLO1035099MRE1",
+            "planId": "GLO1035099MRE2",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -40510,8 +40510,8 @@
                       "singleTariffRates": [
                         {
                           "unitPrice": 1.5,
-                          "measureUnit": "KWH",
-                          "rebate": true
+                          "rebate": true,
+                          "measureUnit": "KWH"
                         }
                       ],
                       "rate": 1.5,
@@ -40525,8 +40525,8 @@
                       "singleTariffRates": [
                         {
                           "unitPrice": 44,
-                          "measureUnit": "KWH",
-                          "rebate": true
+                          "rebate": true,
+                          "measureUnit": "KWH"
                         }
                       ],
                       "rate": 44,
@@ -40622,10 +40622,10 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Globird Energy",
-              "planId": "GLO1035099MRE1",
+              "planId": "GLO1035099MRE2",
               "retailerCode": "GLO"
             },
-            "planType": "E#R#GLO1035099MRE1",
+            "planType": "E#R#GLO1035099MRE2",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -40701,8 +40701,8 @@
                         "singleTariffRates": [
                           {
                             "unitPrice": 1.5,
-                            "measureUnit": "KWH",
-                            "rebate": true
+                            "rebate": true,
+                            "measureUnit": "KWH"
                           }
                         ],
                         "rate": 1.5,
@@ -40717,8 +40717,8 @@
                         "singleTariffRates": [
                           {
                             "unitPrice": 44,
-                            "measureUnit": "KWH",
-                            "rebate": true
+                            "rebate": true,
+                            "measureUnit": "KWH"
                           }
                         ],
                         "rate": 44,
@@ -40747,7 +40747,7 @@
                     "discount": [
                       {
                         "name": "$300 Online Signup Bonus",
-                        "description": "New customers sign up online to get a single $300 account credit applied on the 7th month after joining.",
+                        "description": "New customers via self-serve* online sign up to get a single $300 account credit applied on the 7th month. Other terms and conditions applied ,visit: https://www.globirdenergy.com.au/legal/signup-bonus-terms-conditions/ (* Self-serve means you sign up via this page without assistance from our team during or within 1 week prior to signing up via this page.)",
                         "discountAmount": 300,
                         "type": "C",
                         "category": "O",
@@ -40876,7 +40876,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1035006,
+                "batchId": 1040718,
                 "retailerId": "898484",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -40886,12 +40886,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Globird Energy",
-                "planId": "GLO1035099MRE1",
+                "planId": "GLO1035099MRE2",
                 "retailerCode": "GLO",
                 "state": "SA",
-                "effectiveDate": "2026-02-15"
+                "effectiveDate": "2026-03-06"
               },
-              "planId": "GLO1035099MRE1",
+              "planId": "GLO1035099MRE2",
               "postcodes": {
                 "5097": 1
               }
@@ -40907,7 +40907,7 @@
         }
       },
       {
-        "plan_id": "GLO1035135MRE1",
+        "plan_id": "GLO1035135MRE2",
         "plan_name": "FOUR4FREE Residential (Flexible Rate)-SAPN",
         "retailer_name": "Globird Energy",
         "plan_type": "TOU",
@@ -41021,7 +41021,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "GLO1035135MRE1",
+            "planId": "GLO1035135MRE2",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -41048,8 +41048,8 @@
                           "rates": [
                             {
                               "unitPrice": 10,
-                              "measureUnit": "KWH",
-                              "rebate": true
+                              "rebate": true,
+                              "measureUnit": "KWH"
                             }
                           ]
                         }
@@ -41076,8 +41076,8 @@
                           "rates": [
                             {
                               "unitPrice": 0,
-                              "measureUnit": "KWH",
-                              "rebate": true
+                              "rebate": true,
+                              "measureUnit": "KWH"
                             }
                           ]
                         }
@@ -41176,10 +41176,10 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Globird Energy",
-              "planId": "GLO1035135MRE1",
+              "planId": "GLO1035135MRE2",
               "retailerCode": "GLO"
             },
-            "planType": "E#R#GLO1035135MRE1",
+            "planType": "E#R#GLO1035135MRE2",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -41270,8 +41270,8 @@
                             "rates": [
                               {
                                 "unitPrice": 10,
-                                "measureUnit": "KWH",
-                                "rebate": true
+                                "rebate": true,
+                                "measureUnit": "KWH"
                               }
                             ]
                           }
@@ -41299,8 +41299,8 @@
                             "rates": [
                               {
                                 "unitPrice": 0,
-                                "measureUnit": "KWH",
-                                "rebate": true
+                                "rebate": true,
+                                "measureUnit": "KWH"
                               }
                             ]
                           }
@@ -41327,7 +41327,7 @@
                     "discount": [
                       {
                         "name": "$300 Online Signup Bonus",
-                        "description": "New customers sign up online to get a single $300 account credit applied on the 7th month after joining.",
+                        "description": "New customers via self-serve* online sign up to get a single $300 account credit applied on the 7th month. Other terms and conditions applied ,visit: https://www.globirdenergy.com.au/legal/signup-bonus-terms-conditions/ (* Self-serve means you sign up via this page without assistance from our team during or within 1 week prior to signing up via this page.)",
                         "discountAmount": 300,
                         "type": "C",
                         "category": "O",
@@ -41461,7 +41461,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1035127,
+                "batchId": 1040718,
                 "retailerId": "898484",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -41471,12 +41471,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Globird Energy",
-                "planId": "GLO1035135MRE1",
+                "planId": "GLO1035135MRE2",
                 "retailerCode": "GLO",
                 "state": "SA",
-                "effectiveDate": "2026-02-16"
+                "effectiveDate": "2026-03-06"
               },
-              "planId": "GLO1035135MRE1",
+              "planId": "GLO1035135MRE2",
               "postcodes": {
                 "5097": 1
               }
