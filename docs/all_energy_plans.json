@@ -15441,7 +15441,6 @@
           "main_api_response": {
             "planId": "ALI1008595MRE2",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -15591,13 +15590,14 @@
                   ]
                 }
               ],
-              "planName": "HomeDeal Advantage - Time of Use (Interval)",
-              "retailerId": "9624",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "Alinta Energy",
               "planId": "ALI1008595MRE2",
-              "retailerCode": "ALI"
+              "planName": "HomeDeal Advantage - Time of Use (Interval)",
+              "retailerCode": "ALI",
+              "retailerId": "9624",
+              "retailerName": "Alinta Energy",
+              "tariffType": "TOU"
             },
             "planType": "E#R#ALI1008595MRE2",
             "postcode": 5097,
@@ -15662,8 +15662,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1015040,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -15872,28 +15871,30 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2025-10-20",
+                "expiryDate": "2026-03-19",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "ALI1008595MRE2",
                 "planName": "HomeDeal Advantage - Time of Use (Interval)",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "ALI",
+                "retailerId": "9624",
+                "retailerName": "Alinta Energy",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1015040,
-                "retailerId": "9624",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "L61"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "Alinta Energy",
-                "planId": "ALI1008595MRE2",
-                "retailerCode": "ALI",
-                "state": "SA",
-                "effectiveDate": "2025-10-20"
+                "tariffType": "TOU"
               },
               "planId": "ALI1008595MRE2",
               "postcodes": {
