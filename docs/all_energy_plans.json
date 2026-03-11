@@ -1932,7 +1932,6 @@
           "main_api_response": {
             "planId": "AGL100677MRE50",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -2105,13 +2104,14 @@
                   ]
                 }
               ],
-              "planName": "Residential Solar Savers - 3rd Party",
-              "retailerId": "9620",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "AGL",
               "planId": "AGL100677MRE50",
-              "retailerCode": "AGL"
+              "planName": "Residential Solar Savers - 3rd Party",
+              "retailerCode": "AGL",
+              "retailerId": "9620",
+              "retailerName": "AGL",
+              "tariffType": "TOU"
             },
             "planType": "E#R#AGL100677MRE50",
             "postcode": 5097,
@@ -2176,8 +2176,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1031342,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -2439,30 +2438,32 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-01-08",
+                "expiryDate": "2026-03-26",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "AGL100677MRE50",
                 "planName": "Residential Solar Savers - 3rd Party",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "AGL",
+                "retailerId": "9620",
+                "retailerName": "AGL",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1031342,
-                "retailerId": "9620",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   ";#Time of use;#",
                   "AGLMKTRE0024013",
                   "TOUS_INT"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "AGL",
-                "planId": "AGL100677MRE50",
-                "retailerCode": "AGL",
-                "state": "SA",
-                "effectiveDate": "2026-01-08"
+                "tariffType": "TOU"
               },
               "planId": "AGL100677MRE50",
               "postcodes": {
@@ -8323,7 +8324,6 @@
           "main_api_response": {
             "planId": "AGL840896MRE10",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -8499,13 +8499,14 @@
                   ]
                 }
               ],
-              "planName": "Residential Netflix Plan - 3rd Party No Exit Fee",
-              "retailerId": "9620",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "AGL",
               "planId": "AGL840896MRE10",
-              "retailerCode": "AGL"
+              "planName": "Residential Netflix Plan - 3rd Party No Exit Fee",
+              "retailerCode": "AGL",
+              "retailerId": "9620",
+              "retailerName": "AGL",
+              "tariffType": "TOU"
             },
             "planType": "E#R#AGL840896MRE10",
             "postcode": 5097,
@@ -8570,8 +8571,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1030992,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -8837,30 +8837,32 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-01-08",
+                "expiryDate": "2026-03-26",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "AGL840896MRE10",
                 "planName": "Residential Netflix Plan - 3rd Party No Exit Fee",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "AGL",
+                "retailerId": "9620",
+                "retailerName": "AGL",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1030992,
-                "retailerId": "9620",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   ";#Time of use;#",
                   "AGLMKTRE0024038",
                   "TOUS_INT"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "AGL",
-                "planId": "AGL840896MRE10",
-                "retailerCode": "AGL",
-                "state": "SA",
-                "effectiveDate": "2026-01-08"
+                "tariffType": "TOU"
               },
               "planId": "AGL840896MRE10",
               "postcodes": {
@@ -11913,7 +11915,6 @@
           "main_api_response": {
             "planId": "AGL907767MRE6",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -12079,13 +12080,14 @@
                   ]
                 }
               ],
-              "planName": "Residential Smart Saver - 3rd Party",
-              "retailerId": "9620",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "AGL",
               "planId": "AGL907767MRE6",
-              "retailerCode": "AGL"
+              "planName": "Residential Smart Saver - 3rd Party",
+              "retailerCode": "AGL",
+              "retailerId": "9620",
+              "retailerName": "AGL",
+              "tariffType": "TOU"
             },
             "planType": "E#R#AGL907767MRE6",
             "postcode": 5097,
@@ -12150,8 +12152,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1030992,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -12406,30 +12407,32 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-01-08",
+                "expiryDate": "2026-03-26",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "AGL907767MRE6",
                 "planName": "Residential Smart Saver - 3rd Party",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "AGL",
+                "retailerId": "9620",
+                "retailerName": "AGL",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1030992,
-                "retailerId": "9620",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   ";#Time of use;#",
                   "AGLMKTRE0025087",
                   "TOUS_INT"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "AGL",
-                "planId": "AGL907767MRE6",
-                "retailerCode": "AGL",
-                "state": "SA",
-                "effectiveDate": "2026-01-08"
+                "tariffType": "TOU"
               },
               "planId": "AGL907767MRE6",
               "postcodes": {
