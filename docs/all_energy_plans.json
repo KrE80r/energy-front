@@ -1,10 +1,10 @@
 {
   "metadata": {
     "postcode": "5097",
-    "total_plans": 156,
-    "filtered_out": 450,
+    "total_plans": 157,
+    "filtered_out": 453,
     "extraction_date": "2025-06-26",
-    "tou_count": 156,
+    "tou_count": 157,
     "sr_count": 0,
     "other_count": 0,
     "filters_applied": "Excluded tariff types: SR, SRCL, TOUCL",
@@ -18739,6 +18739,567 @@
         "raw_plan_data": {
           "eligibility_restrictions": false,
           "has_discounts": false,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      },
+      {
+        "plan_id": "COV1041704MRE1",
+        "plan_name": "Freedom Residential Flexible",
+        "retailer_name": "CovaU",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 390,
+        "quarterly_cost": 1080,
+        "annual_cost": 4680,
+        "peak_cost": 61.732,
+        "shoulder_cost": 44.693000000000005,
+        "off_peak_cost": 33.682,
+        "daily_supply_charge": 116.435,
+        "detailed_time_blocks": [
+          {
+            "name": "Peak",
+            "description": "06:00 - 10:00; 15:00 - 01:00",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "0600",
+                "end_time": "0959"
+              },
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "1500",
+                "end_time": "0059"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 56.12,
+                "unit_price_gst": 61.732,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Off Peak",
+            "description": "01:00 - 06:00",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "0100",
+                "end_time": "0559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 40.63,
+                "unit_price_gst": 44.693000000000005,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Shoulder",
+            "description": "10:00 - 15:00",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "1000",
+                "end_time": "1459"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 30.62,
+                "unit_price_gst": 33.682,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": 21.23,
+          "paper_bill_fee": null,
+          "payment_processing_fees": [],
+          "late_payment_fee": null,
+          "disconnection_fee_move_out": null,
+          "disconnection_fee_non_payment": null,
+          "reconnection_fee": 63.712,
+          "other_fees": [],
+          "credit_card_payment_fees": [
+            {
+              "feeType": "CCF",
+              "percent": 0.73,
+              "feeTerm": "P"
+            }
+          ],
+          "membership_fee": null
+        },
+        "membership_fee_annual": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_monthly": 0,
+        "solar_feed_in_rate_r": 5.5,
+        "payment_options": [
+          "Direct Debit",
+          "Credit Card",
+          "BPay",
+          "Centrepay"
+        ],
+        "raw_plan_data_complete": {
+          "main_api_response": {
+            "planId": "COV1041704MRE1",
+            "planData": {
+              "tariffType": "TOU",
+              "contract": [
+                {
+                  "pricingModel": "TOU",
+                  "solarFit": [
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "OTHER",
+                      "endDate": "2030-07-31",
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 5.5,
+                          "rebate": true,
+                          "measureUnit": "KWH"
+                        }
+                      ],
+                      "rate": 5.5,
+                      "displayName": "Feed In Tariff: Single Rate Feed In Tariff",
+                      "type": "R",
+                      "singleTariffPeriod": "P1D",
+                      "startDate": "2021-07-26"
+                    }
+                  ],
+                  "fee": [
+                    {
+                      "amount": 21.23,
+                      "feeType": "ConnF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 63.712,
+                      "feeType": "DiscoF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 63.712,
+                      "feeType": "RecoF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 2.75,
+                      "feeType": "DDF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "feeType": "CCF",
+                      "percent": 0.73,
+                      "feeTerm": "P"
+                    }
+                  ],
+                  "termType": "N",
+                  "discount": [
+                    {
+                      "name": "Guaranteed Discount on total usages",
+                      "discountPercent": 10,
+                      "type": "U",
+                      "category": "O",
+                      "method": "U"
+                    }
+                  ],
+                  "networkTariffType": "IS",
+                  "tariffPeriod": [
+                    {
+                      "touBlock": [
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 56.12,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 40.63,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 30.62,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        }
+                      ],
+                      "blockPeriod": "P1D",
+                      "dailySupplyCharge": 105.85
+                    }
+                  ],
+                  "greenCharge": [
+                    {
+                      "chargeType": "A"
+                    },
+                    {
+                      "chargeType": "A"
+                    },
+                    {
+                      "chargeType": "A"
+                    }
+                  ],
+                  "incentive": [
+                    {
+                      "name": "Refer a Friend"
+                    }
+                  ],
+                  "fuelType": "E",
+                  "meterType": [
+                    "Type 4",
+                    "Type 4a",
+                    "Type 5",
+                    "Type 6"
+                  ],
+                  "paymentOption": [
+                    "DD",
+                    "CC",
+                    "BP",
+                    "CP"
+                  ]
+                }
+              ],
+              "planName": "Freedom Residential Flexible",
+              "retailerId": "9611",
+              "customerType": "R",
+              "fuelType": "E",
+              "retailerName": "CovaU",
+              "planId": "COV1041704MRE1",
+              "retailerCode": "COV"
+            },
+            "planType": "E#R#COV1041704MRE1",
+            "postcode": 5097,
+            "pcr": {
+              "costs": {
+                "electricity": {
+                  "small": {
+                    "quarterly": {
+                      "noDiscounts": 490,
+                      "allDiscounts": 450,
+                      "guaranteedDiscount": 450
+                    },
+                    "monthly": {
+                      "noDiscounts": 170,
+                      "allDiscounts": 160,
+                      "guaranteedDiscount": 160
+                    },
+                    "yearly": {
+                      "noDiscounts": 2030,
+                      "allDiscounts": 1870,
+                      "guaranteedDiscount": 1870
+                    }
+                  },
+                  "large": {
+                    "quarterly": {
+                      "noDiscounts": 1080,
+                      "allDiscounts": 990,
+                      "guaranteedDiscount": 990
+                    },
+                    "monthly": {
+                      "noDiscounts": 390,
+                      "allDiscounts": 350,
+                      "guaranteedDiscount": 350
+                    },
+                    "yearly": {
+                      "noDiscounts": 4680,
+                      "allDiscounts": 4250,
+                      "guaranteedDiscount": 4250
+                    }
+                  },
+                  "medium": {
+                    "quarterly": {
+                      "noDiscounts": 780,
+                      "allDiscounts": 720,
+                      "guaranteedDiscount": 720
+                    },
+                    "monthly": {
+                      "noDiscounts": 280,
+                      "allDiscounts": 250,
+                      "guaranteedDiscount": 250
+                    },
+                    "yearly": {
+                      "noDiscounts": 3350,
+                      "allDiscounts": 3060,
+                      "guaranteedDiscount": 3060
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "detailed_api_response": {
+            "data": {
+              "planData": {
+                "planType": "M",
+                "tariffType": "TOU",
+                "planRef": "COV_1141_26380",
+                "contract": [
+                  {
+                    "pricingModel": "TOU",
+                    "coolingOffDays": 10,
+                    "solarFit": [
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "OTHER",
+                        "endDate": "2030-07-31",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 5.5,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 5.5,
+                        "displayName": "Feed In Tariff: Single Rate Feed In Tariff",
+                        "description": "Feed In Tariff | All kWh/day",
+                        "type": "R",
+                        "singleTariffPeriod": "P1D",
+                        "startDate": "2021-07-26"
+                      }
+                    ],
+                    "additionalFeeInformation": "For information on additional fees, please visit our website : www.covau.com.au",
+                    "fee": [
+                      {
+                        "description": "$21.23 (inc. GST) Special Meter Read fee. This fee is passed through from your distributor and may vary.",
+                        "amount": 21.23,
+                        "feeType": "ConnF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "$63.71 (inc. GST) fee may apply when your property is disconnected. This fee is passed through from your distributor and may vary.",
+                        "amount": 63.712,
+                        "feeType": "DiscoF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "$63.71 (inc. GST) fee may apply when your property is reconnected. This fee is passed through from your distributor and may vary.",
+                        "amount": 63.712,
+                        "feeType": "RecoF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "$2.75 (inc. GST) Direct Credit or Debit dishonour payment fee",
+                        "amount": 2.75,
+                        "feeType": "DDF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "A 0.73% (inc. GST) fee may apply to payments made by debit and credit cards.",
+                        "feeType": "CCF",
+                        "percent": 0.73,
+                        "feeTerm": "P"
+                      }
+                    ],
+                    "termType": "N",
+                    "discount": [
+                      {
+                        "name": "Guaranteed Discount on total usages",
+                        "description": "Discounts applied to GST inclusive energy usage charges. No discount will apply to the GreenPower component.",
+                        "discountPercent": 10,
+                        "type": "U",
+                        "category": "O",
+                        "method": "U"
+                      }
+                    ],
+                    "networkTariffType": "IS",
+                    "tariffPeriod": [
+                      {
+                        "touBlock": [
+                          {
+                            "name": "Peak",
+                            "description": "06:00 - 10:00; 15:00 - 01:00",
+                            "blockRate": [
+                              {
+                                "unitPrice": 56.12,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "P",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "0600",
+                                "endTime": "0959"
+                              },
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "1500",
+                                "endTime": "0059"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Off Peak",
+                            "description": "01:00 - 06:00",
+                            "blockRate": [
+                              {
+                                "unitPrice": 40.63,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "OP",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "0100",
+                                "endTime": "0559"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Shoulder",
+                            "description": "10:00 - 15:00",
+                            "blockRate": [
+                              {
+                                "unitPrice": 30.62,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "S",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "1000",
+                                "endTime": "1459"
+                              }
+                            ]
+                          }
+                        ],
+                        "endDate": "2026-12-31",
+                        "blockPeriod": "P1D",
+                        "startDate": "2026-01-01",
+                        "dailySupplyCharge": 105.85
+                      }
+                    ],
+                    "variation": "We may vary the charges of this plan (including their amount, nature and structure) at any time by giving you a notice at least 5 business days prior to the effective date of variation.All prices listed are inclusive of GST except where indicated.",
+                    "onExpiry": "This agreement continues until you or we end it.",
+                    "greenCharge": [
+                      {
+                        "name": "30% GreenPower",
+                        "chargeType": "A",
+                        "description": "For an extra 1.65c /kWh inc. GST we ensure energy equal to 30% of your usage will be accredited renewable energy from the grid from GreenPower Providers. No discount will apply to the GreenPower component. Please contact us on 1300 689 866 for more information.",
+                        "option": [
+                          {
+                            "pctGreenPower": 30,
+                            "chargeAmount": 0.0165
+                          }
+                        ]
+                      },
+                      {
+                        "name": "50% GreenPower",
+                        "chargeType": "A",
+                        "description": "For an extra 2.75c /kWh inc. GST we ensure energy equal to 50% of your usage will be accredited renewable energy from the grid from GreenPower Providers. No discount will apply to the GreenPower component. Please contact us on 1300 689 866 for more information.",
+                        "option": [
+                          {
+                            "pctGreenPower": 50,
+                            "chargeAmount": 0.0275
+                          }
+                        ]
+                      },
+                      {
+                        "name": "100% GreenPower",
+                        "chargeType": "A",
+                        "description": "For an extra 5.5c /kWh inc. GST we ensure energy equal to 100% of your usage will be accredited renewable energy from the grid from GreenPower Providers. No discount will apply to the GreenPower component. Please contact us on 1300 689 866 for more information.",
+                        "option": [
+                          {
+                            "pctGreenPower": 100,
+                            "chargeAmount": 0.055
+                          }
+                        ]
+                      }
+                    ],
+                    "incentive": [
+                      {
+                        "name": "Refer a Friend",
+                        "description": "$50 credit applied to you and your friends account if you signup using a Refer a Friend link from an existing CovaU customer. Applies to new customers only who switch their electricity to CovaU. T&Cs apply, refer to https://covau.com.au/refer."
+                      }
+                    ],
+                    "fuelType": "E",
+                    "terms": "See our full terms and conditions to www.covau.com.au for details.",
+                    "timeDefinition": "AEST",
+                    "meterType": [
+                      "Type 4",
+                      "Type 4a",
+                      "Type 5",
+                      "Type 6"
+                    ],
+                    "billFrequency": [
+                      {
+                        "number": 1,
+                        "period": "M"
+                      },
+                      {
+                        "number": 3,
+                        "period": "M"
+                      }
+                    ],
+                    "paymentOption": [
+                      "DD",
+                      "CC",
+                      "BP",
+                      "CP"
+                    ],
+                    "isFixed": false
+                  }
+                ],
+                "planName": "Freedom Residential Flexible",
+                "planStatus": "PUBLISHED",
+                "supplyArea": [
+                  {
+                    "name": "SA Power Networks",
+                    "id": "42"
+                  }
+                ],
+                "batchId": 1041703,
+                "retailerId": "9611",
+                "genAvailable": true,
+                "tags": [
+                  "F23_RTOU"
+                ],
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "CovaU",
+                "planId": "COV1041704MRE1",
+                "retailerCode": "COV",
+                "effectiveDate": "2026-03-13"
+              },
+              "planId": "COV1041704MRE1",
+              "postcodes": {
+                "5097": 1
+              }
+            }
+          }
+        },
+        "raw_plan_data": {
+          "eligibility_restrictions": false,
+          "has_discounts": true,
           "distributor": null,
           "state": null,
           "postcode": null
@@ -38955,7 +39516,6 @@
           "main_api_response": {
             "planId": "GLO1035089MRE2",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -39059,13 +39619,14 @@
                   ]
                 }
               ],
-              "planName": "BOOST Residential (Flexible Rate)-SAPN",
-              "retailerId": "898484",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "Globird Energy",
               "planId": "GLO1035089MRE2",
-              "retailerCode": "GLO"
+              "planName": "BOOST Residential (Flexible Rate)-SAPN",
+              "retailerCode": "GLO",
+              "retailerId": "898484",
+              "retailerName": "Globird Energy",
+              "tariffType": "TOU"
             },
             "planType": "E#R#GLO1035089MRE2",
             "postcode": 5097,
@@ -39130,8 +39691,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1040718,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -39294,28 +39854,30 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-03-06",
+                "expiryDate": "2026-03-16",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "GLO1035089MRE2",
                 "planName": "BOOST Residential (Flexible Rate)-SAPN",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "GLO",
+                "retailerId": "898484",
+                "retailerName": "Globird Energy",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1040718,
-                "retailerId": "898484",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "136_1238_208_0_NN"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "Globird Energy",
-                "planId": "GLO1035089MRE2",
-                "retailerCode": "GLO",
-                "state": "SA",
-                "effectiveDate": "2026-03-06"
+                "tariffType": "TOU"
               },
               "planId": "GLO1035089MRE2",
               "postcodes": {
@@ -39449,7 +40011,6 @@
           "main_api_response": {
             "planId": "GLO1035093MRE2",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -39567,13 +40128,14 @@
                   ]
                 }
               ],
-              "planName": "GLOSAVE Residential (Flexible Rate)-SAPN",
-              "retailerId": "898484",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "Globird Energy",
               "planId": "GLO1035093MRE2",
-              "retailerCode": "GLO"
+              "planName": "GLOSAVE Residential (Flexible Rate)-SAPN",
+              "retailerCode": "GLO",
+              "retailerId": "898484",
+              "retailerName": "Globird Energy",
+              "tariffType": "TOU"
             },
             "planType": "E#R#GLO1035093MRE2",
             "postcode": 5097,
@@ -39638,8 +40200,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1040718,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -39818,28 +40379,30 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-03-06",
+                "expiryDate": "2026-03-16",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "GLO1035093MRE2",
                 "planName": "GLOSAVE Residential (Flexible Rate)-SAPN",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "GLO",
+                "retailerId": "898484",
+                "retailerName": "Globird Energy",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1040718,
-                "retailerId": "898484",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "135_1271_208_3_NN"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "Globird Energy",
-                "planId": "GLO1035093MRE2",
-                "retailerCode": "GLO",
-                "state": "SA",
-                "effectiveDate": "2026-03-06"
+                "tariffType": "TOU"
               },
               "planId": "GLO1035093MRE2",
               "postcodes": {
@@ -39973,7 +40536,6 @@
           "main_api_response": {
             "planId": "GLO1035095MRE2",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -40094,13 +40656,14 @@
                   ]
                 }
               ],
-              "planName": "GLOSAVE Residential (Flexible RESELE)-SAPN",
-              "retailerId": "898484",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "Globird Energy",
               "planId": "GLO1035095MRE2",
-              "retailerCode": "GLO"
+              "planName": "GLOSAVE Residential (Flexible RESELE)-SAPN",
+              "retailerCode": "GLO",
+              "retailerId": "898484",
+              "retailerName": "Globird Energy",
+              "tariffType": "TOU"
             },
             "planType": "E#R#GLO1035095MRE2",
             "postcode": 5097,
@@ -40165,8 +40728,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1040718,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -40348,28 +40910,30 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-03-06",
+                "expiryDate": "2026-03-16",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "GLO1035095MRE2",
                 "planName": "GLOSAVE Residential (Flexible RESELE)-SAPN",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "GLO",
+                "retailerId": "898484",
+                "retailerName": "Globird Energy",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1040718,
-                "retailerId": "898484",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "135_1271_241_3_NN"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "Globird Energy",
-                "planId": "GLO1035095MRE2",
-                "retailerCode": "GLO",
-                "state": "SA",
-                "effectiveDate": "2026-03-06"
+                "tariffType": "TOU"
               },
               "planId": "GLO1035095MRE2",
               "postcodes": {
@@ -40503,7 +41067,6 @@
           "main_api_response": {
             "planId": "GLO1035099MRE2",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -40621,13 +41184,14 @@
                   ]
                 }
               ],
-              "planName": "ULTRASAVE Residential (Flexible Rate)-SAPN",
-              "retailerId": "898484",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "Globird Energy",
               "planId": "GLO1035099MRE2",
-              "retailerCode": "GLO"
+              "planName": "ULTRASAVE Residential (Flexible Rate)-SAPN",
+              "retailerCode": "GLO",
+              "retailerId": "898484",
+              "retailerName": "Globird Energy",
+              "tariffType": "TOU"
             },
             "planType": "E#R#GLO1035099MRE2",
             "postcode": 5097,
@@ -40692,8 +41256,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1040718,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -40872,28 +41435,30 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-03-06",
+                "expiryDate": "2026-03-16",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "GLO1035099MRE2",
                 "planName": "ULTRASAVE Residential (Flexible Rate)-SAPN",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "GLO",
+                "retailerId": "898484",
+                "retailerName": "Globird Energy",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1040718,
-                "retailerId": "898484",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "137_1276_208_3_NN"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "Globird Energy",
-                "planId": "GLO1035099MRE2",
-                "retailerCode": "GLO",
-                "state": "SA",
-                "effectiveDate": "2026-03-06"
+                "tariffType": "TOU"
               },
               "planId": "GLO1035099MRE2",
               "postcodes": {
@@ -41027,7 +41592,6 @@
           "main_api_response": {
             "planId": "GLO1035135MRE2",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -41175,13 +41739,14 @@
                   ]
                 }
               ],
-              "planName": "FOUR4FREE Residential (Flexible Rate)-SAPN",
-              "retailerId": "898484",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "Globird Energy",
               "planId": "GLO1035135MRE2",
-              "retailerCode": "GLO"
+              "planName": "FOUR4FREE Residential (Flexible Rate)-SAPN",
+              "retailerCode": "GLO",
+              "retailerId": "898484",
+              "retailerName": "Globird Energy",
+              "tariffType": "TOU"
             },
             "planType": "E#R#GLO1035135MRE2",
             "postcode": 5097,
@@ -41246,8 +41811,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1040718,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -41457,28 +42021,30 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-03-06",
+                "expiryDate": "2026-03-16",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "GLO1035135MRE2",
                 "planName": "FOUR4FREE Residential (Flexible Rate)-SAPN",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "GLO",
+                "retailerId": "898484",
+                "retailerName": "Globird Energy",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1040718,
-                "retailerId": "898484",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "138_1349_753_3_NN"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "Globird Energy",
-                "planId": "GLO1035135MRE2",
-                "retailerCode": "GLO",
-                "state": "SA",
-                "effectiveDate": "2026-03-06"
+                "tariffType": "TOU"
               },
               "planId": "GLO1035135MRE2",
               "postcodes": {
