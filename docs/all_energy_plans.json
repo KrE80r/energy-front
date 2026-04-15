@@ -38950,7 +38950,6 @@
           "main_api_response": {
             "planId": "GLO1026860MRE1",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -39034,13 +39033,14 @@
                   ]
                 }
               ],
-              "planName": "WHOLESAVE Residential (Two Rate)-SAPN",
-              "retailerId": "898484",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "Globird Energy",
               "planId": "GLO1026860MRE1",
-              "retailerCode": "GLO"
+              "planName": "WHOLESAVE Residential (Two Rate)-SAPN",
+              "retailerCode": "GLO",
+              "retailerId": "898484",
+              "retailerName": "Globird Energy",
+              "tariffType": "TOU"
             },
             "planType": "E#R#GLO1026860MRE1",
             "postcode": 5097,
@@ -39105,8 +39105,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1026852,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -39233,28 +39232,30 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2025-12-09",
+                "expiryDate": "2026-04-17",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "GLO1026860MRE1",
                 "planName": "WHOLESAVE Residential (Two Rate)-SAPN",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "GLO",
+                "retailerId": "898484",
+                "retailerName": "Globird Energy",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1026852,
-                "retailerId": "898484",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "088_1343_704_0_NN"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "Globird Energy",
-                "planId": "GLO1026860MRE1",
-                "retailerCode": "GLO",
-                "state": "SA",
-                "effectiveDate": "2025-12-09"
+                "tariffType": "TOU"
               },
               "planId": "GLO1026860MRE1",
               "postcodes": {
@@ -76998,7 +76999,7 @@
         }
       },
       {
-        "plan_id": "OVO723748MRE17",
+        "plan_id": "OVO723748MRE18",
         "plan_name": "The EV Plan",
         "retailer_name": "OVO Energy",
         "plan_type": "TOU",
@@ -77087,7 +77088,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "OVO723748MRE17",
+            "planId": "OVO723748MRE18",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -77219,10 +77220,10 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "OVO Energy",
-              "planId": "OVO723748MRE17",
+              "planId": "OVO723748MRE18",
               "retailerCode": "OVO"
             },
-            "planType": "E#R#OVO723748MRE17",
+            "planType": "E#R#OVO723748MRE18",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -77439,7 +77440,7 @@
                     "incentive": [
                       {
                         "name": "EV Off-Peak",
-                        "description": "$0.06/kWh usage charge between midnight and 6am. Does not apply to controlled loads. For more information head to www.ovoenergy.com.au/electric-vehicles/"
+                        "description": "$0.045/kWh usage charge between midnight and 6am. Does not apply to controlled loads. For more information head to www.ovoenergy.com.au/electric-vehicles/"
                       },
                       {
                         "name": "Interest Rewards",
@@ -77480,22 +77481,22 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1022567,
+                "batchId": 1045329,
                 "retailerId": "1085327",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "MO_V_EVPlan_TOU_SAPOWER_DEC2025"
+                  "MO_V_EVPlan_TOU_SAPOWER_APR2026"
                 ],
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "OVO Energy",
-                "planId": "OVO723748MRE17",
+                "planId": "OVO723748MRE18",
                 "retailerCode": "OVO",
                 "state": "SA",
-                "effectiveDate": "2025-12-05"
+                "effectiveDate": "2026-04-15"
               },
-              "planId": "OVO723748MRE17",
+              "planId": "OVO723748MRE18",
               "postcodes": {
                 "5097": 1
               }
@@ -77511,7 +77512,7 @@
         }
       },
       {
-        "plan_id": "OVO723789MRE17",
+        "plan_id": "OVO723789MRE18",
         "plan_name": "The Basic EV Plan",
         "retailer_name": "OVO Energy",
         "plan_type": "TOU",
@@ -77602,7 +77603,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "OVO723789MRE17",
+            "planId": "OVO723789MRE18",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -77736,10 +77737,10 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "OVO Energy",
-              "planId": "OVO723789MRE17",
+              "planId": "OVO723789MRE18",
               "retailerCode": "OVO"
             },
-            "planType": "E#R#OVO723789MRE17",
+            "planType": "E#R#OVO723789MRE18",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -77956,7 +77957,7 @@
                     "incentive": [
                       {
                         "name": "EV Off-Peak",
-                        "description": "$0.063/kWh usage charge between midnight and 6am. Does not apply to controlled loads. For more information head to www.ovoenergy.com.au/electric-vehicles/"
+                        "description": "$0.04725/kWh usage charge between midnight and 6am. Does not apply to controlled loads. For more information head to www.ovoenergy.com.au/electric-vehicles/"
                       },
                       {
                         "name": "Interest Rewards",
@@ -77999,22 +78000,22 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1022567,
+                "batchId": 1045329,
                 "retailerId": "1085327",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "MO_V_BasicEVPlan_TOU_SAPOWER_DEC2025"
+                  "MO_V_BasicEVPlan_TOU_SAPOWER_APR2026"
                 ],
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "OVO Energy",
-                "planId": "OVO723789MRE17",
+                "planId": "OVO723789MRE18",
                 "retailerCode": "OVO",
                 "state": "SA",
-                "effectiveDate": "2025-12-05"
+                "effectiveDate": "2026-04-15"
               },
-              "planId": "OVO723789MRE17",
+              "planId": "OVO723789MRE18",
               "postcodes": {
                 "5097": 1
               }
