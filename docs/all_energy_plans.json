@@ -2,7 +2,7 @@
   "metadata": {
     "postcode": "5097",
     "total_plans": 157,
-    "filtered_out": 452,
+    "filtered_out": 454,
     "extraction_date": "2025-06-26",
     "tou_count": 157,
     "sr_count": 0,
@@ -33820,7 +33820,6 @@
           "main_api_response": {
             "planId": "ENG937897SRE2",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -33914,13 +33913,14 @@
                   ]
                 }
               ],
-              "planName": "SA ENGIE Standing elec",
-              "retailerId": "25001",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "ENGIE",
               "planId": "ENG937897SRE2",
-              "retailerCode": "ENG"
+              "planName": "SA ENGIE Standing elec",
+              "retailerCode": "ENG",
+              "retailerId": "25001",
+              "retailerName": "ENGIE",
+              "tariffType": "TOU"
             },
             "planType": "E#R#ENG937897SRE2",
             "postcode": 5097,
@@ -33985,9 +33985,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "S",
-                "tariffType": "TOU",
-                "planRef": "PDB_8494_50203",
+                "batchId": 1002311,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -34139,18 +34137,30 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2025-08-26",
+                "excludedPostcodes": [
+                  "5960"
+                ],
+                "expiryDate": "2026-04-22",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "ENG937897SRE2",
                 "planName": "SA ENGIE Standing elec",
+                "planRef": "PDB_8494_50203",
                 "planStatus": "PUBLISHED",
+                "planType": "S",
+                "retailerCode": "ENG",
+                "retailerId": "25001",
+                "retailerName": "ENGIE",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1002311,
-                "retailerId": "25001",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "PDB_8494_50203",
                   "SERDMO02",
@@ -34158,16 +34168,7 @@
                   "SERTOUTOU0703S",
                   "RES TOU|TOU CL"
                 ],
-                "excludedPostcodes": [
-                  "5960"
-                ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "ENGIE",
-                "planId": "ENG937897SRE2",
-                "retailerCode": "ENG",
-                "state": "SA",
-                "effectiveDate": "2025-08-26"
+                "tariffType": "TOU"
               },
               "planId": "ENG937897SRE2",
               "postcodes": {
@@ -34302,7 +34303,6 @@
           "main_api_response": {
             "planId": "ENG938049SRE2",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -34403,13 +34403,14 @@
                   ]
                 }
               ],
-              "planName": "SA ENGIE Home Business Standing elec",
-              "retailerId": "25001",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "ENGIE",
               "planId": "ENG938049SRE2",
-              "retailerCode": "ENG"
+              "planName": "SA ENGIE Home Business Standing elec",
+              "retailerCode": "ENG",
+              "retailerId": "25001",
+              "retailerName": "ENGIE",
+              "tariffType": "TOU"
             },
             "planType": "E#R#ENG938049SRE2",
             "postcode": 5097,
@@ -34474,9 +34475,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "S",
-                "tariffType": "TOU",
-                "planRef": "PDB_8637_50204",
+                "batchId": 1002311,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -34635,18 +34634,30 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2025-08-26",
+                "excludedPostcodes": [
+                  "5960"
+                ],
+                "expiryDate": "2026-04-22",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "ENG938049SRE2",
                 "planName": "SA ENGIE Home Business Standing elec",
+                "planRef": "PDB_8637_50204",
                 "planStatus": "PUBLISHED",
+                "planType": "S",
+                "retailerCode": "ENG",
+                "retailerId": "25001",
+                "retailerName": "ENGIE",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1002311,
-                "retailerId": "25001",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "PDB_8637_50204",
                   "SEBDMO02",
@@ -34654,16 +34665,7 @@
                   "SEBTOUTOU0703S",
                   "RES TOU|TOU CL"
                 ],
-                "excludedPostcodes": [
-                  "5960"
-                ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "ENGIE",
-                "planId": "ENG938049SRE2",
-                "retailerCode": "ENG",
-                "state": "SA",
-                "effectiveDate": "2025-08-26"
+                "tariffType": "TOU"
               },
               "planId": "ENG938049SRE2",
               "postcodes": {
