@@ -6140,7 +6140,6 @@
           "main_api_response": {
             "planId": "AGL726436MRE30",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -6323,13 +6322,14 @@
                   ]
                 }
               ],
-              "planName": "Residential Smart Saver - Velocity New To AGL",
-              "retailerId": "9620",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "AGL",
               "planId": "AGL726436MRE30",
-              "retailerCode": "AGL"
+              "planName": "Residential Smart Saver - Velocity New To AGL",
+              "retailerCode": "AGL",
+              "retailerId": "9620",
+              "retailerName": "AGL",
+              "tariffType": "TOU"
             },
             "planType": "E#R#AGL726436MRE30",
             "postcode": 5097,
@@ -6394,8 +6394,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1041891,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -6670,30 +6669,32 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-03-26",
+                "expiryDate": "2026-04-20",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "AGL726436MRE30",
                 "planName": "Residential Smart Saver - Velocity New To AGL",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "AGL",
+                "retailerId": "9620",
+                "retailerName": "AGL",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1041891,
-                "retailerId": "9620",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   ";#Time of use;#",
                   "AGLMKTRE0025101",
                   "TOUS_INT"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "AGL",
-                "planId": "AGL726436MRE30",
-                "retailerCode": "AGL",
-                "state": "SA",
-                "effectiveDate": "2026-03-26"
+                "tariffType": "TOU"
               },
               "planId": "AGL726436MRE30",
               "postcodes": {
