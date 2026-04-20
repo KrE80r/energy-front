@@ -5991,7 +5991,7 @@
         }
       },
       {
-        "plan_id": "AGL726436MRE30",
+        "plan_id": "AGL726436MRE31",
         "plan_name": "Residential Smart Saver - Velocity New To AGL",
         "retailer_name": "AGL",
         "plan_type": "TOU",
@@ -6138,8 +6138,9 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "AGL726436MRE30",
+            "planId": "AGL726436MRE31",
             "planData": {
+              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -6292,7 +6293,7 @@
                   ],
                   "incentive": [
                     {
-                      "name": "Sign-Up Velocity Points:10,000"
+                      "name": "Sign-Up Velocity Points:20,000"
                     }
                   ],
                   "fuelType": "E",
@@ -6322,16 +6323,15 @@
                   ]
                 }
               ],
+              "planName": "Residential Smart Saver - Velocity New To AGL",
+              "retailerId": "9620",
               "customerType": "R",
               "fuelType": "E",
-              "planId": "AGL726436MRE30",
-              "planName": "Residential Smart Saver - Velocity New To AGL",
-              "retailerCode": "AGL",
-              "retailerId": "9620",
               "retailerName": "AGL",
-              "tariffType": "TOU"
+              "planId": "AGL726436MRE31",
+              "retailerCode": "AGL"
             },
-            "planType": "E#R#AGL726436MRE30",
+            "planType": "E#R#AGL726436MRE31",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -6394,7 +6394,8 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "batchId": 1041891,
+                "planType": "M",
+                "tariffType": "TOU",
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -6625,8 +6626,8 @@
                     ],
                     "incentive": [
                       {
-                        "name": "Sign-Up Velocity Points:10,000",
-                        "description": "Eligibility criteria and Terms & Conditions  apply. Points in T&Cs. Limit per customer: One Offer per fuel and a maximum of two supply addresses."
+                        "name": "Sign-Up Velocity Points:20,000",
+                        "description": "Eligibility criteria and Terms & Conditions  apply. Points in T&Cs. Limit per customer: One Offer per fuel and a maximum of two supply addresses. Offer ends on 30/06/26."
                       }
                     ],
                     "fuelType": "E",
@@ -6669,34 +6670,32 @@
                     "isFixed": false
                   }
                 ],
-                "customerType": "R",
-                "distributor": "SA Power Networks",
-                "effectiveDate": "2026-03-26",
-                "expiryDate": "2026-04-20",
-                "fuelType": "E",
-                "genAvailable": true,
-                "planId": "AGL726436MRE30",
                 "planName": "Residential Smart Saver - Velocity New To AGL",
                 "planStatus": "PUBLISHED",
-                "planType": "M",
-                "retailerCode": "AGL",
-                "retailerId": "9620",
-                "retailerName": "AGL",
-                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
+                "batchId": 1045868,
+                "retailerId": "9620",
+                "distributor": "SA Power Networks",
+                "genAvailable": true,
                 "tags": [
                   ";#Time of use;#",
                   "AGLMKTRE0025101",
                   "TOUS_INT"
                 ],
-                "tariffType": "TOU"
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "AGL",
+                "planId": "AGL726436MRE31",
+                "retailerCode": "AGL",
+                "state": "SA",
+                "effectiveDate": "2026-04-20"
               },
-              "planId": "AGL726436MRE30",
+              "planId": "AGL726436MRE31",
               "postcodes": {
                 "5097": 1
               }
