@@ -13933,7 +13933,6 @@
           "main_api_response": {
             "planId": "AGL978229MRE12",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -14110,13 +14109,14 @@
                   ]
                 }
               ],
-              "planName": "Three for Free - New to AGL (No Exit Fee)",
-              "retailerId": "9620",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "AGL",
               "planId": "AGL978229MRE12",
-              "retailerCode": "AGL"
+              "planName": "Three for Free - New to AGL (No Exit Fee)",
+              "retailerCode": "AGL",
+              "retailerId": "9620",
+              "retailerName": "AGL",
+              "tariffType": "TOU"
             },
             "planType": "E#R#AGL978229MRE12",
             "postcode": 5097,
@@ -14181,8 +14181,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1041891,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -14461,30 +14460,32 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-03-26",
+                "expiryDate": "2026-05-12",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "AGL978229MRE12",
                 "planName": "Three for Free - New to AGL (No Exit Fee)",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "AGL",
+                "retailerId": "9620",
+                "retailerName": "AGL",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1041891,
-                "retailerId": "9620",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   ";#Time of use;#",
                   "AGLMKTRE0025119",
                   "TOUS_INT"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "AGL",
-                "planId": "AGL978229MRE12",
-                "retailerCode": "AGL",
-                "state": "SA",
-                "effectiveDate": "2026-03-26"
+                "tariffType": "TOU"
               },
               "planId": "AGL978229MRE12",
               "postcodes": {
@@ -14673,7 +14674,6 @@
           "main_api_response": {
             "planId": "AGL979831MRE6",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -14850,13 +14850,14 @@
                   ]
                 }
               ],
-              "planName": "Three for Free (No Exit Fee)",
-              "retailerId": "9620",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "AGL",
               "planId": "AGL979831MRE6",
-              "retailerCode": "AGL"
+              "planName": "Three for Free (No Exit Fee)",
+              "retailerCode": "AGL",
+              "retailerId": "9620",
+              "retailerName": "AGL",
+              "tariffType": "TOU"
             },
             "planType": "E#R#AGL979831MRE6",
             "postcode": 5097,
@@ -14921,8 +14922,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1041891,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -15201,30 +15201,32 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-03-26",
+                "expiryDate": "2026-05-12",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "AGL979831MRE6",
                 "planName": "Three for Free (No Exit Fee)",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "AGL",
+                "retailerId": "9620",
+                "retailerName": "AGL",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1041891,
-                "retailerId": "9620",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   ";#Time of use;#",
                   "AGLMKTRE0025119",
                   "TOUS_INT"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "AGL",
-                "planId": "AGL979831MRE6",
-                "retailerCode": "AGL",
-                "state": "SA",
-                "effectiveDate": "2026-03-26"
+                "tariffType": "TOU"
               },
               "planId": "AGL979831MRE6",
               "postcodes": {
