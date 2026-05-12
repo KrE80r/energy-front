@@ -1,10 +1,10 @@
 {
   "metadata": {
     "postcode": "5097",
-    "total_plans": 158,
-    "filtered_out": 457,
+    "total_plans": 160,
+    "filtered_out": 463,
     "extraction_date": "2025-06-26",
-    "tou_count": 158,
+    "tou_count": 160,
     "sr_count": 0,
     "other_count": 0,
     "filters_applied": "Excluded tariff types: SR, SRCL, TOUCL",
@@ -13762,7 +13762,7 @@
         }
       },
       {
-        "plan_id": "AGL978229MRE12",
+        "plan_id": "AGL978229MRE13",
         "plan_name": "Three for Free - New to AGL (No Exit Fee)",
         "retailer_name": "AGL",
         "plan_type": "TOU",
@@ -13922,7 +13922,7 @@
         "membership_fee_annual": 0,
         "membership_fee_quarterly": 0,
         "membership_fee_monthly": 0,
-        "solar_feed_in_rate_r": 0,
+        "solar_feed_in_rate_r": 16,
         "payment_options": [
           "PayPal",
           "Direct Debit",
@@ -13931,13 +13931,29 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "AGL978229MRE12",
+            "planId": "AGL978229MRE13",
             "planData": {
+              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
                   "benefitPeriod": "Ongoing",
                   "solarFit": [
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "OTHER",
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 16,
+                          "rebate": true,
+                          "measureUnit": "KWH"
+                        }
+                      ],
+                      "rate": 16,
+                      "displayName": "16.00 cents/kwh from 5pm - 9pm",
+                      "type": "R",
+                      "singleTariffPeriod": "P1Y"
+                    },
                     {
                       "tariffUType": "singleTariff",
                       "scheme": "OTHER",
@@ -13949,22 +13965,7 @@
                         }
                       ],
                       "rate": 0,
-                      "displayName": "AGL Retailer Feed-in Tariff (exc GST if any)",
-                      "type": "R",
-                      "singleTariffPeriod": "P1Y"
-                    },
-                    {
-                      "tariffUType": "singleTariff",
-                      "scheme": "PREMIUM",
-                      "singleTariffRates": [
-                        {
-                          "unitPrice": 44,
-                          "rebate": true,
-                          "measureUnit": "KWH"
-                        }
-                      ],
-                      "rate": 44,
-                      "displayName": "Solar bonus scheme - Premium FiT",
+                      "displayName": "0 cents/kwh all other times",
                       "type": "G",
                       "singleTariffPeriod": "P1Y"
                     }
@@ -14109,16 +14110,15 @@
                   ]
                 }
               ],
+              "planName": "Three for Free - New to AGL (No Exit Fee)",
+              "retailerId": "9620",
               "customerType": "R",
               "fuelType": "E",
-              "planId": "AGL978229MRE12",
-              "planName": "Three for Free - New to AGL (No Exit Fee)",
-              "retailerCode": "AGL",
-              "retailerId": "9620",
               "retailerName": "AGL",
-              "tariffType": "TOU"
+              "planId": "AGL978229MRE13",
+              "retailerCode": "AGL"
             },
-            "planType": "E#R#AGL978229MRE12",
+            "planType": "E#R#AGL978229MRE13",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -14181,7 +14181,8 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "batchId": 1041891,
+                "planType": "M",
+                "tariffType": "TOU",
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -14193,30 +14194,30 @@
                         "scheme": "OTHER",
                         "singleTariffRates": [
                           {
+                            "unitPrice": 16,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 16,
+                        "displayName": "16.00 cents/kwh from 5pm - 9pm",
+                        "description": "16.00 cents/kwh from 5pm - 9pm",
+                        "type": "R",
+                        "singleTariffPeriod": "P1Y"
+                      },
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "OTHER",
+                        "singleTariffRates": [
+                          {
                             "unitPrice": 0,
                             "rebate": true,
                             "measureUnit": "KWH"
                           }
                         ],
                         "rate": 0,
-                        "displayName": "AGL Retailer Feed-in Tariff (exc GST if any)",
-                        "description": "AGL Retailer Feed-in Tariff (exc GST if any)",
-                        "type": "R",
-                        "singleTariffPeriod": "P1Y"
-                      },
-                      {
-                        "tariffUType": "singleTariff",
-                        "scheme": "PREMIUM",
-                        "singleTariffRates": [
-                          {
-                            "unitPrice": 44,
-                            "rebate": true,
-                            "measureUnit": "KWH"
-                          }
-                        ],
-                        "rate": 44,
-                        "displayName": "Solar bonus scheme - Premium FiT",
-                        "description": "Solar bonus scheme - Premium FiT",
+                        "displayName": "0 cents/kwh all other times",
+                        "description": "0 cents/kwh all other times",
                         "type": "G",
                         "singleTariffPeriod": "P1Y"
                       }
@@ -14460,34 +14461,32 @@
                     "isFixed": false
                   }
                 ],
-                "customerType": "R",
-                "distributor": "SA Power Networks",
-                "effectiveDate": "2026-03-26",
-                "expiryDate": "2026-05-12",
-                "fuelType": "E",
-                "genAvailable": true,
-                "planId": "AGL978229MRE12",
                 "planName": "Three for Free - New to AGL (No Exit Fee)",
                 "planStatus": "PUBLISHED",
-                "planType": "M",
-                "retailerCode": "AGL",
-                "retailerId": "9620",
-                "retailerName": "AGL",
-                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
+                "batchId": 1053720,
+                "retailerId": "9620",
+                "distributor": "SA Power Networks",
+                "genAvailable": true,
                 "tags": [
                   ";#Time of use;#",
-                  "AGLMKTRE0025119",
+                  "AGLMKTRE0026109",
                   "TOUS_INT"
                 ],
-                "tariffType": "TOU"
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "AGL",
+                "planId": "AGL978229MRE13",
+                "retailerCode": "AGL",
+                "state": "SA",
+                "effectiveDate": "2026-05-12"
               },
-              "planId": "AGL978229MRE12",
+              "planId": "AGL978229MRE13",
               "postcodes": {
                 "5097": 1
               }
@@ -14503,7 +14502,7 @@
         }
       },
       {
-        "plan_id": "AGL979831MRE6",
+        "plan_id": "AGL979831MRE7",
         "plan_name": "Three for Free (No Exit Fee)",
         "retailer_name": "AGL",
         "plan_type": "TOU",
@@ -14663,7 +14662,7 @@
         "membership_fee_annual": 0,
         "membership_fee_quarterly": 0,
         "membership_fee_monthly": 0,
-        "solar_feed_in_rate_r": 0,
+        "solar_feed_in_rate_r": 16,
         "payment_options": [
           "PayPal",
           "Direct Debit",
@@ -14672,13 +14671,29 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "AGL979831MRE6",
+            "planId": "AGL979831MRE7",
             "planData": {
+              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
                   "benefitPeriod": "Ongoing",
                   "solarFit": [
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "OTHER",
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 16,
+                          "rebate": true,
+                          "measureUnit": "KWH"
+                        }
+                      ],
+                      "rate": 16,
+                      "displayName": "16.00 cents/kwh from 5pm - 9pm",
+                      "type": "R",
+                      "singleTariffPeriod": "P1Y"
+                    },
                     {
                       "tariffUType": "singleTariff",
                       "scheme": "OTHER",
@@ -14690,22 +14705,7 @@
                         }
                       ],
                       "rate": 0,
-                      "displayName": "AGL Retailer Feed-in Tariff (exc GST if any)",
-                      "type": "R",
-                      "singleTariffPeriod": "P1Y"
-                    },
-                    {
-                      "tariffUType": "singleTariff",
-                      "scheme": "PREMIUM",
-                      "singleTariffRates": [
-                        {
-                          "unitPrice": 44,
-                          "rebate": true,
-                          "measureUnit": "KWH"
-                        }
-                      ],
-                      "rate": 44,
-                      "displayName": "Solar bonus scheme - Premium FiT",
+                      "displayName": "0 cents/kwh all other times",
                       "type": "G",
                       "singleTariffPeriod": "P1Y"
                     }
@@ -14850,16 +14850,15 @@
                   ]
                 }
               ],
+              "planName": "Three for Free (No Exit Fee)",
+              "retailerId": "9620",
               "customerType": "R",
               "fuelType": "E",
-              "planId": "AGL979831MRE6",
-              "planName": "Three for Free (No Exit Fee)",
-              "retailerCode": "AGL",
-              "retailerId": "9620",
               "retailerName": "AGL",
-              "tariffType": "TOU"
+              "planId": "AGL979831MRE7",
+              "retailerCode": "AGL"
             },
-            "planType": "E#R#AGL979831MRE6",
+            "planType": "E#R#AGL979831MRE7",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -14922,7 +14921,8 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "batchId": 1041891,
+                "planType": "M",
+                "tariffType": "TOU",
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -14934,30 +14934,30 @@
                         "scheme": "OTHER",
                         "singleTariffRates": [
                           {
+                            "unitPrice": 16,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 16,
+                        "displayName": "16.00 cents/kwh from 5pm - 9pm",
+                        "description": "16.00 cents/kwh from 5pm - 9pm",
+                        "type": "R",
+                        "singleTariffPeriod": "P1Y"
+                      },
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "OTHER",
+                        "singleTariffRates": [
+                          {
                             "unitPrice": 0,
                             "rebate": true,
                             "measureUnit": "KWH"
                           }
                         ],
                         "rate": 0,
-                        "displayName": "AGL Retailer Feed-in Tariff (exc GST if any)",
-                        "description": "AGL Retailer Feed-in Tariff (exc GST if any)",
-                        "type": "R",
-                        "singleTariffPeriod": "P1Y"
-                      },
-                      {
-                        "tariffUType": "singleTariff",
-                        "scheme": "PREMIUM",
-                        "singleTariffRates": [
-                          {
-                            "unitPrice": 44,
-                            "rebate": true,
-                            "measureUnit": "KWH"
-                          }
-                        ],
-                        "rate": 44,
-                        "displayName": "Solar bonus scheme - Premium FiT",
-                        "description": "Solar bonus scheme - Premium FiT",
+                        "displayName": "0 cents/kwh all other times",
+                        "description": "0 cents/kwh all other times",
                         "type": "G",
                         "singleTariffPeriod": "P1Y"
                       }
@@ -15201,34 +15201,32 @@
                     "isFixed": false
                   }
                 ],
-                "customerType": "R",
-                "distributor": "SA Power Networks",
-                "effectiveDate": "2026-03-26",
-                "expiryDate": "2026-05-12",
-                "fuelType": "E",
-                "genAvailable": true,
-                "planId": "AGL979831MRE6",
                 "planName": "Three for Free (No Exit Fee)",
                 "planStatus": "PUBLISHED",
-                "planType": "M",
-                "retailerCode": "AGL",
-                "retailerId": "9620",
-                "retailerName": "AGL",
-                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
+                "batchId": 1053720,
+                "retailerId": "9620",
+                "distributor": "SA Power Networks",
+                "genAvailable": true,
                 "tags": [
                   ";#Time of use;#",
-                  "AGLMKTRE0025119",
+                  "AGLMKTRE0026109",
                   "TOUS_INT"
                 ],
-                "tariffType": "TOU"
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "AGL",
+                "planId": "AGL979831MRE7",
+                "retailerCode": "AGL",
+                "state": "SA",
+                "effectiveDate": "2026-05-12"
               },
-              "planId": "AGL979831MRE6",
+              "planId": "AGL979831MRE7",
               "postcodes": {
                 "5097": 1
               }
@@ -35348,6 +35346,564 @@
         }
       },
       {
+        "plan_id": "ENG1053731MRE1",
+        "plan_name": "SA _ENGIE Perks Plus Elec",
+        "retailer_name": "ENGIE",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 350,
+        "quarterly_cost": 980,
+        "annual_cost": 4220,
+        "peak_cost": 56.232,
+        "shoulder_cost": 39.446000000000005,
+        "off_peak_cost": 20.383000000000003,
+        "daily_supply_charge": 125.34500000000001,
+        "detailed_time_blocks": [
+          {
+            "name": "Peak",
+            "description": "06:00 - 10:00; 15:00 - 01:00 (AEST)",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "0600",
+                "end_time": "0959"
+              },
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "1500",
+                "end_time": "0059"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 51.12,
+                "unit_price_gst": 56.232,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Off-Peak",
+            "description": "01:00 - 06:00 (AEST)",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "0100",
+                "end_time": "0559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 35.86,
+                "unit_price_gst": 39.446000000000005,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Solar Sponge",
+            "description": "10:00 - 15:00 (AEST)",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "1000",
+                "end_time": "1459"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 18.53,
+                "unit_price_gst": 20.383000000000003,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": null,
+          "paper_bill_fee": 2.2,
+          "payment_processing_fees": [],
+          "late_payment_fee": 12,
+          "disconnection_fee_move_out": null,
+          "disconnection_fee_non_payment": null,
+          "reconnection_fee": 63.712,
+          "other_fees": [],
+          "credit_card_payment_fees": [
+            {
+              "feeType": "CCF",
+              "percent": 0.32,
+              "feeTerm": "P"
+            }
+          ],
+          "membership_fee": null
+        },
+        "membership_fee_annual": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_monthly": 0,
+        "solar_feed_in_rate_r": 1,
+        "payment_options": [
+          "BPay",
+          "Credit Card",
+          "Direct Debit",
+          "PayPal"
+        ],
+        "raw_plan_data_complete": {
+          "main_api_response": {
+            "planId": "ENG1053731MRE1",
+            "planData": {
+              "tariffType": "TOU",
+              "contract": [
+                {
+                  "pricingModel": "TOU",
+                  "benefitPeriod": "Ongoing",
+                  "solarFit": [
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "OTHER",
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 1,
+                          "rebate": true,
+                          "measureUnit": "KWH"
+                        }
+                      ],
+                      "rate": 1,
+                      "displayName": "Single Rate Solar FiT",
+                      "type": "R",
+                      "singleTariffPeriod": "P1Y"
+                    },
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "PREMIUM",
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 45,
+                          "rebate": true,
+                          "measureUnit": "KWH"
+                        }
+                      ],
+                      "rate": 45,
+                      "displayName": "Single Rate Solar FiT",
+                      "type": "G",
+                      "singleTariffPeriod": "P1Y"
+                    }
+                  ],
+                  "fee": [
+                    {
+                      "amount": 63.712,
+                      "feeType": "RecoF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 2.2,
+                      "feeType": "PBF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "feeType": "CCF",
+                      "percent": 0.32,
+                      "feeTerm": "P"
+                    },
+                    {
+                      "amount": 12,
+                      "feeType": "LPF",
+                      "feeTerm": "F"
+                    }
+                  ],
+                  "networkTariffCode": [
+                    "RTOU"
+                  ],
+                  "termType": "E",
+                  "discount": [
+                    {
+                      "name": "16% Guaranteed Discount",
+                      "discountPercent": 16,
+                      "type": "U",
+                      "category": "O",
+                      "method": "B"
+                    }
+                  ],
+                  "networkTariffType": "PT",
+                  "tariffPeriod": [
+                    {
+                      "touBlock": [
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 51.12,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 35.86,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 18.53,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        }
+                      ],
+                      "blockPeriod": "P1D",
+                      "dailySupplyCharge": 113.95
+                    }
+                  ],
+                  "incentive": [
+                    {
+                      "name": "My NRMA Membership"
+                    }
+                  ],
+                  "fuelType": "E",
+                  "meterType": [
+                    "Type 4",
+                    "Type 4a"
+                  ],
+                  "paymentOption": [
+                    "BP",
+                    "CC",
+                    "DD",
+                    "P"
+                  ],
+                  "eligibilityRestriction": [
+                    {
+                      "type": "OC",
+                      "description": "You must agree to the NRMA T&Cs and Privacy Policy, available at mynrma.com.au; and provide a valid email address. Offer not available for current My NRMA members.",
+                      "information": "Other"
+                    }
+                  ]
+                }
+              ],
+              "planName": "SA _ENGIE Perks Plus Elec",
+              "retailerId": "25001",
+              "customerType": "R",
+              "fuelType": "E",
+              "retailerName": "ENGIE",
+              "planId": "ENG1053731MRE1",
+              "retailerCode": "ENG"
+            },
+            "planType": "E#R#ENG1053731MRE1",
+            "postcode": 5097,
+            "pcr": {
+              "costs": {
+                "electricity": {
+                  "small": {
+                    "quarterly": {
+                      "noDiscounts": 450,
+                      "allDiscounts": 380,
+                      "guaranteedDiscount": 380
+                    },
+                    "monthly": {
+                      "noDiscounts": 160,
+                      "allDiscounts": 130,
+                      "guaranteedDiscount": 130
+                    },
+                    "yearly": {
+                      "noDiscounts": 1880,
+                      "allDiscounts": 1580,
+                      "guaranteedDiscount": 1580
+                    }
+                  },
+                  "large": {
+                    "quarterly": {
+                      "noDiscounts": 980,
+                      "allDiscounts": 820,
+                      "guaranteedDiscount": 820
+                    },
+                    "monthly": {
+                      "noDiscounts": 350,
+                      "allDiscounts": 300,
+                      "guaranteedDiscount": 300
+                    },
+                    "yearly": {
+                      "noDiscounts": 4220,
+                      "allDiscounts": 3540,
+                      "guaranteedDiscount": 3540
+                    }
+                  },
+                  "medium": {
+                    "quarterly": {
+                      "noDiscounts": 710,
+                      "allDiscounts": 600,
+                      "guaranteedDiscount": 600
+                    },
+                    "monthly": {
+                      "noDiscounts": 250,
+                      "allDiscounts": 210,
+                      "guaranteedDiscount": 210
+                    },
+                    "yearly": {
+                      "noDiscounts": 3040,
+                      "allDiscounts": 2550,
+                      "guaranteedDiscount": 2550
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "detailed_api_response": {
+            "data": {
+              "planData": {
+                "planType": "M",
+                "tariffType": "TOU",
+                "planRef": "PDB_10957_67568",
+                "contract": [
+                  {
+                    "pricingModel": "TOU",
+                    "benefitPeriod": "Ongoing",
+                    "coolingOffDays": 10,
+                    "solarFit": [
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "OTHER",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 1,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 1,
+                        "displayName": "Single Rate Solar FiT",
+                        "description": "ENGIE Market FIT",
+                        "type": "R",
+                        "singleTariffPeriod": "P1Y"
+                      },
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "PREMIUM",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 45,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 45,
+                        "displayName": "Single Rate Solar FiT",
+                        "description": "ENGIE Premium FIT (limited eligibility)",
+                        "type": "G",
+                        "singleTariffPeriod": "P1Y"
+                      }
+                    ],
+                    "additionalFeeInformation": "Additional fees may apply. For information please contact us on 13 88 08.",
+                    "fee": [
+                      {
+                        "description": "Reconnection (Normal Hours) (Includes GST).",
+                        "amount": 63.712,
+                        "feeType": "RecoF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "A $2.20 (inc. GST) charge will apply to paper bills sent in the post.",
+                        "amount": 2.2,
+                        "feeType": "PBF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "You may be charged a 0.32% merchant service fee for paying by Visa or Mastercard (unless you pay via direct debit)",
+                        "feeType": "CCF",
+                        "percent": 0.32,
+                        "feeTerm": "P"
+                      },
+                      {
+                        "description": "A fee of $12 may apply for payments made after the due date (GST exempt).",
+                        "amount": 12,
+                        "feeType": "LPF",
+                        "feeTerm": "F"
+                      }
+                    ],
+                    "networkTariffCode": [
+                      "RTOU"
+                    ],
+                    "termType": "E",
+                    "discount": [
+                      {
+                        "name": "16% Guaranteed Discount",
+                        "description": "You'll receive a 16% guaranteed discount off our electricity usage and supply charges.",
+                        "discountPercent": 16,
+                        "type": "U",
+                        "category": "O",
+                        "method": "B"
+                      }
+                    ],
+                    "networkTariffType": "PT",
+                    "tariffPeriod": [
+                      {
+                        "touBlock": [
+                          {
+                            "name": "Peak",
+                            "description": "06:00 - 10:00; 15:00 - 01:00 (AEST)",
+                            "blockRate": [
+                              {
+                                "unitPrice": 51.12,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "P",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "0600",
+                                "endTime": "0959"
+                              },
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "1500",
+                                "endTime": "0059"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Off-Peak",
+                            "description": "01:00 - 06:00 (AEST)",
+                            "blockRate": [
+                              {
+                                "unitPrice": 35.86,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "OP",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "0100",
+                                "endTime": "0559"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Solar Sponge",
+                            "description": "10:00 - 15:00 (AEST)",
+                            "blockRate": [
+                              {
+                                "unitPrice": 18.53,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "S",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "1000",
+                                "endTime": "1459"
+                              }
+                            ]
+                          }
+                        ],
+                        "endDate": "2026-12-31",
+                        "blockPeriod": "P1D",
+                        "dailySupplyCharge": 113.95,
+                        "startDate": "2026-01-01"
+                      }
+                    ],
+                    "variation": "We may vary your rates and charges at any time, including if any underlying information is incorrect, you get a new meter or your distributor changes your tariff. We'll give you advance notice of any change, which may be on your bill.",
+                    "onExpiry": "Ongoing energy plan until you or we end it. We may end this energy plan at any time by giving you 20 Business Days' notice.",
+                    "incentive": [
+                      {
+                        "name": "My NRMA Membership",
+                        "description": "Your My NRMA membership will be complimentary, a program that helps inspire you to explore new places and experiences, great deals on fuel, shopping, travel, entertainment and more along the way."
+                      }
+                    ],
+                    "fuelType": "E",
+                    "terms": "For further details on the information presented in this Plan Information Document, or for full terms and conditions, please visit www.engie.com.au or call ENGIE on 13 88 08. All time-dependent rates (eg. 4pm to 8pm) are billed in AEST. All time-dependent rates (eg. 4pm to 8pm) are billed in AEST.",
+                    "timeDefinition": "AEST",
+                    "billFrequency": [
+                      {
+                        "number": 3,
+                        "period": "M"
+                      },
+                      {
+                        "number": 1,
+                        "period": "M"
+                      }
+                    ],
+                    "meterType": [
+                      "Type 4",
+                      "Type 4a"
+                    ],
+                    "paymentOption": [
+                      "BP",
+                      "CC",
+                      "DD",
+                      "P"
+                    ],
+                    "eligibilityRestriction": [
+                      {
+                        "type": "OC",
+                        "description": "You must agree to the NRMA T&Cs and Privacy Policy, available at mynrma.com.au; and provide a valid email address. Offer not available for current My NRMA members.",
+                        "information": "Other"
+                      }
+                    ],
+                    "isFixed": false
+                  }
+                ],
+                "planName": "SA _ENGIE Perks Plus Elec",
+                "planStatus": "PUBLISHED",
+                "supplyArea": [
+                  {
+                    "name": "SA Power Networks",
+                    "id": "42"
+                  }
+                ],
+                "batchId": 1053728,
+                "retailerId": "25001",
+                "distributor": "SA Power Networks",
+                "genAvailable": true,
+                "tags": [
+                  "PDB_10957_67568",
+                  "SEREPER11",
+                  "SA _ENGIE Perks Plus",
+                  "SERTOUTOU0725M",
+                  "RES TOU|TOU CL"
+                ],
+                "excludedPostcodes": [
+                  "5960"
+                ],
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "ENGIE",
+                "planId": "ENG1053731MRE1",
+                "retailerCode": "ENG",
+                "state": "SA",
+                "effectiveDate": "2026-05-12"
+              },
+              "planId": "ENG1053731MRE1",
+              "postcodes": {
+                "5097": 1
+              }
+            }
+          }
+        },
+        "raw_plan_data": {
+          "eligibility_restrictions": true,
+          "has_discounts": true,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      },
+      {
         "plan_id": "ENG937897SRE4",
         "plan_name": "SA ENGIE Standing elec",
         "retailer_name": "ENGIE",
@@ -39486,8 +40042,8 @@
         }
       },
       {
-        "plan_id": "GLO1052967MRE1",
-        "plan_name": "WHOLESAVE Residential (Two Rate)-SAPN",
+        "plan_id": "GLO1052967MRE3",
+        "plan_name": "WHOLESAVE Resi (Two Rate) estimate-SAPN",
         "retailer_name": "Globird Energy",
         "plan_type": "TOU",
         "tariff_type": "TOU",
@@ -39574,7 +40130,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "GLO1052967MRE1",
+            "planId": "GLO1052967MRE3",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -39660,15 +40216,15 @@
                   ]
                 }
               ],
-              "planName": "WHOLESAVE Residential (Two Rate)-SAPN",
+              "planName": "WHOLESAVE Resi (Two Rate) estimate-SAPN",
               "retailerId": "898484",
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Globird Energy",
-              "planId": "GLO1052967MRE1",
+              "planId": "GLO1052967MRE3",
               "retailerCode": "GLO"
             },
-            "planType": "E#R#GLO1052967MRE1",
+            "planType": "E#R#GLO1052967MRE3",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -39859,7 +40415,7 @@
                     "isFixed": false
                   }
                 ],
-                "planName": "WHOLESAVE Residential (Two Rate)-SAPN",
+                "planName": "WHOLESAVE Resi (Two Rate) estimate-SAPN",
                 "planStatus": "PUBLISHED",
                 "supplyArea": [
                   {
@@ -39867,7 +40423,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1052959,
+                "batchId": 1054416,
                 "retailerId": "898484",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -39877,12 +40433,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Globird Energy",
-                "planId": "GLO1052967MRE1",
+                "planId": "GLO1052967MRE3",
                 "retailerCode": "GLO",
                 "state": "SA",
-                "effectiveDate": "2026-05-01"
+                "effectiveDate": "2026-05-12"
               },
-              "planId": "GLO1052967MRE1",
+              "planId": "GLO1052967MRE3",
               "postcodes": {
                 "5097": 1
               }
@@ -64759,6 +65315,702 @@
                 "effectiveDate": "2025-12-18"
               },
               "planId": "ORI1020066MRE2",
+              "postcodes": {
+                "5097": 1
+              }
+            }
+          }
+        },
+        "raw_plan_data": {
+          "eligibility_restrictions": true,
+          "has_discounts": false,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      },
+      {
+        "plan_id": "ORI1054200MRE1",
+        "plan_name": "Origin Go Variable - New and Moving Customers only",
+        "retailer_name": "Origin Energy",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 310,
+        "quarterly_cost": 880,
+        "annual_cost": 3780,
+        "peak_cost": 53.69100000000001,
+        "shoulder_cost": 31.713,
+        "off_peak_cost": 26.488,
+        "daily_supply_charge": 104.44500000000001,
+        "detailed_time_blocks": [
+          {
+            "name": "Peak",
+            "description": "6am - 10am and 4pm - Midnight All year | All week",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "0600",
+                "end_time": "0959"
+              },
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "1600",
+                "end_time": "2359"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 48.81,
+                "unit_price_gst": 53.69100000000001,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Off peak",
+            "description": "All other times Midnight - 6am All year | All week",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "0000",
+                "end_time": "0559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 28.83,
+                "unit_price_gst": 31.713,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Shoulder",
+            "description": "10 am - 4pm All year | All week",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "1000",
+                "end_time": "1559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 24.08,
+                "unit_price_gst": 26.488,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": 63.71,
+          "paper_bill_fee": 2.15,
+          "payment_processing_fees": [
+            {
+              "amount": 2.7,
+              "feeType": "PPF",
+              "percent": 0,
+              "feeTerm": "F"
+            }
+          ],
+          "late_payment_fee": 15,
+          "disconnection_fee_move_out": null,
+          "disconnection_fee_non_payment": null,
+          "reconnection_fee": null,
+          "other_fees": [
+            {
+              "amount": 16.69,
+              "feeType": "OF",
+              "percent": 0,
+              "feeTerm": "F"
+            }
+          ],
+          "credit_card_payment_fees": [
+            {
+              "feeType": "CCF",
+              "percent": 0.33,
+              "feeTerm": "P"
+            }
+          ],
+          "membership_fee": null
+        },
+        "membership_fee_annual": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_monthly": 0,
+        "solar_feed_in_rate_r": 2,
+        "payment_options": [
+          "BPay",
+          "Credit Card",
+          "Direct Debit",
+          "PayPal",
+          "Centrepay"
+        ],
+        "raw_plan_data_complete": {
+          "main_api_response": {
+            "planId": "ORI1054200MRE1",
+            "planData": {
+              "tariffType": "TOU",
+              "contract": [
+                {
+                  "pricingModel": "TOU",
+                  "benefitPeriod": "12 months",
+                  "solarFit": [
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "OTHER",
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 44,
+                          "rebate": true,
+                          "measureUnit": "KWH"
+                        }
+                      ],
+                      "rate": 44,
+                      "displayName": "Solar FIT",
+                      "type": "G",
+                      "singleTariffPeriod": "P1Y"
+                    },
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "OTHER",
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 2,
+                          "rebate": true,
+                          "measureUnit": "KWH"
+                        }
+                      ],
+                      "rate": 2,
+                      "displayName": "Solar FIT",
+                      "type": "R",
+                      "singleTariffPeriod": "P1Y"
+                    }
+                  ],
+                  "fee": [
+                    {
+                      "amount": 63.71,
+                      "feeType": "ConnF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 63.71,
+                      "feeType": "DiscoF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 15,
+                      "feeType": "LPF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 0,
+                      "feeType": "CCF",
+                      "percent": 0.27,
+                      "feeTerm": "P"
+                    },
+                    {
+                      "amount": 2.7,
+                      "feeType": "PPF",
+                      "percent": 0,
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 2.15,
+                      "feeType": "PBF",
+                      "percent": 0,
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 0,
+                      "feeType": "CCF",
+                      "percent": 0.65,
+                      "feeTerm": "P"
+                    },
+                    {
+                      "feeType": "CCF",
+                      "percent": 0.33,
+                      "feeTerm": "P"
+                    },
+                    {
+                      "amount": 0,
+                      "feeType": "CCF",
+                      "percent": 0.64,
+                      "feeTerm": "P"
+                    },
+                    {
+                      "amount": 0,
+                      "feeType": "CCF",
+                      "percent": 0.67,
+                      "feeTerm": "P"
+                    },
+                    {
+                      "amount": 16.69,
+                      "feeType": "OF",
+                      "percent": 0,
+                      "feeTerm": "F"
+                    }
+                  ],
+                  "termType": "E",
+                  "networkTariffType": "IS",
+                  "tariffPeriod": [
+                    {
+                      "touBlock": [
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 48.81,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 28.83,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 24.08,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        }
+                      ],
+                      "blockPeriod": "P1Y",
+                      "dailySupplyCharge": 94.95
+                    }
+                  ],
+                  "greenCharge": [
+                    {
+                      "chargeType": "A"
+                    },
+                    {
+                      "chargeType": "A"
+                    },
+                    {
+                      "chargeType": "A"
+                    }
+                  ],
+                  "incentive": [
+                    {
+                      "name": "Account Credit"
+                    }
+                  ],
+                  "fuelType": "E",
+                  "meterType": [
+                    "Type 4",
+                    "Type 4a",
+                    "Type 5",
+                    "Type 6"
+                  ],
+                  "paymentOption": [
+                    "BP",
+                    "CC",
+                    "DD",
+                    "P",
+                    "CP"
+                  ],
+                  "eligibilityRestriction": [
+                    {
+                      "type": "OC",
+                      "description": "Offer only available to new residential natural gas customers, and existing customers moving to a new property",
+                      "information": "New and Moving Customers Only"
+                    },
+                    {
+                      "type": "OC",
+                      "description": "Credit will only be applied if you haven't received a credit in the previous 12 months",
+                      "information": "Credit Time Frame"
+                    }
+                  ]
+                }
+              ],
+              "planName": "Origin Go Variable - New and Moving Customers only",
+              "retailerId": "9639",
+              "customerType": "R",
+              "fuelType": "E",
+              "retailerName": "Origin Energy",
+              "planId": "ORI1054200MRE1",
+              "retailerCode": "ORI"
+            },
+            "planType": "E#R#ORI1054200MRE1",
+            "postcode": 5097,
+            "pcr": {
+              "costs": {
+                "electricity": {
+                  "small": {
+                    "quarterly": {
+                      "noDiscounts": 400,
+                      "allDiscounts": 400,
+                      "guaranteedDiscount": 400
+                    },
+                    "monthly": {
+                      "noDiscounts": 140,
+                      "allDiscounts": 140,
+                      "guaranteedDiscount": 140
+                    },
+                    "yearly": {
+                      "noDiscounts": 1670,
+                      "allDiscounts": 1670,
+                      "guaranteedDiscount": 1670
+                    }
+                  },
+                  "large": {
+                    "quarterly": {
+                      "noDiscounts": 880,
+                      "allDiscounts": 880,
+                      "guaranteedDiscount": 880
+                    },
+                    "monthly": {
+                      "noDiscounts": 310,
+                      "allDiscounts": 310,
+                      "guaranteedDiscount": 310
+                    },
+                    "yearly": {
+                      "noDiscounts": 3780,
+                      "allDiscounts": 3780,
+                      "guaranteedDiscount": 3780
+                    }
+                  },
+                  "medium": {
+                    "quarterly": {
+                      "noDiscounts": 640,
+                      "allDiscounts": 640,
+                      "guaranteedDiscount": 640
+                    },
+                    "monthly": {
+                      "noDiscounts": 230,
+                      "allDiscounts": 230,
+                      "guaranteedDiscount": 230
+                    },
+                    "yearly": {
+                      "noDiscounts": 2720,
+                      "allDiscounts": 2720,
+                      "guaranteedDiscount": 2720
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "detailed_api_response": {
+            "data": {
+              "planData": {
+                "planType": "M",
+                "tariffType": "TOU",
+                "contract": [
+                  {
+                    "pricingModel": "TOU",
+                    "benefitPeriod": "12 months",
+                    "coolingOffDays": 10,
+                    "solarFit": [
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "OTHER",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 44,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 44,
+                        "displayName": "Solar FIT",
+                        "description": "All amounts are GST-inclusive (if any).",
+                        "type": "G",
+                        "singleTariffPeriod": "P1Y"
+                      },
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "OTHER",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 2,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 2,
+                        "displayName": "Solar FIT",
+                        "description": "Origin offers 2 cents per kWh exported, subject to eligibility. All amounts are GST-inclusive (if any).",
+                        "type": "R",
+                        "singleTariffPeriod": "P1Y"
+                      }
+                    ],
+                    "additionalFeeInformation": "You must pay us any charges your distributor imposes on us in relation to services performed by your distributor (or anyone else) at your supply address. For details on additional charges that may apply see www.originenergy.com.au/2402/Additional-charges",
+                    "fee": [
+                      {
+                        "description": "A $63.71 (GST Incl) fee may apply when your property is reconnected (including when you move). Fee may vary.",
+                        "amount": 63.71,
+                        "feeType": "ConnF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "A $63.71 (GST Incl) fee may apply when your property is disconnected (including when you move). Fee may vary.",
+                        "amount": 63.71,
+                        "feeType": "DiscoF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "A fee of $15.00 (GST exempt) may apply if your bill is not paid by the due date.",
+                        "amount": 15,
+                        "feeType": "LPF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "A 0.27% fee (GST Incl) may apply to payments made by VISA debit card.",
+                        "amount": 0,
+                        "feeType": "CCF",
+                        "percent": 0.27,
+                        "feeTerm": "P"
+                      },
+                      {
+                        "description": "If you pay at an Australia Post outlet, a payment processing fee of the higher of $2.70 or 0.49% (incl GST) may apply.",
+                        "amount": 2.7,
+                        "feeType": "PPF",
+                        "percent": 0,
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "$2.15 (incl GST) may apply for each paper bill.",
+                        "amount": 2.15,
+                        "feeType": "PBF",
+                        "percent": 0,
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "A 0.65% fee (GST Incl) may apply to payments made by VISA credit card.",
+                        "amount": 0,
+                        "feeType": "CCF",
+                        "percent": 0.65,
+                        "feeTerm": "P"
+                      },
+                      {
+                        "description": "A 0.33% fee (GST Incl) may apply to payments made by Mastercard debit card.",
+                        "feeType": "CCF",
+                        "percent": 0.33,
+                        "feeTerm": "P"
+                      },
+                      {
+                        "description": "A 0.64% fee (GST Incl) may apply to payments made by American Express credit card.",
+                        "amount": 0,
+                        "feeType": "CCF",
+                        "percent": 0.64,
+                        "feeTerm": "P"
+                      },
+                      {
+                        "description": "A 0.67% fee (GST Incl) may apply to payments made by Mastercard credit card.",
+                        "amount": 0,
+                        "feeType": "CCF",
+                        "percent": 0.67,
+                        "feeTerm": "P"
+                      },
+                      {
+                        "description": "You may be charged a service order cancellation fee of $16.69 (GST Incl), if you cancel or change your reconnection/disconnection request.",
+                        "amount": 16.69,
+                        "feeType": "OF",
+                        "percent": 0,
+                        "feeTerm": "F"
+                      }
+                    ],
+                    "termType": "E",
+                    "networkTariffType": "IS",
+                    "tariffPeriod": [
+                      {
+                        "touBlock": [
+                          {
+                            "name": "Peak",
+                            "description": "6am - 10am and 4pm - Midnight All year | All week",
+                            "blockRate": [
+                              {
+                                "unitPrice": 48.81,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "P",
+                            "timeOfUse": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "0600",
+                                "endTime": "0959"
+                              },
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "1600",
+                                "endTime": "2359"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Off peak",
+                            "description": "All other times Midnight - 6am All year | All week",
+                            "blockRate": [
+                              {
+                                "unitPrice": 28.83,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "OP",
+                            "timeOfUse": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "0000",
+                                "endTime": "0559"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Shoulder",
+                            "description": "10 am - 4pm All year | All week",
+                            "blockRate": [
+                              {
+                                "unitPrice": 24.08,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "S",
+                            "timeOfUse": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "1000",
+                                "endTime": "1559"
+                              }
+                            ]
+                          }
+                        ],
+                        "endDate": "2021-06-30",
+                        "blockPeriod": "P1Y",
+                        "dailySupplyCharge": 94.95,
+                        "startDate": "2020-07-01"
+                      }
+                    ],
+                    "variation": "We may vary the Charges (including their amount, nature and structure) by notice to you at any time. The notice will be at least 5 business days prior to the effective date of the variation.",
+                    "onExpiry": "At the end of the benefit period we may extend your current Energy Plan or set you up with a new Energy Plan but only if we have written to you first and you havent told us not to",
+                    "greenCharge": [
+                      {
+                        "name": "GreenPower",
+                        "chargeType": "A",
+                        "description": "For 1.13 cents/kWh 25% of your electricity usage is matched with electricity from Government accredited GreenPower sources",
+                        "option": [
+                          {
+                            "pctGreenPower": 25,
+                            "chargeAmount": 0.0113
+                          }
+                        ]
+                      },
+                      {
+                        "name": "GreenPower",
+                        "chargeType": "A",
+                        "description": "For 2.25 cents/kWh 50% of your electricity usage is matched with electricity from Government accredited GreenPower sources",
+                        "option": [
+                          {
+                            "pctGreenPower": 50,
+                            "chargeAmount": 0.0225
+                          }
+                        ]
+                      },
+                      {
+                        "name": "GreenPower",
+                        "chargeType": "A",
+                        "description": "For 4.50 cents/kWh 100% of your electricity usage is matched with electricity from Government accredited GreenPower sources",
+                        "option": [
+                          {
+                            "pctGreenPower": 100,
+                            "chargeAmount": 0.045
+                          }
+                        ]
+                      }
+                    ],
+                    "incentive": [
+                      {
+                        "name": "Account Credit",
+                        "description": "One credit per electricity account. If this Origin Go Variable electricity plan is still active with the customer on 30 June 2026, $100 (Incl. GST) credit will be applied to the customer's electricity account after that date. If the customer ends this Origin Go Variable electricity plan before that date, the customer will not receive any credit. Credit is not redeemable for cash."
+                      }
+                    ],
+                    "fuelType": "E",
+                    "terms": "Offer not available in all areas or properties connecting for first time. Residential customers only. Visit originenergy.com.au/2889/Terms-and-conditions for more.",
+                    "timeDefinition": "LOCAL",
+                    "billFrequency": [
+                      {
+                        "number": 3,
+                        "period": "M"
+                      },
+                      {
+                        "number": 1,
+                        "period": "M"
+                      }
+                    ],
+                    "meterType": [
+                      "Type 4",
+                      "Type 4a",
+                      "Type 5",
+                      "Type 6"
+                    ],
+                    "paymentOption": [
+                      "BP",
+                      "CC",
+                      "DD",
+                      "P",
+                      "CP"
+                    ],
+                    "eligibilityRestriction": [
+                      {
+                        "type": "OC",
+                        "description": "Offer only available to new residential natural gas customers, and existing customers moving to a new property",
+                        "information": "New and Moving Customers Only"
+                      },
+                      {
+                        "type": "OC",
+                        "description": "Credit will only be applied if you haven't received a credit in the previous 12 months",
+                        "information": "Credit Time Frame"
+                      }
+                    ],
+                    "isFixed": false
+                  }
+                ],
+                "planName": "Origin Go Variable - New and Moving Customers only",
+                "planStatus": "PUBLISHED",
+                "supplyArea": [
+                  {
+                    "name": "SA Power Networks",
+                    "id": "42"
+                  }
+                ],
+                "batchId": 1054190,
+                "retailerId": "9639",
+                "distributor": "SA Power Networks",
+                "genAvailable": true,
+                "tags": [
+                  "10 + $100",
+                  "E_GOVARIABLE_10PC_VAR_SAPN_260512",
+                  "Time of Use",
+                  "RTOU_JULY2025"
+                ],
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "Origin Energy",
+                "planId": "ORI1054200MRE1",
+                "retailerCode": "ORI",
+                "state": "SA",
+                "effectiveDate": "2026-05-12"
+              },
+              "planId": "ORI1054200MRE1",
               "postcodes": {
                 "5097": 1
               }
