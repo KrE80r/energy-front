@@ -13762,7 +13762,7 @@
         }
       },
       {
-        "plan_id": "AGL978229MRE13",
+        "plan_id": "AGL978229MRE14",
         "plan_name": "Three for Free - New to AGL (No Exit Fee)",
         "retailer_name": "AGL",
         "plan_type": "TOU",
@@ -13922,7 +13922,7 @@
         "membership_fee_annual": 0,
         "membership_fee_quarterly": 0,
         "membership_fee_monthly": 0,
-        "solar_feed_in_rate_r": 16,
+        "solar_feed_in_rate_r": 0,
         "payment_options": [
           "PayPal",
           "Direct Debit",
@@ -13931,7 +13931,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "AGL978229MRE13",
+            "planId": "AGL978229MRE14",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -13966,7 +13966,7 @@
                       ],
                       "rate": 0,
                       "displayName": "0 cents/kwh all other times",
-                      "type": "G",
+                      "type": "R",
                       "singleTariffPeriod": "P1Y"
                     }
                   ],
@@ -14115,10 +14115,10 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "AGL",
-              "planId": "AGL978229MRE13",
+              "planId": "AGL978229MRE14",
               "retailerCode": "AGL"
             },
-            "planType": "E#R#AGL978229MRE13",
+            "planType": "E#R#AGL978229MRE14",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -14218,7 +14218,7 @@
                         "rate": 0,
                         "displayName": "0 cents/kwh all other times",
                         "description": "0 cents/kwh all other times",
-                        "type": "G",
+                        "type": "R",
                         "singleTariffPeriod": "P1Y"
                       }
                     ],
@@ -14469,7 +14469,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1053720,
+                "batchId": 1055444,
                 "retailerId": "9620",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -14481,12 +14481,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "AGL",
-                "planId": "AGL978229MRE13",
+                "planId": "AGL978229MRE14",
                 "retailerCode": "AGL",
                 "state": "SA",
                 "effectiveDate": "2026-05-12"
               },
-              "planId": "AGL978229MRE13",
+              "planId": "AGL978229MRE14",
               "postcodes": {
                 "5097": 1
               }
@@ -14502,7 +14502,7 @@
         }
       },
       {
-        "plan_id": "AGL979831MRE7",
+        "plan_id": "AGL979831MRE8",
         "plan_name": "Three for Free (No Exit Fee)",
         "retailer_name": "AGL",
         "plan_type": "TOU",
@@ -14662,7 +14662,7 @@
         "membership_fee_annual": 0,
         "membership_fee_quarterly": 0,
         "membership_fee_monthly": 0,
-        "solar_feed_in_rate_r": 16,
+        "solar_feed_in_rate_r": 0,
         "payment_options": [
           "PayPal",
           "Direct Debit",
@@ -14671,7 +14671,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "AGL979831MRE7",
+            "planId": "AGL979831MRE8",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -14706,7 +14706,7 @@
                       ],
                       "rate": 0,
                       "displayName": "0 cents/kwh all other times",
-                      "type": "G",
+                      "type": "R",
                       "singleTariffPeriod": "P1Y"
                     }
                   ],
@@ -14855,10 +14855,10 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "AGL",
-              "planId": "AGL979831MRE7",
+              "planId": "AGL979831MRE8",
               "retailerCode": "AGL"
             },
-            "planType": "E#R#AGL979831MRE7",
+            "planType": "E#R#AGL979831MRE8",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -14958,7 +14958,7 @@
                         "rate": 0,
                         "displayName": "0 cents/kwh all other times",
                         "description": "0 cents/kwh all other times",
-                        "type": "G",
+                        "type": "R",
                         "singleTariffPeriod": "P1Y"
                       }
                     ],
@@ -15209,7 +15209,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1053720,
+                "batchId": 1055444,
                 "retailerId": "9620",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -15221,12 +15221,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "AGL",
-                "planId": "AGL979831MRE7",
+                "planId": "AGL979831MRE8",
                 "retailerCode": "AGL",
                 "state": "SA",
                 "effectiveDate": "2026-05-12"
               },
-              "planId": "AGL979831MRE7",
+              "planId": "AGL979831MRE8",
               "postcodes": {
                 "5097": 1
               }
