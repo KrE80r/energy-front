@@ -49571,7 +49571,7 @@
         }
       },
       {
-        "plan_id": "LCL1053790MRE1",
+        "plan_id": "LCL1061370MRE1",
         "plan_name": "Home Energy Classic",
         "retailer_name": "Energy Locals Retail",
         "plan_type": "TOU",
@@ -49683,7 +49683,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "LCL1053790MRE1",
+            "planId": "LCL1061370MRE1",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -49736,15 +49736,6 @@
                     }
                   ],
                   "termType": "N",
-                  "discount": [
-                    {
-                      "name": "$100 Credit",
-                      "discountAmount": 100,
-                      "type": "C",
-                      "category": "O",
-                      "method": "F"
-                    }
-                  ],
                   "networkTariffType": "IS",
                   "tariffPeriod": [
                     {
@@ -49797,9 +49788,7 @@
                   "fuelType": "E",
                   "meterType": [
                     "Type 4",
-                    "Type 4a",
-                    "Type 5",
-                    "Type 6"
+                    "Type 4a"
                   ],
                   "paymentOption": [
                     "DD",
@@ -49812,10 +49801,10 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Energy Locals Retail",
-              "planId": "LCL1053790MRE1",
+              "planId": "LCL1061370MRE1",
               "retailerCode": "LCL"
             },
-            "planType": "E#R#LCL1053790MRE1",
+            "planType": "E#R#LCL1061370MRE1",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -49823,24 +49812,24 @@
                   "small": {
                     "quarterly": {
                       "noDiscounts": 470,
-                      "allDiscounts": 440,
+                      "allDiscounts": 470,
                       "guaranteedDiscount": 470
                     },
                     "monthly": {
                       "noDiscounts": 130,
-                      "allDiscounts": 120,
+                      "allDiscounts": 130,
                       "guaranteedDiscount": 130
                     },
                     "yearly": {
                       "noDiscounts": 1580,
-                      "allDiscounts": 1480,
+                      "allDiscounts": 1580,
                       "guaranteedDiscount": 1580
                     }
                   },
                   "large": {
                     "quarterly": {
                       "noDiscounts": 1010,
-                      "allDiscounts": 980,
+                      "allDiscounts": 1010,
                       "guaranteedDiscount": 1010
                     },
                     "monthly": {
@@ -49850,24 +49839,24 @@
                     },
                     "yearly": {
                       "noDiscounts": 3400,
-                      "allDiscounts": 3300,
+                      "allDiscounts": 3400,
                       "guaranteedDiscount": 3400
                     }
                   },
                   "medium": {
                     "quarterly": {
                       "noDiscounts": 740,
-                      "allDiscounts": 710,
+                      "allDiscounts": 740,
                       "guaranteedDiscount": 740
                     },
                     "monthly": {
                       "noDiscounts": 210,
-                      "allDiscounts": 200,
+                      "allDiscounts": 210,
                       "guaranteedDiscount": 210
                     },
                     "yearly": {
                       "noDiscounts": 2490,
-                      "allDiscounts": 2390,
+                      "allDiscounts": 2490,
                       "guaranteedDiscount": 2490
                     }
                   }
@@ -49880,7 +49869,7 @@
               "planData": {
                 "planType": "M",
                 "tariffType": "TOU",
-                "planRef": "LCL_360_22404",
+                "planRef": "LCL_367_22404",
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -49939,16 +49928,6 @@
                       }
                     ],
                     "termType": "N",
-                    "discount": [
-                      {
-                        "name": "$100 Credit",
-                        "description": "Stay on this plan for 6 months, and we'll credit $100 to your account. Terms apply - visit www.energylocalsretail.com.au/terms-and-conditions for full details.",
-                        "discountAmount": 100,
-                        "type": "C",
-                        "category": "O",
-                        "method": "F"
-                      }
-                    ],
                     "networkTariffType": "IS",
                     "tariffPeriod": [
                       {
@@ -50020,8 +49999,8 @@
                         ],
                         "endDate": "2026-12-31",
                         "blockPeriod": "P1D",
-                        "startDate": "2026-01-01",
-                        "dailySupplyCharge": 117.7273
+                        "dailySupplyCharge": 117.7273,
+                        "startDate": "2026-01-01"
                       }
                     ],
                     "variation": "Due to changes in the market and economic conditions, we may update your tariff and/or fees. We will provide at least 5 business days' notice before the change takes place.",
@@ -50070,12 +50049,6 @@
                     "fuelType": "E",
                     "terms": "Energy Locals offers no lock in contracts or exit fees. Prices may vary in accordance with the terms and conditions. See energylocalsretail.com.au/terms for full terms and conditions.",
                     "timeDefinition": "LOCAL",
-                    "meterType": [
-                      "Type 4",
-                      "Type 4a",
-                      "Type 5",
-                      "Type 6"
-                    ],
                     "billFrequency": [
                       {
                         "number": 1,
@@ -50085,6 +50058,10 @@
                         "number": 3,
                         "period": "M"
                       }
+                    ],
+                    "meterType": [
+                      "Type 4",
+                      "Type 4a"
                     ],
                     "paymentOption": [
                       "DD",
@@ -50101,8 +50078,9 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1053788,
+                "batchId": 1061362,
                 "retailerId": "201064",
+                "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
                   "LM25AS HECLA-1510",
@@ -50111,11 +50089,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Energy Locals Retail",
-                "planId": "LCL1053790MRE1",
+                "planId": "LCL1061370MRE1",
                 "retailerCode": "LCL",
-                "effectiveDate": "2026-05-14"
+                "state": "SA",
+                "effectiveDate": "2026-06-05"
               },
-              "planId": "LCL1053790MRE1",
+              "planId": "LCL1061370MRE1",
               "postcodes": {
                 "5097": 1
               }
@@ -50124,14 +50103,14 @@
         },
         "raw_plan_data": {
           "eligibility_restrictions": false,
-          "has_discounts": true,
+          "has_discounts": false,
           "distributor": null,
           "state": null,
           "postcode": null
         }
       },
       {
-        "plan_id": "LCL1053791MRE1",
+        "plan_id": "LCL1061394MRE1",
         "plan_name": "Home Energy Classic",
         "retailer_name": "Energy Locals Retail",
         "plan_type": "TOU",
@@ -50238,7 +50217,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "LCL1053791MRE1",
+            "planId": "LCL1061394MRE1",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -50291,15 +50270,6 @@
                     }
                   ],
                   "termType": "N",
-                  "discount": [
-                    {
-                      "name": "$100 Credit",
-                      "discountAmount": 100,
-                      "type": "C",
-                      "category": "O",
-                      "method": "F"
-                    }
-                  ],
                   "networkTariffType": "IS",
                   "tariffPeriod": [
                     {
@@ -50352,9 +50322,7 @@
                   "fuelType": "E",
                   "meterType": [
                     "Type 4",
-                    "Type 4a",
-                    "Type 5",
-                    "Type 6"
+                    "Type 4a"
                   ],
                   "paymentOption": [
                     "DD",
@@ -50367,10 +50335,10 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Energy Locals Retail",
-              "planId": "LCL1053791MRE1",
+              "planId": "LCL1061394MRE1",
               "retailerCode": "LCL"
             },
-            "planType": "E#R#LCL1053791MRE1",
+            "planType": "E#R#LCL1061394MRE1",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -50378,41 +50346,41 @@
                   "small": {
                     "quarterly": {
                       "noDiscounts": 470,
-                      "allDiscounts": 440,
+                      "allDiscounts": 470,
                       "guaranteedDiscount": 470
                     },
                     "monthly": {
                       "noDiscounts": 130,
-                      "allDiscounts": 120,
+                      "allDiscounts": 130,
                       "guaranteedDiscount": 130
                     },
                     "yearly": {
                       "noDiscounts": 1570,
-                      "allDiscounts": 1470,
+                      "allDiscounts": 1570,
                       "guaranteedDiscount": 1570
                     }
                   },
                   "large": {
                     "quarterly": {
                       "noDiscounts": 1000,
-                      "allDiscounts": 970,
+                      "allDiscounts": 1000,
                       "guaranteedDiscount": 1000
                     },
                     "monthly": {
                       "noDiscounts": 280,
-                      "allDiscounts": 270,
+                      "allDiscounts": 280,
                       "guaranteedDiscount": 280
                     },
                     "yearly": {
                       "noDiscounts": 3340,
-                      "allDiscounts": 3240,
+                      "allDiscounts": 3340,
                       "guaranteedDiscount": 3340
                     }
                   },
                   "medium": {
                     "quarterly": {
                       "noDiscounts": 730,
-                      "allDiscounts": 700,
+                      "allDiscounts": 730,
                       "guaranteedDiscount": 730
                     },
                     "monthly": {
@@ -50422,7 +50390,7 @@
                     },
                     "yearly": {
                       "noDiscounts": 2450,
-                      "allDiscounts": 2350,
+                      "allDiscounts": 2450,
                       "guaranteedDiscount": 2450
                     }
                   }
@@ -50435,7 +50403,7 @@
               "planData": {
                 "planType": "M",
                 "tariffType": "TOU",
-                "planRef": "LCL_360_22406",
+                "planRef": "LCL_367_22406",
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -50494,16 +50462,6 @@
                       }
                     ],
                     "termType": "N",
-                    "discount": [
-                      {
-                        "name": "$100 Credit",
-                        "description": "Stay on this plan for 6 months, and we'll credit $100 to your account. Terms apply - visit www.energylocalsretail.com.au/terms-and-conditions for full details.",
-                        "discountAmount": 100,
-                        "type": "C",
-                        "category": "O",
-                        "method": "F"
-                      }
-                    ],
                     "networkTariffType": "IS",
                     "tariffPeriod": [
                       {
@@ -50570,8 +50528,8 @@
                         ],
                         "endDate": "2026-12-31",
                         "blockPeriod": "P1D",
-                        "startDate": "2026-01-01",
-                        "dailySupplyCharge": 121.8182
+                        "dailySupplyCharge": 121.8182,
+                        "startDate": "2026-01-01"
                       }
                     ],
                     "variation": "Due to changes in the market and economic conditions, we may update your tariff and/or fees. We will provide at least 5 business days' notice before the change takes place.",
@@ -50620,12 +50578,6 @@
                     "fuelType": "E",
                     "terms": "Energy Locals offers no lock in contracts or exit fees. Prices may vary in accordance with the terms and conditions. See energylocalsretail.com.au/terms for full terms and conditions.",
                     "timeDefinition": "LOCAL",
-                    "meterType": [
-                      "Type 4",
-                      "Type 4a",
-                      "Type 5",
-                      "Type 6"
-                    ],
                     "billFrequency": [
                       {
                         "number": 1,
@@ -50635,6 +50587,10 @@
                         "number": 3,
                         "period": "M"
                       }
+                    ],
+                    "meterType": [
+                      "Type 4",
+                      "Type 4a"
                     ],
                     "paymentOption": [
                       "DD",
@@ -50651,8 +50607,9 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1053788,
+                "batchId": 1061362,
                 "retailerId": "201064",
+                "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
                   "LM25AS HECLA-1115",
@@ -50661,11 +50618,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Energy Locals Retail",
-                "planId": "LCL1053791MRE1",
+                "planId": "LCL1061394MRE1",
                 "retailerCode": "LCL",
-                "effectiveDate": "2026-05-14"
+                "state": "SA",
+                "effectiveDate": "2026-06-05"
               },
-              "planId": "LCL1053791MRE1",
+              "planId": "LCL1061394MRE1",
               "postcodes": {
                 "5097": 1
               }
@@ -50674,7 +50632,7 @@
         },
         "raw_plan_data": {
           "eligibility_restrictions": false,
-          "has_discounts": true,
+          "has_discounts": false,
           "distributor": null,
           "state": null,
           "postcode": null
