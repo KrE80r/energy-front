@@ -1,10 +1,10 @@
 {
   "metadata": {
     "postcode": "5097",
-    "total_plans": 157,
-    "filtered_out": 457,
+    "total_plans": 156,
+    "filtered_out": 454,
     "extraction_date": "2025-06-26",
-    "tou_count": 157,
+    "tou_count": 156,
     "sr_count": 0,
     "other_count": 0,
     "filters_applied": "Excluded tariff types: SR, SRCL, TOUCL",
@@ -34788,564 +34788,6 @@
         }
       },
       {
-        "plan_id": "ENG1053731MRE1",
-        "plan_name": "SA _ENGIE Perks Plus Elec",
-        "retailer_name": "ENGIE",
-        "plan_type": "TOU",
-        "tariff_type": "TOU",
-        "monthly_cost": 350,
-        "quarterly_cost": 1260,
-        "annual_cost": 4220,
-        "peak_cost": 56.232,
-        "shoulder_cost": 39.446000000000005,
-        "off_peak_cost": 20.383000000000003,
-        "daily_supply_charge": 125.34500000000001,
-        "detailed_time_blocks": [
-          {
-            "name": "Peak",
-            "description": "06:00 - 10:00; 15:00 - 01:00 (AEST)",
-            "time_of_use_period": "P",
-            "time_periods": [
-              {
-                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
-                "start_time": "0600",
-                "end_time": "0959"
-              },
-              {
-                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
-                "start_time": "1500",
-                "end_time": "0059"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 51.12,
-                "unit_price_gst": 56.232,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          },
-          {
-            "name": "Off-Peak",
-            "description": "01:00 - 06:00 (AEST)",
-            "time_of_use_period": "OP",
-            "time_periods": [
-              {
-                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
-                "start_time": "0100",
-                "end_time": "0559"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 35.86,
-                "unit_price_gst": 39.446000000000005,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          },
-          {
-            "name": "Solar Sponge",
-            "description": "10:00 - 15:00 (AEST)",
-            "time_of_use_period": "S",
-            "time_periods": [
-              {
-                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
-                "start_time": "1000",
-                "end_time": "1459"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 18.53,
-                "unit_price_gst": 20.383000000000003,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          }
-        ],
-        "fees": {
-          "move_in_new_connection_fee": null,
-          "paper_bill_fee": 2.2,
-          "payment_processing_fees": [],
-          "late_payment_fee": 12,
-          "disconnection_fee_move_out": null,
-          "disconnection_fee_non_payment": null,
-          "reconnection_fee": 63.712,
-          "other_fees": [],
-          "credit_card_payment_fees": [
-            {
-              "feeType": "CCF",
-              "percent": 0.32,
-              "feeTerm": "P"
-            }
-          ],
-          "membership_fee": null
-        },
-        "membership_fee_annual": 0,
-        "membership_fee_quarterly": 0,
-        "membership_fee_monthly": 0,
-        "solar_feed_in_rate_r": 1,
-        "payment_options": [
-          "BPay",
-          "Credit Card",
-          "Direct Debit",
-          "PayPal"
-        ],
-        "raw_plan_data_complete": {
-          "main_api_response": {
-            "planId": "ENG1053731MRE1",
-            "planData": {
-              "tariffType": "TOU",
-              "contract": [
-                {
-                  "pricingModel": "TOU",
-                  "benefitPeriod": "Ongoing",
-                  "solarFit": [
-                    {
-                      "tariffUType": "singleTariff",
-                      "scheme": "OTHER",
-                      "singleTariffRates": [
-                        {
-                          "unitPrice": 1,
-                          "rebate": true,
-                          "measureUnit": "KWH"
-                        }
-                      ],
-                      "rate": 1,
-                      "displayName": "Single Rate Solar FiT",
-                      "type": "R",
-                      "singleTariffPeriod": "P1Y"
-                    },
-                    {
-                      "tariffUType": "singleTariff",
-                      "scheme": "PREMIUM",
-                      "singleTariffRates": [
-                        {
-                          "unitPrice": 45,
-                          "rebate": true,
-                          "measureUnit": "KWH"
-                        }
-                      ],
-                      "rate": 45,
-                      "displayName": "Single Rate Solar FiT",
-                      "type": "G",
-                      "singleTariffPeriod": "P1Y"
-                    }
-                  ],
-                  "fee": [
-                    {
-                      "amount": 63.712,
-                      "feeType": "RecoF",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "amount": 2.2,
-                      "feeType": "PBF",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "feeType": "CCF",
-                      "percent": 0.32,
-                      "feeTerm": "P"
-                    },
-                    {
-                      "amount": 12,
-                      "feeType": "LPF",
-                      "feeTerm": "F"
-                    }
-                  ],
-                  "networkTariffCode": [
-                    "RTOU"
-                  ],
-                  "termType": "E",
-                  "discount": [
-                    {
-                      "name": "16% Guaranteed Discount",
-                      "discountPercent": 16,
-                      "type": "U",
-                      "category": "O",
-                      "method": "B"
-                    }
-                  ],
-                  "networkTariffType": "PT",
-                  "tariffPeriod": [
-                    {
-                      "touBlock": [
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 51.12,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        },
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 35.86,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        },
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 18.53,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        }
-                      ],
-                      "blockPeriod": "P1D",
-                      "dailySupplyCharge": 113.95
-                    }
-                  ],
-                  "incentive": [
-                    {
-                      "name": "My NRMA Membership"
-                    }
-                  ],
-                  "fuelType": "E",
-                  "meterType": [
-                    "Type 4",
-                    "Type 4a"
-                  ],
-                  "paymentOption": [
-                    "BP",
-                    "CC",
-                    "DD",
-                    "P"
-                  ],
-                  "eligibilityRestriction": [
-                    {
-                      "type": "OC",
-                      "description": "You must agree to the NRMA T&Cs and Privacy Policy, available at mynrma.com.au; and provide a valid email address. Offer not available for current My NRMA members.",
-                      "information": "Other"
-                    }
-                  ]
-                }
-              ],
-              "planName": "SA _ENGIE Perks Plus Elec",
-              "retailerId": "25001",
-              "customerType": "R",
-              "fuelType": "E",
-              "retailerName": "ENGIE",
-              "planId": "ENG1053731MRE1",
-              "retailerCode": "ENG"
-            },
-            "planType": "E#R#ENG1053731MRE1",
-            "postcode": 5097,
-            "pcr": {
-              "costs": {
-                "electricity": {
-                  "small": {
-                    "quarterly": {
-                      "noDiscounts": 560,
-                      "allDiscounts": 470,
-                      "guaranteedDiscount": 470
-                    },
-                    "monthly": {
-                      "noDiscounts": 160,
-                      "allDiscounts": 130,
-                      "guaranteedDiscount": 130
-                    },
-                    "yearly": {
-                      "noDiscounts": 1880,
-                      "allDiscounts": 1580,
-                      "guaranteedDiscount": 1580
-                    }
-                  },
-                  "large": {
-                    "quarterly": {
-                      "noDiscounts": 1260,
-                      "allDiscounts": 1060,
-                      "guaranteedDiscount": 1060
-                    },
-                    "monthly": {
-                      "noDiscounts": 350,
-                      "allDiscounts": 300,
-                      "guaranteedDiscount": 300
-                    },
-                    "yearly": {
-                      "noDiscounts": 4220,
-                      "allDiscounts": 3540,
-                      "guaranteedDiscount": 3540
-                    }
-                  },
-                  "medium": {
-                    "quarterly": {
-                      "noDiscounts": 910,
-                      "allDiscounts": 760,
-                      "guaranteedDiscount": 760
-                    },
-                    "monthly": {
-                      "noDiscounts": 250,
-                      "allDiscounts": 210,
-                      "guaranteedDiscount": 210
-                    },
-                    "yearly": {
-                      "noDiscounts": 3040,
-                      "allDiscounts": 2550,
-                      "guaranteedDiscount": 2550
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "detailed_api_response": {
-            "data": {
-              "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
-                "planRef": "PDB_10957_67568",
-                "contract": [
-                  {
-                    "pricingModel": "TOU",
-                    "benefitPeriod": "Ongoing",
-                    "coolingOffDays": 10,
-                    "solarFit": [
-                      {
-                        "tariffUType": "singleTariff",
-                        "scheme": "OTHER",
-                        "singleTariffRates": [
-                          {
-                            "unitPrice": 1,
-                            "rebate": true,
-                            "measureUnit": "KWH"
-                          }
-                        ],
-                        "rate": 1,
-                        "displayName": "Single Rate Solar FiT",
-                        "description": "ENGIE Market FIT",
-                        "type": "R",
-                        "singleTariffPeriod": "P1Y"
-                      },
-                      {
-                        "tariffUType": "singleTariff",
-                        "scheme": "PREMIUM",
-                        "singleTariffRates": [
-                          {
-                            "unitPrice": 45,
-                            "rebate": true,
-                            "measureUnit": "KWH"
-                          }
-                        ],
-                        "rate": 45,
-                        "displayName": "Single Rate Solar FiT",
-                        "description": "ENGIE Premium FIT (limited eligibility)",
-                        "type": "G",
-                        "singleTariffPeriod": "P1Y"
-                      }
-                    ],
-                    "additionalFeeInformation": "Additional fees may apply. For information please contact us on 13 88 08.",
-                    "fee": [
-                      {
-                        "description": "Reconnection (Normal Hours) (Includes GST).",
-                        "amount": 63.712,
-                        "feeType": "RecoF",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "A $2.20 (inc. GST) charge will apply to paper bills sent in the post.",
-                        "amount": 2.2,
-                        "feeType": "PBF",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "You may be charged a 0.32% merchant service fee for paying by Visa or Mastercard (unless you pay via direct debit)",
-                        "feeType": "CCF",
-                        "percent": 0.32,
-                        "feeTerm": "P"
-                      },
-                      {
-                        "description": "A fee of $12 may apply for payments made after the due date (GST exempt).",
-                        "amount": 12,
-                        "feeType": "LPF",
-                        "feeTerm": "F"
-                      }
-                    ],
-                    "networkTariffCode": [
-                      "RTOU"
-                    ],
-                    "termType": "E",
-                    "discount": [
-                      {
-                        "name": "16% Guaranteed Discount",
-                        "description": "You'll receive a 16% guaranteed discount off our electricity usage and supply charges.",
-                        "discountPercent": 16,
-                        "type": "U",
-                        "category": "O",
-                        "method": "B"
-                      }
-                    ],
-                    "networkTariffType": "PT",
-                    "tariffPeriod": [
-                      {
-                        "touBlock": [
-                          {
-                            "name": "Peak",
-                            "description": "06:00 - 10:00; 15:00 - 01:00 (AEST)",
-                            "blockRate": [
-                              {
-                                "unitPrice": 51.12,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "P",
-                            "timeOfUse": [
-                              {
-                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
-                                "startTime": "0600",
-                                "endTime": "0959"
-                              },
-                              {
-                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
-                                "startTime": "1500",
-                                "endTime": "0059"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Off-Peak",
-                            "description": "01:00 - 06:00 (AEST)",
-                            "blockRate": [
-                              {
-                                "unitPrice": 35.86,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "OP",
-                            "timeOfUse": [
-                              {
-                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
-                                "startTime": "0100",
-                                "endTime": "0559"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Solar Sponge",
-                            "description": "10:00 - 15:00 (AEST)",
-                            "blockRate": [
-                              {
-                                "unitPrice": 18.53,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "S",
-                            "timeOfUse": [
-                              {
-                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
-                                "startTime": "1000",
-                                "endTime": "1459"
-                              }
-                            ]
-                          }
-                        ],
-                        "endDate": "2026-12-31",
-                        "blockPeriod": "P1D",
-                        "dailySupplyCharge": 113.95,
-                        "startDate": "2026-01-01"
-                      }
-                    ],
-                    "variation": "We may vary your rates and charges at any time, including if any underlying information is incorrect, you get a new meter or your distributor changes your tariff. We'll give you advance notice of any change, which may be on your bill.",
-                    "onExpiry": "Ongoing energy plan until you or we end it. We may end this energy plan at any time by giving you 20 Business Days' notice.",
-                    "incentive": [
-                      {
-                        "name": "My NRMA Membership",
-                        "description": "Your My NRMA membership will be complimentary, a program that helps inspire you to explore new places and experiences, great deals on fuel, shopping, travel, entertainment and more along the way."
-                      }
-                    ],
-                    "fuelType": "E",
-                    "terms": "For further details on the information presented in this Plan Information Document, or for full terms and conditions, please visit www.engie.com.au or call ENGIE on 13 88 08. All time-dependent rates (eg. 4pm to 8pm) are billed in AEST. All time-dependent rates (eg. 4pm to 8pm) are billed in AEST.",
-                    "timeDefinition": "AEST",
-                    "billFrequency": [
-                      {
-                        "number": 3,
-                        "period": "M"
-                      },
-                      {
-                        "number": 1,
-                        "period": "M"
-                      }
-                    ],
-                    "meterType": [
-                      "Type 4",
-                      "Type 4a"
-                    ],
-                    "paymentOption": [
-                      "BP",
-                      "CC",
-                      "DD",
-                      "P"
-                    ],
-                    "eligibilityRestriction": [
-                      {
-                        "type": "OC",
-                        "description": "You must agree to the NRMA T&Cs and Privacy Policy, available at mynrma.com.au; and provide a valid email address. Offer not available for current My NRMA members.",
-                        "information": "Other"
-                      }
-                    ],
-                    "isFixed": false
-                  }
-                ],
-                "planName": "SA _ENGIE Perks Plus Elec",
-                "planStatus": "PUBLISHED",
-                "supplyArea": [
-                  {
-                    "name": "SA Power Networks",
-                    "id": "42"
-                  }
-                ],
-                "batchId": 1053728,
-                "retailerId": "25001",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
-                "tags": [
-                  "PDB_10957_67568",
-                  "SEREPER11",
-                  "SA _ENGIE Perks Plus",
-                  "SERTOUTOU0725M",
-                  "RES TOU|TOU CL"
-                ],
-                "excludedPostcodes": [
-                  "5960"
-                ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "ENGIE",
-                "planId": "ENG1053731MRE1",
-                "retailerCode": "ENG",
-                "state": "SA",
-                "effectiveDate": "2026-05-12"
-              },
-              "planId": "ENG1053731MRE1",
-              "postcodes": {
-                "5097": 1
-              }
-            }
-          }
-        },
-        "raw_plan_data": {
-          "eligibility_restrictions": true,
-          "has_discounts": true,
-          "distributor": null,
-          "state": null,
-          "postcode": null
-        }
-      },
-      {
         "plan_id": "ENG937897SRE4",
         "plan_name": "SA ENGIE Standing elec",
         "retailer_name": "ENGIE",
@@ -65086,18 +64528,18 @@
         }
       },
       {
-        "plan_id": "ORI1054200MRE1",
+        "plan_id": "ORI1054200MRE2",
         "plan_name": "Origin Go Variable - New and Moving Customers only",
         "retailer_name": "Origin Energy",
         "plan_type": "TOU",
         "tariff_type": "TOU",
-        "monthly_cost": 310,
-        "quarterly_cost": 1130,
-        "annual_cost": 3780,
-        "peak_cost": 53.69100000000001,
-        "shoulder_cost": 31.713,
-        "off_peak_cost": 26.488,
-        "daily_supply_charge": 104.44500000000001,
+        "monthly_cost": 330,
+        "quarterly_cost": 1190,
+        "annual_cost": 3990,
+        "peak_cost": 56.67200000000001,
+        "shoulder_cost": 33.473,
+        "off_peak_cost": 27.951000000000004,
+        "daily_supply_charge": 110.25300000000001,
         "detailed_time_blocks": [
           {
             "name": "Peak",
@@ -65117,8 +64559,8 @@
             ],
             "rates": [
               {
-                "unit_price": 48.81,
-                "unit_price_gst": 53.69100000000001,
+                "unit_price": 51.52,
+                "unit_price_gst": 56.67200000000001,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -65139,8 +64581,8 @@
             ],
             "rates": [
               {
-                "unit_price": 28.83,
-                "unit_price_gst": 31.713,
+                "unit_price": 30.43,
+                "unit_price_gst": 33.473,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -65161,8 +64603,8 @@
             ],
             "rates": [
               {
-                "unit_price": 24.08,
-                "unit_price_gst": 26.488,
+                "unit_price": 25.41,
+                "unit_price_gst": 27.951000000000004,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -65172,7 +64614,7 @@
           }
         ],
         "fees": {
-          "move_in_new_connection_fee": 63.71,
+          "move_in_new_connection_fee": null,
           "paper_bill_fee": 2.15,
           "payment_processing_fees": [
             {
@@ -65185,7 +64627,7 @@
           "late_payment_fee": 15,
           "disconnection_fee_move_out": null,
           "disconnection_fee_non_payment": null,
-          "reconnection_fee": null,
+          "reconnection_fee": 63.71,
           "other_fees": [
             {
               "amount": 16.69,
@@ -65216,7 +64658,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "ORI1054200MRE1",
+            "planId": "ORI1054200MRE2",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -65258,7 +64700,7 @@
                   "fee": [
                     {
                       "amount": 63.71,
-                      "feeType": "ConnF",
+                      "feeType": "RecoF",
                       "feeTerm": "F"
                     },
                     {
@@ -65327,7 +64769,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 48.81,
+                              "unitPrice": 51.52,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -65335,7 +64777,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 28.83,
+                              "unitPrice": 30.43,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -65343,14 +64785,14 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 24.08,
+                              "unitPrice": 25.41,
                               "measureUnit": "KWH"
                             }
                           ]
                         }
                       ],
                       "blockPeriod": "P1Y",
-                      "dailySupplyCharge": 94.95
+                      "dailySupplyCharge": 100.23
                     }
                   ],
                   "greenCharge": [
@@ -65402,63 +64844,63 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Origin Energy",
-              "planId": "ORI1054200MRE1",
+              "planId": "ORI1054200MRE2",
               "retailerCode": "ORI"
             },
-            "planType": "E#R#ORI1054200MRE1",
+            "planType": "E#R#ORI1054200MRE2",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
                   "small": {
                     "quarterly": {
-                      "noDiscounts": 500,
-                      "allDiscounts": 500,
-                      "guaranteedDiscount": 500
+                      "noDiscounts": 530,
+                      "allDiscounts": 530,
+                      "guaranteedDiscount": 530
                     },
                     "monthly": {
-                      "noDiscounts": 140,
-                      "allDiscounts": 140,
-                      "guaranteedDiscount": 140
+                      "noDiscounts": 150,
+                      "allDiscounts": 150,
+                      "guaranteedDiscount": 150
                     },
                     "yearly": {
-                      "noDiscounts": 1670,
-                      "allDiscounts": 1670,
-                      "guaranteedDiscount": 1670
+                      "noDiscounts": 1760,
+                      "allDiscounts": 1760,
+                      "guaranteedDiscount": 1760
                     }
                   },
                   "large": {
                     "quarterly": {
-                      "noDiscounts": 1130,
-                      "allDiscounts": 1130,
-                      "guaranteedDiscount": 1130
+                      "noDiscounts": 1190,
+                      "allDiscounts": 1190,
+                      "guaranteedDiscount": 1190
                     },
                     "monthly": {
-                      "noDiscounts": 310,
-                      "allDiscounts": 310,
-                      "guaranteedDiscount": 310
+                      "noDiscounts": 330,
+                      "allDiscounts": 330,
+                      "guaranteedDiscount": 330
                     },
                     "yearly": {
-                      "noDiscounts": 3780,
-                      "allDiscounts": 3780,
-                      "guaranteedDiscount": 3780
+                      "noDiscounts": 3990,
+                      "allDiscounts": 3990,
+                      "guaranteedDiscount": 3990
                     }
                   },
                   "medium": {
                     "quarterly": {
-                      "noDiscounts": 810,
-                      "allDiscounts": 810,
-                      "guaranteedDiscount": 810
+                      "noDiscounts": 860,
+                      "allDiscounts": 860,
+                      "guaranteedDiscount": 860
                     },
                     "monthly": {
-                      "noDiscounts": 230,
-                      "allDiscounts": 230,
-                      "guaranteedDiscount": 230
+                      "noDiscounts": 240,
+                      "allDiscounts": 240,
+                      "guaranteedDiscount": 240
                     },
                     "yearly": {
-                      "noDiscounts": 2720,
-                      "allDiscounts": 2720,
-                      "guaranteedDiscount": 2720
+                      "noDiscounts": 2870,
+                      "allDiscounts": 2870,
+                      "guaranteedDiscount": 2870
                     }
                   }
                 }
@@ -65514,7 +64956,7 @@
                       {
                         "description": "A $63.71 (GST Incl) fee may apply when your property is reconnected (including when you move). Fee may vary.",
                         "amount": 63.71,
-                        "feeType": "ConnF",
+                        "feeType": "RecoF",
                         "feeTerm": "F"
                       },
                       {
@@ -65595,7 +65037,7 @@
                             "description": "6am - 10am and 4pm - Midnight All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 48.81,
+                                "unitPrice": 51.52,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -65618,7 +65060,7 @@
                             "description": "All other times Midnight - 6am All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 28.83,
+                                "unitPrice": 30.43,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -65636,7 +65078,7 @@
                             "description": "10 am - 4pm All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 24.08,
+                                "unitPrice": 25.41,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -65652,7 +65094,7 @@
                         ],
                         "endDate": "2021-06-30",
                         "blockPeriod": "P1Y",
-                        "dailySupplyCharge": 94.95,
+                        "dailySupplyCharge": 100.23,
                         "startDate": "2020-07-01"
                       }
                     ],
@@ -65748,25 +65190,50 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1054190,
+                "batchId": 1062437,
                 "retailerId": "9639",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "10 + $100",
-                  "E_GOVARIABLE_10PC_VAR_SAPN_260512",
+                  "5 + $100",
+                  "E_GOVARIABLE_5PC_VAR_SAPN_CP_260610",
                   "Time of Use",
                   "RTOU_JULY2025"
+                ],
+                "excludedPostcodes": [
+                  "2372",
+                  "2406",
+                  "4352",
+                  "4357",
+                  "4370",
+                  "4371",
+                  "4374",
+                  "4380",
+                  "4382",
+                  "4383",
+                  "4384",
+                  "4385",
+                  "4387",
+                  "4388",
+                  "4390",
+                  "4405",
+                  "4406",
+                  "4422",
+                  "4487",
+                  "4494",
+                  "4496",
+                  "4497",
+                  "4498"
                 ],
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Origin Energy",
-                "planId": "ORI1054200MRE1",
+                "planId": "ORI1054200MRE2",
                 "retailerCode": "ORI",
                 "state": "SA",
-                "effectiveDate": "2026-05-12"
+                "effectiveDate": "2026-06-10"
               },
-              "planId": "ORI1054200MRE1",
+              "planId": "ORI1054200MRE2",
               "postcodes": {
                 "5097": 1
               }
@@ -67764,18 +67231,18 @@
         }
       },
       {
-        "plan_id": "ORI539168MRE21",
+        "plan_id": "ORI539168MRE22",
         "plan_name": "Origin Affinity Variable - Compare the Market",
         "retailer_name": "Origin Energy",
         "plan_type": "TOU",
         "tariff_type": "TOU",
-        "monthly_cost": 310,
-        "quarterly_cost": 1130,
-        "annual_cost": 3780,
-        "peak_cost": 53.69100000000001,
-        "shoulder_cost": 31.713,
-        "off_peak_cost": 26.488,
-        "daily_supply_charge": 104.44500000000001,
+        "monthly_cost": 330,
+        "quarterly_cost": 1190,
+        "annual_cost": 3990,
+        "peak_cost": 56.67200000000001,
+        "shoulder_cost": 33.473,
+        "off_peak_cost": 27.951000000000004,
+        "daily_supply_charge": 110.25300000000001,
         "detailed_time_blocks": [
           {
             "name": "Peak",
@@ -67795,8 +67262,8 @@
             ],
             "rates": [
               {
-                "unit_price": 48.81,
-                "unit_price_gst": 53.69100000000001,
+                "unit_price": 51.52,
+                "unit_price_gst": 56.67200000000001,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -67817,8 +67284,8 @@
             ],
             "rates": [
               {
-                "unit_price": 28.83,
-                "unit_price_gst": 31.713,
+                "unit_price": 30.43,
+                "unit_price_gst": 33.473,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -67839,8 +67306,8 @@
             ],
             "rates": [
               {
-                "unit_price": 24.08,
-                "unit_price_gst": 26.488,
+                "unit_price": 25.41,
+                "unit_price_gst": 27.951000000000004,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -67850,7 +67317,7 @@
           }
         ],
         "fees": {
-          "move_in_new_connection_fee": 63.71,
+          "move_in_new_connection_fee": null,
           "paper_bill_fee": 2.15,
           "payment_processing_fees": [
             {
@@ -67863,7 +67330,7 @@
           "late_payment_fee": 15,
           "disconnection_fee_move_out": null,
           "disconnection_fee_non_payment": null,
-          "reconnection_fee": null,
+          "reconnection_fee": 63.71,
           "other_fees": [
             {
               "amount": 16.69,
@@ -67894,7 +67361,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "ORI539168MRE21",
+            "planId": "ORI539168MRE22",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -67936,7 +67403,7 @@
                   "fee": [
                     {
                       "amount": 63.71,
-                      "feeType": "ConnF",
+                      "feeType": "RecoF",
                       "feeTerm": "F"
                     },
                     {
@@ -68005,7 +67472,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 48.81,
+                              "unitPrice": 51.52,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -68013,7 +67480,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 28.83,
+                              "unitPrice": 30.43,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -68021,14 +67488,14 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 24.08,
+                              "unitPrice": 25.41,
                               "measureUnit": "KWH"
                             }
                           ]
                         }
                       ],
                       "blockPeriod": "P1Y",
-                      "dailySupplyCharge": 94.95
+                      "dailySupplyCharge": 100.23
                     }
                   ],
                   "greenCharge": [
@@ -68040,6 +67507,11 @@
                     },
                     {
                       "chargeType": "A"
+                    }
+                  ],
+                  "incentive": [
+                    {
+                      "name": "Account Credit"
                     }
                   ],
                   "fuelType": "E",
@@ -68070,63 +67542,63 @@
               "thirdPartyName": "Compare The Market",
               "fuelType": "E",
               "retailerName": "Origin Energy",
-              "planId": "ORI539168MRE21",
+              "planId": "ORI539168MRE22",
               "retailerCode": "ORI"
             },
-            "planType": "E#R#ORI539168MRE21",
+            "planType": "E#R#ORI539168MRE22",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
                   "small": {
                     "quarterly": {
-                      "noDiscounts": 500,
-                      "allDiscounts": 500,
-                      "guaranteedDiscount": 500
+                      "noDiscounts": 530,
+                      "allDiscounts": 530,
+                      "guaranteedDiscount": 530
                     },
                     "monthly": {
-                      "noDiscounts": 140,
-                      "allDiscounts": 140,
-                      "guaranteedDiscount": 140
+                      "noDiscounts": 150,
+                      "allDiscounts": 150,
+                      "guaranteedDiscount": 150
                     },
                     "yearly": {
-                      "noDiscounts": 1670,
-                      "allDiscounts": 1670,
-                      "guaranteedDiscount": 1670
+                      "noDiscounts": 1760,
+                      "allDiscounts": 1760,
+                      "guaranteedDiscount": 1760
                     }
                   },
                   "large": {
                     "quarterly": {
-                      "noDiscounts": 1130,
-                      "allDiscounts": 1130,
-                      "guaranteedDiscount": 1130
+                      "noDiscounts": 1190,
+                      "allDiscounts": 1190,
+                      "guaranteedDiscount": 1190
                     },
                     "monthly": {
-                      "noDiscounts": 310,
-                      "allDiscounts": 310,
-                      "guaranteedDiscount": 310
+                      "noDiscounts": 330,
+                      "allDiscounts": 330,
+                      "guaranteedDiscount": 330
                     },
                     "yearly": {
-                      "noDiscounts": 3780,
-                      "allDiscounts": 3780,
-                      "guaranteedDiscount": 3780
+                      "noDiscounts": 3990,
+                      "allDiscounts": 3990,
+                      "guaranteedDiscount": 3990
                     }
                   },
                   "medium": {
                     "quarterly": {
-                      "noDiscounts": 810,
-                      "allDiscounts": 810,
-                      "guaranteedDiscount": 810
+                      "noDiscounts": 860,
+                      "allDiscounts": 860,
+                      "guaranteedDiscount": 860
                     },
                     "monthly": {
-                      "noDiscounts": 230,
-                      "allDiscounts": 230,
-                      "guaranteedDiscount": 230
+                      "noDiscounts": 240,
+                      "allDiscounts": 240,
+                      "guaranteedDiscount": 240
                     },
                     "yearly": {
-                      "noDiscounts": 2720,
-                      "allDiscounts": 2720,
-                      "guaranteedDiscount": 2720
+                      "noDiscounts": 2870,
+                      "allDiscounts": 2870,
+                      "guaranteedDiscount": 2870
                     }
                   }
                 }
@@ -68182,7 +67654,7 @@
                       {
                         "description": "A $63.71 (GST Incl) fee may apply when your property is reconnected (including when you move). Fee may vary.",
                         "amount": 63.71,
-                        "feeType": "ConnF",
+                        "feeType": "RecoF",
                         "feeTerm": "F"
                       },
                       {
@@ -68263,7 +67735,7 @@
                             "description": "6am - 10am and 4pm - Midnight All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 48.81,
+                                "unitPrice": 51.52,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -68286,7 +67758,7 @@
                             "description": "All other times Midnight - 6am All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 28.83,
+                                "unitPrice": 30.43,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -68304,7 +67776,7 @@
                             "description": "10 am - 4pm All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 24.08,
+                                "unitPrice": 25.41,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -68320,7 +67792,7 @@
                         ],
                         "endDate": "2021-06-30",
                         "blockPeriod": "P1Y",
-                        "dailySupplyCharge": 94.95,
+                        "dailySupplyCharge": 100.23,
                         "startDate": "2020-07-01"
                       }
                     ],
@@ -68359,6 +67831,12 @@
                             "chargeAmount": 0.045
                           }
                         ]
+                      }
+                    ],
+                    "incentive": [
+                      {
+                        "name": "Account Credit",
+                        "description": "$270 (inc GST) credit will be applied to your account after sign-up. You will see it on MyAccount and it will be applied to your electricity bill. Credit is not redeemable for cash."
                       }
                     ],
                     "fuelType": "E",
@@ -68403,13 +67881,13 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1027544,
+                "batchId": 1062238,
                 "retailerId": "9639",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "10",
-                  "E_AFFIVARIABLE_10PC_VAR_SAPN_251218",
+                  "5+$270",
+                  "E_AFFIVARIABLE_5PC_VAR_SAPN_CR_260610",
                   "Time of Use",
                   "RTOU_JULY2025"
                 ],
@@ -68418,12 +67896,12 @@
                 "thirdPartyName": "Compare The Market",
                 "fuelType": "E",
                 "retailerName": "Origin Energy",
-                "planId": "ORI539168MRE21",
+                "planId": "ORI539168MRE22",
                 "retailerCode": "ORI",
                 "state": "SA",
-                "effectiveDate": "2025-12-18"
+                "effectiveDate": "2026-06-10"
               },
-              "planId": "ORI539168MRE21",
+              "planId": "ORI539168MRE22",
               "postcodes": {
                 "5097": 1
               }
@@ -68439,18 +67917,18 @@
         }
       },
       {
-        "plan_id": "ORI539303MRE22",
+        "plan_id": "ORI539303MRE23",
         "plan_name": "Origin Affinity Variable - Electricity Wizard",
         "retailer_name": "Origin Energy",
         "plan_type": "TOU",
         "tariff_type": "TOU",
-        "monthly_cost": 310,
-        "quarterly_cost": 1130,
-        "annual_cost": 3780,
-        "peak_cost": 53.69100000000001,
-        "shoulder_cost": 31.713,
-        "off_peak_cost": 26.488,
-        "daily_supply_charge": 104.44500000000001,
+        "monthly_cost": 330,
+        "quarterly_cost": 1190,
+        "annual_cost": 3990,
+        "peak_cost": 56.67200000000001,
+        "shoulder_cost": 33.473,
+        "off_peak_cost": 27.951000000000004,
+        "daily_supply_charge": 110.25300000000001,
         "detailed_time_blocks": [
           {
             "name": "Peak",
@@ -68470,8 +67948,8 @@
             ],
             "rates": [
               {
-                "unit_price": 48.81,
-                "unit_price_gst": 53.69100000000001,
+                "unit_price": 51.52,
+                "unit_price_gst": 56.67200000000001,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -68492,8 +67970,8 @@
             ],
             "rates": [
               {
-                "unit_price": 28.83,
-                "unit_price_gst": 31.713,
+                "unit_price": 30.43,
+                "unit_price_gst": 33.473,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -68514,8 +67992,8 @@
             ],
             "rates": [
               {
-                "unit_price": 24.08,
-                "unit_price_gst": 26.488,
+                "unit_price": 25.41,
+                "unit_price_gst": 27.951000000000004,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -68525,7 +68003,7 @@
           }
         ],
         "fees": {
-          "move_in_new_connection_fee": 63.71,
+          "move_in_new_connection_fee": null,
           "paper_bill_fee": 2.15,
           "payment_processing_fees": [
             {
@@ -68538,7 +68016,7 @@
           "late_payment_fee": 15,
           "disconnection_fee_move_out": null,
           "disconnection_fee_non_payment": null,
-          "reconnection_fee": null,
+          "reconnection_fee": 63.71,
           "other_fees": [
             {
               "amount": 16.69,
@@ -68569,7 +68047,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "ORI539303MRE22",
+            "planId": "ORI539303MRE23",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -68611,7 +68089,7 @@
                   "fee": [
                     {
                       "amount": 63.71,
-                      "feeType": "ConnF",
+                      "feeType": "RecoF",
                       "feeTerm": "F"
                     },
                     {
@@ -68680,7 +68158,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 48.81,
+                              "unitPrice": 51.52,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -68688,7 +68166,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 28.83,
+                              "unitPrice": 30.43,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -68696,14 +68174,14 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 24.08,
+                              "unitPrice": 25.41,
                               "measureUnit": "KWH"
                             }
                           ]
                         }
                       ],
                       "blockPeriod": "P1Y",
-                      "dailySupplyCharge": 94.95
+                      "dailySupplyCharge": 100.23
                     }
                   ],
                   "greenCharge": [
@@ -68715,6 +68193,11 @@
                     },
                     {
                       "chargeType": "A"
+                    }
+                  ],
+                  "incentive": [
+                    {
+                      "name": "Account Credit"
                     }
                   ],
                   "fuelType": "E",
@@ -68745,63 +68228,63 @@
               "thirdPartyName": "Electricity Wizard",
               "fuelType": "E",
               "retailerName": "Origin Energy",
-              "planId": "ORI539303MRE22",
+              "planId": "ORI539303MRE23",
               "retailerCode": "ORI"
             },
-            "planType": "E#R#ORI539303MRE22",
+            "planType": "E#R#ORI539303MRE23",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
                   "small": {
                     "quarterly": {
-                      "noDiscounts": 500,
-                      "allDiscounts": 500,
-                      "guaranteedDiscount": 500
+                      "noDiscounts": 530,
+                      "allDiscounts": 530,
+                      "guaranteedDiscount": 530
                     },
                     "monthly": {
-                      "noDiscounts": 140,
-                      "allDiscounts": 140,
-                      "guaranteedDiscount": 140
+                      "noDiscounts": 150,
+                      "allDiscounts": 150,
+                      "guaranteedDiscount": 150
                     },
                     "yearly": {
-                      "noDiscounts": 1670,
-                      "allDiscounts": 1670,
-                      "guaranteedDiscount": 1670
+                      "noDiscounts": 1760,
+                      "allDiscounts": 1760,
+                      "guaranteedDiscount": 1760
                     }
                   },
                   "large": {
                     "quarterly": {
-                      "noDiscounts": 1130,
-                      "allDiscounts": 1130,
-                      "guaranteedDiscount": 1130
+                      "noDiscounts": 1190,
+                      "allDiscounts": 1190,
+                      "guaranteedDiscount": 1190
                     },
                     "monthly": {
-                      "noDiscounts": 310,
-                      "allDiscounts": 310,
-                      "guaranteedDiscount": 310
+                      "noDiscounts": 330,
+                      "allDiscounts": 330,
+                      "guaranteedDiscount": 330
                     },
                     "yearly": {
-                      "noDiscounts": 3780,
-                      "allDiscounts": 3780,
-                      "guaranteedDiscount": 3780
+                      "noDiscounts": 3990,
+                      "allDiscounts": 3990,
+                      "guaranteedDiscount": 3990
                     }
                   },
                   "medium": {
                     "quarterly": {
-                      "noDiscounts": 810,
-                      "allDiscounts": 810,
-                      "guaranteedDiscount": 810
+                      "noDiscounts": 860,
+                      "allDiscounts": 860,
+                      "guaranteedDiscount": 860
                     },
                     "monthly": {
-                      "noDiscounts": 230,
-                      "allDiscounts": 230,
-                      "guaranteedDiscount": 230
+                      "noDiscounts": 240,
+                      "allDiscounts": 240,
+                      "guaranteedDiscount": 240
                     },
                     "yearly": {
-                      "noDiscounts": 2720,
-                      "allDiscounts": 2720,
-                      "guaranteedDiscount": 2720
+                      "noDiscounts": 2870,
+                      "allDiscounts": 2870,
+                      "guaranteedDiscount": 2870
                     }
                   }
                 }
@@ -68857,7 +68340,7 @@
                       {
                         "description": "A $63.71 (GST Incl) fee may apply when your property is reconnected (including when you move). Fee may vary.",
                         "amount": 63.71,
-                        "feeType": "ConnF",
+                        "feeType": "RecoF",
                         "feeTerm": "F"
                       },
                       {
@@ -68938,7 +68421,7 @@
                             "description": "6am - 10am and 4pm - Midnight All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 48.81,
+                                "unitPrice": 51.52,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -68961,7 +68444,7 @@
                             "description": "All other times Midnight - 6am All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 28.83,
+                                "unitPrice": 30.43,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -68979,7 +68462,7 @@
                             "description": "10 am - 4pm All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 24.08,
+                                "unitPrice": 25.41,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -68995,7 +68478,7 @@
                         ],
                         "endDate": "2021-06-30",
                         "blockPeriod": "P1Y",
-                        "dailySupplyCharge": 94.95,
+                        "dailySupplyCharge": 100.23,
                         "startDate": "2020-07-01"
                       }
                     ],
@@ -69034,6 +68517,12 @@
                             "chargeAmount": 0.045
                           }
                         ]
+                      }
+                    ],
+                    "incentive": [
+                      {
+                        "name": "Account Credit",
+                        "description": "$270 (inc GST) credit will be applied to your account after sign-up. You will see it on MyAccount and it will be applied to your electricity bill. Credit is not redeemable for cash."
                       }
                     ],
                     "fuelType": "E",
@@ -69078,13 +68567,13 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1027445,
+                "batchId": 1062437,
                 "retailerId": "9639",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "10",
-                  "E_AFFIVARIABLE_10PC_VAR_SAPN_251218",
+                  "5+$270",
+                  "E_AFFIVARIABLE_5PC_VAR_SAPN_CR_260610",
                   "Time of Use",
                   "RTOU_JULY2025"
                 ],
@@ -69093,12 +68582,12 @@
                 "thirdPartyName": "Electricity Wizard",
                 "fuelType": "E",
                 "retailerName": "Origin Energy",
-                "planId": "ORI539303MRE22",
+                "planId": "ORI539303MRE23",
                 "retailerCode": "ORI",
                 "state": "SA",
-                "effectiveDate": "2025-12-18"
+                "effectiveDate": "2026-06-10"
               },
-              "planId": "ORI539303MRE22",
+              "planId": "ORI539303MRE23",
               "postcodes": {
                 "5097": 1
               }
@@ -69114,18 +68603,18 @@
         }
       },
       {
-        "plan_id": "ORI539412MRE22",
+        "plan_id": "ORI539412MRE23",
         "plan_name": "Origin Affinity Variable - Go Switch",
         "retailer_name": "Origin Energy",
         "plan_type": "TOU",
         "tariff_type": "TOU",
-        "monthly_cost": 310,
-        "quarterly_cost": 1130,
-        "annual_cost": 3780,
-        "peak_cost": 53.69100000000001,
-        "shoulder_cost": 31.713,
-        "off_peak_cost": 26.488,
-        "daily_supply_charge": 104.44500000000001,
+        "monthly_cost": 330,
+        "quarterly_cost": 1190,
+        "annual_cost": 3990,
+        "peak_cost": 56.67200000000001,
+        "shoulder_cost": 33.473,
+        "off_peak_cost": 27.951000000000004,
+        "daily_supply_charge": 110.25300000000001,
         "detailed_time_blocks": [
           {
             "name": "Peak",
@@ -69145,8 +68634,8 @@
             ],
             "rates": [
               {
-                "unit_price": 48.81,
-                "unit_price_gst": 53.69100000000001,
+                "unit_price": 51.52,
+                "unit_price_gst": 56.67200000000001,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -69167,8 +68656,8 @@
             ],
             "rates": [
               {
-                "unit_price": 28.83,
-                "unit_price_gst": 31.713,
+                "unit_price": 30.43,
+                "unit_price_gst": 33.473,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -69189,8 +68678,8 @@
             ],
             "rates": [
               {
-                "unit_price": 24.08,
-                "unit_price_gst": 26.488,
+                "unit_price": 25.41,
+                "unit_price_gst": 27.951000000000004,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -69200,7 +68689,7 @@
           }
         ],
         "fees": {
-          "move_in_new_connection_fee": 63.71,
+          "move_in_new_connection_fee": null,
           "paper_bill_fee": 2.15,
           "payment_processing_fees": [
             {
@@ -69213,7 +68702,7 @@
           "late_payment_fee": 15,
           "disconnection_fee_move_out": null,
           "disconnection_fee_non_payment": null,
-          "reconnection_fee": null,
+          "reconnection_fee": 63.71,
           "other_fees": [
             {
               "amount": 16.69,
@@ -69244,7 +68733,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "ORI539412MRE22",
+            "planId": "ORI539412MRE23",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -69286,7 +68775,7 @@
                   "fee": [
                     {
                       "amount": 63.71,
-                      "feeType": "ConnF",
+                      "feeType": "RecoF",
                       "feeTerm": "F"
                     },
                     {
@@ -69355,7 +68844,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 48.81,
+                              "unitPrice": 51.52,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -69363,7 +68852,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 28.83,
+                              "unitPrice": 30.43,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -69371,14 +68860,14 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 24.08,
+                              "unitPrice": 25.41,
                               "measureUnit": "KWH"
                             }
                           ]
                         }
                       ],
                       "blockPeriod": "P1Y",
-                      "dailySupplyCharge": 94.95
+                      "dailySupplyCharge": 100.23
                     }
                   ],
                   "greenCharge": [
@@ -69390,6 +68879,11 @@
                     },
                     {
                       "chargeType": "A"
+                    }
+                  ],
+                  "incentive": [
+                    {
+                      "name": "Account Credit"
                     }
                   ],
                   "fuelType": "E",
@@ -69420,63 +68914,63 @@
               "thirdPartyName": "Go Switch",
               "fuelType": "E",
               "retailerName": "Origin Energy",
-              "planId": "ORI539412MRE22",
+              "planId": "ORI539412MRE23",
               "retailerCode": "ORI"
             },
-            "planType": "E#R#ORI539412MRE22",
+            "planType": "E#R#ORI539412MRE23",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
                   "small": {
                     "quarterly": {
-                      "noDiscounts": 500,
-                      "allDiscounts": 500,
-                      "guaranteedDiscount": 500
+                      "noDiscounts": 530,
+                      "allDiscounts": 530,
+                      "guaranteedDiscount": 530
                     },
                     "monthly": {
-                      "noDiscounts": 140,
-                      "allDiscounts": 140,
-                      "guaranteedDiscount": 140
+                      "noDiscounts": 150,
+                      "allDiscounts": 150,
+                      "guaranteedDiscount": 150
                     },
                     "yearly": {
-                      "noDiscounts": 1670,
-                      "allDiscounts": 1670,
-                      "guaranteedDiscount": 1670
+                      "noDiscounts": 1760,
+                      "allDiscounts": 1760,
+                      "guaranteedDiscount": 1760
                     }
                   },
                   "large": {
                     "quarterly": {
-                      "noDiscounts": 1130,
-                      "allDiscounts": 1130,
-                      "guaranteedDiscount": 1130
+                      "noDiscounts": 1190,
+                      "allDiscounts": 1190,
+                      "guaranteedDiscount": 1190
                     },
                     "monthly": {
-                      "noDiscounts": 310,
-                      "allDiscounts": 310,
-                      "guaranteedDiscount": 310
+                      "noDiscounts": 330,
+                      "allDiscounts": 330,
+                      "guaranteedDiscount": 330
                     },
                     "yearly": {
-                      "noDiscounts": 3780,
-                      "allDiscounts": 3780,
-                      "guaranteedDiscount": 3780
+                      "noDiscounts": 3990,
+                      "allDiscounts": 3990,
+                      "guaranteedDiscount": 3990
                     }
                   },
                   "medium": {
                     "quarterly": {
-                      "noDiscounts": 810,
-                      "allDiscounts": 810,
-                      "guaranteedDiscount": 810
+                      "noDiscounts": 860,
+                      "allDiscounts": 860,
+                      "guaranteedDiscount": 860
                     },
                     "monthly": {
-                      "noDiscounts": 230,
-                      "allDiscounts": 230,
-                      "guaranteedDiscount": 230
+                      "noDiscounts": 240,
+                      "allDiscounts": 240,
+                      "guaranteedDiscount": 240
                     },
                     "yearly": {
-                      "noDiscounts": 2720,
-                      "allDiscounts": 2720,
-                      "guaranteedDiscount": 2720
+                      "noDiscounts": 2870,
+                      "allDiscounts": 2870,
+                      "guaranteedDiscount": 2870
                     }
                   }
                 }
@@ -69532,7 +69026,7 @@
                       {
                         "description": "A $63.71 (GST Incl) fee may apply when your property is reconnected (including when you move). Fee may vary.",
                         "amount": 63.71,
-                        "feeType": "ConnF",
+                        "feeType": "RecoF",
                         "feeTerm": "F"
                       },
                       {
@@ -69613,7 +69107,7 @@
                             "description": "6am - 10am and 4pm - Midnight All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 48.81,
+                                "unitPrice": 51.52,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -69636,7 +69130,7 @@
                             "description": "All other times Midnight - 6am All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 28.83,
+                                "unitPrice": 30.43,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -69654,7 +69148,7 @@
                             "description": "10 am - 4pm All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 24.08,
+                                "unitPrice": 25.41,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -69670,7 +69164,7 @@
                         ],
                         "endDate": "2021-06-30",
                         "blockPeriod": "P1Y",
-                        "dailySupplyCharge": 94.95,
+                        "dailySupplyCharge": 100.23,
                         "startDate": "2020-07-01"
                       }
                     ],
@@ -69709,6 +69203,12 @@
                             "chargeAmount": 0.045
                           }
                         ]
+                      }
+                    ],
+                    "incentive": [
+                      {
+                        "name": "Account Credit",
+                        "description": "$270 (inc GST) credit will be applied to your account after sign-up. You will see it on MyAccount and it will be applied to your electricity bill. Credit is not redeemable for cash."
                       }
                     ],
                     "fuelType": "E",
@@ -69753,13 +69253,13 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1027544,
+                "batchId": 1062437,
                 "retailerId": "9639",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "10",
-                  "E_AFFIVARIABLE_10PC_VAR_SAPN_251218",
+                  "5+$270",
+                  "E_AFFIVARIABLE_5PC_VAR_SAPN_CR_260610",
                   "Time of Use",
                   "RTOU_JULY2025"
                 ],
@@ -69768,12 +69268,12 @@
                 "thirdPartyName": "Go Switch",
                 "fuelType": "E",
                 "retailerName": "Origin Energy",
-                "planId": "ORI539412MRE22",
+                "planId": "ORI539412MRE23",
                 "retailerCode": "ORI",
                 "state": "SA",
-                "effectiveDate": "2025-12-18"
+                "effectiveDate": "2026-06-10"
               },
-              "planId": "ORI539412MRE22",
+              "planId": "ORI539412MRE23",
               "postcodes": {
                 "5097": 1
               }
@@ -69789,18 +69289,18 @@
         }
       },
       {
-        "plan_id": "ORI539473MRE21",
+        "plan_id": "ORI539473MRE22",
         "plan_name": "Origin Affinity Variable - iSelect",
         "retailer_name": "Origin Energy",
         "plan_type": "TOU",
         "tariff_type": "TOU",
-        "monthly_cost": 310,
-        "quarterly_cost": 1130,
-        "annual_cost": 3780,
-        "peak_cost": 53.69100000000001,
-        "shoulder_cost": 31.713,
-        "off_peak_cost": 26.488,
-        "daily_supply_charge": 104.44500000000001,
+        "monthly_cost": 330,
+        "quarterly_cost": 1190,
+        "annual_cost": 3990,
+        "peak_cost": 56.67200000000001,
+        "shoulder_cost": 33.473,
+        "off_peak_cost": 27.951000000000004,
+        "daily_supply_charge": 110.25300000000001,
         "detailed_time_blocks": [
           {
             "name": "Peak",
@@ -69820,8 +69320,8 @@
             ],
             "rates": [
               {
-                "unit_price": 48.81,
-                "unit_price_gst": 53.69100000000001,
+                "unit_price": 51.52,
+                "unit_price_gst": 56.67200000000001,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -69842,8 +69342,8 @@
             ],
             "rates": [
               {
-                "unit_price": 28.83,
-                "unit_price_gst": 31.713,
+                "unit_price": 30.43,
+                "unit_price_gst": 33.473,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -69864,8 +69364,8 @@
             ],
             "rates": [
               {
-                "unit_price": 24.08,
-                "unit_price_gst": 26.488,
+                "unit_price": 25.41,
+                "unit_price_gst": 27.951000000000004,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -69875,7 +69375,7 @@
           }
         ],
         "fees": {
-          "move_in_new_connection_fee": 63.71,
+          "move_in_new_connection_fee": null,
           "paper_bill_fee": 2.15,
           "payment_processing_fees": [
             {
@@ -69888,7 +69388,7 @@
           "late_payment_fee": 15,
           "disconnection_fee_move_out": null,
           "disconnection_fee_non_payment": null,
-          "reconnection_fee": null,
+          "reconnection_fee": 63.71,
           "other_fees": [
             {
               "amount": 16.69,
@@ -69919,7 +69419,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "ORI539473MRE21",
+            "planId": "ORI539473MRE22",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -69961,7 +69461,7 @@
                   "fee": [
                     {
                       "amount": 63.71,
-                      "feeType": "ConnF",
+                      "feeType": "RecoF",
                       "feeTerm": "F"
                     },
                     {
@@ -70030,7 +69530,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 48.81,
+                              "unitPrice": 51.52,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -70038,7 +69538,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 28.83,
+                              "unitPrice": 30.43,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -70046,14 +69546,14 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 24.08,
+                              "unitPrice": 25.41,
                               "measureUnit": "KWH"
                             }
                           ]
                         }
                       ],
                       "blockPeriod": "P1Y",
-                      "dailySupplyCharge": 94.95
+                      "dailySupplyCharge": 100.23
                     }
                   ],
                   "greenCharge": [
@@ -70065,6 +69565,11 @@
                     },
                     {
                       "chargeType": "A"
+                    }
+                  ],
+                  "incentive": [
+                    {
+                      "name": "Account Credit"
                     }
                   ],
                   "fuelType": "E",
@@ -70095,63 +69600,63 @@
               "thirdPartyName": "iSelect",
               "fuelType": "E",
               "retailerName": "Origin Energy",
-              "planId": "ORI539473MRE21",
+              "planId": "ORI539473MRE22",
               "retailerCode": "ORI"
             },
-            "planType": "E#R#ORI539473MRE21",
+            "planType": "E#R#ORI539473MRE22",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
                   "small": {
                     "quarterly": {
-                      "noDiscounts": 500,
-                      "allDiscounts": 500,
-                      "guaranteedDiscount": 500
+                      "noDiscounts": 530,
+                      "allDiscounts": 530,
+                      "guaranteedDiscount": 530
                     },
                     "monthly": {
-                      "noDiscounts": 140,
-                      "allDiscounts": 140,
-                      "guaranteedDiscount": 140
+                      "noDiscounts": 150,
+                      "allDiscounts": 150,
+                      "guaranteedDiscount": 150
                     },
                     "yearly": {
-                      "noDiscounts": 1670,
-                      "allDiscounts": 1670,
-                      "guaranteedDiscount": 1670
+                      "noDiscounts": 1760,
+                      "allDiscounts": 1760,
+                      "guaranteedDiscount": 1760
                     }
                   },
                   "large": {
                     "quarterly": {
-                      "noDiscounts": 1130,
-                      "allDiscounts": 1130,
-                      "guaranteedDiscount": 1130
+                      "noDiscounts": 1190,
+                      "allDiscounts": 1190,
+                      "guaranteedDiscount": 1190
                     },
                     "monthly": {
-                      "noDiscounts": 310,
-                      "allDiscounts": 310,
-                      "guaranteedDiscount": 310
+                      "noDiscounts": 330,
+                      "allDiscounts": 330,
+                      "guaranteedDiscount": 330
                     },
                     "yearly": {
-                      "noDiscounts": 3780,
-                      "allDiscounts": 3780,
-                      "guaranteedDiscount": 3780
+                      "noDiscounts": 3990,
+                      "allDiscounts": 3990,
+                      "guaranteedDiscount": 3990
                     }
                   },
                   "medium": {
                     "quarterly": {
-                      "noDiscounts": 810,
-                      "allDiscounts": 810,
-                      "guaranteedDiscount": 810
+                      "noDiscounts": 860,
+                      "allDiscounts": 860,
+                      "guaranteedDiscount": 860
                     },
                     "monthly": {
-                      "noDiscounts": 230,
-                      "allDiscounts": 230,
-                      "guaranteedDiscount": 230
+                      "noDiscounts": 240,
+                      "allDiscounts": 240,
+                      "guaranteedDiscount": 240
                     },
                     "yearly": {
-                      "noDiscounts": 2720,
-                      "allDiscounts": 2720,
-                      "guaranteedDiscount": 2720
+                      "noDiscounts": 2870,
+                      "allDiscounts": 2870,
+                      "guaranteedDiscount": 2870
                     }
                   }
                 }
@@ -70207,7 +69712,7 @@
                       {
                         "description": "A $63.71 (GST Incl) fee may apply when your property is reconnected (including when you move). Fee may vary.",
                         "amount": 63.71,
-                        "feeType": "ConnF",
+                        "feeType": "RecoF",
                         "feeTerm": "F"
                       },
                       {
@@ -70288,7 +69793,7 @@
                             "description": "6am - 10am and 4pm - Midnight All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 48.81,
+                                "unitPrice": 51.52,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -70311,7 +69816,7 @@
                             "description": "All other times Midnight - 6am All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 28.83,
+                                "unitPrice": 30.43,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -70329,7 +69834,7 @@
                             "description": "10 am - 4pm All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 24.08,
+                                "unitPrice": 25.41,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -70345,7 +69850,7 @@
                         ],
                         "endDate": "2021-06-30",
                         "blockPeriod": "P1Y",
-                        "dailySupplyCharge": 94.95,
+                        "dailySupplyCharge": 100.23,
                         "startDate": "2020-07-01"
                       }
                     ],
@@ -70384,6 +69889,12 @@
                             "chargeAmount": 0.045
                           }
                         ]
+                      }
+                    ],
+                    "incentive": [
+                      {
+                        "name": "Account Credit",
+                        "description": "$270 (inc GST) credit will be applied to your account after sign-up. You will see it on MyAccount and it will be applied to your electricity bill. Credit is not redeemable for cash."
                       }
                     ],
                     "fuelType": "E",
@@ -70428,13 +69939,13 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1027544,
+                "batchId": 1062238,
                 "retailerId": "9639",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "10",
-                  "E_AFFIVARIABLE_10PC_VAR_SAPN_251218",
+                  "5+$270",
+                  "E_AFFIVARIABLE_5PC_VAR_SAPN_CR_260610",
                   "Time of Use",
                   "RTOU_JULY2025"
                 ],
@@ -70443,12 +69954,12 @@
                 "thirdPartyName": "iSelect",
                 "fuelType": "E",
                 "retailerName": "Origin Energy",
-                "planId": "ORI539473MRE21",
+                "planId": "ORI539473MRE22",
                 "retailerCode": "ORI",
                 "state": "SA",
-                "effectiveDate": "2025-12-18"
+                "effectiveDate": "2026-06-10"
               },
-              "planId": "ORI539473MRE21",
+              "planId": "ORI539473MRE22",
               "postcodes": {
                 "5097": 1
               }
@@ -70464,18 +69975,18 @@
         }
       },
       {
-        "plan_id": "ORI665045MRE15",
+        "plan_id": "ORI665045MRE16",
         "plan_name": "Origin Everyday Rewards Variable",
         "retailer_name": "Origin Energy",
         "plan_type": "TOU",
         "tariff_type": "TOU",
-        "monthly_cost": 330,
-        "quarterly_cost": 1180,
-        "annual_cost": 3950,
-        "peak_cost": 56.078,
-        "shoulder_cost": 33.121,
-        "off_peak_cost": 27.665,
-        "daily_supply_charge": 109.08700000000002,
+        "monthly_cost": 350,
+        "quarterly_cost": 1240,
+        "annual_cost": 4160,
+        "peak_cost": 59.059000000000005,
+        "shoulder_cost": 34.881,
+        "off_peak_cost": 29.128000000000004,
+        "daily_supply_charge": 114.89500000000001,
         "detailed_time_blocks": [
           {
             "name": "Peak",
@@ -70495,8 +70006,8 @@
             ],
             "rates": [
               {
-                "unit_price": 50.98,
-                "unit_price_gst": 56.078,
+                "unit_price": 53.69,
+                "unit_price_gst": 59.059000000000005,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -70517,8 +70028,8 @@
             ],
             "rates": [
               {
-                "unit_price": 30.11,
-                "unit_price_gst": 33.121,
+                "unit_price": 31.71,
+                "unit_price_gst": 34.881,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -70539,8 +70050,8 @@
             ],
             "rates": [
               {
-                "unit_price": 25.15,
-                "unit_price_gst": 27.665,
+                "unit_price": 26.48,
+                "unit_price_gst": 29.128000000000004,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -70550,7 +70061,7 @@
           }
         ],
         "fees": {
-          "move_in_new_connection_fee": 63.71,
+          "move_in_new_connection_fee": null,
           "paper_bill_fee": 2.15,
           "payment_processing_fees": [
             {
@@ -70563,7 +70074,7 @@
           "late_payment_fee": 15,
           "disconnection_fee_move_out": null,
           "disconnection_fee_non_payment": null,
-          "reconnection_fee": null,
+          "reconnection_fee": 63.71,
           "other_fees": [
             {
               "amount": 16.69,
@@ -70594,7 +70105,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "ORI665045MRE15",
+            "planId": "ORI665045MRE16",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -70636,7 +70147,7 @@
                   "fee": [
                     {
                       "amount": 63.71,
-                      "feeType": "ConnF",
+                      "feeType": "RecoF",
                       "feeTerm": "F"
                     },
                     {
@@ -70705,7 +70216,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 50.98,
+                              "unitPrice": 53.69,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -70713,7 +70224,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 30.11,
+                              "unitPrice": 31.71,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -70721,14 +70232,14 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 25.15,
+                              "unitPrice": 26.48,
                               "measureUnit": "KWH"
                             }
                           ]
                         }
                       ],
                       "blockPeriod": "P1Y",
-                      "dailySupplyCharge": 99.17
+                      "dailySupplyCharge": 104.45
                     }
                   ],
                   "greenCharge": [
@@ -70775,19 +70286,19 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Origin Energy",
-              "planId": "ORI665045MRE15",
+              "planId": "ORI665045MRE16",
               "retailerCode": "ORI"
             },
-            "planType": "E#R#ORI665045MRE15",
+            "planType": "E#R#ORI665045MRE16",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
                   "small": {
                     "quarterly": {
-                      "noDiscounts": 520,
-                      "allDiscounts": 520,
-                      "guaranteedDiscount": 520
+                      "noDiscounts": 550,
+                      "allDiscounts": 550,
+                      "guaranteedDiscount": 550
                     },
                     "monthly": {
                       "noDiscounts": 150,
@@ -70795,43 +70306,43 @@
                       "guaranteedDiscount": 150
                     },
                     "yearly": {
-                      "noDiscounts": 1740,
-                      "allDiscounts": 1740,
-                      "guaranteedDiscount": 1740
+                      "noDiscounts": 1830,
+                      "allDiscounts": 1830,
+                      "guaranteedDiscount": 1830
                     }
                   },
                   "large": {
                     "quarterly": {
-                      "noDiscounts": 1180,
-                      "allDiscounts": 1180,
-                      "guaranteedDiscount": 1180
+                      "noDiscounts": 1240,
+                      "allDiscounts": 1240,
+                      "guaranteedDiscount": 1240
                     },
                     "monthly": {
-                      "noDiscounts": 330,
-                      "allDiscounts": 330,
-                      "guaranteedDiscount": 330
+                      "noDiscounts": 350,
+                      "allDiscounts": 350,
+                      "guaranteedDiscount": 350
                     },
                     "yearly": {
-                      "noDiscounts": 3950,
-                      "allDiscounts": 3950,
-                      "guaranteedDiscount": 3950
+                      "noDiscounts": 4160,
+                      "allDiscounts": 4160,
+                      "guaranteedDiscount": 4160
                     }
                   },
                   "medium": {
                     "quarterly": {
-                      "noDiscounts": 850,
-                      "allDiscounts": 850,
-                      "guaranteedDiscount": 850
+                      "noDiscounts": 890,
+                      "allDiscounts": 890,
+                      "guaranteedDiscount": 890
                     },
                     "monthly": {
-                      "noDiscounts": 240,
-                      "allDiscounts": 240,
-                      "guaranteedDiscount": 240
+                      "noDiscounts": 250,
+                      "allDiscounts": 250,
+                      "guaranteedDiscount": 250
                     },
                     "yearly": {
-                      "noDiscounts": 2840,
-                      "allDiscounts": 2840,
-                      "guaranteedDiscount": 2840
+                      "noDiscounts": 2990,
+                      "allDiscounts": 2990,
+                      "guaranteedDiscount": 2990
                     }
                   }
                 }
@@ -70887,7 +70398,7 @@
                       {
                         "description": "A $63.71 (GST Incl) fee may apply when your property is reconnected (including when you move). Fee may vary.",
                         "amount": 63.71,
-                        "feeType": "ConnF",
+                        "feeType": "RecoF",
                         "feeTerm": "F"
                       },
                       {
@@ -70968,7 +70479,7 @@
                             "description": "6am - 10am and 4pm - Midnight All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 50.98,
+                                "unitPrice": 53.69,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -70991,7 +70502,7 @@
                             "description": "All other times Midnight - 6am All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 30.11,
+                                "unitPrice": 31.71,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -71009,7 +70520,7 @@
                             "description": "10 am - 4pm All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 25.15,
+                                "unitPrice": 26.48,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -71025,7 +70536,7 @@
                         ],
                         "endDate": "2021-06-30",
                         "blockPeriod": "P1Y",
-                        "dailySupplyCharge": 99.17,
+                        "dailySupplyCharge": 104.45,
                         "startDate": "2020-07-01"
                       }
                     ],
@@ -71116,25 +70627,25 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1011922,
+                "batchId": 1062238,
                 "retailerId": "9639",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "6",
-                  "E_EDRVARIABLE_6PC_VAR_SAPN_CP_251015",
+                  "1",
+                  "E_EDRVARIABLE_1PC_VAR_SAPN_CP_260610",
                   "Time of Use",
                   "RTOU_JULY2025"
                 ],
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Origin Energy",
-                "planId": "ORI665045MRE15",
+                "planId": "ORI665045MRE16",
                 "retailerCode": "ORI",
                 "state": "SA",
-                "effectiveDate": "2025-10-15"
+                "effectiveDate": "2026-06-10"
               },
-              "planId": "ORI665045MRE15",
+              "planId": "ORI665045MRE16",
               "postcodes": {
                 "5097": 1
               }
@@ -71820,18 +71331,18 @@
         }
       },
       {
-        "plan_id": "ORI724759MRE11",
+        "plan_id": "ORI724759MRE12",
         "plan_name": "Origin Affinity Variable - My Connect",
         "retailer_name": "Origin Energy",
         "plan_type": "TOU",
         "tariff_type": "TOU",
-        "monthly_cost": 310,
-        "quarterly_cost": 1130,
-        "annual_cost": 3780,
-        "peak_cost": 53.69100000000001,
-        "shoulder_cost": 31.713,
-        "off_peak_cost": 26.488,
-        "daily_supply_charge": 104.44500000000001,
+        "monthly_cost": 330,
+        "quarterly_cost": 1190,
+        "annual_cost": 3990,
+        "peak_cost": 56.67200000000001,
+        "shoulder_cost": 33.473,
+        "off_peak_cost": 27.951000000000004,
+        "daily_supply_charge": 110.25300000000001,
         "detailed_time_blocks": [
           {
             "name": "Peak",
@@ -71851,8 +71362,8 @@
             ],
             "rates": [
               {
-                "unit_price": 48.81,
-                "unit_price_gst": 53.69100000000001,
+                "unit_price": 51.52,
+                "unit_price_gst": 56.67200000000001,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -71873,8 +71384,8 @@
             ],
             "rates": [
               {
-                "unit_price": 28.83,
-                "unit_price_gst": 31.713,
+                "unit_price": 30.43,
+                "unit_price_gst": 33.473,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -71895,8 +71406,8 @@
             ],
             "rates": [
               {
-                "unit_price": 24.08,
-                "unit_price_gst": 26.488,
+                "unit_price": 25.41,
+                "unit_price_gst": 27.951000000000004,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -71906,7 +71417,7 @@
           }
         ],
         "fees": {
-          "move_in_new_connection_fee": 63.71,
+          "move_in_new_connection_fee": null,
           "paper_bill_fee": 2.15,
           "payment_processing_fees": [
             {
@@ -71919,7 +71430,7 @@
           "late_payment_fee": 15,
           "disconnection_fee_move_out": null,
           "disconnection_fee_non_payment": null,
-          "reconnection_fee": null,
+          "reconnection_fee": 63.71,
           "other_fees": [
             {
               "amount": 16.69,
@@ -71950,7 +71461,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "ORI724759MRE11",
+            "planId": "ORI724759MRE12",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -71992,7 +71503,7 @@
                   "fee": [
                     {
                       "amount": 63.71,
-                      "feeType": "ConnF",
+                      "feeType": "RecoF",
                       "feeTerm": "F"
                     },
                     {
@@ -72061,7 +71572,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 48.81,
+                              "unitPrice": 51.52,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -72069,7 +71580,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 28.83,
+                              "unitPrice": 30.43,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -72077,14 +71588,14 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 24.08,
+                              "unitPrice": 25.41,
                               "measureUnit": "KWH"
                             }
                           ]
                         }
                       ],
                       "blockPeriod": "P1Y",
-                      "dailySupplyCharge": 94.95
+                      "dailySupplyCharge": 100.23
                     }
                   ],
                   "greenCharge": [
@@ -72126,63 +71637,63 @@
               "thirdPartyName": "My Connect",
               "fuelType": "E",
               "retailerName": "Origin Energy",
-              "planId": "ORI724759MRE11",
+              "planId": "ORI724759MRE12",
               "retailerCode": "ORI"
             },
-            "planType": "E#R#ORI724759MRE11",
+            "planType": "E#R#ORI724759MRE12",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
                   "small": {
                     "quarterly": {
-                      "noDiscounts": 500,
-                      "allDiscounts": 500,
-                      "guaranteedDiscount": 500
+                      "noDiscounts": 530,
+                      "allDiscounts": 530,
+                      "guaranteedDiscount": 530
                     },
                     "monthly": {
-                      "noDiscounts": 140,
-                      "allDiscounts": 140,
-                      "guaranteedDiscount": 140
+                      "noDiscounts": 150,
+                      "allDiscounts": 150,
+                      "guaranteedDiscount": 150
                     },
                     "yearly": {
-                      "noDiscounts": 1670,
-                      "allDiscounts": 1670,
-                      "guaranteedDiscount": 1670
+                      "noDiscounts": 1760,
+                      "allDiscounts": 1760,
+                      "guaranteedDiscount": 1760
                     }
                   },
                   "large": {
                     "quarterly": {
-                      "noDiscounts": 1130,
-                      "allDiscounts": 1130,
-                      "guaranteedDiscount": 1130
+                      "noDiscounts": 1190,
+                      "allDiscounts": 1190,
+                      "guaranteedDiscount": 1190
                     },
                     "monthly": {
-                      "noDiscounts": 310,
-                      "allDiscounts": 310,
-                      "guaranteedDiscount": 310
+                      "noDiscounts": 330,
+                      "allDiscounts": 330,
+                      "guaranteedDiscount": 330
                     },
                     "yearly": {
-                      "noDiscounts": 3780,
-                      "allDiscounts": 3780,
-                      "guaranteedDiscount": 3780
+                      "noDiscounts": 3990,
+                      "allDiscounts": 3990,
+                      "guaranteedDiscount": 3990
                     }
                   },
                   "medium": {
                     "quarterly": {
-                      "noDiscounts": 810,
-                      "allDiscounts": 810,
-                      "guaranteedDiscount": 810
+                      "noDiscounts": 860,
+                      "allDiscounts": 860,
+                      "guaranteedDiscount": 860
                     },
                     "monthly": {
-                      "noDiscounts": 230,
-                      "allDiscounts": 230,
-                      "guaranteedDiscount": 230
+                      "noDiscounts": 240,
+                      "allDiscounts": 240,
+                      "guaranteedDiscount": 240
                     },
                     "yearly": {
-                      "noDiscounts": 2720,
-                      "allDiscounts": 2720,
-                      "guaranteedDiscount": 2720
+                      "noDiscounts": 2870,
+                      "allDiscounts": 2870,
+                      "guaranteedDiscount": 2870
                     }
                   }
                 }
@@ -72238,7 +71749,7 @@
                       {
                         "description": "A $63.71 (GST Incl) fee may apply when your property is reconnected (including when you move). Fee may vary.",
                         "amount": 63.71,
-                        "feeType": "ConnF",
+                        "feeType": "RecoF",
                         "feeTerm": "F"
                       },
                       {
@@ -72319,7 +71830,7 @@
                             "description": "6am - 10am and 4pm - Midnight All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 48.81,
+                                "unitPrice": 51.52,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -72342,7 +71853,7 @@
                             "description": "All other times Midnight - 6am All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 28.83,
+                                "unitPrice": 30.43,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -72360,7 +71871,7 @@
                             "description": "10 am - 4pm All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 24.08,
+                                "unitPrice": 25.41,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -72376,7 +71887,7 @@
                         ],
                         "endDate": "2021-06-30",
                         "blockPeriod": "P1Y",
-                        "dailySupplyCharge": 94.95,
+                        "dailySupplyCharge": 100.23,
                         "startDate": "2020-07-01"
                       }
                     ],
@@ -72459,13 +71970,13 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1027643,
+                "batchId": 1062238,
                 "retailerId": "9639",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "10",
-                  "E_AFFIVARIABLE_10PC_VAR_SAPN_251218",
+                  "5",
+                  "E_AFFIVARIABLE_5PC_VAR_SAPN_260610",
                   "Time of Use",
                   "RTOU_JULY2025"
                 ],
@@ -72474,12 +71985,12 @@
                 "thirdPartyName": "My Connect",
                 "fuelType": "E",
                 "retailerName": "Origin Energy",
-                "planId": "ORI724759MRE11",
+                "planId": "ORI724759MRE12",
                 "retailerCode": "ORI",
                 "state": "SA",
-                "effectiveDate": "2025-12-18"
+                "effectiveDate": "2026-06-10"
               },
-              "planId": "ORI724759MRE11",
+              "planId": "ORI724759MRE12",
               "postcodes": {
                 "5097": 1
               }
@@ -73176,18 +72687,18 @@
         }
       },
       {
-        "plan_id": "ORI733587MRE13",
+        "plan_id": "ORI733587MRE14",
         "plan_name": "Origin Affinity Variable - Compare Club",
         "retailer_name": "Origin Energy",
         "plan_type": "TOU",
         "tariff_type": "TOU",
-        "monthly_cost": 310,
-        "quarterly_cost": 1130,
-        "annual_cost": 3780,
-        "peak_cost": 53.69100000000001,
-        "shoulder_cost": 31.713,
-        "off_peak_cost": 26.488,
-        "daily_supply_charge": 104.44500000000001,
+        "monthly_cost": 330,
+        "quarterly_cost": 1190,
+        "annual_cost": 3990,
+        "peak_cost": 56.67200000000001,
+        "shoulder_cost": 33.473,
+        "off_peak_cost": 27.951000000000004,
+        "daily_supply_charge": 110.25300000000001,
         "detailed_time_blocks": [
           {
             "name": "Peak",
@@ -73207,8 +72718,8 @@
             ],
             "rates": [
               {
-                "unit_price": 48.81,
-                "unit_price_gst": 53.69100000000001,
+                "unit_price": 51.52,
+                "unit_price_gst": 56.67200000000001,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -73229,8 +72740,8 @@
             ],
             "rates": [
               {
-                "unit_price": 28.83,
-                "unit_price_gst": 31.713,
+                "unit_price": 30.43,
+                "unit_price_gst": 33.473,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -73251,8 +72762,8 @@
             ],
             "rates": [
               {
-                "unit_price": 24.08,
-                "unit_price_gst": 26.488,
+                "unit_price": 25.41,
+                "unit_price_gst": 27.951000000000004,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -73262,7 +72773,7 @@
           }
         ],
         "fees": {
-          "move_in_new_connection_fee": 63.71,
+          "move_in_new_connection_fee": null,
           "paper_bill_fee": 2.15,
           "payment_processing_fees": [
             {
@@ -73275,7 +72786,7 @@
           "late_payment_fee": 15,
           "disconnection_fee_move_out": null,
           "disconnection_fee_non_payment": null,
-          "reconnection_fee": null,
+          "reconnection_fee": 63.71,
           "other_fees": [
             {
               "amount": 16.69,
@@ -73306,7 +72817,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "ORI733587MRE13",
+            "planId": "ORI733587MRE14",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -73348,7 +72859,7 @@
                   "fee": [
                     {
                       "amount": 63.71,
-                      "feeType": "ConnF",
+                      "feeType": "RecoF",
                       "feeTerm": "F"
                     },
                     {
@@ -73417,7 +72928,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 48.81,
+                              "unitPrice": 51.52,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -73425,7 +72936,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 28.83,
+                              "unitPrice": 30.43,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -73433,14 +72944,14 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 24.08,
+                              "unitPrice": 25.41,
                               "measureUnit": "KWH"
                             }
                           ]
                         }
                       ],
                       "blockPeriod": "P1Y",
-                      "dailySupplyCharge": 94.95
+                      "dailySupplyCharge": 100.23
                     }
                   ],
                   "greenCharge": [
@@ -73452,6 +72963,11 @@
                     },
                     {
                       "chargeType": "A"
+                    }
+                  ],
+                  "incentive": [
+                    {
+                      "name": "Account Credit"
                     }
                   ],
                   "fuelType": "E",
@@ -73482,63 +72998,63 @@
               "thirdPartyName": "Compare Club",
               "fuelType": "E",
               "retailerName": "Origin Energy",
-              "planId": "ORI733587MRE13",
+              "planId": "ORI733587MRE14",
               "retailerCode": "ORI"
             },
-            "planType": "E#R#ORI733587MRE13",
+            "planType": "E#R#ORI733587MRE14",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
                   "small": {
                     "quarterly": {
-                      "noDiscounts": 500,
-                      "allDiscounts": 500,
-                      "guaranteedDiscount": 500
+                      "noDiscounts": 530,
+                      "allDiscounts": 530,
+                      "guaranteedDiscount": 530
                     },
                     "monthly": {
-                      "noDiscounts": 140,
-                      "allDiscounts": 140,
-                      "guaranteedDiscount": 140
+                      "noDiscounts": 150,
+                      "allDiscounts": 150,
+                      "guaranteedDiscount": 150
                     },
                     "yearly": {
-                      "noDiscounts": 1670,
-                      "allDiscounts": 1670,
-                      "guaranteedDiscount": 1670
+                      "noDiscounts": 1760,
+                      "allDiscounts": 1760,
+                      "guaranteedDiscount": 1760
                     }
                   },
                   "large": {
                     "quarterly": {
-                      "noDiscounts": 1130,
-                      "allDiscounts": 1130,
-                      "guaranteedDiscount": 1130
+                      "noDiscounts": 1190,
+                      "allDiscounts": 1190,
+                      "guaranteedDiscount": 1190
                     },
                     "monthly": {
-                      "noDiscounts": 310,
-                      "allDiscounts": 310,
-                      "guaranteedDiscount": 310
+                      "noDiscounts": 330,
+                      "allDiscounts": 330,
+                      "guaranteedDiscount": 330
                     },
                     "yearly": {
-                      "noDiscounts": 3780,
-                      "allDiscounts": 3780,
-                      "guaranteedDiscount": 3780
+                      "noDiscounts": 3990,
+                      "allDiscounts": 3990,
+                      "guaranteedDiscount": 3990
                     }
                   },
                   "medium": {
                     "quarterly": {
-                      "noDiscounts": 810,
-                      "allDiscounts": 810,
-                      "guaranteedDiscount": 810
+                      "noDiscounts": 860,
+                      "allDiscounts": 860,
+                      "guaranteedDiscount": 860
                     },
                     "monthly": {
-                      "noDiscounts": 230,
-                      "allDiscounts": 230,
-                      "guaranteedDiscount": 230
+                      "noDiscounts": 240,
+                      "allDiscounts": 240,
+                      "guaranteedDiscount": 240
                     },
                     "yearly": {
-                      "noDiscounts": 2720,
-                      "allDiscounts": 2720,
-                      "guaranteedDiscount": 2720
+                      "noDiscounts": 2870,
+                      "allDiscounts": 2870,
+                      "guaranteedDiscount": 2870
                     }
                   }
                 }
@@ -73594,7 +73110,7 @@
                       {
                         "description": "A $63.71 (GST Incl) fee may apply when your property is reconnected (including when you move). Fee may vary.",
                         "amount": 63.71,
-                        "feeType": "ConnF",
+                        "feeType": "RecoF",
                         "feeTerm": "F"
                       },
                       {
@@ -73675,7 +73191,7 @@
                             "description": "6am - 10am and 4pm - Midnight All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 48.81,
+                                "unitPrice": 51.52,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -73698,7 +73214,7 @@
                             "description": "All other times Midnight - 6am All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 28.83,
+                                "unitPrice": 30.43,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -73716,7 +73232,7 @@
                             "description": "10 am - 4pm All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 24.08,
+                                "unitPrice": 25.41,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -73732,7 +73248,7 @@
                         ],
                         "endDate": "2021-06-30",
                         "blockPeriod": "P1Y",
-                        "dailySupplyCharge": 94.95,
+                        "dailySupplyCharge": 100.23,
                         "startDate": "2020-07-01"
                       }
                     ],
@@ -73771,6 +73287,12 @@
                             "chargeAmount": 0.045
                           }
                         ]
+                      }
+                    ],
+                    "incentive": [
+                      {
+                        "name": "Account Credit",
+                        "description": "$270 (inc GST) credit will be applied to your account after sign-up. You will see it on MyAccount and it will be applied to your electricity bill. Credit is not redeemable for cash."
                       }
                     ],
                     "fuelType": "E",
@@ -73815,13 +73337,13 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1030838,
+                "batchId": 1062635,
                 "retailerId": "9639",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "10",
-                  "E_AFFIVARIABLE_10PC_VAR_SAPN_251218",
+                  "5+$270",
+                  "E_AFFIVARIABLE_5PC_VAR_SAPN_CR_260610",
                   "Time of Use",
                   "RTOU_JULY2025"
                 ],
@@ -73830,12 +73352,12 @@
                 "thirdPartyName": "Compare Club",
                 "fuelType": "E",
                 "retailerName": "Origin Energy",
-                "planId": "ORI733587MRE13",
+                "planId": "ORI733587MRE14",
                 "retailerCode": "ORI",
                 "state": "SA",
-                "effectiveDate": "2026-01-08"
+                "effectiveDate": "2026-06-10"
               },
-              "planId": "ORI733587MRE13",
+              "planId": "ORI733587MRE14",
               "postcodes": {
                 "5097": 1
               }
@@ -74532,18 +74054,18 @@
         }
       },
       {
-        "plan_id": "ORI848791MRE8",
+        "plan_id": "ORI848791MRE9",
         "plan_name": "Origin Affinity Variable ePlus - One Big Switch",
         "retailer_name": "Origin Energy",
         "plan_type": "TOU",
         "tariff_type": "TOU",
-        "monthly_cost": 310,
-        "quarterly_cost": 1110,
-        "annual_cost": 3740,
-        "peak_cost": 53.086000000000006,
-        "shoulder_cost": 31.361000000000004,
-        "off_peak_cost": 26.191,
-        "daily_supply_charge": 103.29000000000002,
+        "monthly_cost": 330,
+        "quarterly_cost": 1180,
+        "annual_cost": 3950,
+        "peak_cost": 56.078,
+        "shoulder_cost": 33.121,
+        "off_peak_cost": 27.665,
+        "daily_supply_charge": 109.08700000000002,
         "detailed_time_blocks": [
           {
             "name": "Peak",
@@ -74563,8 +74085,8 @@
             ],
             "rates": [
               {
-                "unit_price": 48.26,
-                "unit_price_gst": 53.086000000000006,
+                "unit_price": 50.98,
+                "unit_price_gst": 56.078,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -74585,8 +74107,8 @@
             ],
             "rates": [
               {
-                "unit_price": 28.51,
-                "unit_price_gst": 31.361000000000004,
+                "unit_price": 30.11,
+                "unit_price_gst": 33.121,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -74607,8 +74129,8 @@
             ],
             "rates": [
               {
-                "unit_price": 23.81,
-                "unit_price_gst": 26.191,
+                "unit_price": 25.15,
+                "unit_price_gst": 27.665,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -74618,7 +74140,7 @@
           }
         ],
         "fees": {
-          "move_in_new_connection_fee": 63.71,
+          "move_in_new_connection_fee": null,
           "paper_bill_fee": 2.15,
           "payment_processing_fees": [
             {
@@ -74631,7 +74153,7 @@
           "late_payment_fee": 15,
           "disconnection_fee_move_out": null,
           "disconnection_fee_non_payment": null,
-          "reconnection_fee": null,
+          "reconnection_fee": 63.71,
           "other_fees": [
             {
               "amount": 16.69,
@@ -74662,7 +74184,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "ORI848791MRE8",
+            "planId": "ORI848791MRE9",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -74704,7 +74226,7 @@
                   "fee": [
                     {
                       "amount": 63.71,
-                      "feeType": "ConnF",
+                      "feeType": "RecoF",
                       "feeTerm": "F"
                     },
                     {
@@ -74773,7 +74295,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 48.26,
+                              "unitPrice": 50.98,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -74781,7 +74303,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 28.51,
+                              "unitPrice": 30.11,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -74789,14 +74311,14 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 23.81,
+                              "unitPrice": 25.15,
                               "measureUnit": "KWH"
                             }
                           ]
                         }
                       ],
                       "blockPeriod": "P1Y",
-                      "dailySupplyCharge": 93.9
+                      "dailySupplyCharge": 99.17
                     }
                   ],
                   "greenCharge": [
@@ -74843,63 +74365,63 @@
               "thirdPartyName": "One Big Switch",
               "fuelType": "E",
               "retailerName": "Origin Energy",
-              "planId": "ORI848791MRE8",
+              "planId": "ORI848791MRE9",
               "retailerCode": "ORI"
             },
-            "planType": "E#R#ORI848791MRE8",
+            "planType": "E#R#ORI848791MRE9",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
                   "small": {
                     "quarterly": {
-                      "noDiscounts": 490,
-                      "allDiscounts": 490,
-                      "guaranteedDiscount": 490
+                      "noDiscounts": 520,
+                      "allDiscounts": 520,
+                      "guaranteedDiscount": 520
                     },
                     "monthly": {
-                      "noDiscounts": 140,
-                      "allDiscounts": 140,
-                      "guaranteedDiscount": 140
+                      "noDiscounts": 150,
+                      "allDiscounts": 150,
+                      "guaranteedDiscount": 150
                     },
                     "yearly": {
-                      "noDiscounts": 1650,
-                      "allDiscounts": 1650,
-                      "guaranteedDiscount": 1650
+                      "noDiscounts": 1740,
+                      "allDiscounts": 1740,
+                      "guaranteedDiscount": 1740
                     }
                   },
                   "large": {
                     "quarterly": {
-                      "noDiscounts": 1110,
-                      "allDiscounts": 1110,
-                      "guaranteedDiscount": 1110
+                      "noDiscounts": 1180,
+                      "allDiscounts": 1180,
+                      "guaranteedDiscount": 1180
                     },
                     "monthly": {
-                      "noDiscounts": 310,
-                      "allDiscounts": 310,
-                      "guaranteedDiscount": 310
+                      "noDiscounts": 330,
+                      "allDiscounts": 330,
+                      "guaranteedDiscount": 330
                     },
                     "yearly": {
-                      "noDiscounts": 3740,
-                      "allDiscounts": 3740,
-                      "guaranteedDiscount": 3740
+                      "noDiscounts": 3950,
+                      "allDiscounts": 3950,
+                      "guaranteedDiscount": 3950
                     }
                   },
                   "medium": {
                     "quarterly": {
-                      "noDiscounts": 800,
-                      "allDiscounts": 800,
-                      "guaranteedDiscount": 800
+                      "noDiscounts": 850,
+                      "allDiscounts": 850,
+                      "guaranteedDiscount": 850
                     },
                     "monthly": {
-                      "noDiscounts": 220,
-                      "allDiscounts": 220,
-                      "guaranteedDiscount": 220
+                      "noDiscounts": 240,
+                      "allDiscounts": 240,
+                      "guaranteedDiscount": 240
                     },
                     "yearly": {
-                      "noDiscounts": 2680,
-                      "allDiscounts": 2680,
-                      "guaranteedDiscount": 2680
+                      "noDiscounts": 2840,
+                      "allDiscounts": 2840,
+                      "guaranteedDiscount": 2840
                     }
                   }
                 }
@@ -74955,7 +74477,7 @@
                       {
                         "description": "A $63.71 (GST Incl) fee may apply when your property is reconnected (including when you move). Fee may vary.",
                         "amount": 63.71,
-                        "feeType": "ConnF",
+                        "feeType": "RecoF",
                         "feeTerm": "F"
                       },
                       {
@@ -75036,7 +74558,7 @@
                             "description": "6am - 10am and 4pm - Midnight All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 48.26,
+                                "unitPrice": 50.98,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -75059,7 +74581,7 @@
                             "description": "All other times Midnight - 6am All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 28.51,
+                                "unitPrice": 30.11,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -75077,7 +74599,7 @@
                             "description": "10 am - 4pm All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 23.81,
+                                "unitPrice": 25.15,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -75093,7 +74615,7 @@
                         ],
                         "endDate": "2021-06-30",
                         "blockPeriod": "P1Y",
-                        "dailySupplyCharge": 93.9,
+                        "dailySupplyCharge": 99.17,
                         "startDate": "2020-07-01"
                       }
                     ],
@@ -75181,13 +74703,13 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1034861,
+                "batchId": 1062635,
                 "retailerId": "9639",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "11",
-                  "E_AFFIPLUS_11PC_VAR_SAPN_REV_251201",
+                  "6",
+                  "E_AFFIPLUS_6PC_VAR_SAPN_REV_260610",
                   "Time of Use",
                   "RTOU_JULY2025"
                 ],
@@ -75196,12 +74718,12 @@
                 "thirdPartyName": "One Big Switch",
                 "fuelType": "E",
                 "retailerName": "Origin Energy",
-                "planId": "ORI848791MRE8",
+                "planId": "ORI848791MRE9",
                 "retailerCode": "ORI",
                 "state": "SA",
-                "effectiveDate": "2026-02-13"
+                "effectiveDate": "2026-06-10"
               },
-              "planId": "ORI848791MRE8",
+              "planId": "ORI848791MRE9",
               "postcodes": {
                 "5097": 1
               }
@@ -75217,18 +74739,18 @@
         }
       },
       {
-        "plan_id": "ORI909006MRE6",
+        "plan_id": "ORI909006MRE7",
         "plan_name": "Origin Affinity Variable - One Click Switch",
         "retailer_name": "Origin Energy",
         "plan_type": "TOU",
         "tariff_type": "TOU",
-        "monthly_cost": 310,
-        "quarterly_cost": 1130,
-        "annual_cost": 3780,
-        "peak_cost": 53.69100000000001,
-        "shoulder_cost": 31.713,
-        "off_peak_cost": 26.488,
-        "daily_supply_charge": 104.44500000000001,
+        "monthly_cost": 330,
+        "quarterly_cost": 1190,
+        "annual_cost": 3990,
+        "peak_cost": 56.67200000000001,
+        "shoulder_cost": 33.473,
+        "off_peak_cost": 27.951000000000004,
+        "daily_supply_charge": 110.25300000000001,
         "detailed_time_blocks": [
           {
             "name": "Peak",
@@ -75248,8 +74770,8 @@
             ],
             "rates": [
               {
-                "unit_price": 48.81,
-                "unit_price_gst": 53.69100000000001,
+                "unit_price": 51.52,
+                "unit_price_gst": 56.67200000000001,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -75270,8 +74792,8 @@
             ],
             "rates": [
               {
-                "unit_price": 28.83,
-                "unit_price_gst": 31.713,
+                "unit_price": 30.43,
+                "unit_price_gst": 33.473,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -75292,8 +74814,8 @@
             ],
             "rates": [
               {
-                "unit_price": 24.08,
-                "unit_price_gst": 26.488,
+                "unit_price": 25.41,
+                "unit_price_gst": 27.951000000000004,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -75303,7 +74825,7 @@
           }
         ],
         "fees": {
-          "move_in_new_connection_fee": 63.71,
+          "move_in_new_connection_fee": null,
           "paper_bill_fee": 2.15,
           "payment_processing_fees": [
             {
@@ -75316,7 +74838,7 @@
           "late_payment_fee": 15,
           "disconnection_fee_move_out": null,
           "disconnection_fee_non_payment": null,
-          "reconnection_fee": null,
+          "reconnection_fee": 63.71,
           "other_fees": [
             {
               "amount": 16.69,
@@ -75347,7 +74869,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "ORI909006MRE6",
+            "planId": "ORI909006MRE7",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -75389,7 +74911,7 @@
                   "fee": [
                     {
                       "amount": 63.71,
-                      "feeType": "ConnF",
+                      "feeType": "RecoF",
                       "feeTerm": "F"
                     },
                     {
@@ -75458,7 +74980,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 48.81,
+                              "unitPrice": 51.52,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -75466,7 +74988,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 28.83,
+                              "unitPrice": 30.43,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -75474,14 +74996,14 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 24.08,
+                              "unitPrice": 25.41,
                               "measureUnit": "KWH"
                             }
                           ]
                         }
                       ],
                       "blockPeriod": "P1Y",
-                      "dailySupplyCharge": 94.95
+                      "dailySupplyCharge": 100.23
                     }
                   ],
                   "greenCharge": [
@@ -75493,6 +75015,11 @@
                     },
                     {
                       "chargeType": "A"
+                    }
+                  ],
+                  "incentive": [
+                    {
+                      "name": "Account Credit"
                     }
                   ],
                   "fuelType": "E",
@@ -75523,63 +75050,63 @@
               "thirdPartyName": "One Click Switch",
               "fuelType": "E",
               "retailerName": "Origin Energy",
-              "planId": "ORI909006MRE6",
+              "planId": "ORI909006MRE7",
               "retailerCode": "ORI"
             },
-            "planType": "E#R#ORI909006MRE6",
+            "planType": "E#R#ORI909006MRE7",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
                   "small": {
                     "quarterly": {
-                      "noDiscounts": 500,
-                      "allDiscounts": 500,
-                      "guaranteedDiscount": 500
+                      "noDiscounts": 530,
+                      "allDiscounts": 530,
+                      "guaranteedDiscount": 530
                     },
                     "monthly": {
-                      "noDiscounts": 140,
-                      "allDiscounts": 140,
-                      "guaranteedDiscount": 140
+                      "noDiscounts": 150,
+                      "allDiscounts": 150,
+                      "guaranteedDiscount": 150
                     },
                     "yearly": {
-                      "noDiscounts": 1670,
-                      "allDiscounts": 1670,
-                      "guaranteedDiscount": 1670
+                      "noDiscounts": 1760,
+                      "allDiscounts": 1760,
+                      "guaranteedDiscount": 1760
                     }
                   },
                   "large": {
                     "quarterly": {
-                      "noDiscounts": 1130,
-                      "allDiscounts": 1130,
-                      "guaranteedDiscount": 1130
+                      "noDiscounts": 1190,
+                      "allDiscounts": 1190,
+                      "guaranteedDiscount": 1190
                     },
                     "monthly": {
-                      "noDiscounts": 310,
-                      "allDiscounts": 310,
-                      "guaranteedDiscount": 310
+                      "noDiscounts": 330,
+                      "allDiscounts": 330,
+                      "guaranteedDiscount": 330
                     },
                     "yearly": {
-                      "noDiscounts": 3780,
-                      "allDiscounts": 3780,
-                      "guaranteedDiscount": 3780
+                      "noDiscounts": 3990,
+                      "allDiscounts": 3990,
+                      "guaranteedDiscount": 3990
                     }
                   },
                   "medium": {
                     "quarterly": {
-                      "noDiscounts": 810,
-                      "allDiscounts": 810,
-                      "guaranteedDiscount": 810
+                      "noDiscounts": 860,
+                      "allDiscounts": 860,
+                      "guaranteedDiscount": 860
                     },
                     "monthly": {
-                      "noDiscounts": 230,
-                      "allDiscounts": 230,
-                      "guaranteedDiscount": 230
+                      "noDiscounts": 240,
+                      "allDiscounts": 240,
+                      "guaranteedDiscount": 240
                     },
                     "yearly": {
-                      "noDiscounts": 2720,
-                      "allDiscounts": 2720,
-                      "guaranteedDiscount": 2720
+                      "noDiscounts": 2870,
+                      "allDiscounts": 2870,
+                      "guaranteedDiscount": 2870
                     }
                   }
                 }
@@ -75635,7 +75162,7 @@
                       {
                         "description": "A $63.71 (GST Incl) fee may apply when your property is reconnected (including when you move). Fee may vary.",
                         "amount": 63.71,
-                        "feeType": "ConnF",
+                        "feeType": "RecoF",
                         "feeTerm": "F"
                       },
                       {
@@ -75716,7 +75243,7 @@
                             "description": "6am - 10am and 4pm - Midnight All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 48.81,
+                                "unitPrice": 51.52,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -75739,7 +75266,7 @@
                             "description": "All other times Midnight - 6am All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 28.83,
+                                "unitPrice": 30.43,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -75757,7 +75284,7 @@
                             "description": "10 am - 4pm All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 24.08,
+                                "unitPrice": 25.41,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -75773,7 +75300,7 @@
                         ],
                         "endDate": "2021-06-30",
                         "blockPeriod": "P1Y",
-                        "dailySupplyCharge": 94.95,
+                        "dailySupplyCharge": 100.23,
                         "startDate": "2020-07-01"
                       }
                     ],
@@ -75812,6 +75339,12 @@
                             "chargeAmount": 0.045
                           }
                         ]
+                      }
+                    ],
+                    "incentive": [
+                      {
+                        "name": "Account Credit",
+                        "description": "$270 (inc GST) credit will be applied to your account after sign-up. You will see it on MyAccount and it will be applied to your electricity bill. Credit is not redeemable for cash."
                       }
                     ],
                     "fuelType": "E",
@@ -75856,13 +75389,13 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1027841,
+                "batchId": 1062635,
                 "retailerId": "9639",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "10",
-                  "E_AFFIVARIABLE_10PC_VAR_SAPN_251218",
+                  "5+$270",
+                  "E_AFFIVARIABLE_5PC_VAR_SAPN_CR_260610",
                   "Time of Use",
                   "RTOU_JULY2025"
                 ],
@@ -75871,12 +75404,12 @@
                 "thirdPartyName": "One Click Switch",
                 "fuelType": "E",
                 "retailerName": "Origin Energy",
-                "planId": "ORI909006MRE6",
+                "planId": "ORI909006MRE7",
                 "retailerCode": "ORI",
                 "state": "SA",
-                "effectiveDate": "2025-12-18"
+                "effectiveDate": "2026-06-10"
               },
-              "planId": "ORI909006MRE6",
+              "planId": "ORI909006MRE7",
               "postcodes": {
                 "5097": 1
               }
@@ -75892,18 +75425,18 @@
         }
       },
       {
-        "plan_id": "ORI997828MRE3",
+        "plan_id": "ORI997828MRE4",
         "plan_name": "Origin Affinity Variable - Residential Connections",
         "retailer_name": "Origin Energy",
         "plan_type": "TOU",
         "tariff_type": "TOU",
-        "monthly_cost": 310,
-        "quarterly_cost": 1130,
-        "annual_cost": 3780,
-        "peak_cost": 53.69100000000001,
-        "shoulder_cost": 31.713,
-        "off_peak_cost": 26.488,
-        "daily_supply_charge": 104.44500000000001,
+        "monthly_cost": 330,
+        "quarterly_cost": 1190,
+        "annual_cost": 3990,
+        "peak_cost": 56.67200000000001,
+        "shoulder_cost": 33.473,
+        "off_peak_cost": 27.951000000000004,
+        "daily_supply_charge": 110.25300000000001,
         "detailed_time_blocks": [
           {
             "name": "Peak",
@@ -75923,8 +75456,8 @@
             ],
             "rates": [
               {
-                "unit_price": 48.81,
-                "unit_price_gst": 53.69100000000001,
+                "unit_price": 51.52,
+                "unit_price_gst": 56.67200000000001,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -75945,8 +75478,8 @@
             ],
             "rates": [
               {
-                "unit_price": 28.83,
-                "unit_price_gst": 31.713,
+                "unit_price": 30.43,
+                "unit_price_gst": 33.473,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -75967,8 +75500,8 @@
             ],
             "rates": [
               {
-                "unit_price": 24.08,
-                "unit_price_gst": 26.488,
+                "unit_price": 25.41,
+                "unit_price_gst": 27.951000000000004,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -75978,7 +75511,7 @@
           }
         ],
         "fees": {
-          "move_in_new_connection_fee": 63.71,
+          "move_in_new_connection_fee": null,
           "paper_bill_fee": 2.15,
           "payment_processing_fees": [
             {
@@ -75991,7 +75524,7 @@
           "late_payment_fee": 15,
           "disconnection_fee_move_out": null,
           "disconnection_fee_non_payment": null,
-          "reconnection_fee": null,
+          "reconnection_fee": 63.71,
           "other_fees": [
             {
               "amount": 16.69,
@@ -76022,7 +75555,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "ORI997828MRE3",
+            "planId": "ORI997828MRE4",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -76064,7 +75597,7 @@
                   "fee": [
                     {
                       "amount": 63.71,
-                      "feeType": "ConnF",
+                      "feeType": "RecoF",
                       "feeTerm": "F"
                     },
                     {
@@ -76133,7 +75666,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 48.81,
+                              "unitPrice": 51.52,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -76141,7 +75674,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 28.83,
+                              "unitPrice": 30.43,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -76149,14 +75682,14 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 24.08,
+                              "unitPrice": 25.41,
                               "measureUnit": "KWH"
                             }
                           ]
                         }
                       ],
                       "blockPeriod": "P1Y",
-                      "dailySupplyCharge": 94.95
+                      "dailySupplyCharge": 100.23
                     }
                   ],
                   "greenCharge": [
@@ -76168,6 +75701,11 @@
                     },
                     {
                       "chargeType": "A"
+                    }
+                  ],
+                  "incentive": [
+                    {
+                      "name": "Account Credit"
                     }
                   ],
                   "fuelType": "E",
@@ -76198,63 +75736,63 @@
               "thirdPartyName": "Residential Connections",
               "fuelType": "E",
               "retailerName": "Origin Energy",
-              "planId": "ORI997828MRE3",
+              "planId": "ORI997828MRE4",
               "retailerCode": "ORI"
             },
-            "planType": "E#R#ORI997828MRE3",
+            "planType": "E#R#ORI997828MRE4",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
                   "small": {
                     "quarterly": {
-                      "noDiscounts": 500,
-                      "allDiscounts": 500,
-                      "guaranteedDiscount": 500
+                      "noDiscounts": 530,
+                      "allDiscounts": 530,
+                      "guaranteedDiscount": 530
                     },
                     "monthly": {
-                      "noDiscounts": 140,
-                      "allDiscounts": 140,
-                      "guaranteedDiscount": 140
+                      "noDiscounts": 150,
+                      "allDiscounts": 150,
+                      "guaranteedDiscount": 150
                     },
                     "yearly": {
-                      "noDiscounts": 1670,
-                      "allDiscounts": 1670,
-                      "guaranteedDiscount": 1670
+                      "noDiscounts": 1760,
+                      "allDiscounts": 1760,
+                      "guaranteedDiscount": 1760
                     }
                   },
                   "large": {
                     "quarterly": {
-                      "noDiscounts": 1130,
-                      "allDiscounts": 1130,
-                      "guaranteedDiscount": 1130
+                      "noDiscounts": 1190,
+                      "allDiscounts": 1190,
+                      "guaranteedDiscount": 1190
                     },
                     "monthly": {
-                      "noDiscounts": 310,
-                      "allDiscounts": 310,
-                      "guaranteedDiscount": 310
+                      "noDiscounts": 330,
+                      "allDiscounts": 330,
+                      "guaranteedDiscount": 330
                     },
                     "yearly": {
-                      "noDiscounts": 3780,
-                      "allDiscounts": 3780,
-                      "guaranteedDiscount": 3780
+                      "noDiscounts": 3990,
+                      "allDiscounts": 3990,
+                      "guaranteedDiscount": 3990
                     }
                   },
                   "medium": {
                     "quarterly": {
-                      "noDiscounts": 810,
-                      "allDiscounts": 810,
-                      "guaranteedDiscount": 810
+                      "noDiscounts": 860,
+                      "allDiscounts": 860,
+                      "guaranteedDiscount": 860
                     },
                     "monthly": {
-                      "noDiscounts": 230,
-                      "allDiscounts": 230,
-                      "guaranteedDiscount": 230
+                      "noDiscounts": 240,
+                      "allDiscounts": 240,
+                      "guaranteedDiscount": 240
                     },
                     "yearly": {
-                      "noDiscounts": 2720,
-                      "allDiscounts": 2720,
-                      "guaranteedDiscount": 2720
+                      "noDiscounts": 2870,
+                      "allDiscounts": 2870,
+                      "guaranteedDiscount": 2870
                     }
                   }
                 }
@@ -76310,7 +75848,7 @@
                       {
                         "description": "A $63.71 (GST Incl) fee may apply when your property is reconnected (including when you move). Fee may vary.",
                         "amount": 63.71,
-                        "feeType": "ConnF",
+                        "feeType": "RecoF",
                         "feeTerm": "F"
                       },
                       {
@@ -76391,7 +75929,7 @@
                             "description": "6am - 10am and 4pm - Midnight All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 48.81,
+                                "unitPrice": 51.52,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -76414,7 +75952,7 @@
                             "description": "All other times Midnight - 6am All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 28.83,
+                                "unitPrice": 30.43,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -76432,7 +75970,7 @@
                             "description": "10 am - 4pm All year | All week",
                             "blockRate": [
                               {
-                                "unitPrice": 24.08,
+                                "unitPrice": 25.41,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -76448,7 +75986,7 @@
                         ],
                         "endDate": "2021-06-30",
                         "blockPeriod": "P1Y",
-                        "dailySupplyCharge": 94.95,
+                        "dailySupplyCharge": 100.23,
                         "startDate": "2020-07-01"
                       }
                     ],
@@ -76487,6 +76025,12 @@
                             "chargeAmount": 0.045
                           }
                         ]
+                      }
+                    ],
+                    "incentive": [
+                      {
+                        "name": "Account Credit",
+                        "description": "$270 (inc GST) credit will be applied to your account after sign-up. You will see it on MyAccount and it will be applied to your electricity bill. Credit is not redeemable for cash."
                       }
                     ],
                     "fuelType": "E",
@@ -76531,13 +76075,13 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1027841,
+                "batchId": 1062832,
                 "retailerId": "9639",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "10",
-                  "E_AFFIVARIABLE_10PC_VAR_SAPN_251218",
+                  "5+$270",
+                  "E_AFFIVARIABLE_5PC_VAR_SAPN_CR_260610",
                   "Time of Use",
                   "RTOU_JULY2025"
                 ],
@@ -76546,12 +76090,12 @@
                 "thirdPartyName": "Residential Connections",
                 "fuelType": "E",
                 "retailerName": "Origin Energy",
-                "planId": "ORI997828MRE3",
+                "planId": "ORI997828MRE4",
                 "retailerCode": "ORI",
                 "state": "SA",
-                "effectiveDate": "2025-12-18"
+                "effectiveDate": "2026-06-10"
               },
-              "planId": "ORI997828MRE3",
+              "planId": "ORI997828MRE4",
               "postcodes": {
                 "5097": 1
               }
