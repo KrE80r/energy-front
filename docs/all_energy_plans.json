@@ -21420,7 +21420,6 @@
           "main_api_response": {
             "planId": "ENE247405SRE28",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -21577,13 +21576,14 @@
                   ]
                 }
               ],
-              "planName": "Standing Offer (Home)",
-              "retailerId": "9637",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "EnergyAustralia",
               "planId": "ENE247405SRE28",
-              "retailerCode": "ENE"
+              "planName": "Standing Offer (Home)",
+              "retailerCode": "ENE",
+              "retailerId": "9637",
+              "retailerName": "EnergyAustralia",
+              "tariffType": "TOU"
             },
             "planType": "E#R#ENE247405SRE28",
             "postcode": 5097,
@@ -21648,8 +21648,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "S",
-                "tariffType": "TOU",
+                "batchId": 1027952,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -21891,18 +21890,26 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-01-07",
+                "expiryDate": "2026-07-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "ENE247405SRE28",
                 "planName": "Standing Offer (Home)",
                 "planStatus": "PUBLISHED",
+                "planType": "S",
+                "retailerCode": "ENE",
+                "retailerId": "9637",
+                "retailerName": "EnergyAustralia",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1027952,
-                "retailerId": "9637",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "SE_RSOT_SA_T7",
                   "RSOT",
@@ -21910,13 +21917,7 @@
                   "T7",
                   "RESI"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "EnergyAustralia",
-                "planId": "ENE247405SRE28",
-                "retailerCode": "ENE",
-                "state": "SA",
-                "effectiveDate": "2026-01-07"
+                "tariffType": "TOU"
               },
               "planId": "ENE247405SRE28",
               "postcodes": {
@@ -22057,7 +22058,6 @@
           "main_api_response": {
             "planId": "ENE360412MRE26",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -22210,13 +22210,14 @@
                   ]
                 }
               ],
-              "planName": "Solar Max",
-              "retailerId": "9637",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "EnergyAustralia",
               "planId": "ENE360412MRE26",
-              "retailerCode": "ENE"
+              "planName": "Solar Max",
+              "retailerCode": "ENE",
+              "retailerId": "9637",
+              "retailerName": "EnergyAustralia",
+              "tariffType": "TOU"
             },
             "planType": "E#R#ENE360412MRE26",
             "postcode": 5097,
@@ -22281,8 +22282,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1027952,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -22520,18 +22520,26 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-01-07",
+                "expiryDate": "2026-07-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "ENE360412MRE26",
                 "planName": "Solar Max",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "ENE",
+                "retailerId": "9637",
+                "retailerName": "EnergyAustralia",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1027952,
-                "retailerId": "9637",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "SE_SMAX_SA_T7",
                   "SMAX",
@@ -22539,13 +22547,7 @@
                   "T7",
                   "RESI"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "EnergyAustralia",
-                "planId": "ENE360412MRE26",
-                "retailerCode": "ENE",
-                "state": "SA",
-                "effectiveDate": "2026-01-07"
+                "tariffType": "TOU"
               },
               "planId": "ENE360412MRE26",
               "postcodes": {
@@ -22686,7 +22688,6 @@
           "main_api_response": {
             "planId": "ENE379838MRE22",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -22853,13 +22854,14 @@
                   ]
                 }
               ],
-              "planName": "Flexi Plan",
-              "retailerId": "9637",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "EnergyAustralia",
               "planId": "ENE379838MRE22",
-              "retailerCode": "ENE"
+              "planName": "Flexi Plan",
+              "retailerCode": "ENE",
+              "retailerId": "9637",
+              "retailerName": "EnergyAustralia",
+              "tariffType": "TOU"
             },
             "planType": "E#R#ENE379838MRE22",
             "postcode": 5097,
@@ -22924,8 +22926,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1027952,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -23179,18 +23180,26 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-01-07",
+                "expiryDate": "2026-07-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "ENE379838MRE22",
                 "planName": "Flexi Plan",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "ENE",
+                "retailerId": "9637",
+                "retailerName": "EnergyAustralia",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1027952,
-                "retailerId": "9637",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "SE_BP2H_SA_T7",
                   "BP2H",
@@ -23198,13 +23207,7 @@
                   "T7",
                   "RESI"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "EnergyAustralia",
-                "planId": "ENE379838MRE22",
-                "retailerCode": "ENE",
-                "state": "SA",
-                "effectiveDate": "2026-01-07"
+                "tariffType": "TOU"
               },
               "planId": "ENE379838MRE22",
               "postcodes": {
@@ -23345,7 +23348,6 @@
           "main_api_response": {
             "planId": "ENE676768MRE10",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -23519,13 +23521,14 @@
                   ]
                 }
               ],
-              "planName": "Balance Plan - Third Party Offer",
-              "retailerId": "9637",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "EnergyAustralia",
               "planId": "ENE676768MRE10",
-              "retailerCode": "ENE"
+              "planName": "Balance Plan - Third Party Offer",
+              "retailerCode": "ENE",
+              "retailerId": "9637",
+              "retailerName": "EnergyAustralia",
+              "tariffType": "TOU"
             },
             "planType": "E#R#ENE676768MRE10",
             "postcode": 5097,
@@ -23590,8 +23593,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1027952,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -23852,18 +23854,26 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-01-07",
+                "expiryDate": "2026-07-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "ENE676768MRE10",
                 "planName": "Balance Plan - Third Party Offer",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "ENE",
+                "retailerId": "9637",
+                "retailerName": "EnergyAustralia",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1027952,
-                "retailerId": "9637",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "SE_3PP_SA_T7",
                   "3PP",
@@ -23871,13 +23881,7 @@
                   "T7",
                   "RESI"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "EnergyAustralia",
-                "planId": "ENE676768MRE10",
-                "retailerCode": "ENE",
-                "state": "SA",
-                "effectiveDate": "2026-01-07"
+                "tariffType": "TOU"
               },
               "planId": "ENE676768MRE10",
               "postcodes": {
@@ -24018,7 +24022,6 @@
           "main_api_response": {
             "planId": "ENE676773MRE10",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -24182,13 +24185,14 @@
                   ]
                 }
               ],
-              "planName": "Balance Plan - Connect Now",
-              "retailerId": "9637",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "EnergyAustralia",
               "planId": "ENE676773MRE10",
-              "retailerCode": "ENE"
+              "planName": "Balance Plan - Connect Now",
+              "retailerCode": "ENE",
+              "retailerId": "9637",
+              "retailerName": "EnergyAustralia",
+              "tariffType": "TOU"
             },
             "planType": "E#R#ENE676773MRE10",
             "postcode": 5097,
@@ -24253,8 +24257,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1027952,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -24504,18 +24507,26 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-01-07",
+                "expiryDate": "2026-07-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "ENE676773MRE10",
                 "planName": "Balance Plan - Connect Now",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "ENE",
+                "retailerId": "9637",
+                "retailerName": "EnergyAustralia",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1027952,
-                "retailerId": "9637",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "SE_TAPRC_SA_T7",
                   "TAPRC",
@@ -24523,13 +24534,7 @@
                   "T7",
                   "RESI"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "EnergyAustralia",
-                "planId": "ENE676773MRE10",
-                "retailerCode": "ENE",
-                "state": "SA",
-                "effectiveDate": "2026-01-07"
+                "tariffType": "TOU"
               },
               "planId": "ENE676773MRE10",
               "postcodes": {
@@ -24670,7 +24675,6 @@
           "main_api_response": {
             "planId": "ENE681811MRE11",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -24837,13 +24841,14 @@
                   ]
                 }
               ],
-              "planName": "Rate Fix",
-              "retailerId": "9637",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "EnergyAustralia",
               "planId": "ENE681811MRE11",
-              "retailerCode": "ENE"
+              "planName": "Rate Fix",
+              "retailerCode": "ENE",
+              "retailerId": "9637",
+              "retailerName": "EnergyAustralia",
+              "tariffType": "TOU"
             },
             "planType": "E#R#ENE681811MRE11",
             "postcode": 5097,
@@ -24908,8 +24913,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1027952,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -25162,18 +25166,26 @@
                     "isFixed": true
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-01-07",
+                "expiryDate": "2026-07-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "ENE681811MRE11",
                 "planName": "Rate Fix",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "ENE",
+                "retailerId": "9637",
+                "retailerName": "EnergyAustralia",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1027952,
-                "retailerId": "9637",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "SE_RF2H_SA_T7",
                   "RF2H",
@@ -25181,13 +25193,7 @@
                   "T7",
                   "RESI"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "EnergyAustralia",
-                "planId": "ENE681811MRE11",
-                "retailerCode": "ENE",
-                "state": "SA",
-                "effectiveDate": "2026-01-07"
+                "tariffType": "TOU"
               },
               "planId": "ENE681811MRE11",
               "postcodes": {
@@ -25328,7 +25334,6 @@
           "main_api_response": {
             "planId": "ENE996206MRE3",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -25492,13 +25497,14 @@
                   ]
                 }
               ],
-              "planName": "Balance Plan - My Connect",
-              "retailerId": "9637",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "EnergyAustralia",
               "planId": "ENE996206MRE3",
-              "retailerCode": "ENE"
+              "planName": "Balance Plan - My Connect",
+              "retailerCode": "ENE",
+              "retailerId": "9637",
+              "retailerName": "EnergyAustralia",
+              "tariffType": "TOU"
             },
             "planType": "E#R#ENE996206MRE3",
             "postcode": 5097,
@@ -25563,8 +25569,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1027952,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -25814,18 +25819,26 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-01-07",
+                "expiryDate": "2026-07-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "ENE996206MRE3",
                 "planName": "Balance Plan - My Connect",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "ENE",
+                "retailerId": "9637",
+                "retailerName": "EnergyAustralia",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1027952,
-                "retailerId": "9637",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "SE_TAPRC1_SA_T7",
                   "TAPRC1",
@@ -25833,13 +25846,7 @@
                   "T7",
                   "RESI"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "EnergyAustralia",
-                "planId": "ENE996206MRE3",
-                "retailerCode": "ENE",
-                "state": "SA",
-                "effectiveDate": "2026-01-07"
+                "tariffType": "TOU"
               },
               "planId": "ENE996206MRE3",
               "postcodes": {
@@ -25980,7 +25987,6 @@
           "main_api_response": {
             "planId": "ENE996210MRE3",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -26144,13 +26150,14 @@
                   ]
                 }
               ],
-              "planName": "Balance Plan - Residential Connections",
-              "retailerId": "9637",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "EnergyAustralia",
               "planId": "ENE996210MRE3",
-              "retailerCode": "ENE"
+              "planName": "Balance Plan - Residential Connections",
+              "retailerCode": "ENE",
+              "retailerId": "9637",
+              "retailerName": "EnergyAustralia",
+              "tariffType": "TOU"
             },
             "planType": "E#R#ENE996210MRE3",
             "postcode": 5097,
@@ -26215,8 +26222,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1027952,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -26466,18 +26472,26 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-01-07",
+                "expiryDate": "2026-07-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "ENE996210MRE3",
                 "planName": "Balance Plan - Residential Connections",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "ENE",
+                "retailerId": "9637",
+                "retailerName": "EnergyAustralia",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1027952,
-                "retailerId": "9637",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "SE_TAPRC2_SA_T7",
                   "TAPRC2",
@@ -26485,13 +26499,7 @@
                   "T7",
                   "RESI"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "EnergyAustralia",
-                "planId": "ENE996210MRE3",
-                "retailerCode": "ENE",
-                "state": "SA",
-                "effectiveDate": "2026-01-07"
+                "tariffType": "TOU"
               },
               "planId": "ENE996210MRE3",
               "postcodes": {
