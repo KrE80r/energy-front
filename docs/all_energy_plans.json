@@ -20910,7 +20910,6 @@
           "main_api_response": {
             "planId": "DOD146946SRE9",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -21022,13 +21021,14 @@
                   ]
                 }
               ],
-              "planName": "Residential Standing",
-              "retailerId": "9638",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "Dodo",
               "planId": "DOD146946SRE9",
-              "retailerCode": "DOD"
+              "planName": "Residential Standing",
+              "retailerCode": "DOD",
+              "retailerId": "9638",
+              "retailerName": "Dodo",
+              "tariffType": "TOU"
             },
             "planType": "E#R#DOD146946SRE9",
             "postcode": 5097,
@@ -21093,8 +21093,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "S",
-                "tariffType": "TOU",
+                "batchId": 1012112,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -21261,25 +21260,27 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2025-10-20",
+                "expiryDate": "2026-07-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "DOD146946SRE9",
                 "planName": "Residential Standing",
                 "planStatus": "PUBLISHED",
+                "planType": "S",
+                "retailerCode": "DOD",
+                "retailerId": "9638",
+                "retailerName": "Dodo",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1012112,
-                "retailerId": "9638",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "Dodo",
-                "planId": "DOD146946SRE9",
-                "retailerCode": "DOD",
-                "state": "SA",
-                "effectiveDate": "2025-10-20"
+                "tariffType": "TOU"
               },
               "planId": "DOD146946SRE9",
               "postcodes": {
