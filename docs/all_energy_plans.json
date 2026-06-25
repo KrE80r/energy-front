@@ -76257,7 +76257,6 @@
           "main_api_response": {
             "planId": "OVO704350MRE20",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -76381,13 +76380,14 @@
                   ]
                 }
               ],
-              "planName": "The Basic Free 3 Plan",
-              "retailerId": "1085327",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "OVO Energy",
               "planId": "OVO704350MRE20",
-              "retailerCode": "OVO"
+              "planName": "The Basic Free 3 Plan",
+              "retailerCode": "OVO",
+              "retailerId": "1085327",
+              "retailerName": "OVO Energy",
+              "tariffType": "TOU"
             },
             "planType": "E#R#OVO704350MRE20",
             "postcode": 5097,
@@ -76452,8 +76452,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1002703,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -76644,28 +76643,30 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2025-08-28",
+                "expiryDate": "2026-07-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "OVO704350MRE20",
                 "planName": "The Basic Free 3 Plan",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "OVO",
+                "retailerId": "1085327",
+                "retailerName": "OVO Energy",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1002703,
-                "retailerId": "1085327",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "MO_V_BasicFree3Plan_TOU_SAPOWER_AUG2025v2"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "OVO Energy",
-                "planId": "OVO704350MRE20",
-                "retailerCode": "OVO",
-                "state": "SA",
-                "effectiveDate": "2025-08-28"
+                "tariffType": "TOU"
               },
               "planId": "OVO704350MRE20",
               "postcodes": {
@@ -76793,7 +76794,6 @@
           "main_api_response": {
             "planId": "OVO704387MRE20",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -76905,13 +76905,14 @@
                   ]
                 }
               ],
-              "planName": "The Basic Plan",
-              "retailerId": "1085327",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "OVO Energy",
               "planId": "OVO704387MRE20",
-              "retailerCode": "OVO"
+              "planName": "The Basic Plan",
+              "retailerCode": "OVO",
+              "retailerId": "1085327",
+              "retailerName": "OVO Energy",
+              "tariffType": "TOU"
             },
             "planType": "E#R#OVO704387MRE20",
             "postcode": 5097,
@@ -76976,8 +76977,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1002703,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -77154,28 +77154,30 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2025-08-28",
+                "expiryDate": "2026-07-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "OVO704387MRE20",
                 "planName": "The Basic Plan",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "OVO",
+                "retailerId": "1085327",
+                "retailerName": "OVO Energy",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1002703,
-                "retailerId": "1085327",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "MO_V_BasicPlan_TOU_SAPOWER_AUG2025v2"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "OVO Energy",
-                "planId": "OVO704387MRE20",
-                "retailerCode": "OVO",
-                "state": "SA",
-                "effectiveDate": "2025-08-28"
+                "tariffType": "TOU"
               },
               "planId": "OVO704387MRE20",
               "postcodes": {
@@ -77302,7 +77304,6 @@
           "main_api_response": {
             "planId": "OVO704475MRE19",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -77424,13 +77425,14 @@
                   ]
                 }
               ],
-              "planName": "The Free 3 Plan",
-              "retailerId": "1085327",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "OVO Energy",
               "planId": "OVO704475MRE19",
-              "retailerCode": "OVO"
+              "planName": "The Free 3 Plan",
+              "retailerCode": "OVO",
+              "retailerId": "1085327",
+              "retailerName": "OVO Energy",
+              "tariffType": "TOU"
             },
             "planType": "E#R#OVO704475MRE19",
             "postcode": 5097,
@@ -77495,8 +77497,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1002703,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -77685,28 +77686,30 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2025-08-28",
+                "expiryDate": "2026-07-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "OVO704475MRE19",
                 "planName": "The Free 3 Plan",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "OVO",
+                "retailerId": "1085327",
+                "retailerName": "OVO Energy",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1002703,
-                "retailerId": "1085327",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "MO_V_Free3Plan_TOU_SAPOWER_AUG2025v2"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "OVO Energy",
-                "planId": "OVO704475MRE19",
-                "retailerCode": "OVO",
-                "state": "SA",
-                "effectiveDate": "2025-08-28"
+                "tariffType": "TOU"
               },
               "planId": "OVO704475MRE19",
               "postcodes": {
@@ -77832,7 +77835,6 @@
           "main_api_response": {
             "planId": "OVO704518MRE20",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -77943,13 +77945,14 @@
                   ]
                 }
               ],
-              "planName": "The One Plan",
-              "retailerId": "1085327",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "OVO Energy",
               "planId": "OVO704518MRE20",
-              "retailerCode": "OVO"
+              "planName": "The One Plan",
+              "retailerCode": "OVO",
+              "retailerId": "1085327",
+              "retailerName": "OVO Energy",
+              "tariffType": "TOU"
             },
             "planType": "E#R#OVO704518MRE20",
             "postcode": 5097,
@@ -78014,8 +78017,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1002703,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -78191,28 +78193,30 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2025-08-28",
+                "expiryDate": "2026-07-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "OVO704518MRE20",
                 "planName": "The One Plan",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "OVO",
+                "retailerId": "1085327",
+                "retailerName": "OVO Energy",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1002703,
-                "retailerId": "1085327",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "MO_V_OnePlan_TOU_SAPOWER_AUG2025v2"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "OVO Energy",
-                "planId": "OVO704518MRE20",
-                "retailerCode": "OVO",
-                "state": "SA",
-                "effectiveDate": "2025-08-28"
+                "tariffType": "TOU"
               },
               "planId": "OVO704518MRE20",
               "postcodes": {
@@ -78321,7 +78325,6 @@
           "main_api_response": {
             "planId": "OVO723748MRE18",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -78446,13 +78449,14 @@
                   ]
                 }
               ],
-              "planName": "The EV Plan",
-              "retailerId": "1085327",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "OVO Energy",
               "planId": "OVO723748MRE18",
-              "retailerCode": "OVO"
+              "planName": "The EV Plan",
+              "retailerCode": "OVO",
+              "retailerId": "1085327",
+              "retailerName": "OVO Energy",
+              "tariffType": "TOU"
             },
             "planType": "E#R#OVO723748MRE18",
             "postcode": 5097,
@@ -78517,8 +78521,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1045329,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -78704,28 +78707,30 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-04-15",
+                "expiryDate": "2026-07-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "OVO723748MRE18",
                 "planName": "The EV Plan",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "OVO",
+                "retailerId": "1085327",
+                "retailerName": "OVO Energy",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1045329,
-                "retailerId": "1085327",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "MO_V_EVPlan_TOU_SAPOWER_APR2026"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "OVO Energy",
-                "planId": "OVO723748MRE18",
-                "retailerCode": "OVO",
-                "state": "SA",
-                "effectiveDate": "2026-04-15"
+                "tariffType": "TOU"
               },
               "planId": "OVO723748MRE18",
               "postcodes": {
@@ -78836,7 +78841,6 @@
           "main_api_response": {
             "planId": "OVO723789MRE18",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -78963,13 +78967,14 @@
                   ]
                 }
               ],
-              "planName": "The Basic EV Plan",
-              "retailerId": "1085327",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "OVO Energy",
               "planId": "OVO723789MRE18",
-              "retailerCode": "OVO"
+              "planName": "The Basic EV Plan",
+              "retailerCode": "OVO",
+              "retailerId": "1085327",
+              "retailerName": "OVO Energy",
+              "tariffType": "TOU"
             },
             "planType": "E#R#OVO723789MRE18",
             "postcode": 5097,
@@ -79034,8 +79039,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1045329,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -79223,28 +79227,30 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-04-15",
+                "expiryDate": "2026-07-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "OVO723789MRE18",
                 "planName": "The Basic EV Plan",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "OVO",
+                "retailerId": "1085327",
+                "retailerName": "OVO Energy",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1045329,
-                "retailerId": "1085327",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "MO_V_BasicEVPlan_TOU_SAPOWER_APR2026"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "OVO Energy",
-                "planId": "OVO723789MRE18",
-                "retailerCode": "OVO",
-                "state": "SA",
-                "effectiveDate": "2026-04-15"
+                "tariffType": "TOU"
               },
               "planId": "OVO723789MRE18",
               "postcodes": {
@@ -79372,7 +79378,6 @@
           "main_api_response": {
             "planId": "OVO934259SRE1",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -79439,13 +79444,14 @@
                   ]
                 }
               ],
-              "planName": "Basic Standing Offer",
-              "retailerId": "1085327",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "OVO Energy",
               "planId": "OVO934259SRE1",
-              "retailerCode": "OVO"
+              "planName": "Basic Standing Offer",
+              "retailerCode": "OVO",
+              "retailerId": "1085327",
+              "retailerName": "OVO Energy",
+              "tariffType": "TOU"
             },
             "planType": "E#R#OVO934259SRE1",
             "postcode": 5097,
@@ -79510,8 +79516,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "S",
-                "tariffType": "TOU",
+                "batchId": 934258,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -79632,25 +79637,27 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2025-07-01",
+                "expiryDate": "2026-07-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "OVO934259SRE1",
                 "planName": "Basic Standing Offer",
                 "planStatus": "PUBLISHED",
+                "planType": "S",
+                "retailerCode": "OVO",
+                "retailerId": "1085327",
+                "retailerName": "OVO Energy",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 934258,
-                "retailerId": "1085327",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "OVO Energy",
-                "planId": "OVO934259SRE1",
-                "retailerCode": "OVO",
-                "state": "SA",
-                "effectiveDate": "2025-07-01"
+                "tariffType": "TOU"
               },
               "planId": "OVO934259SRE1",
               "postcodes": {
