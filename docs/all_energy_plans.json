@@ -90312,7 +90312,6 @@
           "main_api_response": {
             "planId": "TAN918723MRE1",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -90439,13 +90438,14 @@
                   ]
                 }
               ],
-              "planName": "Home Select",
-              "retailerId": "9617",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "Tango Energy",
               "planId": "TAN918723MRE1",
-              "retailerCode": "TAN"
+              "planName": "Home Select",
+              "retailerCode": "TAN",
+              "retailerId": "9617",
+              "retailerName": "Tango Energy",
+              "tariffType": "TOU"
             },
             "planType": "E#R#TAN918723MRE1",
             "postcode": 5097,
@@ -90510,9 +90510,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
-                "planRef": "TAN_287_40788",
+                "batchId": 918707,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -90702,26 +90700,29 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "effectiveDate": "2025-07-01",
+                "expiryDate": "2026-07-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "TAN918723MRE1",
                 "planName": "Home Select",
+                "planRef": "TAN_287_40788",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "TAN",
+                "retailerId": "9617",
+                "retailerName": "Tango Energy",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 918707,
-                "retailerId": "9617",
-                "genAvailable": true,
                 "tags": [
                   "EMSSR130A1104"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "Tango Energy",
-                "planId": "TAN918723MRE1",
-                "retailerCode": "TAN",
-                "effectiveDate": "2025-07-01"
+                "tariffType": "TOU"
               },
               "planId": "TAN918723MRE1",
               "postcodes": {
