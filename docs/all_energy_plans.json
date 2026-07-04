@@ -48611,7 +48611,7 @@
         }
       },
       {
-        "plan_id": "GLO1054033MRE2",
+        "plan_id": "GLO1054033MRE3",
         "plan_name": "EASYEV Residential (Flexible Rate)-SAPN",
         "retailer_name": "Globird Energy",
         "plan_type": "TOU",
@@ -48738,7 +48738,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "GLO1054033MRE2",
+            "planId": "GLO1054033MRE3",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -48886,10 +48886,10 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Globird Energy",
-              "planId": "GLO1054033MRE2",
+              "planId": "GLO1054033MRE3",
               "retailerCode": "GLO"
             },
-            "planType": "E#R#GLO1054033MRE2",
+            "planType": "E#R#GLO1054033MRE3",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -49166,7 +49166,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1127471,
+                "batchId": 1138113,
                 "retailerId": "898484",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -49176,12 +49176,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Globird Energy",
-                "planId": "GLO1054033MRE2",
+                "planId": "GLO1054033MRE3",
                 "retailerCode": "GLO",
                 "state": "SA",
-                "effectiveDate": "2026-07-01"
+                "effectiveDate": "2026-07-03"
               },
-              "planId": "GLO1054033MRE2",
+              "planId": "GLO1054033MRE3",
               "postcodes": {
                 "5097": 1
               }
@@ -49197,7 +49197,7 @@
         }
       },
       {
-        "plan_id": "GLO1083232MRE2",
+        "plan_id": "GLO1083232MRE3",
         "plan_name": "WHOLESAVE Resi (Two Rate) estimate-SAPN",
         "retailer_name": "Globird Energy",
         "plan_type": "TOU",
@@ -49285,7 +49285,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "GLO1083232MRE2",
+            "planId": "GLO1083232MRE3",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -49376,10 +49376,10 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Globird Energy",
-              "planId": "GLO1083232MRE2",
+              "planId": "GLO1083232MRE3",
               "retailerCode": "GLO"
             },
-            "planType": "E#R#GLO1083232MRE2",
+            "planType": "E#R#GLO1083232MRE3",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -49578,7 +49578,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1127471,
+                "batchId": 1138113,
                 "retailerId": "898484",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -49588,12 +49588,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Globird Energy",
-                "planId": "GLO1083232MRE2",
+                "planId": "GLO1083232MRE3",
                 "retailerCode": "GLO",
                 "state": "SA",
-                "effectiveDate": "2026-07-01"
+                "effectiveDate": "2026-07-03"
               },
-              "planId": "GLO1083232MRE2",
+              "planId": "GLO1083232MRE3",
               "postcodes": {
                 "5097": 1
               }
@@ -49609,7 +49609,7 @@
         }
       },
       {
-        "plan_id": "GLO1127615MRE1",
+        "plan_id": "GLO1127615MRE2",
         "plan_name": "BOOST Residential (Flexible Rate)-SAPN",
         "retailer_name": "Globird Energy",
         "plan_type": "TOU",
@@ -49723,7 +49723,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "GLO1127615MRE1",
+            "planId": "GLO1127615MRE2",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -49736,8 +49736,8 @@
                       "singleTariffRates": [
                         {
                           "unitPrice": 1,
-                          "measureUnit": "KWH",
-                          "rebate": true
+                          "rebate": true,
+                          "measureUnit": "KWH"
                         }
                       ],
                       "rate": 1,
@@ -49751,8 +49751,8 @@
                       "singleTariffRates": [
                         {
                           "unitPrice": 44,
-                          "measureUnit": "KWH",
-                          "rebate": true
+                          "rebate": true,
+                          "measureUnit": "KWH"
                         }
                       ],
                       "rate": 44,
@@ -49825,10 +49825,10 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Globird Energy",
-              "planId": "GLO1127615MRE1",
+              "planId": "GLO1127615MRE2",
               "retailerCode": "GLO"
             },
-            "planType": "E#R#GLO1127615MRE1",
+            "planType": "E#R#GLO1127615MRE2",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -49904,8 +49904,8 @@
                         "singleTariffRates": [
                           {
                             "unitPrice": 1,
-                            "measureUnit": "KWH",
-                            "rebate": true
+                            "rebate": true,
+                            "measureUnit": "KWH"
                           }
                         ],
                         "rate": 1,
@@ -49920,8 +49920,8 @@
                         "singleTariffRates": [
                           {
                             "unitPrice": 44,
-                            "measureUnit": "KWH",
-                            "rebate": true
+                            "rebate": true,
+                            "measureUnit": "KWH"
                           }
                         ],
                         "rate": 44,
@@ -50053,7 +50053,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1127540,
+                "batchId": 1138113,
                 "retailerId": "898484",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -50063,12 +50063,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Globird Energy",
-                "planId": "GLO1127615MRE1",
+                "planId": "GLO1127615MRE2",
                 "retailerCode": "GLO",
                 "state": "SA",
-                "effectiveDate": "2026-07-01"
+                "effectiveDate": "2026-07-03"
               },
-              "planId": "GLO1127615MRE1",
+              "planId": "GLO1127615MRE2",
               "postcodes": {
                 "5097": 1
               }
@@ -50084,7 +50084,7 @@
         }
       },
       {
-        "plan_id": "GLO1127619MRE1",
+        "plan_id": "GLO1127619MRE2",
         "plan_name": "GLOSAVE Residential (Flexible Rate)-SAPN",
         "retailer_name": "Globird Energy",
         "plan_type": "TOU",
@@ -50198,7 +50198,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "GLO1127619MRE1",
+            "planId": "GLO1127619MRE2",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -50211,8 +50211,8 @@
                       "singleTariffRates": [
                         {
                           "unitPrice": 1,
-                          "measureUnit": "KWH",
-                          "rebate": true
+                          "rebate": true,
+                          "measureUnit": "KWH"
                         }
                       ],
                       "rate": 1,
@@ -50226,8 +50226,8 @@
                       "singleTariffRates": [
                         {
                           "unitPrice": 44,
-                          "measureUnit": "KWH",
-                          "rebate": true
+                          "rebate": true,
+                          "measureUnit": "KWH"
                         }
                       ],
                       "rate": 44,
@@ -50316,10 +50316,10 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Globird Energy",
-              "planId": "GLO1127619MRE1",
+              "planId": "GLO1127619MRE2",
               "retailerCode": "GLO"
             },
-            "planType": "E#R#GLO1127619MRE1",
+            "planType": "E#R#GLO1127619MRE2",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -50395,8 +50395,8 @@
                         "singleTariffRates": [
                           {
                             "unitPrice": 1,
-                            "measureUnit": "KWH",
-                            "rebate": true
+                            "rebate": true,
+                            "measureUnit": "KWH"
                           }
                         ],
                         "rate": 1,
@@ -50411,8 +50411,8 @@
                         "singleTariffRates": [
                           {
                             "unitPrice": 44,
-                            "measureUnit": "KWH",
-                            "rebate": true
+                            "rebate": true,
+                            "measureUnit": "KWH"
                           }
                         ],
                         "rate": 44,
@@ -50562,7 +50562,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1127540,
+                "batchId": 1138113,
                 "retailerId": "898484",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -50572,12 +50572,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Globird Energy",
-                "planId": "GLO1127619MRE1",
+                "planId": "GLO1127619MRE2",
                 "retailerCode": "GLO",
                 "state": "SA",
-                "effectiveDate": "2026-07-01"
+                "effectiveDate": "2026-07-03"
               },
-              "planId": "GLO1127619MRE1",
+              "planId": "GLO1127619MRE2",
               "postcodes": {
                 "5097": 1
               }
@@ -50593,7 +50593,7 @@
         }
       },
       {
-        "plan_id": "GLO1127621MRE1",
+        "plan_id": "GLO1127621MRE2",
         "plan_name": "GLOSAVE Residential (Flexible RESELE)-SAPN",
         "retailer_name": "Globird Energy",
         "plan_type": "TOU",
@@ -50707,7 +50707,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "GLO1127621MRE1",
+            "planId": "GLO1127621MRE2",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -50720,8 +50720,8 @@
                       "singleTariffRates": [
                         {
                           "unitPrice": 1,
-                          "measureUnit": "KWH",
-                          "rebate": true
+                          "rebate": true,
+                          "measureUnit": "KWH"
                         }
                       ],
                       "rate": 1,
@@ -50735,8 +50735,8 @@
                       "singleTariffRates": [
                         {
                           "unitPrice": 44,
-                          "measureUnit": "KWH",
-                          "rebate": true
+                          "rebate": true,
+                          "measureUnit": "KWH"
                         }
                       ],
                       "rate": 44,
@@ -50828,10 +50828,10 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Globird Energy",
-              "planId": "GLO1127621MRE1",
+              "planId": "GLO1127621MRE2",
               "retailerCode": "GLO"
             },
-            "planType": "E#R#GLO1127621MRE1",
+            "planType": "E#R#GLO1127621MRE2",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -50907,8 +50907,8 @@
                         "singleTariffRates": [
                           {
                             "unitPrice": 1,
-                            "measureUnit": "KWH",
-                            "rebate": true
+                            "rebate": true,
+                            "measureUnit": "KWH"
                           }
                         ],
                         "rate": 1,
@@ -50923,8 +50923,8 @@
                         "singleTariffRates": [
                           {
                             "unitPrice": 44,
-                            "measureUnit": "KWH",
-                            "rebate": true
+                            "rebate": true,
+                            "measureUnit": "KWH"
                           }
                         ],
                         "rate": 44,
@@ -51077,7 +51077,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1127540,
+                "batchId": 1138113,
                 "retailerId": "898484",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -51087,12 +51087,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Globird Energy",
-                "planId": "GLO1127621MRE1",
+                "planId": "GLO1127621MRE2",
                 "retailerCode": "GLO",
                 "state": "SA",
-                "effectiveDate": "2026-07-01"
+                "effectiveDate": "2026-07-03"
               },
-              "planId": "GLO1127621MRE1",
+              "planId": "GLO1127621MRE2",
               "postcodes": {
                 "5097": 1
               }
@@ -51108,7 +51108,7 @@
         }
       },
       {
-        "plan_id": "GLO1127625MRE1",
+        "plan_id": "GLO1127625MRE2",
         "plan_name": "ULTRASAVE Residential (Flexible Rate)-SAPN",
         "retailer_name": "Globird Energy",
         "plan_type": "TOU",
@@ -51222,7 +51222,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "GLO1127625MRE1",
+            "planId": "GLO1127625MRE2",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -51235,8 +51235,8 @@
                       "singleTariffRates": [
                         {
                           "unitPrice": 1,
-                          "measureUnit": "KWH",
-                          "rebate": true
+                          "rebate": true,
+                          "measureUnit": "KWH"
                         }
                       ],
                       "rate": 1,
@@ -51250,8 +51250,8 @@
                       "singleTariffRates": [
                         {
                           "unitPrice": 44,
-                          "measureUnit": "KWH",
-                          "rebate": true
+                          "rebate": true,
+                          "measureUnit": "KWH"
                         }
                       ],
                       "rate": 44,
@@ -51340,10 +51340,10 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Globird Energy",
-              "planId": "GLO1127625MRE1",
+              "planId": "GLO1127625MRE2",
               "retailerCode": "GLO"
             },
-            "planType": "E#R#GLO1127625MRE1",
+            "planType": "E#R#GLO1127625MRE2",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -51419,8 +51419,8 @@
                         "singleTariffRates": [
                           {
                             "unitPrice": 1,
-                            "measureUnit": "KWH",
-                            "rebate": true
+                            "rebate": true,
+                            "measureUnit": "KWH"
                           }
                         ],
                         "rate": 1,
@@ -51435,8 +51435,8 @@
                         "singleTariffRates": [
                           {
                             "unitPrice": 44,
-                            "measureUnit": "KWH",
-                            "rebate": true
+                            "rebate": true,
+                            "measureUnit": "KWH"
                           }
                         ],
                         "rate": 44,
@@ -51586,7 +51586,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1127540,
+                "batchId": 1138113,
                 "retailerId": "898484",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -51596,12 +51596,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Globird Energy",
-                "planId": "GLO1127625MRE1",
+                "planId": "GLO1127625MRE2",
                 "retailerCode": "GLO",
                 "state": "SA",
-                "effectiveDate": "2026-07-01"
+                "effectiveDate": "2026-07-03"
               },
-              "planId": "GLO1127625MRE1",
+              "planId": "GLO1127625MRE2",
               "postcodes": {
                 "5097": 1
               }
@@ -51617,7 +51617,7 @@
         }
       },
       {
-        "plan_id": "GLO1127656MRE1",
+        "plan_id": "GLO1127656MRE2",
         "plan_name": "FOUR4FREE Residential (Flexible Rate)-SAPN",
         "retailer_name": "Globird Energy",
         "plan_type": "TOU",
@@ -51739,7 +51739,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "GLO1127656MRE1",
+            "planId": "GLO1127656MRE2",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -51892,10 +51892,10 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Globird Energy",
-              "planId": "GLO1127656MRE1",
+              "planId": "GLO1127656MRE2",
               "retailerCode": "GLO"
             },
-            "planType": "E#R#GLO1127656MRE1",
+            "planType": "E#R#GLO1127656MRE2",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -52174,7 +52174,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1127650,
+                "batchId": 1138113,
                 "retailerId": "898484",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -52184,12 +52184,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Globird Energy",
-                "planId": "GLO1127656MRE1",
+                "planId": "GLO1127656MRE2",
                 "retailerCode": "GLO",
                 "state": "SA",
-                "effectiveDate": "2026-07-01"
+                "effectiveDate": "2026-07-03"
               },
-              "planId": "GLO1127656MRE1",
+              "planId": "GLO1127656MRE2",
               "postcodes": {
                 "5097": 1
               }
@@ -52205,7 +52205,7 @@
         }
       },
       {
-        "plan_id": "GLO1127666MRE1",
+        "plan_id": "GLO1127666MRE2",
         "plan_name": "ZEROHERO VPP Residential (Flexible Rate)-SAPN",
         "retailer_name": "Globird Energy",
         "plan_type": "TOU",
@@ -52327,7 +52327,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "GLO1127666MRE1",
+            "planId": "GLO1127666MRE2",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -52499,10 +52499,10 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Globird Energy",
-              "planId": "GLO1127666MRE1",
+              "planId": "GLO1127666MRE2",
               "retailerCode": "GLO"
             },
-            "planType": "E#R#GLO1127666MRE1",
+            "planType": "E#R#GLO1127666MRE2",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -52803,7 +52803,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1127650,
+                "batchId": 1138113,
                 "retailerId": "898484",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -52813,12 +52813,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Globird Energy",
-                "planId": "GLO1127666MRE1",
+                "planId": "GLO1127666MRE2",
                 "retailerCode": "GLO",
                 "state": "SA",
-                "effectiveDate": "2026-07-01"
+                "effectiveDate": "2026-07-03"
               },
-              "planId": "GLO1127666MRE1",
+              "planId": "GLO1127666MRE2",
               "postcodes": {
                 "5097": 1
               }
@@ -52834,7 +52834,7 @@
         }
       },
       {
-        "plan_id": "GLO1127709SRE1",
+        "plan_id": "GLO1127709SRE2",
         "plan_name": "Resi Standing Offer Prices (Flex Rate)-SAPN",
         "retailer_name": "Globird Energy",
         "plan_type": "TOU",
@@ -52943,7 +52943,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "GLO1127709SRE1",
+            "planId": "GLO1127709SRE2",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -53032,8 +53032,7 @@
                   ],
                   "fuelType": "E",
                   "meterType": [
-                    "Type 4",
-                    "Type 5"
+                    "Type 4"
                   ],
                   "paymentOption": [
                     "P",
@@ -53048,10 +53047,10 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Globird Energy",
-              "planId": "GLO1127709SRE1",
+              "planId": "GLO1127709SRE2",
               "retailerCode": "GLO"
             },
-            "planType": "E#R#GLO1127709SRE1",
+            "planType": "E#R#GLO1127709SRE2",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -53255,8 +53254,7 @@
                       }
                     ],
                     "meterType": [
-                      "Type 4",
-                      "Type 5"
+                      "Type 4"
                     ],
                     "paymentOption": [
                       "P",
@@ -53275,7 +53273,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1127707,
+                "batchId": 1138113,
                 "retailerId": "898484",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -53286,12 +53284,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Globird Energy",
-                "planId": "GLO1127709SRE1",
+                "planId": "GLO1127709SRE2",
                 "retailerCode": "GLO",
                 "state": "SA",
-                "effectiveDate": "2026-07-01"
+                "effectiveDate": "2026-07-03"
               },
-              "planId": "GLO1127709SRE1",
+              "planId": "GLO1127709SRE2",
               "postcodes": {
                 "5097": 1
               }
@@ -53307,8 +53305,8 @@
         }
       },
       {
-        "plan_id": "GLO1128316SRE1",
-        "plan_name": "Resi Standing Offer Prices (Solar Sharer Offer)-SAPN",
+        "plan_id": "GLO1128316SRE2",
+        "plan_name": "Resi Standing Offer (Solar Sharer Offer)-SAPN",
         "retailer_name": "Globird Energy",
         "plan_type": "TOU",
         "tariff_type": "TOU",
@@ -53451,7 +53449,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "GLO1128316SRE1",
+            "planId": "GLO1128316SRE2",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -53550,8 +53548,7 @@
                   ],
                   "fuelType": "E",
                   "meterType": [
-                    "Type 4",
-                    "Type 5"
+                    "Type 4"
                   ],
                   "paymentOption": [
                     "P",
@@ -53561,15 +53558,15 @@
                   ]
                 }
               ],
-              "planName": "Resi Standing Offer Prices (Solar Sharer Offer)-SAPN",
+              "planName": "Resi Standing Offer (Solar Sharer Offer)-SAPN",
               "retailerId": "898484",
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Globird Energy",
-              "planId": "GLO1128316SRE1",
+              "planId": "GLO1128316SRE2",
               "retailerCode": "GLO"
             },
-            "planType": "E#R#GLO1128316SRE1",
+            "planType": "E#R#GLO1128316SRE2",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -53798,8 +53795,7 @@
                       }
                     ],
                     "meterType": [
-                      "Type 4",
-                      "Type 5"
+                      "Type 4"
                     ],
                     "paymentOption": [
                       "P",
@@ -53810,7 +53806,7 @@
                     "isFixed": false
                   }
                 ],
-                "planName": "Resi Standing Offer Prices (Solar Sharer Offer)-SAPN",
+                "planName": "Resi Standing Offer (Solar Sharer Offer)-SAPN",
                 "planStatus": "PUBLISHED",
                 "supplyArea": [
                   {
@@ -53818,7 +53814,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1128314,
+                "batchId": 1138113,
                 "retailerId": "898484",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -53829,12 +53825,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Globird Energy",
-                "planId": "GLO1128316SRE1",
+                "planId": "GLO1128316SRE2",
                 "retailerCode": "GLO",
                 "state": "SA",
-                "effectiveDate": "2026-07-02"
+                "effectiveDate": "2026-07-03"
               },
-              "planId": "GLO1128316SRE1",
+              "planId": "GLO1128316SRE2",
               "postcodes": {
                 "5097": 1
               }
