@@ -2,7 +2,7 @@
   "metadata": {
     "postcode": "5097",
     "total_plans": 156,
-    "filtered_out": 393,
+    "filtered_out": 395,
     "extraction_date": "2025-06-26",
     "tou_count": 156,
     "sr_count": 0,
@@ -27733,7 +27733,79 @@
         "shoulder_cost": 32.550540000000005,
         "off_peak_cost": 17.04307,
         "daily_supply_charge": 180.0502,
-        "detailed_time_blocks": [],
+        "detailed_time_blocks": [
+          {
+            "name": "Peak",
+            "description": "Between 6am to 10am and 4pm to 12am",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "0600",
+                "end_time": "0959"
+              },
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "1600",
+                "end_time": "2359"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 51.1107,
+                "unit_price_gst": 56.22177000000001,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Off-peak",
+            "description": "Between 12am and 6am",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "0000",
+                "end_time": "0559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 29.5914,
+                "unit_price_gst": 32.550540000000005,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Shoulder",
+            "description": "Between 10am and 4pm",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "1000",
+                "end_time": "1559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 15.4937,
+                "unit_price_gst": 17.04307,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
         "fees": {
           "move_in_new_connection_fee": 63.71,
           "paper_bill_fee": 1.69,
@@ -28004,7 +28076,286 @@
               }
             }
           },
-          "detailed_api_response": null
+          "detailed_api_response": {
+            "data": {
+              "planData": {
+                "planType": "M",
+                "tariffType": "TOU",
+                "contract": [
+                  {
+                    "pricingModel": "TOU",
+                    "benefitPeriod": "1 Year",
+                    "coolingOffDays": 10,
+                    "solarFit": [
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "OTHER",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 3,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 3,
+                        "displayName": "Retailer Feed-in-Tariff",
+                        "description": "EnergyAustralia Retailer Feed-in-Tariff (excl. GST if any)",
+                        "type": "R",
+                        "singleTariffPeriod": "P1Y"
+                      },
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "OTHER",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 44,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 44,
+                        "displayName": "Government Regulated Feed-in-Tariff",
+                        "description": "Solar Feed-In Scheme pre 31/08/2010",
+                        "type": "G",
+                        "singleTariffPeriod": "P1Y"
+                      },
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "OTHER",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 44,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 44,
+                        "displayName": "Government Regulated Feed-in-Tariff",
+                        "description": "Solar Feed-In Scheme pre 30/09/2011, first 45kWh per day",
+                        "type": "G",
+                        "singleTariffPeriod": "P1Y"
+                      }
+                    ],
+                    "additionalFeeInformation": "Additional fees and charges may apply. Please refer to www.energyaustralia.com.au/conditions-and-pricing/other-charges. You can avoid the payment processing fees by paying from your bank account using direct debit or BPay.",
+                    "networkTariffCode": [
+                      "RTOU",
+                      "RTOUNE"
+                    ],
+                    "fee": [
+                      {
+                        "description": "Disconnection fee may apply when vacating your property and disconnecting electricity to your property (or reading your meter where applicable). Fees may vary and see additional fee information for more details.",
+                        "amount": 63.71,
+                        "feeType": "DiscoF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "Reconnection fee may apply when moving into your property and connecting electricity to your property (or reading your meter where applicable). Fees may vary and see additional fee information for details.",
+                        "amount": 63.71,
+                        "feeType": "RecoF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "Connection fee may apply when moving into your property and connecting electricity to your property (or reading your meter where applicable). Fees may vary and see additional fee information for details.",
+                        "amount": 63.71,
+                        "feeType": "ConnF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "Credit card merchant service fee of 0.36% for all payments with Visa or Mastercard.",
+                        "feeType": "CCF",
+                        "percent": 0.36,
+                        "feeTerm": "P"
+                      },
+                      {
+                        "description": "Credit card merchant service fee of 1.5% for all payments with American Express.",
+                        "feeType": "CCF",
+                        "percent": 1.5,
+                        "feeTerm": "P"
+                      },
+                      {
+                        "description": "$12.00 (GST does not currently apply to late payment fees).",
+                        "amount": 12,
+                        "feeType": "LPF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "Incl. GST. Refer to www.energyaustralia.com.au/home/help-and-support/faqs/paper-bill-fee for details.",
+                        "amount": 1.69,
+                        "feeType": "PBF",
+                        "feeTerm": "F"
+                      }
+                    ],
+                    "termType": "E",
+                    "discount": [
+                      {
+                        "name": "Guaranteed discount",
+                        "description": "Discount applies to market energy charges, and not to fees and other charges such as late payment fees or GreenPower.",
+                        "discountPercent": 7,
+                        "type": "U",
+                        "category": "O",
+                        "method": "B"
+                      }
+                    ],
+                    "networkTariffType": "PT",
+                    "tariffPeriod": [
+                      {
+                        "name": "All year",
+                        "touBlock": [
+                          {
+                            "name": "Peak",
+                            "description": "Between 6am to 10am and 4pm to 12am",
+                            "blockRate": [
+                              {
+                                "unitPrice": 51.1107,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "P",
+                            "timeOfUse": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "0600",
+                                "endTime": "0959"
+                              },
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "1600",
+                                "endTime": "2359"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Off-peak",
+                            "description": "Between 12am and 6am",
+                            "blockRate": [
+                              {
+                                "unitPrice": 29.5914,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "OP",
+                            "timeOfUse": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "0000",
+                                "endTime": "0559"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Shoulder",
+                            "description": "Between 10am and 4pm",
+                            "blockRate": [
+                              {
+                                "unitPrice": 15.4937,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "S",
+                            "timeOfUse": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "1000",
+                                "endTime": "1559"
+                              }
+                            ]
+                          }
+                        ],
+                        "endDate": "2024-06-30",
+                        "blockPeriod": "P1D",
+                        "dailySupplyCharge": 163.682,
+                        "startDate": "2023-07-01"
+                      }
+                    ],
+                    "variation": "Prices may be varied in line with your terms and conditions. We will give you notice before any new prices take effect.",
+                    "onExpiry": "The Benefit Period for this plan is 12 months. We will provide you with notice of your options prior to the end of the Benefit Period. Your contract will continue until it is ended by either party.",
+                    "greenCharge": [
+                      {
+                        "name": "GreenPower 30%",
+                        "chargeType": "A",
+                        "description": "GreenPower 30% = $0.0495 x (30% x total usage)",
+                        "option": [
+                          {
+                            "pctGreenPower": 30,
+                            "chargeAmount": 0.0495
+                          }
+                        ]
+                      },
+                      {
+                        "name": "GreenPower 100%",
+                        "chargeType": "A",
+                        "description": "GreenPower 100% = $0.0495 per kWh",
+                        "option": [
+                          {
+                            "pctGreenPower": 100,
+                            "chargeAmount": 0.0495
+                          }
+                        ]
+                      }
+                    ],
+                    "incentive": [
+                      {
+                        "name": "PowerResponse program rebate",
+                        "description": "You may be eligible for our PowerResponse program, and by participating in events, you may be eligible for rebates which may change over time. See website energyaustralia.com.au/power-response for details on eligibility criteria, T&C's and rebates."
+                      }
+                    ],
+                    "fuelType": "E",
+                    "terms": "Please refer to our website www.energyaustralia.com.au for full terms and conditions.",
+                    "timeDefinition": "LOCAL",
+                    "billFrequency": [
+                      {
+                        "number": 3,
+                        "period": "M"
+                      }
+                    ],
+                    "meterType": [
+                      "Type 4",
+                      "Type 4a",
+                      "Type 5"
+                    ],
+                    "paymentOption": [
+                      "P",
+                      "DD",
+                      "BP",
+                      "CC",
+                      "CP"
+                    ],
+                    "isFixed": false
+                  }
+                ],
+                "planName": "Flexi Plan",
+                "planStatus": "PUBLISHED",
+                "supplyArea": [
+                  {
+                    "name": "SA Power Networks",
+                    "id": "42"
+                  }
+                ],
+                "batchId": 1064394,
+                "retailerId": "9637",
+                "distributor": "SA Power Networks",
+                "genAvailable": true,
+                "tags": [
+                  "SE_BP2H_SA_T7",
+                  "BP2H",
+                  "SA",
+                  "T7",
+                  "RESI"
+                ],
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "EnergyAustralia",
+                "planId": "ENE379838MRE23",
+                "retailerCode": "ENE",
+                "state": "SA",
+                "effectiveDate": "2026-07-01"
+              },
+              "planId": "ENE379838MRE23",
+              "postcodes": {
+                "5097": 1
+              }
+            }
+          }
         },
         "raw_plan_data": {
           "eligibility_restrictions": false,
@@ -49673,7 +50024,84 @@
         "shoulder_cost": 31.900000000000002,
         "off_peak_cost": 31.900000000000002,
         "daily_supply_charge": 170.5,
-        "detailed_time_blocks": [],
+        "detailed_time_blocks": [
+          {
+            "name": "Peak Usage",
+            "description": "Peak Usage",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "1500",
+                "end_time": "2359"
+              },
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "0000",
+                "end_time": "0059"
+              },
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "0600",
+                "end_time": "0959"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 47.2,
+                "unit_price_gst": 51.92000000000001,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Off Peak Usage",
+            "description": "Off Peak Usage",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "0100",
+                "end_time": "0559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 29,
+                "unit_price_gst": 31.900000000000002,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Shoulder Usage",
+            "description": "Shoulder Usage",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "1000",
+                "end_time": "1459"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 29,
+                "unit_price_gst": 31.900000000000002,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
         "fees": {
           "move_in_new_connection_fee": 66.54,
           "paper_bill_fee": null,
@@ -49879,7 +50307,210 @@
               }
             }
           },
-          "detailed_api_response": null
+          "detailed_api_response": {
+            "data": {
+              "planData": {
+                "planType": "M",
+                "tariffType": "TOU",
+                "contract": [
+                  {
+                    "pricingModel": "TOU",
+                    "coolingOffDays": 10,
+                    "solarFit": [
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "OTHER",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 1,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 1,
+                        "displayName": "Single Stepped Rate Solar FiT",
+                        "description": "GloBird Retailer Feed-in-Tariff (incl. GST if any)",
+                        "type": "R",
+                        "singleTariffPeriod": "P1Y"
+                      },
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "PREMIUM",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 44,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 44,
+                        "displayName": "Single Rate Solar FiT",
+                        "description": "GloBird currently pay 44.00 cents per kWh solar feed-in (inc. GST if any).",
+                        "type": "G",
+                        "singleTariffPeriod": "P1Y"
+                      }
+                    ],
+                    "additionalFeeInformation": "Additional fees and charges may apply, please see: https://www.globirdenergy.com.au/legal/fees/",
+                    "fee": [
+                      {
+                        "description": "Connection fee incl GST. Fees can vary for meter type, location or other factors. All fees here www.globirdenergy.com.au/fees",
+                        "amount": 66.54,
+                        "feeType": "ConnF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "Disconnection fee incl. GST. Fees can vary for meter type, location or other factors. All fees here www.globirdenergy.com.au/fees",
+                        "amount": 66.54,
+                        "feeType": "DiscoF",
+                        "feeTerm": "F"
+                      }
+                    ],
+                    "termType": "N",
+                    "discount": [
+                      {
+                        "name": "Direct Debit Discount",
+                        "description": "You will receive 1% discount off Usage & Supply charges when you pay your bill on-time by direct debit",
+                        "discountPercent": 1,
+                        "type": "C",
+                        "category": "D",
+                        "method": "B"
+                      },
+                      {
+                        "name": "Pay-on-time Discount",
+                        "description": "You will receive 2% discount off Usage & Supply charges when you pay your bill on-time",
+                        "discountPercent": 2,
+                        "type": "C",
+                        "category": "P",
+                        "method": "B"
+                      }
+                    ],
+                    "networkTariffType": "IS",
+                    "tariffPeriod": [
+                      {
+                        "touBlock": [
+                          {
+                            "name": "Peak Usage",
+                            "description": "Peak Usage",
+                            "blockRate": [
+                              {
+                                "unitPrice": 47.2,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "P",
+                            "timeOfUse": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "1500",
+                                "endTime": "2359"
+                              },
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "0000",
+                                "endTime": "0059"
+                              },
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "0600",
+                                "endTime": "0959"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Off Peak Usage",
+                            "description": "Off Peak Usage",
+                            "blockRate": [
+                              {
+                                "unitPrice": 29,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "OP",
+                            "timeOfUse": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "0100",
+                                "endTime": "0559"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Shoulder Usage",
+                            "description": "Shoulder Usage",
+                            "blockRate": [
+                              {
+                                "unitPrice": 29,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "S",
+                            "timeOfUse": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "1000",
+                                "endTime": "1459"
+                              }
+                            ]
+                          }
+                        ],
+                        "endDate": "2027-06-30",
+                        "blockPeriod": "P1D",
+                        "dailySupplyCharge": 155,
+                        "startDate": "2026-07-01"
+                      }
+                    ],
+                    "variation": "We may update your solar feed-in, or your rates from time to time. We'll always notify you in writing prior to any change.",
+                    "fuelType": "E",
+                    "terms": "This offer is for SA residential customers without an eligible smart meter and with an applicable network tariff. Please visit www.globirdenergy.com.au for full terms and conditions or call us on 133456.",
+                    "timeDefinition": "LOCAL",
+                    "billFrequency": [
+                      {
+                        "number": 3,
+                        "period": "M"
+                      }
+                    ],
+                    "meterType": [
+                      "Type 4a",
+                      "Type 5"
+                    ],
+                    "paymentOption": [
+                      "P",
+                      "DD",
+                      "CC",
+                      "BP"
+                    ],
+                    "isFixed": false
+                  }
+                ],
+                "planName": "ULTRASAVE Residential (Flexible Rate)-SAPN",
+                "planStatus": "PUBLISHED",
+                "supplyArea": [
+                  {
+                    "name": "SA Power Networks",
+                    "id": "42"
+                  }
+                ],
+                "batchId": 1138113,
+                "retailerId": "898484",
+                "distributor": "SA Power Networks",
+                "genAvailable": true,
+                "tags": [
+                  "544_1276_208_3_NN"
+                ],
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "Globird Energy",
+                "planId": "GLO1127625MRE2",
+                "retailerCode": "GLO",
+                "state": "SA",
+                "effectiveDate": "2026-07-03"
+              },
+              "planId": "GLO1127625MRE2",
+              "postcodes": {
+                "5097": 1
+              }
+            }
+          }
         },
         "raw_plan_data": {
           "eligibility_restrictions": false,
@@ -80026,7 +80657,52 @@
         "shoulder_cost": 4.499990000000001,
         "off_peak_cost": null,
         "daily_supply_charge": 194.44700000000003,
-        "detailed_time_blocks": [],
+        "detailed_time_blocks": [
+          {
+            "name": "Peak",
+            "description": "6am-12am",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "0600",
+                "end_time": "2359"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 41.14,
+                "unit_price_gst": 45.254000000000005,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Off Peak",
+            "description": "12am-6am",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "0000",
+                "end_time": "0559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 4.0909,
+                "unit_price_gst": 4.499990000000001,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
         "fees": {
           "move_in_new_connection_fee": 66.54,
           "paper_bill_fee": null,
@@ -80239,7 +80915,211 @@
               }
             }
           },
-          "detailed_api_response": null
+          "detailed_api_response": {
+            "data": {
+              "planData": {
+                "planType": "M",
+                "tariffType": "TOU",
+                "contract": [
+                  {
+                    "pricingModel": "TOU",
+                    "coolingOffDays": 10,
+                    "solarFit": [
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "OTHER",
+                        "endDate": "2024-06-30",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 1,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 1,
+                        "displayName": "FiT",
+                        "description": "OVO Energy Retailer Feed-in-Tariff (exclusive of GST)",
+                        "type": "R",
+                        "singleTariffPeriod": "P1Y",
+                        "startDate": "2023-07-01"
+                      },
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "PREMIUM",
+                        "endDate": "2024-06-30",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 44,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 44,
+                        "displayName": "Government FiT",
+                        "description": "Government feed-in tariffs available for eligible customers. Contact retailer for details",
+                        "type": "G",
+                        "singleTariffPeriod": "P1Y",
+                        "startDate": "2023-07-01"
+                      }
+                    ],
+                    "additionalFeeInformation": "OVO Energy reserves the right to and will notify you if it changes or imposes additional fees or charges in relation to your energy supply. Please refer to www.ovoenergy.com.au/fees for more information.",
+                    "networkTariffCode": [
+                      "RSR",
+                      "GEN2016",
+                      "GENR2016",
+                      "XGEN",
+                      "XGENR",
+                      "ZGENR"
+                    ],
+                    "fee": [
+                      {
+                        "description": "Connection fee - Site Visit (inc GST). Fees may vary for some customers.",
+                        "amount": 66.54,
+                        "feeType": "ConnF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "A fee (inc GST) may be charged for disconnection when you move out of your property. Fees may vary for some customers.",
+                        "amount": 66.54,
+                        "feeType": "DiscoF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "Other fees may apply. Please refer to www.ovoenergy.com.au/fees.",
+                        "amount": 0,
+                        "feeType": "OF",
+                        "feeTerm": "F"
+                      }
+                    ],
+                    "termType": "N",
+                    "networkTariffType": "PT",
+                    "tariffPeriod": [
+                      {
+                        "name": "All-Year",
+                        "touBlock": [
+                          {
+                            "name": "Peak",
+                            "description": "6am-12am",
+                            "blockRate": [
+                              {
+                                "unitPrice": 41.14,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "P",
+                            "timeOfUse": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "0600",
+                                "endTime": "2359"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Off Peak",
+                            "description": "12am-6am",
+                            "blockRate": [
+                              {
+                                "unitPrice": 4.0909,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "OP",
+                            "timeOfUse": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "0000",
+                                "endTime": "0559"
+                              }
+                            ]
+                          }
+                        ],
+                        "endDate": "2019-06-30",
+                        "blockPeriod": "P1D",
+                        "dailySupplyCharge": 176.77,
+                        "startDate": "2019-07-01"
+                      }
+                    ],
+                    "variation": "OVO Energy may vary the rates at any time in accordance with the terms and conditions available at www.ovoenergy.com.au/terms.",
+                    "onExpiry": "Ongoing contract with no contract term",
+                    "greenCharge": [
+                      {
+                        "name": "100% GreenPower",
+                        "chargeType": "A",
+                        "description": "100% GreenPower for 2.2 c/kWh inc. GST.",
+                        "option": [
+                          {
+                            "pctGreenPower": 100,
+                            "chargeAmount": 0.022
+                          }
+                        ]
+                      }
+                    ],
+                    "incentive": [
+                      {
+                        "name": "EV Off-Peak",
+                        "description": "$0.045/kWh usage charge between midnight and 6am. Does not apply to controlled loads. For more information head to www.ovoenergy.com.au/electric-vehicles/"
+                      },
+                      {
+                        "name": "Interest Rewards",
+                        "description": "OVO pay 3% interest on credit balances (after all monthly charges are considered). This is prorated for the number of days since your last bill."
+                      }
+                    ],
+                    "fuelType": "E",
+                    "terms": "OVO Energy's terms and conditions are available at www.ovoenergy.com.au/terms.",
+                    "timeDefinition": "LOCAL",
+                    "billFrequency": [
+                      {
+                        "number": 1,
+                        "period": "M"
+                      }
+                    ],
+                    "meterType": [
+                      "Type 4",
+                      "Type 4a"
+                    ],
+                    "paymentOption": [
+                      "DD"
+                    ],
+                    "eligibilityRestriction": [
+                      {
+                        "type": "OC",
+                        "description": "Must own an electric vehicle.",
+                        "information": "Electric Vehicle requirement"
+                      }
+                    ],
+                    "isFixed": false
+                  }
+                ],
+                "planName": "The EV Plan",
+                "planStatus": "PUBLISHED",
+                "supplyArea": [
+                  {
+                    "name": "SA Power Networks",
+                    "id": "42"
+                  }
+                ],
+                "batchId": 1124984,
+                "retailerId": "1085327",
+                "distributor": "SA Power Networks",
+                "genAvailable": true,
+                "tags": [
+                  "MO_V_EVPlan_SR_SAPOWER_JUL2026"
+                ],
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "OVO Energy",
+                "planId": "OVO723777MRE21",
+                "retailerCode": "OVO",
+                "state": "SA",
+                "effectiveDate": "2026-07-01"
+              },
+              "planId": "OVO723777MRE21",
+              "postcodes": {
+                "5097": 1
+              }
+            }
+          }
         },
         "raw_plan_data": {
           "eligibility_restrictions": true,
