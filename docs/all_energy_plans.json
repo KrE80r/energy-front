@@ -1,10 +1,10 @@
 {
   "metadata": {
     "postcode": "5097",
-    "total_plans": 154,
-    "filtered_out": 396,
+    "total_plans": 157,
+    "filtered_out": 398,
     "extraction_date": "2025-06-26",
-    "tou_count": 154,
+    "tou_count": 157,
     "sr_count": 0,
     "other_count": 0,
     "filters_applied": "Excluded tariff types: SR, SRCL, TOUCL",
@@ -44828,17 +44828,17 @@
         }
       },
       {
-        "plan_id": "FP11143391MRE1",
+        "plan_id": "FP11144131MRE1",
         "plan_name": "Happy Hour",
         "retailer_name": "Flow Power",
         "plan_type": "TOU",
         "tariff_type": "TOU",
-        "monthly_cost": 380,
-        "quarterly_cost": 1360,
-        "annual_cost": 4570,
+        "monthly_cost": 390,
+        "quarterly_cost": 1390,
+        "annual_cost": 4660,
         "peak_cost": 48.64101,
         "shoulder_cost": 48.64101,
-        "off_peak_cost": 39.567515900000004,
+        "off_peak_cost": 48.64101,
         "daily_supply_charge": 250.27288000000004,
         "detailed_time_blocks": [
           {
@@ -44903,8 +44903,8 @@
             ],
             "rates": [
               {
-                "unit_price": 35.970469,
-                "unit_price_gst": 39.567515900000004,
+                "unit_price": 44.2191,
+                "unit_price_gst": 48.64101,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -44926,7 +44926,7 @@
           "late_payment_fee": null,
           "disconnection_fee_move_out": null,
           "disconnection_fee_non_payment": null,
-          "reconnection_fee": 66.539,
+          "reconnection_fee": 66.54,
           "other_fees": [],
           "credit_card_payment_fees": [],
           "membership_fee": null
@@ -44940,7 +44940,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "FP11143391MRE1",
+            "planId": "FP11144131MRE1",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -45036,12 +45036,12 @@
                   ],
                   "fee": [
                     {
-                      "amount": 66.539,
+                      "amount": 66.54,
                       "feeType": "RecoF",
                       "feeTerm": "F"
                     },
                     {
-                      "amount": 66.539,
+                      "amount": 66.54,
                       "feeType": "DiscoF",
                       "feeTerm": "F"
                     },
@@ -45075,7 +45075,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 35.970469,
+                              "unitPrice": 44.2191,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -45104,7 +45104,7 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Flow Power",
-              "planId": "FP11143391MRE1",
+              "planId": "FP11144131MRE1",
               "retailerCode": "FP1",
               "meteringCost": [
                 {
@@ -45113,16 +45113,16 @@
                 }
               ]
             },
-            "planType": "E#R#FP11143391MRE1",
+            "planType": "E#R#FP11144131MRE1",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
                   "small": {
                     "quarterly": {
-                      "noDiscounts": 690,
-                      "allDiscounts": 690,
-                      "guaranteedDiscount": 690
+                      "noDiscounts": 700,
+                      "allDiscounts": 700,
+                      "guaranteedDiscount": 700
                     },
                     "monthly": {
                       "noDiscounts": 190,
@@ -45130,33 +45130,33 @@
                       "guaranteedDiscount": 190
                     },
                     "yearly": {
-                      "noDiscounts": 2300,
-                      "allDiscounts": 2300,
-                      "guaranteedDiscount": 2300
+                      "noDiscounts": 2330,
+                      "allDiscounts": 2330,
+                      "guaranteedDiscount": 2330
                     }
                   },
                   "large": {
                     "quarterly": {
-                      "noDiscounts": 1360,
-                      "allDiscounts": 1360,
-                      "guaranteedDiscount": 1360
+                      "noDiscounts": 1390,
+                      "allDiscounts": 1390,
+                      "guaranteedDiscount": 1390
                     },
                     "monthly": {
-                      "noDiscounts": 380,
-                      "allDiscounts": 380,
-                      "guaranteedDiscount": 380
+                      "noDiscounts": 390,
+                      "allDiscounts": 390,
+                      "guaranteedDiscount": 390
                     },
                     "yearly": {
-                      "noDiscounts": 4570,
-                      "allDiscounts": 4570,
-                      "guaranteedDiscount": 4570
+                      "noDiscounts": 4660,
+                      "allDiscounts": 4660,
+                      "guaranteedDiscount": 4660
                     }
                   },
                   "medium": {
                     "quarterly": {
-                      "noDiscounts": 1020,
-                      "allDiscounts": 1020,
-                      "guaranteedDiscount": 1020
+                      "noDiscounts": 1040,
+                      "allDiscounts": 1040,
+                      "guaranteedDiscount": 1040
                     },
                     "monthly": {
                       "noDiscounts": 290,
@@ -45164,9 +45164,9 @@
                       "guaranteedDiscount": 290
                     },
                     "yearly": {
-                      "noDiscounts": 3430,
-                      "allDiscounts": 3430,
-                      "guaranteedDiscount": 3430
+                      "noDiscounts": 3490,
+                      "allDiscounts": 3490,
+                      "guaranteedDiscount": 3490
                     }
                   }
                 }
@@ -45178,7 +45178,7 @@
               "planData": {
                 "planType": "M",
                 "tariffType": "TOU",
-                "planRef": "Happy Hour Generally Available",
+                "planRef": "Flow Home Happy Hour",
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -45278,13 +45278,13 @@
                     "fee": [
                       {
                         "description": "Reconnection fee",
-                        "amount": 66.539,
+                        "amount": 66.54,
                         "feeType": "RecoF",
                         "feeTerm": "F"
                       },
                       {
                         "description": "Disconnection fee",
-                        "amount": 66.539,
+                        "amount": 66.54,
                         "feeType": "DiscoF",
                         "feeTerm": "F"
                       },
@@ -45346,7 +45346,7 @@
                             "description": "Shoulder",
                             "blockRate": [
                               {
-                                "unitPrice": 35.970469,
+                                "unitPrice": 44.2191,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -45411,7 +45411,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1143378,
+                "batchId": 1144129,
                 "retailerId": "24216",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -45422,19 +45422,19 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Flow Power",
-                "planId": "FP11143391MRE1",
+                "planId": "FP11144131MRE1",
                 "retailerCode": "FP1",
                 "state": "SA",
                 "effectiveDate": "2026-07-14",
                 "meteringCost": [
                   {
                     "name": "Metering Cost",
-                    "description": "Charges  may  vary, for more information, please visit the retailer's website flowpower.com.au/residential",
+                    "description": "Charges may vary, for more information, please visit the retailer's website flowpower.com.au/residential",
                     "min": "U"
                   }
                 ]
               },
-              "planId": "FP11143391MRE1",
+              "planId": "FP11144131MRE1",
               "postcodes": {
                 "5097": 1
               }
@@ -47094,16 +47094,16 @@
         }
       },
       {
-        "plan_id": "GLO1083232MRE3",
+        "plan_id": "GLO1083232MRE4",
         "plan_name": "WHOLESAVE Resi (Two Rate) estimate-SAPN",
         "retailer_name": "Globird Energy",
         "plan_type": "TOU",
         "tariff_type": "TOU",
-        "monthly_cost": 260,
-        "quarterly_cost": 920,
-        "annual_cost": 3080,
-        "peak_cost": 46.761,
-        "shoulder_cost": 19.228,
+        "monthly_cost": 240,
+        "quarterly_cost": 870,
+        "annual_cost": 2920,
+        "peak_cost": 41.987,
+        "shoulder_cost": 19.217,
         "off_peak_cost": null,
         "daily_supply_charge": 115.50000000000001,
         "detailed_time_blocks": [
@@ -47120,8 +47120,8 @@
             ],
             "rates": [
               {
-                "unit_price": 42.51,
-                "unit_price_gst": 46.761,
+                "unit_price": 38.17,
+                "unit_price_gst": 41.987,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -47147,8 +47147,8 @@
             ],
             "rates": [
               {
-                "unit_price": 17.48,
-                "unit_price_gst": 19.228,
+                "unit_price": 17.47,
+                "unit_price_gst": 19.217,
                 "measure_unit": "KWH",
                 "rate_type": null,
                 "start_usage": 0,
@@ -47182,7 +47182,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "GLO1083232MRE3",
+            "planId": "GLO1083232MRE4",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -47230,7 +47230,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 42.51,
+                              "unitPrice": 38.17,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -47238,7 +47238,7 @@
                         {
                           "blockRate": [
                             {
-                              "unitPrice": 17.48,
+                              "unitPrice": 17.47,
                               "measureUnit": "KWH"
                             }
                           ]
@@ -47273,19 +47273,19 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Globird Energy",
-              "planId": "GLO1083232MRE3",
+              "planId": "GLO1083232MRE4",
               "retailerCode": "GLO"
             },
-            "planType": "E#R#GLO1083232MRE3",
+            "planType": "E#R#GLO1083232MRE4",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
                   "small": {
                     "quarterly": {
-                      "noDiscounts": 480,
-                      "allDiscounts": 480,
-                      "guaranteedDiscount": 480
+                      "noDiscounts": 460,
+                      "allDiscounts": 460,
+                      "guaranteedDiscount": 460
                     },
                     "monthly": {
                       "noDiscounts": 130,
@@ -47293,33 +47293,33 @@
                       "guaranteedDiscount": 130
                     },
                     "yearly": {
-                      "noDiscounts": 1590,
-                      "allDiscounts": 1590,
-                      "guaranteedDiscount": 1590
+                      "noDiscounts": 1530,
+                      "allDiscounts": 1530,
+                      "guaranteedDiscount": 1530
                     }
                   },
                   "large": {
                     "quarterly": {
-                      "noDiscounts": 920,
-                      "allDiscounts": 920,
-                      "guaranteedDiscount": 920
+                      "noDiscounts": 870,
+                      "allDiscounts": 870,
+                      "guaranteedDiscount": 870
                     },
                     "monthly": {
-                      "noDiscounts": 260,
-                      "allDiscounts": 260,
-                      "guaranteedDiscount": 260
+                      "noDiscounts": 240,
+                      "allDiscounts": 240,
+                      "guaranteedDiscount": 240
                     },
                     "yearly": {
-                      "noDiscounts": 3080,
-                      "allDiscounts": 3080,
-                      "guaranteedDiscount": 3080
+                      "noDiscounts": 2920,
+                      "allDiscounts": 2920,
+                      "guaranteedDiscount": 2920
                     }
                   },
                   "medium": {
                     "quarterly": {
-                      "noDiscounts": 700,
-                      "allDiscounts": 700,
-                      "guaranteedDiscount": 700
+                      "noDiscounts": 660,
+                      "allDiscounts": 660,
+                      "guaranteedDiscount": 660
                     },
                     "monthly": {
                       "noDiscounts": 190,
@@ -47327,9 +47327,9 @@
                       "guaranteedDiscount": 190
                     },
                     "yearly": {
-                      "noDiscounts": 2330,
-                      "allDiscounts": 2330,
-                      "guaranteedDiscount": 2330
+                      "noDiscounts": 2220,
+                      "allDiscounts": 2220,
+                      "guaranteedDiscount": 2220
                     }
                   }
                 }
@@ -47394,7 +47394,7 @@
                             "description": "Peak Usage",
                             "blockRate": [
                               {
-                                "unitPrice": 42.51,
+                                "unitPrice": 38.17,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -47412,7 +47412,7 @@
                             "description": "Off Peak Usage",
                             "blockRate": [
                               {
-                                "unitPrice": 17.48,
+                                "unitPrice": 17.47,
                                 "measureUnit": "KWH"
                               }
                             ],
@@ -47475,7 +47475,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1138113,
+                "batchId": 1144021,
                 "retailerId": "898484",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -47485,12 +47485,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Globird Energy",
-                "planId": "GLO1083232MRE3",
+                "planId": "GLO1083232MRE4",
                 "retailerCode": "GLO",
                 "state": "SA",
-                "effectiveDate": "2026-07-03"
+                "effectiveDate": "2026-07-14"
               },
-              "planId": "GLO1083232MRE3",
+              "planId": "GLO1083232MRE4",
               "postcodes": {
                 "5097": 1
               }
@@ -61631,7 +61631,1608 @@
         }
       },
       {
-        "plan_id": "MOM916064SRE2",
+        "plan_id": "MOM1144356MRE1",
+        "plan_name": "Home Comfort Electricity",
+        "retailer_name": "Momentum Energy",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 320,
+        "quarterly_cost": 1140,
+        "annual_cost": 3810,
+        "peak_cost": 61.050000000000004,
+        "shoulder_cost": 35.31,
+        "off_peak_cost": 27.610000000000003,
+        "daily_supply_charge": 176.44000000000003,
+        "detailed_time_blocks": [
+          {
+            "name": "Peak",
+            "description": "Peak",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "1700",
+                "end_time": "2059"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 55.5,
+                "unit_price_gst": 61.050000000000004,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Off-Peak",
+            "description": "Off-Peak",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "1000",
+                "end_time": "1559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 25.1,
+                "unit_price_gst": 27.610000000000003,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Shoulder",
+            "description": "Shoulder",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "0000",
+                "end_time": "0959"
+              },
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "1600",
+                "end_time": "1659"
+              },
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "2100",
+                "end_time": "2359"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 32.1,
+                "unit_price_gst": 35.31,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": 66.54,
+          "paper_bill_fee": null,
+          "payment_processing_fees": [],
+          "late_payment_fee": null,
+          "disconnection_fee_move_out": null,
+          "disconnection_fee_non_payment": null,
+          "reconnection_fee": 66.54,
+          "other_fees": [],
+          "credit_card_payment_fees": [
+            {
+              "feeType": "CCF",
+              "percent": 0.53,
+              "feeTerm": "P"
+            }
+          ],
+          "membership_fee": null
+        },
+        "membership_fee_annual": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_monthly": 0,
+        "solar_feed_in_rate_r": 0.8,
+        "payment_options": [
+          "PayPal",
+          "Direct Debit",
+          "Credit Card",
+          "BPay"
+        ],
+        "raw_plan_data_complete": {
+          "main_api_response": {
+            "planId": "MOM1144356MRE1",
+            "planData": {
+              "tariffType": "TOU",
+              "contract": [
+                {
+                  "pricingModel": "TOU",
+                  "solarFit": [
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "OTHER",
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 0.8,
+                          "rebate": true,
+                          "measureUnit": "KWH"
+                        }
+                      ],
+                      "rate": 0.8,
+                      "displayName": "Single Rate Solar FiT",
+                      "type": "R",
+                      "singleTariffPeriod": "P1Y"
+                    },
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "PREMIUM",
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 44,
+                          "rebate": true,
+                          "measureUnit": "KWH"
+                        }
+                      ],
+                      "rate": 44,
+                      "displayName": "Single Rate Solar FiT",
+                      "type": "G",
+                      "singleTariffPeriod": "P1Y"
+                    }
+                  ],
+                  "fee": [
+                    {
+                      "amount": 66.54,
+                      "feeType": "DiscoF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 66.54,
+                      "feeType": "RecoF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 66.54,
+                      "feeType": "ConnF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "feeType": "CCF",
+                      "percent": 0.53,
+                      "feeTerm": "P"
+                    }
+                  ],
+                  "termType": "N",
+                  "networkTariffType": "IS",
+                  "tariffPeriod": [
+                    {
+                      "touBlock": [
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 55.5,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 25.1,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 32.1,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        }
+                      ],
+                      "blockPeriod": "P1D",
+                      "dailySupplyCharge": 160.4
+                    }
+                  ],
+                  "greenCharge": [
+                    {
+                      "chargeType": "A"
+                    }
+                  ],
+                  "incentive": [
+                    {
+                      "name": "0"
+                    }
+                  ],
+                  "fuelType": "E",
+                  "meterType": [
+                    "Type 0"
+                  ],
+                  "paymentOption": [
+                    "P",
+                    "DD",
+                    "CC",
+                    "BP"
+                  ]
+                }
+              ],
+              "planName": "Home Comfort Electricity",
+              "retailerId": "9632",
+              "customerType": "R",
+              "fuelType": "E",
+              "retailerName": "Momentum Energy",
+              "planId": "MOM1144356MRE1",
+              "retailerCode": "MOM"
+            },
+            "planType": "E#R#MOM1144356MRE1",
+            "postcode": 5097,
+            "pcr": {
+              "costs": {
+                "electricity": {
+                  "small": {
+                    "quarterly": {
+                      "noDiscounts": 550,
+                      "allDiscounts": 550,
+                      "guaranteedDiscount": 550
+                    },
+                    "monthly": {
+                      "noDiscounts": 150,
+                      "allDiscounts": 150,
+                      "guaranteedDiscount": 150
+                    },
+                    "yearly": {
+                      "noDiscounts": 1840,
+                      "allDiscounts": 1840,
+                      "guaranteedDiscount": 1840
+                    }
+                  },
+                  "large": {
+                    "quarterly": {
+                      "noDiscounts": 1140,
+                      "allDiscounts": 1140,
+                      "guaranteedDiscount": 1140
+                    },
+                    "monthly": {
+                      "noDiscounts": 320,
+                      "allDiscounts": 320,
+                      "guaranteedDiscount": 320
+                    },
+                    "yearly": {
+                      "noDiscounts": 3810,
+                      "allDiscounts": 3810,
+                      "guaranteedDiscount": 3810
+                    }
+                  },
+                  "medium": {
+                    "quarterly": {
+                      "noDiscounts": 840,
+                      "allDiscounts": 840,
+                      "guaranteedDiscount": 840
+                    },
+                    "monthly": {
+                      "noDiscounts": 240,
+                      "allDiscounts": 240,
+                      "guaranteedDiscount": 240
+                    },
+                    "yearly": {
+                      "noDiscounts": 2820,
+                      "allDiscounts": 2820,
+                      "guaranteedDiscount": 2820
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "detailed_api_response": {
+            "data": {
+              "planData": {
+                "planType": "M",
+                "tariffType": "TOU",
+                "contract": [
+                  {
+                    "pricingModel": "TOU",
+                    "coolingOffDays": 10,
+                    "solarFit": [
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "OTHER",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 0.8,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 0.8,
+                        "displayName": "Single Rate Solar FiT",
+                        "description": "General Feed-In-Tariff",
+                        "type": "R",
+                        "singleTariffPeriod": "P1Y"
+                      },
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "PREMIUM",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 44,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 44,
+                        "displayName": "Single Rate Solar FiT",
+                        "description": "Group 1/2/3",
+                        "type": "G",
+                        "singleTariffPeriod": "P1Y"
+                      }
+                    ],
+                    "additionalFeeInformation": "For information on additional fees, a full schedule of charges is available from http://www.momentumenergy.com.au/fees",
+                    "fee": [
+                      {
+                        "description": "Disconnection fee",
+                        "amount": 66.54,
+                        "feeType": "DiscoF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "Reconnection fee",
+                        "amount": 66.54,
+                        "feeType": "RecoF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "Connection fee",
+                        "amount": 66.54,
+                        "feeType": "ConnF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "A 0.53% fee (GST Incl) will apply to payments made by any credit or debit card",
+                        "feeType": "CCF",
+                        "percent": 0.53,
+                        "feeTerm": "P"
+                      }
+                    ],
+                    "termType": "N",
+                    "networkTariffType": "IS",
+                    "tariffPeriod": [
+                      {
+                        "touBlock": [
+                          {
+                            "name": "Peak",
+                            "description": "Peak",
+                            "blockRate": [
+                              {
+                                "unitPrice": 55.5,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "P",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "1700",
+                                "endTime": "2059"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Off-Peak",
+                            "description": "Off-Peak",
+                            "blockRate": [
+                              {
+                                "unitPrice": 25.1,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "OP",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "1000",
+                                "endTime": "1559"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Shoulder",
+                            "description": "Shoulder",
+                            "blockRate": [
+                              {
+                                "unitPrice": 32.1,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "S",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "0000",
+                                "endTime": "0959"
+                              },
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "1600",
+                                "endTime": "1659"
+                              },
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "2100",
+                                "endTime": "2359"
+                              }
+                            ]
+                          }
+                        ],
+                        "endDate": "2023-06-30",
+                        "blockPeriod": "P1D",
+                        "dailySupplyCharge": 160.4,
+                        "startDate": "2022-07-01"
+                      }
+                    ],
+                    "variation": "We will give you written notice of any variations to rates & charges under your contract in accordance with applicable legal requirements.",
+                    "onExpiry": "The agreement continues until terminated by you or us in accordance with your terms and conditions.",
+                    "greenCharge": [
+                      {
+                        "name": "Green Power Charge",
+                        "chargeType": "A",
+                        "description": "For an added 4.95 c/kWh incl. GST, you can purchase GreenPower for either 30, 50, 75 or 100% of your usage.",
+                        "option": [
+                          {
+                            "pctGreenPower": 100,
+                            "chargeAmount": 0.0495
+                          }
+                        ]
+                      }
+                    ],
+                    "incentive": [
+                      {
+                        "name": "0",
+                        "description": "0"
+                      }
+                    ],
+                    "fuelType": "E",
+                    "terms": "Time of use charges are based on ACST, except when daylight savings applies in which case interval meters are adjusted to ACDT, unless indicated otherwise.To be eligible you must communicate with us and receive your bills electronically, have the necessary meter configuration and meet all other eligibility criteria.  Full T&Cs can be obtained from momentumenergy.com.au/customer-support/terms-and-conditions or by contacting us on 1800 SWITCH.",
+                    "timeDefinition": "LOCAL",
+                    "billFrequency": [
+                      {
+                        "number": 1,
+                        "period": "M"
+                      },
+                      {
+                        "number": 3,
+                        "period": "M"
+                      }
+                    ],
+                    "meterType": [
+                      "Type 0"
+                    ],
+                    "paymentOption": [
+                      "P",
+                      "DD",
+                      "CC",
+                      "BP"
+                    ],
+                    "isFixed": false
+                  }
+                ],
+                "planName": "Home Comfort Electricity",
+                "planStatus": "PUBLISHED",
+                "supplyArea": [
+                  {
+                    "name": "SA Power Networks",
+                    "id": "42"
+                  }
+                ],
+                "batchId": 1144150,
+                "retailerId": "9632",
+                "distributor": "SA Power Networks",
+                "genAvailable": true,
+                "tags": [
+                  "Home Comfort Electricity",
+                  "SA Power Networks",
+                  "RESELE"
+                ],
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "Momentum Energy",
+                "planId": "MOM1144356MRE1",
+                "retailerCode": "MOM",
+                "state": "SA",
+                "effectiveDate": "2026-07-15"
+              },
+              "planId": "MOM1144356MRE1",
+              "postcodes": {
+                "5097": 1
+              }
+            }
+          }
+        },
+        "raw_plan_data": {
+          "eligibility_restrictions": false,
+          "has_discounts": false,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      },
+      {
+        "plan_id": "MOM1144357MRE1",
+        "plan_name": "Home Comfort Electricity",
+        "retailer_name": "Momentum Energy",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 320,
+        "quarterly_cost": 1140,
+        "annual_cost": 3810,
+        "peak_cost": 61.050000000000004,
+        "shoulder_cost": 35.31,
+        "off_peak_cost": 27.610000000000003,
+        "daily_supply_charge": 176.44000000000003,
+        "detailed_time_blocks": [
+          {
+            "name": "Peak",
+            "description": "Peak",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "1700",
+                "end_time": "2059"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 55.5,
+                "unit_price_gst": 61.050000000000004,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Off-Peak",
+            "description": "Off-Peak",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "1000",
+                "end_time": "1559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 25.1,
+                "unit_price_gst": 27.610000000000003,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Shoulder",
+            "description": "Shoulder",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "0000",
+                "end_time": "0959"
+              },
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "1600",
+                "end_time": "1659"
+              },
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "2100",
+                "end_time": "2359"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 32.1,
+                "unit_price_gst": 35.31,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": 66.54,
+          "paper_bill_fee": null,
+          "payment_processing_fees": [],
+          "late_payment_fee": null,
+          "disconnection_fee_move_out": null,
+          "disconnection_fee_non_payment": null,
+          "reconnection_fee": 66.54,
+          "other_fees": [],
+          "credit_card_payment_fees": [
+            {
+              "feeType": "CCF",
+              "percent": 0.53,
+              "feeTerm": "P"
+            }
+          ],
+          "membership_fee": null
+        },
+        "membership_fee_annual": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_monthly": 0,
+        "solar_feed_in_rate_r": 0.8,
+        "payment_options": [
+          "PayPal",
+          "Direct Debit",
+          "Credit Card",
+          "BPay"
+        ],
+        "raw_plan_data_complete": {
+          "main_api_response": {
+            "planId": "MOM1144357MRE1",
+            "planData": {
+              "tariffType": "TOU",
+              "contract": [
+                {
+                  "pricingModel": "TOU",
+                  "solarFit": [
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "OTHER",
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 0.8,
+                          "rebate": true,
+                          "measureUnit": "KWH"
+                        }
+                      ],
+                      "rate": 0.8,
+                      "displayName": "Single Rate Solar FiT",
+                      "type": "R",
+                      "singleTariffPeriod": "P1Y"
+                    },
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "PREMIUM",
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 44,
+                          "rebate": true,
+                          "measureUnit": "KWH"
+                        }
+                      ],
+                      "rate": 44,
+                      "displayName": "Single Rate Solar FiT",
+                      "type": "G",
+                      "singleTariffPeriod": "P1Y"
+                    }
+                  ],
+                  "fee": [
+                    {
+                      "amount": 66.54,
+                      "feeType": "DiscoF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 66.54,
+                      "feeType": "RecoF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 66.54,
+                      "feeType": "ConnF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "feeType": "CCF",
+                      "percent": 0.53,
+                      "feeTerm": "P"
+                    }
+                  ],
+                  "termType": "N",
+                  "networkTariffType": "IS",
+                  "tariffPeriod": [
+                    {
+                      "touBlock": [
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 55.5,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 25.1,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 32.1,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        }
+                      ],
+                      "blockPeriod": "P1D",
+                      "dailySupplyCharge": 160.4
+                    }
+                  ],
+                  "greenCharge": [
+                    {
+                      "chargeType": "A"
+                    }
+                  ],
+                  "incentive": [
+                    {
+                      "name": "0"
+                    }
+                  ],
+                  "fuelType": "E",
+                  "meterType": [
+                    "Type 0"
+                  ],
+                  "paymentOption": [
+                    "P",
+                    "DD",
+                    "CC",
+                    "BP"
+                  ]
+                }
+              ],
+              "planName": "Home Comfort Electricity",
+              "retailerId": "9632",
+              "customerType": "R",
+              "fuelType": "E",
+              "retailerName": "Momentum Energy",
+              "planId": "MOM1144357MRE1",
+              "retailerCode": "MOM"
+            },
+            "planType": "E#R#MOM1144357MRE1",
+            "postcode": 5097,
+            "pcr": {
+              "costs": {
+                "electricity": {
+                  "small": {
+                    "quarterly": {
+                      "noDiscounts": 550,
+                      "allDiscounts": 550,
+                      "guaranteedDiscount": 550
+                    },
+                    "monthly": {
+                      "noDiscounts": 150,
+                      "allDiscounts": 150,
+                      "guaranteedDiscount": 150
+                    },
+                    "yearly": {
+                      "noDiscounts": 1840,
+                      "allDiscounts": 1840,
+                      "guaranteedDiscount": 1840
+                    }
+                  },
+                  "large": {
+                    "quarterly": {
+                      "noDiscounts": 1140,
+                      "allDiscounts": 1140,
+                      "guaranteedDiscount": 1140
+                    },
+                    "monthly": {
+                      "noDiscounts": 320,
+                      "allDiscounts": 320,
+                      "guaranteedDiscount": 320
+                    },
+                    "yearly": {
+                      "noDiscounts": 3810,
+                      "allDiscounts": 3810,
+                      "guaranteedDiscount": 3810
+                    }
+                  },
+                  "medium": {
+                    "quarterly": {
+                      "noDiscounts": 840,
+                      "allDiscounts": 840,
+                      "guaranteedDiscount": 840
+                    },
+                    "monthly": {
+                      "noDiscounts": 240,
+                      "allDiscounts": 240,
+                      "guaranteedDiscount": 240
+                    },
+                    "yearly": {
+                      "noDiscounts": 2820,
+                      "allDiscounts": 2820,
+                      "guaranteedDiscount": 2820
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "detailed_api_response": {
+            "data": {
+              "planData": {
+                "planType": "M",
+                "tariffType": "TOU",
+                "contract": [
+                  {
+                    "pricingModel": "TOU",
+                    "coolingOffDays": 10,
+                    "solarFit": [
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "OTHER",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 0.8,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 0.8,
+                        "displayName": "Single Rate Solar FiT",
+                        "description": "General Feed-In-Tariff",
+                        "type": "R",
+                        "singleTariffPeriod": "P1Y"
+                      },
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "PREMIUM",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 44,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 44,
+                        "displayName": "Single Rate Solar FiT",
+                        "description": "Group 1/2/3",
+                        "type": "G",
+                        "singleTariffPeriod": "P1Y"
+                      }
+                    ],
+                    "additionalFeeInformation": "For information on additional fees, a full schedule of charges is available from http://www.momentumenergy.com.au/fees",
+                    "fee": [
+                      {
+                        "description": "Disconnection fee",
+                        "amount": 66.54,
+                        "feeType": "DiscoF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "Reconnection fee",
+                        "amount": 66.54,
+                        "feeType": "RecoF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "Connection fee",
+                        "amount": 66.54,
+                        "feeType": "ConnF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "A 0.53% fee (GST Incl) will apply to payments made by any credit or debit card",
+                        "feeType": "CCF",
+                        "percent": 0.53,
+                        "feeTerm": "P"
+                      }
+                    ],
+                    "termType": "N",
+                    "networkTariffType": "IS",
+                    "tariffPeriod": [
+                      {
+                        "touBlock": [
+                          {
+                            "name": "Peak",
+                            "description": "Peak",
+                            "blockRate": [
+                              {
+                                "unitPrice": 55.5,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "P",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "1700",
+                                "endTime": "2059"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Off-Peak",
+                            "description": "Off-Peak",
+                            "blockRate": [
+                              {
+                                "unitPrice": 25.1,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "OP",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "1000",
+                                "endTime": "1559"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Shoulder",
+                            "description": "Shoulder",
+                            "blockRate": [
+                              {
+                                "unitPrice": 32.1,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "S",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "0000",
+                                "endTime": "0959"
+                              },
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "1600",
+                                "endTime": "1659"
+                              },
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "2100",
+                                "endTime": "2359"
+                              }
+                            ]
+                          }
+                        ],
+                        "endDate": "2023-06-30",
+                        "blockPeriod": "P1D",
+                        "dailySupplyCharge": 160.4,
+                        "startDate": "2022-07-01"
+                      }
+                    ],
+                    "variation": "We will give you written notice of any variations to rates & charges under your contract in accordance with applicable legal requirements.",
+                    "onExpiry": "The agreement continues until terminated by you or us in accordance with your terms and conditions.",
+                    "greenCharge": [
+                      {
+                        "name": "Green Power Charge",
+                        "chargeType": "A",
+                        "description": "For an added 4.95 c/kWh incl. GST, you can purchase GreenPower for either 30, 50, 75 or 100% of your usage.",
+                        "option": [
+                          {
+                            "pctGreenPower": 100,
+                            "chargeAmount": 0.0495
+                          }
+                        ]
+                      }
+                    ],
+                    "incentive": [
+                      {
+                        "name": "0",
+                        "description": "0"
+                      }
+                    ],
+                    "fuelType": "E",
+                    "terms": "Time of use charges are based on ACST, except when daylight savings applies in which case interval meters are adjusted to ACDT, unless indicated otherwise.To be eligible you must communicate with us and receive your bills electronically, have the necessary meter configuration and meet all other eligibility criteria.  Full T&Cs can be obtained from momentumenergy.com.au/customer-support/terms-and-conditions or by contacting us on 1800 SWITCH.",
+                    "timeDefinition": "LOCAL",
+                    "billFrequency": [
+                      {
+                        "number": 1,
+                        "period": "M"
+                      },
+                      {
+                        "number": 3,
+                        "period": "M"
+                      }
+                    ],
+                    "meterType": [
+                      "Type 0"
+                    ],
+                    "paymentOption": [
+                      "P",
+                      "DD",
+                      "CC",
+                      "BP"
+                    ],
+                    "isFixed": false
+                  }
+                ],
+                "planName": "Home Comfort Electricity",
+                "planStatus": "PUBLISHED",
+                "supplyArea": [
+                  {
+                    "name": "SA Power Networks",
+                    "id": "42"
+                  }
+                ],
+                "batchId": 1144150,
+                "retailerId": "9632",
+                "distributor": "SA Power Networks",
+                "genAvailable": true,
+                "tags": [
+                  "Home Comfort Electricity",
+                  "SA Power Networks",
+                  "RESELE"
+                ],
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "Momentum Energy",
+                "planId": "MOM1144357MRE1",
+                "retailerCode": "MOM",
+                "state": "SA",
+                "effectiveDate": "2026-07-15"
+              },
+              "planId": "MOM1144357MRE1",
+              "postcodes": {
+                "5097": 1
+              }
+            }
+          }
+        },
+        "raw_plan_data": {
+          "eligibility_restrictions": false,
+          "has_discounts": false,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      },
+      {
+        "plan_id": "MOM1144358MRE1",
+        "plan_name": "Home Comfort Electricity",
+        "retailer_name": "Momentum Energy",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 330,
+        "quarterly_cost": 1170,
+        "annual_cost": 3920,
+        "peak_cost": 54.010000000000005,
+        "shoulder_cost": 31.240000000000002,
+        "off_peak_cost": 16.39,
+        "daily_supply_charge": 176.44000000000003,
+        "detailed_time_blocks": [
+          {
+            "name": "Peak",
+            "description": "6am-10am & 4pm-12am Mon-Sun",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "0600",
+                "end_time": "0959"
+              },
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "1600",
+                "end_time": "2359"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 49.1,
+                "unit_price_gst": 54.010000000000005,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Off-Peak",
+            "description": "10am-4pm Mon-Sun",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "1000",
+                "end_time": "1559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 14.9,
+                "unit_price_gst": 16.39,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Shoulder",
+            "description": "12am-6am Mon-Sun",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "0000",
+                "end_time": "0559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 28.4,
+                "unit_price_gst": 31.240000000000002,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": 66.54,
+          "paper_bill_fee": null,
+          "payment_processing_fees": [],
+          "late_payment_fee": null,
+          "disconnection_fee_move_out": null,
+          "disconnection_fee_non_payment": null,
+          "reconnection_fee": 66.54,
+          "other_fees": [],
+          "credit_card_payment_fees": [
+            {
+              "feeType": "CCF",
+              "percent": 0.53,
+              "feeTerm": "P"
+            }
+          ],
+          "membership_fee": null
+        },
+        "membership_fee_annual": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_monthly": 0,
+        "solar_feed_in_rate_r": 0.8,
+        "payment_options": [
+          "PayPal",
+          "Direct Debit",
+          "Credit Card",
+          "BPay"
+        ],
+        "raw_plan_data_complete": {
+          "main_api_response": {
+            "planId": "MOM1144358MRE1",
+            "planData": {
+              "tariffType": "TOU",
+              "contract": [
+                {
+                  "pricingModel": "TOU",
+                  "solarFit": [
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "OTHER",
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 0.8,
+                          "rebate": true,
+                          "measureUnit": "KWH"
+                        }
+                      ],
+                      "rate": 0.8,
+                      "displayName": "Single Rate Solar FiT",
+                      "type": "R",
+                      "singleTariffPeriod": "P1Y"
+                    },
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "PREMIUM",
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 44,
+                          "rebate": true,
+                          "measureUnit": "KWH"
+                        }
+                      ],
+                      "rate": 44,
+                      "displayName": "Single Rate Solar FiT",
+                      "type": "G",
+                      "singleTariffPeriod": "P1Y"
+                    }
+                  ],
+                  "fee": [
+                    {
+                      "amount": 66.54,
+                      "feeType": "DiscoF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 66.54,
+                      "feeType": "RecoF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 66.54,
+                      "feeType": "ConnF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "feeType": "CCF",
+                      "percent": 0.53,
+                      "feeTerm": "P"
+                    }
+                  ],
+                  "termType": "N",
+                  "networkTariffType": "IS",
+                  "tariffPeriod": [
+                    {
+                      "touBlock": [
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 49.1,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 14.9,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 28.4,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        }
+                      ],
+                      "blockPeriod": "P1D",
+                      "dailySupplyCharge": 160.4
+                    }
+                  ],
+                  "greenCharge": [
+                    {
+                      "chargeType": "A"
+                    }
+                  ],
+                  "incentive": [
+                    {
+                      "name": "0"
+                    }
+                  ],
+                  "fuelType": "E",
+                  "meterType": [
+                    "Type 0"
+                  ],
+                  "paymentOption": [
+                    "P",
+                    "DD",
+                    "CC",
+                    "BP"
+                  ]
+                }
+              ],
+              "planName": "Home Comfort Electricity",
+              "retailerId": "9632",
+              "customerType": "R",
+              "fuelType": "E",
+              "retailerName": "Momentum Energy",
+              "planId": "MOM1144358MRE1",
+              "retailerCode": "MOM"
+            },
+            "planType": "E#R#MOM1144358MRE1",
+            "postcode": 5097,
+            "pcr": {
+              "costs": {
+                "electricity": {
+                  "small": {
+                    "quarterly": {
+                      "noDiscounts": 570,
+                      "allDiscounts": 570,
+                      "guaranteedDiscount": 570
+                    },
+                    "monthly": {
+                      "noDiscounts": 160,
+                      "allDiscounts": 160,
+                      "guaranteedDiscount": 160
+                    },
+                    "yearly": {
+                      "noDiscounts": 1890,
+                      "allDiscounts": 1890,
+                      "guaranteedDiscount": 1890
+                    }
+                  },
+                  "large": {
+                    "quarterly": {
+                      "noDiscounts": 1170,
+                      "allDiscounts": 1170,
+                      "guaranteedDiscount": 1170
+                    },
+                    "monthly": {
+                      "noDiscounts": 330,
+                      "allDiscounts": 330,
+                      "guaranteedDiscount": 330
+                    },
+                    "yearly": {
+                      "noDiscounts": 3920,
+                      "allDiscounts": 3920,
+                      "guaranteedDiscount": 3920
+                    }
+                  },
+                  "medium": {
+                    "quarterly": {
+                      "noDiscounts": 870,
+                      "allDiscounts": 870,
+                      "guaranteedDiscount": 870
+                    },
+                    "monthly": {
+                      "noDiscounts": 240,
+                      "allDiscounts": 240,
+                      "guaranteedDiscount": 240
+                    },
+                    "yearly": {
+                      "noDiscounts": 2900,
+                      "allDiscounts": 2900,
+                      "guaranteedDiscount": 2900
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "detailed_api_response": {
+            "data": {
+              "planData": {
+                "planType": "M",
+                "tariffType": "TOU",
+                "contract": [
+                  {
+                    "pricingModel": "TOU",
+                    "coolingOffDays": 10,
+                    "solarFit": [
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "OTHER",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 0.8,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 0.8,
+                        "displayName": "Single Rate Solar FiT",
+                        "description": "General Feed-In-Tariff",
+                        "type": "R",
+                        "singleTariffPeriod": "P1Y"
+                      },
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "PREMIUM",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 44,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 44,
+                        "displayName": "Single Rate Solar FiT",
+                        "description": "Group 1/2/3",
+                        "type": "G",
+                        "singleTariffPeriod": "P1Y"
+                      }
+                    ],
+                    "additionalFeeInformation": "For information on additional fees, a full schedule of charges is available from http://www.momentumenergy.com.au/fees",
+                    "fee": [
+                      {
+                        "description": "Disconnection fee",
+                        "amount": 66.54,
+                        "feeType": "DiscoF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "Reconnection fee",
+                        "amount": 66.54,
+                        "feeType": "RecoF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "Connection fee",
+                        "amount": 66.54,
+                        "feeType": "ConnF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "A 0.53% fee (GST Incl) will apply to payments made by any credit or debit card",
+                        "feeType": "CCF",
+                        "percent": 0.53,
+                        "feeTerm": "P"
+                      }
+                    ],
+                    "termType": "N",
+                    "networkTariffType": "IS",
+                    "tariffPeriod": [
+                      {
+                        "touBlock": [
+                          {
+                            "name": "Peak",
+                            "description": "6am-10am & 4pm-12am Mon-Sun",
+                            "blockRate": [
+                              {
+                                "unitPrice": 49.1,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "P",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "0600",
+                                "endTime": "0959"
+                              },
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "1600",
+                                "endTime": "2359"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Off-Peak",
+                            "description": "10am-4pm Mon-Sun",
+                            "blockRate": [
+                              {
+                                "unitPrice": 14.9,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "OP",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "1000",
+                                "endTime": "1559"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Shoulder",
+                            "description": "12am-6am Mon-Sun",
+                            "blockRate": [
+                              {
+                                "unitPrice": 28.4,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "S",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "0000",
+                                "endTime": "0559"
+                              }
+                            ]
+                          }
+                        ],
+                        "endDate": "2023-06-30",
+                        "blockPeriod": "P1D",
+                        "dailySupplyCharge": 160.4,
+                        "startDate": "2022-07-01"
+                      }
+                    ],
+                    "variation": "We will give you written notice of any variations to rates & charges under your contract in accordance with applicable legal requirements.",
+                    "onExpiry": "The agreement continues until terminated by you or us in accordance with your terms and conditions.",
+                    "greenCharge": [
+                      {
+                        "name": "Green Power Charge",
+                        "chargeType": "A",
+                        "description": "For an added 4.95 c/kWh incl. GST, you can purchase GreenPower for either 30, 50, 75 or 100% of your usage.",
+                        "option": [
+                          {
+                            "pctGreenPower": 100,
+                            "chargeAmount": 0.0495
+                          }
+                        ]
+                      }
+                    ],
+                    "incentive": [
+                      {
+                        "name": "0",
+                        "description": "0"
+                      }
+                    ],
+                    "fuelType": "E",
+                    "terms": "Time of use charges are based on ACST, except when daylight savings applies in which case interval meters are adjusted to ACDT, unless indicated otherwise.To be eligible you must communicate with us and receive your bills electronically, have the necessary meter configuration and meet all other eligibility criteria.  Full T&Cs can be obtained from momentumenergy.com.au/customer-support/terms-and-conditions or by contacting us on 1800 SWITCH.",
+                    "timeDefinition": "LOCAL",
+                    "billFrequency": [
+                      {
+                        "number": 1,
+                        "period": "M"
+                      },
+                      {
+                        "number": 3,
+                        "period": "M"
+                      }
+                    ],
+                    "meterType": [
+                      "Type 0"
+                    ],
+                    "paymentOption": [
+                      "P",
+                      "DD",
+                      "CC",
+                      "BP"
+                    ],
+                    "isFixed": false
+                  }
+                ],
+                "planName": "Home Comfort Electricity",
+                "planStatus": "PUBLISHED",
+                "supplyArea": [
+                  {
+                    "name": "SA Power Networks",
+                    "id": "42"
+                  }
+                ],
+                "batchId": 1144150,
+                "retailerId": "9632",
+                "distributor": "SA Power Networks",
+                "genAvailable": true,
+                "tags": [
+                  "Home Comfort Electricity",
+                  "SA Power Networks",
+                  "RTOU"
+                ],
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "Momentum Energy",
+                "planId": "MOM1144358MRE1",
+                "retailerCode": "MOM",
+                "state": "SA",
+                "effectiveDate": "2026-07-15"
+              },
+              "planId": "MOM1144358MRE1",
+              "postcodes": {
+                "5097": 1
+              }
+            }
+          }
+        },
+        "raw_plan_data": {
+          "eligibility_restrictions": false,
+          "has_discounts": false,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      },
+      {
+        "plan_id": "MOM916064SRE4",
         "plan_name": "Standing Offer",
         "retailer_name": "Momentum Energy",
         "plan_type": "TOU",
@@ -61740,7 +63341,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "MOM916064SRE2",
+            "planId": "MOM916064SRE4",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -61846,10 +63447,10 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Momentum Energy",
-              "planId": "MOM916064SRE2",
+              "planId": "MOM916064SRE4",
               "retailerCode": "MOM"
             },
-            "planType": "E#R#MOM916064SRE2",
+            "planType": "E#R#MOM916064SRE4",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -62078,7 +63679,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1122916,
+                "batchId": 1144448,
                 "retailerId": "9632",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -62090,12 +63691,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Momentum Energy",
-                "planId": "MOM916064SRE2",
+                "planId": "MOM916064SRE4",
                 "retailerCode": "MOM",
                 "state": "SA",
-                "effectiveDate": "2026-07-01"
+                "effectiveDate": "2026-07-15"
               },
-              "planId": "MOM916064SRE2",
+              "planId": "MOM916064SRE4",
               "postcodes": {
                 "5097": 1
               }
@@ -62111,7 +63712,7 @@
         }
       },
       {
-        "plan_id": "MOM916075SRE2",
+        "plan_id": "MOM916075SRE4",
         "plan_name": "Standing Offer",
         "retailer_name": "Momentum Energy",
         "plan_type": "TOU",
@@ -62225,7 +63826,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "MOM916075SRE2",
+            "planId": "MOM916075SRE4",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -62331,10 +63932,10 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Momentum Energy",
-              "planId": "MOM916075SRE2",
+              "planId": "MOM916075SRE4",
               "retailerCode": "MOM"
             },
-            "planType": "E#R#MOM916075SRE2",
+            "planType": "E#R#MOM916075SRE4",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -62568,7 +64169,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1122916,
+                "batchId": 1144448,
                 "retailerId": "9632",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -62580,12 +64181,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Momentum Energy",
-                "planId": "MOM916075SRE2",
+                "planId": "MOM916075SRE4",
                 "retailerCode": "MOM",
                 "state": "SA",
-                "effectiveDate": "2026-07-01"
+                "effectiveDate": "2026-07-15"
               },
-              "planId": "MOM916075SRE2",
+              "planId": "MOM916075SRE4",
               "postcodes": {
                 "5097": 1
               }
