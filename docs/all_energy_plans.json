@@ -1,10 +1,10 @@
 {
   "metadata": {
     "postcode": "5097",
-    "total_plans": 153,
-    "filtered_out": 392,
+    "total_plans": 156,
+    "filtered_out": 395,
     "extraction_date": "2025-06-26",
-    "tou_count": 153,
+    "tou_count": 156,
     "sr_count": 0,
     "other_count": 0,
     "filters_applied": "Excluded tariff types: SR, SRCL, TOUCL",
@@ -42514,6 +42514,554 @@
         }
       },
       {
+        "plan_id": "ENG1145432MRE1",
+        "plan_name": "SA ENGIE _Perks Elec",
+        "retailer_name": "ENGIE",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 340,
+        "quarterly_cost": 1210,
+        "annual_cost": 4070,
+        "peak_cost": 56.221000000000004,
+        "shoulder_cost": 32.549,
+        "off_peak_cost": 17.039,
+        "daily_supply_charge": 180.04800000000003,
+        "detailed_time_blocks": [
+          {
+            "name": "Peak",
+            "description": "06:00 - 10:00; 16:00 - 24:00 (AEST)",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "0600",
+                "end_time": "0959"
+              },
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "1600",
+                "end_time": "2359"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 51.11,
+                "unit_price_gst": 56.221000000000004,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Off-Peak",
+            "description": "00:00 - 06:00 (AEST)",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "0000",
+                "end_time": "0559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 29.59,
+                "unit_price_gst": 32.549,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Solar Sponge",
+            "description": "10:00 - 16:00 (AEST)",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                "start_time": "1000",
+                "end_time": "1559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 15.49,
+                "unit_price_gst": 17.039,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": null,
+          "paper_bill_fee": 1.8,
+          "payment_processing_fees": [],
+          "late_payment_fee": 12,
+          "disconnection_fee_move_out": null,
+          "disconnection_fee_non_payment": null,
+          "reconnection_fee": 66.539,
+          "other_fees": [],
+          "credit_card_payment_fees": [],
+          "membership_fee": null
+        },
+        "membership_fee_annual": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_monthly": 0,
+        "solar_feed_in_rate_r": 1,
+        "payment_options": [
+          "BPay",
+          "Credit Card",
+          "Direct Debit",
+          "PayPal"
+        ],
+        "raw_plan_data_complete": {
+          "main_api_response": {
+            "planId": "ENG1145432MRE1",
+            "planData": {
+              "tariffType": "TOU",
+              "contract": [
+                {
+                  "pricingModel": "TOU",
+                  "benefitPeriod": "Ongoing",
+                  "solarFit": [
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "OTHER",
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 1,
+                          "rebate": true,
+                          "measureUnit": "KWH"
+                        }
+                      ],
+                      "rate": 1,
+                      "displayName": "Single Rate Solar FiT",
+                      "type": "R",
+                      "singleTariffPeriod": "P1Y"
+                    },
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "PREMIUM",
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 45,
+                          "rebate": true,
+                          "measureUnit": "KWH"
+                        }
+                      ],
+                      "rate": 45,
+                      "displayName": "Single Rate Solar FiT",
+                      "type": "G",
+                      "singleTariffPeriod": "P1Y"
+                    }
+                  ],
+                  "fee": [
+                    {
+                      "amount": 66.539,
+                      "feeType": "RecoF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 1.8,
+                      "feeType": "PBF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 12,
+                      "feeType": "LPF",
+                      "feeTerm": "F"
+                    }
+                  ],
+                  "networkTariffCode": [
+                    "RTOU"
+                  ],
+                  "termType": "E",
+                  "discount": [
+                    {
+                      "name": "12% Guaranteed Discount",
+                      "discountPercent": 12,
+                      "type": "U",
+                      "category": "O",
+                      "method": "B"
+                    }
+                  ],
+                  "networkTariffType": "PT",
+                  "tariffPeriod": [
+                    {
+                      "touBlock": [
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 51.11,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 29.59,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 15.49,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        }
+                      ],
+                      "blockPeriod": "P1D",
+                      "dailySupplyCharge": 163.68
+                    }
+                  ],
+                  "incentive": [
+                    {
+                      "name": "My NRMA membership"
+                    },
+                    {
+                      "name": "Once Off First Bill $125"
+                    }
+                  ],
+                  "fuelType": "E",
+                  "meterType": [
+                    "Type 4",
+                    "Type 4a"
+                  ],
+                  "paymentOption": [
+                    "BP",
+                    "CC",
+                    "DD",
+                    "P"
+                  ],
+                  "eligibilityRestriction": [
+                    {
+                      "type": "OC",
+                      "description": "You must agree to the NRMA T&Cs and Privacy Policy, available at mynrma.com.au; and provide a valid email address. Offer not available for current My NRMA members.",
+                      "information": "Other"
+                    }
+                  ]
+                }
+              ],
+              "planName": "SA ENGIE _Perks Elec",
+              "retailerId": "25001",
+              "customerType": "R",
+              "fuelType": "E",
+              "retailerName": "ENGIE",
+              "planId": "ENG1145432MRE1",
+              "retailerCode": "ENG"
+            },
+            "planType": "E#R#ENG1145432MRE1",
+            "postcode": 5097,
+            "pcr": {
+              "costs": {
+                "electricity": {
+                  "small": {
+                    "quarterly": {
+                      "noDiscounts": 590,
+                      "allDiscounts": 510,
+                      "guaranteedDiscount": 510
+                    },
+                    "monthly": {
+                      "noDiscounts": 160,
+                      "allDiscounts": 140,
+                      "guaranteedDiscount": 140
+                    },
+                    "yearly": {
+                      "noDiscounts": 1950,
+                      "allDiscounts": 1720,
+                      "guaranteedDiscount": 1720
+                    }
+                  },
+                  "large": {
+                    "quarterly": {
+                      "noDiscounts": 1210,
+                      "allDiscounts": 1070,
+                      "guaranteedDiscount": 1070
+                    },
+                    "monthly": {
+                      "noDiscounts": 340,
+                      "allDiscounts": 300,
+                      "guaranteedDiscount": 300
+                    },
+                    "yearly": {
+                      "noDiscounts": 4070,
+                      "allDiscounts": 3580,
+                      "guaranteedDiscount": 3580
+                    }
+                  },
+                  "medium": {
+                    "quarterly": {
+                      "noDiscounts": 900,
+                      "allDiscounts": 790,
+                      "guaranteedDiscount": 790
+                    },
+                    "monthly": {
+                      "noDiscounts": 250,
+                      "allDiscounts": 220,
+                      "guaranteedDiscount": 220
+                    },
+                    "yearly": {
+                      "noDiscounts": 3000,
+                      "allDiscounts": 2640,
+                      "guaranteedDiscount": 2640
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "detailed_api_response": {
+            "data": {
+              "planData": {
+                "planType": "M",
+                "tariffType": "TOU",
+                "planRef": "PDB_11367_71091",
+                "contract": [
+                  {
+                    "pricingModel": "TOU",
+                    "benefitPeriod": "Ongoing",
+                    "coolingOffDays": 10,
+                    "solarFit": [
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "OTHER",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 1,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 1,
+                        "displayName": "Single Rate Solar FiT",
+                        "description": "ENGIE Market FIT",
+                        "type": "R",
+                        "singleTariffPeriod": "P1Y"
+                      },
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "PREMIUM",
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 45,
+                            "rebate": true,
+                            "measureUnit": "KWH"
+                          }
+                        ],
+                        "rate": 45,
+                        "displayName": "Single Rate Solar FiT",
+                        "description": "ENGIE Premium FIT (limited eligibility)",
+                        "type": "G",
+                        "singleTariffPeriod": "P1Y"
+                      }
+                    ],
+                    "additionalFeeInformation": "Additional fees may apply. For information please contact us on 13 88 08.",
+                    "fee": [
+                      {
+                        "description": "Reconnection (Normal Hours) (Includes GST).",
+                        "amount": 66.539,
+                        "feeType": "RecoF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "A $1.80 (inc. GST) charge will apply to paper bills sent in the post.",
+                        "amount": 1.8,
+                        "feeType": "PBF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "A fee of $12 may apply for payments made after the due date (GST exempt).",
+                        "amount": 12,
+                        "feeType": "LPF",
+                        "feeTerm": "F"
+                      }
+                    ],
+                    "networkTariffCode": [
+                      "RTOU"
+                    ],
+                    "termType": "E",
+                    "discount": [
+                      {
+                        "name": "12% Guaranteed Discount",
+                        "description": "You'll receive a 12% guaranteed discount off our electricity usage and supply charges.",
+                        "discountPercent": 12,
+                        "type": "U",
+                        "category": "O",
+                        "method": "B"
+                      }
+                    ],
+                    "networkTariffType": "PT",
+                    "tariffPeriod": [
+                      {
+                        "touBlock": [
+                          {
+                            "name": "Peak",
+                            "description": "06:00 - 10:00; 16:00 - 24:00 (AEST)",
+                            "blockRate": [
+                              {
+                                "unitPrice": 51.11,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "P",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "0600",
+                                "endTime": "0959"
+                              },
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "1600",
+                                "endTime": "2359"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Off-Peak",
+                            "description": "00:00 - 06:00 (AEST)",
+                            "blockRate": [
+                              {
+                                "unitPrice": 29.59,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "OP",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "0000",
+                                "endTime": "0559"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Solar Sponge",
+                            "description": "10:00 - 16:00 (AEST)",
+                            "blockRate": [
+                              {
+                                "unitPrice": 15.49,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "S",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "1000",
+                                "endTime": "1559"
+                              }
+                            ]
+                          }
+                        ],
+                        "endDate": "2026-12-31",
+                        "blockPeriod": "P1D",
+                        "dailySupplyCharge": 163.68,
+                        "startDate": "2026-01-01"
+                      }
+                    ],
+                    "variation": "We may vary your rates and charges at any time, including if any underlying information is incorrect, you get a new meter or your distributor changes your tariff. We'll give you advance notice of any change, which may be on your bill.",
+                    "onExpiry": "Ongoing energy plan until you or we end it. We may end this energy plan at any time by giving you 20 Business Days' notice.",
+                    "incentive": [
+                      {
+                        "name": "My NRMA membership",
+                        "description": "Your My NRMA membership will be complimentary, a program that helps inspire you to explore new places and experiences, great deals on fuel, shopping, travel, entertainment and more along the way."
+                      },
+                      {
+                        "name": "Once Off First Bill $125",
+                        "description": "Your offer includes a one-off welcome credit of $125, on your first electricity bill, provided you have not received a welcome credit from us in the past 12 months. This credit includes GST and is not redeemable for cash."
+                      }
+                    ],
+                    "fuelType": "E",
+                    "terms": "For further details on the information presented in this Plan Information Document, or for full terms and conditions, please visit www.engie.com.au or call ENGIE on 13 88 08. All time-dependent rates (eg. 4pm to 8pm) are billed in AEST. All time-dependent rates (eg. 4pm to 8pm) are billed in AEST.",
+                    "timeDefinition": "AEST",
+                    "billFrequency": [
+                      {
+                        "number": 3,
+                        "period": "M"
+                      },
+                      {
+                        "number": 1,
+                        "period": "M"
+                      }
+                    ],
+                    "meterType": [
+                      "Type 4",
+                      "Type 4a"
+                    ],
+                    "paymentOption": [
+                      "BP",
+                      "CC",
+                      "DD",
+                      "P"
+                    ],
+                    "eligibilityRestriction": [
+                      {
+                        "type": "OC",
+                        "description": "You must agree to the NRMA T&Cs and Privacy Policy, available at mynrma.com.au; and provide a valid email address. Offer not available for current My NRMA members.",
+                        "information": "Other"
+                      }
+                    ],
+                    "isFixed": false
+                  }
+                ],
+                "planName": "SA ENGIE _Perks Elec",
+                "planStatus": "PUBLISHED",
+                "supplyArea": [
+                  {
+                    "name": "SA Power Networks",
+                    "id": "42"
+                  }
+                ],
+                "batchId": 1145414,
+                "retailerId": "25001",
+                "distributor": "SA Power Networks",
+                "genAvailable": true,
+                "tags": [
+                  "PDB_11367_71091",
+                  "SEREPER21",
+                  "SA ENGIE _Perks",
+                  "SERTOUTOU0726M",
+                  "RES TOU|TOU CL"
+                ],
+                "excludedPostcodes": [
+                  "5960"
+                ],
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "ENGIE",
+                "planId": "ENG1145432MRE1",
+                "retailerCode": "ENG",
+                "state": "SA",
+                "effectiveDate": "2026-07-23"
+              },
+              "planId": "ENG1145432MRE1",
+              "postcodes": {
+                "5097": 1
+              }
+            }
+          }
+        },
+        "raw_plan_data": {
+          "eligibility_restrictions": true,
+          "has_discounts": true,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      },
+      {
         "plan_id": "FEA1136863MRE1",
         "plan_name": "Freedom Switched On 2.2!",
         "retailer_name": "Flipped Energy",
@@ -44595,6 +45143,1190 @@
                 ]
               },
               "planId": "FP11145357MRE1",
+              "postcodes": {
+                "5097": 1
+              }
+            }
+          }
+        },
+        "raw_plan_data": {
+          "eligibility_restrictions": false,
+          "has_discounts": false,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      },
+      {
+        "plan_id": "FP11147437MRE1",
+        "plan_name": "4Free",
+        "retailer_name": "Flow Power",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 360,
+        "quarterly_cost": 1280,
+        "annual_cost": 4280,
+        "peak_cost": 48.640995700000005,
+        "shoulder_cost": 24.320497850000002,
+        "off_peak_cost": null,
+        "daily_supply_charge": 250.2728525,
+        "detailed_time_blocks": [
+          {
+            "name": "4Free window",
+            "description": "4Free 11am-3pm local time",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "1100",
+                "end_time": "1459"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 0,
+                "unit_price_gst": 0.0,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              },
+              {
+                "unit_price": 44.219087,
+                "unit_price_gst": 48.640995700000005,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "All other times",
+            "description": "All other times",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "0000",
+                "end_time": "1059"
+              },
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "1500",
+                "end_time": "2359"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 44.219087,
+                "unit_price_gst": 48.640995700000005,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": null,
+          "paper_bill_fee": null,
+          "payment_processing_fees": [
+            {
+              "feeType": "PPF",
+              "percent": 0.66,
+              "feeTerm": "P"
+            }
+          ],
+          "late_payment_fee": null,
+          "disconnection_fee_move_out": null,
+          "disconnection_fee_non_payment": null,
+          "reconnection_fee": 66.539,
+          "other_fees": [],
+          "credit_card_payment_fees": [],
+          "membership_fee": null
+        },
+        "membership_fee_annual": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_monthly": 0,
+        "solar_feed_in_rate_r": 0,
+        "payment_options": [
+          "Direct Debit"
+        ],
+        "raw_plan_data_complete": {
+          "main_api_response": {
+            "planId": "FP11147437MRE1",
+            "planData": {
+              "tariffType": "TOU",
+              "contract": [
+                {
+                  "pricingModel": "TOU",
+                  "benefitPeriod": "Ongoing",
+                  "solarFit": [
+                    {
+                      "tariffUType": "timeVaryingTariffs",
+                      "scheme": "OTHER",
+                      "rate": 20,
+                      "displayName": "Happy Hour FiT first 15kWh",
+                      "timeVaryingTariffs": [
+                        {
+                          "period": "P1D",
+                          "type": "PEAK",
+                          "displayName": "Happy Hour FiT first 15kWh",
+                          "timeVariations": [
+                            {
+                              "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                              "startTime": "1730",
+                              "endTime": "2129"
+                            }
+                          ],
+                          "rates": [
+                            {
+                              "unitPrice": 20,
+                              "volume": 15,
+                              "measureUnit": "KWH",
+                              "rebate": true
+                            }
+                          ]
+                        }
+                      ],
+                      "type": "R"
+                    },
+                    {
+                      "tariffUType": "timeVaryingTariffs",
+                      "scheme": "OTHER",
+                      "rate": 5,
+                      "displayName": "Happy Hour FiT balance",
+                      "timeVaryingTariffs": [
+                        {
+                          "period": "P1D",
+                          "type": "PEAK",
+                          "displayName": "Happy Hour FiT balance",
+                          "timeVariations": [
+                            {
+                              "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                              "startTime": "1730",
+                              "endTime": "2129"
+                            }
+                          ],
+                          "rates": [
+                            {
+                              "unitPrice": 5,
+                              "rebate": true,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        }
+                      ],
+                      "type": "R"
+                    },
+                    {
+                      "tariffUType": "timeVaryingTariffs",
+                      "scheme": "OTHER",
+                      "rate": 0,
+                      "displayName": "Non-happy-hour FiT",
+                      "timeVaryingTariffs": [
+                        {
+                          "period": "P1D",
+                          "type": "OFF_PEAK",
+                          "displayName": "Non-happy-hour FiT",
+                          "timeVariations": [
+                            {
+                              "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                              "startTime": "2130",
+                              "endTime": "1729"
+                            }
+                          ],
+                          "rates": [
+                            {
+                              "unitPrice": 0,
+                              "rebate": true,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        }
+                      ],
+                      "type": "R"
+                    }
+                  ],
+                  "fee": [
+                    {
+                      "amount": 66.539,
+                      "feeType": "RecoF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 66.539,
+                      "feeType": "DiscoF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "feeType": "PPF",
+                      "percent": 0.66,
+                      "feeTerm": "P"
+                    }
+                  ],
+                  "termType": "N",
+                  "networkTariffType": "IS",
+                  "tariffPeriod": [
+                    {
+                      "touBlock": [
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 0,
+                              "volume": 32,
+                              "measureUnit": "KWH"
+                            },
+                            {
+                              "unitPrice": 44.219087,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 44.219087,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        }
+                      ],
+                      "blockPeriod": "P1D",
+                      "dailySupplyCharge": 227.520775
+                    }
+                  ],
+                  "greenCharge": [
+                    {
+                      "chargeType": "C"
+                    }
+                  ],
+                  "fuelType": "E",
+                  "meterType": [
+                    "Type 0"
+                  ],
+                  "paymentOption": [
+                    "DD"
+                  ]
+                }
+              ],
+              "planName": "4Free",
+              "retailerId": "24216",
+              "customerType": "R",
+              "fuelType": "E",
+              "retailerName": "Flow Power",
+              "planId": "FP11147437MRE1",
+              "retailerCode": "FP1",
+              "meteringCost": [
+                {
+                  "name": "Metering Cost",
+                  "min": "U"
+                }
+              ]
+            },
+            "planType": "E#R#FP11147437MRE1",
+            "postcode": 5097,
+            "pcr": {
+              "costs": {
+                "electricity": {
+                  "small": {
+                    "quarterly": {
+                      "noDiscounts": 660,
+                      "allDiscounts": 660,
+                      "guaranteedDiscount": 660
+                    },
+                    "monthly": {
+                      "noDiscounts": 180,
+                      "allDiscounts": 180,
+                      "guaranteedDiscount": 180
+                    },
+                    "yearly": {
+                      "noDiscounts": 2190,
+                      "allDiscounts": 2190,
+                      "guaranteedDiscount": 2190
+                    }
+                  },
+                  "large": {
+                    "quarterly": {
+                      "noDiscounts": 1280,
+                      "allDiscounts": 1280,
+                      "guaranteedDiscount": 1280
+                    },
+                    "monthly": {
+                      "noDiscounts": 360,
+                      "allDiscounts": 360,
+                      "guaranteedDiscount": 360
+                    },
+                    "yearly": {
+                      "noDiscounts": 4280,
+                      "allDiscounts": 4280,
+                      "guaranteedDiscount": 4280
+                    }
+                  },
+                  "medium": {
+                    "quarterly": {
+                      "noDiscounts": 960,
+                      "allDiscounts": 960,
+                      "guaranteedDiscount": 960
+                    },
+                    "monthly": {
+                      "noDiscounts": 270,
+                      "allDiscounts": 270,
+                      "guaranteedDiscount": 270
+                    },
+                    "yearly": {
+                      "noDiscounts": 3230,
+                      "allDiscounts": 3230,
+                      "guaranteedDiscount": 3230
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "detailed_api_response": {
+            "data": {
+              "planData": {
+                "planType": "M",
+                "tariffType": "TOU",
+                "planRef": "Flow Home 4Free Generally Available",
+                "contract": [
+                  {
+                    "pricingModel": "TOU",
+                    "benefitPeriod": "Ongoing",
+                    "coolingOffDays": 10,
+                    "solarFit": [
+                      {
+                        "tariffUType": "timeVaryingTariffs",
+                        "scheme": "OTHER",
+                        "rate": 20,
+                        "displayName": "Happy Hour FiT first 15kWh",
+                        "description": "Flow Power offers 20 cents per kWh exported from 5:30pm to 9:30pm for the first 15kWh, then 5 cents per kWh thereafter, and 0 cents per kWh exported all other times.",
+                        "timeVaryingTariffs": [
+                          {
+                            "period": "P1D",
+                            "type": "PEAK",
+                            "displayName": "Happy Hour FiT first 15kWh",
+                            "timeVariations": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "1730",
+                                "endTime": "2129"
+                              }
+                            ],
+                            "rates": [
+                              {
+                                "unitPrice": 20,
+                                "volume": 15,
+                                "measureUnit": "KWH",
+                                "rebate": true
+                              }
+                            ]
+                          }
+                        ],
+                        "type": "R"
+                      },
+                      {
+                        "tariffUType": "timeVaryingTariffs",
+                        "scheme": "OTHER",
+                        "rate": 5,
+                        "displayName": "Happy Hour FiT balance",
+                        "description": "Flow Power offers 20 cents per kWh exported from 5:30pm to 9:30pm for the first 15kWh, then 5 cents per kWh thereafter, and 0 cents per kWh exported all other times.",
+                        "timeVaryingTariffs": [
+                          {
+                            "period": "P1D",
+                            "type": "PEAK",
+                            "displayName": "Happy Hour FiT balance",
+                            "timeVariations": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "1730",
+                                "endTime": "2129"
+                              }
+                            ],
+                            "rates": [
+                              {
+                                "unitPrice": 5,
+                                "rebate": true,
+                                "measureUnit": "KWH"
+                              }
+                            ]
+                          }
+                        ],
+                        "type": "R"
+                      },
+                      {
+                        "tariffUType": "timeVaryingTariffs",
+                        "scheme": "OTHER",
+                        "rate": 0,
+                        "displayName": "Non-happy-hour FiT",
+                        "description": "Flow Power offers 20 cents per kWh exported from 5:30pm to 9:30pm for the first 15kWh, then 5 cents per kWh thereafter, and 0 cents per kWh exported all other times.",
+                        "timeVaryingTariffs": [
+                          {
+                            "period": "P1D",
+                            "type": "OFF_PEAK",
+                            "displayName": "Non-happy-hour FiT",
+                            "timeVariations": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "2130",
+                                "endTime": "1729"
+                              }
+                            ],
+                            "rates": [
+                              {
+                                "unitPrice": 0,
+                                "rebate": true,
+                                "measureUnit": "KWH"
+                              }
+                            ]
+                          }
+                        ],
+                        "type": "R"
+                      }
+                    ],
+                    "additionalFeeInformation": "Additional fees may apply. For more information, please visit the retailer's website at flowpower.com.au/residential/policies/",
+                    "fee": [
+                      {
+                        "description": "Reconnection fee",
+                        "amount": 66.539,
+                        "feeType": "RecoF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "Disconnection fee",
+                        "amount": 66.539,
+                        "feeType": "DiscoF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "Payment processing fee",
+                        "feeType": "PPF",
+                        "percent": 0.66,
+                        "feeTerm": "P"
+                      }
+                    ],
+                    "termType": "N",
+                    "networkTariffType": "IS",
+                    "tariffPeriod": [
+                      {
+                        "touBlock": [
+                          {
+                            "name": "4Free window",
+                            "description": "4Free 11am-3pm local time",
+                            "blockRate": [
+                              {
+                                "unitPrice": 0,
+                                "volume": 32,
+                                "measureUnit": "KWH"
+                              },
+                              {
+                                "unitPrice": 44.219087,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "OP",
+                            "timeOfUse": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "1100",
+                                "endTime": "1459"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "All other times",
+                            "description": "All other times",
+                            "blockRate": [
+                              {
+                                "unitPrice": 44.219087,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "P",
+                            "timeOfUse": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "0000",
+                                "endTime": "1059"
+                              },
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "1500",
+                                "endTime": "2359"
+                              }
+                            ]
+                          }
+                        ],
+                        "endDate": "2027-06-30",
+                        "blockPeriod": "P1D",
+                        "dailySupplyCharge": 227.520775,
+                        "startDate": "2026-07-01"
+                      }
+                    ],
+                    "variation": "Usage rates are not fixed. 4Free: 0c/kWh applies 11am-3pm for up to 8kWh/hr, capped at 32kWh over 4 hrs; excess is charged at the all other times rate. For more information about our pricing visit flowpower.com.au/residential/pricing/our-pricing/",
+                    "greenCharge": [
+                      {
+                        "name": "100% Green Power",
+                        "chargeType": "C",
+                        "description": "This offer has 100% green power included in the offer rates.",
+                        "option": [
+                          {
+                            "pctGreenPower": 100,
+                            "chargePercentage": 100,
+                            "chargeAmount": 0
+                          }
+                        ]
+                      }
+                    ],
+                    "fuelType": "E",
+                    "terms": "See Flow Power Market Retail Contract Agreement Terms at flowpower.com.au/residential/policies/",
+                    "timeDefinition": "LOCAL",
+                    "billFrequency": [
+                      {
+                        "number": 1,
+                        "period": "M"
+                      },
+                      {
+                        "number": 3,
+                        "period": "M"
+                      }
+                    ],
+                    "meterType": [
+                      "Type 0"
+                    ],
+                    "paymentOption": [
+                      "DD"
+                    ],
+                    "isFixed": false
+                  }
+                ],
+                "planName": "4Free",
+                "planStatus": "PUBLISHED",
+                "supplyArea": [
+                  {
+                    "name": "SA Power Networks",
+                    "id": "42"
+                  }
+                ],
+                "batchId": 1147425,
+                "retailerId": "24216",
+                "distributor": "SA Power Networks",
+                "genAvailable": true,
+                "tags": [
+                  "FH 4Free GA SR RTOU"
+                ],
+                "expiryDate": "2027-07-31",
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "Flow Power",
+                "planId": "FP11147437MRE1",
+                "retailerCode": "FP1",
+                "state": "SA",
+                "effectiveDate": "2026-07-22",
+                "meteringCost": [
+                  {
+                    "name": "Metering Cost",
+                    "description": "Charges  may  vary, for more information, please visit the retailer's website flowpower.com.au/residential",
+                    "min": "U"
+                  }
+                ]
+              },
+              "planId": "FP11147437MRE1",
+              "postcodes": {
+                "5097": 1
+              }
+            }
+          }
+        },
+        "raw_plan_data": {
+          "eligibility_restrictions": false,
+          "has_discounts": false,
+          "distributor": null,
+          "state": null,
+          "postcode": null
+        }
+      },
+      {
+        "plan_id": "FP11147438MRE1",
+        "plan_name": "4Free",
+        "retailer_name": "Flow Power",
+        "plan_type": "TOU",
+        "tariff_type": "TOU",
+        "monthly_cost": 360,
+        "quarterly_cost": 1280,
+        "annual_cost": 4280,
+        "peak_cost": 48.640995700000005,
+        "shoulder_cost": 24.320497850000002,
+        "off_peak_cost": null,
+        "daily_supply_charge": 250.2728525,
+        "detailed_time_blocks": [
+          {
+            "name": "4Free window",
+            "description": "4Free 11am-3pm local time",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "1100",
+                "end_time": "1459"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 0,
+                "unit_price_gst": 0.0,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              },
+              {
+                "unit_price": 44.219087,
+                "unit_price_gst": 48.640995700000005,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "All other times",
+            "description": "All other times",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "0000",
+                "end_time": "1059"
+              },
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "1500",
+                "end_time": "2359"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 44.219087,
+                "unit_price_gst": 48.640995700000005,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
+        "fees": {
+          "move_in_new_connection_fee": null,
+          "paper_bill_fee": null,
+          "payment_processing_fees": [
+            {
+              "feeType": "PPF",
+              "percent": 0.66,
+              "feeTerm": "P"
+            }
+          ],
+          "late_payment_fee": null,
+          "disconnection_fee_move_out": null,
+          "disconnection_fee_non_payment": null,
+          "reconnection_fee": 66.54,
+          "other_fees": [],
+          "credit_card_payment_fees": [],
+          "membership_fee": null
+        },
+        "membership_fee_annual": 0,
+        "membership_fee_quarterly": 0,
+        "membership_fee_monthly": 0,
+        "solar_feed_in_rate_r": 0,
+        "payment_options": [
+          "Direct Debit"
+        ],
+        "raw_plan_data_complete": {
+          "main_api_response": {
+            "planId": "FP11147438MRE1",
+            "planData": {
+              "tariffType": "TOU",
+              "contract": [
+                {
+                  "pricingModel": "TOU",
+                  "benefitPeriod": "Ongoing",
+                  "solarFit": [
+                    {
+                      "tariffUType": "timeVaryingTariffs",
+                      "scheme": "OTHER",
+                      "rate": 20,
+                      "displayName": "Happy Hour FiT first 15kWh",
+                      "timeVaryingTariffs": [
+                        {
+                          "period": "P1D",
+                          "type": "PEAK",
+                          "displayName": "Happy Hour FiT first 15kWh",
+                          "timeVariations": [
+                            {
+                              "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                              "startTime": "1730",
+                              "endTime": "2129"
+                            }
+                          ],
+                          "rates": [
+                            {
+                              "unitPrice": 20,
+                              "volume": 15,
+                              "measureUnit": "KWH",
+                              "rebate": true
+                            }
+                          ]
+                        }
+                      ],
+                      "type": "R"
+                    },
+                    {
+                      "tariffUType": "timeVaryingTariffs",
+                      "scheme": "OTHER",
+                      "rate": 5,
+                      "displayName": "Happy Hour FiT balance",
+                      "timeVaryingTariffs": [
+                        {
+                          "period": "P1D",
+                          "type": "PEAK",
+                          "displayName": "Happy Hour FiT balance",
+                          "timeVariations": [
+                            {
+                              "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                              "startTime": "1730",
+                              "endTime": "2129"
+                            }
+                          ],
+                          "rates": [
+                            {
+                              "unitPrice": 5,
+                              "rebate": true,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        }
+                      ],
+                      "type": "R"
+                    },
+                    {
+                      "tariffUType": "timeVaryingTariffs",
+                      "scheme": "OTHER",
+                      "rate": 0,
+                      "displayName": "Non-happy-hour FiT",
+                      "timeVaryingTariffs": [
+                        {
+                          "period": "P1D",
+                          "type": "OFF_PEAK",
+                          "displayName": "Non-happy-hour FiT",
+                          "timeVariations": [
+                            {
+                              "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                              "startTime": "2130",
+                              "endTime": "1729"
+                            }
+                          ],
+                          "rates": [
+                            {
+                              "unitPrice": 0,
+                              "rebate": true,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        }
+                      ],
+                      "type": "R"
+                    }
+                  ],
+                  "fee": [
+                    {
+                      "amount": 66.54,
+                      "feeType": "RecoF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "amount": 66.54,
+                      "feeType": "DiscoF",
+                      "feeTerm": "F"
+                    },
+                    {
+                      "feeType": "PPF",
+                      "percent": 0.66,
+                      "feeTerm": "P"
+                    }
+                  ],
+                  "termType": "N",
+                  "networkTariffType": "IS",
+                  "tariffPeriod": [
+                    {
+                      "touBlock": [
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 0,
+                              "volume": 32,
+                              "measureUnit": "KWH"
+                            },
+                            {
+                              "unitPrice": 44.219087,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 44.219087,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        }
+                      ],
+                      "blockPeriod": "P1D",
+                      "dailySupplyCharge": 227.520775
+                    }
+                  ],
+                  "greenCharge": [
+                    {
+                      "chargeType": "C"
+                    }
+                  ],
+                  "fuelType": "E",
+                  "meterType": [
+                    "Type 0"
+                  ],
+                  "paymentOption": [
+                    "DD"
+                  ]
+                }
+              ],
+              "planName": "4Free",
+              "retailerId": "24216",
+              "customerType": "R",
+              "fuelType": "E",
+              "retailerName": "Flow Power",
+              "planId": "FP11147438MRE1",
+              "retailerCode": "FP1",
+              "meteringCost": [
+                {
+                  "name": "Metering Cost",
+                  "min": "U"
+                }
+              ]
+            },
+            "planType": "E#R#FP11147438MRE1",
+            "postcode": 5097,
+            "pcr": {
+              "costs": {
+                "electricity": {
+                  "small": {
+                    "quarterly": {
+                      "noDiscounts": 660,
+                      "allDiscounts": 660,
+                      "guaranteedDiscount": 660
+                    },
+                    "monthly": {
+                      "noDiscounts": 180,
+                      "allDiscounts": 180,
+                      "guaranteedDiscount": 180
+                    },
+                    "yearly": {
+                      "noDiscounts": 2190,
+                      "allDiscounts": 2190,
+                      "guaranteedDiscount": 2190
+                    }
+                  },
+                  "large": {
+                    "quarterly": {
+                      "noDiscounts": 1280,
+                      "allDiscounts": 1280,
+                      "guaranteedDiscount": 1280
+                    },
+                    "monthly": {
+                      "noDiscounts": 360,
+                      "allDiscounts": 360,
+                      "guaranteedDiscount": 360
+                    },
+                    "yearly": {
+                      "noDiscounts": 4280,
+                      "allDiscounts": 4280,
+                      "guaranteedDiscount": 4280
+                    }
+                  },
+                  "medium": {
+                    "quarterly": {
+                      "noDiscounts": 960,
+                      "allDiscounts": 960,
+                      "guaranteedDiscount": 960
+                    },
+                    "monthly": {
+                      "noDiscounts": 270,
+                      "allDiscounts": 270,
+                      "guaranteedDiscount": 270
+                    },
+                    "yearly": {
+                      "noDiscounts": 3230,
+                      "allDiscounts": 3230,
+                      "guaranteedDiscount": 3230
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "detailed_api_response": {
+            "data": {
+              "planData": {
+                "planType": "M",
+                "tariffType": "TOU",
+                "planRef": "Flow Home 4Free Generally Available",
+                "contract": [
+                  {
+                    "pricingModel": "TOU",
+                    "benefitPeriod": "Ongoing",
+                    "coolingOffDays": 10,
+                    "solarFit": [
+                      {
+                        "tariffUType": "timeVaryingTariffs",
+                        "scheme": "OTHER",
+                        "rate": 20,
+                        "displayName": "Happy Hour FiT first 15kWh",
+                        "description": "Flow Power offers 20 cents per kWh exported from 5:30pm to 9:30pm for the first 15kWh, then 5 cents per kWh thereafter, and 0 cents per kWh exported all other times.",
+                        "timeVaryingTariffs": [
+                          {
+                            "period": "P1D",
+                            "type": "PEAK",
+                            "displayName": "Happy Hour FiT first 15kWh",
+                            "timeVariations": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "1730",
+                                "endTime": "2129"
+                              }
+                            ],
+                            "rates": [
+                              {
+                                "unitPrice": 20,
+                                "volume": 15,
+                                "measureUnit": "KWH",
+                                "rebate": true
+                              }
+                            ]
+                          }
+                        ],
+                        "type": "R"
+                      },
+                      {
+                        "tariffUType": "timeVaryingTariffs",
+                        "scheme": "OTHER",
+                        "rate": 5,
+                        "displayName": "Happy Hour FiT balance",
+                        "description": "Flow Power offers 20 cents per kWh exported from 5:30pm to 9:30pm for the first 15kWh, then 5 cents per kWh thereafter, and 0 cents per kWh exported all other times.",
+                        "timeVaryingTariffs": [
+                          {
+                            "period": "P1D",
+                            "type": "PEAK",
+                            "displayName": "Happy Hour FiT balance",
+                            "timeVariations": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "1730",
+                                "endTime": "2129"
+                              }
+                            ],
+                            "rates": [
+                              {
+                                "unitPrice": 5,
+                                "rebate": true,
+                                "measureUnit": "KWH"
+                              }
+                            ]
+                          }
+                        ],
+                        "type": "R"
+                      },
+                      {
+                        "tariffUType": "timeVaryingTariffs",
+                        "scheme": "OTHER",
+                        "rate": 0,
+                        "displayName": "Non-happy-hour FiT",
+                        "description": "Flow Power offers 20 cents per kWh exported from 5:30pm to 9:30pm for the first 15kWh, then 5 cents per kWh thereafter, and 0 cents per kWh exported all other times.",
+                        "timeVaryingTariffs": [
+                          {
+                            "period": "P1D",
+                            "type": "OFF_PEAK",
+                            "displayName": "Non-happy-hour FiT",
+                            "timeVariations": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "2130",
+                                "endTime": "1729"
+                              }
+                            ],
+                            "rates": [
+                              {
+                                "unitPrice": 0,
+                                "rebate": true,
+                                "measureUnit": "KWH"
+                              }
+                            ]
+                          }
+                        ],
+                        "type": "R"
+                      }
+                    ],
+                    "additionalFeeInformation": "Additional fees may apply. For more information, please visit the retailer's website at flowpower.com.au/residential/policies/",
+                    "fee": [
+                      {
+                        "description": "Reconnection fee",
+                        "amount": 66.54,
+                        "feeType": "RecoF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "Disconnection fee",
+                        "amount": 66.54,
+                        "feeType": "DiscoF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "Payment processing fee",
+                        "feeType": "PPF",
+                        "percent": 0.66,
+                        "feeTerm": "P"
+                      }
+                    ],
+                    "termType": "N",
+                    "networkTariffType": "IS",
+                    "tariffPeriod": [
+                      {
+                        "touBlock": [
+                          {
+                            "name": "4Free window",
+                            "description": "4Free 11am-3pm local time",
+                            "blockRate": [
+                              {
+                                "unitPrice": 0,
+                                "volume": 32,
+                                "measureUnit": "KWH"
+                              },
+                              {
+                                "unitPrice": 44.219087,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "OP",
+                            "timeOfUse": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "1100",
+                                "endTime": "1459"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "All other times",
+                            "description": "All other times",
+                            "blockRate": [
+                              {
+                                "unitPrice": 44.219087,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "P",
+                            "timeOfUse": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "0000",
+                                "endTime": "1059"
+                              },
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "1500",
+                                "endTime": "2359"
+                              }
+                            ]
+                          }
+                        ],
+                        "endDate": "2027-06-30",
+                        "blockPeriod": "P1D",
+                        "dailySupplyCharge": 227.520775,
+                        "startDate": "2026-07-01"
+                      }
+                    ],
+                    "variation": "Usage rates are not fixed. 4Free: 0c/kWh applies 11am-3pm for up to 8kWh/hr, capped at 32kWh over 4 hrs; excess is charged at the all other times rate. For more information about our pricing visit flowpower.com.au/residential/pricing/our-pricing/",
+                    "greenCharge": [
+                      {
+                        "name": "100% Green Power",
+                        "chargeType": "C",
+                        "description": "This offer has 100% green power included in the offer rates.",
+                        "option": [
+                          {
+                            "pctGreenPower": 100,
+                            "chargePercentage": 100,
+                            "chargeAmount": 0
+                          }
+                        ]
+                      }
+                    ],
+                    "fuelType": "E",
+                    "terms": "See Flow Power Market Retail Contract Agreement Terms at flowpower.com.au/residential/policies/",
+                    "timeDefinition": "LOCAL",
+                    "billFrequency": [
+                      {
+                        "number": 1,
+                        "period": "M"
+                      },
+                      {
+                        "number": 3,
+                        "period": "M"
+                      }
+                    ],
+                    "meterType": [
+                      "Type 0"
+                    ],
+                    "paymentOption": [
+                      "DD"
+                    ],
+                    "isFixed": false
+                  }
+                ],
+                "planName": "4Free",
+                "planStatus": "PUBLISHED",
+                "supplyArea": [
+                  {
+                    "name": "SA Power Networks",
+                    "id": "42"
+                  }
+                ],
+                "batchId": 1147425,
+                "retailerId": "24216",
+                "distributor": "SA Power Networks",
+                "genAvailable": true,
+                "tags": [
+                  "FH 4Free GA RTOU"
+                ],
+                "expiryDate": "2027-07-31",
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "Flow Power",
+                "planId": "FP11147438MRE1",
+                "retailerCode": "FP1",
+                "state": "SA",
+                "effectiveDate": "2026-07-22",
+                "meteringCost": [
+                  {
+                    "name": "Metering Cost",
+                    "description": "Charges may vary, for more information, please visit the retailer's website flowpower.com.au/residential",
+                    "min": "U"
+                  }
+                ]
+              },
+              "planId": "FP11147438MRE1",
               "postcodes": {
                 "5097": 1
               }
