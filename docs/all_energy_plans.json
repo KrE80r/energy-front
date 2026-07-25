@@ -1,10 +1,10 @@
 {
   "metadata": {
     "postcode": "5097",
-    "total_plans": 154,
+    "total_plans": 153,
     "filtered_out": 391,
     "extraction_date": "2025-06-26",
-    "tou_count": 154,
+    "tou_count": 153,
     "sr_count": 0,
     "other_count": 0,
     "filters_applied": "Excluded tariff types: SR, SRCL, TOUCL",
@@ -44611,598 +44611,6 @@
         }
       },
       {
-        "plan_id": "FP11147437MRE1",
-        "plan_name": "4Free",
-        "retailer_name": "Flow Power",
-        "plan_type": "TOU",
-        "tariff_type": "TOU",
-        "monthly_cost": 360,
-        "quarterly_cost": 1280,
-        "annual_cost": 4280,
-        "peak_cost": 48.640995700000005,
-        "shoulder_cost": 24.320497850000002,
-        "off_peak_cost": null,
-        "daily_supply_charge": 250.2728525,
-        "detailed_time_blocks": [
-          {
-            "name": "4Free window",
-            "description": "4Free 11am-3pm local time",
-            "time_of_use_period": "OP",
-            "time_periods": [
-              {
-                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                "start_time": "1100",
-                "end_time": "1459"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 0,
-                "unit_price_gst": 0.0,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              },
-              {
-                "unit_price": 44.219087,
-                "unit_price_gst": 48.640995700000005,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          },
-          {
-            "name": "All other times",
-            "description": "All other times",
-            "time_of_use_period": "P",
-            "time_periods": [
-              {
-                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                "start_time": "0000",
-                "end_time": "1059"
-              },
-              {
-                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                "start_time": "1500",
-                "end_time": "2359"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 44.219087,
-                "unit_price_gst": 48.640995700000005,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          }
-        ],
-        "fees": {
-          "move_in_new_connection_fee": null,
-          "paper_bill_fee": null,
-          "payment_processing_fees": [
-            {
-              "feeType": "PPF",
-              "percent": 0.66,
-              "feeTerm": "P"
-            }
-          ],
-          "late_payment_fee": null,
-          "disconnection_fee_move_out": null,
-          "disconnection_fee_non_payment": null,
-          "reconnection_fee": 66.539,
-          "other_fees": [],
-          "credit_card_payment_fees": [],
-          "membership_fee": null
-        },
-        "membership_fee_annual": 0,
-        "membership_fee_quarterly": 0,
-        "membership_fee_monthly": 0,
-        "solar_feed_in_rate_r": 0,
-        "payment_options": [
-          "Direct Debit"
-        ],
-        "raw_plan_data_complete": {
-          "main_api_response": {
-            "planId": "FP11147437MRE1",
-            "planData": {
-              "tariffType": "TOU",
-              "contract": [
-                {
-                  "pricingModel": "TOU",
-                  "benefitPeriod": "Ongoing",
-                  "solarFit": [
-                    {
-                      "tariffUType": "timeVaryingTariffs",
-                      "scheme": "OTHER",
-                      "rate": 20,
-                      "displayName": "Happy Hour FiT first 15kWh",
-                      "timeVaryingTariffs": [
-                        {
-                          "period": "P1D",
-                          "type": "PEAK",
-                          "displayName": "Happy Hour FiT first 15kWh",
-                          "timeVariations": [
-                            {
-                              "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                              "startTime": "1730",
-                              "endTime": "2129"
-                            }
-                          ],
-                          "rates": [
-                            {
-                              "unitPrice": 20,
-                              "volume": 15,
-                              "measureUnit": "KWH",
-                              "rebate": true
-                            }
-                          ]
-                        }
-                      ],
-                      "type": "R"
-                    },
-                    {
-                      "tariffUType": "timeVaryingTariffs",
-                      "scheme": "OTHER",
-                      "rate": 5,
-                      "displayName": "Happy Hour FiT balance",
-                      "timeVaryingTariffs": [
-                        {
-                          "period": "P1D",
-                          "type": "PEAK",
-                          "displayName": "Happy Hour FiT balance",
-                          "timeVariations": [
-                            {
-                              "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                              "startTime": "1730",
-                              "endTime": "2129"
-                            }
-                          ],
-                          "rates": [
-                            {
-                              "unitPrice": 5,
-                              "rebate": true,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        }
-                      ],
-                      "type": "R"
-                    },
-                    {
-                      "tariffUType": "timeVaryingTariffs",
-                      "scheme": "OTHER",
-                      "rate": 0,
-                      "displayName": "Non-happy-hour FiT",
-                      "timeVaryingTariffs": [
-                        {
-                          "period": "P1D",
-                          "type": "OFF_PEAK",
-                          "displayName": "Non-happy-hour FiT",
-                          "timeVariations": [
-                            {
-                              "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                              "startTime": "2130",
-                              "endTime": "1729"
-                            }
-                          ],
-                          "rates": [
-                            {
-                              "unitPrice": 0,
-                              "rebate": true,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        }
-                      ],
-                      "type": "R"
-                    }
-                  ],
-                  "fee": [
-                    {
-                      "amount": 66.539,
-                      "feeType": "RecoF",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "amount": 66.539,
-                      "feeType": "DiscoF",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "feeType": "PPF",
-                      "percent": 0.66,
-                      "feeTerm": "P"
-                    }
-                  ],
-                  "termType": "N",
-                  "networkTariffType": "IS",
-                  "tariffPeriod": [
-                    {
-                      "touBlock": [
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 0,
-                              "volume": 32,
-                              "measureUnit": "KWH"
-                            },
-                            {
-                              "unitPrice": 44.219087,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        },
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 44.219087,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        }
-                      ],
-                      "blockPeriod": "P1D",
-                      "dailySupplyCharge": 227.520775
-                    }
-                  ],
-                  "greenCharge": [
-                    {
-                      "chargeType": "C"
-                    }
-                  ],
-                  "fuelType": "E",
-                  "meterType": [
-                    "Type 0"
-                  ],
-                  "paymentOption": [
-                    "DD"
-                  ]
-                }
-              ],
-              "planName": "4Free",
-              "retailerId": "24216",
-              "customerType": "R",
-              "fuelType": "E",
-              "retailerName": "Flow Power",
-              "planId": "FP11147437MRE1",
-              "retailerCode": "FP1",
-              "meteringCost": [
-                {
-                  "name": "Metering Cost",
-                  "min": "U"
-                }
-              ]
-            },
-            "planType": "E#R#FP11147437MRE1",
-            "postcode": 5097,
-            "pcr": {
-              "costs": {
-                "electricity": {
-                  "small": {
-                    "quarterly": {
-                      "noDiscounts": 660,
-                      "allDiscounts": 660,
-                      "guaranteedDiscount": 660
-                    },
-                    "monthly": {
-                      "noDiscounts": 180,
-                      "allDiscounts": 180,
-                      "guaranteedDiscount": 180
-                    },
-                    "yearly": {
-                      "noDiscounts": 2190,
-                      "allDiscounts": 2190,
-                      "guaranteedDiscount": 2190
-                    }
-                  },
-                  "large": {
-                    "quarterly": {
-                      "noDiscounts": 1280,
-                      "allDiscounts": 1280,
-                      "guaranteedDiscount": 1280
-                    },
-                    "monthly": {
-                      "noDiscounts": 360,
-                      "allDiscounts": 360,
-                      "guaranteedDiscount": 360
-                    },
-                    "yearly": {
-                      "noDiscounts": 4280,
-                      "allDiscounts": 4280,
-                      "guaranteedDiscount": 4280
-                    }
-                  },
-                  "medium": {
-                    "quarterly": {
-                      "noDiscounts": 960,
-                      "allDiscounts": 960,
-                      "guaranteedDiscount": 960
-                    },
-                    "monthly": {
-                      "noDiscounts": 270,
-                      "allDiscounts": 270,
-                      "guaranteedDiscount": 270
-                    },
-                    "yearly": {
-                      "noDiscounts": 3230,
-                      "allDiscounts": 3230,
-                      "guaranteedDiscount": 3230
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "detailed_api_response": {
-            "data": {
-              "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
-                "planRef": "Flow Home 4Free Generally Available",
-                "contract": [
-                  {
-                    "pricingModel": "TOU",
-                    "benefitPeriod": "Ongoing",
-                    "coolingOffDays": 10,
-                    "solarFit": [
-                      {
-                        "tariffUType": "timeVaryingTariffs",
-                        "scheme": "OTHER",
-                        "rate": 20,
-                        "displayName": "Happy Hour FiT first 15kWh",
-                        "description": "Flow Power offers 20 cents per kWh exported from 5:30pm to 9:30pm for the first 15kWh, then 5 cents per kWh thereafter, and 0 cents per kWh exported all other times.",
-                        "timeVaryingTariffs": [
-                          {
-                            "period": "P1D",
-                            "type": "PEAK",
-                            "displayName": "Happy Hour FiT first 15kWh",
-                            "timeVariations": [
-                              {
-                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                                "startTime": "1730",
-                                "endTime": "2129"
-                              }
-                            ],
-                            "rates": [
-                              {
-                                "unitPrice": 20,
-                                "volume": 15,
-                                "measureUnit": "KWH",
-                                "rebate": true
-                              }
-                            ]
-                          }
-                        ],
-                        "type": "R"
-                      },
-                      {
-                        "tariffUType": "timeVaryingTariffs",
-                        "scheme": "OTHER",
-                        "rate": 5,
-                        "displayName": "Happy Hour FiT balance",
-                        "description": "Flow Power offers 20 cents per kWh exported from 5:30pm to 9:30pm for the first 15kWh, then 5 cents per kWh thereafter, and 0 cents per kWh exported all other times.",
-                        "timeVaryingTariffs": [
-                          {
-                            "period": "P1D",
-                            "type": "PEAK",
-                            "displayName": "Happy Hour FiT balance",
-                            "timeVariations": [
-                              {
-                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                                "startTime": "1730",
-                                "endTime": "2129"
-                              }
-                            ],
-                            "rates": [
-                              {
-                                "unitPrice": 5,
-                                "rebate": true,
-                                "measureUnit": "KWH"
-                              }
-                            ]
-                          }
-                        ],
-                        "type": "R"
-                      },
-                      {
-                        "tariffUType": "timeVaryingTariffs",
-                        "scheme": "OTHER",
-                        "rate": 0,
-                        "displayName": "Non-happy-hour FiT",
-                        "description": "Flow Power offers 20 cents per kWh exported from 5:30pm to 9:30pm for the first 15kWh, then 5 cents per kWh thereafter, and 0 cents per kWh exported all other times.",
-                        "timeVaryingTariffs": [
-                          {
-                            "period": "P1D",
-                            "type": "OFF_PEAK",
-                            "displayName": "Non-happy-hour FiT",
-                            "timeVariations": [
-                              {
-                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                                "startTime": "2130",
-                                "endTime": "1729"
-                              }
-                            ],
-                            "rates": [
-                              {
-                                "unitPrice": 0,
-                                "rebate": true,
-                                "measureUnit": "KWH"
-                              }
-                            ]
-                          }
-                        ],
-                        "type": "R"
-                      }
-                    ],
-                    "additionalFeeInformation": "Additional fees may apply. For more information, please visit the retailer's website at flowpower.com.au/residential/policies/",
-                    "fee": [
-                      {
-                        "description": "Reconnection fee",
-                        "amount": 66.539,
-                        "feeType": "RecoF",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "Disconnection fee",
-                        "amount": 66.539,
-                        "feeType": "DiscoF",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "Payment processing fee",
-                        "feeType": "PPF",
-                        "percent": 0.66,
-                        "feeTerm": "P"
-                      }
-                    ],
-                    "termType": "N",
-                    "networkTariffType": "IS",
-                    "tariffPeriod": [
-                      {
-                        "touBlock": [
-                          {
-                            "name": "4Free window",
-                            "description": "4Free 11am-3pm local time",
-                            "blockRate": [
-                              {
-                                "unitPrice": 0,
-                                "volume": 32,
-                                "measureUnit": "KWH"
-                              },
-                              {
-                                "unitPrice": 44.219087,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "OP",
-                            "timeOfUse": [
-                              {
-                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                                "startTime": "1100",
-                                "endTime": "1459"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "All other times",
-                            "description": "All other times",
-                            "blockRate": [
-                              {
-                                "unitPrice": 44.219087,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "P",
-                            "timeOfUse": [
-                              {
-                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                                "startTime": "0000",
-                                "endTime": "1059"
-                              },
-                              {
-                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
-                                "startTime": "1500",
-                                "endTime": "2359"
-                              }
-                            ]
-                          }
-                        ],
-                        "endDate": "2027-06-30",
-                        "blockPeriod": "P1D",
-                        "dailySupplyCharge": 227.520775,
-                        "startDate": "2026-07-01"
-                      }
-                    ],
-                    "variation": "Usage rates are not fixed. 4Free: 0c/kWh applies 11am-3pm for up to 8kWh/hr, capped at 32kWh over 4 hrs; excess is charged at the all other times rate. For more information about our pricing visit flowpower.com.au/residential/pricing/our-pricing/",
-                    "greenCharge": [
-                      {
-                        "name": "100% Green Power",
-                        "chargeType": "C",
-                        "description": "This offer has 100% green power included in the offer rates.",
-                        "option": [
-                          {
-                            "pctGreenPower": 100,
-                            "chargePercentage": 100,
-                            "chargeAmount": 0
-                          }
-                        ]
-                      }
-                    ],
-                    "fuelType": "E",
-                    "terms": "See Flow Power Market Retail Contract Agreement Terms at flowpower.com.au/residential/policies/",
-                    "timeDefinition": "LOCAL",
-                    "billFrequency": [
-                      {
-                        "number": 1,
-                        "period": "M"
-                      },
-                      {
-                        "number": 3,
-                        "period": "M"
-                      }
-                    ],
-                    "meterType": [
-                      "Type 0"
-                    ],
-                    "paymentOption": [
-                      "DD"
-                    ],
-                    "isFixed": false
-                  }
-                ],
-                "planName": "4Free",
-                "planStatus": "PUBLISHED",
-                "supplyArea": [
-                  {
-                    "name": "SA Power Networks",
-                    "id": "42"
-                  }
-                ],
-                "batchId": 1147425,
-                "retailerId": "24216",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
-                "tags": [
-                  "FH 4Free GA SR RTOU"
-                ],
-                "expiryDate": "2027-07-31",
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "Flow Power",
-                "planId": "FP11147437MRE1",
-                "retailerCode": "FP1",
-                "state": "SA",
-                "effectiveDate": "2026-07-22",
-                "meteringCost": [
-                  {
-                    "name": "Metering Cost",
-                    "description": "Charges  may  vary, for more information, please visit the retailer's website flowpower.com.au/residential",
-                    "min": "U"
-                  }
-                ]
-              },
-              "planId": "FP11147437MRE1",
-              "postcodes": {
-                "5097": 1
-              }
-            }
-          }
-        },
-        "raw_plan_data": {
-          "eligibility_restrictions": false,
-          "has_discounts": false,
-          "distributor": null,
-          "state": null,
-          "postcode": null
-        }
-      },
-      {
         "plan_id": "FP11147438MRE1",
         "plan_name": "4Free",
         "retailer_name": "Flow Power",
@@ -63631,7 +63039,7 @@
         }
       },
       {
-        "plan_id": "ORI1133220MRE1",
+        "plan_id": "ORI1133220MRE2",
         "plan_name": "Origin Affinity Variable Ongoing - Comparable",
         "retailer_name": "Origin Energy",
         "plan_type": "TOU",
@@ -63761,7 +63169,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "ORI1133220MRE1",
+            "planId": "ORI1133220MRE2",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -63906,6 +63314,11 @@
                       "chargeType": "A"
                     }
                   ],
+                  "incentive": [
+                    {
+                      "name": "Account Credit"
+                    }
+                  ],
                   "fuelType": "E",
                   "meterType": [
                     "Type 4",
@@ -63934,10 +63347,10 @@
               "thirdPartyName": "Comparable",
               "fuelType": "E",
               "retailerName": "Origin Energy",
-              "planId": "ORI1133220MRE1",
+              "planId": "ORI1133220MRE2",
               "retailerCode": "ORI"
             },
-            "planType": "E#R#ORI1133220MRE1",
+            "planType": "E#R#ORI1133220MRE2",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -64213,6 +63626,12 @@
                         ]
                       }
                     ],
+                    "incentive": [
+                      {
+                        "name": "Account Credit",
+                        "description": "$50 (inc GST) credit will be applied to your account after sign-up. You will see it on MyAccount and it will be applied to your electricity bill. Credit is not redeemable for cash."
+                      }
+                    ],
                     "fuelType": "E",
                     "terms": "Offer not available in all areas or properties connecting for first time. Residential customers only. Visit originenergy.com.au/2889/Terms-and-conditions for more.",
                     "timeDefinition": "LOCAL",
@@ -64255,13 +63674,13 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1133122,
+                "batchId": 1145435,
                 "retailerId": "9639",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "5",
-                  "E_AFFVAROG_5PC_VAR_SAPN_260701",
+                  "5 + $50",
+                  "E_AFFVAROG_5PC_VAR_SAPN_260723",
                   "Time of Use",
                   "RTOU_JULY2025"
                 ],
@@ -64270,12 +63689,12 @@
                 "thirdPartyName": "Comparable",
                 "fuelType": "E",
                 "retailerName": "Origin Energy",
-                "planId": "ORI1133220MRE1",
+                "planId": "ORI1133220MRE2",
                 "retailerCode": "ORI",
                 "state": "SA",
-                "effectiveDate": "2026-07-02"
+                "effectiveDate": "2026-07-24"
               },
-              "planId": "ORI1133220MRE1",
+              "planId": "ORI1133220MRE2",
               "postcodes": {
                 "5097": 1
               }
@@ -64291,7 +63710,7 @@
         }
       },
       {
-        "plan_id": "ORI1133242MRE1",
+        "plan_id": "ORI1133242MRE2",
         "plan_name": "Origin Affinity Variable Ongoing - Compare Club",
         "retailer_name": "Origin Energy",
         "plan_type": "TOU",
@@ -64421,7 +63840,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "ORI1133242MRE1",
+            "planId": "ORI1133242MRE2",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -64566,6 +63985,11 @@
                       "chargeType": "A"
                     }
                   ],
+                  "incentive": [
+                    {
+                      "name": "Account Credit"
+                    }
+                  ],
                   "fuelType": "E",
                   "meterType": [
                     "Type 4",
@@ -64594,10 +64018,10 @@
               "thirdPartyName": "Compare Club",
               "fuelType": "E",
               "retailerName": "Origin Energy",
-              "planId": "ORI1133242MRE1",
+              "planId": "ORI1133242MRE2",
               "retailerCode": "ORI"
             },
-            "planType": "E#R#ORI1133242MRE1",
+            "planType": "E#R#ORI1133242MRE2",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -64873,6 +64297,12 @@
                         ]
                       }
                     ],
+                    "incentive": [
+                      {
+                        "name": "Account Credit",
+                        "description": "$50 (inc GST) credit will be applied to your account after sign-up. You will see it on MyAccount and it will be applied to your electricity bill. Credit is not redeemable for cash."
+                      }
+                    ],
                     "fuelType": "E",
                     "terms": "Offer not available in all areas or properties connecting for first time. Residential customers only. Visit originenergy.com.au/2889/Terms-and-conditions for more.",
                     "timeDefinition": "LOCAL",
@@ -64915,13 +64345,13 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1133122,
+                "batchId": 1145534,
                 "retailerId": "9639",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "5",
-                  "E_AFFVAROG_5PC_VAR_SAPN_260701",
+                  "5 + $50",
+                  "E_AFFVAROG_5PC_VAR_SAPN_260723",
                   "Time of Use",
                   "RTOU_JULY2025"
                 ],
@@ -64930,12 +64360,12 @@
                 "thirdPartyName": "Compare Club",
                 "fuelType": "E",
                 "retailerName": "Origin Energy",
-                "planId": "ORI1133242MRE1",
+                "planId": "ORI1133242MRE2",
                 "retailerCode": "ORI",
                 "state": "SA",
-                "effectiveDate": "2026-07-02"
+                "effectiveDate": "2026-07-24"
               },
-              "planId": "ORI1133242MRE1",
+              "planId": "ORI1133242MRE2",
               "postcodes": {
                 "5097": 1
               }
@@ -66271,7 +65701,7 @@
         }
       },
       {
-        "plan_id": "ORI1133418MRE1",
+        "plan_id": "ORI1133418MRE2",
         "plan_name": "Origin Affinity Variable Ongoing - Go Switch",
         "retailer_name": "Origin Energy",
         "plan_type": "TOU",
@@ -66401,7 +65831,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "ORI1133418MRE1",
+            "planId": "ORI1133418MRE2",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -66546,6 +65976,11 @@
                       "chargeType": "A"
                     }
                   ],
+                  "incentive": [
+                    {
+                      "name": "Account Credit"
+                    }
+                  ],
                   "fuelType": "E",
                   "meterType": [
                     "Type 4",
@@ -66574,10 +66009,10 @@
               "thirdPartyName": "Go Switch",
               "fuelType": "E",
               "retailerName": "Origin Energy",
-              "planId": "ORI1133418MRE1",
+              "planId": "ORI1133418MRE2",
               "retailerCode": "ORI"
             },
-            "planType": "E#R#ORI1133418MRE1",
+            "planType": "E#R#ORI1133418MRE2",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -66853,6 +66288,12 @@
                         ]
                       }
                     ],
+                    "incentive": [
+                      {
+                        "name": "Account Credit",
+                        "description": "$50 (inc GST) credit will be applied to your account after sign-up. You will see it on MyAccount and it will be applied to your electricity bill. Credit is not redeemable for cash."
+                      }
+                    ],
                     "fuelType": "E",
                     "terms": "Offer not available in all areas or properties connecting for first time. Residential customers only. Visit originenergy.com.au/2889/Terms-and-conditions for more.",
                     "timeDefinition": "LOCAL",
@@ -66895,13 +66336,13 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1133122,
+                "batchId": 1145634,
                 "retailerId": "9639",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "5",
-                  "E_AFFVAROG_5PC_VAR_SAPN_260701",
+                  "5 + $50",
+                  "E_AFFVAROG_5PC_VAR_SAPN_260723",
                   "Time of Use",
                   "RTOU_JULY2025"
                 ],
@@ -66910,12 +66351,12 @@
                 "thirdPartyName": "Go Switch",
                 "fuelType": "E",
                 "retailerName": "Origin Energy",
-                "planId": "ORI1133418MRE1",
+                "planId": "ORI1133418MRE2",
                 "retailerCode": "ORI",
                 "state": "SA",
-                "effectiveDate": "2026-07-02"
+                "effectiveDate": "2026-07-24"
               },
-              "planId": "ORI1133418MRE1",
+              "planId": "ORI1133418MRE2",
               "postcodes": {
                 "5097": 1
               }
@@ -66931,7 +66372,7 @@
         }
       },
       {
-        "plan_id": "ORI1133479MRE1",
+        "plan_id": "ORI1133479MRE2",
         "plan_name": "Origin Affinity Variable Ongoing - iSelect",
         "retailer_name": "Origin Energy",
         "plan_type": "TOU",
@@ -67061,7 +66502,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "ORI1133479MRE1",
+            "planId": "ORI1133479MRE2",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -67206,6 +66647,11 @@
                       "chargeType": "A"
                     }
                   ],
+                  "incentive": [
+                    {
+                      "name": "Account Credit"
+                    }
+                  ],
                   "fuelType": "E",
                   "meterType": [
                     "Type 4",
@@ -67234,10 +66680,10 @@
               "thirdPartyName": "iSelect",
               "fuelType": "E",
               "retailerName": "Origin Energy",
-              "planId": "ORI1133479MRE1",
+              "planId": "ORI1133479MRE2",
               "retailerCode": "ORI"
             },
-            "planType": "E#R#ORI1133479MRE1",
+            "planType": "E#R#ORI1133479MRE2",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -67513,6 +66959,12 @@
                         ]
                       }
                     ],
+                    "incentive": [
+                      {
+                        "name": "Account Credit",
+                        "description": "$50 (inc GST) credit will be applied to your account after sign-up. You will see it on MyAccount and it will be applied to your electricity bill. Credit is not redeemable for cash."
+                      }
+                    ],
                     "fuelType": "E",
                     "terms": "Offer not available in all areas or properties connecting for first time. Residential customers only. Visit originenergy.com.au/2889/Terms-and-conditions for more.",
                     "timeDefinition": "LOCAL",
@@ -67555,13 +67007,13 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1133122,
+                "batchId": 1145634,
                 "retailerId": "9639",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "5",
-                  "E_AFFVAROG_5PC_VAR_SAPN_260701",
+                  "5 + $50",
+                  "E_AFFVAROG_5PC_VAR_SAPN_260723",
                   "Time of Use",
                   "RTOU_JULY2025"
                 ],
@@ -67570,12 +67022,12 @@
                 "thirdPartyName": "iSelect",
                 "fuelType": "E",
                 "retailerName": "Origin Energy",
-                "planId": "ORI1133479MRE1",
+                "planId": "ORI1133479MRE2",
                 "retailerCode": "ORI",
                 "state": "SA",
-                "effectiveDate": "2026-07-02"
+                "effectiveDate": "2026-07-24"
               },
-              "planId": "ORI1133479MRE1",
+              "planId": "ORI1133479MRE2",
               "postcodes": {
                 "5097": 1
               }
@@ -67591,7 +67043,7 @@
         }
       },
       {
-        "plan_id": "ORI1133705MRE1",
+        "plan_id": "ORI1133705MRE2",
         "plan_name": "Origin Affinity Variable Ongoing - Resi Conns",
         "retailer_name": "Origin Energy",
         "plan_type": "TOU",
@@ -67721,7 +67173,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "ORI1133705MRE1",
+            "planId": "ORI1133705MRE2",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -67866,6 +67318,11 @@
                       "chargeType": "A"
                     }
                   ],
+                  "incentive": [
+                    {
+                      "name": "Account Credit"
+                    }
+                  ],
                   "fuelType": "E",
                   "meterType": [
                     "Type 4",
@@ -67894,10 +67351,10 @@
               "thirdPartyName": "Residential Connections",
               "fuelType": "E",
               "retailerName": "Origin Energy",
-              "planId": "ORI1133705MRE1",
+              "planId": "ORI1133705MRE2",
               "retailerCode": "ORI"
             },
-            "planType": "E#R#ORI1133705MRE1",
+            "planType": "E#R#ORI1133705MRE2",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -68173,6 +67630,12 @@
                         ]
                       }
                     ],
+                    "incentive": [
+                      {
+                        "name": "Account Credit",
+                        "description": "$50 (inc GST) credit will be applied to your account after sign-up. You will see it on MyAccount and it will be applied to your electricity bill. Credit is not redeemable for cash."
+                      }
+                    ],
                     "fuelType": "E",
                     "terms": "Offer not available in all areas or properties connecting for first time. Residential customers only. Visit originenergy.com.au/2889/Terms-and-conditions for more.",
                     "timeDefinition": "LOCAL",
@@ -68215,13 +67678,13 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1133620,
+                "batchId": 1145634,
                 "retailerId": "9639",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "5",
-                  "E_AFFVAROG_5PC_VAR_SAPN_260701",
+                  "5 + $50",
+                  "E_AFFVAROG_5PC_VAR_SAPN_260723",
                   "Time of Use",
                   "RTOU_JULY2025"
                 ],
@@ -68230,12 +67693,12 @@
                 "thirdPartyName": "Residential Connections",
                 "fuelType": "E",
                 "retailerName": "Origin Energy",
-                "planId": "ORI1133705MRE1",
+                "planId": "ORI1133705MRE2",
                 "retailerCode": "ORI",
                 "state": "SA",
-                "effectiveDate": "2026-07-02"
+                "effectiveDate": "2026-07-24"
               },
-              "planId": "ORI1133705MRE1",
+              "planId": "ORI1133705MRE2",
               "postcodes": {
                 "5097": 1
               }
@@ -73548,7 +73011,7 @@
         }
       },
       {
-        "plan_id": "ORI724759MRE13",
+        "plan_id": "ORI724759MRE14",
         "plan_name": "Origin Affinity Variable Ongoing - My Connect",
         "retailer_name": "Origin Energy",
         "plan_type": "TOU",
@@ -73678,7 +73141,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "ORI724759MRE13",
+            "planId": "ORI724759MRE14",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -73823,6 +73286,11 @@
                       "chargeType": "A"
                     }
                   ],
+                  "incentive": [
+                    {
+                      "name": "Account Credit"
+                    }
+                  ],
                   "fuelType": "E",
                   "meterType": [
                     "Type 4",
@@ -73851,10 +73319,10 @@
               "thirdPartyName": "My Connect",
               "fuelType": "E",
               "retailerName": "Origin Energy",
-              "planId": "ORI724759MRE13",
+              "planId": "ORI724759MRE14",
               "retailerCode": "ORI"
             },
-            "planType": "E#R#ORI724759MRE13",
+            "planType": "E#R#ORI724759MRE14",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -74130,6 +73598,12 @@
                         ]
                       }
                     ],
+                    "incentive": [
+                      {
+                        "name": "Account Credit",
+                        "description": "$50 (inc GST) credit will be applied to your account after sign-up. You will see it on MyAccount and it will be applied to your electricity bill. Credit is not redeemable for cash."
+                      }
+                    ],
                     "fuelType": "E",
                     "terms": "Offer not available in all areas or properties connecting for first time. Residential customers only. Visit originenergy.com.au/2889/Terms-and-conditions for more.",
                     "timeDefinition": "LOCAL",
@@ -74172,13 +73646,13 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1133122,
+                "batchId": 1145834,
                 "retailerId": "9639",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "5",
-                  "E_AFFVAROG_5PC_VAR_SAPN_260701",
+                  "5 + $50",
+                  "E_AFFVAROG_5PC_VAR_SAPN_260723",
                   "Time of Use",
                   "RTOU_JULY2025"
                 ],
@@ -74187,12 +73661,12 @@
                 "thirdPartyName": "My Connect",
                 "fuelType": "E",
                 "retailerName": "Origin Energy",
-                "planId": "ORI724759MRE13",
+                "planId": "ORI724759MRE14",
                 "retailerCode": "ORI",
                 "state": "SA",
-                "effectiveDate": "2026-07-02"
+                "effectiveDate": "2026-07-24"
               },
-              "planId": "ORI724759MRE13",
+              "planId": "ORI724759MRE14",
               "postcodes": {
                 "5097": 1
               }
@@ -74208,7 +73682,7 @@
         }
       },
       {
-        "plan_id": "ORI909006MRE8",
+        "plan_id": "ORI909006MRE9",
         "plan_name": "Origin Affinity Variable Ongoing - One Click Switch",
         "retailer_name": "Origin Energy",
         "plan_type": "TOU",
@@ -74338,7 +73812,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "ORI909006MRE8",
+            "planId": "ORI909006MRE9",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -74483,6 +73957,11 @@
                       "chargeType": "A"
                     }
                   ],
+                  "incentive": [
+                    {
+                      "name": "Account Credit"
+                    }
+                  ],
                   "fuelType": "E",
                   "meterType": [
                     "Type 4",
@@ -74511,10 +73990,10 @@
               "thirdPartyName": "One Click Switch",
               "fuelType": "E",
               "retailerName": "Origin Energy",
-              "planId": "ORI909006MRE8",
+              "planId": "ORI909006MRE9",
               "retailerCode": "ORI"
             },
-            "planType": "E#R#ORI909006MRE8",
+            "planType": "E#R#ORI909006MRE9",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -74790,6 +74269,12 @@
                         ]
                       }
                     ],
+                    "incentive": [
+                      {
+                        "name": "Account Credit",
+                        "description": "$50 (inc GST) credit will be applied to your account after sign-up. You will see it on MyAccount and it will be applied to your electricity bill. Credit is not redeemable for cash."
+                      }
+                    ],
                     "fuelType": "E",
                     "terms": "Offer not available in all areas or properties connecting for first time. Residential customers only. Visit originenergy.com.au/2889/Terms-and-conditions for more.",
                     "timeDefinition": "LOCAL",
@@ -74832,13 +74317,13 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1133122,
+                "batchId": 1145834,
                 "retailerId": "9639",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "5",
-                  "E_AFFVAROG_5PC_VAR_SAPN_260701",
+                  "5 + $50",
+                  "E_AFFVAROG_5PC_VAR_SAPN_260723",
                   "Time of Use",
                   "RTOU_JULY2025"
                 ],
@@ -74847,12 +74332,12 @@
                 "thirdPartyName": "One Click Switch",
                 "fuelType": "E",
                 "retailerName": "Origin Energy",
-                "planId": "ORI909006MRE8",
+                "planId": "ORI909006MRE9",
                 "retailerCode": "ORI",
                 "state": "SA",
-                "effectiveDate": "2026-07-02"
+                "effectiveDate": "2026-07-24"
               },
-              "planId": "ORI909006MRE8",
+              "planId": "ORI909006MRE9",
               "postcodes": {
                 "5097": 1
               }
