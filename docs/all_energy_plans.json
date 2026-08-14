@@ -24894,7 +24894,6 @@
           "main_api_response": {
             "planId": "ENE1147744SRE1",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -25069,13 +25068,14 @@
                   ]
                 }
               ],
-              "planName": "Standing Offer Solar Sharer",
-              "retailerId": "9637",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "EnergyAustralia",
               "planId": "ENE1147744SRE1",
-              "retailerCode": "ENE"
+              "planName": "Standing Offer Solar Sharer",
+              "retailerCode": "ENE",
+              "retailerId": "9637",
+              "retailerName": "EnergyAustralia",
+              "tariffType": "TOU"
             },
             "planType": "E#R#ENE1147744SRE1",
             "postcode": 5097,
@@ -25140,8 +25140,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "S",
-                "tariffType": "TOU",
+                "batchId": 1147728,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -25409,18 +25408,26 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-08-02",
+                "expiryDate": "2026-09-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "ENE1147744SRE1",
                 "planName": "Standing Offer Solar Sharer",
                 "planStatus": "PUBLISHED",
+                "planType": "S",
+                "retailerCode": "ENE",
+                "retailerId": "9637",
+                "retailerName": "EnergyAustralia",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1147728,
-                "retailerId": "9637",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "SE_SSO_SA_T7",
                   "SSO",
@@ -25428,13 +25435,7 @@
                   "T7",
                   "RESI"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "EnergyAustralia",
-                "planId": "ENE1147744SRE1",
-                "retailerCode": "ENE",
-                "state": "SA",
-                "effectiveDate": "2026-08-02"
+                "tariffType": "TOU"
               },
               "planId": "ENE1147744SRE1",
               "postcodes": {
@@ -25575,7 +25576,6 @@
           "main_api_response": {
             "planId": "ENE247405SRE29",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -25729,13 +25729,14 @@
                   ]
                 }
               ],
-              "planName": "Standing Offer (Home)",
-              "retailerId": "9637",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "EnergyAustralia",
               "planId": "ENE247405SRE29",
-              "retailerCode": "ENE"
+              "planName": "Standing Offer (Home)",
+              "retailerCode": "ENE",
+              "retailerId": "9637",
+              "retailerName": "EnergyAustralia",
+              "tariffType": "TOU"
             },
             "planType": "E#R#ENE247405SRE29",
             "postcode": 5097,
@@ -25800,8 +25801,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "S",
-                "tariffType": "TOU",
+                "batchId": 1064394,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -26032,18 +26032,26 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-07-01",
+                "expiryDate": "2026-09-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "ENE247405SRE29",
                 "planName": "Standing Offer (Home)",
                 "planStatus": "PUBLISHED",
+                "planType": "S",
+                "retailerCode": "ENE",
+                "retailerId": "9637",
+                "retailerName": "EnergyAustralia",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1064394,
-                "retailerId": "9637",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "SE_RSOT_SA_T7",
                   "RSOT",
@@ -26051,13 +26059,7 @@
                   "T7",
                   "RESI"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "EnergyAustralia",
-                "planId": "ENE247405SRE29",
-                "retailerCode": "ENE",
-                "state": "SA",
-                "effectiveDate": "2026-07-01"
+                "tariffType": "TOU"
               },
               "planId": "ENE247405SRE29",
               "postcodes": {
@@ -26198,7 +26200,6 @@
           "main_api_response": {
             "planId": "ENE360412MRE27",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -26348,13 +26349,14 @@
                   ]
                 }
               ],
-              "planName": "Solar Max",
-              "retailerId": "9637",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "EnergyAustralia",
               "planId": "ENE360412MRE27",
-              "retailerCode": "ENE"
+              "planName": "Solar Max",
+              "retailerCode": "ENE",
+              "retailerId": "9637",
+              "retailerName": "EnergyAustralia",
+              "tariffType": "TOU"
             },
             "planType": "E#R#ENE360412MRE27",
             "postcode": 5097,
@@ -26419,8 +26421,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1064394,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -26647,18 +26648,26 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-07-01",
+                "expiryDate": "2026-09-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "ENE360412MRE27",
                 "planName": "Solar Max",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "ENE",
+                "retailerId": "9637",
+                "retailerName": "EnergyAustralia",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1064394,
-                "retailerId": "9637",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "SE_SMAX_SA_T7",
                   "SMAX",
@@ -26666,13 +26675,7 @@
                   "T7",
                   "RESI"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "EnergyAustralia",
-                "planId": "ENE360412MRE27",
-                "retailerCode": "ENE",
-                "state": "SA",
-                "effectiveDate": "2026-07-01"
+                "tariffType": "TOU"
               },
               "planId": "ENE360412MRE27",
               "postcodes": {
@@ -26813,7 +26816,6 @@
           "main_api_response": {
             "planId": "ENE379838MRE23",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -26977,13 +26979,14 @@
                   ]
                 }
               ],
-              "planName": "Flexi Plan",
-              "retailerId": "9637",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "EnergyAustralia",
               "planId": "ENE379838MRE23",
-              "retailerCode": "ENE"
+              "planName": "Flexi Plan",
+              "retailerCode": "ENE",
+              "retailerId": "9637",
+              "retailerName": "EnergyAustralia",
+              "tariffType": "TOU"
             },
             "planType": "E#R#ENE379838MRE23",
             "postcode": 5097,
@@ -27048,8 +27051,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1064394,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -27292,18 +27294,26 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-07-01",
+                "expiryDate": "2026-09-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "ENE379838MRE23",
                 "planName": "Flexi Plan",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "ENE",
+                "retailerId": "9637",
+                "retailerName": "EnergyAustralia",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1064394,
-                "retailerId": "9637",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "SE_BP2H_SA_T7",
                   "BP2H",
@@ -27311,13 +27321,7 @@
                   "T7",
                   "RESI"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "EnergyAustralia",
-                "planId": "ENE379838MRE23",
-                "retailerCode": "ENE",
-                "state": "SA",
-                "effectiveDate": "2026-07-01"
+                "tariffType": "TOU"
               },
               "planId": "ENE379838MRE23",
               "postcodes": {
@@ -27458,7 +27462,6 @@
           "main_api_response": {
             "planId": "ENE676768MRE11",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -27629,13 +27632,14 @@
                   ]
                 }
               ],
-              "planName": "Balance Plan - Third Party Offer",
-              "retailerId": "9637",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "EnergyAustralia",
               "planId": "ENE676768MRE11",
-              "retailerCode": "ENE"
+              "planName": "Balance Plan - Third Party Offer",
+              "retailerCode": "ENE",
+              "retailerId": "9637",
+              "retailerName": "EnergyAustralia",
+              "tariffType": "TOU"
             },
             "planType": "E#R#ENE676768MRE11",
             "postcode": 5097,
@@ -27700,8 +27704,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1064394,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -27951,18 +27954,26 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-07-01",
+                "expiryDate": "2026-09-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "ENE676768MRE11",
                 "planName": "Balance Plan - Third Party Offer",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "ENE",
+                "retailerId": "9637",
+                "retailerName": "EnergyAustralia",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1064394,
-                "retailerId": "9637",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "SE_3PP_SA_T7",
                   "3PP",
@@ -27970,13 +27981,7 @@
                   "T7",
                   "RESI"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "EnergyAustralia",
-                "planId": "ENE676768MRE11",
-                "retailerCode": "ENE",
-                "state": "SA",
-                "effectiveDate": "2026-07-01"
+                "tariffType": "TOU"
               },
               "planId": "ENE676768MRE11",
               "postcodes": {
@@ -28117,7 +28122,6 @@
           "main_api_response": {
             "planId": "ENE676773MRE11",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -28278,13 +28282,14 @@
                   ]
                 }
               ],
-              "planName": "Balance Plan - Connect Now",
-              "retailerId": "9637",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "EnergyAustralia",
               "planId": "ENE676773MRE11",
-              "retailerCode": "ENE"
+              "planName": "Balance Plan - Connect Now",
+              "retailerCode": "ENE",
+              "retailerId": "9637",
+              "retailerName": "EnergyAustralia",
+              "tariffType": "TOU"
             },
             "planType": "E#R#ENE676773MRE11",
             "postcode": 5097,
@@ -28349,8 +28354,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1064394,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -28589,18 +28593,26 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-07-01",
+                "expiryDate": "2026-09-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "ENE676773MRE11",
                 "planName": "Balance Plan - Connect Now",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "ENE",
+                "retailerId": "9637",
+                "retailerName": "EnergyAustralia",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1064394,
-                "retailerId": "9637",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "SE_TAPRC_SA_T7",
                   "TAPRC",
@@ -28608,13 +28620,7 @@
                   "T7",
                   "RESI"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "EnergyAustralia",
-                "planId": "ENE676773MRE11",
-                "retailerCode": "ENE",
-                "state": "SA",
-                "effectiveDate": "2026-07-01"
+                "tariffType": "TOU"
               },
               "planId": "ENE676773MRE11",
               "postcodes": {
@@ -28755,7 +28761,6 @@
           "main_api_response": {
             "planId": "ENE681811MRE12",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -28919,13 +28924,14 @@
                   ]
                 }
               ],
-              "planName": "Rate Fix",
-              "retailerId": "9637",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "EnergyAustralia",
               "planId": "ENE681811MRE12",
-              "retailerCode": "ENE"
+              "planName": "Rate Fix",
+              "retailerCode": "ENE",
+              "retailerId": "9637",
+              "retailerName": "EnergyAustralia",
+              "tariffType": "TOU"
             },
             "planType": "E#R#ENE681811MRE12",
             "postcode": 5097,
@@ -28990,8 +28996,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1064394,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -29233,18 +29238,26 @@
                     "isFixed": true
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-07-01",
+                "expiryDate": "2026-09-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "ENE681811MRE12",
                 "planName": "Rate Fix",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "ENE",
+                "retailerId": "9637",
+                "retailerName": "EnergyAustralia",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1064394,
-                "retailerId": "9637",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "SE_RF2H_SA_T7",
                   "RF2H",
@@ -29252,13 +29265,7 @@
                   "T7",
                   "RESI"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "EnergyAustralia",
-                "planId": "ENE681811MRE12",
-                "retailerCode": "ENE",
-                "state": "SA",
-                "effectiveDate": "2026-07-01"
+                "tariffType": "TOU"
               },
               "planId": "ENE681811MRE12",
               "postcodes": {
@@ -29399,7 +29406,6 @@
           "main_api_response": {
             "planId": "ENE996206MRE4",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -29560,13 +29566,14 @@
                   ]
                 }
               ],
-              "planName": "Balance Plan - My Connect",
-              "retailerId": "9637",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "EnergyAustralia",
               "planId": "ENE996206MRE4",
-              "retailerCode": "ENE"
+              "planName": "Balance Plan - My Connect",
+              "retailerCode": "ENE",
+              "retailerId": "9637",
+              "retailerName": "EnergyAustralia",
+              "tariffType": "TOU"
             },
             "planType": "E#R#ENE996206MRE4",
             "postcode": 5097,
@@ -29631,8 +29638,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1064394,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -29871,18 +29877,26 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-07-01",
+                "expiryDate": "2026-09-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "ENE996206MRE4",
                 "planName": "Balance Plan - My Connect",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "ENE",
+                "retailerId": "9637",
+                "retailerName": "EnergyAustralia",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1064394,
-                "retailerId": "9637",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "SE_TAPRC1_SA_T7",
                   "TAPRC1",
@@ -29890,13 +29904,7 @@
                   "T7",
                   "RESI"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "EnergyAustralia",
-                "planId": "ENE996206MRE4",
-                "retailerCode": "ENE",
-                "state": "SA",
-                "effectiveDate": "2026-07-01"
+                "tariffType": "TOU"
               },
               "planId": "ENE996206MRE4",
               "postcodes": {
@@ -30037,7 +30045,6 @@
           "main_api_response": {
             "planId": "ENE996210MRE4",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -30198,13 +30205,14 @@
                   ]
                 }
               ],
-              "planName": "Balance Plan - Residential Connections",
-              "retailerId": "9637",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "EnergyAustralia",
               "planId": "ENE996210MRE4",
-              "retailerCode": "ENE"
+              "planName": "Balance Plan - Residential Connections",
+              "retailerCode": "ENE",
+              "retailerId": "9637",
+              "retailerName": "EnergyAustralia",
+              "tariffType": "TOU"
             },
             "planType": "E#R#ENE996210MRE4",
             "postcode": 5097,
@@ -30269,8 +30277,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1064394,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -30509,18 +30516,26 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-07-01",
+                "expiryDate": "2026-09-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "ENE996210MRE4",
                 "planName": "Balance Plan - Residential Connections",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "ENE",
+                "retailerId": "9637",
+                "retailerName": "EnergyAustralia",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1064394,
-                "retailerId": "9637",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "SE_TAPRC2_SA_T7",
                   "TAPRC2",
@@ -30528,13 +30543,7 @@
                   "T7",
                   "RESI"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "EnergyAustralia",
-                "planId": "ENE996210MRE4",
-                "retailerCode": "ENE",
-                "state": "SA",
-                "effectiveDate": "2026-07-01"
+                "tariffType": "TOU"
               },
               "planId": "ENE996210MRE4",
               "postcodes": {
@@ -81481,18 +81490,18 @@
         }
       },
       {
-        "plan_id": "OVO704348MRE23",
+        "plan_id": "OVO704348MRE24",
         "plan_name": "The Basic Free 4 Plan",
         "retailer_name": "OVO Energy",
         "plan_type": "TOU",
         "tariff_type": "TOU",
         "monthly_cost": 320,
-        "quarterly_cost": 1140,
-        "annual_cost": 3810,
+        "quarterly_cost": 1150,
+        "annual_cost": 3840,
         "peak_cost": 44.005500000000005,
         "shoulder_cost": 0.0,
         "off_peak_cost": null,
-        "daily_supply_charge": 207.95775000000003,
+        "daily_supply_charge": 217.40565000000004,
         "detailed_time_blocks": [
           {
             "name": "Peak",
@@ -81567,8 +81576,9 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "OVO704348MRE23",
+            "planId": "OVO704348MRE24",
             "planData": {
+              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -81656,7 +81666,7 @@
                         }
                       ],
                       "blockPeriod": "P1D",
-                      "dailySupplyCharge": 189.0525
+                      "dailySupplyCharge": 197.6415
                     }
                   ],
                   "greenCharge": [
@@ -81684,25 +81694,24 @@
                   ]
                 }
               ],
+              "planName": "The Basic Free 4 Plan",
+              "retailerId": "1085327",
               "customerType": "R",
               "fuelType": "E",
-              "planId": "OVO704348MRE23",
-              "planName": "The Basic Free 4 Plan",
-              "retailerCode": "OVO",
-              "retailerId": "1085327",
               "retailerName": "OVO Energy",
-              "tariffType": "TOU"
+              "planId": "OVO704348MRE24",
+              "retailerCode": "OVO"
             },
-            "planType": "E#R#OVO704348MRE23",
+            "planType": "E#R#OVO704348MRE24",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
                   "small": {
                     "quarterly": {
-                      "noDiscounts": 570,
-                      "allDiscounts": 570,
-                      "guaranteedDiscount": 570
+                      "noDiscounts": 580,
+                      "allDiscounts": 580,
+                      "guaranteedDiscount": 580
                     },
                     "monthly": {
                       "noDiscounts": 160,
@@ -81710,16 +81719,16 @@
                       "guaranteedDiscount": 160
                     },
                     "yearly": {
-                      "noDiscounts": 1910,
-                      "allDiscounts": 1910,
-                      "guaranteedDiscount": 1910
+                      "noDiscounts": 1950,
+                      "allDiscounts": 1950,
+                      "guaranteedDiscount": 1950
                     }
                   },
                   "large": {
                     "quarterly": {
-                      "noDiscounts": 1140,
-                      "allDiscounts": 1140,
-                      "guaranteedDiscount": 1140
+                      "noDiscounts": 1150,
+                      "allDiscounts": 1150,
+                      "guaranteedDiscount": 1150
                     },
                     "monthly": {
                       "noDiscounts": 320,
@@ -81727,16 +81736,16 @@
                       "guaranteedDiscount": 320
                     },
                     "yearly": {
-                      "noDiscounts": 3810,
-                      "allDiscounts": 3810,
-                      "guaranteedDiscount": 3810
+                      "noDiscounts": 3840,
+                      "allDiscounts": 3840,
+                      "guaranteedDiscount": 3840
                     }
                   },
                   "medium": {
                     "quarterly": {
-                      "noDiscounts": 850,
-                      "allDiscounts": 850,
-                      "guaranteedDiscount": 850
+                      "noDiscounts": 860,
+                      "allDiscounts": 860,
+                      "guaranteedDiscount": 860
                     },
                     "monthly": {
                       "noDiscounts": 240,
@@ -81744,9 +81753,9 @@
                       "guaranteedDiscount": 240
                     },
                     "yearly": {
-                      "noDiscounts": 2850,
-                      "allDiscounts": 2850,
-                      "guaranteedDiscount": 2850
+                      "noDiscounts": 2890,
+                      "allDiscounts": 2890,
+                      "guaranteedDiscount": 2890
                     }
                   }
                 }
@@ -81756,7 +81765,8 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "batchId": 1139991,
+                "planType": "M",
+                "tariffType": "TOU",
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -81878,7 +81888,7 @@
                         ],
                         "endDate": "2019-06-30",
                         "blockPeriod": "P1D",
-                        "dailySupplyCharge": 189.0525,
+                        "dailySupplyCharge": 197.6415,
                         "startDate": "2019-07-01"
                       }
                     ],
@@ -81928,32 +81938,30 @@
                     "isFixed": false
                   }
                 ],
-                "customerType": "R",
-                "distributor": "SA Power Networks",
-                "effectiveDate": "2026-07-14",
-                "expiryDate": "2026-08-14",
-                "fuelType": "E",
-                "genAvailable": true,
-                "planId": "OVO704348MRE23",
                 "planName": "The Basic Free 4 Plan",
                 "planStatus": "PUBLISHED",
-                "planType": "M",
-                "retailerCode": "OVO",
-                "retailerId": "1085327",
-                "retailerName": "OVO Energy",
-                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
+                "batchId": 1155552,
+                "retailerId": "1085327",
+                "distributor": "SA Power Networks",
+                "genAvailable": true,
                 "tags": [
-                  "MO_V_BasicFree4Plan_SR_SAPOWER_JUL2026v2"
+                  "MO_V_BasicFree4Plan_SR_SAPOWER_AUG2026"
                 ],
-                "tariffType": "TOU"
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "OVO Energy",
+                "planId": "OVO704348MRE24",
+                "retailerCode": "OVO",
+                "state": "SA",
+                "effectiveDate": "2026-08-14"
               },
-              "planId": "OVO704348MRE23",
+              "planId": "OVO704348MRE24",
               "postcodes": {
                 "5097": 1
               }
@@ -81969,18 +81977,18 @@
         }
       },
       {
-        "plan_id": "OVO704350MRE24",
+        "plan_id": "OVO704350MRE25",
         "plan_name": "The Basic Free 4 Plan",
         "retailer_name": "OVO Energy",
         "plan_type": "TOU",
         "tariff_type": "TOU",
         "monthly_cost": 350,
-        "quarterly_cost": 1250,
-        "annual_cost": 4210,
+        "quarterly_cost": 1260,
+        "annual_cost": 4240,
         "peak_cost": 59.032050000000005,
         "shoulder_cost": 34.17645,
         "off_peak_cost": 17.890950000000004,
-        "daily_supply_charge": 207.95775000000003,
+        "daily_supply_charge": 217.40565000000004,
         "detailed_time_blocks": [
           {
             "name": "Peak",
@@ -82104,8 +82112,9 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "OVO704350MRE24",
+            "planId": "OVO704350MRE25",
             "planData": {
+              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -82204,7 +82213,7 @@
                         }
                       ],
                       "blockPeriod": "P1D",
-                      "dailySupplyCharge": 189.0525
+                      "dailySupplyCharge": 197.6415
                     }
                   ],
                   "greenCharge": [
@@ -82232,25 +82241,24 @@
                   ]
                 }
               ],
+              "planName": "The Basic Free 4 Plan",
+              "retailerId": "1085327",
               "customerType": "R",
               "fuelType": "E",
-              "planId": "OVO704350MRE24",
-              "planName": "The Basic Free 4 Plan",
-              "retailerCode": "OVO",
-              "retailerId": "1085327",
               "retailerName": "OVO Energy",
-              "tariffType": "TOU"
+              "planId": "OVO704350MRE25",
+              "retailerCode": "OVO"
             },
-            "planType": "E#R#OVO704350MRE24",
+            "planType": "E#R#OVO704350MRE25",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
                   "small": {
                     "quarterly": {
-                      "noDiscounts": 620,
-                      "allDiscounts": 620,
-                      "guaranteedDiscount": 620
+                      "noDiscounts": 630,
+                      "allDiscounts": 630,
+                      "guaranteedDiscount": 630
                     },
                     "monthly": {
                       "noDiscounts": 170,
@@ -82258,16 +82266,16 @@
                       "guaranteedDiscount": 170
                     },
                     "yearly": {
-                      "noDiscounts": 2060,
-                      "allDiscounts": 2060,
-                      "guaranteedDiscount": 2060
+                      "noDiscounts": 2100,
+                      "allDiscounts": 2100,
+                      "guaranteedDiscount": 2100
                     }
                   },
                   "large": {
                     "quarterly": {
-                      "noDiscounts": 1250,
-                      "allDiscounts": 1250,
-                      "guaranteedDiscount": 1250
+                      "noDiscounts": 1260,
+                      "allDiscounts": 1260,
+                      "guaranteedDiscount": 1260
                     },
                     "monthly": {
                       "noDiscounts": 350,
@@ -82275,16 +82283,16 @@
                       "guaranteedDiscount": 350
                     },
                     "yearly": {
-                      "noDiscounts": 4210,
-                      "allDiscounts": 4210,
-                      "guaranteedDiscount": 4210
+                      "noDiscounts": 4240,
+                      "allDiscounts": 4240,
+                      "guaranteedDiscount": 4240
                     }
                   },
                   "medium": {
                     "quarterly": {
-                      "noDiscounts": 930,
-                      "allDiscounts": 930,
-                      "guaranteedDiscount": 930
+                      "noDiscounts": 940,
+                      "allDiscounts": 940,
+                      "guaranteedDiscount": 940
                     },
                     "monthly": {
                       "noDiscounts": 260,
@@ -82292,9 +82300,9 @@
                       "guaranteedDiscount": 260
                     },
                     "yearly": {
-                      "noDiscounts": 3130,
-                      "allDiscounts": 3130,
-                      "guaranteedDiscount": 3130
+                      "noDiscounts": 3160,
+                      "allDiscounts": 3160,
+                      "guaranteedDiscount": 3160
                     }
                   }
                 }
@@ -82304,7 +82312,8 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "batchId": 1139991,
+                "planType": "M",
+                "tariffType": "TOU",
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -82462,7 +82471,7 @@
                         ],
                         "endDate": "2022-06-30",
                         "blockPeriod": "P1D",
-                        "dailySupplyCharge": 189.0525,
+                        "dailySupplyCharge": 197.6415,
                         "startDate": "2021-07-01"
                       }
                     ],
@@ -82512,32 +82521,30 @@
                     "isFixed": false
                   }
                 ],
-                "customerType": "R",
-                "distributor": "SA Power Networks",
-                "effectiveDate": "2026-07-14",
-                "expiryDate": "2026-08-14",
-                "fuelType": "E",
-                "genAvailable": true,
-                "planId": "OVO704350MRE24",
                 "planName": "The Basic Free 4 Plan",
                 "planStatus": "PUBLISHED",
-                "planType": "M",
-                "retailerCode": "OVO",
-                "retailerId": "1085327",
-                "retailerName": "OVO Energy",
-                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
+                "batchId": 1155552,
+                "retailerId": "1085327",
+                "distributor": "SA Power Networks",
+                "genAvailable": true,
                 "tags": [
-                  "MO_V_BasicFree4Plan_TOU_SAPOWER_JUL2026v2"
+                  "MO_V_BasicFree4Plan_TOU_SAPOWER_AUG2026"
                 ],
-                "tariffType": "TOU"
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "OVO Energy",
+                "planId": "OVO704350MRE25",
+                "retailerCode": "OVO",
+                "state": "SA",
+                "effectiveDate": "2026-08-14"
               },
-              "planId": "OVO704350MRE24",
+              "planId": "OVO704350MRE25",
               "postcodes": {
                 "5097": 1
               }
@@ -83071,18 +83078,18 @@
         }
       },
       {
-        "plan_id": "OVO704473MRE23",
+        "plan_id": "OVO704473MRE24",
         "plan_name": "The Free 4 Plan",
         "retailer_name": "OVO Energy",
         "plan_type": "TOU",
         "tariff_type": "TOU",
         "monthly_cost": 300,
-        "quarterly_cost": 1080,
-        "annual_cost": 3630,
+        "quarterly_cost": 1090,
+        "annual_cost": 3660,
         "peak_cost": 41.910000000000004,
         "shoulder_cost": 0.0,
         "off_peak_cost": null,
-        "daily_supply_charge": 198.05500000000004,
+        "daily_supply_charge": 207.053,
         "detailed_time_blocks": [
           {
             "name": "Peak",
@@ -83156,8 +83163,9 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "OVO704473MRE23",
+            "planId": "OVO704473MRE24",
             "planData": {
+              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -83245,7 +83253,7 @@
                         }
                       ],
                       "blockPeriod": "P1D",
-                      "dailySupplyCharge": 180.05
+                      "dailySupplyCharge": 188.23
                     }
                   ],
                   "greenCharge": [
@@ -83271,25 +83279,24 @@
                   ]
                 }
               ],
+              "planName": "The Free 4 Plan",
+              "retailerId": "1085327",
               "customerType": "R",
               "fuelType": "E",
-              "planId": "OVO704473MRE23",
-              "planName": "The Free 4 Plan",
-              "retailerCode": "OVO",
-              "retailerId": "1085327",
               "retailerName": "OVO Energy",
-              "tariffType": "TOU"
+              "planId": "OVO704473MRE24",
+              "retailerCode": "OVO"
             },
-            "planType": "E#R#OVO704473MRE23",
+            "planType": "E#R#OVO704473MRE24",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
                   "small": {
                     "quarterly": {
-                      "noDiscounts": 550,
-                      "allDiscounts": 550,
-                      "guaranteedDiscount": 550
+                      "noDiscounts": 560,
+                      "allDiscounts": 560,
+                      "guaranteedDiscount": 560
                     },
                     "monthly": {
                       "noDiscounts": 150,
@@ -83297,16 +83304,16 @@
                       "guaranteedDiscount": 150
                     },
                     "yearly": {
-                      "noDiscounts": 1820,
-                      "allDiscounts": 1820,
-                      "guaranteedDiscount": 1820
+                      "noDiscounts": 1850,
+                      "allDiscounts": 1850,
+                      "guaranteedDiscount": 1850
                     }
                   },
                   "large": {
                     "quarterly": {
-                      "noDiscounts": 1080,
-                      "allDiscounts": 1080,
-                      "guaranteedDiscount": 1080
+                      "noDiscounts": 1090,
+                      "allDiscounts": 1090,
+                      "guaranteedDiscount": 1090
                     },
                     "monthly": {
                       "noDiscounts": 300,
@@ -83314,16 +83321,16 @@
                       "guaranteedDiscount": 300
                     },
                     "yearly": {
-                      "noDiscounts": 3630,
-                      "allDiscounts": 3630,
-                      "guaranteedDiscount": 3630
+                      "noDiscounts": 3660,
+                      "allDiscounts": 3660,
+                      "guaranteedDiscount": 3660
                     }
                   },
                   "medium": {
                     "quarterly": {
-                      "noDiscounts": 810,
-                      "allDiscounts": 810,
-                      "guaranteedDiscount": 810
+                      "noDiscounts": 820,
+                      "allDiscounts": 820,
+                      "guaranteedDiscount": 820
                     },
                     "monthly": {
                       "noDiscounts": 230,
@@ -83331,9 +83338,9 @@
                       "guaranteedDiscount": 230
                     },
                     "yearly": {
-                      "noDiscounts": 2720,
-                      "allDiscounts": 2720,
-                      "guaranteedDiscount": 2720
+                      "noDiscounts": 2750,
+                      "allDiscounts": 2750,
+                      "guaranteedDiscount": 2750
                     }
                   }
                 }
@@ -83343,7 +83350,8 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "batchId": 1139991,
+                "planType": "M",
+                "tariffType": "TOU",
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -83465,7 +83473,7 @@
                         ],
                         "endDate": "2019-06-30",
                         "blockPeriod": "P1D",
-                        "dailySupplyCharge": 180.05,
+                        "dailySupplyCharge": 188.23,
                         "startDate": "2019-07-01"
                       }
                     ],
@@ -83513,32 +83521,30 @@
                     "isFixed": false
                   }
                 ],
-                "customerType": "R",
-                "distributor": "SA Power Networks",
-                "effectiveDate": "2026-07-14",
-                "expiryDate": "2026-08-14",
-                "fuelType": "E",
-                "genAvailable": true,
-                "planId": "OVO704473MRE23",
                 "planName": "The Free 4 Plan",
                 "planStatus": "PUBLISHED",
-                "planType": "M",
-                "retailerCode": "OVO",
-                "retailerId": "1085327",
-                "retailerName": "OVO Energy",
-                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
+                "batchId": 1155552,
+                "retailerId": "1085327",
+                "distributor": "SA Power Networks",
+                "genAvailable": true,
                 "tags": [
-                  "MO_V_Free4Plan_SR_SAPOWER_JUL2026v2"
+                  "MO_V_Free4Plan_SR_SAPOWER_AUG2026"
                 ],
-                "tariffType": "TOU"
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "OVO Energy",
+                "planId": "OVO704473MRE24",
+                "retailerCode": "OVO",
+                "state": "SA",
+                "effectiveDate": "2026-08-14"
               },
-              "planId": "OVO704473MRE23",
+              "planId": "OVO704473MRE24",
               "postcodes": {
                 "5097": 1
               }
@@ -83554,18 +83560,18 @@
         }
       },
       {
-        "plan_id": "OVO704475MRE23",
+        "plan_id": "OVO704475MRE24",
         "plan_name": "The Free 4 Plan",
         "retailer_name": "OVO Energy",
         "plan_type": "TOU",
         "tariff_type": "TOU",
-        "monthly_cost": 330,
-        "quarterly_cost": 1190,
-        "annual_cost": 4010,
+        "monthly_cost": 340,
+        "quarterly_cost": 1200,
+        "annual_cost": 4040,
         "peak_cost": 56.221000000000004,
         "shoulder_cost": 32.549,
         "off_peak_cost": 17.039,
-        "daily_supply_charge": 198.05500000000004,
+        "daily_supply_charge": 207.053,
         "detailed_time_blocks": [
           {
             "name": "Peak",
@@ -83688,8 +83694,9 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "OVO704475MRE23",
+            "planId": "OVO704475MRE24",
             "planData": {
+              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -83788,7 +83795,7 @@
                         }
                       ],
                       "blockPeriod": "P1D",
-                      "dailySupplyCharge": 180.05
+                      "dailySupplyCharge": 188.23
                     }
                   ],
                   "greenCharge": [
@@ -83814,59 +83821,58 @@
                   ]
                 }
               ],
+              "planName": "The Free 4 Plan",
+              "retailerId": "1085327",
               "customerType": "R",
               "fuelType": "E",
-              "planId": "OVO704475MRE23",
-              "planName": "The Free 4 Plan",
-              "retailerCode": "OVO",
-              "retailerId": "1085327",
               "retailerName": "OVO Energy",
-              "tariffType": "TOU"
+              "planId": "OVO704475MRE24",
+              "retailerCode": "OVO"
             },
-            "planType": "E#R#OVO704475MRE23",
+            "planType": "E#R#OVO704475MRE24",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
                   "small": {
                     "quarterly": {
-                      "noDiscounts": 590,
-                      "allDiscounts": 590,
-                      "guaranteedDiscount": 590
+                      "noDiscounts": 600,
+                      "allDiscounts": 600,
+                      "guaranteedDiscount": 600
                     },
                     "monthly": {
-                      "noDiscounts": 160,
-                      "allDiscounts": 160,
-                      "guaranteedDiscount": 160
+                      "noDiscounts": 170,
+                      "allDiscounts": 170,
+                      "guaranteedDiscount": 170
                     },
                     "yearly": {
-                      "noDiscounts": 1970,
-                      "allDiscounts": 1970,
-                      "guaranteedDiscount": 1970
+                      "noDiscounts": 2000,
+                      "allDiscounts": 2000,
+                      "guaranteedDiscount": 2000
                     }
                   },
                   "large": {
                     "quarterly": {
-                      "noDiscounts": 1190,
-                      "allDiscounts": 1190,
-                      "guaranteedDiscount": 1190
+                      "noDiscounts": 1200,
+                      "allDiscounts": 1200,
+                      "guaranteedDiscount": 1200
                     },
                     "monthly": {
-                      "noDiscounts": 330,
-                      "allDiscounts": 330,
-                      "guaranteedDiscount": 330
+                      "noDiscounts": 340,
+                      "allDiscounts": 340,
+                      "guaranteedDiscount": 340
                     },
                     "yearly": {
-                      "noDiscounts": 4010,
-                      "allDiscounts": 4010,
-                      "guaranteedDiscount": 4010
+                      "noDiscounts": 4040,
+                      "allDiscounts": 4040,
+                      "guaranteedDiscount": 4040
                     }
                   },
                   "medium": {
                     "quarterly": {
-                      "noDiscounts": 890,
-                      "allDiscounts": 890,
-                      "guaranteedDiscount": 890
+                      "noDiscounts": 900,
+                      "allDiscounts": 900,
+                      "guaranteedDiscount": 900
                     },
                     "monthly": {
                       "noDiscounts": 250,
@@ -83874,9 +83880,9 @@
                       "guaranteedDiscount": 250
                     },
                     "yearly": {
-                      "noDiscounts": 2980,
-                      "allDiscounts": 2980,
-                      "guaranteedDiscount": 2980
+                      "noDiscounts": 3010,
+                      "allDiscounts": 3010,
+                      "guaranteedDiscount": 3010
                     }
                   }
                 }
@@ -83886,7 +83892,8 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "batchId": 1139991,
+                "planType": "M",
+                "tariffType": "TOU",
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -84044,7 +84051,7 @@
                         ],
                         "endDate": "2022-06-30",
                         "blockPeriod": "P1D",
-                        "dailySupplyCharge": 180.05,
+                        "dailySupplyCharge": 188.23,
                         "startDate": "2021-07-01"
                       }
                     ],
@@ -84092,32 +84099,30 @@
                     "isFixed": false
                   }
                 ],
-                "customerType": "R",
-                "distributor": "SA Power Networks",
-                "effectiveDate": "2026-07-14",
-                "expiryDate": "2026-08-14",
-                "fuelType": "E",
-                "genAvailable": true,
-                "planId": "OVO704475MRE23",
                 "planName": "The Free 4 Plan",
                 "planStatus": "PUBLISHED",
-                "planType": "M",
-                "retailerCode": "OVO",
-                "retailerId": "1085327",
-                "retailerName": "OVO Energy",
-                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
+                "batchId": 1155552,
+                "retailerId": "1085327",
+                "distributor": "SA Power Networks",
+                "genAvailable": true,
                 "tags": [
-                  "MO_V_Free4Plan_TOU_SAPOWER_JUL2026v2"
+                  "MO_V_Free4Plan_TOU_SAPOWER_AUG2026"
                 ],
-                "tariffType": "TOU"
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "OVO Energy",
+                "planId": "OVO704475MRE24",
+                "retailerCode": "OVO",
+                "state": "SA",
+                "effectiveDate": "2026-08-14"
               },
-              "planId": "OVO704475MRE23",
+              "planId": "OVO704475MRE24",
               "postcodes": {
                 "5097": 1
               }
