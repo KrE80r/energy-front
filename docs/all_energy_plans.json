@@ -1,10 +1,10 @@
 {
   "metadata": {
     "postcode": "5097",
-    "total_plans": 187,
-    "filtered_out": 444,
+    "total_plans": 186,
+    "filtered_out": 443,
     "extraction_date": "2025-06-26",
-    "tou_count": 187,
+    "tou_count": 186,
     "sr_count": 0,
     "other_count": 0,
     "filters_applied": "Excluded tariff types: SR, SRCL, TOUCL",
@@ -19967,470 +19967,6 @@
                 "effectiveDate": "2026-07-02"
               },
               "planId": "AMB1127898SRE1",
-              "postcodes": {
-                "5097": 1
-              }
-            }
-          }
-        },
-        "raw_plan_data": {
-          "eligibility_restrictions": false,
-          "has_discounts": false,
-          "distributor": null,
-          "state": null,
-          "postcode": null
-        }
-      },
-      {
-        "plan_id": "COV1030371SRE1",
-        "plan_name": "CovaU Basics Residential Flexible",
-        "retailer_name": "CovaU",
-        "plan_type": "TOU",
-        "tariff_type": "TOU",
-        "monthly_cost": 330,
-        "quarterly_cost": 1200,
-        "annual_cost": 4010,
-        "peak_cost": 52.800000000000004,
-        "shoulder_cost": 33.660000000000004,
-        "off_peak_cost": 28.380000000000003,
-        "daily_supply_charge": 119.68,
-        "detailed_time_blocks": [
-          {
-            "name": "Peak",
-            "description": "06:00 - 10:00; 15:00 - 01:00",
-            "time_of_use_period": "P",
-            "time_periods": [
-              {
-                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
-                "start_time": "0600",
-                "end_time": "0959"
-              },
-              {
-                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
-                "start_time": "1500",
-                "end_time": "0059"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 48,
-                "unit_price_gst": 52.800000000000004,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          },
-          {
-            "name": "Off Peak",
-            "description": "01:00 - 06:00",
-            "time_of_use_period": "OP",
-            "time_periods": [
-              {
-                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
-                "start_time": "0100",
-                "end_time": "0559"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 30.6,
-                "unit_price_gst": 33.660000000000004,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          },
-          {
-            "name": "Shoulder",
-            "description": "10:00 - 15:00",
-            "time_of_use_period": "S",
-            "time_periods": [
-              {
-                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
-                "start_time": "1000",
-                "end_time": "1459"
-              }
-            ],
-            "rates": [
-              {
-                "unit_price": 25.8,
-                "unit_price_gst": 28.380000000000003,
-                "measure_unit": "KWH",
-                "rate_type": null,
-                "start_usage": 0,
-                "end_usage": null
-              }
-            ]
-          }
-        ],
-        "fees": {
-          "move_in_new_connection_fee": 21.23,
-          "paper_bill_fee": null,
-          "payment_processing_fees": [],
-          "late_payment_fee": null,
-          "disconnection_fee_move_out": null,
-          "disconnection_fee_non_payment": null,
-          "reconnection_fee": 63.712,
-          "other_fees": [],
-          "credit_card_payment_fees": [],
-          "membership_fee": null
-        },
-        "membership_fee_annual": 0,
-        "membership_fee_quarterly": 0,
-        "membership_fee_monthly": 0,
-        "solar_feed_in_rate_r": 0,
-        "payment_options": [
-          "Direct Debit",
-          "Credit Card",
-          "BPay"
-        ],
-        "raw_plan_data_complete": {
-          "main_api_response": {
-            "planId": "COV1030371SRE1",
-            "planData": {
-              "tariffType": "TOU",
-              "contract": [
-                {
-                  "pricingModel": "TOU",
-                  "solarFit": [
-                    {
-                      "tariffUType": "singleTariff",
-                      "scheme": "OTHER",
-                      "endDate": "2030-06-30",
-                      "singleTariffRates": [
-                        {
-                          "unitPrice": 0,
-                          "rebate": true,
-                          "measureUnit": "KWH"
-                        }
-                      ],
-                      "rate": 0,
-                      "displayName": "Feed-In Tariff: Single Rate Feed In Tariff",
-                      "type": "R",
-                      "singleTariffPeriod": "P1D",
-                      "startDate": "2026-01-01"
-                    }
-                  ],
-                  "fee": [
-                    {
-                      "amount": 21.23,
-                      "feeType": "ConnF",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "amount": 63.712,
-                      "feeType": "DiscoF",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "amount": 63.712,
-                      "feeType": "RecoF",
-                      "feeTerm": "F"
-                    },
-                    {
-                      "amount": 2.75,
-                      "feeType": "DDF",
-                      "feeTerm": "F"
-                    }
-                  ],
-                  "termType": "N",
-                  "networkTariffType": "IS",
-                  "tariffPeriod": [
-                    {
-                      "touBlock": [
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 48,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        },
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 30.6,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        },
-                        {
-                          "blockRate": [
-                            {
-                              "unitPrice": 25.8,
-                              "measureUnit": "KWH"
-                            }
-                          ]
-                        }
-                      ],
-                      "blockPeriod": "P1D",
-                      "dailySupplyCharge": 108.8
-                    }
-                  ],
-                  "fuelType": "E",
-                  "meterType": [
-                    "Type 4",
-                    "Type 4a",
-                    "Type 5",
-                    "Type 6"
-                  ],
-                  "paymentOption": [
-                    "DD",
-                    "CC",
-                    "BP"
-                  ]
-                }
-              ],
-              "planName": "CovaU Basics Residential Flexible",
-              "retailerId": "9611",
-              "customerType": "R",
-              "fuelType": "E",
-              "retailerName": "CovaU",
-              "planId": "COV1030371SRE1",
-              "retailerCode": "COV"
-            },
-            "planType": "E#R#COV1030371SRE1",
-            "postcode": 5097,
-            "pcr": {
-              "costs": {
-                "electricity": {
-                  "small": {
-                    "quarterly": {
-                      "noDiscounts": 540,
-                      "allDiscounts": 540,
-                      "guaranteedDiscount": 540
-                    },
-                    "monthly": {
-                      "noDiscounts": 150,
-                      "allDiscounts": 150,
-                      "guaranteedDiscount": 150
-                    },
-                    "yearly": {
-                      "noDiscounts": 1790,
-                      "allDiscounts": 1790,
-                      "guaranteedDiscount": 1790
-                    }
-                  },
-                  "large": {
-                    "quarterly": {
-                      "noDiscounts": 1200,
-                      "allDiscounts": 1200,
-                      "guaranteedDiscount": 1200
-                    },
-                    "monthly": {
-                      "noDiscounts": 330,
-                      "allDiscounts": 330,
-                      "guaranteedDiscount": 330
-                    },
-                    "yearly": {
-                      "noDiscounts": 4010,
-                      "allDiscounts": 4010,
-                      "guaranteedDiscount": 4010
-                    }
-                  },
-                  "medium": {
-                    "quarterly": {
-                      "noDiscounts": 860,
-                      "allDiscounts": 860,
-                      "guaranteedDiscount": 860
-                    },
-                    "monthly": {
-                      "noDiscounts": 240,
-                      "allDiscounts": 240,
-                      "guaranteedDiscount": 240
-                    },
-                    "yearly": {
-                      "noDiscounts": 2890,
-                      "allDiscounts": 2890,
-                      "guaranteedDiscount": 2890
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "detailed_api_response": {
-            "data": {
-              "planData": {
-                "planType": "S",
-                "tariffType": "TOU",
-                "planRef": "COV_1113_25985",
-                "contract": [
-                  {
-                    "pricingModel": "TOU",
-                    "solarFit": [
-                      {
-                        "tariffUType": "singleTariff",
-                        "scheme": "OTHER",
-                        "endDate": "2030-06-30",
-                        "singleTariffRates": [
-                          {
-                            "unitPrice": 0,
-                            "rebate": true,
-                            "measureUnit": "KWH"
-                          }
-                        ],
-                        "rate": 0,
-                        "displayName": "Feed-In Tariff: Single Rate Feed In Tariff",
-                        "description": "Feed-In Tariff | All kWh/day",
-                        "type": "R",
-                        "singleTariffPeriod": "P1D",
-                        "startDate": "2026-01-01"
-                      }
-                    ],
-                    "additionalFeeInformation": "For information on additional fees, please visit our website : www.covau.com.au",
-                    "fee": [
-                      {
-                        "description": "$21.23 (inc. GST) Special Meter Read fee. This fee is passed through from your distributor and may vary.",
-                        "amount": 21.23,
-                        "feeType": "ConnF",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "$63.71 (inc. GST) fee may apply when your property is disconnected. This fee is passed through from your distributor and may vary.",
-                        "amount": 63.712,
-                        "feeType": "DiscoF",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "$63.71 (inc. GST) fee may apply when your property is reconnected. This fee is passed through from your distributor and may vary.",
-                        "amount": 63.712,
-                        "feeType": "RecoF",
-                        "feeTerm": "F"
-                      },
-                      {
-                        "description": "$2.75 (inc. GST) (inc. GST) Direct Credit or Debit dishonour payment fee",
-                        "amount": 2.75,
-                        "feeType": "DDF",
-                        "feeTerm": "F"
-                      }
-                    ],
-                    "termType": "N",
-                    "networkTariffType": "IS",
-                    "tariffPeriod": [
-                      {
-                        "touBlock": [
-                          {
-                            "name": "Peak",
-                            "description": "06:00 - 10:00; 15:00 - 01:00",
-                            "blockRate": [
-                              {
-                                "unitPrice": 48,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "P",
-                            "timeOfUse": [
-                              {
-                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
-                                "startTime": "0600",
-                                "endTime": "0959"
-                              },
-                              {
-                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
-                                "startTime": "1500",
-                                "endTime": "0059"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Off Peak",
-                            "description": "01:00 - 06:00",
-                            "blockRate": [
-                              {
-                                "unitPrice": 30.6,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "OP",
-                            "timeOfUse": [
-                              {
-                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
-                                "startTime": "0100",
-                                "endTime": "0559"
-                              }
-                            ]
-                          },
-                          {
-                            "name": "Shoulder",
-                            "description": "10:00 - 15:00",
-                            "blockRate": [
-                              {
-                                "unitPrice": 25.8,
-                                "measureUnit": "KWH"
-                              }
-                            ],
-                            "timeOfUsePeriod": "S",
-                            "timeOfUse": [
-                              {
-                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
-                                "startTime": "1000",
-                                "endTime": "1459"
-                              }
-                            ]
-                          }
-                        ],
-                        "endDate": "2025-12-31",
-                        "blockPeriod": "P1D",
-                        "startDate": "2025-01-01",
-                        "dailySupplyCharge": 108.8
-                      }
-                    ],
-                    "variation": "We may vary the charges of this plan (including their amount, nature and structure) at any time by giving you a notice at least 5 business days prior to the effective date of variation.All prices listed are inclusive of GST except where indicated.",
-                    "onExpiry": "This agreement continues until you or we end it.",
-                    "fuelType": "E",
-                    "terms": "See our full terms and conditions to www.covau.com.au for details.",
-                    "timeDefinition": "AEST",
-                    "meterType": [
-                      "Type 4",
-                      "Type 4a",
-                      "Type 5",
-                      "Type 6"
-                    ],
-                    "billFrequency": [
-                      {
-                        "number": 1,
-                        "period": "M"
-                      },
-                      {
-                        "number": 3,
-                        "period": "M"
-                      }
-                    ],
-                    "paymentOption": [
-                      "DD",
-                      "CC",
-                      "BP"
-                    ],
-                    "isFixed": false
-                  }
-                ],
-                "planName": "CovaU Basics Residential Flexible",
-                "planStatus": "PUBLISHED",
-                "supplyArea": [
-                  {
-                    "name": "SA Power Networks",
-                    "id": "42"
-                  }
-                ],
-                "batchId": 1030370,
-                "retailerId": "9611",
-                "genAvailable": true,
-                "tags": [
-                  "SO_RTOU"
-                ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "CovaU",
-                "planId": "COV1030371SRE1",
-                "retailerCode": "COV",
-                "effectiveDate": "2026-01-01"
-              },
-              "planId": "COV1030371SRE1",
               "postcodes": {
                 "5097": 1
               }
@@ -70844,7 +70380,6 @@
           "main_api_response": {
             "planId": "MOM1151238MRE1",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -70955,13 +70490,14 @@
                   ]
                 }
               ],
-              "planName": "Warm Welcome",
-              "retailerId": "9632",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "Momentum Energy",
               "planId": "MOM1151238MRE1",
-              "retailerCode": "MOM"
+              "planName": "Warm Welcome",
+              "retailerCode": "MOM",
+              "retailerId": "9632",
+              "retailerName": "Momentum Energy",
+              "tariffType": "TOU"
             },
             "planType": "E#R#MOM1151238MRE1",
             "postcode": 5097,
@@ -71026,8 +70562,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1151198,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -71207,30 +70742,32 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-08-01",
+                "expiryDate": "2026-09-14",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "MOM1151238MRE1",
                 "planName": "Warm Welcome",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "MOM",
+                "retailerId": "9632",
+                "retailerName": "Momentum Energy",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1151198,
-                "retailerId": "9632",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "Warm Welcome",
                   "SA Power Networks",
                   "RTOU"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "Momentum Energy",
-                "planId": "MOM1151238MRE1",
-                "retailerCode": "MOM",
-                "state": "SA",
-                "effectiveDate": "2026-08-01"
+                "tariffType": "TOU"
               },
               "planId": "MOM1151238MRE1",
               "postcodes": {
@@ -71876,7 +71413,6 @@
           "main_api_response": {
             "planId": "MOM1151289MRE1",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -71987,13 +71523,14 @@
                   ]
                 }
               ],
-              "planName": "Warm Welcome",
-              "retailerId": "9632",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "Momentum Energy",
               "planId": "MOM1151289MRE1",
-              "retailerCode": "MOM"
+              "planName": "Warm Welcome",
+              "retailerCode": "MOM",
+              "retailerId": "9632",
+              "retailerName": "Momentum Energy",
+              "tariffType": "TOU"
             },
             "planType": "E#R#MOM1151289MRE1",
             "postcode": 5097,
@@ -72058,8 +71595,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1151198,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -72244,30 +71780,32 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-08-01",
+                "expiryDate": "2026-09-14",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "MOM1151289MRE1",
                 "planName": "Warm Welcome",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "MOM",
+                "retailerId": "9632",
+                "retailerName": "Momentum Energy",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1151198,
-                "retailerId": "9632",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "Warm Welcome",
                   "SA Power Networks",
                   "RESELE"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "Momentum Energy",
-                "planId": "MOM1151289MRE1",
-                "retailerCode": "MOM",
-                "state": "SA",
-                "effectiveDate": "2026-08-01"
+                "tariffType": "TOU"
               },
               "planId": "MOM1151289MRE1",
               "postcodes": {
@@ -73956,7 +73494,6 @@
           "main_api_response": {
             "planId": "MOM1161133MRE1",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -74065,13 +73602,14 @@
                   ]
                 }
               ],
-              "planName": "NAB Goodies",
-              "retailerId": "9632",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "Momentum Energy",
               "planId": "MOM1161133MRE1",
-              "retailerCode": "MOM"
+              "planName": "NAB Goodies",
+              "retailerCode": "MOM",
+              "retailerId": "9632",
+              "retailerName": "Momentum Energy",
+              "tariffType": "TOU"
             },
             "planType": "E#R#MOM1161133MRE1",
             "postcode": 5097,
@@ -74136,8 +73674,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1161084,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -74315,30 +73852,32 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-08-24",
+                "expiryDate": "2026-09-07",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "MOM1161133MRE1",
                 "planName": "NAB Goodies",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "MOM",
+                "retailerId": "9632",
+                "retailerName": "Momentum Energy",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1161084,
-                "retailerId": "9632",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "NAB Goodies",
                   "SA Power Networks",
                   "RESELE"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "Momentum Energy",
-                "planId": "MOM1161133MRE1",
-                "retailerCode": "MOM",
-                "state": "SA",
-                "effectiveDate": "2026-08-24"
+                "tariffType": "TOU"
               },
               "planId": "MOM1161133MRE1",
               "postcodes": {
@@ -74473,7 +74012,6 @@
           "main_api_response": {
             "planId": "MOM1161134MRE1",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -74582,13 +74120,14 @@
                   ]
                 }
               ],
-              "planName": "NAB Goodies",
-              "retailerId": "9632",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "Momentum Energy",
               "planId": "MOM1161134MRE1",
-              "retailerCode": "MOM"
+              "planName": "NAB Goodies",
+              "retailerCode": "MOM",
+              "retailerId": "9632",
+              "retailerName": "Momentum Energy",
+              "tariffType": "TOU"
             },
             "planType": "E#R#MOM1161134MRE1",
             "postcode": 5097,
@@ -74653,8 +74192,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1161084,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -74827,30 +74365,32 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-08-24",
+                "expiryDate": "2026-09-07",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "MOM1161134MRE1",
                 "planName": "NAB Goodies",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "MOM",
+                "retailerId": "9632",
+                "retailerName": "Momentum Energy",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1161084,
-                "retailerId": "9632",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "NAB Goodies",
                   "SA Power Networks",
                   "RTOU"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "Momentum Energy",
-                "planId": "MOM1161134MRE1",
-                "retailerCode": "MOM",
-                "state": "SA",
-                "effectiveDate": "2026-08-24"
+                "tariffType": "TOU"
               },
               "planId": "MOM1161134MRE1",
               "postcodes": {
