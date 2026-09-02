@@ -69025,7 +69025,6 @@
           "main_api_response": {
             "planId": "LUM203103MRE21",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -69130,19 +69129,20 @@
                   ]
                 }
               ],
-              "planName": "Lumo Basic",
-              "retailerId": "9643",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "Lumo Energy (SA)",
-              "planId": "LUM203103MRE21",
-              "retailerCode": "LUM",
               "meteringCost": [
                 {
                   "name": "Metering Cost",
                   "min": "U"
                 }
-              ]
+              ],
+              "planId": "LUM203103MRE21",
+              "planName": "Lumo Basic",
+              "retailerCode": "LUM",
+              "retailerId": "9643",
+              "retailerName": "Lumo Energy (SA)",
+              "tariffType": "TOU"
             },
             "planType": "E#R#LUM203103MRE21",
             "postcode": 5097,
@@ -69207,9 +69207,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
-                "planRef": "RTOU",
+                "batchId": 1124949,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -69372,32 +69370,35 @@
                     "isFixed": false
                   }
                 ],
-                "planName": "Lumo Basic",
-                "planStatus": "PUBLISHED",
-                "supplyArea": [
-                  {
-                    "name": "SA Power Networks",
-                    "id": "42"
-                  }
-                ],
-                "batchId": 1124949,
-                "retailerId": "9643",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "Lumo Energy (SA)",
-                "planId": "LUM203103MRE21",
-                "retailerCode": "LUM",
-                "state": "SA",
+                "distributor": "SA Power Networks",
                 "effectiveDate": "2026-07-01",
+                "expiryDate": "2026-09-08",
+                "fuelType": "E",
+                "genAvailable": true,
                 "meteringCost": [
                   {
                     "name": "Metering Cost",
                     "description": "Charges may vary, please contact us on 1300 11 58 66 for specific metering charges.",
                     "min": "U"
                   }
-                ]
+                ],
+                "planId": "LUM203103MRE21",
+                "planName": "Lumo Basic",
+                "planRef": "RTOU",
+                "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "LUM",
+                "retailerId": "9643",
+                "retailerName": "Lumo Energy (SA)",
+                "state": "SA",
+                "supplyArea": [
+                  {
+                    "name": "SA Power Networks",
+                    "id": "42"
+                  }
+                ],
+                "tariffType": "TOU"
               },
               "planId": "LUM203103MRE21",
               "postcodes": {
