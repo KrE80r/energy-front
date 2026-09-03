@@ -72716,7 +72716,6 @@
           "main_api_response": {
             "planId": "MOM1151360MRE1",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -72825,13 +72824,14 @@
                   ]
                 }
               ],
-              "planName": "Bill Boss Electricity",
-              "retailerId": "9632",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "Momentum Energy",
               "planId": "MOM1151360MRE1",
-              "retailerCode": "MOM"
+              "planName": "Bill Boss Electricity",
+              "retailerCode": "MOM",
+              "retailerId": "9632",
+              "retailerName": "Momentum Energy",
+              "tariffType": "TOU"
             },
             "planType": "E#R#MOM1151360MRE1",
             "postcode": 5097,
@@ -72896,8 +72896,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1151198,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -73074,30 +73073,32 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-08-01",
+                "expiryDate": "2026-09-14",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "MOM1151360MRE1",
                 "planName": "Bill Boss Electricity",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "MOM",
+                "retailerId": "9632",
+                "retailerName": "Momentum Energy",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1151198,
-                "retailerId": "9632",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "Bill Boss Electricity",
                   "SA Power Networks",
                   "RTOU"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "Momentum Energy",
-                "planId": "MOM1151360MRE1",
-                "retailerCode": "MOM",
-                "state": "SA",
-                "effectiveDate": "2026-08-01"
+                "tariffType": "TOU"
               },
               "planId": "MOM1151360MRE1",
               "postcodes": {
@@ -73750,7 +73751,6 @@
           "main_api_response": {
             "planId": "MOM1151441MRE1",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -73859,13 +73859,14 @@
                   ]
                 }
               ],
-              "planName": "Bill Boss Electricity",
-              "retailerId": "9632",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "Momentum Energy",
               "planId": "MOM1151441MRE1",
-              "retailerCode": "MOM"
+              "planName": "Bill Boss Electricity",
+              "retailerCode": "MOM",
+              "retailerId": "9632",
+              "retailerName": "Momentum Energy",
+              "tariffType": "TOU"
             },
             "planType": "E#R#MOM1151441MRE1",
             "postcode": 5097,
@@ -73930,8 +73931,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1151198,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -74113,30 +74113,32 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-08-01",
+                "expiryDate": "2026-09-14",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "MOM1151441MRE1",
                 "planName": "Bill Boss Electricity",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "MOM",
+                "retailerId": "9632",
+                "retailerName": "Momentum Energy",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1151198,
-                "retailerId": "9632",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "Bill Boss Electricity",
                   "SA Power Networks",
                   "RESELE"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "Momentum Energy",
-                "planId": "MOM1151441MRE1",
-                "retailerCode": "MOM",
-                "state": "SA",
-                "effectiveDate": "2026-08-01"
+                "tariffType": "TOU"
               },
               "planId": "MOM1151441MRE1",
               "postcodes": {
