@@ -70106,7 +70106,6 @@
           "main_api_response": {
             "planId": "MOM1144357MRE2",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -70220,13 +70219,14 @@
                   ]
                 }
               ],
-              "planName": "Home Comfort Electricity",
-              "retailerId": "9632",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "Momentum Energy",
               "planId": "MOM1144357MRE2",
-              "retailerCode": "MOM"
+              "planName": "Home Comfort Electricity",
+              "retailerCode": "MOM",
+              "retailerId": "9632",
+              "retailerName": "Momentum Energy",
+              "tariffType": "TOU"
             },
             "planType": "E#R#MOM1144357MRE2",
             "postcode": 5097,
@@ -70291,8 +70291,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1152443,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -70480,30 +70479,32 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-08-01",
+                "expiryDate": "2026-09-07",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "MOM1144357MRE2",
                 "planName": "Home Comfort Electricity",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "MOM",
+                "retailerId": "9632",
+                "retailerName": "Momentum Energy",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1152443,
-                "retailerId": "9632",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "Home Comfort Electricity",
                   "SA Power Networks",
                   "RESELE"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "Momentum Energy",
-                "planId": "MOM1144357MRE2",
-                "retailerCode": "MOM",
-                "state": "SA",
-                "effectiveDate": "2026-08-01"
+                "tariffType": "TOU"
               },
               "planId": "MOM1144357MRE2",
               "postcodes": {
@@ -70638,7 +70639,6 @@
           "main_api_response": {
             "planId": "MOM1144358MRE2",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -70752,13 +70752,14 @@
                   ]
                 }
               ],
-              "planName": "Home Comfort Electricity",
-              "retailerId": "9632",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "Momentum Energy",
               "planId": "MOM1144358MRE2",
-              "retailerCode": "MOM"
+              "planName": "Home Comfort Electricity",
+              "retailerCode": "MOM",
+              "retailerId": "9632",
+              "retailerName": "Momentum Energy",
+              "tariffType": "TOU"
             },
             "planType": "E#R#MOM1144358MRE2",
             "postcode": 5097,
@@ -70823,8 +70824,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1152443,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -71007,30 +71007,32 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-08-01",
+                "expiryDate": "2026-09-07",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "MOM1144358MRE2",
                 "planName": "Home Comfort Electricity",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "MOM",
+                "retailerId": "9632",
+                "retailerName": "Momentum Energy",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1152443,
-                "retailerId": "9632",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "Home Comfort Electricity",
                   "SA Power Networks",
                   "RTOU"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "Momentum Energy",
-                "planId": "MOM1144358MRE2",
-                "retailerCode": "MOM",
-                "state": "SA",
-                "effectiveDate": "2026-08-01"
+                "tariffType": "TOU"
               },
               "planId": "MOM1144358MRE2",
               "postcodes": {
@@ -85962,8 +85964,8 @@
         }
       },
       {
-        "plan_id": "ORI1139976SRE2",
-        "plan_name": "Origin Solar Sharer Offer",
+        "plan_id": "ORI1139976SRE3",
+        "plan_name": "Origin Standing Solar Sharer",
         "retailer_name": "Origin Energy",
         "plan_type": "TOU",
         "tariff_type": "TOU",
@@ -86119,7 +86121,7 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "ORI1139976SRE2",
+            "planId": "ORI1139976SRE3",
             "planData": {
               "tariffType": "TOU",
               "contract": [
@@ -86293,34 +86295,51 @@
                   ]
                 }
               ],
-              "planName": "Origin Solar Sharer Offer",
+              "planName": "Origin Standing Solar Sharer",
               "retailerId": "9639",
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "Origin Energy",
-              "planId": "ORI1139976SRE2",
+              "planId": "ORI1139976SRE3",
               "retailerCode": "ORI"
             },
-            "planType": "E#R#ORI1139976SRE2",
+            "planType": "E#R#ORI1139976SRE3",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
                   "large": {
-                    "monthly": {
-                      "noDiscounts": 350,
-                      "allDiscounts": 350,
-                      "guaranteedDiscount": 350
-                    },
                     "quarterly": {
-                      "guaranteedDiscount": 920,
                       "noDiscounts": 920,
+                      "guaranteedDiscount": 920,
                       "allDiscounts": 920
                     },
                     "yearly": {
                       "allDiscounts": 4160,
-                      "noDiscounts": 4160,
-                      "guaranteedDiscount": 4160
+                      "guaranteedDiscount": 4160,
+                      "noDiscounts": 4160
+                    },
+                    "monthly": {
+                      "allDiscounts": 350,
+                      "guaranteedDiscount": 350,
+                      "noDiscounts": 350
+                    }
+                  },
+                  "small": {
+                    "quarterly": {
+                      "allDiscounts": 440,
+                      "noDiscounts": 440,
+                      "guaranteedDiscount": 440
+                    },
+                    "yearly": {
+                      "noDiscounts": 1980,
+                      "guaranteedDiscount": 1980,
+                      "allDiscounts": 1980
+                    },
+                    "monthly": {
+                      "allDiscounts": 170,
+                      "noDiscounts": 170,
+                      "guaranteedDiscount": 170
                     }
                   },
                   "medium": {
@@ -86329,32 +86348,15 @@
                       "noDiscounts": 3060,
                       "allDiscounts": 3060
                     },
-                    "quarterly": {
-                      "allDiscounts": 670,
-                      "noDiscounts": 670,
-                      "guaranteedDiscount": 670
-                    },
                     "monthly": {
-                      "allDiscounts": 260,
                       "guaranteedDiscount": 260,
+                      "allDiscounts": 260,
                       "noDiscounts": 260
-                    }
-                  },
-                  "small": {
-                    "monthly": {
-                      "guaranteedDiscount": 170,
-                      "allDiscounts": 170,
-                      "noDiscounts": 170
                     },
                     "quarterly": {
-                      "noDiscounts": 440,
-                      "guaranteedDiscount": 440,
-                      "allDiscounts": 440
-                    },
-                    "yearly": {
-                      "noDiscounts": 1980,
-                      "allDiscounts": 1980,
-                      "guaranteedDiscount": 1980
+                      "guaranteedDiscount": 670,
+                      "noDiscounts": 670,
+                      "allDiscounts": 670
                     }
                   }
                 }
@@ -86571,8 +86573,8 @@
                         ],
                         "endDate": "2021-06-30",
                         "blockPeriod": "P1Y",
-                        "dailySupplyCharge": 163.682,
-                        "startDate": "2020-07-01"
+                        "startDate": "2020-07-01",
+                        "dailySupplyCharge": 163.682
                       }
                     ],
                     "variation": "We may vary the Charges (including their amount, nature and structure) by notice to you at any time. The notice will be at least 5 business days prior to the effective date of the variation. Regulated ongoing contract | Switch plans at any time with no exit fees.",
@@ -86589,8 +86591,8 @@
                         ]
                       },
                       {
-                        "name": "GreenPower",
                         "chargeType": "A",
+                        "name": "GreenPower",
                         "description": "For 4.50 cents/kWh 100% of your electricity usage is matched with electricity from Government accredited GreenPower sources",
                         "option": [
                           {
@@ -86603,6 +86605,10 @@
                     "fuelType": "E",
                     "terms": "Up to 24 kWh of free electricity usage each day between 12noon-3pm. Usage over 24 kWh during that time will be charged at Solar Soak rates. Other charges, such as daily supply and controlled load charges still apply during that time. This offer is best suited if you can shift your usage to the free usage period, if you cannot, your electricity costs could be higher. Offer not available in all areas. Residential customers only. Visit originenergy.com.au/2889/Terms-and-conditions for more.",
                     "timeDefinition": "LOCAL",
+                    "meterType": [
+                      "Type 4",
+                      "Type 4a"
+                    ],
                     "billFrequency": [
                       {
                         "number": 3,
@@ -86612,10 +86618,6 @@
                         "number": 1,
                         "period": "M"
                       }
-                    ],
-                    "meterType": [
-                      "Type 4",
-                      "Type 4a"
                     ],
                     "paymentOption": [
                       "BP",
@@ -86634,7 +86636,7 @@
                     "isFixed": false
                   }
                 ],
-                "planName": "Origin Solar Sharer Offer",
+                "planName": "Origin Standing Solar Sharer",
                 "planStatus": "PUBLISHED",
                 "supplyArea": [
                   {
@@ -86642,7 +86644,7 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1140440,
+                "batchId": 1165542,
                 "retailerId": "9639",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
@@ -86655,12 +86657,12 @@
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "Origin Energy",
-                "planId": "ORI1139976SRE2",
+                "planId": "ORI1139976SRE3",
                 "retailerCode": "ORI",
                 "state": "SA",
-                "effectiveDate": "2026-07-08"
+                "effectiveDate": "2026-09-04"
               },
-              "planId": "ORI1139976SRE2",
+              "planId": "ORI1139976SRE3",
               "postcodes": {
                 "5097": 1
               }
