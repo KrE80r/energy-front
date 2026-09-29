@@ -49519,7 +49519,79 @@
         "shoulder_cost": 32.5506005,
         "off_peak_cost": 17.043099700000003,
         "daily_supply_charge": 180.0511999,
-        "detailed_time_blocks": [],
+        "detailed_time_blocks": [
+          {
+            "name": "Peak",
+            "description": "Peak",
+            "time_of_use_period": "P",
+            "time_periods": [
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "0600",
+                "end_time": "0959"
+              },
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "1600",
+                "end_time": "2359"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 51.110727,
+                "unit_price_gst": 56.2217997,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Off Peak",
+            "description": "Off Peak",
+            "time_of_use_period": "OP",
+            "time_periods": [
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "0000",
+                "end_time": "0559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 29.591455,
+                "unit_price_gst": 32.5506005,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          },
+          {
+            "name": "Solar Soak",
+            "description": "Solar Soak",
+            "time_of_use_period": "S",
+            "time_periods": [
+              {
+                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                "start_time": "1000",
+                "end_time": "1559"
+              }
+            ],
+            "rates": [
+              {
+                "unit_price": 15.493727,
+                "unit_price_gst": 17.043099700000003,
+                "measure_unit": "KWH",
+                "rate_type": null,
+                "start_usage": 0,
+                "end_usage": null
+              }
+            ]
+          }
+        ],
         "fees": {
           "move_in_new_connection_fee": null,
           "paper_bill_fee": null,
@@ -49688,7 +49760,168 @@
               }
             }
           },
-          "detailed_api_response": null
+          "detailed_api_response": {
+            "data": {
+              "planData": {
+                "planType": "S",
+                "tariffType": "TOU",
+                "planRef": "Standing Offer TOU",
+                "contract": [
+                  {
+                    "pricingModel": "TOU",
+                    "benefitPeriod": "Ongoing",
+                    "coolingOffDays": 10,
+                    "additionalFeeInformation": "Additional fees may apply. For more information, please visit the retailer's website at flowpower.com.au/residential/policies/",
+                    "fee": [
+                      {
+                        "description": "Reconnection fee",
+                        "amount": 66.539,
+                        "feeType": "RecoF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "Disconnection fee",
+                        "amount": 66.539,
+                        "feeType": "DiscoF",
+                        "feeTerm": "F"
+                      },
+                      {
+                        "description": "Payment processing fee",
+                        "feeType": "PPF",
+                        "percent": 0.66,
+                        "feeTerm": "P"
+                      }
+                    ],
+                    "termType": "N",
+                    "networkTariffType": "IS",
+                    "tariffPeriod": [
+                      {
+                        "touBlock": [
+                          {
+                            "name": "Peak",
+                            "description": "Peak",
+                            "blockRate": [
+                              {
+                                "unitPrice": 51.110727,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "P",
+                            "timeOfUse": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "0600",
+                                "endTime": "0959"
+                              },
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "1600",
+                                "endTime": "2359"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Off Peak",
+                            "description": "Off Peak",
+                            "blockRate": [
+                              {
+                                "unitPrice": 29.591455,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "OP",
+                            "timeOfUse": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "0000",
+                                "endTime": "0559"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Solar Soak",
+                            "description": "Solar Soak",
+                            "blockRate": [
+                              {
+                                "unitPrice": 15.493727,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "S",
+                            "timeOfUse": [
+                              {
+                                "days": "SUN|MON|TUE|WED|THU|FRI|SAT",
+                                "startTime": "1000",
+                                "endTime": "1559"
+                              }
+                            ]
+                          }
+                        ],
+                        "endDate": "2027-06-30",
+                        "blockPeriod": "P1Y",
+                        "dailySupplyCharge": 163.682909,
+                        "startDate": "2026-07-01"
+                      }
+                    ],
+                    "fuelType": "E",
+                    "terms": "See Flow Power Standard Retail Contract Agreement Terms at flowpower.com.au/residential/policies/",
+                    "timeDefinition": "LOCAL",
+                    "billFrequency": [
+                      {
+                        "number": 1,
+                        "period": "M"
+                      },
+                      {
+                        "number": 3,
+                        "period": "M"
+                      }
+                    ],
+                    "meterType": [
+                      "Type 0"
+                    ],
+                    "paymentOption": [
+                      "DD"
+                    ],
+                    "isFixed": true
+                  }
+                ],
+                "planName": "Standing Offer FY27 TOU",
+                "planStatus": "PUBLISHED",
+                "supplyArea": [
+                  {
+                    "name": "SA Power Networks",
+                    "id": "42"
+                  }
+                ],
+                "batchId": 1151053,
+                "retailerId": "24216",
+                "distributor": "SA Power Networks",
+                "genAvailable": true,
+                "tags": [
+                  "Standing Offer TOU"
+                ],
+                "expiryDate": "2027-06-30",
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "Flow Power",
+                "planId": "FP11151070SRE1",
+                "retailerCode": "FP1",
+                "state": "SA",
+                "effectiveDate": "2026-07-29",
+                "meteringCost": [
+                  {
+                    "name": "Metering Cost",
+                    "description": "Charges may vary, for more information, please visit the retailer's website flowpower.com.au/residential",
+                    "min": "U"
+                  }
+                ]
+              },
+              "planId": "FP11151070SRE1",
+              "postcodes": {
+                "5097": 1
+              }
+            }
+          }
         },
         "raw_plan_data": {
           "eligibility_restrictions": false,
