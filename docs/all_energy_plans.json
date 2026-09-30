@@ -87180,7 +87180,6 @@
           "main_api_response": {
             "planId": "ORI1161044MRE2",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "benefitPeriod": "12 months",
@@ -87374,13 +87373,14 @@
                   ]
                 }
               ],
-              "planName": "Origin Battery Starter",
-              "retailerId": "9639",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "Origin Energy",
               "planId": "ORI1161044MRE2",
-              "retailerCode": "ORI"
+              "planName": "Origin Battery Starter",
+              "retailerCode": "ORI",
+              "retailerId": "9639",
+              "retailerName": "Origin Energy",
+              "tariffType": "TOU"
             },
             "planType": "E#R#ORI1161044MRE2",
             "postcode": 5097,
@@ -87445,8 +87445,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
+                "batchId": 1171833,
                 "contract": [
                   {
                     "benefitPeriod": "12 months",
@@ -87708,31 +87707,33 @@
                     "isFixed": false
                   }
                 ],
+                "customerType": "R",
+                "distributor": "SA Power Networks",
+                "effectiveDate": "2026-09-17",
+                "expiryDate": "2026-10-01",
+                "fuelType": "E",
+                "genAvailable": true,
+                "planId": "ORI1161044MRE2",
                 "planName": "Origin Battery Starter",
                 "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "ORI",
+                "retailerId": "9639",
+                "retailerName": "Origin Energy",
+                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
-                "batchId": 1171833,
-                "retailerId": "9639",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "tags": [
                   "0",
                   "E_BATTERYSTARTER_3PC_VAR_SAPN_260804",
                   "Time of Use",
                   "BAT_SAPNI"
                 ],
-                "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "Origin Energy",
-                "planId": "ORI1161044MRE2",
-                "retailerCode": "ORI",
-                "state": "SA",
-                "effectiveDate": "2026-09-17"
+                "tariffType": "TOU"
               },
               "planId": "ORI1161044MRE2",
               "postcodes": {
