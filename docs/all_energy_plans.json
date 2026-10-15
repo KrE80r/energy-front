@@ -86257,7 +86257,7 @@
         }
       },
       {
-        "plan_id": "ORI724759MRE15",
+        "plan_id": "ORI724759MRE16",
         "plan_name": "Origin Affinity Variable Ongoing - My Connect",
         "retailer_name": "Origin Energy",
         "plan_type": "TOU",
@@ -86380,13 +86380,13 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "ORI724759MRE15",
+            "planId": "ORI724759MRE16",
             "planData": {
               "tariffType": "TOU",
               "contract": [
                 {
-                  "benefitPeriod": "No contract term",
                   "pricingModel": "TOU",
+                  "benefitPeriod": "No contract term",
                   "solarFit": [
                     {
                       "tariffUType": "singleTariff",
@@ -86406,6 +86406,7 @@
                     {
                       "tariffUType": "singleTariff",
                       "scheme": "OTHER",
+                      "rate": 2,
                       "singleTariffRates": [
                         {
                           "unitPrice": 2,
@@ -86413,7 +86414,6 @@
                           "measureUnit": "KWH"
                         }
                       ],
-                      "rate": 2,
                       "displayName": "Solar FIT",
                       "type": "R",
                       "singleTariffPeriod": "P1Y"
@@ -86500,11 +86500,6 @@
                       "chargeType": "A"
                     }
                   ],
-                  "incentive": [
-                    {
-                      "name": "Account Credit"
-                    }
-                  ],
                   "fuelType": "E",
                   "meterType": [
                     "Type 4",
@@ -86533,14 +86528,48 @@
               "thirdPartyName": "My Connect",
               "fuelType": "E",
               "retailerName": "Origin Energy",
-              "planId": "ORI724759MRE15",
+              "planId": "ORI724759MRE16",
               "retailerCode": "ORI"
             },
-            "planType": "E#R#ORI724759MRE15",
+            "planType": "E#R#ORI724759MRE16",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
+                  "medium": {
+                    "yearly": {
+                      "noDiscounts": 2850,
+                      "allDiscounts": 2850,
+                      "guaranteedDiscount": 2850
+                    },
+                    "quarterly": {
+                      "allDiscounts": 630,
+                      "noDiscounts": 630,
+                      "guaranteedDiscount": 630
+                    },
+                    "monthly": {
+                      "allDiscounts": 240,
+                      "noDiscounts": 240,
+                      "guaranteedDiscount": 240
+                    }
+                  },
+                  "small": {
+                    "quarterly": {
+                      "allDiscounts": 410,
+                      "guaranteedDiscount": 410,
+                      "noDiscounts": 410
+                    },
+                    "yearly": {
+                      "guaranteedDiscount": 1850,
+                      "allDiscounts": 1850,
+                      "noDiscounts": 1850
+                    },
+                    "monthly": {
+                      "noDiscounts": 150,
+                      "allDiscounts": 150,
+                      "guaranteedDiscount": 150
+                    }
+                  },
                   "large": {
                     "quarterly": {
                       "noDiscounts": 860,
@@ -86557,40 +86586,6 @@
                       "noDiscounts": 3870,
                       "guaranteedDiscount": 3870
                     }
-                  },
-                  "small": {
-                    "monthly": {
-                      "guaranteedDiscount": 150,
-                      "allDiscounts": 150,
-                      "noDiscounts": 150
-                    },
-                    "yearly": {
-                      "noDiscounts": 1850,
-                      "guaranteedDiscount": 1850,
-                      "allDiscounts": 1850
-                    },
-                    "quarterly": {
-                      "noDiscounts": 410,
-                      "guaranteedDiscount": 410,
-                      "allDiscounts": 410
-                    }
-                  },
-                  "medium": {
-                    "monthly": {
-                      "noDiscounts": 240,
-                      "guaranteedDiscount": 240,
-                      "allDiscounts": 240
-                    },
-                    "quarterly": {
-                      "noDiscounts": 630,
-                      "guaranteedDiscount": 630,
-                      "allDiscounts": 630
-                    },
-                    "yearly": {
-                      "noDiscounts": 2850,
-                      "allDiscounts": 2850,
-                      "guaranteedDiscount": 2850
-                    }
                   }
                 }
               }
@@ -86603,9 +86598,8 @@
                 "tariffType": "TOU",
                 "contract": [
                   {
-                    "benefitPeriod": "No contract term",
                     "pricingModel": "TOU",
-                    "coolingOffDays": 10,
+                    "benefitPeriod": "No contract term",
                     "solarFit": [
                       {
                         "tariffUType": "singleTariff",
@@ -86626,6 +86620,7 @@
                       {
                         "tariffUType": "singleTariff",
                         "scheme": "OTHER",
+                        "rate": 2,
                         "singleTariffRates": [
                           {
                             "unitPrice": 2,
@@ -86633,13 +86628,13 @@
                             "measureUnit": "KWH"
                           }
                         ],
-                        "rate": 2,
                         "displayName": "Solar FIT",
                         "description": "Origin offers 2 cents per kWh exported, subject to eligibility. All amounts are GST-inclusive (if any).",
                         "type": "R",
                         "singleTariffPeriod": "P1Y"
                       }
                     ],
+                    "coolingOffDays": 10,
                     "additionalFeeInformation": "You may be required to pay any amounts that a Distributor or Meter Service Provider charges us for services provided at your Supply Address, including any metering-related goods or services, and which are not already incorporated into the Supply Charges or Energy Usage Charges. You can find out more at www.originenergy.com.au/2402/Additional-charges",
                     "fee": [
                       {
@@ -86773,8 +86768,8 @@
                         ]
                       },
                       {
-                        "name": "GreenPower",
                         "chargeType": "A",
+                        "name": "GreenPower",
                         "description": "For 4.50 cents/kWh 100% of your electricity usage is matched with electricity from Government accredited GreenPower sources",
                         "option": [
                           {
@@ -86782,12 +86777,6 @@
                             "chargeAmount": 0.045
                           }
                         ]
-                      }
-                    ],
-                    "incentive": [
-                      {
-                        "name": "Account Credit",
-                        "description": "$50 (inc GST) credit will be applied to your account after sign-up. You will see it on MyAccount and it will be applied to your electricity bill. Credit is not redeemable for cash."
                       }
                     ],
                     "fuelType": "E",
@@ -86832,13 +86821,13 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1190478,
+                "batchId": 1208229,
                 "retailerId": "9639",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
-                  "5+$50",
-                  "E_AFFVAROG_5PC_VAR_SAPN_260723",
+                  "5",
+                  "E_AFFVAROG_5PC_VAR_SAPN_260701",
                   "Time of Use",
                   "RTOU_JULY2025"
                 ],
@@ -86847,12 +86836,12 @@
                 "thirdPartyName": "My Connect",
                 "fuelType": "E",
                 "retailerName": "Origin Energy",
-                "planId": "ORI724759MRE15",
+                "planId": "ORI724759MRE16",
                 "retailerCode": "ORI",
                 "state": "SA",
-                "effectiveDate": "2026-10-01"
+                "effectiveDate": "2026-10-15"
               },
-              "planId": "ORI724759MRE15",
+              "planId": "ORI724759MRE16",
               "postcodes": {
                 "5097": 1
               }
