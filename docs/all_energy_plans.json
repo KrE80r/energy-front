@@ -2,7 +2,7 @@
   "metadata": {
     "postcode": "5097",
     "total_plans": 180,
-    "filtered_out": 446,
+    "filtered_out": 447,
     "extraction_date": "2025-06-26",
     "tou_count": 180,
     "sr_count": 0,
@@ -97538,7 +97538,6 @@
           "main_api_response": {
             "planId": "RED552712MRE14",
             "planData": {
-              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -97653,19 +97652,20 @@
                   ]
                 }
               ],
-              "planName": "Red BCNA Saver",
-              "retailerId": "9634",
               "customerType": "R",
               "fuelType": "E",
-              "retailerName": "Red Energy",
-              "planId": "RED552712MRE14",
-              "retailerCode": "RED",
               "meteringCost": [
                 {
                   "name": "Metering Cost",
                   "min": "U"
                 }
-              ]
+              ],
+              "planId": "RED552712MRE14",
+              "planName": "Red BCNA Saver",
+              "retailerCode": "RED",
+              "retailerId": "9634",
+              "retailerName": "Red Energy",
+              "tariffType": "TOU"
             },
             "planType": "E#R#RED552712MRE14",
             "postcode": 5097,
@@ -97730,9 +97730,7 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "planType": "M",
-                "tariffType": "TOU",
-                "planRef": "RTOU",
+                "batchId": 1103024,
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -97914,32 +97912,35 @@
                     "isFixed": false
                   }
                 ],
-                "planName": "Red BCNA Saver",
-                "planStatus": "PUBLISHED",
-                "supplyArea": [
-                  {
-                    "name": "SA Power Networks",
-                    "id": "42"
-                  }
-                ],
-                "batchId": 1103024,
-                "retailerId": "9634",
-                "distributor": "SA Power Networks",
-                "genAvailable": true,
                 "customerType": "R",
-                "fuelType": "E",
-                "retailerName": "Red Energy",
-                "planId": "RED552712MRE14",
-                "retailerCode": "RED",
-                "state": "SA",
+                "distributor": "SA Power Networks",
                 "effectiveDate": "2026-07-01",
+                "expiryDate": "2026-10-27",
+                "fuelType": "E",
+                "genAvailable": true,
                 "meteringCost": [
                   {
                     "name": "Metering Cost",
                     "description": "Charges may vary, please contact us on 131 806 for specific metering charges.",
                     "min": "U"
                   }
-                ]
+                ],
+                "planId": "RED552712MRE14",
+                "planName": "Red BCNA Saver",
+                "planRef": "RTOU",
+                "planStatus": "PUBLISHED",
+                "planType": "M",
+                "retailerCode": "RED",
+                "retailerId": "9634",
+                "retailerName": "Red Energy",
+                "state": "SA",
+                "supplyArea": [
+                  {
+                    "name": "SA Power Networks",
+                    "id": "42"
+                  }
+                ],
+                "tariffType": "TOU"
               },
               "planId": "RED552712MRE14",
               "postcodes": {
