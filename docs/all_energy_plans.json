@@ -3389,7 +3389,7 @@
         }
       },
       {
-        "plan_id": "AGL1067271MRE2",
+        "plan_id": "AGL1067271MRE3",
         "plan_name": "Residential Smart Saver - BP Fuel New To AGL",
         "retailer_name": "AGL",
         "plan_type": "TOU",
@@ -3504,25 +3504,25 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "AGL1067271MRE2",
+            "planId": "AGL1067271MRE3",
             "planData": {
               "tariffType": "TOU",
               "contract": [
                 {
-                  "pricingModel": "TOU",
                   "benefitPeriod": "Ongoing",
+                  "pricingModel": "TOU",
                   "solarFit": [
                     {
                       "tariffUType": "singleTariff",
                       "scheme": "OTHER",
+                      "rate": 1,
                       "singleTariffRates": [
                         {
                           "unitPrice": 1,
-                          "rebate": true,
-                          "measureUnit": "KWH"
+                          "measureUnit": "KWH",
+                          "rebate": true
                         }
                       ],
-                      "rate": 1,
                       "displayName": "AGL Retailer Feed-in Tariff (exc GST if any)",
                       "type": "R",
                       "singleTariffPeriod": "P1Y"
@@ -3534,8 +3534,8 @@
                       "singleTariffRates": [
                         {
                           "unitPrice": 44,
-                          "rebate": true,
-                          "measureUnit": "KWH"
+                          "measureUnit": "KWH",
+                          "rebate": true
                         }
                       ],
                       "displayName": "Solar bonus scheme - Premium FiT",
@@ -3624,7 +3624,7 @@
                       "name": "Bonus $100 Prepaid Visa"
                     },
                     {
-                      "name": "$150 sign up credit"
+                      "name": "$100 sign up credit"
                     }
                   ],
                   "fuelType": "E",
@@ -3659,19 +3659,36 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "AGL",
-              "planId": "AGL1067271MRE2",
+              "planId": "AGL1067271MRE3",
               "retailerCode": "AGL"
             },
-            "planType": "E#R#AGL1067271MRE2",
+            "planType": "E#R#AGL1067271MRE3",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
+                  "large": {
+                    "monthly": {
+                      "allDiscounts": 320,
+                      "guaranteedDiscount": 320,
+                      "noDiscounts": 320
+                    },
+                    "quarterly": {
+                      "allDiscounts": 860,
+                      "guaranteedDiscount": 860,
+                      "noDiscounts": 860
+                    },
+                    "yearly": {
+                      "allDiscounts": 3870,
+                      "guaranteedDiscount": 3870,
+                      "noDiscounts": 3870
+                    }
+                  },
                   "medium": {
                     "monthly": {
+                      "allDiscounts": 240,
                       "guaranteedDiscount": 240,
-                      "noDiscounts": 240,
-                      "allDiscounts": 240
+                      "noDiscounts": 240
                     },
                     "quarterly": {
                       "allDiscounts": 630,
@@ -3679,43 +3696,26 @@
                       "noDiscounts": 630
                     },
                     "yearly": {
+                      "allDiscounts": 2850,
                       "guaranteedDiscount": 2850,
-                      "noDiscounts": 2850,
-                      "allDiscounts": 2850
-                    }
-                  },
-                  "large": {
-                    "monthly": {
-                      "noDiscounts": 320,
-                      "guaranteedDiscount": 320,
-                      "allDiscounts": 320
-                    },
-                    "quarterly": {
-                      "allDiscounts": 860,
-                      "noDiscounts": 860,
-                      "guaranteedDiscount": 860
-                    },
-                    "yearly": {
-                      "noDiscounts": 3870,
-                      "allDiscounts": 3870,
-                      "guaranteedDiscount": 3870
+                      "noDiscounts": 2850
                     }
                   },
                   "small": {
                     "monthly": {
                       "allDiscounts": 150,
-                      "noDiscounts": 150,
-                      "guaranteedDiscount": 150
-                    },
-                    "yearly": {
-                      "allDiscounts": 1850,
-                      "noDiscounts": 1850,
-                      "guaranteedDiscount": 1850
+                      "guaranteedDiscount": 150,
+                      "noDiscounts": 150
                     },
                     "quarterly": {
                       "allDiscounts": 410,
-                      "noDiscounts": 410,
-                      "guaranteedDiscount": 410
+                      "guaranteedDiscount": 410,
+                      "noDiscounts": 410
+                    },
+                    "yearly": {
+                      "allDiscounts": 1850,
+                      "guaranteedDiscount": 1850,
+                      "noDiscounts": 1850
                     }
                   }
                 }
@@ -3729,21 +3729,21 @@
                 "tariffType": "TOU",
                 "contract": [
                   {
-                    "pricingModel": "TOU",
                     "benefitPeriod": "Ongoing",
+                    "pricingModel": "TOU",
                     "coolingOffDays": 10,
                     "solarFit": [
                       {
                         "tariffUType": "singleTariff",
                         "scheme": "OTHER",
+                        "rate": 1,
                         "singleTariffRates": [
                           {
                             "unitPrice": 1,
-                            "rebate": true,
-                            "measureUnit": "KWH"
+                            "measureUnit": "KWH",
+                            "rebate": true
                           }
                         ],
-                        "rate": 1,
                         "displayName": "AGL Retailer Feed-in Tariff (exc GST if any)",
                         "description": "AGL Retailer Feed-in Tariff (exc GST if any)",
                         "type": "R",
@@ -3756,8 +3756,8 @@
                         "singleTariffRates": [
                           {
                             "unitPrice": 44,
-                            "rebate": true,
-                            "measureUnit": "KWH"
+                            "measureUnit": "KWH",
+                            "rebate": true
                           }
                         ],
                         "displayName": "Solar bonus scheme - Premium FiT",
@@ -3876,18 +3876,17 @@
                             ]
                           }
                         ],
-                        "endDate": "2021-06-30",
                         "blockPeriod": "P1Y",
-                        "startDate": "2020-07-01",
-                        "dailySupplyCharge": 155.49
+                        "endDate": "2021-06-30",
+                        "dailySupplyCharge": 155.49,
+                        "startDate": "2020-07-01"
                       }
                     ],
                     "variation": "This plan has variable rates, fees, and charges, and may include energy payments for (e.g. a Solar Feed-in Tariff) that can change with notice to you. Any increases to your rates, fees or charges or reduction to energy payments will occur in July and you will receive at least five business days' notice. An increase to a tariff or charge or decrease in an energy payment made as a direct result of a tariff reassignment by your distributor may still occur at anytime.",
-                    "onExpiry": "Your market contract is ongoing. From time to time, AGL reviews its offers and this offer will be reviewed with consideration to AGL's generally available market offers",
                     "greenCharge": [
                       {
-                        "name": "Green Power Charge",
                         "chargeType": "A",
+                        "name": "Green Power Charge",
                         "description": "For 1.1c /kWh inc. GST we ensure energy equal to 100% of your usage will be fed into the grid from Accredited GreenPower generators.",
                         "option": [
                           {
@@ -3897,25 +3896,20 @@
                         ]
                       }
                     ],
+                    "onExpiry": "Your market contract is ongoing. From time to time, AGL reviews its offers and this offer will be reviewed with consideration to AGL's generally available market offers",
                     "incentive": [
                       {
                         "name": "Bonus $100 Prepaid Visa",
                         "description": "Remain with AGL for at least 30 days from sign up to receive one $100 Prepaid Visa per customer"
                       },
                       {
-                        "name": "$150 sign up credit",
+                        "name": "$100 sign up credit",
                         "description": "For new & moving AGL customers who stay with AGL at the same address for 90 days from start of the plan. Credit will appear on next bill after 90 days. Non-transferable. Accounts may be excluded from receiving more than one credit per fuel in 12 months"
                       }
                     ],
                     "fuelType": "E",
                     "terms": "This offer applies to customers with an applicable network tariff. For solar feed-in tariff eligibility, or for further information about the terms and conditions applicable to this energy offer, please contact AGL on 131 245 or visit agl.com.au.",
                     "timeDefinition": "LOCAL",
-                    "meterType": [
-                      "Type 4",
-                      "Type 4a",
-                      "Type 5",
-                      "Type 6"
-                    ],
                     "billFrequency": [
                       {
                         "number": 3,
@@ -3925,6 +3919,12 @@
                         "number": 1,
                         "period": "M"
                       }
+                    ],
+                    "meterType": [
+                      "Type 4",
+                      "Type 4a",
+                      "Type 5",
+                      "Type 6"
                     ],
                     "paymentOption": [
                       "P",
@@ -3955,24 +3955,24 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1189243,
+                "batchId": 1217448,
                 "retailerId": "9620",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
                   ";#Time of use;#",
-                  "AGLMKTRE0025161",
+                  "AGLMKTRE0025160",
                   "TOU_INT"
                 ],
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "AGL",
-                "planId": "AGL1067271MRE2",
+                "planId": "AGL1067271MRE3",
                 "retailerCode": "AGL",
                 "state": "SA",
-                "effectiveDate": "2026-10-01"
+                "effectiveDate": "2026-11-10"
               },
-              "planId": "AGL1067271MRE2",
+              "planId": "AGL1067271MRE3",
               "postcodes": {
                 "5097": 1
               }
@@ -4597,7 +4597,7 @@
         }
       },
       {
-        "plan_id": "AGL1067275MRE2",
+        "plan_id": "AGL1067275MRE3",
         "plan_name": "Residential Smart Saver - Westpac New to AGL",
         "retailer_name": "AGL",
         "plan_type": "TOU",
@@ -4712,13 +4712,13 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "AGL1067275MRE2",
+            "planId": "AGL1067275MRE3",
             "planData": {
               "tariffType": "TOU",
               "contract": [
                 {
-                  "pricingModel": "TOU",
                   "benefitPeriod": "Ongoing",
+                  "pricingModel": "TOU",
                   "solarFit": [
                     {
                       "tariffUType": "singleTariff",
@@ -4742,8 +4742,8 @@
                       "singleTariffRates": [
                         {
                           "unitPrice": 44,
-                          "rebate": true,
-                          "measureUnit": "KWH"
+                          "measureUnit": "KWH",
+                          "rebate": true
                         }
                       ],
                       "displayName": "Solar bonus scheme - Premium FiT",
@@ -4832,7 +4832,7 @@
                       "name": "Bonus $100 Digital Mastercard"
                     },
                     {
-                      "name": "$150 sign up credit"
+                      "name": "$100 sign up credit"
                     }
                   ],
                   "fuelType": "E",
@@ -4867,63 +4867,63 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "AGL",
-              "planId": "AGL1067275MRE2",
+              "planId": "AGL1067275MRE3",
               "retailerCode": "AGL"
             },
-            "planType": "E#R#AGL1067275MRE2",
+            "planType": "E#R#AGL1067275MRE3",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
-                  "small": {
-                    "monthly": {
-                      "allDiscounts": 150,
-                      "guaranteedDiscount": 150,
-                      "noDiscounts": 150
-                    },
-                    "yearly": {
-                      "allDiscounts": 1850,
-                      "noDiscounts": 1850,
-                      "guaranteedDiscount": 1850
-                    },
-                    "quarterly": {
-                      "allDiscounts": 410,
-                      "guaranteedDiscount": 410,
-                      "noDiscounts": 410
-                    }
-                  },
-                  "medium": {
-                    "quarterly": {
-                      "noDiscounts": 630,
-                      "guaranteedDiscount": 630,
-                      "allDiscounts": 630
-                    },
-                    "monthly": {
-                      "allDiscounts": 240,
-                      "guaranteedDiscount": 240,
-                      "noDiscounts": 240
-                    },
-                    "yearly": {
-                      "noDiscounts": 2850,
-                      "guaranteedDiscount": 2850,
-                      "allDiscounts": 2850
-                    }
-                  },
                   "large": {
-                    "yearly": {
-                      "guaranteedDiscount": 3870,
-                      "noDiscounts": 3870,
-                      "allDiscounts": 3870
+                    "monthly": {
+                      "allDiscounts": 320,
+                      "guaranteedDiscount": 320,
+                      "noDiscounts": 320
                     },
                     "quarterly": {
                       "allDiscounts": 860,
                       "guaranteedDiscount": 860,
                       "noDiscounts": 860
                     },
+                    "yearly": {
+                      "allDiscounts": 3870,
+                      "guaranteedDiscount": 3870,
+                      "noDiscounts": 3870
+                    }
+                  },
+                  "medium": {
                     "monthly": {
-                      "noDiscounts": 320,
-                      "allDiscounts": 320,
-                      "guaranteedDiscount": 320
+                      "allDiscounts": 240,
+                      "guaranteedDiscount": 240,
+                      "noDiscounts": 240
+                    },
+                    "quarterly": {
+                      "allDiscounts": 630,
+                      "guaranteedDiscount": 630,
+                      "noDiscounts": 630
+                    },
+                    "yearly": {
+                      "allDiscounts": 2850,
+                      "guaranteedDiscount": 2850,
+                      "noDiscounts": 2850
+                    }
+                  },
+                  "small": {
+                    "monthly": {
+                      "allDiscounts": 150,
+                      "guaranteedDiscount": 150,
+                      "noDiscounts": 150
+                    },
+                    "quarterly": {
+                      "allDiscounts": 410,
+                      "guaranteedDiscount": 410,
+                      "noDiscounts": 410
+                    },
+                    "yearly": {
+                      "allDiscounts": 1850,
+                      "guaranteedDiscount": 1850,
+                      "noDiscounts": 1850
                     }
                   }
                 }
@@ -4937,8 +4937,8 @@
                 "tariffType": "TOU",
                 "contract": [
                   {
-                    "pricingModel": "TOU",
                     "benefitPeriod": "Ongoing",
+                    "pricingModel": "TOU",
                     "coolingOffDays": 10,
                     "solarFit": [
                       {
@@ -4964,8 +4964,8 @@
                         "singleTariffRates": [
                           {
                             "unitPrice": 44,
-                            "rebate": true,
-                            "measureUnit": "KWH"
+                            "measureUnit": "KWH",
+                            "rebate": true
                           }
                         ],
                         "displayName": "Solar bonus scheme - Premium FiT",
@@ -5093,8 +5093,8 @@
                     "variation": "This plan has variable rates, fees, and charges, and may include energy payments for (e.g. a Solar Feed-in Tariff) that can change with notice to you. Any increases to your rates, fees or charges or reduction to energy payments will occur in July and you will receive at least five business days' notice. An increase to a tariff or charge or decrease in an energy payment made as a direct result of a tariff reassignment by your distributor may still occur at anytime.",
                     "greenCharge": [
                       {
-                        "name": "Green Power Charge",
                         "chargeType": "A",
+                        "name": "Green Power Charge",
                         "description": "For 1.1c /kWh inc. GST we ensure energy equal to 100% of your usage will be fed into the grid from Accredited GreenPower generators.",
                         "option": [
                           {
@@ -5111,7 +5111,7 @@
                         "description": "Remain with AGL for at least 30 days from sign up to receive one $100 Prepaid Digital Mastercard per customer"
                       },
                       {
-                        "name": "$150 sign up credit",
+                        "name": "$100 sign up credit",
                         "description": "For new & moving AGL customers who stay with AGL at the same address for 90 days from start of the plan. Credit will appear on next bill after 90 days. Non-transferable. Accounts may be excluded from receiving more than one credit per fuel in 12 months"
                       }
                     ],
@@ -5163,24 +5163,24 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1189243,
+                "batchId": 1217448,
                 "retailerId": "9620",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
                   ";#Time of use;#",
-                  "AGLMKTRE0025161",
+                  "AGLMKTRE0025160",
                   "TOU_INT"
                 ],
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "AGL",
-                "planId": "AGL1067275MRE2",
+                "planId": "AGL1067275MRE3",
                 "retailerCode": "AGL",
                 "state": "SA",
-                "effectiveDate": "2026-10-01"
+                "effectiveDate": "2026-11-10"
               },
-              "planId": "AGL1067275MRE2",
+              "planId": "AGL1067275MRE3",
               "postcodes": {
                 "5097": 1
               }
@@ -11509,7 +11509,7 @@
         }
       },
       {
-        "plan_id": "AGL1067314MRE2",
+        "plan_id": "AGL1067314MRE3",
         "plan_name": "Residential Smart Saver - Velocity New To AGL",
         "retailer_name": "AGL",
         "plan_type": "TOU",
@@ -11624,17 +11624,18 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "AGL1067314MRE2",
+            "planId": "AGL1067314MRE3",
             "planData": {
               "tariffType": "TOU",
               "contract": [
                 {
-                  "pricingModel": "TOU",
                   "benefitPeriod": "Ongoing",
+                  "pricingModel": "TOU",
                   "solarFit": [
                     {
                       "tariffUType": "singleTariff",
                       "scheme": "OTHER",
+                      "rate": 1,
                       "singleTariffRates": [
                         {
                           "unitPrice": 1,
@@ -11642,7 +11643,6 @@
                           "rebate": true
                         }
                       ],
-                      "rate": 1,
                       "displayName": "AGL Retailer Feed-in Tariff (exc GST if any)",
                       "type": "R",
                       "singleTariffPeriod": "P1Y"
@@ -11654,8 +11654,8 @@
                       "singleTariffRates": [
                         {
                           "unitPrice": 44,
-                          "rebate": true,
-                          "measureUnit": "KWH"
+                          "measureUnit": "KWH",
+                          "rebate": true
                         }
                       ],
                       "displayName": "Solar bonus scheme - Premium FiT",
@@ -11744,7 +11744,7 @@
                       "name": "10,000 Sign-up Velocity Points"
                     },
                     {
-                      "name": "$150 sign up credit"
+                      "name": "$100 sign up credit"
                     }
                   ],
                   "fuelType": "E",
@@ -11779,63 +11779,63 @@
               "customerType": "R",
               "fuelType": "E",
               "retailerName": "AGL",
-              "planId": "AGL1067314MRE2",
+              "planId": "AGL1067314MRE3",
               "retailerCode": "AGL"
             },
-            "planType": "E#R#AGL1067314MRE2",
+            "planType": "E#R#AGL1067314MRE3",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
                   "large": {
-                    "yearly": {
-                      "guaranteedDiscount": 3870,
-                      "allDiscounts": 3870,
-                      "noDiscounts": 3870
-                    },
-                    "quarterly": {
-                      "noDiscounts": 860,
-                      "guaranteedDiscount": 860,
-                      "allDiscounts": 860
-                    },
                     "monthly": {
                       "allDiscounts": 320,
                       "guaranteedDiscount": 320,
                       "noDiscounts": 320
-                    }
-                  },
-                  "small": {
-                    "quarterly": {
-                      "allDiscounts": 410,
-                      "guaranteedDiscount": 410,
-                      "noDiscounts": 410
                     },
-                    "monthly": {
-                      "noDiscounts": 150,
-                      "guaranteedDiscount": 150,
-                      "allDiscounts": 150
+                    "quarterly": {
+                      "allDiscounts": 860,
+                      "guaranteedDiscount": 860,
+                      "noDiscounts": 860
                     },
                     "yearly": {
-                      "guaranteedDiscount": 1850,
-                      "allDiscounts": 1850,
-                      "noDiscounts": 1850
+                      "allDiscounts": 3870,
+                      "guaranteedDiscount": 3870,
+                      "noDiscounts": 3870
                     }
                   },
                   "medium": {
-                    "yearly": {
-                      "allDiscounts": 2850,
-                      "noDiscounts": 2850,
-                      "guaranteedDiscount": 2850
+                    "monthly": {
+                      "allDiscounts": 240,
+                      "guaranteedDiscount": 240,
+                      "noDiscounts": 240
                     },
                     "quarterly": {
                       "allDiscounts": 630,
                       "guaranteedDiscount": 630,
                       "noDiscounts": 630
                     },
+                    "yearly": {
+                      "allDiscounts": 2850,
+                      "guaranteedDiscount": 2850,
+                      "noDiscounts": 2850
+                    }
+                  },
+                  "small": {
                     "monthly": {
-                      "guaranteedDiscount": 240,
-                      "noDiscounts": 240,
-                      "allDiscounts": 240
+                      "allDiscounts": 150,
+                      "guaranteedDiscount": 150,
+                      "noDiscounts": 150
+                    },
+                    "quarterly": {
+                      "allDiscounts": 410,
+                      "guaranteedDiscount": 410,
+                      "noDiscounts": 410
+                    },
+                    "yearly": {
+                      "allDiscounts": 1850,
+                      "guaranteedDiscount": 1850,
+                      "noDiscounts": 1850
                     }
                   }
                 }
@@ -11849,12 +11849,14 @@
                 "tariffType": "TOU",
                 "contract": [
                   {
-                    "pricingModel": "TOU",
                     "benefitPeriod": "Ongoing",
+                    "pricingModel": "TOU",
+                    "coolingOffDays": 10,
                     "solarFit": [
                       {
                         "tariffUType": "singleTariff",
                         "scheme": "OTHER",
+                        "rate": 1,
                         "singleTariffRates": [
                           {
                             "unitPrice": 1,
@@ -11862,7 +11864,6 @@
                             "rebate": true
                           }
                         ],
-                        "rate": 1,
                         "displayName": "AGL Retailer Feed-in Tariff (exc GST if any)",
                         "description": "AGL Retailer Feed-in Tariff (exc GST if any)",
                         "type": "R",
@@ -11875,8 +11876,8 @@
                         "singleTariffRates": [
                           {
                             "unitPrice": 44,
-                            "rebate": true,
-                            "measureUnit": "KWH"
+                            "measureUnit": "KWH",
+                            "rebate": true
                           }
                         ],
                         "displayName": "Solar bonus scheme - Premium FiT",
@@ -11885,7 +11886,6 @@
                         "singleTariffPeriod": "P1Y"
                       }
                     ],
-                    "coolingOffDays": 10,
                     "additionalFeeInformation": "Additional fees and charges may apply. Please see the AGL fee schedules at agl.com.au/fees",
                     "fee": [
                       {
@@ -11998,15 +11998,15 @@
                         ],
                         "blockPeriod": "P1Y",
                         "endDate": "2021-06-30",
-                        "startDate": "2020-07-01",
-                        "dailySupplyCharge": 155.49
+                        "dailySupplyCharge": 155.49,
+                        "startDate": "2020-07-01"
                       }
                     ],
                     "variation": "This plan has variable rates, fees, and charges, and may include energy payments for (e.g. a Solar Feed-in Tariff) that can change with notice to you. Any increases to your rates, fees or charges or reduction to energy payments will occur in July and you will receive at least five business days' notice. An increase to a tariff or charge or decrease in an energy payment made as a direct result of a tariff reassignment by your distributor may still occur at anytime.",
                     "greenCharge": [
                       {
-                        "name": "Green Power Charge",
                         "chargeType": "A",
+                        "name": "Green Power Charge",
                         "description": "For 1.1c /kWh inc. GST we ensure energy equal to 100% of your usage will be fed into the grid from Accredited GreenPower generators.",
                         "option": [
                           {
@@ -12023,7 +12023,7 @@
                         "description": "Eligibility criteria and Terms & Conditions  apply. Points in T&Cs. Limit per customer: One Offer per fuel and a maximum of two supply addresses."
                       },
                       {
-                        "name": "$150 sign up credit",
+                        "name": "$100 sign up credit",
                         "description": "For new & moving AGL customers who stay with AGL at the same address for 90 days from start of the plan. Credit will appear on next bill after 90 days. Non-transferable. Accounts may be excluded from receiving more than one credit per fuel in 12 months"
                       }
                     ],
@@ -12075,24 +12075,24 @@
                     "id": "42"
                   }
                 ],
-                "batchId": 1189243,
+                "batchId": 1217448,
                 "retailerId": "9620",
                 "distributor": "SA Power Networks",
                 "genAvailable": true,
                 "tags": [
                   ";#Time of use;#",
-                  "AGLMKTRE0025161",
+                  "AGLMKTRE0025160",
                   "TOU_INT"
                 ],
                 "customerType": "R",
                 "fuelType": "E",
                 "retailerName": "AGL",
-                "planId": "AGL1067314MRE2",
+                "planId": "AGL1067314MRE3",
                 "retailerCode": "AGL",
                 "state": "SA",
-                "effectiveDate": "2026-10-01"
+                "effectiveDate": "2026-11-10"
               },
-              "planId": "AGL1067314MRE2",
+              "planId": "AGL1067314MRE3",
               "postcodes": {
                 "5097": 1
               }
