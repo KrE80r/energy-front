@@ -11621,7 +11621,7 @@
         }
       },
       {
-        "plan_id": "ALI1115537MRE4",
+        "plan_id": "ALI1115537MRE5",
         "plan_name": "SolarBalance Choice - Time of Use (Interval)",
         "retailer_name": "Alinta Energy",
         "plan_type": "TOU",
@@ -11743,8 +11743,9 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "ALI1115537MRE4",
+            "planId": "ALI1115537MRE5",
             "planData": {
+              "tariffType": "TOU",
               "contract": [
                 {
                   "pricingModel": "TOU",
@@ -11752,6 +11753,7 @@
                     {
                       "tariffUType": "singleTariff",
                       "scheme": "OTHER",
+                      "rate": 5,
                       "singleTariffRates": [
                         {
                           "unitPrice": 5,
@@ -11760,7 +11762,6 @@
                           "rebate": true
                         }
                       ],
-                      "rate": 5,
                       "displayName": "Solar Bonus FiT",
                       "type": "R",
                       "singleTariffPeriod": "P1D"
@@ -11768,14 +11769,14 @@
                     {
                       "tariffUType": "singleTariff",
                       "scheme": "OTHER",
+                      "rate": 0.5,
                       "singleTariffRates": [
                         {
                           "unitPrice": 0.5,
-                          "rebate": true,
-                          "measureUnit": "KWH"
+                          "measureUnit": "KWH",
+                          "rebate": true
                         }
                       ],
-                      "rate": 0.5,
                       "displayName": "Single Rate Solar FiT",
                       "type": "R",
                       "singleTariffPeriod": "P1Y"
@@ -11783,14 +11784,14 @@
                     {
                       "tariffUType": "singleTariff",
                       "scheme": "OTHER",
+                      "rate": 44,
                       "singleTariffRates": [
                         {
                           "unitPrice": 44,
-                          "rebate": true,
-                          "measureUnit": "KWH"
+                          "measureUnit": "KWH",
+                          "rebate": true
                         }
                       ],
-                      "rate": 44,
                       "displayName": "Single Rate Solar FiT",
                       "type": "G",
                       "singleTariffPeriod": "P1Y"
@@ -11798,14 +11799,14 @@
                     {
                       "tariffUType": "singleTariff",
                       "scheme": "OTHER",
+                      "rate": 44,
                       "singleTariffRates": [
                         {
                           "unitPrice": 44,
-                          "rebate": true,
-                          "measureUnit": "KWH"
+                          "measureUnit": "KWH",
+                          "rebate": true
                         }
                       ],
-                      "rate": 44,
                       "displayName": "Single Rate Solar FiT",
                       "type": "G",
                       "singleTariffPeriod": "P1Y"
@@ -11813,27 +11814,18 @@
                     {
                       "tariffUType": "singleTariff",
                       "scheme": "OTHER",
+                      "rate": 44,
                       "singleTariffRates": [
                         {
                           "unitPrice": 44,
-                          "rebate": true,
-                          "measureUnit": "KWH"
+                          "measureUnit": "KWH",
+                          "rebate": true
                         }
                       ],
-                      "rate": 44,
                       "displayName": "Single Rate Solar FiT",
                       "type": "G",
                       "singleTariffPeriod": "P1Y"
                     }
-                  ],
-                  "networkTariffCode": [
-                    "RTOUPLUS",
-                    "RTOU",
-                    "RTOUMC",
-                    "RTOUCL",
-                    "RTOUCLMC",
-                    "RESELE",
-                    "RESELENE"
                   ],
                   "fee": [
                     {
@@ -11881,6 +11873,15 @@
                       "feeType": "LPF",
                       "feeTerm": "F"
                     }
+                  ],
+                  "networkTariffCode": [
+                    "RTOUPLUS",
+                    "RTOU",
+                    "RTOUMC",
+                    "RTOUCL",
+                    "RTOUCLMC",
+                    "RESELE",
+                    "RESELENE"
                   ],
                   "termType": "N",
                   "networkTariffType": "PT",
@@ -11942,69 +11943,68 @@
                   ]
                 }
               ],
+              "planName": "SolarBalance Choice - Time of Use (Interval)",
+              "retailerId": "9624",
               "customerType": "R",
               "fuelType": "E",
-              "planId": "ALI1115537MRE4",
-              "planName": "SolarBalance Choice - Time of Use (Interval)",
-              "retailerCode": "ALI",
-              "retailerId": "9624",
               "retailerName": "Alinta Energy",
-              "tariffType": "TOU"
+              "planId": "ALI1115537MRE5",
+              "retailerCode": "ALI"
             },
-            "planType": "E#R#ALI1115537MRE4",
+            "planType": "E#R#ALI1115537MRE5",
             "postcode": 5097,
             "pcr": {
               "costs": {
                 "electricity": {
-                  "small": {
-                    "yearly": {
-                      "allDiscounts": 2050,
-                      "noDiscounts": 2050,
-                      "guaranteedDiscount": 2050
-                    },
-                    "quarterly": {
-                      "guaranteedDiscount": 450,
-                      "allDiscounts": 450,
-                      "noDiscounts": 450
-                    },
-                    "monthly": {
-                      "noDiscounts": 170,
-                      "guaranteedDiscount": 170,
-                      "allDiscounts": 170
-                    }
-                  },
-                  "medium": {
-                    "monthly": {
-                      "guaranteedDiscount": 260,
-                      "allDiscounts": 260,
-                      "noDiscounts": 260
-                    },
-                    "quarterly": {
-                      "allDiscounts": 690,
-                      "noDiscounts": 690,
-                      "guaranteedDiscount": 690
-                    },
-                    "yearly": {
-                      "guaranteedDiscount": 3150,
-                      "noDiscounts": 3150,
-                      "allDiscounts": 3150
-                    }
-                  },
                   "large": {
+                    "monthly": {
+                      "allDiscounts": 360,
+                      "guaranteedDiscount": 360,
+                      "noDiscounts": 360
+                    },
                     "quarterly": {
                       "allDiscounts": 950,
                       "guaranteedDiscount": 950,
                       "noDiscounts": 950
                     },
-                    "monthly": {
-                      "noDiscounts": 360,
-                      "guaranteedDiscount": 360,
-                      "allDiscounts": 360
-                    },
                     "yearly": {
                       "allDiscounts": 4280,
-                      "noDiscounts": 4280,
-                      "guaranteedDiscount": 4280
+                      "guaranteedDiscount": 4280,
+                      "noDiscounts": 4280
+                    }
+                  },
+                  "medium": {
+                    "monthly": {
+                      "allDiscounts": 260,
+                      "guaranteedDiscount": 260,
+                      "noDiscounts": 260
+                    },
+                    "quarterly": {
+                      "allDiscounts": 690,
+                      "guaranteedDiscount": 690,
+                      "noDiscounts": 690
+                    },
+                    "yearly": {
+                      "allDiscounts": 3150,
+                      "guaranteedDiscount": 3150,
+                      "noDiscounts": 3150
+                    }
+                  },
+                  "small": {
+                    "monthly": {
+                      "allDiscounts": 170,
+                      "guaranteedDiscount": 170,
+                      "noDiscounts": 170
+                    },
+                    "quarterly": {
+                      "allDiscounts": 450,
+                      "guaranteedDiscount": 450,
+                      "noDiscounts": 450
+                    },
+                    "yearly": {
+                      "allDiscounts": 2050,
+                      "guaranteedDiscount": 2050,
+                      "noDiscounts": 2050
                     }
                   }
                 }
@@ -12014,7 +12014,8 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "batchId": 1143494,
+                "planType": "M",
+                "tariffType": "TOU",
                 "contract": [
                   {
                     "pricingModel": "TOU",
@@ -12023,6 +12024,7 @@
                       {
                         "tariffUType": "singleTariff",
                         "scheme": "OTHER",
+                        "rate": 5,
                         "singleTariffRates": [
                           {
                             "unitPrice": 5,
@@ -12031,7 +12033,6 @@
                             "rebate": true
                           }
                         ],
-                        "rate": 5,
                         "displayName": "Solar Bonus FiT",
                         "description": "Solar Balance FiT",
                         "type": "R",
@@ -12040,14 +12041,14 @@
                       {
                         "tariffUType": "singleTariff",
                         "scheme": "OTHER",
+                        "rate": 0.5,
                         "singleTariffRates": [
                           {
                             "unitPrice": 0.5,
-                            "rebate": true,
-                            "measureUnit": "KWH"
+                            "measureUnit": "KWH",
+                            "rebate": true
                           }
                         ],
-                        "rate": 0.5,
                         "displayName": "Single Rate Solar FiT",
                         "description": "Retailer FiT (ex GST)",
                         "type": "R",
@@ -12056,14 +12057,14 @@
                       {
                         "tariffUType": "singleTariff",
                         "scheme": "OTHER",
+                        "rate": 44,
                         "singleTariffRates": [
                           {
                             "unitPrice": 44,
-                            "rebate": true,
-                            "measureUnit": "KWH"
+                            "measureUnit": "KWH",
+                            "rebate": true
                           }
                         ],
-                        "rate": 44,
                         "displayName": "Single Rate Solar FiT",
                         "description": "Customer Group 1 (ex GST)",
                         "type": "G",
@@ -12072,14 +12073,14 @@
                       {
                         "tariffUType": "singleTariff",
                         "scheme": "OTHER",
+                        "rate": 44,
                         "singleTariffRates": [
                           {
                             "unitPrice": 44,
-                            "rebate": true,
-                            "measureUnit": "KWH"
+                            "measureUnit": "KWH",
+                            "rebate": true
                           }
                         ],
-                        "rate": 44,
                         "displayName": "Single Rate Solar FiT",
                         "description": "Customer Group 2 (ex GST)",
                         "type": "G",
@@ -12088,14 +12089,14 @@
                       {
                         "tariffUType": "singleTariff",
                         "scheme": "OTHER",
+                        "rate": 44,
                         "singleTariffRates": [
                           {
                             "unitPrice": 44,
-                            "rebate": true,
-                            "measureUnit": "KWH"
+                            "measureUnit": "KWH",
+                            "rebate": true
                           }
                         ],
-                        "rate": 44,
                         "displayName": "Single Rate Solar FiT",
                         "description": "Customer Group 3 (ex GST)",
                         "type": "G",
@@ -12103,15 +12104,6 @@
                       }
                     ],
                     "additionalFeeInformation": "We reserve the right to and will notify you if we change or impose additional fees or charges in relation to your energy supply. Fees and charges for work undertaken by your Distributor or Metering Provider are outlined at www.alintaenergy.com.au/feesandcharges",
-                    "networkTariffCode": [
-                      "RTOUPLUS",
-                      "RTOU",
-                      "RTOUMC",
-                      "RTOUCL",
-                      "RTOUCLMC",
-                      "RESELE",
-                      "RESELENE"
-                    ],
                     "fee": [
                       {
                         "description": "Disconnection fee. Fee may vary, please see additional fee information.",
@@ -12167,6 +12159,15 @@
                         "feeType": "LPF",
                         "feeTerm": "F"
                       }
+                    ],
+                    "networkTariffCode": [
+                      "RTOUPLUS",
+                      "RTOU",
+                      "RTOUMC",
+                      "RTOUCL",
+                      "RTOUCLMC",
+                      "RESELE",
+                      "RESELENE"
                     ],
                     "termType": "N",
                     "networkTariffType": "PT",
@@ -12234,8 +12235,8 @@
                             ]
                           }
                         ],
-                        "endDate": "2020-12-31",
                         "blockPeriod": "P1D",
+                        "endDate": "2020-12-31",
                         "dailySupplyCharge": 171.87,
                         "startDate": "2020-01-01"
                       }
@@ -12244,7 +12245,7 @@
                     "incentive": [
                       {
                         "name": "Stepped FiT",
-                        "description": "This plan includes a stepped feed-in tariff, where you will receive a feed-in tariff of 5c/kWh for the first 8kWh exported. For any export after that you will obtain Alinta Energy's standard retailer feed-in tariff."
+                        "description": "This energy plan includes a stepped feed-in tariff. You will receive a feed-in tariff of 5c/kWh for the first 8kWh of daily exports, and 0.5c/kWh for any additional exports that day."
                       }
                     ],
                     "fuelType": "E",
@@ -12277,32 +12278,30 @@
                     "isFixed": false
                   }
                 ],
-                "customerType": "R",
-                "distributor": "SA Power Networks",
-                "effectiveDate": "2026-07-14",
-                "expiryDate": "2026-11-12",
-                "fuelType": "E",
-                "genAvailable": true,
-                "planId": "ALI1115537MRE4",
                 "planName": "SolarBalance Choice - Time of Use (Interval)",
                 "planStatus": "PUBLISHED",
-                "planType": "M",
-                "retailerCode": "ALI",
-                "retailerId": "9624",
-                "retailerName": "Alinta Energy",
-                "state": "SA",
                 "supplyArea": [
                   {
                     "name": "SA Power Networks",
                     "id": "42"
                   }
                 ],
+                "batchId": 1217023,
+                "retailerId": "9624",
+                "distributor": "SA Power Networks",
+                "genAvailable": true,
                 "tags": [
                   "SR8"
                 ],
-                "tariffType": "TOU"
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "Alinta Energy",
+                "planId": "ALI1115537MRE5",
+                "retailerCode": "ALI",
+                "state": "SA",
+                "effectiveDate": "2026-11-12"
               },
-              "planId": "ALI1115537MRE4",
+              "planId": "ALI1115537MRE5",
               "postcodes": {
                 "5097": 1
               }
