@@ -11621,7 +11621,7 @@
         }
       },
       {
-        "plan_id": "ALI1115537MRE7",
+        "plan_id": "ALI1115537MRE8",
         "plan_name": "SolarBalance Choice - Time of Use (Interval)",
         "retailer_name": "Alinta Energy",
         "plan_type": "TOU",
@@ -11712,8 +11712,8 @@
           "payment_processing_fees": [
             {
               "amount": 3.4,
-              "feeTerm": "F",
-              "feeType": "PPF"
+              "feeType": "PPF",
+              "feeTerm": "F"
             }
           ],
           "late_payment_fee": 12,
@@ -11723,8 +11723,8 @@
           "other_fees": [
             {
               "amount": 22.18,
-              "feeTerm": "F",
-              "feeType": "OF"
+              "feeType": "OF",
+              "feeTerm": "F"
             }
           ],
           "credit_card_payment_fees": [],
@@ -11743,73 +11743,136 @@
         ],
         "raw_plan_data_complete": {
           "main_api_response": {
-            "planId": "ALI1115537MRE7",
+            "planId": "ALI1115537MRE8",
             "planData": {
+              "tariffType": "TOU",
               "contract": [
                 {
-                  "eligibilityRestriction": [
+                  "pricingModel": "TOU",
+                  "solarFit": [
                     {
-                      "description": "This plan is available to eligible residential solar customers with a Qualifying Solar System. Qualifying Solar System means a solar photovoltaic generator which has a generating capacity of no more than 10kW (or larger at our discretion).",
-                      "information": "System Size",
-                      "type": "OC"
+                      "tariffUType": "singleTariff",
+                      "scheme": "OTHER",
+                      "rate": 5,
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 5,
+                          "volume": 8,
+                          "measureUnit": "KWH",
+                          "rebate": true
+                        }
+                      ],
+                      "displayName": "Solar Bonus FiT",
+                      "type": "R",
+                      "singleTariffPeriod": "P1D"
+                    },
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "OTHER",
+                      "rate": 0.5,
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 0.5,
+                          "measureUnit": "KWH",
+                          "rebate": true
+                        }
+                      ],
+                      "displayName": "Single Rate Solar FiT",
+                      "type": "R",
+                      "singleTariffPeriod": "P1Y"
+                    },
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "OTHER",
+                      "rate": 44,
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 44,
+                          "measureUnit": "KWH",
+                          "rebate": true
+                        }
+                      ],
+                      "displayName": "Single Rate Solar FiT",
+                      "type": "G",
+                      "singleTariffPeriod": "P1Y"
+                    },
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "OTHER",
+                      "rate": 44,
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 44,
+                          "measureUnit": "KWH",
+                          "rebate": true
+                        }
+                      ],
+                      "displayName": "Single Rate Solar FiT",
+                      "type": "G",
+                      "singleTariffPeriod": "P1Y"
+                    },
+                    {
+                      "tariffUType": "singleTariff",
+                      "scheme": "OTHER",
+                      "rate": 44,
+                      "singleTariffRates": [
+                        {
+                          "unitPrice": 44,
+                          "measureUnit": "KWH",
+                          "rebate": true
+                        }
+                      ],
+                      "displayName": "Single Rate Solar FiT",
+                      "type": "G",
+                      "singleTariffPeriod": "P1Y"
                     }
                   ],
                   "fee": [
                     {
                       "amount": 66.54,
-                      "feeTerm": "F",
-                      "feeType": "DiscoF"
+                      "feeType": "DiscoF",
+                      "feeTerm": "F"
                     },
                     {
                       "amount": 66.54,
-                      "feeTerm": "F",
-                      "feeType": "RecoF"
+                      "feeType": "RecoF",
+                      "feeTerm": "F"
                     },
                     {
                       "amount": 148.96,
-                      "feeTerm": "F",
-                      "feeType": "RecoF"
+                      "feeType": "RecoF",
+                      "feeTerm": "F"
                     },
                     {
                       "amount": 22.18,
-                      "feeTerm": "F",
-                      "feeType": "DiscoFMO"
+                      "feeType": "DiscoFMO",
+                      "feeTerm": "F"
                     },
                     {
                       "amount": 22.18,
-                      "feeTerm": "F",
-                      "feeType": "ConnF"
+                      "feeType": "ConnF",
+                      "feeTerm": "F"
                     },
                     {
                       "amount": 22.18,
-                      "feeTerm": "F",
-                      "feeType": "OF"
+                      "feeType": "OF",
+                      "feeTerm": "F"
                     },
                     {
                       "amount": 3.4,
-                      "feeTerm": "F",
-                      "feeType": "PPF"
+                      "feeType": "PPF",
+                      "feeTerm": "F"
                     },
                     {
                       "amount": 1.95,
-                      "feeTerm": "F",
-                      "feeType": "PBF"
+                      "feeType": "PBF",
+                      "feeTerm": "F"
                     },
                     {
                       "amount": 12,
-                      "feeTerm": "F",
-                      "feeType": "LPF"
+                      "feeType": "LPF",
+                      "feeTerm": "F"
                     }
-                  ],
-                  "fuelType": "E",
-                  "incentive": [
-                    {
-                      "name": "Stepped FiT"
-                    }
-                  ],
-                  "meterType": [
-                    "Type 4",
-                    "Type 5"
                   ],
                   "networkTariffCode": [
                     "RTOUPLUS",
@@ -11820,7 +11883,50 @@
                     "RESELE",
                     "RESELENE"
                   ],
+                  "termType": "N",
                   "networkTariffType": "PT",
+                  "tariffPeriod": [
+                    {
+                      "touBlock": [
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 53.67,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 31.07,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        },
+                        {
+                          "blockRate": [
+                            {
+                              "unitPrice": 16.27,
+                              "measureUnit": "KWH"
+                            }
+                          ]
+                        }
+                      ],
+                      "blockPeriod": "P1D",
+                      "dailySupplyCharge": 171.87
+                    }
+                  ],
+                  "incentive": [
+                    {
+                      "name": "Stepped FiT"
+                    }
+                  ],
+                  "fuelType": "E",
+                  "meterType": [
+                    "Type 4",
+                    "Type 5"
+                  ],
                   "paymentOption": [
                     "DD",
                     "CC",
@@ -11828,130 +11934,24 @@
                     "BP",
                     "CP"
                   ],
-                  "pricingModel": "TOU",
-                  "solarFit": [
+                  "eligibilityRestriction": [
                     {
-                      "displayName": "Solar Bonus FiT",
-                      "rate": 5,
-                      "scheme": "OTHER",
-                      "singleTariffPeriod": "P1D",
-                      "singleTariffRates": [
-                        {
-                          "measureUnit": "KWH",
-                          "rebate": true,
-                          "unitPrice": 5,
-                          "volume": 8
-                        }
-                      ],
-                      "tariffUType": "singleTariff",
-                      "type": "R"
-                    },
-                    {
-                      "displayName": "Single Rate Solar FiT",
-                      "rate": 0.5,
-                      "scheme": "OTHER",
-                      "singleTariffPeriod": "P1Y",
-                      "singleTariffRates": [
-                        {
-                          "measureUnit": "KWH",
-                          "rebate": true,
-                          "unitPrice": 0.5
-                        }
-                      ],
-                      "tariffUType": "singleTariff",
-                      "type": "R"
-                    },
-                    {
-                      "displayName": "Single Rate Solar FiT",
-                      "rate": 44,
-                      "scheme": "OTHER",
-                      "singleTariffPeriod": "P1Y",
-                      "singleTariffRates": [
-                        {
-                          "measureUnit": "KWH",
-                          "rebate": true,
-                          "unitPrice": 44
-                        }
-                      ],
-                      "tariffUType": "singleTariff",
-                      "type": "G"
-                    },
-                    {
-                      "displayName": "Single Rate Solar FiT",
-                      "rate": 44,
-                      "scheme": "OTHER",
-                      "singleTariffPeriod": "P1Y",
-                      "singleTariffRates": [
-                        {
-                          "measureUnit": "KWH",
-                          "rebate": true,
-                          "unitPrice": 44
-                        }
-                      ],
-                      "tariffUType": "singleTariff",
-                      "type": "G"
-                    },
-                    {
-                      "displayName": "Single Rate Solar FiT",
-                      "rate": 44,
-                      "scheme": "OTHER",
-                      "singleTariffPeriod": "P1Y",
-                      "singleTariffRates": [
-                        {
-                          "measureUnit": "KWH",
-                          "rebate": true,
-                          "unitPrice": 44
-                        }
-                      ],
-                      "tariffUType": "singleTariff",
-                      "type": "G"
+                      "type": "OC",
+                      "description": "This plan is available to eligible residential solar customers with a Qualifying Solar System. Qualifying Solar System means a solar photovoltaic generator which has a generating capacity of no more than 10kW (or larger at our discretion).",
+                      "information": "System Size"
                     }
-                  ],
-                  "tariffPeriod": [
-                    {
-                      "blockPeriod": "P1D",
-                      "dailySupplyCharge": 171.87,
-                      "touBlock": [
-                        {
-                          "blockRate": [
-                            {
-                              "measureUnit": "KWH",
-                              "unitPrice": 53.67
-                            }
-                          ]
-                        },
-                        {
-                          "blockRate": [
-                            {
-                              "measureUnit": "KWH",
-                              "unitPrice": 31.07
-                            }
-                          ]
-                        },
-                        {
-                          "blockRate": [
-                            {
-                              "measureUnit": "KWH",
-                              "unitPrice": 16.27
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ],
-                  "termType": "N"
+                  ]
                 }
               ],
+              "planName": "SolarBalance Choice - Time of Use (Interval)",
+              "retailerId": "9624",
               "customerType": "R",
               "fuelType": "E",
-              "planId": "ALI1115537MRE7",
-              "planName": "SolarBalance Choice - Time of Use (Interval)",
-              "retailerCode": "ALI",
-              "retailerId": "9624",
               "retailerName": "Alinta Energy",
-              "tariffType": "TOU"
+              "planId": "ALI1115537MRE8",
+              "retailerCode": "ALI"
             },
-            "planType": "E#R#ALI1115537MRE7",
+            "planType": "E#R#ALI1115537MRE8",
             "postcode": 5097,
             "pcr": {
               "costs": {
@@ -12014,91 +12014,151 @@
           "detailed_api_response": {
             "data": {
               "planData": {
-                "batchId": 1220828,
+                "planType": "M",
+                "tariffType": "TOU",
                 "contract": [
                   {
-                    "additionalFeeInformation": "We reserve the right to and will notify you if we change or impose additional fees or charges in relation to your energy supply. Fees and charges for work undertaken by your Distributor or Metering Provider are outlined at www.alintaenergy.com.au/feesandcharges",
-                    "billFrequency": [
-                      {
-                        "number": 1,
-                        "period": "M"
-                      }
-                    ],
+                    "pricingModel": "TOU",
                     "coolingOffDays": 10,
-                    "eligibilityRestriction": [
+                    "solarFit": [
                       {
-                        "description": "This plan is available to eligible residential solar customers with a Qualifying Solar System. Qualifying Solar System means a solar photovoltaic generator which has a generating capacity of no more than 10kW (or larger at our discretion).",
-                        "information": "System Size",
-                        "type": "OC"
+                        "tariffUType": "singleTariff",
+                        "scheme": "OTHER",
+                        "rate": 5,
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 5,
+                            "volume": 8,
+                            "measureUnit": "KWH",
+                            "rebate": true
+                          }
+                        ],
+                        "displayName": "Solar Bonus FiT",
+                        "description": "Solar Balance FiT",
+                        "type": "R",
+                        "singleTariffPeriod": "P1D"
+                      },
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "OTHER",
+                        "rate": 0.5,
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 0.5,
+                            "measureUnit": "KWH",
+                            "rebate": true
+                          }
+                        ],
+                        "displayName": "Single Rate Solar FiT",
+                        "description": "Retailer FiT (ex GST)",
+                        "type": "R",
+                        "singleTariffPeriod": "P1Y"
+                      },
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "OTHER",
+                        "rate": 44,
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 44,
+                            "measureUnit": "KWH",
+                            "rebate": true
+                          }
+                        ],
+                        "displayName": "Single Rate Solar FiT",
+                        "description": "Customer Group 1 (ex GST)",
+                        "type": "G",
+                        "singleTariffPeriod": "P1Y"
+                      },
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "OTHER",
+                        "rate": 44,
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 44,
+                            "measureUnit": "KWH",
+                            "rebate": true
+                          }
+                        ],
+                        "displayName": "Single Rate Solar FiT",
+                        "description": "Customer Group 2 (ex GST)",
+                        "type": "G",
+                        "singleTariffPeriod": "P1Y"
+                      },
+                      {
+                        "tariffUType": "singleTariff",
+                        "scheme": "OTHER",
+                        "rate": 44,
+                        "singleTariffRates": [
+                          {
+                            "unitPrice": 44,
+                            "measureUnit": "KWH",
+                            "rebate": true
+                          }
+                        ],
+                        "displayName": "Single Rate Solar FiT",
+                        "description": "Customer Group 3 (ex GST)",
+                        "type": "G",
+                        "singleTariffPeriod": "P1Y"
                       }
                     ],
+                    "additionalFeeInformation": "We reserve the right to and will notify you if we change or impose additional fees or charges in relation to your energy supply. Fees and charges for work undertaken by your Distributor or Metering Provider are outlined at www.alintaenergy.com.au/feesandcharges",
                     "fee": [
                       {
-                        "amount": 66.54,
                         "description": "Disconnection fee. Fee may vary, please see additional fee information.",
-                        "feeTerm": "F",
-                        "feeType": "DiscoF"
-                      },
-                      {
                         "amount": 66.54,
+                        "feeType": "DiscoF",
+                        "feeTerm": "F"
+                      },
+                      {
                         "description": "Reconnection (Power Off - Re-Energisation Required). Fee may vary, please see additional fee information.",
-                        "feeTerm": "F",
-                        "feeType": "RecoF"
+                        "amount": 66.54,
+                        "feeType": "RecoF",
+                        "feeTerm": "F"
                       },
                       {
-                        "amount": 148.96,
                         "description": "After Business Hours Reconnection. Fee may vary, please see additional fee information.",
-                        "feeTerm": "F",
-                        "feeType": "RecoF"
+                        "amount": 148.96,
+                        "feeType": "RecoF",
+                        "feeTerm": "F"
                       },
                       {
-                        "amount": 22.18,
                         "description": "Move-out (Final Read). Fee may vary, please see additional fee information.",
-                        "feeTerm": "F",
-                        "feeType": "DiscoFMO"
+                        "amount": 22.18,
+                        "feeType": "DiscoFMO",
+                        "feeTerm": "F"
                       },
                       {
-                        "amount": 22.18,
                         "description": "Move-in (Power on). Fee may vary, please see additional fee information.",
-                        "feeTerm": "F",
-                        "feeType": "ConnF"
-                      },
-                      {
                         "amount": 22.18,
+                        "feeType": "ConnF",
+                        "feeTerm": "F"
+                      },
+                      {
                         "description": "Special Read. Fee may vary, please see additional fee information.",
-                        "feeTerm": "F",
-                        "feeType": "OF"
+                        "amount": 22.18,
+                        "feeType": "OF",
+                        "feeTerm": "F"
                       },
                       {
-                        "amount": 3.4,
                         "description": "A fee for paying a bill over the counter at Australia Post. This fee will appear in the next bill after payment.",
-                        "feeTerm": "F",
-                        "feeType": "PPF"
+                        "amount": 3.4,
+                        "feeType": "PPF",
+                        "feeTerm": "F"
                       },
                       {
-                        "amount": 1.95,
                         "description": "A fee to cover the cost of printing and mailing the bill. This fee will appear in the next bill after payment.",
-                        "feeTerm": "F",
-                        "feeType": "PBF"
+                        "amount": 1.95,
+                        "feeType": "PBF",
+                        "feeTerm": "F"
                       },
                       {
-                        "amount": 12,
                         "description": "A fee to cover the cost associated with late payment. This fee will appear in the next bill after payment.",
-                        "feeTerm": "F",
-                        "feeType": "LPF"
+                        "amount": 12,
+                        "feeType": "LPF",
+                        "feeTerm": "F"
                       }
-                    ],
-                    "fuelType": "E",
-                    "incentive": [
-                      {
-                        "description": "This energy plan includes a stepped feed-in tariff. You will receive a feed-in tariff of 5c/kWh for the first 8kWh of daily exports, and 0.5c/kWh for any additional exports that day.",
-                        "name": "Stepped FiT"
-                      }
-                    ],
-                    "isFixed": false,
-                    "meterType": [
-                      "Type 4",
-                      "Type 5"
                     ],
                     "networkTariffCode": [
                       "RTOUPLUS",
@@ -12109,7 +12169,98 @@
                       "RESELE",
                       "RESELENE"
                     ],
+                    "termType": "N",
                     "networkTariffType": "PT",
+                    "tariffPeriod": [
+                      {
+                        "name": "General Usage",
+                        "touBlock": [
+                          {
+                            "name": "Peak",
+                            "description": "Peak",
+                            "blockRate": [
+                              {
+                                "unitPrice": 53.67,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "P",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "0600",
+                                "endTime": "0959"
+                              },
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "1600",
+                                "endTime": "2359"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Off-peak",
+                            "description": "Off-peak",
+                            "blockRate": [
+                              {
+                                "unitPrice": 31.07,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "OP",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "0000",
+                                "endTime": "0559"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "Shoulder consumption",
+                            "description": "Shoulder consumption",
+                            "blockRate": [
+                              {
+                                "unitPrice": 16.27,
+                                "measureUnit": "KWH"
+                              }
+                            ],
+                            "timeOfUsePeriod": "S",
+                            "timeOfUse": [
+                              {
+                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
+                                "startTime": "1000",
+                                "endTime": "1559"
+                              }
+                            ]
+                          }
+                        ],
+                        "blockPeriod": "P1D",
+                        "endDate": "2020-12-31",
+                        "dailySupplyCharge": 171.87,
+                        "startDate": "2020-01-01"
+                      }
+                    ],
+                    "variation": "Alinta Energy's market tariff and feed in tariffs (where applicable) may be varied in accordance with applicable laws. If we change the applicable tariff, we will give you notice of any variations in accordance with applicable laws.",
+                    "incentive": [
+                      {
+                        "name": "Stepped FiT",
+                        "description": "This energy plan includes a stepped feed-in tariff. You will receive a feed-in tariff of 5c/kWh for the first 8kWh of daily exports, and 0.5c/kWh for any additional exports that day."
+                      }
+                    ],
+                    "fuelType": "E",
+                    "terms": "This offer is only available to customers with an applicable network tariff. Eligibility criteria apply, for terms and conditions see alintaenergy.com.au/termsandconditions or call 13 37 02.",
+                    "timeDefinition": "LOCAL",
+                    "billFrequency": [
+                      {
+                        "number": 1,
+                        "period": "M"
+                      }
+                    ],
+                    "meterType": [
+                      "Type 4",
+                      "Type 5"
+                    ],
                     "paymentOption": [
                       "DD",
                       "CC",
@@ -12117,192 +12268,40 @@
                       "BP",
                       "CP"
                     ],
-                    "pricingModel": "TOU",
-                    "solarFit": [
+                    "eligibilityRestriction": [
                       {
-                        "description": "Solar Balance FiT",
-                        "displayName": "Solar Bonus FiT",
-                        "rate": 5,
-                        "scheme": "OTHER",
-                        "singleTariffPeriod": "P1D",
-                        "singleTariffRates": [
-                          {
-                            "measureUnit": "KWH",
-                            "rebate": true,
-                            "unitPrice": 5,
-                            "volume": 8
-                          }
-                        ],
-                        "tariffUType": "singleTariff",
-                        "type": "R"
-                      },
-                      {
-                        "description": "Retailer FiT (ex GST)",
-                        "displayName": "Single Rate Solar FiT",
-                        "rate": 0.5,
-                        "scheme": "OTHER",
-                        "singleTariffPeriod": "P1Y",
-                        "singleTariffRates": [
-                          {
-                            "measureUnit": "KWH",
-                            "rebate": true,
-                            "unitPrice": 0.5
-                          }
-                        ],
-                        "tariffUType": "singleTariff",
-                        "type": "R"
-                      },
-                      {
-                        "description": "Customer Group 1 (ex GST)",
-                        "displayName": "Single Rate Solar FiT",
-                        "rate": 44,
-                        "scheme": "OTHER",
-                        "singleTariffPeriod": "P1Y",
-                        "singleTariffRates": [
-                          {
-                            "measureUnit": "KWH",
-                            "rebate": true,
-                            "unitPrice": 44
-                          }
-                        ],
-                        "tariffUType": "singleTariff",
-                        "type": "G"
-                      },
-                      {
-                        "description": "Customer Group 2 (ex GST)",
-                        "displayName": "Single Rate Solar FiT",
-                        "rate": 44,
-                        "scheme": "OTHER",
-                        "singleTariffPeriod": "P1Y",
-                        "singleTariffRates": [
-                          {
-                            "measureUnit": "KWH",
-                            "rebate": true,
-                            "unitPrice": 44
-                          }
-                        ],
-                        "tariffUType": "singleTariff",
-                        "type": "G"
-                      },
-                      {
-                        "description": "Customer Group 3 (ex GST)",
-                        "displayName": "Single Rate Solar FiT",
-                        "rate": 44,
-                        "scheme": "OTHER",
-                        "singleTariffPeriod": "P1Y",
-                        "singleTariffRates": [
-                          {
-                            "measureUnit": "KWH",
-                            "rebate": true,
-                            "unitPrice": 44
-                          }
-                        ],
-                        "tariffUType": "singleTariff",
-                        "type": "G"
+                        "type": "OC",
+                        "description": "This plan is available to eligible residential solar customers with a Qualifying Solar System. Qualifying Solar System means a solar photovoltaic generator which has a generating capacity of no more than 10kW (or larger at our discretion).",
+                        "information": "System Size"
                       }
                     ],
-                    "tariffPeriod": [
-                      {
-                        "blockPeriod": "P1D",
-                        "dailySupplyCharge": 171.87,
-                        "endDate": "2020-12-31",
-                        "name": "General Usage",
-                        "startDate": "2020-01-01",
-                        "touBlock": [
-                          {
-                            "blockRate": [
-                              {
-                                "measureUnit": "KWH",
-                                "unitPrice": 53.67
-                              }
-                            ],
-                            "description": "Peak",
-                            "name": "Peak",
-                            "timeOfUse": [
-                              {
-                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
-                                "endTime": "0959",
-                                "startTime": "0600"
-                              },
-                              {
-                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
-                                "endTime": "2359",
-                                "startTime": "1600"
-                              }
-                            ],
-                            "timeOfUsePeriod": "P"
-                          },
-                          {
-                            "blockRate": [
-                              {
-                                "measureUnit": "KWH",
-                                "unitPrice": 31.07
-                              }
-                            ],
-                            "description": "Off-peak",
-                            "name": "Off-peak",
-                            "timeOfUse": [
-                              {
-                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
-                                "endTime": "0559",
-                                "startTime": "0000"
-                              }
-                            ],
-                            "timeOfUsePeriod": "OP"
-                          },
-                          {
-                            "blockRate": [
-                              {
-                                "measureUnit": "KWH",
-                                "unitPrice": 16.27
-                              }
-                            ],
-                            "description": "Shoulder consumption",
-                            "name": "Shoulder consumption",
-                            "timeOfUse": [
-                              {
-                                "days": "MON|TUE|WED|THU|FRI|SAT|SUN",
-                                "endTime": "1559",
-                                "startTime": "1000"
-                              }
-                            ],
-                            "timeOfUsePeriod": "S"
-                          }
-                        ]
-                      }
-                    ],
-                    "termType": "N",
-                    "terms": "This offer is only available to customers with an applicable network tariff. Eligibility criteria apply, for terms and conditions see alintaenergy.com.au/termsandconditions or call 13 37 02.",
-                    "timeDefinition": "LOCAL",
-                    "variation": "Alinta Energy's market tariff and feed in tariffs (where applicable) may be varied in accordance with applicable laws. If we change the applicable tariff, we will give you notice of any variations in accordance with applicable laws."
+                    "isFixed": false
                   }
                 ],
-                "customerType": "R",
-                "distributor": "SA Power Networks",
-                "effectiveDate": "2026-11-20",
-                "expiryDate": "2026-11-24",
-                "fuelType": "E",
-                "genAvailable": true,
-                "planId": "ALI1115537MRE7",
                 "planName": "SolarBalance Choice - Time of Use (Interval)",
                 "planStatus": "PUBLISHED",
-                "planType": "M",
-                "retailerCode": "ALI",
-                "retailerId": "9624",
-                "retailerName": "Alinta Energy",
-                "state": "SA",
                 "supplyArea": [
                   {
-                    "id": "42",
-                    "name": "SA Power Networks"
+                    "name": "SA Power Networks",
+                    "id": "42"
                   }
                 ],
+                "batchId": 1220855,
+                "retailerId": "9624",
+                "distributor": "SA Power Networks",
+                "genAvailable": true,
                 "tags": [
                   "SR8"
                 ],
-                "tariffType": "TOU"
+                "customerType": "R",
+                "fuelType": "E",
+                "retailerName": "Alinta Energy",
+                "planId": "ALI1115537MRE8",
+                "retailerCode": "ALI",
+                "state": "SA",
+                "effectiveDate": "2026-11-24"
               },
-              "planId": "ALI1115537MRE7",
+              "planId": "ALI1115537MRE8",
               "postcodes": {
                 "5097": 1
               }
