@@ -85,43 +85,8 @@ async function loadEnergyPlans() {
         });
         
         // Filter out plans with eligibility restrictions that don't apply to general residential users
-        // Uses restriction TYPE codes from the API data (resilient to plan ID version changes)
-        //
-        // Restriction types:
-        //   CB = Connected Battery required (VPP plans)
-        //   SC = Seniors Card required
-        //   OC = Other Condition (memberships, partnerships, SOHO, EV, movers, etc.)
-        //   FF = Frequent Flyer/Loyalty program required
-        //   SN = Sign-up/New connection only
-        //
-        // Types we KEEP (user may qualify):
-        //   SM = Smart Meter required (free upgrade available)
-        //   SP = Solar Panel specific (user may have solar)
-        //   PS = Pricing Structure specific
-        //   SO = Sign-up channel (online only - anyone can do)
-
-        const FILTER_OUT_RESTRICTION_TYPES = ['CB', 'SC', 'OC', 'FF', 'SN'];
-
         const beforeRestrictedFilter = touPlans.length;
-        touPlans = touPlans.filter(plan => {
-            // Get eligibility restrictions from plan data
-            const restrictions = plan.raw_plan_data_complete
-                ?.detailed_api_response
-                ?.data
-                ?.planData
-                ?.contract?.[0]
-                ?.eligibilityRestriction || [];
-
-            // Check if any restriction type should be filtered out
-            const restrictionTypes = restrictions.map(r => r.type);
-            const shouldFilter = restrictionTypes.some(type => FILTER_OUT_RESTRICTION_TYPES.includes(type));
-
-            if (shouldFilter) {
-                console.log(`Filtering ${plan.plan_id} (${plan.plan_name}) - restrictions: ${restrictionTypes.join(', ')}`);
-            }
-
-            return !shouldFilter;
-        });
+        touPlans = touPlans.filter(plan => !hasExcludedEligibility(plan));
         const restrictedPlansFiltered = beforeRestrictedFilter - touPlans.length;
         
         console.log(`🔍 FILTER RESULTS: Started with ${originalCount} plans, kept ${touPlans.length} plans, filtered out ${originalCount - touPlans.length} plans (${originalCount - beforeRestrictedFilter} for old effectiveDate, ${restrictedPlansFiltered} for eligibility restrictions)`);

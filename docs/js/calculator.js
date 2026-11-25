@@ -125,16 +125,158 @@ function calculateMembershipFee(planData) {
     return 0; // No membership fee
 }
 
+// Hours behind each usage percentage: SA Power Networks' residential time-of-use windows.
+// Retailers reuse the names "shoulder" and "off-peak" for different hours, so plans are
+// charged by these hours, not by the name a retailer gives a rate.
+const USAGE_BAND_HOURS = {
+    peak: [6, 7, 8, 9, 16, 17, 18, 19, 20, 21, 22, 23],
+    shoulder: [10, 11, 12, 13, 14, 15], // daytime
+    offPeak: [0, 1, 2, 3, 4, 5]         // overnight
+};
+const WEEK_DAYS = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
+const GST_MULTIPLIER = 1.1; // API unit prices exclude GST
+
+/**
+ * Get a plan's tariff periods (its rates and the hours they apply) from the detailed API response
+ * @param {Object} planData - Plan data
+ * @returns {Array} Tariff periods; empty for plans without API data (custom plans)
+ */
+function getTariffPeriods(planData) {
+    return planData.raw_plan_data_complete?.detailed_api_response?.data?.planData?.contract?.[0]?.tariffPeriod || [];
+}
+
+/**
+ * Convert an HHMM time string to minutes after midnight
+ * @param {string} hhmm - Time in HHMM format
+ * @returns {number} Minutes after midnight
+ */
+function minuteOfDay(hhmm) {
+    return parseInt(hhmm.substring(0, 2), 10) * 60 + parseInt(hhmm.substring(2), 10);
+}
+
+/**
+ * Check if a time window covers a minute of the day.
+ * The end time is inclusive and a window may wrap past midnight (e.g. 1500-0059).
+ * @param {Object} timeWindow - { startTime, endTime } in HHMM format
+ * @param {number} minute - Minutes after midnight
+ * @returns {boolean} True if the window covers that minute
+ */
+function timeWindowCovers(timeWindow, minute) {
+    const start = minuteOfDay(timeWindow.startTime);
+    const end = minuteOfDay(timeWindow.endTime);
+    return start <= end ? (minute >= start && minute <= end) : (minute >= start || minute <= end);
+}
+
+/**
+ * Share of the year each tariff period applies (seasonal plans have more than one)
+ * @param {Array} tariffPeriods - Tariff periods with startDate and endDate
+ * @returns {Array} Weights adding up to 1
+ */
+function getTariffPeriodWeights(tariffPeriods) {
+    if (tariffPeriods.length === 1) {
+        return [1];
+    }
+
+    const days = tariffPeriods.map(period => {
+        // Only the month and day matter; 2001 is not a leap year
+        const start = Date.parse(`2001-${period.startDate.substring(5)}`);
+        const end = Date.parse(`2001-${period.endDate.substring(5)}`);
+        return ((end - start) / 86400000 + 365) % 365 + 1;
+    });
+    const totalDays = days.reduce((sum, periodDays) => sum + periodDays, 0);
+    return days.map(periodDays => periodDays / totalDays);
+}
+
+/**
+ * Cost of one day's kWh through a block's rate tiers (e.g. first 24 kWh free, then 17.9c)
+ * @param {number} kwh - kWh used in the block that day
+ * @param {Array} blockRate - Rate tiers with unitPrice and optional volume
+ * @returns {number} Cost in cents, excluding GST
+ */
+function calculateTieredCents(kwh, blockRate) {
+    let cents = 0;
+    let remaining = kwh;
+
+    for (const tier of blockRate) {
+        // Tier volumes are daily allowances, whatever the plan's blockPeriod says
+        const tierKwh = tier.volume ? Math.min(remaining, tier.volume) : remaining;
+        cents += tierKwh * tier.unitPrice;
+        remaining -= tierKwh;
+    }
+
+    return cents;
+}
+
+/**
+ * Calculate usage charge from the hours each of the plan's rates applies
+ * @param {Object} planData - Plan data with tariff periods
+ * @param {number} netGridConsumption - Net consumption from grid per quarter (kWh)
+ * @param {number} peakPercent - Percentage used 6am-10am and 4pm-midnight
+ * @param {number} shoulderPercent - Percentage used 10am-4pm
+ * @param {number} offPeakPercent - Percentage used midnight-6am
+ * @returns {number|null} Usage charge in dollars, or null if the plan has no usable time windows
+ */
+function calculateTimeWindowUsageCharge(planData, netGridConsumption, peakPercent, shoulderPercent, offPeakPercent) {
+    const tariffPeriods = getTariffPeriods(planData);
+    if (tariffPeriods.length === 0) {
+        return null;
+    }
+
+    // Spread each band's daily kWh evenly over its hours
+    const dailyKwh = netGridConsumption / 91;
+    const bandPercents = { peak: peakPercent, shoulder: shoulderPercent, offPeak: offPeakPercent };
+    const hourlyKwh = [];
+    for (const [band, hours] of Object.entries(USAGE_BAND_HOURS)) {
+        for (const hour of hours) {
+            hourlyKwh[hour] = dailyKwh * (bandPercents[band] / 100) / hours.length;
+        }
+    }
+
+    const periodWeights = getTariffPeriodWeights(tariffPeriods);
+    let centsPerDay = 0;
+
+    for (let p = 0; p < tariffPeriods.length; p++) {
+        const blocks = tariffPeriods[p].touBlock || [];
+
+        for (const day of WEEK_DAYS) {
+            const blockKwh = blocks.map(() => 0);
+
+            for (let hour = 0; hour < 24; hour++) {
+                // shortcut: samples the start of each hour because every plan uses whole-hour windows; sample half hours if that changes
+                const blockIndex = blocks.findIndex(block => (block.timeOfUse || []).some(timeWindow =>
+                    (timeWindow.days || '').includes(day) && timeWindowCovers(timeWindow, hour * 60)
+                ));
+                if (blockIndex === -1) {
+                    return null; // An hour without a rate - the plan can't be charged by time
+                }
+                blockKwh[blockIndex] += hourlyKwh[hour];
+            }
+
+            blocks.forEach((block, blockIndex) => {
+                centsPerDay += (periodWeights[p] / 7) * calculateTieredCents(blockKwh[blockIndex], block.blockRate);
+            });
+        }
+    }
+
+    return (centsPerDay * 91 * GST_MULTIPLIER) / 100; // Convert cents to dollars
+}
+
 /**
  * Calculate usage charge based on TOU rates and net grid consumption
  * @param {Object} planData - Plan data with rate information
  * @param {number} netGridConsumption - Net consumption from grid (kWh)
- * @param {number} peakPercent - Percentage used during peak hours
- * @param {number} shoulderPercent - Percentage used during shoulder hours
- * @param {number} offPeakPercent - Percentage used during off-peak hours
+ * @param {number} peakPercent - Percentage used 6am-10am and 4pm-midnight
+ * @param {number} shoulderPercent - Percentage used 10am-4pm
+ * @param {number} offPeakPercent - Percentage used midnight-6am
  * @returns {number} Usage charge in dollars
  */
 function calculateUsageCharge(planData, netGridConsumption, peakPercent, shoulderPercent, offPeakPercent) {
+    const timeWindowCharge = calculateTimeWindowUsageCharge(planData, netGridConsumption, peakPercent, shoulderPercent, offPeakPercent);
+    if (timeWindowCharge !== null) {
+        return timeWindowCharge;
+    }
+
+    // No time windows (e.g. a custom plan from the compare page): one flat rate per band
     const peakConsumption = netGridConsumption * (peakPercent / 100);
     const shoulderConsumption = netGridConsumption * (shoulderPercent / 100);
     const offPeakConsumption = netGridConsumption * (offPeakPercent / 100);
@@ -208,39 +350,6 @@ function extractSolarFitRates(planData) {
         solarFitRates = processSolarFitData(fitData);
     }
     
-    // Special case: Energy Locals plans always have time-varying rates
-    // If we only found a single rate, replace it with the correct time-varying structure
-    const retailerName = planData.retailer_name?.toLowerCase() || '';
-    if (retailerName.includes('energy locals') && solarFitRates.length <= 1) {
-        console.log('Applying Energy Locals time-varying FiT rates (API has single rate instead of time-varying)');
-        solarFitRates = [
-            {
-                rate: 15.0,
-                timeType: 'PEAK',
-                type: 'R',
-                scheme: 'TIME_BASED',
-                displayName: 'Peak Feed-in Tariff',
-                description: 'Peak (4pm-9pm)'
-            },
-            {
-                rate: 5.0,
-                timeType: 'OFF_PEAK',
-                type: 'R',
-                scheme: 'TIME_BASED',
-                displayName: 'Off-Peak Feed-in Tariff',
-                description: 'Off-Peak (9pm-10am)'
-            },
-            {
-                rate: 2.0,
-                timeType: 'SHOULDER',
-                type: 'R',
-                scheme: 'TIME_BASED',
-                displayName: 'Solar Sponge Feed-in Tariff',
-                description: 'Solar Sponge (10am-4pm)'
-            }
-        ];
-    }
-    
     // Fallback: Use simple rate if available
     if (solarFitRates.length === 0 && planData.solar_feed_in_rate_r && planData.solar_feed_in_rate_r > 0) {
         solarFitRates = [{
@@ -288,24 +397,19 @@ function processSolarFitData(fitData) {
             }
         }
         
-        // Extract rate information from timeVaryingTariffs (Energy Locals structure)
+        // Extract time-of-day rates - each one only pays inside its timeVariations windows
         if (fit.timeVaryingTariffs && Array.isArray(fit.timeVaryingTariffs)) {
             for (const timeRate of fit.timeVaryingTariffs) {
-                if (timeRate.rate !== undefined) {
-                    // Determine time period based on type and time variations
-                    let timeInfo = '';
-                    if (timeRate.timeVariations && timeRate.timeVariations.length > 0) {
-                        const variation = timeRate.timeVariations[0];
-                        timeInfo = `${variation.startTime || ''}-${variation.endTime || ''}`;
+                for (const rateData of timeRate.rates || []) {
+                    if (rateData.unitPrice === undefined) {
+                        continue;
                     }
-                    
                     processedRates.push({
-                        rate: timeRate.rate,
-                        volume: null,
+                        rate: rateData.unitPrice,
+                        volume: rateData.volume || null,
                         type: fit.type || 'R',
                         scheme: fit.scheme || 'OTHER',
                         displayName: timeRate.displayName || fit.displayName || '',
-                        description: `${timeRate.type || ''} ${timeInfo}`.trim(),
                         timeType: timeRate.type, // PEAK, OFF_PEAK, SHOULDER
                         timeVariations: timeRate.timeVariations
                     });
@@ -333,78 +437,55 @@ function processSolarFitData(fitData) {
     });
 }
 
+// Solar without a battery exports while the sun is up. All export is assumed to fall
+// in the 10am-4pm solar window, sampled every half hour.
+const SOLAR_EXPORT_MINUTES = [600, 630, 660, 690, 720, 750, 780, 810, 840, 870, 900, 930];
+
 /**
- * Calculate daily solar credit using tiered rates with time-based weighting
+ * Calculate daily solar credit across volume tiers and time-of-day rates
  * @param {number} dailyExportKwh - Daily average export in kWh
- * @param {Array} solarFitTiers - Array of solar FiT tier objects
+ * @param {Array} solarFitTiers - Solar FiT tiers, capped tiers first (see processSolarFitData)
  * @returns {number} Daily solar credit in dollars
  */
 function calculateDailySolarCredit(dailyExportKwh, solarFitTiers) {
     if (dailyExportKwh <= 0 || !solarFitTiers || solarFitTiers.length === 0) {
         return 0;
     }
-    
-    // Check if this is a time-varying tariff (has timeType or timeVariations)
-    const hasTimeVaryingRates = solarFitTiers.some(tier => tier.timeType || tier.timeVariations);
-    
-    if (hasTimeVaryingRates) {
-        return calculateTimeBasedDailySolarCredit(dailyExportKwh, solarFitTiers);
+
+    const tierVolumeLeft = solarFitTiers.map(tier => tier.volume || Infinity); // volume=null means unlimited
+    let totalCents = 0;
+
+    for (const minute of SOLAR_EXPORT_MINUTES) {
+        let remainingExport = dailyExportKwh / SOLAR_EXPORT_MINUTES.length;
+
+        solarFitTiers.forEach((tier, tierIndex) => {
+            // A tier without time windows pays at any time of day
+            const paysNow = !tier.timeVariations || tier.timeVariations.some(timeWindow => timeWindowCovers(timeWindow, minute));
+            if (!paysNow) {
+                return;
+            }
+
+            const tierExport = Math.min(remainingExport, tierVolumeLeft[tierIndex]);
+            totalCents += tierExport * tier.rate;
+            tierVolumeLeft[tierIndex] -= tierExport;
+            remainingExport -= tierExport;
+        });
     }
-    
-    // Standard volume-based calculation for simple tariffs
-    let totalCredit = 0;
-    let remainingExport = dailyExportKwh;
-    
-    for (const tier of solarFitTiers) {
-        if (remainingExport <= 0) {
-            break;
-        }
-        
-        // Determine tier volume limit
-        const tierLimit = tier.volume || remainingExport; // volume=null means unlimited
-        const tierExport = Math.min(remainingExport, tierLimit);
-        
-        // Calculate credit for this tier
-        const tierCredit = (tierExport * tier.rate) / 100; // Convert cents to dollars
-        totalCredit += tierCredit;
-        
-        // Reduce remaining export
-        remainingExport -= tierExport;
-    }
-    
-    return totalCredit;
+
+    return totalCents / 100; // Convert cents to dollars
 }
 
 /**
- * Calculate daily solar credit for time-varying tariffs
- * Distributes solar export based on realistic solar generation patterns
- * @param {number} dailyExportKwh - Daily average export in kWh
- * @param {Array} solarFitTiers - Array of time-varying solar FiT rate objects
- * @returns {number} Daily solar credit in dollars
+ * Describe when a time-of-day FiT tier pays, e.g. "6AM-10AM, 4PM-12AM"
+ * @param {Object} tier - Solar FiT tier from extractSolarFitRates
+ * @returns {string} Time windows, or an empty string if the tier pays at any time
  */
-function calculateTimeBasedDailySolarCredit(dailyExportKwh, solarFitTiers) {
-    // Realistic solar export distribution based on typical solar generation patterns
-    // All solar export happens during midday "Solar Sponge" hours (10:00-16:00)
-    const solarExportDistribution = {
-        'PEAK': 0.00,      // 0% - No solar export during evening peak (4pm-9pm)
-        'SHOULDER': 1.00,  // 100% - All solar export during midday generation (10am-4pm) - "Solar Sponge"
-        'OFF_PEAK': 0.00   // 0% - No solar export during night (9pm-10am)
-    };
-    
-    let totalCredit = 0;
-    
-    for (const tier of solarFitTiers) {
-        const timeType = tier.timeType || 'SHOULDER'; // Default to shoulder if not specified
-        const exportShare = solarExportDistribution[timeType] || 0;
-        const exportForPeriod = dailyExportKwh * exportShare;
-        
-        if (exportForPeriod > 0) {
-            const periodCredit = (exportForPeriod * tier.rate) / 100; // Convert cents to dollars
-            totalCredit += periodCredit;
-        }
-    }
-    
-    return totalCredit;
+function formatFitWindows(tier) {
+    return (tier.timeVariations || []).map(timeWindow => {
+        const endMinute = (minuteOfDay(timeWindow.endTime) + 1) % 1440; // Ends are inclusive: 0959 means until 10:00
+        const endTime = String(Math.floor(endMinute / 60)).padStart(2, '0') + String(endMinute % 60).padStart(2, '0');
+        return `${formatTime(timeWindow.startTime)}-${formatTime(endTime)}`;
+    }).join(', ');
 }
 
 /**
@@ -456,8 +537,7 @@ function validateInputs(usagePattern) {
 }
 
 /**
- * Disqualify plans with suspicious zero or null shoulder/off-peak rates and demand charges
- * Updated to allow legitimate 2-rate TOU plans but exclude demand charge plans
+ * Disqualify plans with demand charges, and flat-rate plans with zero or null rates
  * @param {Object} planData - Plan data to validate
  * @returns {boolean} True if plan should be disqualified
  */
@@ -465,6 +545,11 @@ function shouldDisqualifyPlan(planData) {
     // Check for demand charges - exclude plans with demand charges
     if (hasDemandCharge(planData)) {
         return true;
+    }
+
+    // Plans with time windows are charged by the hour, so a 0c rate is a real free period
+    if (getTariffPeriods(planData).length > 0) {
+        return false;
     }
     
     // Must have valid peak and off-peak rates
@@ -490,6 +575,42 @@ function shouldDisqualifyPlan(planData) {
     }
     
     return false;
+}
+
+// Eligibility restriction types (API codes) a general household can't be assumed to meet:
+//   CB = Connected Battery required (VPP plans)
+//   SC = Seniors Card required
+//   OC = Other Condition (memberships, partnerships, SOHO, EV, movers, etc.)
+//   FF = Frequent Flyer/Loyalty program required
+//   SN = Sign-up/New connection only
+// Types we KEEP (user may qualify):
+//   SM = Smart Meter required (free upgrade available)
+//   SP = Solar Panel specific (user may have solar)
+//   PS = Pricing Structure specific
+//   SO = Sign-up channel (online only - anyone can do)
+const EXCLUDED_RESTRICTION_TYPES = ['CB', 'SC', 'OC', 'FF', 'SN'];
+
+// Some retailers state a membership requirement only in the plan name or terms, with no restriction type
+// (e.g. "for current FIRST members", "be a NAB personal banking customer").
+// shortcut: matches wording, so a plan that words it differently is still shown; switch to a restriction type if retailers start sending one
+const MEMBERSHIP_WORDING = /\bmembers?\b|\bmembership\b|banking customer/i;
+
+/**
+ * Check if a plan has an eligibility restriction that rules out general residential users.
+ * Uses restriction TYPE codes from the API data (resilient to plan ID version changes).
+ * @param {Object} planData - Plan data to check
+ * @returns {boolean} True if the plan should not be offered
+ */
+function hasExcludedEligibility(planData) {
+    const contract = planData.raw_plan_data_complete
+        ?.detailed_api_response
+        ?.data
+        ?.planData
+        ?.contract?.[0];
+    const restrictions = contract?.eligibilityRestriction || [];
+
+    return restrictions.some(restriction => EXCLUDED_RESTRICTION_TYPES.includes(restriction.type))
+        || MEMBERSHIP_WORDING.test(`${planData.plan_name} ${contract?.terms || ''}`);
 }
 
 /**
@@ -780,6 +901,7 @@ if (typeof module !== 'undefined' && module.exports) {
         calculatePlanCost,
         calculateAndRankPlans,
         shouldDisqualifyPlan,
+        hasExcludedEligibility,
         hasDemandCharge,
         hasBatteryOnlySolarFit,
         generateStrategicRecommendation,
