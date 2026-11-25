@@ -169,3 +169,16 @@ test('plans that need a battery are excluded, plans that need a smart meter are 
     assert.equal(hasExcludedEligibility(plan({ tariffPeriod, eligibilityRestriction: [{ type: 'SM' }] })), false);
     assert.equal(hasExcludedEligibility({ plan_name: 'custom plan without API data' }), false);
 });
+
+test('plans that state a membership requirement only in their name or terms are excluded', () => {
+    const tariffPeriod = [period([block(40, [['0000', '2359']])])];
+    const withTerms = terms => {
+        const p = plan({ tariffPeriod });
+        p.raw_plan_data_complete.detailed_api_response.data.planData.contract[0].terms = terms;
+        return p;
+    };
+    assert.equal(hasExcludedEligibility({ ...plan({ tariffPeriod }), plan_name: 'Kogan Energy for current FIRST members' }), true);
+    assert.equal(hasExcludedEligibility(withTerms('To be eligible, you must be a residential customer, be a NAB personal banking customer and sign up online.')), true);
+    assert.equal(hasExcludedEligibility({ ...plan({ tariffPeriod }), plan_name: 'Kogan Energy with free FIRST' }), false);
+    assert.equal(hasExcludedEligibility(withTerms('To be eligible you must receive your bills electronically.')), false);
+});

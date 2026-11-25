@@ -590,6 +590,11 @@ function shouldDisqualifyPlan(planData) {
 //   SO = Sign-up channel (online only - anyone can do)
 const EXCLUDED_RESTRICTION_TYPES = ['CB', 'SC', 'OC', 'FF', 'SN'];
 
+// Some retailers state a membership requirement only in the plan name or terms, with no restriction type
+// (e.g. "for current FIRST members", "be a NAB personal banking customer").
+// shortcut: matches wording, so a plan that words it differently is still shown; switch to a restriction type if retailers start sending one
+const MEMBERSHIP_WORDING = /\bmembers?\b|\bmembership\b|banking customer/i;
+
 /**
  * Check if a plan has an eligibility restriction that rules out general residential users.
  * Uses restriction TYPE codes from the API data (resilient to plan ID version changes).
@@ -597,14 +602,15 @@ const EXCLUDED_RESTRICTION_TYPES = ['CB', 'SC', 'OC', 'FF', 'SN'];
  * @returns {boolean} True if the plan should not be offered
  */
 function hasExcludedEligibility(planData) {
-    const restrictions = planData.raw_plan_data_complete
+    const contract = planData.raw_plan_data_complete
         ?.detailed_api_response
         ?.data
         ?.planData
-        ?.contract?.[0]
-        ?.eligibilityRestriction || [];
+        ?.contract?.[0];
+    const restrictions = contract?.eligibilityRestriction || [];
 
-    return restrictions.some(restriction => EXCLUDED_RESTRICTION_TYPES.includes(restriction.type));
+    return restrictions.some(restriction => EXCLUDED_RESTRICTION_TYPES.includes(restriction.type))
+        || MEMBERSHIP_WORDING.test(`${planData.plan_name} ${contract?.terms || ''}`);
 }
 
 /**
