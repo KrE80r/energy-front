@@ -46,25 +46,9 @@ async function initializeComparison() {
             }
         });
         
-        // Filter out plans with SC (Seniors Card) and OC (Other Customer Requirements) restrictions
-        const restrictedPlanIds = [
-            // SC (Seniors Card) Restrictions
-            "AGL360486MRE33", "AGL898888MRE3",
-            
-            // OC (Other Customer Requirements) Restrictions
-            "AGL100677MRE45", "AGL360621MRE32", "AGL686236MRE19", "AGL726430MRE17",
-            "AGL726436MRE22", "AGL733560MRE17", "AGL827771MRE6", "AGL840896MRE6",
-            "AGL898820MRE3", "AGL898840MRE3", "AGL907767MRE2", "AGL907790MRE2",
-            "ALI849388MRE3", "ALI875577MRE3", "ENE676768MRE8", "ENE676773MRE8",
-            "ENG938049SRE1", "ENG938141MRE1", "ENG938152MRE1", "ENG938161MRE1",
-            "ENG938177MRE1", "ENG938181MRE1", "ENG939788MRE1", "ENG939829MRE1",
-            "LUM203108MRE20", "ORI539830MRE15", "ORI665045MRE13", "ORI727571MRE7",
-            "ORI848686MRE5", "ORI848791MRE3", "OVO723748MRE13", "OVO723789MRE13",
-            "RED552636MRE13", "RED927290MRE1"
-        ];
-        
+        // Filter out plans with eligibility restrictions that don't apply to general residential users (same as main page)
         const beforeRestrictedFilter = allPlansData.length;
-        allPlansData = allPlansData.filter(plan => !restrictedPlanIds.includes(plan.plan_id));
+        allPlansData = allPlansData.filter(plan => !hasExcludedEligibility(plan));
         const restrictedPlansFiltered = beforeRestrictedFilter - allPlansData.length;
         
         console.log(`Loaded plans: ${allPlansData.length} (filtered from ${originalCount} total, ${restrictedPlansFiltered} removed for eligibility restrictions)`);
@@ -203,8 +187,8 @@ function validateCustomPlan() {
         { id: 'custom-retailer-name', name: 'Retailer Name' },
         { id: 'custom-plan-name', name: 'Plan Name' },
         { id: 'custom-peak-rate', name: 'Peak Rate' },
-        { id: 'custom-shoulder-rate', name: 'Shoulder Rate' },
-        { id: 'custom-offpeak-rate', name: 'Off-Peak Rate' },
+        { id: 'custom-shoulder-rate', name: 'Daytime Rate' },
+        { id: 'custom-offpeak-rate', name: 'Overnight Rate' },
         { id: 'custom-supply-charge', name: 'Daily Supply Charge' }
     ];
     
@@ -299,7 +283,7 @@ function validateForm() {
     
     // Validate percentages
     if (!validatePercentages()) {
-        showError('Peak + Shoulder + Off-Peak usage must equal 100%.');
+        showError('Peak + Daytime + Overnight usage must equal 100%.');
         return false;
     }
     
@@ -573,7 +557,7 @@ function generateComparisonSummary(comparisonResults, usagePattern) {
                         <h6>Your Custom Usage Pattern:</h6>
                         <ul class="list-unstyled mb-0">
                             <li><strong>Consumption:</strong> ${usagePattern.quarterlyConsumption} kWh/quarter</li>
-                            <li><strong>Peak:</strong> ${usagePattern.peakPercent}% | <strong>Shoulder:</strong> ${usagePattern.shoulderPercent}% | <strong>Off-Peak:</strong> ${usagePattern.offPeakPercent}%</li>
+                            <li><strong>Peak:</strong> ${usagePattern.peakPercent}% | <strong>Daytime:</strong> ${usagePattern.shoulderPercent}% | <strong>Overnight:</strong> ${usagePattern.offPeakPercent}%</li>
                             ${usagePattern.solarExport > 0 ? `<li><strong>Solar Export:</strong> ${usagePattern.solarExport} kWh/quarter</li>` : ''}
                         </ul>
                     </div>
@@ -607,7 +591,7 @@ function generateComparisonSummary(comparisonResults, usagePattern) {
                     <h6>Your Custom Usage Pattern:</h6>
                     <ul class="list-unstyled mb-0">
                         <li><strong>Consumption:</strong> ${usagePattern.quarterlyConsumption} kWh/quarter</li>
-                        <li><strong>Peak:</strong> ${usagePattern.peakPercent}% | <strong>Shoulder:</strong> ${usagePattern.shoulderPercent}% | <strong>Off-Peak:</strong> ${usagePattern.offPeakPercent}%</li>
+                        <li><strong>Peak:</strong> ${usagePattern.peakPercent}% | <strong>Daytime:</strong> ${usagePattern.shoulderPercent}% | <strong>Overnight:</strong> ${usagePattern.offPeakPercent}%</li>
                         ${usagePattern.solarExport > 0 ? `<li><strong>Solar Export:</strong> ${usagePattern.solarExport} kWh/quarter</li>` : ''}
                     </ul>
                 </div>
@@ -665,32 +649,14 @@ function generateSolarFitDisplay(planData) {
         `;
     }
     
-    // Check if this is time-varying (Energy Locals) or volume-based tiers
+    // Check if this is time-varying or volume-based tiers
     const hasTimeVaryingRates = solarFitData.some(tier => tier.timeType);
     
     if (hasTimeVaryingRates) {
-        // Time-varying rates (Energy Locals) - show time periods
-        let timeRatesHtml = solarFitData.map(tier => {
-            const rate = tier.rate?.toFixed(1);
-            const timeType = tier.timeType;
-            let period = '';
-            
-            switch(timeType) {
-                case 'PEAK':
-                    period = 'Peak (4pm-9pm)';
-                    break;
-                case 'SHOULDER':
-                    period = 'Solar Sponge (10am-4pm)';
-                    break;
-                case 'OFF_PEAK':
-                    period = 'Off-Peak (9pm-10am)';
-                    break;
-                default:
-                    period = timeType || 'Standard';
-            }
-            
-            return `${rate}¢ (${period})`;
-        }).join('<br>');
+        // Time-varying rates - show when each rate pays
+        let timeRatesHtml = solarFitData.map(tier =>
+            `${tier.rate?.toFixed(1)}¢ (${formatFitWindows(tier) || 'all times'})`
+        ).join('<br>');
         
         return `
         <div class="mb-3">
